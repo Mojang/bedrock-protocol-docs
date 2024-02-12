@@ -1,0 +1,32 @@
+digraph "ClientCacheBlobStatusPacket" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+0 -> 5
+5 -> 6
+6 -> 7
+7 -> 8
+0 -> 9
+9 -> 10
+10 -> 11
+11 -> 12
+
+0 [label="ClientCacheBlobStatusPacket",comment="name: \"ClientCacheBlobStatusPacket\", typeName: \"\", id: 0, branchId: 135, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Number of missing blobs",comment="name: \"Number of missing blobs\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="Number of obtained blobs",comment="name: \"Number of obtained blobs\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+5 [label="Missing Blobs",comment="name: \"Missing Blobs\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+6 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+7 [label="Blob Id",comment="name: \"Blob Id\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="unsigned int64",comment="name: \"unsigned int64\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+9 [label="Obtained Blobs",comment="name: \"Obtained Blobs\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+10 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+11 [label="Blob Id",comment="name: \"Blob Id\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+12 [label="unsigned int64",comment="name: \"unsigned int64\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;8;12}
+
+}

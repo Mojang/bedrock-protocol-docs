@@ -1,0 +1,12 @@
+digraph "AvailableActorIdentifiersPacket" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+
+0 [label="AvailableActorIdentifiersPacket",comment="name: \"AvailableActorIdentifiersPacket\", typeName: \"\", id: 0, branchId: 119, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Actor Info List",comment="name: \"Actor Info List\", typeName: \"CompoundTag\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"CompoundTag containing a list of ActorInfo:rid (RuntimeId - Int),id (string),bid (BaseId - string),hasspawnegg (bool),summonable (bool)\""];
+2 [label="CompoundTag",comment="name: \"CompoundTag\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2}
+
+}

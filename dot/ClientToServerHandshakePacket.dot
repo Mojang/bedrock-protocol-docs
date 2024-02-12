@@ -1,0 +1,8 @@
+digraph "ClientToServerHandshakePacket" {
+rankdir = LR
+0
+
+0 [label="ClientToServerHandshakePacket",comment="name: \"ClientToServerHandshakePacket\", typeName: \"\", id: 0, branchId: 4, recurseId: -1, attributes: 0, notes: \"\""];
+{ rank = max}
+
+}

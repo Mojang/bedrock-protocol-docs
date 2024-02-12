@@ -1,0 +1,12 @@
+digraph "EduUriResourcePacket" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+
+0 [label="EduUriResourcePacket",comment="name: \"EduUriResourcePacket\", typeName: \"\", id: 0, branchId: 170, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Edu Shared URI Resource",comment="name: \"Edu Shared URI Resource\", typeName: \"EduSharedUriResource\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+2 [label="EduSharedUriResource",comment="name: \"EduSharedUriResource\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2}
+
+}

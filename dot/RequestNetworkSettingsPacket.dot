@@ -1,0 +1,12 @@
+digraph "RequestNetworkSettingsPacket" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+
+0 [label="RequestNetworkSettingsPacket",comment="name: \"RequestNetworkSettingsPacket\", typeName: \"\", id: 0, branchId: 193, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="ClientNetworkVersion",comment="name: \"ClientNetworkVersion\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="big endian int",comment="name: \"big endian int\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2}
+
+}
