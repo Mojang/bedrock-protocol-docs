@@ -1,0 +1,12 @@
+digraph "UpdateAdventureSettingsPacket" {
+rankdir = LR
+0
+0 -> 1
+1 -> 13
+
+0 [label="UpdateAdventureSettingsPacket",comment="name: \"UpdateAdventureSettingsPacket\", typeName: \"\", id: 0, branchId: 188, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Adventure Settings",comment="name: \"Adventure Settings\", typeName: \"AdventureSettings\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+13 [label="AdventureSettings",comment="name: \"AdventureSettings\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;13}
+
+}

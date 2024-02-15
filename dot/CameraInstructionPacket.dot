@@ -1,0 +1,12 @@
+digraph "CameraInstructionPacket" {
+rankdir = LR
+0
+0 -> 1
+1 -> 15
+
+0 [label="CameraInstructionPacket",comment="name: \"CameraInstructionPacket\", typeName: \"\", id: 0, branchId: 300, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Camera Instruction",comment="name: \"Camera Instruction\", typeName: \"CameraInstruction\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+15 [label="CameraInstruction",comment="name: \"CameraInstruction\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;15}
+
+}

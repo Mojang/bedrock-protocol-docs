@@ -1,0 +1,12 @@
+digraph "std::optional<struct ExternalLinkSettings>" {
+rankdir = LR
+28
+28 -> 29
+29 -> 30
+
+28 [label="std::optional<struct ExternalLinkSettings>",comment="name: \"std::optional<struct ExternalLinkSettings>\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+29 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 29, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
+30 [label="bool",comment="name: \"bool\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;30}
+
+}
