@@ -1,0 +1,12 @@
+digraph "SetActorLinkPacket" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+
+0 [label="SetActorLinkPacket",comment="name: \"SetActorLinkPacket\", typeName: \"\", id: 0, branchId: 41, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Link",comment="name: \"Link\", typeName: \"ActorLink\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+2 [label="ActorLink",comment="name: \"ActorLink\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2}
+
+}

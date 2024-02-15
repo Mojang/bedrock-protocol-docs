@@ -1,0 +1,4 @@
+<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/ServerToClientHandshakePacket.svg" alt="ServerToClientHandshakePacket">
+<br><table><col width="10%"><col width="90%"><tr><th>Field Name</th><th>Field Notes</th></tr><tr><td>Handshake WebToken</td>
+<td>Base64 encoded JSON Web Token that contains the other relevant client properties.<br><br>Properties Include:<br><br>'salt' = (for use in encryption)<br><br>The public key used to compute the shared secret for encryption is embedded in the header of the token. It's the signer public key (json value of 'x5u')</td>
+</tr></table></body> </html>

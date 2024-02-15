@@ -1,0 +1,12 @@
+digraph "TypedServerNetId<struct ItemStackNetIdTag,int,0>" {
+rankdir = LR
+34
+34 -> 35
+35 -> 36
+
+34 [label="TypedServerNetId<struct ItemStackNetIdTag,int,0>",comment="name: \"TypedServerNetId<struct ItemStackNetIdTag,int,0>\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+35 [label="Raw Id (32 bit signed)",comment="name: \"Raw Id (32 bit signed)\", typeName: \"\", id: 35, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+36 [label="varint",comment="name: \"varint\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;36}
+
+}

@@ -1,0 +1,12 @@
+digraph "MolangVariableMap" {
+rankdir = LR
+14
+14 -> 15
+15 -> 16
+
+14 [label="MolangVariableMap",comment="name: \"MolangVariableMap\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+15 [label="Serialized Variable Map",comment="name: \"Serialized Variable Map\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+16 [label="string",comment="name: \"string\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;16}
+
+}

@@ -1,0 +1,14 @@
+<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/LevelChunkPacket.svg" alt="LevelChunkPacket">
+<br><table><col width="10%"><col width="90%"><tr><th>Field Name</th><th>Field Notes</th></tr><tr><td>Partial SubChunk Count When Client Requesting</td>
+<td>Currently max unsigned 32-bit int</td>
+</tr><tr><td>SubChunk Count When Client Requesting</td>
+<td>Currently max unsigned 32-bit int</td>
+</tr><tr><td>Cache Enabled</td>
+<td>Lets the server turn off the cache for this chunk even if the Client signaled it supports it.</td>
+</tr><tr><td>Blob Count</td>
+<td>How many cache blobs make up this chunk.</td>
+</tr><tr><td>Blob Id</td>
+<td>See ClientCacheProtocol.md, included with the documentation for 1.12.0.2</td>
+</tr><tr><td>Serialized Chunk Data</td>
+<td>See https://gist.github.com/Tomcc/a96af509e275b1af483b25c543cfbf37</td>
+</tr></table></body> </html>

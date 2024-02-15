@@ -1,0 +1,16 @@
+digraph "ScriptMessagePacket" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+
+0 [label="ScriptMessagePacket",comment="name: \"ScriptMessagePacket\", typeName: \"\", id: 0, branchId: 177, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Message Id",comment="name: \"Message Id\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="string",comment="name: \"string\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="Message Value",comment="name: \"Message Value\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="string",comment="name: \"string\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4}
+
+}

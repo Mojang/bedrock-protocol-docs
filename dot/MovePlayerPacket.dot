@@ -1,0 +1,56 @@
+digraph "MovePlayerPacket" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+0 -> 5
+5 -> 6
+0 -> 7
+7 -> 8
+0 -> 9
+9 -> 10
+0 -> 11
+11 -> 12
+0 -> 13
+13 -> 14
+0 -> 15
+15 -> 16
+16 -> 17
+15 -> 18
+18 -> 19
+19 -> 20
+18 -> 21
+21 -> 22
+0 -> 23
+23 -> 24
+
+0 [label="MovePlayerPacket",comment="name: \"MovePlayerPacket\", typeName: \"\", id: 0, branchId: 19, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Player Runtime ID",comment="name: \"Player Runtime ID\", typeName: \"ActorRuntimeID\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+2 [label="ActorRuntimeID",comment="name: \"ActorRuntimeID\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="Position",comment="name: \"Position\", typeName: \"Vec3\", id: 3, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+4 [label="Vec3",comment="name: \"Vec3\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+5 [label="Rotation",comment="name: \"Rotation\", typeName: \"Vec2\", id: 5, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+6 [label="Vec2",comment="name: \"Vec2\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+7 [label="Y-Head Rotation",comment="name: \"Y-Head Rotation\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="float",comment="name: \"float\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+9 [label="Position Mode",comment="name: \"Position Mode\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: PlayerPositionModeComponent::PositionMode\""];
+10 [label="byte",comment="name: \"byte\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+11 [label="On Ground",comment="name: \"On Ground\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+12 [label="bool",comment="name: \"bool\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+13 [label="Riding Runtime ID",comment="name: \"Riding Runtime ID\", typeName: \"ActorRuntimeID\", id: 13, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+14 [label="ActorRuntimeID",comment="name: \"ActorRuntimeID\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+15 [label="Dependency on 'Position Mode == Teleport'",shape=note,comment="name: \"Dependency on 'Position Mode == Teleport'\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
+16 [label="if (0)",shape=diamond,comment="name: \"if (0)\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
+17 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+18 [label="if (1)",shape=diamond,comment="name: \"if (1)\", typeName: \"\", id: 18, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
+19 [label="Teleportation Cause",comment="name: \"Teleportation Cause\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+20 [label="int",comment="name: \"int\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+21 [label="Source Actor Type",comment="name: \"Source Actor Type\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+22 [label="int",comment="name: \"int\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+23 [label="Tick",comment="name: \"Tick\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 0, notes: \"Should be the tick we last processed from PlayerAuthInputPacket or 0 if we're not doing server authoritative movement\""];
+24 [label="unsigned varint64",comment="name: \"unsigned varint64\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;6;8;10;12;14;17;20;22;24}
+
+}

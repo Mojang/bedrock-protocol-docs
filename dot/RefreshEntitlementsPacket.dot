@@ -1,0 +1,8 @@
+digraph "RefreshEntitlementsPacket" {
+rankdir = LR
+0
+
+0 [label="RefreshEntitlementsPacket",comment="name: \"RefreshEntitlementsPacket\", typeName: \"\", id: 0, branchId: 305, recurseId: -1, attributes: 0, notes: \"\""];
+{ rank = max}
+
+}

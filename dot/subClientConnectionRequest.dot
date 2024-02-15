@@ -1,0 +1,81 @@
+digraph "SubClientConnectionRequest" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+2 -> 3
+1 -> 4
+4 -> 5
+5 -> 6
+0 -> 7
+7 -> 8
+8 -> 9
+7 -> 10
+10 -> 11
+11 -> 12
+
+0 [label="SubClientConnectionRequest",comment="name: \"SubClientConnectionRequest\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Certificate Chain (JSON)",comment="name: \"Certificate Chain (JSON)\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 8, notes: \"Array of Base64 encoded JSON Web Token certificates to authenticate the player.The last certificate in the chain will have a property 'extraData' that contains player identity information including the XBL XUID (if the player was signed into XBL at the time of the connection).\""];
+2 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="int",comment="name: \"int\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+4 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+5 [label="String Data",comment="name: \"String Data\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+6 [label="byte",comment="name: \"byte\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+7 [label="Raw Token",comment="name: \"Raw Token\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 8, notes: \"Base64 encoded JSON Web Token that contains other relevant client properties.
+				Properties Include:
+				'SelfSignedId'
+				'ClientRandomId'
+				'PlatformUserId'
+				'SkinId'
+				'SkinData'
+				'SkinImageWidth'
+				'SkinImageHeight'
+				'CapeData'
+				'CapeImageWidth'
+				'CapeImageHeight'
+				'SkinResources'
+				'SkinGeometry'
+				'SkinGeometryDataEngineVersion'
+				'SkinAnimationData'
+				'PlayFabId'
+				'DeviceId'
+				'TrustedSkin'
+				'PremiumSkin'
+				'PersonaSkin'
+				'AnimatedImageData = Array of:'
+				'-- Type'
+				'-- Image'
+				'-- ImageWidth'
+				'-- ImageHeight'
+				'-- Frames'
+				'-- AnimationExpression'
+				'ArmSize'
+				'SkinColor'
+				'PersonaPieces = Array of:'
+				'-- PackId'
+				'-- PieceId'
+				'-- IsDefault'
+				'-- PieceType'
+				'-- ProuctId'
+				'PieceTintColors = Array of:'
+				'-- PieceType'
+				'-- Colors = Array of color hexstrings'
+				'DefaultInputMode' = (see enumeration: InputMode)
+				'CurrentInputMode' = (see enumeration: InputMode)
+				'ThirdPartyName'
+				'ThirdPartyNameOnly'
+				'PlatformOnlineId'
+				'PlatformOfflineId'
+                'DeviceOS' = (see enumeration: BuildPlatform)
+				'CapeOnClassicSkin'
+				'CapeId'
+				'PrimaryUser'
+				'CompatibleWithClientSideChunkGen'\""];
+8 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="int",comment="name: \"int\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+10 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+11 [label="String Data",comment="name: \"String Data\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+12 [label="byte",comment="name: \"byte\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3;6;9;12}
+
+}

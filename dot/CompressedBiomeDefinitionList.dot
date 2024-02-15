@@ -1,0 +1,12 @@
+digraph "CompressedBiomeDefinitionList" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+
+0 [label="CompressedBiomeDefinitionList",comment="name: \"CompressedBiomeDefinitionList\", typeName: \"\", id: 0, branchId: 301, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Compressed BiomeData",comment="name: \"Compressed BiomeData\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="string",comment="name: \"string\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2}
+
+}
