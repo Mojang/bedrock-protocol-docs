@@ -21,6 +21,8 @@ rankdir = LR
 23 -> 24
 6 -> 25
 25 -> 26
+6 -> 27
+27 -> 28
 
 6 [label="ShapedChemistryRecipe",comment="name: \"ShapedChemistryRecipe\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 7 [label="Recipe Id",comment="name: \"Recipe Id\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -43,6 +45,8 @@ rankdir = LR
 24 [label="string",comment="name: \"string\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 25 [label="Priority",comment="name: \"Priority\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 26 [label="varint",comment="name: \"varint\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;8;10;12;14;17;20;22;24;26}
+27 [label="Assume Symmetry",comment="name: \"Assume Symmetry\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+28 [label="bool",comment="name: \"bool\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;8;10;12;14;17;20;22;24;26;28}
 
 }

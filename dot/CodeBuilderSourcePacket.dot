@@ -9,9 +9,9 @@ rankdir = LR
 5 -> 6
 
 0 [label="CodeBuilderSourcePacket",comment="name: \"CodeBuilderSourcePacket\", typeName: \"\", id: 0, branchId: 178, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Operation",comment="name: \"Operation\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: CodeBuilderStorageQueryOptions::Operation\""];
+1 [label="Operation",comment="name: \"Operation\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="byte",comment="name: \"byte\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-3 [label="Category",comment="name: \"Category\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: CodeBuilderStorageQueryOptions::Category\""];
+3 [label="Category",comment="name: \"Category\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 4 [label="byte",comment="name: \"byte\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 5 [label="Value",comment="name: \"Value\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 6 [label="string",comment="name: \"string\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];

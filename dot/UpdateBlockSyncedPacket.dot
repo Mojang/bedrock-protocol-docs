@@ -24,9 +24,9 @@ rankdir = LR
 7 [label="Layer",comment="name: \"Layer\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 8 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 9 [label="Unique Actor Id",comment="name: \"Unique Actor Id\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"Id for the Moving Block Actor\""];
-10 [label="varint64",comment="name: \"varint64\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-11 [label="Actor Sync Message",comment="name: \"Actor Sync Message\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: ActorBlockSyncMessage::MessageId\""];
-12 [label="varint64",comment="name: \"varint64\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+10 [label="unsigned varint64",comment="name: \"unsigned varint64\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+11 [label="Actor Sync Message",comment="name: \"Actor Sync Message\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+12 [label="unsigned varint64",comment="name: \"unsigned varint64\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 { rank = max;2;4;6;8;10;12}
 
 }

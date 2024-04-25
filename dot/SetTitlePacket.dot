@@ -17,7 +17,7 @@ rankdir = LR
 13 -> 14
 
 0 [label="SetTitlePacket",comment="name: \"SetTitlePacket\", typeName: \"\", id: 0, branchId: 88, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Title Type",comment="name: \"Title Type\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: SetTitlePacket::TitleType\""];
+1 [label="Title Type",comment="name: \"Title Type\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="varint",comment="name: \"varint\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 3 [label="Title Text",comment="name: \"Title Text\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 4 [label="string",comment="name: \"string\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];

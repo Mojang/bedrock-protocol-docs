@@ -14,7 +14,7 @@ rankdir = LR
 52 -> 53
 
 42 [label="MapItemTrackedActor::UniqueId",comment="name: \"MapItemTrackedActor::UniqueId\", typeName: \"\", id: 42, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-43 [label="Type",comment="name: \"Type\", typeName: \"\", id: 43, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: MapItemTrackedActor::Type\""];
+43 [label="Type",comment="name: \"Type\", typeName: \"\", id: 43, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 44 [label="int",comment="name: \"int\", typeName: \"\", id: 44, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 45 [label="Dependency on 'Type'",shape=note,comment="name: \"Dependency on 'Type'\", typeName: \"\", id: 45, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
 46 [label="if (0)",shape=diamond,comment="name: \"if (0)\", typeName: \"\", id: 46, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];

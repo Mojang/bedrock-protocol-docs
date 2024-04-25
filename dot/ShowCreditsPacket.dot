@@ -9,7 +9,7 @@ rankdir = LR
 0 [label="ShowCreditsPacket",comment="name: \"ShowCreditsPacket\", typeName: \"\", id: 0, branchId: 75, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Player Runtime ID",comment="name: \"Player Runtime ID\", typeName: \"ActorRuntimeID\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 2 [label="ActorRuntimeID",comment="name: \"ActorRuntimeID\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-3 [label="Credits State",comment="name: \"Credits State\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: ShowCreditsPacket::CreditsState\""];
+3 [label="Credits State",comment="name: \"Credits State\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 4 [label="varint",comment="name: \"varint\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 { rank = max;2;4}
 

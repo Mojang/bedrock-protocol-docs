@@ -17,9 +17,9 @@ rankdir = LR
 80 [label="SerializedAbilitiesData",comment="name: \"SerializedAbilitiesData\", typeName: \"\", id: 80, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 81 [label="TargetPlayer.rawID",comment="name: \"TargetPlayer.rawID\", typeName: \"\", id: 81, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 82 [label="int64",comment="name: \"int64\", typeName: \"\", id: 82, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-83 [label="mPlayerPermissions",comment="name: \"mPlayerPermissions\", typeName: \"\", id: 83, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: PlayerPermissionLevel\""];
+83 [label="mPlayerPermissions",comment="name: \"mPlayerPermissions\", typeName: \"\", id: 83, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 84 [label="byte",comment="name: \"byte\", typeName: \"\", id: 84, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-85 [label="mCommandPermissions",comment="name: \"mCommandPermissions\", typeName: \"\", id: 85, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: CommandPermissionLevel\""];
+85 [label="mCommandPermissions",comment="name: \"mCommandPermissions\", typeName: \"\", id: 85, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 86 [label="byte",comment="name: \"byte\", typeName: \"\", id: 86, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 87 [label="Layers",comment="name: \"Layers\", typeName: \"\", id: 87, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
 88 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 88, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];

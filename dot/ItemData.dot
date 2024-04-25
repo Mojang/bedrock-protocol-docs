@@ -1,20 +1,20 @@
 digraph "ItemData" {
 rankdir = LR
-172
-172 -> 173
-173 -> 174
-172 -> 175
+174
+174 -> 175
 175 -> 176
-172 -> 177
+174 -> 177
 177 -> 178
+174 -> 179
+179 -> 180
 
-172 [label="ItemData",comment="name: \"ItemData\", typeName: \"\", id: 172, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-173 [label="Item Name",comment="name: \"Item Name\", typeName: \"\", id: 173, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-174 [label="string",comment="name: \"string\", typeName: \"\", id: 174, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-175 [label="Item Id",comment="name: \"Item Id\", typeName: \"\", id: 175, branchId: 0, recurseId: -1, attributes: 0, notes: \"Block id's < 256 (can be negative); Item id's > 257\""];
-176 [label="short",comment="name: \"short\", typeName: \"\", id: 176, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-177 [label="Is Component Based",comment="name: \"Is Component Based\", typeName: \"\", id: 177, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-178 [label="bool",comment="name: \"bool\", typeName: \"\", id: 178, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;174;176;178}
+174 [label="ItemData",comment="name: \"ItemData\", typeName: \"\", id: 174, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+175 [label="Item Name",comment="name: \"Item Name\", typeName: \"\", id: 175, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+176 [label="string",comment="name: \"string\", typeName: \"\", id: 176, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+177 [label="Item Id",comment="name: \"Item Id\", typeName: \"\", id: 177, branchId: 0, recurseId: -1, attributes: 0, notes: \"Block id's < 256 (can be negative); Item id's > 257\""];
+178 [label="short",comment="name: \"short\", typeName: \"\", id: 178, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+179 [label="Is Component Based",comment="name: \"Is Component Based\", typeName: \"\", id: 179, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+180 [label="bool",comment="name: \"bool\", typeName: \"\", id: 180, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;176;178;180}
 
 }

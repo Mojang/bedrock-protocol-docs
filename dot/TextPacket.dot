@@ -72,7 +72,7 @@ rankdir = LR
 68 -> 69
 
 0 [label="TextPacket",comment="name: \"TextPacket\", typeName: \"\", id: 0, branchId: 9, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Message Type",comment="name: \"Message Type\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: TextPacketType\""];
+1 [label="Message Type",comment="name: \"Message Type\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="byte",comment="name: \"byte\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 3 [label="Localize?",comment="name: \"Localize?\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 4 [label="bool",comment="name: \"bool\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];

@@ -559,7 +559,7 @@ rankdir = LR
 17 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 18 [label="SubChunk Pos Offset",comment="name: \"SubChunk Pos Offset\", typeName: \"SubChunkPacket::SubChunkPosOffset\", id: 18, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 26 [label="SubChunkPacket::SubChunkPosOffset",comment="name: \"SubChunkPacket::SubChunkPosOffset\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-27 [label="SubChunk Request Result",comment="name: \"SubChunk Request Result\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: SubChunkPacket::SubChunkRequestResult\""];
+27 [label="SubChunk Request Result",comment="name: \"SubChunk Request Result\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 28 [label="byte",comment="name: \"byte\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 29 [label="Dependency on 'Is SubChunk Request Result SuccessAllAir? or Cache Enabled?'",shape=note,comment="name: \"Dependency on 'Is SubChunk Request Result SuccessAllAir? or Cache Enabled?'\", typeName: \"\", id: 29, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
 30 [label="if (0)",shape=diamond,comment="name: \"if (0)\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
@@ -567,7 +567,7 @@ rankdir = LR
 32 [label="if (1)",shape=diamond,comment="name: \"if (1)\", typeName: \"\", id: 32, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
 33 [label="Serialized Sub Chunk",comment="name: \"Serialized Sub Chunk\", typeName: \"\", id: 33, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 34 [label="string",comment="name: \"string\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-35 [label="Height Map Data Type",comment="name: \"Height Map Data Type\", typeName: \"\", id: 35, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: SubChunkPacket::HeightMapDataType\""];
+35 [label="Height Map Data Type",comment="name: \"Height Map Data Type\", typeName: \"\", id: 35, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 36 [label="byte",comment="name: \"byte\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 37 [label="Dependency on 'Height Map Has Data'",shape=note,comment="name: \"Dependency on 'Height Map Has Data'\", typeName: \"\", id: 37, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
 38 [label="if (0)",shape=diamond,comment="name: \"if (0)\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];

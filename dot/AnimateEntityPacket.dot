@@ -27,7 +27,7 @@ rankdir = LR
 4 [label="string",comment="name: \"string\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 5 [label="mStopExpression",comment="name: \"mStopExpression\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"The stop expression, the the condition that determines when to transition to the next state.\""];
 6 [label="string",comment="name: \"string\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-7 [label="Stop expression molang version",comment="name: \"Stop expression molang version\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: MolangVersion\""];
+7 [label="Stop expression molang version",comment="name: \"Stop expression molang version\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 8 [label="int",comment="name: \"int\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 9 [label="mController",comment="name: \"mController\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"The name of an animation controller\""];
 10 [label="string",comment="name: \"string\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];

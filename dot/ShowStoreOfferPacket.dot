@@ -9,7 +9,7 @@ rankdir = LR
 0 [label="ShowStoreOfferPacket",comment="name: \"ShowStoreOfferPacket\", typeName: \"\", id: 0, branchId: 91, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Product ID",comment="name: \"Product ID\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="string",comment="name: \"string\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-3 [label="Redirect Type",comment="name: \"Redirect Type\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: ShowStoreOfferRedirectType\""];
+3 [label="Redirect Type",comment="name: \"Redirect Type\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 4 [label="byte",comment="name: \"byte\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 { rank = max;2;4}
 

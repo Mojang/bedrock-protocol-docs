@@ -185,7 +185,7 @@ rankdir = LR
 62 [label="string",comment="name: \"string\", typeName: \"\", id: 62, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 63 [label="Flags",comment="name: \"Flags\", typeName: \"\", id: 63, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 64 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 64, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-65 [label="Permission Level",comment="name: \"Permission Level\", typeName: \"\", id: 65, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: CommandPermissionLevel\""];
+65 [label="Permission Level",comment="name: \"Permission Level\", typeName: \"\", id: 65, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 66 [label="byte",comment="name: \"byte\", typeName: \"\", id: 66, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 67 [label="Alias Enum",comment="name: \"Alias Enum\", typeName: \"\", id: 67, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 68 [label="int",comment="name: \"int\", typeName: \"\", id: 68, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];

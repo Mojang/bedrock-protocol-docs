@@ -62,7 +62,7 @@ rankdir = LR
 59 -> 60
 
 1 [label="CraftingDataEntry",comment="name: \"CraftingDataEntry\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-2 [label="Crafting Type",comment="name: \"Crafting Type\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: CraftingDataEntryType\""];
+2 [label="Crafting Type",comment="name: \"Crafting Type\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 3 [label="varint",comment="name: \"varint\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 4 [label="Dependency on 'Crafting Type'",shape=note,comment="name: \"Dependency on 'Crafting Type'\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
 5 [label="if (0)",shape=diamond,comment="name: \"if (0)\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];

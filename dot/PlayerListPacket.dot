@@ -40,7 +40,7 @@ rankdir = LR
 127 -> 128
 
 0 [label="PlayerListPacket",comment="name: \"PlayerListPacket\", typeName: \"\", id: 0, branchId: 63, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Action",comment="name: \"Action\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: PlayerListPacketType\""];
+1 [label="Action",comment="name: \"Action\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="byte",comment="name: \"byte\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 3 [label="Dependency on 'Action'",shape=note,comment="name: \"Dependency on 'Action'\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
 4 [label="if (0)",shape=diamond,comment="name: \"if (0)\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
@@ -58,7 +58,7 @@ rankdir = LR
 16 [label="string",comment="name: \"string\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 17 [label="Platform Chat Id",comment="name: \"Platform Chat Id\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 18 [label="string",comment="name: \"string\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-19 [label="Build Platform",comment="name: \"Build Platform\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: BuildPlatform\""];
+19 [label="Build Platform",comment="name: \"Build Platform\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 20 [label="int",comment="name: \"int\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 21 [label="Serialized Skin",comment="name: \"Serialized Skin\", typeName: \"SerializedSkin\", id: 21, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 113 [label="SerializedSkin",comment="name: \"SerializedSkin\", typeName: \"\", id: 113, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
