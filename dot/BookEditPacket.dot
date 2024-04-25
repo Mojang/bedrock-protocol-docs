@@ -37,7 +37,7 @@ rankdir = LR
 33 -> 34
 
 0 [label="BookEditPacket",comment="name: \"BookEditPacket\", typeName: \"\", id: 0, branchId: 97, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Action",comment="name: \"Action\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: BookEditAction\""];
+1 [label="Action",comment="name: \"Action\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="byte",comment="name: \"byte\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 3 [label="Book Slot",comment="name: \"Book Slot\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 4 [label="byte",comment="name: \"byte\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];

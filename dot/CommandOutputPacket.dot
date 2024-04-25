@@ -31,7 +31,7 @@ rankdir = LR
 0 [label="CommandOutputPacket",comment="name: \"CommandOutputPacket\", typeName: \"\", id: 0, branchId: 79, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Origin Data",comment="name: \"Origin Data\", typeName: \"CommandOriginData\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 2 [label="CommandOriginData",comment="name: \"CommandOriginData\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-3 [label="Output Type",comment="name: \"Output Type\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: CommandOutputType\""];
+3 [label="Output Type",comment="name: \"Output Type\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 4 [label="byte",comment="name: \"byte\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 5 [label="Success Count",comment="name: \"Success Count\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 6 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];

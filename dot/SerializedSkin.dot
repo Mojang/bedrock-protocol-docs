@@ -115,11 +115,11 @@ rankdir = LR
 42 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 42, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 43 [label="Image Bytes",comment="name: \"Image Bytes\", typeName: \"\", id: 43, branchId: 0, recurseId: -1, attributes: 0, notes: \"Serialized into a string\""];
 44 [label="string",comment="name: \"string\", typeName: \"\", id: 44, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-45 [label="Animation Type",comment="name: \"Animation Type\", typeName: \"\", id: 45, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: persona::AnimatedTextureType\""];
+45 [label="Animation Type",comment="name: \"Animation Type\", typeName: \"\", id: 45, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 46 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 46, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 47 [label="Frame Count",comment="name: \"Frame Count\", typeName: \"\", id: 47, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 48 [label="float",comment="name: \"float\", typeName: \"\", id: 48, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-49 [label="Animation Expression",comment="name: \"Animation Expression\", typeName: \"\", id: 49, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: persona::AnimationExpression\""];
+49 [label="Animation Expression",comment="name: \"Animation Expression\", typeName: \"\", id: 49, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 50 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 50, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 51 [label="CapeImage Width",comment="name: \"CapeImage Width\", typeName: \"\", id: 51, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 52 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 52, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];

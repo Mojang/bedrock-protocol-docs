@@ -62,7 +62,7 @@ rankdir = LR
 16 [label="float",comment="name: \"float\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 17 [label="Carried Item",comment="name: \"Carried Item\", typeName: \"NetworkItemStackDescriptor\", id: 17, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 45 [label="NetworkItemStackDescriptor",comment="name: \"NetworkItemStackDescriptor\", typeName: \"\", id: 45, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-46 [label="Player Game Type",comment="name: \"Player Game Type\", typeName: \"\", id: 46, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: GameType\""];
+46 [label="Player Game Type",comment="name: \"Player Game Type\", typeName: \"\", id: 46, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 47 [label="varint",comment="name: \"varint\", typeName: \"\", id: 47, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 48 [label="Dependency on 'SynchedActorDataEntityWrapper exist?'",shape=note,comment="name: \"Dependency on 'SynchedActorDataEntityWrapper exist?'\", typeName: \"\", id: 48, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
 49 [label="if (0)",shape=diamond,comment="name: \"if (0)\", typeName: \"\", id: 49, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
@@ -83,7 +83,7 @@ rankdir = LR
 121 [label="ActorLink",comment="name: \"ActorLink\", typeName: \"\", id: 121, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 122 [label="Device Id",comment="name: \"Device Id\", typeName: \"\", id: 122, branchId: 0, recurseId: -1, attributes: 0, notes: \"A unique device id obtained from the connection request.\""];
 123 [label="string",comment="name: \"string\", typeName: \"\", id: 123, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-124 [label="Build Platform",comment="name: \"Build Platform\", typeName: \"\", id: 124, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: BuildPlatform\""];
+124 [label="Build Platform",comment="name: \"Build Platform\", typeName: \"\", id: 124, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 125 [label="int",comment="name: \"int\", typeName: \"\", id: 125, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 { rank = max;2;4;6;8;10;12;14;16;45;47;56;59;78;104;107;121;123;125}
 

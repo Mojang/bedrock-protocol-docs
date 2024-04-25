@@ -87,12 +87,12 @@ rankdir = LR
 8 [label="float",comment="name: \"float\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 9 [label="Input Data",comment="name: \"Input Data\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 10 [label="unsigned varint64",comment="name: \"unsigned varint64\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-11 [label="Input Mode",comment="name: \"Input Mode\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: InputMode\""];
+11 [label="Input Mode",comment="name: \"Input Mode\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 12 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-13 [label="Play Mode",comment="name: \"Play Mode\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: ClientPlayMode\""];
+13 [label="Play Mode",comment="name: \"Play Mode\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 14 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-15 [label="New Interaction Model",comment="name: \"New Interaction Model\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: NewInteractionModel\""];
-16 [label="varint",comment="name: \"varint\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+15 [label="New Interaction Model",comment="name: \"New Interaction Model\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+16 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 17 [label="Dependency on 'Play Mode == ClientPlayMode::Reality'",shape=note,comment="name: \"Dependency on 'Play Mode == ClientPlayMode::Reality'\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
 18 [label="if (0)",shape=diamond,comment="name: \"if (0)\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
 19 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
@@ -119,7 +119,7 @@ rankdir = LR
 87 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 87, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 88 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 88, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 89 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 89, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-90 [label="Action type",comment="name: \"Action type\", typeName: \"\", id: 90, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: ItemStackRequestActionType\""];
+90 [label="Action type",comment="name: \"Action type\", typeName: \"\", id: 90, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 91 [label="byte",comment="name: \"byte\", typeName: \"\", id: 91, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 92 [label="Amount",comment="name: \"Amount\", typeName: \"\", id: 92, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 93 [label="byte",comment="name: \"byte\", typeName: \"\", id: 93, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
@@ -133,7 +133,7 @@ rankdir = LR
 108 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 108, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 109 [label="String To Filter",comment="name: \"String To Filter\", typeName: \"\", id: 109, branchId: 0, recurseId: -1, attributes: 0, notes: \"Indivdiual string that needs checking\""];
 110 [label="string",comment="name: \"string\", typeName: \"\", id: 110, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-111 [label="StringsToFilterOrigin",comment="name: \"StringsToFilterOrigin\", typeName: \"\", id: 111, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: TextProcessingEventOrigin\""];
+111 [label="StringsToFilterOrigin",comment="name: \"StringsToFilterOrigin\", typeName: \"\", id: 111, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 112 [label="int",comment="name: \"int\", typeName: \"\", id: 112, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 113 [label="Dependency on 'PerformBlockActions bit set'",shape=note,comment="name: \"Dependency on 'PerformBlockActions bit set'\", typeName: \"\", id: 113, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
 114 [label="if (0)",shape=diamond,comment="name: \"if (0)\", typeName: \"\", id: 114, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];

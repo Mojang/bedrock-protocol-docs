@@ -20,7 +20,7 @@ rankdir = LR
 20 -> 21
 
 4 [label="CommandOriginData",comment="name: \"CommandOriginData\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-5 [label="Command Type",comment="name: \"Command Type\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: CommandOriginType\""];
+5 [label="Command Type",comment="name: \"Command Type\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 6 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 7 [label="Command UUID",comment="name: \"Command UUID\", typeName: \"mce::UUID\", id: 7, branchId: 0, recurseId: -1, attributes: 256, notes: \"Unique UUID that represents an instantiation of a command. Each time a command is run it should be given a UUID to represent that instance.\""];
 8 [label="mce::UUID",comment="name: \"mce::UUID\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];

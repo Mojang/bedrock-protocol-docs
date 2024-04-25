@@ -7,7 +7,7 @@ rankdir = LR
 3 -> 4
 
 0 [label="PositionTrackingDBClientRequestPacket",comment="name: \"PositionTrackingDBClientRequestPacket\", typeName: \"\", id: 0, branchId: 154, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Action",comment="name: \"Action\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: PositionTrackingDBClientRequestPacket::Action\""];
+1 [label="Action",comment="name: \"Action\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="byte",comment="name: \"byte\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 3 [label="Id",comment="name: \"Id\", typeName: \"PositionTrackingId\", id: 3, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 4 [label="PositionTrackingId",comment="name: \"PositionTrackingId\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];

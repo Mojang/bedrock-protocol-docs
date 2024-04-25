@@ -11,11 +11,11 @@ rankdir = LR
 7 -> 8
 
 0 [label="PacketViolationWarningPacket",comment="name: \"PacketViolationWarningPacket\", typeName: \"\", id: 0, branchId: 156, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Violation Type",comment="name: \"Violation Type\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: PacketViolationType\""];
+1 [label="Violation Type",comment="name: \"Violation Type\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="varint",comment="name: \"varint\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-3 [label="Violation Severity",comment="name: \"Violation Severity\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: PacketViolationSeverity\""];
+3 [label="Violation Severity",comment="name: \"Violation Severity\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 4 [label="varint",comment="name: \"varint\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-5 [label="Violating packet id",comment="name: \"Violating packet id\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: MinecraftPacketIds\""];
+5 [label="Violating packet id",comment="name: \"Violating packet id\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 6 [label="varint",comment="name: \"varint\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 7 [label="Violation context",comment="name: \"Violation context\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 8 [label="string",comment="name: \"string\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
