@@ -15,7 +15,7 @@ rankdir = LR
 0 [label="NpcRequestPacket",comment="name: \"NpcRequestPacket\", typeName: \"\", id: 0, branchId: 98, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="NPC Runtime ID",comment="name: \"NPC Runtime ID\", typeName: \"ActorRuntimeID\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 2 [label="ActorRuntimeID",comment="name: \"ActorRuntimeID\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-3 [label="Request Type",comment="name: \"Request Type\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: NpcRequestPacket::RequestType\""];
+3 [label="Request Type",comment="name: \"Request Type\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 4 [label="byte",comment="name: \"byte\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 5 [label="Actions",comment="name: \"Actions\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 6 [label="string",comment="name: \"string\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];

@@ -70,9 +70,11 @@ rankdir = LR
 66 -> 67
 0 -> 68
 68 -> 69
+0 -> 70
+70 -> 71
 
 0 [label="TextPacket",comment="name: \"TextPacket\", typeName: \"\", id: 0, branchId: 9, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Message Type",comment="name: \"Message Type\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: TextPacketType\""];
+1 [label="Message Type",comment="name: \"Message Type\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="byte",comment="name: \"byte\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 3 [label="Localize?",comment="name: \"Localize?\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 4 [label="bool",comment="name: \"bool\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
@@ -141,6 +143,8 @@ rankdir = LR
 67 [label="string",comment="name: \"string\", typeName: \"\", id: 67, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 68 [label="Platform Id",comment="name: \"Platform Id\", typeName: \"\", id: 68, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 69 [label="string",comment="name: \"string\", typeName: \"\", id: 69, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2;4;8;11;13;16;19;22;25;28;31;34;37;40;43;46;49;51;54;56;59;62;65;67;69}
+70 [label="Filtered Message",comment="name: \"Filtered Message\", typeName: \"\", id: 70, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+71 [label="string",comment="name: \"string\", typeName: \"\", id: 71, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;8;11;13;16;19;22;25;28;31;34;37;40;43;46;49;51;54;56;59;62;65;67;69;71}
 
 }

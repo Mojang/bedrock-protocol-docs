@@ -17,7 +17,7 @@ rankdir = LR
 4 [label="NetworkBlockPosition",comment="name: \"NetworkBlockPosition\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 5 [label="Structure Settings",comment="name: \"Structure Settings\", typeName: \"StructureSettings\", id: 5, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 6 [label="StructureSettings",comment="name: \"StructureSettings\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-7 [label="Requested Operation",comment="name: \"Requested Operation\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: StructureTemplateRequestOperation\""];
+7 [label="Requested Operation",comment="name: \"Requested Operation\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 8 [label="byte",comment="name: \"byte\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 { rank = max;2;4;6;8}
 

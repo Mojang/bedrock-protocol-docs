@@ -24,6 +24,10 @@ rankdir = LR
 26 -> 27
 6 -> 28
 28 -> 29
+6 -> 30
+30 -> 31
+6 -> 32
+32 -> 33
 
 6 [label="ShapedRecipe",comment="name: \"ShapedRecipe\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 7 [label="Recipe Unique Id",comment="name: \"Recipe Unique Id\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -49,6 +53,10 @@ rankdir = LR
 27 [label="string",comment="name: \"string\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 28 [label="Priority",comment="name: \"Priority\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 29 [label="varint",comment="name: \"varint\", typeName: \"\", id: 29, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;8;11;13;17;20;23;25;27;29}
+30 [label="Assume Symmetry",comment="name: \"Assume Symmetry\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+31 [label="bool",comment="name: \"bool\", typeName: \"\", id: 31, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+32 [label="Unlocking Requirement",comment="name: \"Unlocking Requirement\", typeName: \"RecipeUnlockingRequirement\", id: 32, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+33 [label="RecipeUnlockingRequirement",comment="name: \"RecipeUnlockingRequirement\", typeName: \"\", id: 33, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;8;11;13;17;20;23;25;27;29;31;33}
 
 }

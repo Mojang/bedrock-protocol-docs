@@ -15,7 +15,7 @@ rankdir = LR
 71 -> 72
 
 60 [label="MapDecoration",comment="name: \"MapDecoration\", typeName: \"\", id: 60, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-61 [label="Map Decoration Type",comment="name: \"Map Decoration Type\", typeName: \"\", id: 61, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: MapDecoration::Type\""];
+61 [label="Map Decoration Type",comment="name: \"Map Decoration Type\", typeName: \"\", id: 61, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 62 [label="byte",comment="name: \"byte\", typeName: \"\", id: 62, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 63 [label="Rotation",comment="name: \"Rotation\", typeName: \"\", id: 63, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 64 [label="byte",comment="name: \"byte\", typeName: \"\", id: 64, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];

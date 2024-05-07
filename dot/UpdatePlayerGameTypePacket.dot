@@ -5,12 +5,16 @@ rankdir = LR
 1 -> 2
 0 -> 3
 3 -> 4
+0 -> 5
+5 -> 6
 
 0 [label="UpdatePlayerGameTypePacket",comment="name: \"UpdatePlayerGameTypePacket\", typeName: \"\", id: 0, branchId: 151, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Player game type",comment="name: \"Player game type\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: GameType\""];
+1 [label="Player game type",comment="name: \"Player game type\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="varint",comment="name: \"varint\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 3 [label="Target player",comment="name: \"Target player\", typeName: \"ActorUniqueID\", id: 3, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 4 [label="ActorUniqueID",comment="name: \"ActorUniqueID\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2;4}
+5 [label="Player ReplayStateComponent tick",comment="name: \"Player ReplayStateComponent tick\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+6 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;6}
 
 }

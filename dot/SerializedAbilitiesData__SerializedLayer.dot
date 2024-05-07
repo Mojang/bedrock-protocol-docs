@@ -13,7 +13,7 @@ rankdir = LR
 101 -> 102
 
 92 [label="SerializedAbilitiesData::SerializedLayer",comment="name: \"SerializedAbilitiesData::SerializedLayer\", typeName: \"\", id: 92, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-93 [label="SerializedLayer",comment="name: \"SerializedLayer\", typeName: \"\", id: 93, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: SerializedAbilitiesData::SerializedAbilitiesLayer\""];
+93 [label="SerializedLayer",comment="name: \"SerializedLayer\", typeName: \"\", id: 93, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 94 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 94, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 95 [label="AbilitiesSet",comment="name: \"AbilitiesSet\", typeName: \"\", id: 95, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 96 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 96, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];

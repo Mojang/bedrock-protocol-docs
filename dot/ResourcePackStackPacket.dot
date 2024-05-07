@@ -27,6 +27,8 @@ rankdir = LR
 23 -> 27
 0 -> 28
 28 -> 44
+0 -> 45
+45 -> 46
 
 0 [label="ResourcePackStackPacket",comment="name: \"ResourcePackStackPacket\", typeName: \"\", id: 0, branchId: 7, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Texture Pack Required",comment="name: \"Texture Pack Required\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -55,6 +57,8 @@ rankdir = LR
 27 [label="BaseGameVersion",comment="name: \"BaseGameVersion\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 28 [label="Experiments",comment="name: \"Experiments\", typeName: \"Experiments\", id: 28, branchId: 0, recurseId: -1, attributes: 256, notes: \"Refer to the Experiments type for how to serialize\""];
 44 [label="Experiments",comment="name: \"Experiments\", typeName: \"\", id: 44, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2;5;8;10;12;15;18;20;22;27;44}
+45 [label="Include Editor Packs",comment="name: \"Include Editor Packs\", typeName: \"\", id: 45, branchId: 0, recurseId: -1, attributes: 0, notes: \"When connecting to an Editor world, include the vanilla editor packs in the stack\""];
+46 [label="bool",comment="name: \"bool\", typeName: \"\", id: 46, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;5;8;10;12;15;18;20;22;27;44;46}
 
 }

@@ -18,9 +18,9 @@ rankdir = LR
 14 -> 15
 
 0 [label="RequestAbilityPacket",comment="name: \"RequestAbilityPacket\", typeName: \"\", id: 0, branchId: 184, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Ability",comment="name: \"Ability\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: AbilitiesIndex\""];
-2 [label="byte",comment="name: \"byte\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-3 [label="Value Type",comment="name: \"Value Type\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: RequestAbilityPacket::Type\""];
+1 [label="Ability",comment="name: \"Ability\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="varint",comment="name: \"varint\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="Value Type",comment="name: \"Value Type\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 4 [label="byte",comment="name: \"byte\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 5 [label="Dependency on 'Value Type'",shape=note,comment="name: \"Dependency on 'Value Type'\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
 6 [label="if (1)",shape=diamond,comment="name: \"if (1)\", typeName: \"\", id: 6, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];

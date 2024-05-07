@@ -53,7 +53,7 @@ rankdir = LR
 43 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 43, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 44 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 44, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 45 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 45, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-46 [label="Container Enum Name",comment="name: \"Container Enum Name\", typeName: \"\", id: 46, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: ContainerEnumName\""];
+46 [label="Container Enum Name",comment="name: \"Container Enum Name\", typeName: \"\", id: 46, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 47 [label="byte",comment="name: \"byte\", typeName: \"\", id: 47, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 48 [label="Slots",comment="name: \"Slots\", typeName: \"\", id: 48, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
 49 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 49, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -67,7 +67,7 @@ rankdir = LR
 57 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 57, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 58 [label="Action",comment="name: \"Action\", typeName: \"InventoryAction\", id: 58, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 59 [label="InventoryAction",comment="name: \"InventoryAction\", typeName: \"\", id: 59, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-60 [label="Action Type",comment="name: \"Action Type\", typeName: \"\", id: 60, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: ItemUseInventoryTransaction::ActionType\""];
+60 [label="Action Type",comment="name: \"Action Type\", typeName: \"\", id: 60, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 61 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 61, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 62 [label="Position",comment="name: \"Position\", typeName: \"NetworkBlockPosition\", id: 62, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 63 [label="NetworkBlockPosition",comment="name: \"NetworkBlockPosition\", typeName: \"\", id: 63, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];

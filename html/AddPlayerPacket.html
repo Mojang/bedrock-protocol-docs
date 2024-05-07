@@ -1,12 +1,8 @@
 <!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/AddPlayerPacket.svg" alt="AddPlayerPacket">
-<br><table><col width="10%"><col width="90%"><tr><th>Field Name</th><th>Field Notes</th></tr><tr><td>Player Game Type</td>
-<td>enumeration: GameType</td>
-</tr><tr><td>Unpack</td>
-<td>std::vector<std::unique_ptr<DataItem>></td>
+<br><table><col width="10%"><col width="90%"><tr><th>Field Name</th><th>Field Notes</th></tr><tr><td>Unpack</td>
+<td>std::vector&lt;std::unique_ptr&lt;DataItem&gt;&gt;</td>
 </tr><tr><td>Entity Data PackAll</td>
-<td>std::vector<std::unique_ptr<DataItem>></td>
+<td>std::vector&lt;std::unique_ptr&lt;DataItem&gt;&gt;</td>
 </tr><tr><td>Device Id</td>
 <td>A unique device id obtained from the connection request.</td>
-</tr><tr><td>Build Platform</td>
-<td>enumeration: BuildPlatform</td>
 </tr></table></body> </html>

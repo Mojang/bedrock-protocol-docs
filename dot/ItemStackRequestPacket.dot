@@ -39,7 +39,7 @@ rankdir = LR
 8 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 9 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 10 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-11 [label="Action type",comment="name: \"Action type\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: ItemStackRequestActionType\""];
+11 [label="Action type",comment="name: \"Action type\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 12 [label="byte",comment="name: \"byte\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 13 [label="Amount",comment="name: \"Amount\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 14 [label="byte",comment="name: \"byte\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
@@ -53,7 +53,7 @@ rankdir = LR
 22 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 23 [label="String To Filter",comment="name: \"String To Filter\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 0, notes: \"Indivdiual string that needs checking\""];
 24 [label="string",comment="name: \"string\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-25 [label="StringsToFilterOrigin",comment="name: \"StringsToFilterOrigin\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: TextProcessingEventOrigin\""];
+25 [label="StringsToFilterOrigin",comment="name: \"StringsToFilterOrigin\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 26 [label="int",comment="name: \"int\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 { rank = max;3;6;9;12;14;16;18;21;24;26}
 

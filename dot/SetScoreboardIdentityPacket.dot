@@ -17,7 +17,7 @@ rankdir = LR
 13 -> 14
 
 0 [label="SetScoreboardIdentityPacket",comment="name: \"SetScoreboardIdentityPacket\", typeName: \"\", id: 0, branchId: 112, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Scoreboard Identity Packet Type",comment="name: \"Scoreboard Identity Packet Type\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: ScoreboardIdentityPacketType\""];
+1 [label="Scoreboard Identity Packet Type",comment="name: \"Scoreboard Identity Packet Type\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="byte",comment="name: \"byte\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 3 [label="Identity Info",comment="name: \"Identity Info\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
 4 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];

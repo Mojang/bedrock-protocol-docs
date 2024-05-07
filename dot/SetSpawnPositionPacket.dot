@@ -11,7 +11,7 @@ rankdir = LR
 7 -> 8
 
 0 [label="SetSpawnPositionPacket",comment="name: \"SetSpawnPositionPacket\", typeName: \"\", id: 0, branchId: 43, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Spawn Position Type",comment="name: \"Spawn Position Type\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: SpawnPositionType\""];
+1 [label="Spawn Position Type",comment="name: \"Spawn Position Type\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="varint",comment="name: \"varint\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 3 [label="Block Position",comment="name: \"Block Position\", typeName: \"NetworkBlockPosition\", id: 3, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 4 [label="NetworkBlockPosition",comment="name: \"NetworkBlockPosition\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];

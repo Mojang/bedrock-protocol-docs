@@ -17,7 +17,7 @@ rankdir = LR
 0 [label="NpcDialoguePacket",comment="name: \"NpcDialoguePacket\", typeName: \"\", id: 0, branchId: 169, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Npc Id Raw Id",comment="name: \"Npc Id Raw Id\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"The ActorUniqueID of the NPC being remote fired\""];
 2 [label="unsigned int64",comment="name: \"unsigned int64\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-3 [label="Npc Dialogue Action Type",comment="name: \"Npc Dialogue Action Type\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: NpcDialoguePacket::NpcDialogueActionType\""];
+3 [label="Npc Dialogue Action Type",comment="name: \"Npc Dialogue Action Type\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 4 [label="varint",comment="name: \"varint\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 5 [label="Dialogue",comment="name: \"Dialogue\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"The text to be displayed to the client\""];
 6 [label="string",comment="name: \"string\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];

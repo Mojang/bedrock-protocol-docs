@@ -15,9 +15,9 @@ rankdir = LR
 2 [label="float",comment="name: \"float\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 3 [label="Seconds",comment="name: \"Seconds\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"Duration\""];
 4 [label="float",comment="name: \"float\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-5 [label="Shake Type",comment="name: \"Shake Type\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: CameraShakeType\""];
+5 [label="Shake Type",comment="name: \"Shake Type\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 6 [label="byte",comment="name: \"byte\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-7 [label="Shake action",comment="name: \"Shake action\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: CameraShakeAction\""];
+7 [label="Shake action",comment="name: \"Shake action\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 8 [label="byte",comment="name: \"byte\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 { rank = max;2;4;6;8}
 

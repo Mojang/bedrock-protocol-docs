@@ -29,7 +29,7 @@ rankdir = LR
 10 [label="string",comment="name: \"string\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 11 [label="Is Premium Pack",comment="name: \"Is Premium Pack\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"Do you need an entitlement to use this pack?\""];
 12 [label="bool",comment="name: \"bool\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-13 [label="Pack Type",comment="name: \"Pack Type\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: PackType\""];
+13 [label="Pack Type",comment="name: \"Pack Type\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 14 [label="byte",comment="name: \"byte\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 { rank = max;2;4;6;8;10;12;14}
 

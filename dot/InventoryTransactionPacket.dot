@@ -43,7 +43,7 @@ rankdir = LR
 16 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 17 [label="Slot",comment="name: \"Slot\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 18 [label="byte",comment="name: \"byte\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-19 [label="Transaction Type",comment="name: \"Transaction Type\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"enumeration: ComplexInventoryTransaction::Type\""];
+19 [label="Transaction Type",comment="name: \"Transaction Type\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 20 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 21 [label="mTransaction->mTransaction",comment="name: \"mTransaction->mTransaction\", typeName: \"InventoryTransaction\", id: 21, branchId: 0, recurseId: -1, attributes: 256, notes: \"Our ComplexInventoryTransaction contains an InventoryTransaction within it\""];
 52 [label="InventoryTransaction",comment="name: \"InventoryTransaction\", typeName: \"\", id: 52, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
