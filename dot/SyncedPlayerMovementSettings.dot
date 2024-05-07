@@ -1,20 +1,20 @@
 digraph "SyncedPlayerMovementSettings" {
 rankdir = LR
-149
-149 -> 150
-150 -> 151
-149 -> 152
-152 -> 153
-149 -> 154
-154 -> 155
+155
+155 -> 156
+156 -> 157
+155 -> 158
+158 -> 159
+155 -> 160
+160 -> 161
 
-149 [label="SyncedPlayerMovementSettings",comment="name: \"SyncedPlayerMovementSettings\", typeName: \"\", id: 149, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-150 [label="Authority Mode",comment="name: \"Authority Mode\", typeName: \"\", id: 150, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-151 [label="varint",comment="name: \"varint\", typeName: \"\", id: 151, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-152 [label="Rewind History Size",comment="name: \"Rewind History Size\", typeName: \"\", id: 152, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-153 [label="varint",comment="name: \"varint\", typeName: \"\", id: 153, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-154 [label="Server Authoratative Block Breaking",comment="name: \"Server Authoratative Block Breaking\", typeName: \"\", id: 154, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-155 [label="bool",comment="name: \"bool\", typeName: \"\", id: 155, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;151;153;155}
+155 [label="SyncedPlayerMovementSettings",comment="name: \"SyncedPlayerMovementSettings\", typeName: \"\", id: 155, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+156 [label="Authority Mode",comment="name: \"Authority Mode\", typeName: \"\", id: 156, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+157 [label="varint",comment="name: \"varint\", typeName: \"\", id: 157, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+158 [label="Rewind History Size",comment="name: \"Rewind History Size\", typeName: \"\", id: 158, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+159 [label="varint",comment="name: \"varint\", typeName: \"\", id: 159, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+160 [label="Server Authoratative Block Breaking",comment="name: \"Server Authoratative Block Breaking\", typeName: \"\", id: 160, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+161 [label="bool",comment="name: \"bool\", typeName: \"\", id: 161, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;157;159;161}
 
 }
