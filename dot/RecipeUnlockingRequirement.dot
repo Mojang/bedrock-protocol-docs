@@ -1,0 +1,32 @@
+digraph "RecipeUnlockingRequirement" {
+rankdir = LR
+54
+54 -> 55
+55 -> 56
+54 -> 57
+57 -> 58
+58 -> 59
+57 -> 60
+60 -> 61
+61 -> 62
+62 -> 63
+61 -> 64
+64 -> 65
+65 -> 66
+
+54 [label="RecipeUnlockingRequirement",comment="name: \"RecipeUnlockingRequirement\", typeName: \"\", id: 54, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+55 [label="Unlocking Context",comment="name: \"Unlocking Context\", typeName: \"\", id: 55, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+56 [label="byte",comment="name: \"byte\", typeName: \"\", id: 56, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+57 [label="Dependency on 'Unlocking context is None?'",shape=note,comment="name: \"Dependency on 'Unlocking context is None?'\", typeName: \"\", id: 57, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
+58 [label="if (0)",shape=diamond,comment="name: \"if (0)\", typeName: \"\", id: 58, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
+59 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 59, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+60 [label="if (1)",shape=diamond,comment="name: \"if (1)\", typeName: \"\", id: 60, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
+61 [label="Unlocking Ingredients",comment="name: \"Unlocking Ingredients\", typeName: \"\", id: 61, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+62 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 62, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+63 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 63, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+64 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 64, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+65 [label="Ingredient",comment="name: \"Ingredient\", typeName: \"RecipeIngredient\", id: 65, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+66 [label="RecipeIngredient",comment="name: \"RecipeIngredient\", typeName: \"\", id: 66, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;56;59;63;66}
+
+}

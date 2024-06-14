@@ -11,6 +11,8 @@ rankdir = LR
 7 -> 8
 0 -> 9
 9 -> 10
+0 -> 11
+11 -> 12
 
 0 [label="PlayerArmorDamagePacket",comment="name: \"PlayerArmorDamagePacket\", typeName: \"\", id: 0, branchId: 149, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Slots Bitset",comment="name: \"Slots Bitset\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -23,6 +25,8 @@ rankdir = LR
 8 [label="varint",comment="name: \"varint\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 9 [label="Damage For Slot (Only Gets Written If Bit Is Set)",comment="name: \"Damage For Slot (Only Gets Written If Bit Is Set)\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 10 [label="varint",comment="name: \"varint\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2;4;6;8;10}
+11 [label="Damage For Slot (Only Gets Written If Bit Is Set)",comment="name: \"Damage For Slot (Only Gets Written If Bit Is Set)\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+12 [label="varint",comment="name: \"varint\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;6;8;10;12}
 
 }

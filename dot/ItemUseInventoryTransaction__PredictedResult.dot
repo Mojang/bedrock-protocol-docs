@@ -1,0 +1,12 @@
+digraph "ItemUseInventoryTransaction::PredictedResult" {
+rankdir = LR
+77
+77 -> 78
+78 -> 79
+
+77 [label="ItemUseInventoryTransaction::PredictedResult",comment="name: \"ItemUseInventoryTransaction::PredictedResult\", typeName: \"\", id: 77, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+78 [label="Client interact prediction",comment="name: \"Client interact prediction\", typeName: \"\", id: 78, branchId: 0, recurseId: -1, attributes: 0, notes: \"Indicates if the client thinks the interaction succeeded\""];
+79 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 79, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;79}
+
+}

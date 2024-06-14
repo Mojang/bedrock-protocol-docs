@@ -1,0 +1,16 @@
+digraph "ServerboundLoadingScreenPacket" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+
+0 [label="ServerboundLoadingScreenPacket",comment="name: \"ServerboundLoadingScreenPacket\", typeName: \"\", id: 0, branchId: 312, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Loading Screen Packet Type",comment="name: \"Loading Screen Packet Type\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="varint",comment="name: \"varint\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="Loading Screen Id",comment="name: \"Loading Screen Id\", typeName: \"std::optional<unsigned int>\", id: 3, branchId: 0, recurseId: -1, attributes: 256, notes: \"This will be set if the server gives us a value. If the server doesn't expect this value, then the client will get disconnected.\""];
+4 [label="std::optional<unsigned int>",comment="name: \"std::optional<unsigned int>\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4}
+
+}

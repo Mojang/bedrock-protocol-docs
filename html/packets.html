@@ -64,9 +64,6 @@
 </tr><tr><td>22</td>
 <td><a href = "AddPaintingPacket.html">Add Painting</a></td>
 <td>Sends the information for a new painting actor from server to client.</td>
-</tr><tr><td>23</td>
-<td><a href = "TickSyncPacket.html">Tick Sync Packet</a></td>
-<td>Helps ensure client and server ticks are in sync.This packet is used to maintain a synchronized, server-authoritative tick between the client and the server</td>
 </tr><tr><td>24</td>
 <td><a href = "LevelSoundEventPacketV1.html">LevelSoundEventPacketV1</a></td>
 <td></td>
@@ -583,4 +580,16 @@
 </tr><tr><td>308</td>
 <td><a href = "SetHudPacket.html">SetHudPacket</a></td>
 <td>This packet is only used via the set hud command. This is for 3rd party content.</td>
+</tr><tr><td>309</td>
+<td><a href = "AwardAchievementPacket.html">AwardAchievementPacket</a></td>
+<td></td>
+</tr><tr><td>310</td>
+<td><a href = "ClientboundCloseFormPacket.html">ClientboundCloseFormPacket</a></td>
+<td>Sent from the server to client to force close all server forms on the stack and return to the HUD screen.</td>
+</tr><tr><td>312</td>
+<td><a href = "ServerboundLoadingScreenPacket.html">ServerboundLoadingScreenPacket</a></td>
+<td>Sent from the client to the server to message to the server about the state of the loading screen.</td>
+</tr><tr><td>313</td>
+<td><a href = "JigsawStructureDataPacket.html">Jigsaw Structure data used by client jigsaw structure worldgen</a></td>
+<td>This packet contains a copy of the behavior pack jigsaw structure rulesSends the serialized jigsaw rule JSON to the client as it's needed on both the client and server.</td>
 </tr></table></body> </html>
