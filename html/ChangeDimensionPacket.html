@@ -1,4 +1,6 @@
 <!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/ChangeDimensionPacket.svg" alt="ChangeDimensionPacket">
 <br><table><col width="10%"><col width="90%"><tr><th>Field Name</th><th>Field Notes</th></tr><tr><td>Dimension ID</td>
 <td>Currently supported: (0 -&gt; Overworld, 1 -&gt; Nether, 2 -&gt; The End, 3 -&gt; Undefined)</td>
+</tr><tr><td>Loading Screen Id</td>
+<td>Leave empty if there is no loading screen expected on the client. This id needs to be unique and not conflict with any other active loading screens. This is implemented with an unsigned integer incrementing forever, and that is expected to not have collisions when it wraps around back to 0 if that could be a possibility.</td>
 </tr></table></body> </html>

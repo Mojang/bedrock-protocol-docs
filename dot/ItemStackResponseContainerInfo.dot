@@ -11,8 +11,8 @@ rankdir = LR
 25 -> 42
 
 18 [label="ItemStackResponseContainerInfo",comment="name: \"ItemStackResponseContainerInfo\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-19 [label="Open Container Net Id",comment="name: \"Open Container Net Id\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-20 [label="byte",comment="name: \"byte\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+19 [label="Full Container Name",comment="name: \"Full Container Name\", typeName: \"FullContainerName\", id: 19, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+20 [label="FullContainerName",comment="name: \"FullContainerName\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 21 [label="Slots",comment="name: \"Slots\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
 22 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 23 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
