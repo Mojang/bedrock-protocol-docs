@@ -41,6 +41,8 @@ rankdir = LR
 72 -> 73
 32 -> 74
 74 -> 75
+32 -> 76
+76 -> 77
 
 32 [label="PackedItemUseLegacyInventoryTransaction",comment="name: \"PackedItemUseLegacyInventoryTransaction\", typeName: \"\", id: 32, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 33 [label="ID",comment="name: \"ID\", typeName: \"TypedClientNetId<struct ItemStackLegacyRequestIdTag,int,0>\", id: 33, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
@@ -83,6 +85,8 @@ rankdir = LR
 73 [label="Vec3",comment="name: \"Vec3\", typeName: \"\", id: 73, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 74 [label="Target Block Id",comment="name: \"Target Block Id\", typeName: \"\", id: 74, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 75 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 75, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;37;40;44;47;50;53;56;59;61;63;65;67;69;71;73;75}
+76 [label="Client Interact Prediction",comment="name: \"Client Interact Prediction\", typeName: \"\", id: 76, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+77 [label="byte",comment="name: \"byte\", typeName: \"\", id: 77, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;37;40;44;47;50;53;56;59;61;63;65;67;69;71;73;75;77}
 
 }
