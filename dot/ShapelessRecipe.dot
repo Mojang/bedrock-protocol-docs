@@ -48,5 +48,3 @@ rankdir = LR
 53 [label="Unlocking Requirement",comment="name: \"Unlocking Requirement\", typeName: \"RecipeUnlockingRequirement\", id: 53, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 67 [label="RecipeUnlockingRequirement",comment="name: \"RecipeUnlockingRequirement\", typeName: \"\", id: 67, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 { rank = max;8;11;19;22;41;48;50;52;67}
-
-}

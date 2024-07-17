@@ -73,7 +73,6 @@ rankdir = LR
 21 [label="Vec2",comment="name: \"Vec2\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 22 [label="Settings",comment="name: \"Settings\", typeName: \"LevelSettings\", id: 22, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 145 [label="LevelSettings",comment="name: \"LevelSettings\", typeName: \"\", id: 145, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-146 [label="Level ID",comment="name: \"Level ID\", typeName: \"\", id: 146, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 147 [label="string",comment="name: \"string\", typeName: \"\", id: 147, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 148 [label="Level Name",comment="name: \"Level Name\", typeName: \"\", id: 148, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 149 [label="string",comment="name: \"string\", typeName: \"\", id: 149, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
@@ -81,15 +80,6 @@ rankdir = LR
 151 [label="string",comment="name: \"string\", typeName: \"\", id: 151, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 152 [label="Is Trial?",comment="name: \"Is Trial?\", typeName: \"\", id: 152, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 153 [label="bool",comment="name: \"bool\", typeName: \"\", id: 153, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-154 [label="Movement Settings",comment="name: \"Movement Settings\", typeName: \"SyncedPlayerMovementSettings\", id: 154, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-162 [label="SyncedPlayerMovementSettings",comment="name: \"SyncedPlayerMovementSettings\", typeName: \"\", id: 162, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-163 [label="Current Level Time",comment="name: \"Current Level Time\", typeName: \"\", id: 163, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-164 [label="unsigned int64",comment="name: \"unsigned int64\", typeName: \"\", id: 164, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-165 [label="Enchantment Seed",comment="name: \"Enchantment Seed\", typeName: \"\", id: 165, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-166 [label="varint",comment="name: \"varint\", typeName: \"\", id: 166, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-167 [label="Block Properties",comment="name: \"Block Properties\", typeName: \"\", id: 167, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-168 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 168, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-169 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 169, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 170 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 170, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 171 [label="Block Name",comment="name: \"Block Name\", typeName: \"\", id: 171, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 172 [label="string",comment="name: \"string\", typeName: \"\", id: 172, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
