@@ -11,6 +11,8 @@ rankdir = LR
 117 -> 118
 110 -> 119
 119 -> 120
+110 -> 121
+121 -> 122
 
 110 [label="ActorLink",comment="name: \"ActorLink\", typeName: \"\", id: 110, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 111 [label="Actor Unique ID - A",comment="name: \"Actor Unique ID - A\", typeName: \"ActorUniqueID\", id: 111, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
@@ -23,6 +25,8 @@ rankdir = LR
 118 [label="bool",comment="name: \"bool\", typeName: \"\", id: 118, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 119 [label="Passenger Initiated",comment="name: \"Passenger Initiated\", typeName: \"\", id: 119, branchId: 0, recurseId: -1, attributes: 0, notes: \"Whether the link was changed by the passenger\""];
 120 [label="bool",comment="name: \"bool\", typeName: \"\", id: 120, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;112;114;116;118;120}
+121 [label="Vehicle Angular Velocity",comment="name: \"Vehicle Angular Velocity\", typeName: \"\", id: 121, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+122 [label="float",comment="name: \"float\", typeName: \"\", id: 122, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;112;114;116;118;120;122}
 
 }

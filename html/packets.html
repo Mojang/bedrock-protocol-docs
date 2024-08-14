@@ -583,4 +583,19 @@
 </tr><tr><td>309</td>
 <td><a href = "AwardAchievementPacket.html">AwardAchievementPacket</a></td>
 <td></td>
+</tr><tr><td>310</td>
+<td><a href = "ClientboundCloseFormPacket.html">ClientboundCloseFormPacket</a></td>
+<td>Sent from the server to client to force close all server forms on the stack and return to the HUD screen.</td>
+</tr><tr><td>312</td>
+<td><a href = "ServerboundLoadingScreenPacket.html">ServerboundLoadingScreenPacket</a></td>
+<td>Sent from the client to the server to message to the server about the state of the loading screen.</td>
+</tr><tr><td>313</td>
+<td><a href = "JigsawStructureDataPacket.html">Jigsaw Structure data used by client jigsaw structure worldgen</a></td>
+<td>This packet contains a copy of the behavior pack jigsaw structure rulesSends the serialized jigsaw rule JSON to the client as it's needed on both the client and server.</td>
+</tr><tr><td>314</td>
+<td><a href = "CurrentStructureFeaturePacket.html">Informs the client of which Structure Feature they are currently occupying.</a></td>
+<td>If the player is not in a structure, this packet contains an empty string.Sends the name of the Structure Feature the player is currently occupying to the client.</td>
+</tr><tr><td>315</td>
+<td><a href = "ServerboundDiagnosticsPacket.html">ServerboundDiagnosticsPacket</a></td>
+<td>Sent from the client to the server IF ProfilerLite is enabled AND the creator toggle for</td>
 </tr></table></body> </html>
