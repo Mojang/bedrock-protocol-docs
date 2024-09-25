@@ -123,7 +123,7 @@
 <polygon fill="black" stroke="black" points="680.96,-75.5 690.96,-72 680.96,-68.5 680.96,-75.5"/>
 </g>
 <!-- 9 -->
-<!-- name: &quot;Rowing Time&quot;, typeName: &quot;&quot;, id: 9, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;&quot; -->
+<!-- name: &quot;Rowing Time&quot;, typeName: &quot;&quot;, id: 9, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;Only written for rowing actions&quot; -->
 <g id="node10" class="node">
 <title>9</title>
 <ellipse fill="none" stroke="black" cx="551.99" cy="-18" rx="61.04" ry="18"/>

@@ -1,4 +1,4 @@
-digraph "ShulkerBoxRecipe" {
+digraph "UserDataShapelessRecipe" {
 rankdir = LR
 6
 6 -> 7
@@ -21,8 +21,10 @@ rankdir = LR
 23 -> 24
 6 -> 25
 25 -> 26
+6 -> 27
+27 -> 28
 
-6 [label="ShulkerBoxRecipe",comment="name: \"ShulkerBoxRecipe\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+6 [label="UserDataShapelessRecipe",comment="name: \"UserDataShapelessRecipe\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 7 [label="Recipe Unique Id",comment="name: \"Recipe Unique Id\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 8 [label="string",comment="name: \"string\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 9 [label="Ingredient List",comment="name: \"Ingredient List\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
@@ -43,6 +45,8 @@ rankdir = LR
 24 [label="string",comment="name: \"string\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 25 [label="Priority",comment="name: \"Priority\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 26 [label="varint",comment="name: \"varint\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;8;11;14;17;20;22;24;26}
+27 [label="**NULL**",comment="name: \"**NULL**\", typeName: \"RecipeUnlockingRequirement\", id: 27, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+28 [label="RecipeUnlockingRequirement",comment="name: \"RecipeUnlockingRequirement\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;8;11;14;17;20;22;24;26;28}
 
 }

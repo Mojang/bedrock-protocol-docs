@@ -30,7 +30,7 @@
 <polygon fill="black" stroke="black" points="220.73,-218.74 231.32,-219.01 223.21,-212.19 220.73,-218.74"/>
 </g>
 <!-- 3 -->
-<!-- name: &quot;Action&quot;, typeName: &quot;&quot;, id: 3, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;&quot; -->
+<!-- name: &quot;Action&quot;, typeName: &quot;&quot;, id: 3, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;See enum table for use cases&quot; -->
 <g id="node4" class="node">
 <title>3</title>
 <ellipse fill="none" stroke="black" cx="282" cy="-180" rx="35.6" ry="18"/>

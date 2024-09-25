@@ -51,23 +51,23 @@ rankdir = LR
 47 -> 48
 46 -> 49
 49 -> 50
-50 -> 58
+50 -> 51
+7 -> 52
+52 -> 53
+53 -> 54
+54 -> 55
+55 -> 56
+52 -> 57
+57 -> 58
 7 -> 59
 59 -> 60
 60 -> 61
 61 -> 62
-62 -> 63
-59 -> 64
+60 -> 63
+63 -> 64
 64 -> 65
-7 -> 66
+3 -> 66
 66 -> 67
-67 -> 68
-68 -> 69
-67 -> 70
-70 -> 71
-71 -> 72
-3 -> 73
-73 -> 74
 
 0 [label="CompoundTag",comment="name: \"CompoundTag\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Tag Type",comment="name: \"Tag Type\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -120,23 +120,23 @@ rankdir = LR
 48 [label="varint",comment="name: \"varint\", typeName: \"\", id: 48, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 49 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 49, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 50 [label="Tag (Recursive)",comment="name: \"Tag (Recursive)\", typeName: \"CompoundTag\", id: 50, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-58 [label="CompoundTag",comment="name: \"CompoundTag\", typeName: \"\", id: 58, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-59 [label="if (10)",shape=diamond,comment="name: \"if (10)\", typeName: \"\", id: 59, branchId: 10, recurseId: -1, attributes: 4, notes: \"\""];
-60 [label="Tag Array",comment="name: \"Tag Array\", typeName: \"\", id: 60, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-61 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 61, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-62 [label="Tag (Recursive)",comment="name: \"Tag (Recursive)\", typeName: \"CompoundTag\", id: 62, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-63 [label="CompoundTag",comment="name: \"CompoundTag\", typeName: \"\", id: 63, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-64 [label="End (must be 0)",comment="name: \"End (must be 0)\", typeName: \"\", id: 64, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-65 [label="byte",comment="name: \"byte\", typeName: \"\", id: 65, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-66 [label="if (11)",shape=diamond,comment="name: \"if (11)\", typeName: \"\", id: 66, branchId: 11, recurseId: -1, attributes: 4, notes: \"\""];
-67 [label="Int Array",comment="name: \"Int Array\", typeName: \"\", id: 67, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-68 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 68, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-69 [label="varint",comment="name: \"varint\", typeName: \"\", id: 69, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-70 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 70, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-71 [label="Int Data",comment="name: \"Int Data\", typeName: \"\", id: 71, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-72 [label="varint",comment="name: \"varint\", typeName: \"\", id: 72, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-73 [label="if (1)",shape=diamond,comment="name: \"if (1)\", typeName: \"\", id: 73, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
-74 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 74, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2;6;9;12;15;18;21;24;27;31;34;37;42;45;48;58;63;65;69;72;74}
+51 [label="CompoundTag",comment="name: \"CompoundTag\", typeName: \"\", id: 51, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+52 [label="if (10)",shape=diamond,comment="name: \"if (10)\", typeName: \"\", id: 52, branchId: 10, recurseId: -1, attributes: 4, notes: \"\""];
+53 [label="Tag Array",comment="name: \"Tag Array\", typeName: \"\", id: 53, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+54 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 54, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+55 [label="Tag (Recursive)",comment="name: \"Tag (Recursive)\", typeName: \"CompoundTag\", id: 55, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+56 [label="CompoundTag",comment="name: \"CompoundTag\", typeName: \"\", id: 56, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+57 [label="End (must be 0)",comment="name: \"End (must be 0)\", typeName: \"\", id: 57, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+58 [label="byte",comment="name: \"byte\", typeName: \"\", id: 58, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+59 [label="if (11)",shape=diamond,comment="name: \"if (11)\", typeName: \"\", id: 59, branchId: 11, recurseId: -1, attributes: 4, notes: \"\""];
+60 [label="Int Array",comment="name: \"Int Array\", typeName: \"\", id: 60, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+61 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 61, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+62 [label="varint",comment="name: \"varint\", typeName: \"\", id: 62, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+63 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 63, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+64 [label="Int Data",comment="name: \"Int Data\", typeName: \"\", id: 64, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+65 [label="varint",comment="name: \"varint\", typeName: \"\", id: 65, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+66 [label="if (1)",shape=diamond,comment="name: \"if (1)\", typeName: \"\", id: 66, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
+67 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 67, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;6;9;12;15;18;21;24;27;31;34;37;42;45;48;51;56;58;62;65;67}
 
 }

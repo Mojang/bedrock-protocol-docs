@@ -526,17 +526,17 @@
 <polygon fill="black" stroke="black" points="792.46,-561.5 802.46,-558 792.46,-554.5 792.46,-561.5"/>
 </g>
 <!-- 37 -->
-<!-- name: &quot;Shulker Box Recipe&quot;, typeName: &quot;&quot;, id: 37, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;&quot; -->
+<!-- name: &quot;User Data Shapeless Recipe&quot;, typeName: &quot;&quot;, id: 37, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;&quot; -->
 <g id="node37" class="node">
 <title>37</title>
-<ellipse fill="none" stroke="black" cx="651.87" cy="-504" rx="85" ry="18"/>
-<text text-anchor="middle" x="651.87" y="-498.57" font-family="Times New Roman,serif" font-size="14.00">Shulker Box Recipe</text>
+<ellipse fill="none" stroke="black" cx="651.87" cy="-504" rx="115.43" ry="18"/>
+<text text-anchor="middle" x="651.87" y="-498.57" font-family="Times New Roman,serif" font-size="14.00">User Data Shapeless Recipe</text>
 </g>
 <!-- 36&#45;&gt;37 -->
 <g id="edge36" class="edge">
 <title>36&#45;&gt;37</title>
-<path fill="none" stroke="black" d="M500.46,-504C516.57,-504 535.83,-504 555.12,-504"/>
-<polygon fill="black" stroke="black" points="554.94,-507.5 564.94,-504 554.94,-500.5 554.94,-507.5"/>
+<path fill="none" stroke="black" d="M500.46,-504C508,-504 516.22,-504 524.82,-504"/>
+<polygon fill="black" stroke="black" points="524.8,-507.5 534.8,-504 524.8,-500.5 524.8,-507.5"/>
 </g>
 <!-- 39 -->
 <!-- name: &quot;Net id&quot;, typeName: &quot;&quot;, id: 39, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;&quot; -->
@@ -552,17 +552,17 @@
 <polygon fill="black" stroke="black" points="609.73,-462.01 618.77,-456.49 608.25,-455.17 609.73,-462.01"/>
 </g>
 <!-- 38 -->
-<!-- name: &quot;ShulkerBoxRecipe&quot;, typeName: &quot;&quot;, id: 38, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
+<!-- name: &quot;UserDataShapelessRecipe&quot;, typeName: &quot;&quot;, id: 38, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
 <g id="node38" class="node">
 <title>38</title>
-<ellipse fill="none" stroke="black" cx="1034.01" cy="-504" rx="80.01" ry="18"/>
-<text text-anchor="middle" x="1034.01" y="-498.57" font-family="Times New Roman,serif" font-size="14.00">ShulkerBoxRecipe</text>
+<ellipse fill="none" stroke="black" cx="1034.01" cy="-504" rx="107.95" ry="18"/>
+<text text-anchor="middle" x="1034.01" y="-498.57" font-family="Times New Roman,serif" font-size="14.00">UserDataShapelessRecipe</text>
 </g>
 <!-- 37&#45;&gt;38 -->
 <g id="edge37" class="edge">
 <title>37&#45;&gt;38</title>
-<path fill="none" stroke="black" d="M737.24,-504C798.09,-504 880.13,-504 942.37,-504"/>
-<polygon fill="black" stroke="black" points="942.24,-507.5 952.24,-504 942.24,-500.5 942.24,-507.5"/>
+<path fill="none" stroke="black" d="M767.7,-504C814.04,-504 867.5,-504 914.23,-504"/>
+<polygon fill="black" stroke="black" points="914.13,-507.5 924.13,-504 914.13,-500.5 914.13,-507.5"/>
 </g>
 <!-- 40 -->
 <!-- name: &quot;TypedServerNetId&lt;struct RecipeNetIdTag,unsigned int,0&gt;&quot;, typeName: &quot;&quot;, id: 40, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->

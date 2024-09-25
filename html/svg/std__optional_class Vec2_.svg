@@ -9,36 +9,36 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 40)">
 <title>std::optional&lt;class Vec2&gt;</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-40 443.26,-40 443.26,4 -4,4"/>
-<!-- 27 -->
-<!-- name: &quot;std::optional&lt;class Vec2&gt;&quot;, typeName: &quot;&quot;, id: 27, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;&quot; -->
+<!-- 34 -->
+<!-- name: &quot;std::optional&lt;class Vec2&gt;&quot;, typeName: &quot;&quot;, id: 34, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;&quot; -->
 <g id="node1" class="node">
-<title>27</title>
+<title>34</title>
 <ellipse fill="none" stroke="black" cx="107.45" cy="-18" rx="107.45" ry="18"/>
 <text text-anchor="middle" x="107.45" y="-12.57" font-family="Times New Roman,serif" font-size="14.00">std::optional&lt;class Vec2&gt;</text>
 </g>
-<!-- 28 -->
-<!-- name: &quot;Has Value&quot;, typeName: &quot;&quot;, id: 28, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;If true, follow with appropriate data type, otherwise nothing&quot; -->
+<!-- 35 -->
+<!-- name: &quot;Has Value&quot;, typeName: &quot;&quot;, id: 35, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;If true, follow with appropriate data type, otherwise nothing&quot; -->
 <g id="node2" class="node">
-<title>28</title>
+<title>35</title>
 <ellipse fill="none" stroke="black" cx="299.47" cy="-18" rx="48.57" ry="18"/>
 <text text-anchor="middle" x="299.47" y="-12.57" font-family="Times New Roman,serif" font-size="14.00">Has Value</text>
 </g>
-<!-- 27&#45;&gt;28 -->
+<!-- 34&#45;&gt;35 -->
 <g id="edge1" class="edge">
-<title>27&#45;&gt;28</title>
+<title>34&#45;&gt;35</title>
 <path fill="none" stroke="black" d="M215.12,-18C223.33,-18 231.41,-18 239.13,-18"/>
 <polygon fill="black" stroke="black" points="239.01,-21.5 249.01,-18 239.01,-14.5 239.01,-21.5"/>
 </g>
-<!-- 29 -->
-<!-- name: &quot;bool&quot;, typeName: &quot;&quot;, id: 29, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
+<!-- 36 -->
+<!-- name: &quot;bool&quot;, typeName: &quot;&quot;, id: 36, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
 <g id="node3" class="node">
-<title>29</title>
+<title>36</title>
 <ellipse fill="none" stroke="black" cx="411.65" cy="-18" rx="27.61" ry="18"/>
 <text text-anchor="middle" x="411.65" y="-12.57" font-family="Times New Roman,serif" font-size="14.00">bool</text>
 </g>
-<!-- 28&#45;&gt;29 -->
+<!-- 35&#45;&gt;36 -->
 <g id="edge2" class="edge">
-<title>28&#45;&gt;29</title>
+<title>35&#45;&gt;36</title>
 <path fill="none" stroke="black" d="M348.48,-18C356.49,-18 364.7,-18 372.42,-18"/>
 <polygon fill="black" stroke="black" points="372.17,-21.5 382.17,-18 372.17,-14.5 372.17,-21.5"/>
 </g>

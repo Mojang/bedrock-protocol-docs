@@ -97,8 +97,8 @@ rankdir = LR
 34 [label="Net id",comment="name: \"Net id\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 35 [label="TypedServerNetId<struct RecipeNetIdTag,unsigned int,0>",comment="name: \"TypedServerNetId<struct RecipeNetIdTag,unsigned int,0>\", typeName: \"\", id: 35, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 36 [label="if (5)",shape=diamond,comment="name: \"if (5)\", typeName: \"\", id: 36, branchId: 5, recurseId: -1, attributes: 4, notes: \"\""];
-37 [label="Shulker Box Recipe",comment="name: \"Shulker Box Recipe\", typeName: \"\", id: 37, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-38 [label="ShulkerBoxRecipe",comment="name: \"ShulkerBoxRecipe\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+37 [label="User Data Shapeless Recipe",comment="name: \"User Data Shapeless Recipe\", typeName: \"\", id: 37, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+38 [label="UserDataShapelessRecipe",comment="name: \"UserDataShapelessRecipe\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 39 [label="Net id",comment="name: \"Net id\", typeName: \"\", id: 39, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 40 [label="TypedServerNetId<struct RecipeNetIdTag,unsigned int,0>",comment="name: \"TypedServerNetId<struct RecipeNetIdTag,unsigned int,0>\", typeName: \"\", id: 40, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 41 [label="if (6)",shape=diamond,comment="name: \"if (6)\", typeName: \"\", id: 41, branchId: 6, recurseId: -1, attributes: 4, notes: \"\""];

@@ -1,0 +1,12 @@
+digraph "std::optional<class Vec3>" {
+rankdir = LR
+45
+45 -> 46
+46 -> 47
+
+45 [label="std::optional<class Vec3>",comment="name: \"std::optional<class Vec3>\", typeName: \"\", id: 45, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+46 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 46, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
+47 [label="bool",comment="name: \"bool\", typeName: \"\", id: 47, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;47}
+
+}

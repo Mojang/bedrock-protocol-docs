@@ -1,0 +1,18 @@
+digraph "PlayerInputTick" {
+rankdir = LR
+24
+24 -> 25
+25 -> 26
+
+24 [label="PlayerInputTick",comment="name: \"PlayerInputTick\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+25 [label="Input tick",comment="name: \"Input tick\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 0, notes: \"
+In server authoritative movement mode the client supplies this in PlayerAuthInputPacket.
+For any client-bound packets containing a tick, the server should supply the tick value corresponding to the most recently processed PlayerAuthInputPacket.
+This allows the client to adjust any client predictions made while the packet was in flight.
+If the packet is being sent to the client but not relating to data of the player or a client-predicted vehicle, it can be zero.
+It is also acceptable to specify zero for players, although this may lead to minor visual flickers and less smooth application of CorrectPlayerMovePredictionPacket.
+\""];
+26 [label="unsigned varint64",comment="name: \"unsigned varint64\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;26}
+
+}

@@ -10,7 +10,7 @@ This directory contains documentation about various implementation details of an
 ## Player Movement
 
 - [Overview](./PlayerMovementOverview.md)
-- [Implementing rewindable movement behavior](./PlayerMovementECS.md)
+- [Protocol Deprecation](./MovementProtocolDeprecation.md)
 
 ## Block Breaking
 
@@ -21,7 +21,3 @@ This directory contains documentation about various implementation details of an
 
 - [PlayerUIContainer slots for various player-specific UI screens](./ServerAuthInventory/PlayerUIContainer.md)
 - [ItemStackPackets Disabled - Protocol Documentation Supplement](./ServerAuthInventory/ItemStackPackets_Disabled.md)
-
-## Network Protocol Details
-
-- [Anti cheat related protocol modifications](./AntiCheatProtocolModifications.md)

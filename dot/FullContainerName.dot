@@ -1,16 +1,16 @@
 digraph "FullContainerName" {
 rankdir = LR
-101
-101 -> 102
-102 -> 103
-101 -> 104
-104 -> 105
+10
+10 -> 11
+11 -> 12
+10 -> 13
+13 -> 17
 
-101 [label="FullContainerName",comment="name: \"FullContainerName\", typeName: \"\", id: 101, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-102 [label="Container Name",comment="name: \"Container Name\", typeName: \"\", id: 102, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-103 [label="byte",comment="name: \"byte\", typeName: \"\", id: 103, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-104 [label="ID if container is dynamic, 0 otherwise.",comment="name: \"ID if container is dynamic, 0 otherwise.\", typeName: \"\", id: 104, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-105 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 105, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;103;105}
+10 [label="FullContainerName",comment="name: \"FullContainerName\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+11 [label="Container Name",comment="name: \"Container Name\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+12 [label="byte",comment="name: \"byte\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+13 [label="Optional Dynamic Container ID",comment="name: \"Optional Dynamic Container ID\", typeName: \"std::optional<unsigned int>\", id: 13, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+17 [label="std::optional<unsigned int>",comment="name: \"std::optional<unsigned int>\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;12;17}
 
 }
