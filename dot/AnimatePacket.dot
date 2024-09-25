@@ -21,7 +21,7 @@ rankdir = LR
 6 [label="if (0)",shape=diamond,comment="name: \"if (0)\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
 7 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 8 [label="if (1)",shape=diamond,comment="name: \"if (1)\", typeName: \"\", id: 8, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
-9 [label="Rowing Time",comment="name: \"Rowing Time\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="Rowing Time",comment="name: \"Rowing Time\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"Only written for rowing actions\""];
 10 [label="float",comment="name: \"float\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 { rank = max;2;4;7;10}
 

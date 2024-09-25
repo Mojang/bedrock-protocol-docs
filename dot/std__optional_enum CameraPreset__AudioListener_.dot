@@ -1,12 +1,12 @@
 digraph "std::optional<enum CameraPreset::AudioListener>" {
 rankdir = LR
-34
-34 -> 35
-35 -> 36
+52
+52 -> 53
+53 -> 54
 
-34 [label="std::optional<enum CameraPreset::AudioListener>",comment="name: \"std::optional<enum CameraPreset::AudioListener>\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-35 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 35, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
-36 [label="bool",comment="name: \"bool\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;36}
+52 [label="std::optional<enum CameraPreset::AudioListener>",comment="name: \"std::optional<enum CameraPreset::AudioListener>\", typeName: \"\", id: 52, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+53 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 53, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
+54 [label="bool",comment="name: \"bool\", typeName: \"\", id: 54, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;54}
 
 }

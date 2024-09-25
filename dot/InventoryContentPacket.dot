@@ -10,7 +10,9 @@ rankdir = LR
 6 -> 7
 7 -> 8
 0 -> 9
-9 -> 10
+9 -> 18
+0 -> 19
+19 -> 20
 
 0 [label="InventoryContentPacket",comment="name: \"InventoryContentPacket\", typeName: \"\", id: 0, branchId: 49, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Inventory Id",comment="name: \"Inventory Id\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -21,8 +23,10 @@ rankdir = LR
 6 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 7 [label="Item stack",comment="name: \"Item stack\", typeName: \"NetworkItemStackDescriptor\", id: 7, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 8 [label="NetworkItemStackDescriptor",comment="name: \"NetworkItemStackDescriptor\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-9 [label="ID of the particular container instance if this is a dynamic container, otherwise zero",comment="name: \"ID of the particular container instance if this is a dynamic container, otherwise zero\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-10 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2;5;8;10}
+9 [label="Full Container Name",comment="name: \"Full Container Name\", typeName: \"FullContainerName\", id: 9, branchId: 0, recurseId: -1, attributes: 256, notes: \"Used to reference a specific container within a given screen container context.\""];
+18 [label="FullContainerName",comment="name: \"FullContainerName\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+19 [label="Storage Item",comment="name: \"Storage Item\", typeName: \"NetworkItemStackDescriptor\", id: 19, branchId: 0, recurseId: -1, attributes: 256, notes: \"Optional storage item containing the contents to set. Only the item type is relevant, not any stack information.\""];
+20 [label="NetworkItemStackDescriptor",comment="name: \"NetworkItemStackDescriptor\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;5;8;18;20}
 
 }

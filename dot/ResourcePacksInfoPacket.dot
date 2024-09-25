@@ -9,56 +9,28 @@ rankdir = LR
 5 -> 6
 0 -> 7
 7 -> 8
-0 -> 9
-9 -> 10
+8 -> 9
+7 -> 10
 10 -> 11
-9 -> 12
-12 -> 13
+11 -> 12
+10 -> 13
 13 -> 14
-12 -> 15
+10 -> 15
 15 -> 16
-12 -> 17
+10 -> 17
 17 -> 18
-12 -> 19
+10 -> 19
 19 -> 20
-12 -> 21
+10 -> 21
 21 -> 22
-12 -> 23
+10 -> 23
 23 -> 24
-12 -> 25
+10 -> 25
 25 -> 26
-12 -> 27
+10 -> 27
 27 -> 28
-0 -> 29
+10 -> 29
 29 -> 30
-30 -> 31
-29 -> 32
-32 -> 33
-33 -> 34
-32 -> 35
-35 -> 36
-32 -> 37
-37 -> 38
-32 -> 39
-39 -> 40
-32 -> 41
-41 -> 42
-32 -> 43
-43 -> 44
-32 -> 45
-45 -> 46
-32 -> 47
-47 -> 48
-32 -> 49
-49 -> 50
-0 -> 51
-51 -> 52
-52 -> 53
-51 -> 54
-54 -> 55
-55 -> 56
-54 -> 57
-57 -> 58
 
 0 [label="ResourcePacksInfoPacket",comment="name: \"ResourcePacksInfoPacket\", typeName: \"\", id: 0, branchId: 6, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Resource Pack Required",comment="name: \"Resource Pack Required\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -67,58 +39,30 @@ rankdir = LR
 4 [label="bool",comment="name: \"bool\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 5 [label="Has Scripts",comment="name: \"Has Scripts\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 6 [label="bool",comment="name: \"bool\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-7 [label="Force Server Packs Enabled",comment="name: \"Force Server Packs Enabled\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-8 [label="bool",comment="name: \"bool\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-9 [label="Behavior Packs",comment="name: \"Behavior Packs\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-10 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-11 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-12 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-13 [label="ID",comment="name: \"ID\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="Resource Packs",comment="name: \"Resource Packs\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+8 [label="Resource Pack Count",comment="name: \"Resource Pack Count\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+10 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+11 [label="ID",comment="name: \"ID\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+12 [label="string",comment="name: \"string\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+13 [label="Version",comment="name: \"Version\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 14 [label="string",comment="name: \"string\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-15 [label="Version",comment="name: \"Version\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-16 [label="string",comment="name: \"string\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-17 [label="Size",comment="name: \"Size\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-18 [label="unsigned int64",comment="name: \"unsigned int64\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-19 [label="Content Key",comment="name: \"Content Key\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+15 [label="Size",comment="name: \"Size\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+16 [label="unsigned int64",comment="name: \"unsigned int64\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+17 [label="Content Key",comment="name: \"Content Key\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+18 [label="string",comment="name: \"string\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+19 [label="Sub Pack Name",comment="name: \"Sub Pack Name\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 20 [label="string",comment="name: \"string\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-21 [label="Sub Pack Name",comment="name: \"Sub Pack Name\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+21 [label="Content Identity",comment="name: \"Content Identity\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 22 [label="string",comment="name: \"string\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-23 [label="Content Identity",comment="name: \"Content Identity\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-24 [label="string",comment="name: \"string\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-25 [label="Has Scripts",comment="name: \"Has Scripts\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+23 [label="Has Scripts",comment="name: \"Has Scripts\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+24 [label="bool",comment="name: \"bool\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+25 [label="Is Addon Pack",comment="name: \"Is Addon Pack\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 0, notes: \"Indicates this pack is part of an Add-On. Helps clients determine if the pack must be downloaded to join the server as Add-On packs are required to play without issues.\""];
 26 [label="bool",comment="name: \"bool\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-27 [label="Is Addon Pack",comment="name: \"Is Addon Pack\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 0, notes: \"Indicates this pack is part of an Add-On. Helps clients determine if the pack must be downloaded to join the server as Add-On packs are required to play without issues.\""];
+27 [label="Is Ray Tracing Capable",comment="name: \"Is Ray Tracing Capable\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 28 [label="bool",comment="name: \"bool\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-29 [label="Resource Packs",comment="name: \"Resource Packs\", typeName: \"\", id: 29, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-30 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-31 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 31, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-32 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 32, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-33 [label="ID",comment="name: \"ID\", typeName: \"\", id: 33, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-34 [label="string",comment="name: \"string\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-35 [label="Version",comment="name: \"Version\", typeName: \"\", id: 35, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-36 [label="string",comment="name: \"string\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-37 [label="Size",comment="name: \"Size\", typeName: \"\", id: 37, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-38 [label="unsigned int64",comment="name: \"unsigned int64\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-39 [label="Content Key",comment="name: \"Content Key\", typeName: \"\", id: 39, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-40 [label="string",comment="name: \"string\", typeName: \"\", id: 40, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-41 [label="Sub Pack Name",comment="name: \"Sub Pack Name\", typeName: \"\", id: 41, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-42 [label="string",comment="name: \"string\", typeName: \"\", id: 42, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-43 [label="Content Identity",comment="name: \"Content Identity\", typeName: \"\", id: 43, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-44 [label="string",comment="name: \"string\", typeName: \"\", id: 44, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-45 [label="Has Scripts",comment="name: \"Has Scripts\", typeName: \"\", id: 45, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-46 [label="bool",comment="name: \"bool\", typeName: \"\", id: 46, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-47 [label="Is Addon Pack",comment="name: \"Is Addon Pack\", typeName: \"\", id: 47, branchId: 0, recurseId: -1, attributes: 0, notes: \"Indicates this pack is part of an Add-On. Helps clients determine if the pack must be downloaded to join the server as Add-On packs are required to play without issues.\""];
-48 [label="bool",comment="name: \"bool\", typeName: \"\", id: 48, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-49 [label="Is Ray Tracing Capable",comment="name: \"Is Ray Tracing Capable\", typeName: \"\", id: 49, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-50 [label="bool",comment="name: \"bool\", typeName: \"\", id: 50, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-51 [label="CDN URLs",comment="name: \"CDN URLs\", typeName: \"\", id: 51, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-52 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 52, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-53 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 53, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-54 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 54, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-55 [label="First",comment="name: \"First\", typeName: \"\", id: 55, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-56 [label="string",comment="name: \"string\", typeName: \"\", id: 56, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-57 [label="Second",comment="name: \"Second\", typeName: \"\", id: 57, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-58 [label="string",comment="name: \"string\", typeName: \"\", id: 58, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2;4;6;8;11;14;16;18;20;22;24;26;28;31;34;36;38;40;42;44;46;48;50;53;56;58}
+29 [label="CDN URL",comment="name: \"CDN URL\", typeName: \"\", id: 29, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+30 [label="string",comment="name: \"string\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;6;9;12;14;16;18;20;22;24;26;28;30}
 
 }
