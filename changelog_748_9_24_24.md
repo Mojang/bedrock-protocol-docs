@@ -41,7 +41,8 @@ MovePlayerPacket:
 PlayerAuthInputPacket:
 * Removed branching statement on mPlayMode == ClientPlayMode::Reality
 * Added mInteractRotation (Vec2)
-* Changed ClientmTick type from uint64_t to PlayerInputTick [type description below]
+* Changed mTick type from uint64_t to PlayerInputTick [type description below]
+* Added mCameraOrientation (Vec3)
 
 ResourcePacksInfoPacket:
 * Added pack.mCDNUrl (std::string) under mData.mResourcePacks
@@ -65,13 +66,22 @@ UpdateAttributesPacket:
 PlayerInputTick:
 * Added mValue (int64_t)
 
+CameraInstruction::SetInstruction::EntityOffsetOption:
+* Added mEntityOffsetX (float)
+* Added mEntityOffsetY (float)
+* Added mEntityOffsetZ (float)
+
 
 ## Other Changes in Types
+
+CameraInstruction::SetInstruction:
+* Added mEntityOffset (brstd::optional<CameraInstruction::SetInstruction::EntityOffsetOption>) [type description in New Types]
 
 CameraPreset:
 * Added mHorizontalRotationLimit (brstd::optional<Vec2>)
 * Added mVerticalRotationLimit (brstd::optional<Vec2>)
 * Added mAlignTargetAndCameraForward (brstd::optional<bool>)
+* Added mContinueTargeting (brstd::optional<bool>)
 
 
 ## New Enums
