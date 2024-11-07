@@ -33,10 +33,10 @@ rankdir = LR
 1 [label="Is Block?",comment="name: \"Is Block?\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="bool",comment="name: \"bool\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 3 [label="Dependency on 'Is Block?'",shape=note,comment="name: \"Dependency on 'Is Block?'\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
-4 [label="if (0)",shape=diamond,comment="name: \"if (0)\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
+4 [label="If False",shape=diamond,comment="name: \"If False\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
 5 [label="Target Runtime ID",comment="name: \"Target Runtime ID\", typeName: \"ActorRuntimeID\", id: 5, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 6 [label="ActorRuntimeID",comment="name: \"ActorRuntimeID\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-7 [label="if (1)",shape=diamond,comment="name: \"if (1)\", typeName: \"\", id: 7, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
+7 [label="If True",shape=diamond,comment="name: \"If True\", typeName: \"\", id: 7, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
 8 [label="Block Position",comment="name: \"Block Position\", typeName: \"NetworkBlockPosition\", id: 8, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 9 [label="NetworkBlockPosition",comment="name: \"NetworkBlockPosition\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 10 [label="Command Block Mode",comment="name: \"Command Block Mode\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];

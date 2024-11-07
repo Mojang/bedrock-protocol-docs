@@ -42,7 +42,7 @@ rankdir = LR
 16 [label="Ingredient",comment="name: \"Ingredient\", typeName: \"RecipeIngredient\", id: 16, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 17 [label="RecipeIngredient",comment="name: \"RecipeIngredient\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 18 [label="Production List",comment="name: \"Production List\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-19 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+19 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 20 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 21 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 22 [label="Produced Item",comment="name: \"Produced Item\", typeName: \"NetworkItemInstanceDescriptor\", id: 22, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];

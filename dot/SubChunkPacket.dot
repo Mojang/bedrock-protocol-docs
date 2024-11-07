@@ -561,18 +561,18 @@ rankdir = LR
 26 [label="SubChunkPacket::SubChunkPosOffset",comment="name: \"SubChunkPacket::SubChunkPosOffset\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 27 [label="SubChunk Request Result",comment="name: \"SubChunk Request Result\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 28 [label="byte",comment="name: \"byte\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-29 [label="Dependency on 'Is SubChunk Request Result SuccessAllAir? or Cache Enabled?'",shape=note,comment="name: \"Dependency on 'Is SubChunk Request Result SuccessAllAir? or Cache Enabled?'\", typeName: \"\", id: 29, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
-30 [label="if (0)",shape=diamond,comment="name: \"if (0)\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
+29 [label="Dependency on 'Cache Disabled or SubChunk Request Result SuccessAllAir?'",shape=note,comment="name: \"Dependency on 'Cache Disabled or SubChunk Request Result SuccessAllAir?'\", typeName: \"\", id: 29, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
+30 [label="If False",shape=diamond,comment="name: \"If False\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
 31 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 31, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-32 [label="if (1)",shape=diamond,comment="name: \"if (1)\", typeName: \"\", id: 32, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
+32 [label="If True",shape=diamond,comment="name: \"If True\", typeName: \"\", id: 32, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
 33 [label="Serialized Sub Chunk",comment="name: \"Serialized Sub Chunk\", typeName: \"\", id: 33, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 34 [label="string",comment="name: \"string\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 35 [label="Height Map Data Type",comment="name: \"Height Map Data Type\", typeName: \"\", id: 35, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 36 [label="byte",comment="name: \"byte\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 37 [label="Dependency on 'Height Map Has Data'",shape=note,comment="name: \"Dependency on 'Height Map Has Data'\", typeName: \"\", id: 37, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
-38 [label="if (0)",shape=diamond,comment="name: \"if (0)\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
+38 [label="If False",shape=diamond,comment="name: \"If False\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
 39 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 39, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-40 [label="if (1)",shape=diamond,comment="name: \"if (1)\", typeName: \"\", id: 40, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
+40 [label="If True",shape=diamond,comment="name: \"If True\", typeName: \"\", id: 40, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
 41 [label="Subchunk Height Map[0][0]",comment="name: \"Subchunk Height Map[0][0]\", typeName: \"\", id: 41, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 42 [label="byte",comment="name: \"byte\", typeName: \"\", id: 42, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 43 [label="Subchunk Height Map[0][1]",comment="name: \"Subchunk Height Map[0][1]\", typeName: \"\", id: 43, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -1086,9 +1086,9 @@ rankdir = LR
 551 [label="Subchunk Height Map[15][15]",comment="name: \"Subchunk Height Map[15][15]\", typeName: \"\", id: 551, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 552 [label="byte",comment="name: \"byte\", typeName: \"\", id: 552, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 553 [label="Dependency on 'Cache Enabled'",shape=note,comment="name: \"Dependency on 'Cache Enabled'\", typeName: \"\", id: 553, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
-554 [label="if (0)",shape=diamond,comment="name: \"if (0)\", typeName: \"\", id: 554, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
+554 [label="If False",shape=diamond,comment="name: \"If False\", typeName: \"\", id: 554, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
 555 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 555, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-556 [label="if (1)",shape=diamond,comment="name: \"if (1)\", typeName: \"\", id: 556, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
+556 [label="If True",shape=diamond,comment="name: \"If True\", typeName: \"\", id: 556, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
 557 [label="Blob Id",comment="name: \"Blob Id\", typeName: \"\", id: 557, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 558 [label="unsigned int64",comment="name: \"unsigned int64\", typeName: \"\", id: 558, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 { rank = max;2;4;13;16;26;28;31;34;36;39;42;44;46;48;50;52;54;56;58;60;62;64;66;68;70;72;74;76;78;80;82;84;86;88;90;92;94;96;98;100;102;104;106;108;110;112;114;116;118;120;122;124;126;128;130;132;134;136;138;140;142;144;146;148;150;152;154;156;158;160;162;164;166;168;170;172;174;176;178;180;182;184;186;188;190;192;194;196;198;200;202;204;206;208;210;212;214;216;218;220;222;224;226;228;230;232;234;236;238;240;242;244;246;248;250;252;254;256;258;260;262;264;266;268;270;272;274;276;278;280;282;284;286;288;290;292;294;296;298;300;302;304;306;308;310;312;314;316;318;320;322;324;326;328;330;332;334;336;338;340;342;344;346;348;350;352;354;356;358;360;362;364;366;368;370;372;374;376;378;380;382;384;386;388;390;392;394;396;398;400;402;404;406;408;410;412;414;416;418;420;422;424;426;428;430;432;434;436;438;440;442;444;446;448;450;452;454;456;458;460;462;464;466;468;470;472;474;476;478;480;482;484;486;488;490;492;494;496;498;500;502;504;506;508;510;512;514;516;518;520;522;524;526;528;530;532;534;536;538;540;542;544;546;548;550;552;555;558}

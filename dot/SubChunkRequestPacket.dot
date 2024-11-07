@@ -7,8 +7,8 @@ rankdir = LR
 3 -> 4
 0 -> 5
 5 -> 6
-0 -> 7
-7 -> 8
+6 -> 7
+5 -> 8
 8 -> 9
 9 -> 10
 
@@ -17,12 +17,12 @@ rankdir = LR
 2 [label="varint",comment="name: \"varint\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 3 [label="Center Pos",comment="name: \"Center Pos\", typeName: \"SubChunkPos\", id: 3, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 4 [label="SubChunkPos",comment="name: \"SubChunkPos\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-5 [label="Request Count",comment="name: \"Request Count\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-6 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-7 [label="SubChunk Pos Offset List",comment="name: \"SubChunk Pos Offset List\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+5 [label="SubChunk Pos Offset List",comment="name: \"SubChunk Pos Offset List\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+6 [label="Request Count",comment="name: \"Request Count\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 8 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 9 [label="SubChunk Offset Pos",comment="name: \"SubChunk Offset Pos\", typeName: \"SubChunkPacket::SubChunkPosOffset\", id: 9, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 10 [label="SubChunkPacket::SubChunkPosOffset",comment="name: \"SubChunkPacket::SubChunkPosOffset\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2;4;6;10}
+{ rank = max;2;4;7;10}
 
 }

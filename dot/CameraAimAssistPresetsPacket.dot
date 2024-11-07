@@ -1,0 +1,32 @@
+digraph "CameraAimAssistPresetsPacket" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+2 -> 3
+1 -> 4
+4 -> 5
+5 -> 49
+0 -> 50
+50 -> 51
+51 -> 52
+50 -> 53
+53 -> 54
+54 -> 84
+
+0 [label="CameraAimAssistPresetsPacket",comment="name: \"CameraAimAssistPresetsPacket\", typeName: \"\", id: 0, branchId: 320, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Camera Aim-Assist Categories",comment="name: \"Camera Aim-Assist Categories\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+2 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+4 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+5 [label="Category",comment="name: \"Category\", typeName: \"SharedTypes::v1_21_50::CameraAimAssistCategoriesDefinition\", id: 5, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+49 [label="SharedTypes::v1_21_50::CameraAimAssistCategoriesDefinition",comment="name: \"SharedTypes::v1_21_50::CameraAimAssistCategoriesDefinition\", typeName: \"\", id: 49, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+50 [label="Camera Aim-Assist Presets",comment="name: \"Camera Aim-Assist Presets\", typeName: \"\", id: 50, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+51 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 51, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+52 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 52, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+53 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 53, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+54 [label="Preset",comment="name: \"Preset\", typeName: \"SharedTypes::v1_21_50::CameraAimAssistPresetDefinition\", id: 54, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+84 [label="SharedTypes::v1_21_50::CameraAimAssistPresetDefinition",comment="name: \"SharedTypes::v1_21_50::CameraAimAssistPresetDefinition\", typeName: \"\", id: 84, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3;49;52;84}
+
+}

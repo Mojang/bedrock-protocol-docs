@@ -5,10 +5,10 @@ rankdir = LR
 1 -> 2
 0 -> 3
 3 -> 4
-4 -> 5
+0 -> 5
 5 -> 6
 6 -> 7
-5 -> 8
+7 -> 8
 8 -> 9
 9 -> 10
 8 -> 11
@@ -29,24 +29,26 @@ rankdir = LR
 116 -> 117
 8 -> 118
 118 -> 119
-4 -> 120
+6 -> 120
 120 -> 121
-3 -> 122
+121 -> 122
 122 -> 123
-123 -> 124
+5 -> 124
 124 -> 125
-123 -> 126
+125 -> 126
 126 -> 127
 127 -> 128
+5 -> 129
+129 -> 130
 
 0 [label="PlayerListPacket",comment="name: \"PlayerListPacket\", typeName: \"\", id: 0, branchId: 63, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Action",comment="name: \"Action\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="byte",comment="name: \"byte\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-3 [label="Dependency on 'Action'",shape=note,comment="name: \"Dependency on 'Action'\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
-4 [label="if (0)",shape=diamond,comment="name: \"if (0)\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
-5 [label="Add Player List",comment="name: \"Add Player List\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-6 [label="Entries Count",comment="name: \"Entries Count\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-7 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="Entries Count (for each List)",comment="name: \"Entries Count (for each List)\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+5 [label="Dependency on 'Action'",shape=note,comment="name: \"Dependency on 'Action'\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
+6 [label="Add",shape=diamond,comment="name: \"Add\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
+7 [label="Add Player List",comment="name: \"Add Player List\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
 8 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 9 [label="UUID",comment="name: \"UUID\", typeName: \"mce::UUID\", id: 9, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 10 [label="mce::UUID",comment="name: \"mce::UUID\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
@@ -68,15 +70,17 @@ rankdir = LR
 117 [label="bool",comment="name: \"bool\", typeName: \"\", id: 117, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 118 [label="Is SubClient",comment="name: \"Is SubClient\", typeName: \"\", id: 118, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 119 [label="bool",comment="name: \"bool\", typeName: \"\", id: 119, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-120 [label="Is trusted skin",comment="name: \"Is trusted skin\", typeName: \"\", id: 120, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-121 [label="bool",comment="name: \"bool\", typeName: \"\", id: 121, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-122 [label="if (1)",shape=diamond,comment="name: \"if (1)\", typeName: \"\", id: 122, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
-123 [label="Remove Player List",comment="name: \"Remove Player List\", typeName: \"\", id: 123, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-124 [label="Entries Count",comment="name: \"Entries Count\", typeName: \"\", id: 124, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-125 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 125, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+120 [label="Trusted Skin List",comment="name: \"Trusted Skin List\", typeName: \"\", id: 120, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+121 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 121, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+122 [label="Is trusted skin",comment="name: \"Is trusted skin\", typeName: \"\", id: 122, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+123 [label="bool",comment="name: \"bool\", typeName: \"\", id: 123, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+124 [label="Remove",shape=diamond,comment="name: \"Remove\", typeName: \"\", id: 124, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
+125 [label="Remove Player List",comment="name: \"Remove Player List\", typeName: \"\", id: 125, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
 126 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 126, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 127 [label="UUID",comment="name: \"UUID\", typeName: \"mce::UUID\", id: 127, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 128 [label="mce::UUID",comment="name: \"mce::UUID\", typeName: \"\", id: 128, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2;7;10;12;14;16;18;20;113;115;117;119;121;125;128}
+129 [label="Default",shape=diamond,comment="name: \"Default\", typeName: \"\", id: 129, branchId: 2, recurseId: -1, attributes: 4, notes: \"\""];
+130 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 130, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;10;12;14;16;18;20;113;115;117;119;123;128;130}
 
 }

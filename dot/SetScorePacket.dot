@@ -33,8 +33,8 @@ rankdir = LR
 0 [label="SetScorePacket",comment="name: \"SetScorePacket\", typeName: \"\", id: 0, branchId: 108, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Score Packet Type",comment="name: \"Score Packet Type\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="byte",comment="name: \"byte\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-3 [label="Score Packet Info",comment="name: \"Score Packet Info\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-4 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="Score Info",comment="name: \"Score Info\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+4 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 5 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 6 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 7 [label="Id",comment="name: \"Id\", typeName: \"ScoreboardId\", id: 7, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
@@ -44,19 +44,19 @@ rankdir = LR
 14 [label="Score Value",comment="name: \"Score Value\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 15 [label="int",comment="name: \"int\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 16 [label="Dependency on 'Is Change Type'",shape=note,comment="name: \"Dependency on 'Is Change Type'\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
-17 [label="if (0)",shape=diamond,comment="name: \"if (0)\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
+17 [label="If False",shape=diamond,comment="name: \"If False\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
 18 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-19 [label="if (1)",shape=diamond,comment="name: \"if (1)\", typeName: \"\", id: 19, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
+19 [label="If True",shape=diamond,comment="name: \"If True\", typeName: \"\", id: 19, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
 20 [label="Identity Definition Type",comment="name: \"Identity Definition Type\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 21 [label="byte",comment="name: \"byte\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-22 [label="Dependency on 'Identity Definition Type'",shape=note,comment="name: \"Dependency on 'Identity Definition Type'\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
-23 [label="if (1)",shape=diamond,comment="name: \"if (1)\", typeName: \"\", id: 23, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
+22 [label="Dependency on 'Change Type Data'",shape=note,comment="name: \"Dependency on 'Change Type Data'\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
+23 [label="Identity Definition Type Player",shape=diamond,comment="name: \"Identity Definition Type Player\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
 24 [label="Player Unique Id",comment="name: \"Player Unique Id\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 25 [label="varint64",comment="name: \"varint64\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-26 [label="if (2)",shape=diamond,comment="name: \"if (2)\", typeName: \"\", id: 26, branchId: 2, recurseId: -1, attributes: 4, notes: \"\""];
+26 [label="Identity Definition Type Entity",shape=diamond,comment="name: \"Identity Definition Type Entity\", typeName: \"\", id: 26, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
 27 [label="Actor Id",comment="name: \"Actor Id\", typeName: \"ActorUniqueID\", id: 27, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 28 [label="ActorUniqueID",comment="name: \"ActorUniqueID\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-29 [label="if (3)",shape=diamond,comment="name: \"if (3)\", typeName: \"\", id: 29, branchId: 3, recurseId: -1, attributes: 4, notes: \"\""];
+29 [label="Default",shape=diamond,comment="name: \"Default\", typeName: \"\", id: 29, branchId: 2, recurseId: -1, attributes: 4, notes: \"\""];
 30 [label="Fake Player Name",comment="name: \"Fake Player Name\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 31 [label="string",comment="name: \"string\", typeName: \"\", id: 31, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 { rank = max;2;5;11;13;15;18;21;25;28;31}

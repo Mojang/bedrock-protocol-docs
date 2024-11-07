@@ -1,6 +1,6 @@
 <!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/NetworkItemInstanceDescriptor.svg" alt="NetworkItemInstanceDescriptor">
-<br><table><col width="10%"><col width="90%"><tr><th>Field Name</th><th>Field Notes</th></tr><tr><td>Id</td>
-<td>Send fixed Id of 0 for invalid item</td>
-</tr><tr><td>User Data Buffer</td>
+<br><table><col width="10%"><col width="90%"><tr><th>Field Name</th><th>Field Notes</th></tr><tr><td>User Data Buffer</td>
 <td>The <a href = "ItemInstanceUserData.html">ItemInstanceUserData</a> binary blob encoded as a String, so it's unsigned varint length prefixed. Get all your nbt+property bytes, calculate the length, write that length, THEN write the data.</td>
+</tr><tr><td>Id</td>
+<td>Send fixed Id of 0 for invalid item</td>
 </tr></table></body> </html>

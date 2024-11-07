@@ -23,12 +23,12 @@ rankdir = LR
 3 [label="Value Type",comment="name: \"Value Type\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 4 [label="byte",comment="name: \"byte\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 5 [label="Dependency on 'Value Type'",shape=note,comment="name: \"Dependency on 'Value Type'\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
-6 [label="if (1)",shape=diamond,comment="name: \"if (1)\", typeName: \"\", id: 6, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
+6 [label="Bool",shape=diamond,comment="name: \"Bool\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
 7 [label="Varible Value",comment="name: \"Varible Value\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 8 [label="bool",comment="name: \"bool\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 9 [label="Default Value = 0.0",comment="name: \"Default Value = 0.0\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 10 [label="float",comment="name: \"float\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-11 [label="if (2)",shape=diamond,comment="name: \"if (2)\", typeName: \"\", id: 11, branchId: 2, recurseId: -1, attributes: 4, notes: \"\""];
+11 [label="Float",shape=diamond,comment="name: \"Float\", typeName: \"\", id: 11, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
 12 [label="Default Value = false",comment="name: \"Default Value = false\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 13 [label="bool",comment="name: \"bool\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 14 [label="Varible Value",comment="name: \"Varible Value\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];

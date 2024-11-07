@@ -28,13 +28,13 @@ rankdir = LR
 7 [label="Recipe Unique Id",comment="name: \"Recipe Unique Id\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 8 [label="string",comment="name: \"string\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 9 [label="Ingredient List",comment="name: \"Ingredient List\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-10 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+10 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 11 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 12 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 13 [label="Ingredient",comment="name: \"Ingredient\", typeName: \"RecipeIngredient\", id: 13, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 19 [label="RecipeIngredient",comment="name: \"RecipeIngredient\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 20 [label="Production List",comment="name: \"Production List\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-21 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+21 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 22 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 23 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 24 [label="Produced Item",comment="name: \"Produced Item\", typeName: \"NetworkItemInstanceDescriptor\", id: 24, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
