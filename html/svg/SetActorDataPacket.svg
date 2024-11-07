@@ -56,7 +56,7 @@
 <polygon fill="black" stroke="black" points="208.32,-86.43 217.78,-81.65 207.4,-79.49 208.32,-86.43"/>
 </g>
 <!-- 7 -->
-<!-- name: &quot;Tick&quot;, typeName: &quot;&quot;, id: 7, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;Which frame we&#39;re correcting; should match the tick in the Player Auth Input packet. (Can be 0 if not doing server auth movement.)&quot; -->
+<!-- name: &quot;Tick&quot;, typeName: &quot;PlayerInputTick&quot;, id: 7, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;If this packet is referring to the player or a client predicted vehicle they are in control of, this should be the most recently processed PlayerInputTick from their PlayerAuthInputPacket. Otherwise zero.&quot; -->
 <g id="node8" class="node">
 <title>7</title>
 <ellipse fill="none" stroke="black" cx="291.49" cy="-18" rx="27.61" ry="18"/>
@@ -108,17 +108,17 @@
 <polygon fill="black" stroke="black" points="1072.12,-75.5 1082.12,-72 1072.12,-68.5 1072.12,-75.5"/>
 </g>
 <!-- 8 -->
-<!-- name: &quot;unsigned varint64&quot;, typeName: &quot;&quot;, id: 8, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
+<!-- name: &quot;PlayerInputTick&quot;, typeName: &quot;&quot;, id: 8, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
 <g id="node9" class="node">
 <title>8</title>
-<ellipse fill="none" stroke="black" cx="1163.14" cy="-18" rx="75.51" ry="18"/>
-<text text-anchor="middle" x="1163.14" y="-12.57" font-family="Times New Roman,serif" font-size="14.00">unsigned varint64</text>
+<ellipse fill="none" stroke="black" cx="1163.14" cy="-18" rx="70.03" ry="18"/>
+<text text-anchor="middle" x="1163.14" y="-12.57" font-family="Times New Roman,serif" font-size="14.00">PlayerInputTick</text>
 </g>
 <!-- 7&#45;&gt;8 -->
 <g id="edge8" class="edge">
 <title>7&#45;&gt;8</title>
-<path fill="none" stroke="black" d="M319.47,-18C434.31,-18 885.24,-18 1076.08,-18"/>
-<polygon fill="black" stroke="black" points="1075.94,-21.5 1085.94,-18 1075.94,-14.5 1075.94,-21.5"/>
+<path fill="none" stroke="black" d="M319.47,-18C435.37,-18 893.64,-18 1081.33,-18"/>
+<polygon fill="black" stroke="black" points="1081.24,-21.5 1091.24,-18 1081.24,-14.5 1081.24,-21.5"/>
 </g>
 </g>
 </svg>

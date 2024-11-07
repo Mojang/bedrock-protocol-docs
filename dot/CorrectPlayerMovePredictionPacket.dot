@@ -21,8 +21,8 @@ rankdir = LR
 6 [label="Vec3",comment="name: \"Vec3\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 7 [label="On Ground",comment="name: \"On Ground\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"Is on ground\""];
 8 [label="bool",comment="name: \"bool\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-9 [label="Tick",comment="name: \"Tick\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"Which frame we're correcting; should match the tick in the Player Auth Input packet\""];
-10 [label="unsigned varint64",comment="name: \"unsigned varint64\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+9 [label="Tick",comment="name: \"Tick\", typeName: \"PlayerInputTick\", id: 9, branchId: 0, recurseId: -1, attributes: 256, notes: \"Which frame we're correcting; should match the tick in the Player Auth Input packet\""];
+10 [label="PlayerInputTick",comment="name: \"PlayerInputTick\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 { rank = max;2;4;6;8;10}
 
 }

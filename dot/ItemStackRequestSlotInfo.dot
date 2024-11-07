@@ -1,20 +1,20 @@
 digraph "ItemStackRequestSlotInfo" {
 rankdir = LR
-99
-99 -> 100
+95
+95 -> 96
+96 -> 97
+95 -> 98
+98 -> 99
+95 -> 100
 100 -> 101
-99 -> 102
-102 -> 103
-99 -> 104
-104 -> 105
 
-99 [label="ItemStackRequestSlotInfo",comment="name: \"ItemStackRequestSlotInfo\", typeName: \"\", id: 99, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-100 [label="Full container name.",comment="name: \"Full container name.\", typeName: \"FullContainerName\", id: 100, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-101 [label="FullContainerName",comment="name: \"FullContainerName\", typeName: \"\", id: 101, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-102 [label="Slot",comment="name: \"Slot\", typeName: \"\", id: 102, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-103 [label="byte",comment="name: \"byte\", typeName: \"\", id: 103, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-104 [label="Raw Id (32 bit signed)",comment="name: \"Raw Id (32 bit signed)\", typeName: \"\", id: 104, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-105 [label="varint",comment="name: \"varint\", typeName: \"\", id: 105, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;101;103;105}
+95 [label="ItemStackRequestSlotInfo",comment="name: \"ItemStackRequestSlotInfo\", typeName: \"\", id: 95, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+96 [label="Full container name.",comment="name: \"Full container name.\", typeName: \"FullContainerName\", id: 96, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+97 [label="FullContainerName",comment="name: \"FullContainerName\", typeName: \"\", id: 97, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+98 [label="Slot",comment="name: \"Slot\", typeName: \"\", id: 98, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+99 [label="byte",comment="name: \"byte\", typeName: \"\", id: 99, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+100 [label="Raw Id (32 bit signed)",comment="name: \"Raw Id (32 bit signed)\", typeName: \"\", id: 100, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+101 [label="varint",comment="name: \"varint\", typeName: \"\", id: 101, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;97;99;101}
 
 }

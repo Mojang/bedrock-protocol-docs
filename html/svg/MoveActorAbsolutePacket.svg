@@ -17,7 +17,7 @@
 <text text-anchor="middle" x="111.94" y="-12.57" font-family="Times New Roman,serif" font-size="14.00">MoveActorAbsolutePacket</text>
 </g>
 <!-- 1 -->
-<!-- name: &quot;Move Data&quot;, typeName: &quot;MoveActorAbsoluteData&quot;, id: 1, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;&quot; -->
+<!-- name: &quot;Move Data&quot;, typeName: &quot;MoveActorAbsoluteData&quot;, id: 1, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;This is used in legacy client authoritative movement mode to move a client predicted vehicle that the client is in control of. In any other case this is client bound for normal actor motion updates.&quot; -->
 <g id="node2" class="node">
 <title>1</title>
 <ellipse fill="none" stroke="black" cx="311.45" cy="-18" rx="51.56" ry="18"/>

@@ -1,12 +1,32 @@
 <!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/PlayerAuthInputPacket.svg" alt="PlayerAuthInputPacket">
-<br><table><col width="10%"><col width="90%"><tr><th>Field Name</th><th>Field Notes</th></tr><tr><td>Client tick</td>
-<td>Which simulation frame client is on. Used to match corrections</td>
+<br><table><col width="10%"><col width="90%"><tr><th>Field Name</th><th>Field Notes</th></tr><tr><td>Player Rotation</td>
+<td>Orientation of the player at the start of the tick.</td>
+</tr><tr><td>Position</td>
+<td>Client predicted position at the end of the tick. Referring to the player unless they are controlling a client predicted vehicle in which case it's the vehicle position.</td>
+</tr><tr><td>Move Vector</td>
+<td>The desired local space move direction of the player in the vehicle. Convert this to world space by rotating by Player Rotation along the Y (up) axis.</td>
+</tr><tr><td>Player's Head Rotation</td>
+<td>Effectively the same as the Y component of Player Rotation</td>
+</tr><tr><td>Input Data</td>
+<td>Bitset where the bits are indexed by PlayerAuthInputPacket::InputData, see enum table for details.</td>
+</tr><tr><td>Interact Rotation</td>
+<td>The rotation the player is looking that they intend to use for interactions. In default modes this is the same as Player Rotation. For creator cameras and VR it may not.</td>
+</tr><tr><td>Client tick</td>
+<td>Which simulation frame client is on. The server should send back the most recently processed PlayerInputTick in any client-bound packets referring to player data that have a PlayerInputTick.</td>
 </tr><tr><td>Pos Delta</td>
-<td>Velocity</td>
+<td>Client predicted velocity at the end of the tick. This is referring to the player unless they're in control of a client predicted vehicle in which case it's the vehicle.</td>
 </tr><tr><td>Actions</td>
 <td>There are a variety of possible actions each with their own schema; this (Take) is just one example. Refer to the Item Stack Net Manager documentation.</td>
 </tr><tr><td>Strings To Filter</td>
 <td>Array of strings to submit to profanity filtering service</td>
 </tr><tr><td>String To Filter</td>
 <td>Indivdiual string that needs checking</td>
+</tr><tr><td>Vehicle Rotation</td>
+<td>The client predicted rotation of a client predicted vehicle at the end of the tick if the player is in control of one.</td>
+</tr><tr><td>Client Predicted Vehicle</td>
+<td>The ID of the vehicle the client thinks they are in control of. Relevant for the server to disambiguate client predictions when switching between two vehicles.</td>
+</tr><tr><td>Analog MoveVector</td>
+<td>Same idea as move vector</td>
+</tr><tr><td>Camera Orientation</td>
+<td>The world space unit vector that represents the camera's forward direction. This is used to transform movement to be camera relative.</td>
 </tr></table></body> </html>
