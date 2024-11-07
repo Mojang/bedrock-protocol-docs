@@ -1,0 +1,12 @@
+digraph "int" {
+rankdir = LR
+40
+40 -> 41
+41 -> 42
+
+40 [label="int",comment="name: \"int\", typeName: \"\", id: 40, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+41 [label="Signed Int",comment="name: \"Signed Int\", typeName: \"\", id: 41, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+42 [label="int",comment="name: \"int\", typeName: \"\", id: 42, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;42}
+
+}

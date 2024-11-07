@@ -1,0 +1,64 @@
+digraph "SharedTypes::v1_21_50::CameraAimAssistPresetDefinition" {
+rankdir = LR
+55
+55 -> 56
+56 -> 57
+55 -> 58
+58 -> 59
+55 -> 60
+60 -> 61
+61 -> 62
+60 -> 63
+63 -> 64
+64 -> 65
+55 -> 66
+66 -> 67
+67 -> 68
+66 -> 69
+69 -> 70
+70 -> 71
+55 -> 72
+72 -> 73
+73 -> 74
+72 -> 75
+75 -> 76
+76 -> 77
+75 -> 78
+78 -> 79
+55 -> 80
+80 -> 81
+55 -> 82
+82 -> 83
+
+55 [label="SharedTypes::v1_21_50::CameraAimAssistPresetDefinition",comment="name: \"SharedTypes::v1_21_50::CameraAimAssistPresetDefinition\", typeName: \"\", id: 55, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+56 [label="Identifier",comment="name: \"Identifier\", typeName: \"\", id: 56, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+57 [label="string",comment="name: \"string\", typeName: \"\", id: 57, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+58 [label="Categories",comment="name: \"Categories\", typeName: \"\", id: 58, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+59 [label="string",comment="name: \"string\", typeName: \"\", id: 59, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+60 [label="Exclusion List",comment="name: \"Exclusion List\", typeName: \"\", id: 60, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+61 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 61, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+62 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 62, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+63 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 63, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+64 [label="Block Id",comment="name: \"Block Id\", typeName: \"\", id: 64, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+65 [label="string",comment="name: \"string\", typeName: \"\", id: 65, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+66 [label="Liquid Targeting List",comment="name: \"Liquid Targeting List\", typeName: \"\", id: 66, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+67 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 67, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+68 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 68, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+69 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 69, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+70 [label="Item Id",comment="name: \"Item Id\", typeName: \"\", id: 70, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+71 [label="string",comment="name: \"string\", typeName: \"\", id: 71, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+72 [label="Item Settings",comment="name: \"Item Settings\", typeName: \"\", id: 72, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+73 [label="Map Size",comment="name: \"Map Size\", typeName: \"\", id: 73, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+74 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 74, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+75 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 75, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+76 [label="Item Id",comment="name: \"Item Id\", typeName: \"\", id: 76, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+77 [label="string",comment="name: \"string\", typeName: \"\", id: 77, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+78 [label="Category",comment="name: \"Category\", typeName: \"\", id: 78, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+79 [label="string",comment="name: \"string\", typeName: \"\", id: 79, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+80 [label="Default Item Settings",comment="name: \"Default Item Settings\", typeName: \"std::optional<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >\", id: 80, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+81 [label="std::optional<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >",comment="name: \"std::optional<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >\", typeName: \"\", id: 81, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+82 [label="Hand Settings",comment="name: \"Hand Settings\", typeName: \"std::optional<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >\", id: 82, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+83 [label="std::optional<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >",comment="name: \"std::optional<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >\", typeName: \"\", id: 83, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;57;59;62;65;68;71;74;77;79;81;83}
+
+}

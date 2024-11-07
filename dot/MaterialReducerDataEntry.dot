@@ -16,7 +16,7 @@ rankdir = LR
 45 [label="From Item (Key): Input",comment="name: \"From Item (Key): Input\", typeName: \"\", id: 45, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 46 [label="varint",comment="name: \"varint\", typeName: \"\", id: 46, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 47 [label="Item Ids and Counts",comment="name: \"Item Ids and Counts\", typeName: \"\", id: 47, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-48 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 48, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+48 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 48, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 49 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 49, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 50 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 50, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 51 [label="Item Id",comment="name: \"Item Id\", typeName: \"\", id: 51, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];

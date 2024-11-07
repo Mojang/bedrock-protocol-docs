@@ -61,11 +61,11 @@ rankdir = LR
 204 -> 208
 
 0 [label="StartGamePacket",comment="name: \"StartGamePacket\", typeName: \"\", id: 0, branchId: 11, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Target Actor ID",comment="name: \"Target Actor ID\", typeName: \"ActorUniqueID\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+1 [label="Entity ID",comment="name: \"Entity ID\", typeName: \"ActorUniqueID\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 5 [label="ActorUniqueID",comment="name: \"ActorUniqueID\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-6 [label="Target Runtime ID",comment="name: \"Target Runtime ID\", typeName: \"ActorRuntimeID\", id: 6, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+6 [label="Runtime ID",comment="name: \"Runtime ID\", typeName: \"ActorRuntimeID\", id: 6, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 10 [label="ActorRuntimeID",comment="name: \"ActorRuntimeID\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-11 [label="Actor Game Type",comment="name: \"Actor Game Type\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+11 [label="Game Type",comment="name: \"Game Type\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 12 [label="varint",comment="name: \"varint\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 13 [label="Position",comment="name: \"Position\", typeName: \"Vec3\", id: 13, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 14 [label="Vec3",comment="name: \"Vec3\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
@@ -83,12 +83,12 @@ rankdir = LR
 153 [label="bool",comment="name: \"bool\", typeName: \"\", id: 153, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 154 [label="Movement Settings",comment="name: \"Movement Settings\", typeName: \"SyncedPlayerMovementSettings\", id: 154, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 162 [label="SyncedPlayerMovementSettings",comment="name: \"SyncedPlayerMovementSettings\", typeName: \"\", id: 162, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-163 [label="Current Level Time",comment="name: \"Current Level Time\", typeName: \"\", id: 163, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+163 [label="Level Current Time",comment="name: \"Level Current Time\", typeName: \"\", id: 163, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 164 [label="unsigned int64",comment="name: \"unsigned int64\", typeName: \"\", id: 164, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 165 [label="Enchantment Seed",comment="name: \"Enchantment Seed\", typeName: \"\", id: 165, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 166 [label="varint",comment="name: \"varint\", typeName: \"\", id: 166, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 167 [label="Block Properties",comment="name: \"Block Properties\", typeName: \"\", id: 167, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-168 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 168, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+168 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 168, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 169 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 169, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 170 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 170, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 171 [label="Block Name",comment="name: \"Block Name\", typeName: \"\", id: 171, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -96,7 +96,7 @@ rankdir = LR
 173 [label="Block Definition",comment="name: \"Block Definition\", typeName: \"CompoundTag\", id: 173, branchId: 0, recurseId: -1, attributes: 256, notes: \"Map of block states. { key (component name):[label,value] } (Can be left empty.)\""];
 174 [label="CompoundTag",comment="name: \"CompoundTag\", typeName: \"\", id: 174, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 175 [label="Item List - every vanilla item must be present",comment="name: \"Item List - every vanilla item must be present\", typeName: \"\", id: 175, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-176 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 176, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+176 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 176, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 177 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 177, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 178 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 178, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 179 [label="Item Info",comment="name: \"Item Info\", typeName: \"ItemData\", id: 179, branchId: 0, recurseId: -1, attributes: 256, notes: \"See: ItemData Type\""];

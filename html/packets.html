@@ -30,7 +30,7 @@
 <td>Every so often (and at login) the server sends the current time to the client, and additionally the client can set the server time through 2 commands: DayLockCommand and TimeCommand</td>
 </tr><tr><td>11</td>
 <td><a href = "StartGamePacket.html">Start Game</a></td>
-<td>Sent from the server to client when the game is starting (or client joins), gives ids and current tick. The player movement mode is also specified here, see ServerAuthMovementMode enum documentation for details on the modes. </td>
+<td> Sent from the server to client when the game is starting (or client joins), gives ids and current tick. The player movement mode is also specified here, see ServerAuthMovementMode enum documentation for details on the modes. </td>
 </tr><tr><td>12</td>
 <td><a href = "AddPlayerPacket.html">Add Player</a></td>
 <td>A new player joins the game; the server sends this packet to the *other* players.</td>
@@ -54,7 +54,7 @@
 <td>This is used primarily for motion updates of all actors from server to client. In legacy client authoritative movement mode it is also used for the client to position the vehicle they are in control of. See Player Auth Input for the equivalent in the latest protocol.</td>
 </tr><tr><td>19</td>
 <td><a href = "MovePlayerPacket.html">Move Player</a></td>
-<td>This has different uses depending on the movement mode, see ServerAuthMovementMode enum documentation. In legacy client authoritative mode the client sends this to the server as the primary way of informing them of motion and input. It is sent when they have moved enough to warrant sending it, or every tick if they are in a vehicle. When in a vehicle they will also be sending a MoveActorAbsolutePacket for the vehicle they are controlling if it is client predicted.  In client authoritative and server authoritative movement modes it is only intended as a client-bound packet. It forces the player to a specified position with slightly different behavior depending on the position mode. For similar packets that move the player, see also: - CorrectPlayerMovePredictionPacket (server authoritative) - SetActorMotionPacket </td>
+<td> This has different uses depending on the movement mode, see ServerAuthMovementMode enum documentation. In legacy client authoritative mode the client sends this to the server as the primary way of informing them of motion and input. It is sent when they have moved enough to warrant sending it, or every tick if they are in a vehicle. When in a vehicle they will also be sending a MoveActorAbsolutePacket for the vehicle they are controlling if it is client predicted.  In client authoritative and server authoritative movement modes it is only intended as a client-bound packet. It forces the player to a specified position with slightly different behavior depending on the position mode. For similar packets that move the player, see also: - CorrectPlayerMovePredictionPacket (server authoritative) - SetActorMotionPacket </td>
 </tr><tr><td>20</td>
 <td><a href = "PassengerJumpPacket.html">Rider Jump</a></td>
 <td>Legacy client authoritative movement only. Sent for jumping in horses when releasing the spacebar. Specifically if the entity has `ActorFlags::CAN_POWER_JUMP`, `ActorFlags::WASD_CONTROLLED` and the `minecraft:horse.jump_strength` attribute. In server authoritative movement this is not explicitly specified but can be simulated using information from Player Auth Input, see that packet for more details.</td>
@@ -81,7 +81,7 @@
 <td>At the start of the game the server sends any mob effects with _sendAdditionalLevelData() if the joining player saved out with them, and then anytime a mob effect is added, removed, or updated this packet is sent. It is important for player movement simulation to ensure that the following effects are sent for the player or any client predicted vehicle they are in control of: - levitation - slow_falling - jump - movement_speed - movement_slowdown - weaving</td>
 </tr><tr><td>29</td>
 <td><a href = "UpdateAttributesPacket.html">Update Attributes</a></td>
-<td>Occasionally updating player attributes (buffs/debuffs, health, etc) The following attributes are important to supply with valid PlayerInputTick values for player movement simulation: - movement_speed - underwater_movement_speed - lava_movement_speed - jump_strength - hunger </td>
+<td> Occasionally updating player attributes (buffs/debuffs, health, etc) The following attributes are important to supply with valid PlayerInputTick values for player movement simulation: - movement_speed - underwater_movement_speed - lava_movement_speed - jump_strength - hunger </td>
 </tr><tr><td>30</td>
 <td><a href = "InventoryTransactionPacket.html">Inventory Transaction</a></td>
 <td>Sent for item interaction UI depending on if ItemStackNetManager is enabled as well as when the player uses items in gameplay. See ComplexInventoryTransaction::Type for more details</td>
@@ -111,7 +111,7 @@
 <td>Regular Actor Data delta packets, sent from the level on tick, mob and actor during normal tick</td>
 </tr><tr><td>40</td>
 <td><a href = "SetActorMotionPacket.html">Set Actor Motion</a></td>
-<td>This is used for the server to set the velocity of a client actor. It is primarily relevant for client predicted entities like the player or a boat or horse they are in control of. For most other actor types it does nothing. This is one of the packets that can directly affect player motion, for others, see: - MovePlayerPacket - CorrectPlayerMovePredictionPacket </td>
+<td> This is used for the server to set the velocity of a client actor. It is primarily relevant for client predicted entities like the player or a boat or horse they are in control of. For most other actor types it does nothing. This is one of the packets that can directly affect player motion, for others, see: - MovePlayerPacket - CorrectPlayerMovePredictionPacket </td>
 </tr><tr><td>41</td>
 <td><a href = "SetActorLinkPacket.html">Set Actor Link</a></td>
 <td>Sent by both client and server, only received by LegacyClientHandler.</td>
@@ -610,4 +610,7 @@
 </tr><tr><td>319</td>
 <td><a href = "SetMovementAuthorityPacket.html">Set Movement Authority</a></td>
 <td>Tells clients to change their ServerAuthMovementMode. For preview-only use during flights of server authoritative movement.Server was asked to change the movement authority mode</td>
+</tr><tr><td>320</td>
+<td><a href = "CameraAimAssistPresetsPacket.html">CameraAimAssistPresetsPacket</a></td>
+<td></td>
 </tr></table></body> </html>

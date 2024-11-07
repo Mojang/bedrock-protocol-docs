@@ -65,8 +65,8 @@ rankdir = LR
 83 -> 84
 22 -> 85
 85 -> 86
-86 -> 87
-85 -> 88
+22 -> 87
+87 -> 88
 88 -> 89
 89 -> 90
 88 -> 91
@@ -93,11 +93,11 @@ rankdir = LR
 111 -> 112
 
 22 [label="SerializedSkin",comment="name: \"SerializedSkin\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-23 [label="Skin Id",comment="name: \"Skin Id\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+23 [label="Id",comment="name: \"Id\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 24 [label="string",comment="name: \"string\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 25 [label="PlayFab Id",comment="name: \"PlayFab Id\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 26 [label="string",comment="name: \"string\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-27 [label="Skin Resource Patch",comment="name: \"Skin Resource Patch\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 0, notes: \"Represents a json blob that contains information about geometry, animations, animation controllers, and attachables, that can be applied to a skin when deserializing.\""];
+27 [label="Resource Patch",comment="name: \"Resource Patch\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 0, notes: \"Represents a json blob that contains information about geometry, animations, animation controllers, and attachables, that can be applied to a skin when deserializing.\""];
 28 [label="string",comment="name: \"string\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 29 [label="Skin Image Width",comment="name: \"Skin Image Width\", typeName: \"\", id: 29, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 30 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
@@ -106,7 +106,7 @@ rankdir = LR
 33 [label="Skin Image Image Bytes",comment="name: \"Skin Image Image Bytes\", typeName: \"\", id: 33, branchId: 0, recurseId: -1, attributes: 0, notes: \"Serialized into a string\""];
 34 [label="string",comment="name: \"string\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 35 [label="Animations",comment="name: \"Animations\", typeName: \"\", id: 35, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-36 [label="Skin Animated Images Size",comment="name: \"Skin Animated Images Size\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 0, notes: \"Animation count\""];
+36 [label="Skin Animated Images Size",comment="name: \"Skin Animated Images Size\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 37 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 37, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 38 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 39 [label="Image Width",comment="name: \"Image Width\", typeName: \"\", id: 39, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -127,9 +127,9 @@ rankdir = LR
 54 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 54, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 55 [label="CapeImage ImageBytes",comment="name: \"CapeImage ImageBytes\", typeName: \"\", id: 55, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 56 [label="string",comment="name: \"string\", typeName: \"\", id: 56, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-57 [label="GeometryData",comment="name: \"GeometryData\", typeName: \"\", id: 57, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+57 [label="Geometry Data",comment="name: \"Geometry Data\", typeName: \"\", id: 57, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 58 [label="string",comment="name: \"string\", typeName: \"\", id: 58, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-59 [label="Geometry Data Engine Version",comment="name: \"Geometry Data Engine Version\", typeName: \"\", id: 59, branchId: 0, recurseId: -1, attributes: 0, notes: \"Semantic version\""];
+59 [label="Geometry Data Min Engine Version",comment="name: \"Geometry Data Min Engine Version\", typeName: \"\", id: 59, branchId: 0, recurseId: -1, attributes: 0, notes: \"Semantic version\""];
 60 [label="string",comment="name: \"string\", typeName: \"\", id: 60, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 61 [label="AnimationData",comment="name: \"AnimationData\", typeName: \"\", id: 61, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 62 [label="string",comment="name: \"string\", typeName: \"\", id: 62, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
@@ -139,10 +139,10 @@ rankdir = LR
 66 [label="string",comment="name: \"string\", typeName: \"\", id: 66, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 67 [label="Arm Size",comment="name: \"Arm Size\", typeName: \"\", id: 67, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 68 [label="string",comment="name: \"string\", typeName: \"\", id: 68, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-69 [label="Skin color",comment="name: \"Skin color\", typeName: \"\", id: 69, branchId: 0, recurseId: -1, attributes: 0, notes: \"to hex string\""];
+69 [label="Skin Color",comment="name: \"Skin Color\", typeName: \"\", id: 69, branchId: 0, recurseId: -1, attributes: 0, notes: \"to hex string\""];
 70 [label="string",comment="name: \"string\", typeName: \"\", id: 70, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 71 [label="Persona Pieces",comment="name: \"Persona Pieces\", typeName: \"\", id: 71, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-72 [label="Persona pieces size",comment="name: \"Persona pieces size\", typeName: \"\", id: 72, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+72 [label="Persona Pieces Size",comment="name: \"Persona Pieces Size\", typeName: \"\", id: 72, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 73 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 73, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 74 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 74, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 75 [label="Piece Id",comment="name: \"Piece Id\", typeName: \"\", id: 75, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -155,14 +155,14 @@ rankdir = LR
 82 [label="bool",comment="name: \"bool\", typeName: \"\", id: 82, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 83 [label="Product Id",comment="name: \"Product Id\", typeName: \"\", id: 83, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 84 [label="string",comment="name: \"string\", typeName: \"\", id: 84, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-85 [label="Piece Tint Colors",comment="name: \"Piece Tint Colors\", typeName: \"\", id: 85, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-86 [label="Tint Colors Size",comment="name: \"Tint Colors Size\", typeName: \"\", id: 86, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-87 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 87, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+85 [label="Piece Tint Colors Size",comment="name: \"Piece Tint Colors Size\", typeName: \"\", id: 85, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+86 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 86, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+87 [label="Piece Tint Colors",comment="name: \"Piece Tint Colors\", typeName: \"\", id: 87, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
 88 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 88, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 89 [label="Piece Type",comment="name: \"Piece Type\", typeName: \"\", id: 89, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 90 [label="string",comment="name: \"string\", typeName: \"\", id: 90, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 91 [label="Piece Tint Colors",comment="name: \"Piece Tint Colors\", typeName: \"\", id: 91, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-92 [label="Piece Type Tint Colors Size",comment="name: \"Piece Type Tint Colors Size\", typeName: \"\", id: 92, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+92 [label="Piece Tint Color Colors Size",comment="name: \"Piece Tint Color Colors Size\", typeName: \"\", id: 92, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 93 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 93, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 94 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 94, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 95 [label="Tint Color",comment="name: \"Tint Color\", typeName: \"\", id: 95, branchId: 0, recurseId: -1, attributes: 0, notes: \"To hex string\""];
@@ -181,8 +181,8 @@ rankdir = LR
 108 [label="bool",comment="name: \"bool\", typeName: \"\", id: 108, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 109 [label="Is Primary User",comment="name: \"Is Primary User\", typeName: \"\", id: 109, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 110 [label="bool",comment="name: \"bool\", typeName: \"\", id: 110, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-111 [label="mOverridesPlayerAppearance",comment="name: \"mOverridesPlayerAppearance\", typeName: \"\", id: 111, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+111 [label="Overrides Player Appearance",comment="name: \"Overrides Player Appearance\", typeName: \"\", id: 111, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 112 [label="bool",comment="name: \"bool\", typeName: \"\", id: 112, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;24;26;28;30;32;34;37;40;42;44;46;48;50;52;54;56;58;60;62;64;66;68;70;73;76;78;80;82;84;87;90;93;96;98;100;102;104;106;108;110;112}
+{ rank = max;24;26;28;30;32;34;37;40;42;44;46;48;50;52;54;56;58;60;62;64;66;68;70;73;76;78;80;82;84;86;90;93;96;98;100;102;104;106;108;110;112}
 
 }

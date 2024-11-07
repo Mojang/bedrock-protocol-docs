@@ -1,0 +1,12 @@
+digraph "std::optional<struct SharedTypes::v1_21_50::CameraPresetAimAssistDefinition>" {
+rankdir = LR
+63
+63 -> 64
+64 -> 65
+
+63 [label="std::optional<struct SharedTypes::v1_21_50::CameraPresetAimAssistDefinition>",comment="name: \"std::optional<struct SharedTypes::v1_21_50::CameraPresetAimAssistDefinition>\", typeName: \"\", id: 63, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+64 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 64, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
+65 [label="bool",comment="name: \"bool\", typeName: \"\", id: 65, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;65}
+
+}

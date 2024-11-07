@@ -14,21 +14,31 @@ rankdir = LR
 40 -> 41
 33 -> 42
 42 -> 43
+33 -> 44
+44 -> 45
+45 -> 46
+33 -> 47
+47 -> 48
 
 30 [label="InventorySource",comment="name: \"InventorySource\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 31 [label="Source Type",comment="name: \"Source Type\", typeName: \"\", id: 31, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 32 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 32, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 33 [label="Dependency on 'Source Type'",shape=note,comment="name: \"Dependency on 'Source Type'\", typeName: \"\", id: 33, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
-34 [label="if (0)",shape=diamond,comment="name: \"if (0)\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
+34 [label="ContainerInventory",shape=diamond,comment="name: \"ContainerInventory\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
 35 [label="Container ID",comment="name: \"Container ID\", typeName: \"\", id: 35, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 36 [label="varint",comment="name: \"varint\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-37 [label="if (1)",shape=diamond,comment="name: \"if (1)\", typeName: \"\", id: 37, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
+37 [label="GlobalInventory",shape=diamond,comment="name: \"GlobalInventory\", typeName: \"\", id: 37, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
 38 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-39 [label="if (2)",shape=diamond,comment="name: \"if (2)\", typeName: \"\", id: 39, branchId: 2, recurseId: -1, attributes: 4, notes: \"\""];
+39 [label="WorldInteraction",shape=diamond,comment="name: \"WorldInteraction\", typeName: \"\", id: 39, branchId: 2, recurseId: -1, attributes: 4, notes: \"\""];
 40 [label="Bit Flags",comment="name: \"Bit Flags\", typeName: \"\", id: 40, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 41 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 41, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-42 [label="if (3)",shape=diamond,comment="name: \"if (3)\", typeName: \"\", id: 42, branchId: 3, recurseId: -1, attributes: 4, notes: \"\""];
+42 [label="CreativeInventory",shape=diamond,comment="name: \"CreativeInventory\", typeName: \"\", id: 42, branchId: 3, recurseId: -1, attributes: 4, notes: \"\""];
 43 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 43, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;32;36;38;41;43}
+44 [label="NonImplementedFeatureTODO",shape=diamond,comment="name: \"NonImplementedFeatureTODO\", typeName: \"\", id: 44, branchId: 4, recurseId: -1, attributes: 4, notes: \"\""];
+45 [label="Container ID",comment="name: \"Container ID\", typeName: \"\", id: 45, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+46 [label="varint",comment="name: \"varint\", typeName: \"\", id: 46, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+47 [label="Default",shape=diamond,comment="name: \"Default\", typeName: \"\", id: 47, branchId: 5, recurseId: -1, attributes: 4, notes: \"\""];
+48 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 48, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;32;36;38;41;43;46;48}
 
 }

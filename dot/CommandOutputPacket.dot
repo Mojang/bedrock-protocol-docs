@@ -36,7 +36,7 @@ rankdir = LR
 5 [label="Success Count",comment="name: \"Success Count\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 6 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 7 [label="Output Messages",comment="name: \"Output Messages\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-8 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 9 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 10 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 11 [label="Successful?",comment="name: \"Successful?\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -44,15 +44,15 @@ rankdir = LR
 13 [label="Message ID",comment="name: \"Message ID\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 14 [label="string",comment="name: \"string\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 15 [label="Parameters",comment="name: \"Parameters\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-16 [label="Array Size",comment="name: \"Array Size\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+16 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 17 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 18 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 19 [label="Param",comment="name: \"Param\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 20 [label="string",comment="name: \"string\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 21 [label="Dependency on 'Output Type == DataSet'",shape=note,comment="name: \"Dependency on 'Output Type == DataSet'\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
-22 [label="if (0)",shape=diamond,comment="name: \"if (0)\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
+22 [label="If False",shape=diamond,comment="name: \"If False\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
 23 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-24 [label="if (1)",shape=diamond,comment="name: \"if (1)\", typeName: \"\", id: 24, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
+24 [label="If True",shape=diamond,comment="name: \"If True\", typeName: \"\", id: 24, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
 25 [label="Data Set",comment="name: \"Data Set\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 26 [label="string",comment="name: \"string\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 { rank = max;2;4;6;9;12;14;17;20;23;26}
