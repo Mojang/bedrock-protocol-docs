@@ -1,32 +1,32 @@
 digraph "MapDecoration" {
 rankdir = LR
-60
-60 -> 61
+54
+54 -> 55
+55 -> 56
+54 -> 57
+57 -> 58
+54 -> 59
+59 -> 60
+54 -> 61
 61 -> 62
-60 -> 63
+54 -> 63
 63 -> 64
-60 -> 65
+54 -> 65
 65 -> 66
-60 -> 67
-67 -> 68
-60 -> 69
-69 -> 70
-60 -> 71
-71 -> 72
 
-60 [label="MapDecoration",comment="name: \"MapDecoration\", typeName: \"\", id: 60, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-61 [label="Map Decoration Type",comment="name: \"Map Decoration Type\", typeName: \"\", id: 61, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+54 [label="MapDecoration",comment="name: \"MapDecoration\", typeName: \"\", id: 54, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+55 [label="Map Decoration Type",comment="name: \"Map Decoration Type\", typeName: \"\", id: 55, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+56 [label="byte",comment="name: \"byte\", typeName: \"\", id: 56, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+57 [label="Rotation",comment="name: \"Rotation\", typeName: \"\", id: 57, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+58 [label="byte",comment="name: \"byte\", typeName: \"\", id: 58, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+59 [label="X",comment="name: \"X\", typeName: \"\", id: 59, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+60 [label="byte",comment="name: \"byte\", typeName: \"\", id: 60, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+61 [label="Y",comment="name: \"Y\", typeName: \"\", id: 61, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 62 [label="byte",comment="name: \"byte\", typeName: \"\", id: 62, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-63 [label="Rotation",comment="name: \"Rotation\", typeName: \"\", id: 63, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-64 [label="byte",comment="name: \"byte\", typeName: \"\", id: 64, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-65 [label="X",comment="name: \"X\", typeName: \"\", id: 65, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-66 [label="byte",comment="name: \"byte\", typeName: \"\", id: 66, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-67 [label="Y",comment="name: \"Y\", typeName: \"\", id: 67, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-68 [label="byte",comment="name: \"byte\", typeName: \"\", id: 68, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-69 [label="Label",comment="name: \"Label\", typeName: \"\", id: 69, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-70 [label="string",comment="name: \"string\", typeName: \"\", id: 70, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-71 [label="Color - ARGB",comment="name: \"Color - ARGB\", typeName: \"\", id: 71, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-72 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 72, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;62;64;66;68;70;72}
+63 [label="Label",comment="name: \"Label\", typeName: \"\", id: 63, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+64 [label="string",comment="name: \"string\", typeName: \"\", id: 64, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+65 [label="Color - ARGB",comment="name: \"Color - ARGB\", typeName: \"\", id: 65, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+66 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 66, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;56;58;60;62;64;66}
 
 }

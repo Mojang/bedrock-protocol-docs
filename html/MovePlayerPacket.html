@@ -7,16 +7,10 @@
 <td>Rotation in degrees of the direction they should look, separate from their body orientation. The server authoritative equivalent of this is PlayerAuthInputPacket::mRot</td>
 </tr><tr><td>Y-Head Rotation</td>
 <td>Rotation in degrees of the head. Almost always matches Y rotation. The server authoritative equivalent of this is PlayerAuthInputPacket::mYHeadRot</td>
-</tr><tr><td>Position Mode</td>
-<td>Determines how the client will behave when receiving this, see the enum for details. When sent to the server this is always 'Normal' except when in a vehicle then it's 'OnlyHeadRot'.</td>
 </tr><tr><td>On Ground</td>
 <td>For client bound packets this should have little meaning as it will be reset by the client every frame. For server bound it is true if the player is currently touching the ground. This is indicated by physics trying to move the player down and being stopped by collision. If the player falls freely or moves up it is cleared. If the player isn't affected by gravity this will stay at whatever value it had. The server authoritative near-equivalent of this is PlayerAuthInputPacket::InputData::VerticalCollision</td>
 </tr><tr><td>Riding Runtime ID</td>
 <td>If client bound this has no meaning. If server bound it is the vehicle the client is riding as specified by the last SetActorLinkPacket from the server. The server authoritative near-equivalent is PlayerAuthInputPacket::mClientPredictedVehicle</td>
-</tr><tr><td>Teleportation Cause</td>
-<td>Always zero if server bound.</td>
-</tr><tr><td>Source Actor Type</td>
-<td>Always zero if server bound.</td>
 </tr><tr><td>Tick</td>
 <td>If this packet is referring to the player or a client predicted vehicle they are in control of, this should be the most recently processed PlayerInputTick from their PlayerAuthInputPacket. Otherwise zero.</td>
 </tr></table></body> </html>

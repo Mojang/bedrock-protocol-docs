@@ -1,0 +1,32 @@
+digraph "std::bitset<65>" {
+rankdir = LR
+10
+10 -> 11
+11 -> 12
+10 -> 13
+13 -> 14
+10 -> 15
+15 -> 16
+10 -> 17
+17 -> 18
+10 -> 19
+19 -> 20
+10 -> 21
+21 -> 22
+
+10 [label="std::bitset<65>",comment="name: \"std::bitset<65>\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+11 [label="Bitset bytes",comment="name: \"Bitset bytes\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+12 [label="byte",comment="name: \"byte\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+13 [label="Bitset bytes",comment="name: \"Bitset bytes\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+14 [label="byte",comment="name: \"byte\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+15 [label="Bitset bytes",comment="name: \"Bitset bytes\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+16 [label="byte",comment="name: \"byte\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+17 [label="Bitset bytes",comment="name: \"Bitset bytes\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+18 [label="byte",comment="name: \"byte\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+19 [label="Bitset bytes",comment="name: \"Bitset bytes\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+20 [label="byte",comment="name: \"byte\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+21 [label="Bitset bytes",comment="name: \"Bitset bytes\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+22 [label="byte",comment="name: \"byte\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;12;14;16;18;20;22}
+
+}
