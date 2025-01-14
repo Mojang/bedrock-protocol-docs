@@ -1,5 +1,5 @@
 # Minecraft Network Protocol Docs 01/14/2025
-For r21_u, Network Protocol Version 776
+For r21_u6, Network Protocol Version 776
 
 
 ## New Packets
