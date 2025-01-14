@@ -1,0 +1,16 @@
+digraph "std::optional<struct CameraInstruction::SetInstruction::EaseOption>" {
+rankdir = LR
+12
+12 -> 13
+13 -> 14
+12 -> 15
+15 -> 21
+
+12 [label="std::optional<struct CameraInstruction::SetInstruction::EaseOption>",comment="name: \"std::optional<struct CameraInstruction::SetInstruction::EaseOption>\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+13 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
+14 [label="bool",comment="name: \"bool\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+15 [label="Value",comment="name: \"Value\", typeName: \"CameraInstruction::SetInstruction::EaseOption\", id: 15, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+21 [label="CameraInstruction::SetInstruction::EaseOption",comment="name: \"CameraInstruction::SetInstruction::EaseOption\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;14;21}
+
+}

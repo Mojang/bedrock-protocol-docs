@@ -16,14 +16,14 @@ rankdir = LR
 30 -> 31
 29 -> 32
 32 -> 33
-33 -> 34
-20 -> 35
-35 -> 36
-20 -> 37
-37 -> 38
-19 -> 39
-39 -> 40
+33 -> 37
+20 -> 38
+38 -> 39
+20 -> 40
 40 -> 41
+19 -> 42
+42 -> 43
+43 -> 44
 
 18 [label="NetworkItemStackDescriptor",comment="name: \"NetworkItemStackDescriptor\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 19 [label="Dependency on 'Item is valid?'",shape=note,comment="name: \"Dependency on 'Item is valid?'\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
@@ -40,15 +40,15 @@ rankdir = LR
 30 [label="If False",shape=diamond,comment="name: \"If False\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
 31 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 31, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 32 [label="If True",shape=diamond,comment="name: \"If True\", typeName: \"\", id: 32, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
-33 [label="Raw Id (32 bit signed)",comment="name: \"Raw Id (32 bit signed)\", typeName: \"\", id: 33, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-34 [label="varint",comment="name: \"varint\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-35 [label="Block Runtime Id",comment="name: \"Block Runtime Id\", typeName: \"\", id: 35, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-36 [label="varint",comment="name: \"varint\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-37 [label="User Data Buffer",comment="name: \"User Data Buffer\", typeName: \"\", id: 37, branchId: 0, recurseId: -1, attributes: 0, notes: \"The @ItemInstanceUserData.html#ItemInstanceUserData@  binary blob encoded as a String, so it's unsigned varint length prefixed. Get all your nbt+property bytes, calculate the length, write that length, THEN write the data.\""];
-38 [label="string",comment="name: \"string\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-39 [label="If True",shape=diamond,comment="name: \"If True\", typeName: \"\", id: 39, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
-40 [label="Id",comment="name: \"Id\", typeName: \"\", id: 40, branchId: 0, recurseId: -1, attributes: 0, notes: \"Send fixed Id of 0 for invalid item\""];
-41 [label="varint",comment="name: \"varint\", typeName: \"\", id: 41, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;22;24;26;28;31;34;36;38;41}
+33 [label="Net Id Variant",comment="name: \"Net Id Variant\", typeName: \"ItemStackNetIdVariant\", id: 33, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+37 [label="ItemStackNetIdVariant",comment="name: \"ItemStackNetIdVariant\", typeName: \"\", id: 37, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+38 [label="Block Runtime Id",comment="name: \"Block Runtime Id\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+39 [label="varint",comment="name: \"varint\", typeName: \"\", id: 39, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+40 [label="User Data Buffer",comment="name: \"User Data Buffer\", typeName: \"\", id: 40, branchId: 0, recurseId: -1, attributes: 0, notes: \"The @ItemInstanceUserData.html#ItemInstanceUserData@  binary blob encoded as a String, so it's unsigned varint length prefixed. Get all your nbt+property bytes, calculate the length, write that length, THEN write the data.\""];
+41 [label="string",comment="name: \"string\", typeName: \"\", id: 41, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+42 [label="If True",shape=diamond,comment="name: \"If True\", typeName: \"\", id: 42, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
+43 [label="Id",comment="name: \"Id\", typeName: \"\", id: 43, branchId: 0, recurseId: -1, attributes: 0, notes: \"Send fixed Id of 0 for invalid item\""];
+44 [label="varint",comment="name: \"varint\", typeName: \"\", id: 44, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;22;24;26;28;31;37;39;41;44}
 
 }

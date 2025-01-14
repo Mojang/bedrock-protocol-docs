@@ -1,0 +1,20 @@
+digraph "ItemRegistryPacket" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+2 -> 3
+1 -> 4
+4 -> 5
+5 -> 17
+
+0 [label="ItemRegistryPacket",comment="name: \"ItemRegistryPacket\", typeName: \"\", id: 0, branchId: 162, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Item Data",comment="name: \"Item Data\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+2 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+4 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+5 [label="Info",comment="name: \"Info\", typeName: \"ItemData\", id: 5, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+17 [label="ItemData",comment="name: \"ItemData\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3;17}
+
+}

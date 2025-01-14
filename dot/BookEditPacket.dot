@@ -35,6 +35,8 @@ rankdir = LR
 31 -> 32
 28 -> 33
 33 -> 34
+5 -> 35
+35 -> 36
 
 0 [label="BookEditPacket",comment="name: \"BookEditPacket\", typeName: \"\", id: 0, branchId: 97, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Action",comment="name: \"Action\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -71,6 +73,8 @@ rankdir = LR
 32 [label="string",comment="name: \"string\", typeName: \"\", id: 32, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 33 [label="XUID",comment="name: \"XUID\", typeName: \"\", id: 33, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 34 [label="string",comment="name: \"string\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2;4;8;10;12;15;17;19;22;25;27;30;32;34}
+35 [label="Default",shape=diamond,comment="name: \"Default\", typeName: \"\", id: 35, branchId: 5, recurseId: -1, attributes: 4, notes: \"\""];
+36 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;8;10;12;15;17;19;22;25;27;30;32;34;36}
 
 }

@@ -1,0 +1,40 @@
+digraph "CameraInstruction::SetInstruction" {
+rankdir = LR
+8
+8 -> 9
+9 -> 10
+8 -> 11
+11 -> 22
+8 -> 23
+23 -> 32
+8 -> 33
+33 -> 44
+8 -> 45
+45 -> 54
+8 -> 55
+55 -> 66
+8 -> 67
+67 -> 83
+8 -> 84
+84 -> 85
+
+8 [label="CameraInstruction::SetInstruction",comment="name: \"CameraInstruction::SetInstruction\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="Preset Index",comment="name: \"Preset Index\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+10 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+11 [label="Ease",comment="name: \"Ease\", typeName: \"std::optional<struct CameraInstruction::SetInstruction::EaseOption>\", id: 11, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+22 [label="std::optional<struct CameraInstruction::SetInstruction::EaseOption>",comment="name: \"std::optional<struct CameraInstruction::SetInstruction::EaseOption>\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+23 [label="Pos",comment="name: \"Pos\", typeName: \"std::optional<struct CameraInstruction::SetInstruction::PosOption>\", id: 23, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+32 [label="std::optional<struct CameraInstruction::SetInstruction::PosOption>",comment="name: \"std::optional<struct CameraInstruction::SetInstruction::PosOption>\", typeName: \"\", id: 32, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+33 [label="Rot",comment="name: \"Rot\", typeName: \"std::optional<struct CameraInstruction::SetInstruction::RotOption>\", id: 33, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+44 [label="std::optional<struct CameraInstruction::SetInstruction::RotOption>",comment="name: \"std::optional<struct CameraInstruction::SetInstruction::RotOption>\", typeName: \"\", id: 44, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+45 [label="Facing",comment="name: \"Facing\", typeName: \"std::optional<struct CameraInstruction::SetInstruction::FacingOption>\", id: 45, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+54 [label="std::optional<struct CameraInstruction::SetInstruction::FacingOption>",comment="name: \"std::optional<struct CameraInstruction::SetInstruction::FacingOption>\", typeName: \"\", id: 54, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+55 [label="View Offset",comment="name: \"View Offset\", typeName: \"std::optional<struct CameraInstruction::SetInstruction::ViewOffsetOption>\", id: 55, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+66 [label="std::optional<struct CameraInstruction::SetInstruction::ViewOffsetOption>",comment="name: \"std::optional<struct CameraInstruction::SetInstruction::ViewOffsetOption>\", typeName: \"\", id: 66, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+67 [label="Entity Offset",comment="name: \"Entity Offset\", typeName: \"std::optional<struct CameraInstruction::SetInstruction::EntityOffsetOption>\", id: 67, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+83 [label="std::optional<struct CameraInstruction::SetInstruction::EntityOffsetOption>",comment="name: \"std::optional<struct CameraInstruction::SetInstruction::EntityOffsetOption>\", typeName: \"\", id: 83, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+84 [label="Default",comment="name: \"Default\", typeName: \"std::optional<bool>\", id: 84, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+85 [label="std::optional<bool>",comment="name: \"std::optional<bool>\", typeName: \"\", id: 85, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;10;22;32;44;54;66;83;85}
+
+}

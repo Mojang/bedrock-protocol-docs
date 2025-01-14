@@ -1,0 +1,16 @@
+digraph "std::optional<enum CameraAimAssist::TargetMode>" {
+rankdir = LR
+80
+80 -> 81
+81 -> 82
+80 -> 83
+83 -> 87
+
+80 [label="std::optional<enum CameraAimAssist::TargetMode>",comment="name: \"std::optional<enum CameraAimAssist::TargetMode>\", typeName: \"\", id: 80, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+81 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 81, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
+82 [label="bool",comment="name: \"bool\", typeName: \"\", id: 82, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+83 [label="Value",comment="name: \"Value\", typeName: \"CameraAimAssist::TargetMode\", id: 83, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+87 [label="CameraAimAssist::TargetMode",comment="name: \"CameraAimAssist::TargetMode\", typeName: \"\", id: 87, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;82;87}
+
+}

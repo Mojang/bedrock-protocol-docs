@@ -1,0 +1,12 @@
+digraph "CameraInstruction::SetInstruction::PosOption" {
+rankdir = LR
+28
+28 -> 29
+29 -> 30
+
+28 [label="CameraInstruction::SetInstruction::PosOption",comment="name: \"CameraInstruction::SetInstruction::PosOption\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+29 [label="Pos",comment="name: \"Pos\", typeName: \"Vec3\", id: 29, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+30 [label="Vec3",comment="name: \"Vec3\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;30}
+
+}
