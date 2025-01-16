@@ -68,7 +68,7 @@ rankdir = LR
 115 [label="bool",comment="name: \"bool\", typeName: \"\", id: 115, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 116 [label="Is Host?",comment="name: \"Is Host?\", typeName: \"\", id: 116, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 117 [label="bool",comment="name: \"bool\", typeName: \"\", id: 117, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-118 [label="Is SubClient",comment="name: \"Is SubClient\", typeName: \"\", id: 118, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+118 [label="Is SubClient?",comment="name: \"Is SubClient?\", typeName: \"\", id: 118, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 119 [label="bool",comment="name: \"bool\", typeName: \"\", id: 119, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 120 [label="Trusted Skin List",comment="name: \"Trusted Skin List\", typeName: \"\", id: 120, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
 121 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 121, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];

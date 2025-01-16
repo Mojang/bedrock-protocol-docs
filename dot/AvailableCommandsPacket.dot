@@ -125,11 +125,11 @@ rankdir = LR
 4 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 5 [label="Value",comment="name: \"Value\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 6 [label="string",comment="name: \"string\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-7 [label="Enum Values",comment="name: \"Enum Values\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+7 [label="Chained Subcommand Values",comment="name: \"Chained Subcommand Values\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
 8 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 9 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 10 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-11 [label="Chained Subcommand Values",comment="name: \"Chained Subcommand Values\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+11 [label="Chained Subcommand Value",comment="name: \"Chained Subcommand Value\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 12 [label="string",comment="name: \"string\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 13 [label="Post Fixes",comment="name: \"Post Fixes\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
 14 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -147,7 +147,7 @@ rankdir = LR
 26 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 27 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 28 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-29 [label="Dependency on '1 or 2 Byte Unsigned'",shape=note,comment="name: \"Dependency on '1 or 2 Byte Unsigned'\", typeName: \"\", id: 29, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
+29 [label="Dependency on '1, 2 or 4 Bytes Unsigned'",shape=note,comment="name: \"Dependency on '1, 2 or 4 Bytes Unsigned'\", typeName: \"\", id: 29, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
 30 [label="Enum Values Size <= 256",shape=diamond,comment="name: \"Enum Values Size <= 256\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
 31 [label="Enum Value",comment="name: \"Enum Value\", typeName: \"\", id: 31, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 32 [label="byte",comment="name: \"byte\", typeName: \"\", id: 32, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];

@@ -1,0 +1,16 @@
+digraph "CameraInstruction::SetInstruction::RotOption" {
+rankdir = LR
+38
+38 -> 39
+39 -> 40
+38 -> 41
+41 -> 42
+
+38 [label="CameraInstruction::SetInstruction::RotOption",comment="name: \"CameraInstruction::SetInstruction::RotOption\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+39 [label="Rot X",comment="name: \"Rot X\", typeName: \"\", id: 39, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+40 [label="float",comment="name: \"float\", typeName: \"\", id: 40, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+41 [label="Rot Y",comment="name: \"Rot Y\", typeName: \"\", id: 41, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+42 [label="float",comment="name: \"float\", typeName: \"\", id: 42, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;40;42}
+
+}

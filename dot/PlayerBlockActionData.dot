@@ -31,6 +31,8 @@ rankdir = LR
 160 -> 161
 136 -> 162
 162 -> 163
+136 -> 164
+164 -> 165
 
 133 [label="PlayerBlockActionData",comment="name: \"PlayerBlockActionData\", typeName: \"\", id: 133, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 134 [label="Player Action Type",comment="name: \"Player Action Type\", typeName: \"\", id: 134, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -63,6 +65,8 @@ rankdir = LR
 161 [label="varint",comment="name: \"varint\", typeName: \"\", id: 161, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 162 [label="StopDestroyBlock",shape=diamond,comment="name: \"StopDestroyBlock\", typeName: \"\", id: 162, branchId: 5, recurseId: -1, attributes: 4, notes: \"\""];
 163 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 163, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;135;139;141;144;146;149;151;154;156;159;161;163}
+164 [label="Default",shape=diamond,comment="name: \"Default\", typeName: \"\", id: 164, branchId: 6, recurseId: -1, attributes: 4, notes: \"\""];
+165 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 165, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;135;139;141;144;146;149;151;154;156;159;161;163;165}
 
 }

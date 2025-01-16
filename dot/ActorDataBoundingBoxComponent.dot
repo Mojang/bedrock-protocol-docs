@@ -1,0 +1,20 @@
+digraph "ActorDataBoundingBoxComponent" {
+rankdir = LR
+10
+10 -> 11
+11 -> 12
+10 -> 13
+13 -> 14
+10 -> 15
+15 -> 16
+
+10 [label="ActorDataBoundingBoxComponent",comment="name: \"ActorDataBoundingBoxComponent\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+11 [label="Actor Data Bounding Box::Scale",comment="name: \"Actor Data Bounding Box::Scale\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"Array where the elements stores the bounding box of scale\""];
+12 [label="float",comment="name: \"float\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+13 [label="Actor Data Bounding Box::Width",comment="name: \"Actor Data Bounding Box::Width\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"Array where the elements stores the bounding box of width\""];
+14 [label="float",comment="name: \"float\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+15 [label="Actor Data Bounding Box::Heigth",comment="name: \"Actor Data Bounding Box::Heigth\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"Array where the elements stores the bounding box of height\""];
+16 [label="float",comment="name: \"float\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;12;14;16}
+
+}

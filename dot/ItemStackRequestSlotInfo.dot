@@ -13,8 +13,8 @@ rankdir = LR
 106 [label="FullContainerName",comment="name: \"FullContainerName\", typeName: \"\", id: 106, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 107 [label="Slot",comment="name: \"Slot\", typeName: \"\", id: 107, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 108 [label="byte",comment="name: \"byte\", typeName: \"\", id: 108, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-109 [label="Raw Id (32 bit signed)",comment="name: \"Raw Id (32 bit signed)\", typeName: \"\", id: 109, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-110 [label="varint",comment="name: \"varint\", typeName: \"\", id: 110, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+109 [label="Net Id Variant",comment="name: \"Net Id Variant\", typeName: \"ItemStackNetIdVariant\", id: 109, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+110 [label="ItemStackNetIdVariant",comment="name: \"ItemStackNetIdVariant\", typeName: \"\", id: 110, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 { rank = max;106;108;110}
 
 }

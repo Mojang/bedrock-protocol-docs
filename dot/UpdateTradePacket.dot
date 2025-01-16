@@ -21,6 +21,10 @@ rankdir = LR
 17 -> 18
 0 -> 19
 19 -> 20
+0 -> 21
+21 -> 22
+0 -> 23
+23 -> 24
 
 0 [label="UpdateTradePacket",comment="name: \"UpdateTradePacket\", typeName: \"\", id: 0, branchId: 80, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Container Id",comment="name: \"Container Id\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -31,9 +35,9 @@ rankdir = LR
 6 [label="varint",comment="name: \"varint\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 7 [label="Trader Tier",comment="name: \"Trader Tier\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 8 [label="varint",comment="name: \"varint\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-9 [label="Entity Unique ID",comment="name: \"Entity Unique ID\", typeName: \"ActorUniqueID\", id: 9, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+9 [label="Entity Unique Id",comment="name: \"Entity Unique Id\", typeName: \"ActorUniqueID\", id: 9, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 10 [label="ActorUniqueID",comment="name: \"ActorUniqueID\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-11 [label="Last Trading Player ID",comment="name: \"Last Trading Player ID\", typeName: \"ActorUniqueID\", id: 11, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+11 [label="Last Trading Player",comment="name: \"Last Trading Player\", typeName: \"ActorUniqueID\", id: 11, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 12 [label="ActorUniqueID",comment="name: \"ActorUniqueID\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 13 [label="Display Name",comment="name: \"Display Name\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 14 [label="string",comment="name: \"string\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
@@ -41,8 +45,12 @@ rankdir = LR
 16 [label="bool",comment="name: \"bool\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 17 [label="Using Economy Trade",comment="name: \"Using Economy Trade\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 0, notes: \"When set to false, it means the packet comes from the old Trade Component.\""];
 18 [label="bool",comment="name: \"bool\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-19 [label="Data Tags",comment="name: \"Data Tags\", typeName: \"CompoundTag\", id: 19, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-20 [label="CompoundTag",comment="name: \"CompoundTag\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2;4;6;8;10;12;14;16;18;20}
+19 [label="Byte",comment="name: \"Byte\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+20 [label="byte",comment="name: \"byte\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+21 [label="String",comment="name: \"String\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+22 [label="string",comment="name: \"string\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+23 [label="Byte",comment="name: \"Byte\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+24 [label="byte",comment="name: \"byte\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;6;8;10;12;14;16;18;20;22;24}
 
 }

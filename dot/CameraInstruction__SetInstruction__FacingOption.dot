@@ -1,0 +1,12 @@
+digraph "CameraInstruction::SetInstruction::FacingOption" {
+rankdir = LR
+50
+50 -> 51
+51 -> 52
+
+50 [label="CameraInstruction::SetInstruction::FacingOption",comment="name: \"CameraInstruction::SetInstruction::FacingOption\", typeName: \"\", id: 50, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+51 [label="Facing Pos",comment="name: \"Facing Pos\", typeName: \"Vec3\", id: 51, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+52 [label="Vec3",comment="name: \"Vec3\", typeName: \"\", id: 52, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;52}
+
+}

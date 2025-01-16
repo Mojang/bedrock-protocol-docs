@@ -1,0 +1,20 @@
+digraph "CameraInstruction::SetInstruction::EntityOffsetOption" {
+rankdir = LR
+72
+72 -> 73
+73 -> 77
+72 -> 78
+78 -> 79
+72 -> 80
+80 -> 81
+
+72 [label="CameraInstruction::SetInstruction::EntityOffsetOption",comment="name: \"CameraInstruction::SetInstruction::EntityOffsetOption\", typeName: \"\", id: 72, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+73 [label="Entity Offset X",comment="name: \"Entity Offset X\", typeName: \"float\", id: 73, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+77 [label="float",comment="name: \"float\", typeName: \"\", id: 77, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+78 [label="Entity Offset Y",comment="name: \"Entity Offset Y\", typeName: \"float\", id: 78, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+79 [label="float",comment="name: \"float\", typeName: \"\", id: 79, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+80 [label="Entity Offset Z",comment="name: \"Entity Offset Z\", typeName: \"float\", id: 80, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+81 [label="float",comment="name: \"float\", typeName: \"\", id: 81, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;77;79;81}
+
+}

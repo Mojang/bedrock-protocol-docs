@@ -6,19 +6,51 @@ rankdir = LR
 2 -> 3
 1 -> 4
 4 -> 5
-5 -> 9
-4 -> 10
-10 -> 11
+5 -> 6
+6 -> 7
+5 -> 8
+8 -> 9
+9 -> 10
+8 -> 11
+11 -> 12
+8 -> 13
+13 -> 14
+4 -> 15
+15 -> 16
+16 -> 17
+15 -> 18
+18 -> 19
+19 -> 23
+18 -> 24
+24 -> 25
+18 -> 26
+26 -> 27
 
 0 [label="CreativeContentPacket",comment="name: \"CreativeContentPacket\", typeName: \"\", id: 0, branchId: 145, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Write Entries",comment="name: \"Write Entries\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-2 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-3 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-4 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-5 [label="Creative Net Id",comment="name: \"Creative Net Id\", typeName: \"TypedServerNetId<struct CreativeItemNetIdTag,unsigned int,0>\", id: 5, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-9 [label="TypedServerNetId<struct CreativeItemNetIdTag,unsigned int,0>",comment="name: \"TypedServerNetId<struct CreativeItemNetIdTag,unsigned int,0>\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-10 [label="Item Instance",comment="name: \"Item Instance\", typeName: \"NetworkItemInstanceDescriptor\", id: 10, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-11 [label="NetworkItemInstanceDescriptor",comment="name: \"NetworkItemInstanceDescriptor\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;3;9;11}
+1 [label="Dependency on 'mCreativeItemRegistryForWrite != nullptr'",shape=note,comment="name: \"Dependency on 'mCreativeItemRegistryForWrite != nullptr'\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
+2 [label="If False",shape=diamond,comment="name: \"If False\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
+3 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+4 [label="If True",shape=diamond,comment="name: \"If True\", typeName: \"\", id: 4, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
+5 [label="Groups",comment="name: \"Groups\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 8, notes: \"This is a collection of all groups with and without names. Groups with names show up in the Creative Inventory/Recipe Book with a collapsible icon.\""];
+6 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+8 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+9 [label="Creative Category",comment="name: \"Creative Category\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+10 [label="int",comment="name: \"int\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+11 [label="Name of the group",comment="name: \"Name of the group\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"This is localized. Leave empty for an anonymous group (group that doesn't collapse).\""];
+12 [label="string",comment="name: \"string\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+13 [label="Group Icon Item",comment="name: \"Group Icon Item\", typeName: \"NetworkItemInstanceDescriptor\", id: 13, branchId: 0, recurseId: -1, attributes: 256, notes: \"Leave empty if there is no name for this group.\""];
+14 [label="NetworkItemInstanceDescriptor",comment="name: \"NetworkItemInstanceDescriptor\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+15 [label="Write Entries",comment="name: \"Write Entries\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+16 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+17 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+18 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+19 [label="Creative Net Id",comment="name: \"Creative Net Id\", typeName: \"TypedServerNetId<struct CreativeItemNetIdTag,unsigned int,0>\", id: 19, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+23 [label="TypedServerNetId<struct CreativeItemNetIdTag,unsigned int,0>",comment="name: \"TypedServerNetId<struct CreativeItemNetIdTag,unsigned int,0>\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+24 [label="Item Instance",comment="name: \"Item Instance\", typeName: \"NetworkItemInstanceDescriptor\", id: 24, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+25 [label="NetworkItemInstanceDescriptor",comment="name: \"NetworkItemInstanceDescriptor\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+26 [label="Group Index",comment="name: \"Group Index\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 0, notes: \"Group Index referring to the group in the list `Groups`.\""];
+27 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3;7;10;12;14;17;23;25;27}
 
 }

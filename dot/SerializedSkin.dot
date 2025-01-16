@@ -65,8 +65,8 @@ rankdir = LR
 83 -> 84
 22 -> 85
 85 -> 86
-22 -> 87
-87 -> 88
+86 -> 87
+85 -> 88
 88 -> 89
 89 -> 90
 88 -> 91
@@ -155,9 +155,9 @@ rankdir = LR
 82 [label="bool",comment="name: \"bool\", typeName: \"\", id: 82, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 83 [label="Product Id",comment="name: \"Product Id\", typeName: \"\", id: 83, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 84 [label="string",comment="name: \"string\", typeName: \"\", id: 84, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-85 [label="Piece Tint Colors Size",comment="name: \"Piece Tint Colors Size\", typeName: \"\", id: 85, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-86 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 86, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-87 [label="Piece Tint Colors",comment="name: \"Piece Tint Colors\", typeName: \"\", id: 87, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+85 [label="Piece Tint Colors",comment="name: \"Piece Tint Colors\", typeName: \"\", id: 85, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+86 [label="Piece Tint Colors Size",comment="name: \"Piece Tint Colors Size\", typeName: \"\", id: 86, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+87 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 87, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 88 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 88, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 89 [label="Piece Type",comment="name: \"Piece Type\", typeName: \"\", id: 89, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 90 [label="string",comment="name: \"string\", typeName: \"\", id: 90, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
@@ -183,6 +183,6 @@ rankdir = LR
 110 [label="bool",comment="name: \"bool\", typeName: \"\", id: 110, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 111 [label="Overrides Player Appearance",comment="name: \"Overrides Player Appearance\", typeName: \"\", id: 111, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 112 [label="bool",comment="name: \"bool\", typeName: \"\", id: 112, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;24;26;28;30;32;34;37;40;42;44;46;48;50;52;54;56;58;60;62;64;66;68;70;73;76;78;80;82;84;86;90;93;96;98;100;102;104;106;108;110;112}
+{ rank = max;24;26;28;30;32;34;37;40;42;44;46;48;50;52;54;56;58;60;62;64;66;68;70;73;76;78;80;82;84;87;90;93;96;98;100;102;104;106;108;110;112}
 
 }

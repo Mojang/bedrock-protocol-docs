@@ -17,35 +17,41 @@ rankdir = LR
 13 -> 14
 6 -> 15
 15 -> 16
-5 -> 17
+6 -> 17
 17 -> 18
-18 -> 19
-5 -> 20
+5 -> 19
+19 -> 20
 20 -> 21
 5 -> 22
 22 -> 23
-23 -> 24
-5 -> 25
+5 -> 24
+24 -> 25
 25 -> 26
-26 -> 27
-5 -> 28
+5 -> 27
+27 -> 28
 28 -> 29
-29 -> 30
-5 -> 31
+5 -> 30
+30 -> 31
 31 -> 32
-32 -> 33
-31 -> 34
-34 -> 35
-31 -> 36
+30 -> 33
+33 -> 34
+5 -> 35
+35 -> 36
 36 -> 37
-5 -> 38
+35 -> 38
 38 -> 39
-39 -> 40
-38 -> 41
-41 -> 42
-5 -> 43
+35 -> 40
+40 -> 41
+5 -> 42
+42 -> 43
 43 -> 44
-44 -> 45
+42 -> 45
+45 -> 46
+5 -> 47
+47 -> 48
+48 -> 49
+5 -> 50
+50 -> 51
 
 0 [label="BossEventPacket",comment="name: \"BossEventPacket\", typeName: \"\", id: 0, branchId: 74, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Target Actor ID",comment="name: \"Target Actor ID\", typeName: \"ActorUniqueID\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
@@ -56,43 +62,49 @@ rankdir = LR
 6 [label="Add",shape=diamond,comment="name: \"Add\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
 7 [label="Name",comment="name: \"Name\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"Name of the boss to add\""];
 8 [label="string",comment="name: \"string\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-9 [label="Health Percent",comment="name: \"Health Percent\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"Health value of the boss\""];
-10 [label="float",comment="name: \"float\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-11 [label="Darken Screen",comment="name: \"Darken Screen\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"A boolean value for whether or not we should darken the screen (has a 0 or 1 value)\""];
-12 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-13 [label="Color",comment="name: \"Color\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"color for the boss bar, listed in an enumeration\""];
-14 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-15 [label="Overlay",comment="name: \"Overlay\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"overlay for the boss bar, listed in an enumeration\""];
+9 [label="FilteredName",comment="name: \"FilteredName\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"Filtered name of the boss to add\""];
+10 [label="string",comment="name: \"string\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+11 [label="Health Percent",comment="name: \"Health Percent\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"Health value of the boss\""];
+12 [label="float",comment="name: \"float\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+13 [label="Darken Screen",comment="name: \"Darken Screen\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"A boolean value for whether or not we should darken the screen (has a 0 or 1 value)\""];
+14 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+15 [label="Color",comment="name: \"Color\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"color for the boss bar, listed in an enumeration\""];
 16 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-17 [label="Player Added",shape=diamond,comment="name: \"Player Added\", typeName: \"\", id: 17, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
-18 [label="Player ID",comment="name: \"Player ID\", typeName: \"ActorUniqueID\", id: 18, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-19 [label="ActorUniqueID",comment="name: \"ActorUniqueID\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-20 [label="Remove",shape=diamond,comment="name: \"Remove\", typeName: \"\", id: 20, branchId: 2, recurseId: -1, attributes: 4, notes: \"\""];
-21 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-22 [label="Player Removed",shape=diamond,comment="name: \"Player Removed\", typeName: \"\", id: 22, branchId: 3, recurseId: -1, attributes: 4, notes: \"\""];
-23 [label="Player ID",comment="name: \"Player ID\", typeName: \"ActorUniqueID\", id: 23, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-24 [label="ActorUniqueID",comment="name: \"ActorUniqueID\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-25 [label="Update Percent",shape=diamond,comment="name: \"Update Percent\", typeName: \"\", id: 25, branchId: 4, recurseId: -1, attributes: 4, notes: \"\""];
-26 [label="Health Percent",comment="name: \"Health Percent\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-27 [label="float",comment="name: \"float\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-28 [label="Update Name",shape=diamond,comment="name: \"Update Name\", typeName: \"\", id: 28, branchId: 5, recurseId: -1, attributes: 4, notes: \"\""];
-29 [label="Name",comment="name: \"Name\", typeName: \"\", id: 29, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-30 [label="string",comment="name: \"string\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-31 [label="Update Properties",shape=diamond,comment="name: \"Update Properties\", typeName: \"\", id: 31, branchId: 6, recurseId: -1, attributes: 4, notes: \"\""];
-32 [label="Darken Screen",comment="name: \"Darken Screen\", typeName: \"\", id: 32, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-33 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 33, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-34 [label="Color",comment="name: \"Color\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-35 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 35, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-36 [label="Overlay",comment="name: \"Overlay\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-37 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 37, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-38 [label="Update Style",shape=diamond,comment="name: \"Update Style\", typeName: \"\", id: 38, branchId: 7, recurseId: -1, attributes: 4, notes: \"\""];
-39 [label="Color",comment="name: \"Color\", typeName: \"\", id: 39, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-40 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 40, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-41 [label="Overlay",comment="name: \"Overlay\", typeName: \"\", id: 41, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-42 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 42, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-43 [label="Query",shape=diamond,comment="name: \"Query\", typeName: \"\", id: 43, branchId: 8, recurseId: -1, attributes: 4, notes: \"\""];
-44 [label="Player ID",comment="name: \"Player ID\", typeName: \"ActorUniqueID\", id: 44, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-45 [label="ActorUniqueID",comment="name: \"ActorUniqueID\", typeName: \"\", id: 45, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2;4;8;10;12;14;16;19;21;24;27;30;33;35;37;40;42;45}
+17 [label="Overlay",comment="name: \"Overlay\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 0, notes: \"overlay for the boss bar, listed in an enumeration\""];
+18 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+19 [label="Player Added",shape=diamond,comment="name: \"Player Added\", typeName: \"\", id: 19, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
+20 [label="Player ID",comment="name: \"Player ID\", typeName: \"ActorUniqueID\", id: 20, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+21 [label="ActorUniqueID",comment="name: \"ActorUniqueID\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+22 [label="Remove",shape=diamond,comment="name: \"Remove\", typeName: \"\", id: 22, branchId: 2, recurseId: -1, attributes: 4, notes: \"\""];
+23 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+24 [label="Player Removed",shape=diamond,comment="name: \"Player Removed\", typeName: \"\", id: 24, branchId: 3, recurseId: -1, attributes: 4, notes: \"\""];
+25 [label="Player ID",comment="name: \"Player ID\", typeName: \"ActorUniqueID\", id: 25, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+26 [label="ActorUniqueID",comment="name: \"ActorUniqueID\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+27 [label="Update Percent",shape=diamond,comment="name: \"Update Percent\", typeName: \"\", id: 27, branchId: 4, recurseId: -1, attributes: 4, notes: \"\""];
+28 [label="Health Percent",comment="name: \"Health Percent\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+29 [label="float",comment="name: \"float\", typeName: \"\", id: 29, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+30 [label="Update Name",shape=diamond,comment="name: \"Update Name\", typeName: \"\", id: 30, branchId: 5, recurseId: -1, attributes: 4, notes: \"\""];
+31 [label="Name",comment="name: \"Name\", typeName: \"\", id: 31, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+32 [label="string",comment="name: \"string\", typeName: \"\", id: 32, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+33 [label="FilteredName",comment="name: \"FilteredName\", typeName: \"\", id: 33, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+34 [label="string",comment="name: \"string\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+35 [label="Update Properties",shape=diamond,comment="name: \"Update Properties\", typeName: \"\", id: 35, branchId: 6, recurseId: -1, attributes: 4, notes: \"\""];
+36 [label="Darken Screen",comment="name: \"Darken Screen\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+37 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 37, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+38 [label="Color",comment="name: \"Color\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+39 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 39, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+40 [label="Overlay",comment="name: \"Overlay\", typeName: \"\", id: 40, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+41 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 41, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+42 [label="Update Style",shape=diamond,comment="name: \"Update Style\", typeName: \"\", id: 42, branchId: 7, recurseId: -1, attributes: 4, notes: \"\""];
+43 [label="Color",comment="name: \"Color\", typeName: \"\", id: 43, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+44 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 44, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+45 [label="Overlay",comment="name: \"Overlay\", typeName: \"\", id: 45, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+46 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 46, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+47 [label="Query",shape=diamond,comment="name: \"Query\", typeName: \"\", id: 47, branchId: 8, recurseId: -1, attributes: 4, notes: \"\""];
+48 [label="Player ID",comment="name: \"Player ID\", typeName: \"ActorUniqueID\", id: 48, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+49 [label="ActorUniqueID",comment="name: \"ActorUniqueID\", typeName: \"\", id: 49, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+50 [label="Default",shape=diamond,comment="name: \"Default\", typeName: \"\", id: 50, branchId: 9, recurseId: -1, attributes: 4, notes: \"\""];
+51 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 51, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;8;10;12;14;16;18;21;23;26;29;32;34;37;39;41;44;46;49;51}
 
 }

@@ -1,16 +1,16 @@
 digraph "SharedTypes::v1_21_50::CameraAimAssistCategoryDefinition" {
 rankdir = LR
-14
-14 -> 15
-15 -> 16
-14 -> 17
-17 -> 47
+6
+6 -> 7
+7 -> 8
+6 -> 9
+9 -> 39
 
-14 [label="SharedTypes::v1_21_50::CameraAimAssistCategoryDefinition",comment="name: \"SharedTypes::v1_21_50::CameraAimAssistCategoryDefinition\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-15 [label="Name",comment="name: \"Name\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-16 [label="string",comment="name: \"string\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-17 [label="Priorities",comment="name: \"Priorities\", typeName: \"SharedTypes::v1_21_50::CameraAimAssistCategoryPriorities\", id: 17, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-47 [label="SharedTypes::v1_21_50::CameraAimAssistCategoryPriorities",comment="name: \"SharedTypes::v1_21_50::CameraAimAssistCategoryPriorities\", typeName: \"\", id: 47, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;16;47}
+6 [label="SharedTypes::v1_21_50::CameraAimAssistCategoryDefinition",comment="name: \"SharedTypes::v1_21_50::CameraAimAssistCategoryDefinition\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="Name",comment="name: \"Name\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="string",comment="name: \"string\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+9 [label="Priorities",comment="name: \"Priorities\", typeName: \"SharedTypes::v1_21_50::CameraAimAssistCategoryPriorities\", id: 9, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+39 [label="SharedTypes::v1_21_50::CameraAimAssistCategoryPriorities",comment="name: \"SharedTypes::v1_21_50::CameraAimAssistCategoryPriorities\", typeName: \"\", id: 39, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;8;39}
 
 }

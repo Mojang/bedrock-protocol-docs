@@ -1,12 +1,16 @@
 digraph "std::optional<struct CameraInstruction::FadeInstruction>" {
 rankdir = LR
-11
-11 -> 12
-12 -> 13
+91
+91 -> 92
+92 -> 93
+91 -> 94
+94 -> 124
 
-11 [label="std::optional<struct CameraInstruction::FadeInstruction>",comment="name: \"std::optional<struct CameraInstruction::FadeInstruction>\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-12 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
-13 [label="bool",comment="name: \"bool\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;13}
+91 [label="std::optional<struct CameraInstruction::FadeInstruction>",comment="name: \"std::optional<struct CameraInstruction::FadeInstruction>\", typeName: \"\", id: 91, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+92 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 92, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
+93 [label="bool",comment="name: \"bool\", typeName: \"\", id: 93, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+94 [label="Value",comment="name: \"Value\", typeName: \"CameraInstruction::FadeInstruction\", id: 94, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+124 [label="CameraInstruction::FadeInstruction",comment="name: \"CameraInstruction::FadeInstruction\", typeName: \"\", id: 124, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;93;124}
 
 }

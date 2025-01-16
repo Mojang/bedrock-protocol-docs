@@ -1,20 +1,28 @@
 digraph "ItemData" {
 rankdir = LR
-180
-180 -> 181
-181 -> 182
-180 -> 183
-183 -> 184
-180 -> 185
-185 -> 186
+6
+6 -> 7
+7 -> 8
+6 -> 9
+9 -> 10
+6 -> 11
+11 -> 12
+6 -> 13
+13 -> 14
+6 -> 15
+15 -> 16
 
-180 [label="ItemData",comment="name: \"ItemData\", typeName: \"\", id: 180, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-181 [label="Item Name",comment="name: \"Item Name\", typeName: \"\", id: 181, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-182 [label="string",comment="name: \"string\", typeName: \"\", id: 182, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-183 [label="Item Id",comment="name: \"Item Id\", typeName: \"\", id: 183, branchId: 0, recurseId: -1, attributes: 0, notes: \"Block id's < 256 (can be negative); Item id's > 257\""];
-184 [label="short",comment="name: \"short\", typeName: \"\", id: 184, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-185 [label="Is Component Based",comment="name: \"Is Component Based\", typeName: \"\", id: 185, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-186 [label="bool",comment="name: \"bool\", typeName: \"\", id: 186, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;182;184;186}
+6 [label="ItemData",comment="name: \"ItemData\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="Item Name",comment="name: \"Item Name\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="string",comment="name: \"string\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+9 [label="Item Id",comment="name: \"Item Id\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"Block id's < 256 (can be negative); Item id's >= 257\""];
+10 [label="short",comment="name: \"short\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+11 [label="Is Component Based",comment="name: \"Is Component Based\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+12 [label="bool",comment="name: \"bool\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+13 [label="Item Version",comment="name: \"Item Version\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+14 [label="varint",comment="name: \"varint\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+15 [label="Item Component Data",comment="name: \"Item Component Data\", typeName: \"CompoundTag\", id: 15, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+16 [label="CompoundTag",comment="name: \"CompoundTag\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;8;10;12;14;16}
 
 }
