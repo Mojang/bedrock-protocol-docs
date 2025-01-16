@@ -134,29 +134,53 @@ SerializedAbilitiesData::SerializedLayer
 ## New Enums
 
 ActorDataBoundingBoxComponent::Type:
-  Added Scale (0) []
-  Added Width (1) []
-  Added Height (2) []
+* Added Scale (0) []
+* Added Width (1) []
+* Added Height (2) []
 
 CameraAimAssist::TargetMode:
-  Added Angle (0) []
-  Added Distance (1) []
+* Added Angle (0) []
+* Added Distance (1) []
 
 ClientCameraAimAssistPacketAction:
-  Added SetFromCameraPreset (0) [Sets aim-assist to use the settings from a CameraPresets aim_assist field.]
-  Added Clear (1) [Clears aim-assist settings.]
-  Added _count (2) []
+* Added SetFromCameraPreset (0) [Sets aim-assist to use the settings from a CameraPresets aim_assist field.]
+* Added Clear (1) [Clears aim-assist settings.]
+* Added _count (2) []
 
 CreativeItemCategory:
-  Added All (0) []
-  Added Construction (1) []
-  Added Nature (2) []
-  Added Equipment (3) []
-  Added Items (4) []
-  Added ItemCommandOnly (5) []
-  Added Undefined (6) []
-  Added NUM_CATEGORIES (7) []
-  
+* Added All (0) []
+* Added Construction (1) []
+* Added Nature (2) []
+* Added Equipment (3) []
+* Added Items (4) []
+* Added ItemCommandOnly (5) []
+* Added Undefined (6) []
+* Added NUM_CATEGORIES (7) []
+* 
+NoteBlockInstrument:
+* Added Harp (0) []
+* Added BassDrum (1) []
+* Added Snare (2) []
+* Added Hat (3) []
+* Added Bass (4) []
+* Added Flute (5) []
+* Added Bell (6) []
+* Added Guitar (7) []
+* Added Chime (8) []
+* Added Xylophone (9) []
+* Added IronXylophone (10) []
+* Added CowBell (11) []
+* Added Didgeridoo (12) []
+* Added Bit (13) []
+* Added Banjo (14) []
+* Added Pling (15) []
+* Added Zombie (16) []
+* Added Skeleton (17) []
+* Added Creeper (18) []
+* Added Dragon (19) []
+* Added WitherSkeleton (20) []
+* Added Piglin (21) []
+* Added _count (22) []
 
 ## Enum Changes
 
