@@ -1,0 +1,16 @@
+digraph "std::optional<struct CameraInstruction::SetInstruction::EntityOffsetOption>" {
+rankdir = LR
+68
+68 -> 69
+69 -> 70
+68 -> 71
+71 -> 82
+
+68 [label="std::optional<struct CameraInstruction::SetInstruction::EntityOffsetOption>",comment="name: \"std::optional<struct CameraInstruction::SetInstruction::EntityOffsetOption>\", typeName: \"\", id: 68, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+69 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 69, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
+70 [label="bool",comment="name: \"bool\", typeName: \"\", id: 70, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+71 [label="Value",comment="name: \"Value\", typeName: \"CameraInstruction::SetInstruction::EntityOffsetOption\", id: 71, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+82 [label="CameraInstruction::SetInstruction::EntityOffsetOption",comment="name: \"CameraInstruction::SetInstruction::EntityOffsetOption\", typeName: \"\", id: 82, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;70;82}
+
+}

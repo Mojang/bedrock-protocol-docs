@@ -38,31 +38,31 @@ rankdir = LR
 34 -> 35
 33 -> 36
 36 -> 37
-37 -> 48
-32 -> 49
-49 -> 50
-50 -> 51
-49 -> 52
+37 -> 50
+32 -> 51
+51 -> 52
 52 -> 53
-53 -> 67
-0 -> 68
-68 -> 69
-69 -> 70
-68 -> 71
+51 -> 54
+54 -> 55
+55 -> 69
+0 -> 70
+70 -> 71
 71 -> 72
-72 -> 73
-71 -> 74
+70 -> 73
+73 -> 74
 74 -> 75
-71 -> 76
+73 -> 76
 76 -> 77
-71 -> 78
+73 -> 78
 78 -> 79
-71 -> 80
+73 -> 80
 80 -> 81
-81 -> 82
-80 -> 83
+73 -> 82
+82 -> 83
 83 -> 84
-84 -> 85
+82 -> 85
+85 -> 86
+86 -> 87
 
 0 [label="ClientboundMapItemDataPacket",comment="name: \"ClientboundMapItemDataPacket\", typeName: \"\", id: 0, branchId: 67, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Map ID",comment="name: \"Map ID\", typeName: \"ActorUniqueID\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
@@ -102,31 +102,31 @@ rankdir = LR
 35 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 35, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 36 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 37 [label="MapItemTrackedActor ID",comment="name: \"MapItemTrackedActor ID\", typeName: \"MapItemTrackedActor::UniqueId\", id: 37, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-48 [label="MapItemTrackedActor::UniqueId",comment="name: \"MapItemTrackedActor::UniqueId\", typeName: \"\", id: 48, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-49 [label="Decoration List",comment="name: \"Decoration List\", typeName: \"\", id: 49, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-50 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 50, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-51 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 51, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-52 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 52, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-53 [label="Map Decoration",comment="name: \"Map Decoration\", typeName: \"MapDecoration\", id: 53, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-67 [label="MapDecoration",comment="name: \"MapDecoration\", typeName: \"\", id: 67, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-68 [label="Dependency on 'TextureUpdate Bit Field'",shape=note,comment="name: \"Dependency on 'TextureUpdate Bit Field'\", typeName: \"\", id: 68, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
-69 [label="If False",shape=diamond,comment="name: \"If False\", typeName: \"\", id: 69, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
-70 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 70, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-71 [label="If True",shape=diamond,comment="name: \"If True\", typeName: \"\", id: 71, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
-72 [label="Texture Width",comment="name: \"Texture Width\", typeName: \"\", id: 72, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-73 [label="varint",comment="name: \"varint\", typeName: \"\", id: 73, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-74 [label="Texture Height",comment="name: \"Texture Height\", typeName: \"\", id: 74, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+50 [label="MapItemTrackedActor::UniqueId",comment="name: \"MapItemTrackedActor::UniqueId\", typeName: \"\", id: 50, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+51 [label="Decoration List",comment="name: \"Decoration List\", typeName: \"\", id: 51, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+52 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 52, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+53 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 53, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+54 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 54, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+55 [label="Map Decoration",comment="name: \"Map Decoration\", typeName: \"MapDecoration\", id: 55, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+69 [label="MapDecoration",comment="name: \"MapDecoration\", typeName: \"\", id: 69, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+70 [label="Dependency on 'TextureUpdate Bit Field'",shape=note,comment="name: \"Dependency on 'TextureUpdate Bit Field'\", typeName: \"\", id: 70, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
+71 [label="If False",shape=diamond,comment="name: \"If False\", typeName: \"\", id: 71, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
+72 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 72, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+73 [label="If True",shape=diamond,comment="name: \"If True\", typeName: \"\", id: 73, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
+74 [label="Texture Width",comment="name: \"Texture Width\", typeName: \"\", id: 74, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 75 [label="varint",comment="name: \"varint\", typeName: \"\", id: 75, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-76 [label="X-TexCoordinate",comment="name: \"X-TexCoordinate\", typeName: \"\", id: 76, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+76 [label="Texture Height",comment="name: \"Texture Height\", typeName: \"\", id: 76, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 77 [label="varint",comment="name: \"varint\", typeName: \"\", id: 77, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-78 [label="Y-TexCoordinate",comment="name: \"Y-TexCoordinate\", typeName: \"\", id: 78, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+78 [label="X-TexCoordinate",comment="name: \"X-TexCoordinate\", typeName: \"\", id: 78, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 79 [label="varint",comment="name: \"varint\", typeName: \"\", id: 79, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-80 [label="Pixels",comment="name: \"Pixels\", typeName: \"\", id: 80, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-81 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 81, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-82 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 82, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-83 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 83, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-84 [label="Pixel",comment="name: \"Pixel\", typeName: \"\", id: 84, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-85 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 85, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2;4;6;8;10;13;17;20;22;25;28;31;35;48;51;67;70;73;75;77;79;82;85}
+80 [label="Y-TexCoordinate",comment="name: \"Y-TexCoordinate\", typeName: \"\", id: 80, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+81 [label="varint",comment="name: \"varint\", typeName: \"\", id: 81, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+82 [label="Pixels",comment="name: \"Pixels\", typeName: \"\", id: 82, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+83 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 83, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+84 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 84, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+85 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 85, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+86 [label="Pixel",comment="name: \"Pixel\", typeName: \"\", id: 86, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+87 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 87, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;6;8;10;13;17;20;22;25;28;31;35;50;53;69;72;75;77;79;81;84;87}
 
 }

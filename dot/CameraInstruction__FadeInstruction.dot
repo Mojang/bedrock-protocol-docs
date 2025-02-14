@@ -1,0 +1,16 @@
+digraph "CameraInstruction::FadeInstruction" {
+rankdir = LR
+95
+95 -> 96
+96 -> 109
+95 -> 110
+110 -> 123
+
+95 [label="CameraInstruction::FadeInstruction",comment="name: \"CameraInstruction::FadeInstruction\", typeName: \"\", id: 95, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+96 [label="Time",comment="name: \"Time\", typeName: \"std::optional<struct CameraInstruction::FadeInstruction::TimeOption>\", id: 96, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+109 [label="std::optional<struct CameraInstruction::FadeInstruction::TimeOption>",comment="name: \"std::optional<struct CameraInstruction::FadeInstruction::TimeOption>\", typeName: \"\", id: 109, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+110 [label="Color",comment="name: \"Color\", typeName: \"std::optional<struct CameraInstruction::FadeInstruction::ColorOption>\", id: 110, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+123 [label="std::optional<struct CameraInstruction::FadeInstruction::ColorOption>",comment="name: \"std::optional<struct CameraInstruction::FadeInstruction::ColorOption>\", typeName: \"\", id: 123, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;109;123}
+
+}

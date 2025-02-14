@@ -60,21 +60,21 @@ rankdir = LR
 123 -> 124
 122 -> 125
 125 -> 126
-126 -> 165
-0 -> 166
-166 -> 167
-167 -> 168
-166 -> 169
+126 -> 167
+0 -> 168
+168 -> 169
 169 -> 170
-170 -> 171
-169 -> 172
+168 -> 171
+171 -> 172
 172 -> 173
-0 -> 174
+171 -> 174
 174 -> 175
 0 -> 176
 176 -> 177
 0 -> 178
 178 -> 179
+0 -> 180
+180 -> 181
 
 0 [label="PlayerAuthInputPacket",comment="name: \"PlayerAuthInputPacket\", typeName: \"\", id: 0, branchId: 144, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Player Rotation",comment="name: \"Player Rotation\", typeName: \"Vec2\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"Orientation of the player at the start of the tick.\""];
@@ -136,21 +136,21 @@ rankdir = LR
 124 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 124, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 125 [label="If True",shape=diamond,comment="name: \"If True\", typeName: \"\", id: 125, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
 126 [label="Player Block Actions",comment="name: \"Player Block Actions\", typeName: \"PlayerBlockActions\", id: 126, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-165 [label="PlayerBlockActions",comment="name: \"PlayerBlockActions\", typeName: \"\", id: 165, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-166 [label="Dependency on 'IsInClientPredictedVehicle bit set'",shape=note,comment="name: \"Dependency on 'IsInClientPredictedVehicle bit set'\", typeName: \"\", id: 166, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
-167 [label="If False",shape=diamond,comment="name: \"If False\", typeName: \"\", id: 167, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
-168 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 168, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-169 [label="If True",shape=diamond,comment="name: \"If True\", typeName: \"\", id: 169, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
-170 [label="Vehicle Rotation",comment="name: \"Vehicle Rotation\", typeName: \"Vec2\", id: 170, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-171 [label="Vec2",comment="name: \"Vec2\", typeName: \"\", id: 171, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-172 [label="Client Predicted Vehicle",comment="name: \"Client Predicted Vehicle\", typeName: \"ActorUniqueID\", id: 172, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-173 [label="ActorUniqueID",comment="name: \"ActorUniqueID\", typeName: \"\", id: 173, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-174 [label="Analog MoveVector",comment="name: \"Analog MoveVector\", typeName: \"Vec2\", id: 174, branchId: 0, recurseId: -1, attributes: 256, notes: \"Same idea as move vector\""];
-175 [label="Vec2",comment="name: \"Vec2\", typeName: \"\", id: 175, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-176 [label="Camera Orientation",comment="name: \"Camera Orientation\", typeName: \"Vec3\", id: 176, branchId: 0, recurseId: -1, attributes: 256, notes: \"The world space unit vector that represents the camera's forward direction. This is used to transform movement to be camera relative.\""];
-177 [label="Vec3",comment="name: \"Vec3\", typeName: \"\", id: 177, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-178 [label="Raw MoveVector",comment="name: \"Raw MoveVector\", typeName: \"Vec2\", id: 178, branchId: 0, recurseId: -1, attributes: 256, notes: \"Same as move vector but it isn't affected by input permissions or sneak/fly speeds and it isn't normalized for analogue inputs.\""];
-179 [label="Vec2",comment="name: \"Vec2\", typeName: \"\", id: 179, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2;4;6;8;23;25;27;29;31;33;35;38;85;88;94;97;100;102;111;113;116;119;121;124;165;168;171;173;175;177;179}
+167 [label="PlayerBlockActions",comment="name: \"PlayerBlockActions\", typeName: \"\", id: 167, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+168 [label="Dependency on 'IsInClientPredictedVehicle bit set'",shape=note,comment="name: \"Dependency on 'IsInClientPredictedVehicle bit set'\", typeName: \"\", id: 168, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
+169 [label="If False",shape=diamond,comment="name: \"If False\", typeName: \"\", id: 169, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
+170 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 170, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+171 [label="If True",shape=diamond,comment="name: \"If True\", typeName: \"\", id: 171, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
+172 [label="Vehicle Rotation",comment="name: \"Vehicle Rotation\", typeName: \"Vec2\", id: 172, branchId: 0, recurseId: -1, attributes: 256, notes: \"The client predicted rotation of a client predicted vehicle at the end of the tick if the player is in control of one.\""];
+173 [label="Vec2",comment="name: \"Vec2\", typeName: \"\", id: 173, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+174 [label="Client Predicted Vehicle",comment="name: \"Client Predicted Vehicle\", typeName: \"ActorUniqueID\", id: 174, branchId: 0, recurseId: -1, attributes: 256, notes: \"The ID of the vehicle the client thinks they are in control of. Relevant for the server to disambiguate client predictions when switching between two vehicles.\""];
+175 [label="ActorUniqueID",comment="name: \"ActorUniqueID\", typeName: \"\", id: 175, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+176 [label="Analog MoveVector",comment="name: \"Analog MoveVector\", typeName: \"Vec2\", id: 176, branchId: 0, recurseId: -1, attributes: 256, notes: \"Same idea as move vector\""];
+177 [label="Vec2",comment="name: \"Vec2\", typeName: \"\", id: 177, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+178 [label="Camera Orientation",comment="name: \"Camera Orientation\", typeName: \"Vec3\", id: 178, branchId: 0, recurseId: -1, attributes: 256, notes: \"The world space unit vector that represents the camera's forward direction. This is used to transform movement to be camera relative.\""];
+179 [label="Vec3",comment="name: \"Vec3\", typeName: \"\", id: 179, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+180 [label="Raw MoveVector",comment="name: \"Raw MoveVector\", typeName: \"Vec2\", id: 180, branchId: 0, recurseId: -1, attributes: 256, notes: \"Same as move vector but it isn't affected by input permissions or sneak/fly speeds and it isn't normalized for analogue inputs.\""];
+181 [label="Vec2",comment="name: \"Vec2\", typeName: \"\", id: 181, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;6;8;23;25;27;29;31;33;35;38;85;88;94;97;100;102;111;113;116;119;121;124;167;170;173;175;177;179;181}
 
 }

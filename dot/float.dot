@@ -1,0 +1,12 @@
+digraph "float" {
+rankdir = LR
+74
+74 -> 75
+75 -> 76
+
+74 [label="float",comment="name: \"float\", typeName: \"\", id: 74, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+75 [label="Float",comment="name: \"Float\", typeName: \"\", id: 75, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+76 [label="float",comment="name: \"float\", typeName: \"\", id: 76, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;76}
+
+}

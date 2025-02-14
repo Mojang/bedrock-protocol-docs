@@ -1,0 +1,16 @@
+digraph "CameraInstruction::TargetInstruction" {
+rankdir = LR
+131
+131 -> 132
+132 -> 133
+131 -> 134
+134 -> 135
+
+131 [label="CameraInstruction::TargetInstruction",comment="name: \"CameraInstruction::TargetInstruction\", typeName: \"\", id: 131, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+132 [label="Target Center Offset",comment="name: \"Target Center Offset\", typeName: \"std::optional<class Vec3>\", id: 132, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+133 [label="std::optional<class Vec3>",comment="name: \"std::optional<class Vec3>\", typeName: \"\", id: 133, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+134 [label="Target Actor ID",comment="name: \"Target Actor ID\", typeName: \"\", id: 134, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+135 [label="int64",comment="name: \"int64\", typeName: \"\", id: 135, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;133;135}
+
+}

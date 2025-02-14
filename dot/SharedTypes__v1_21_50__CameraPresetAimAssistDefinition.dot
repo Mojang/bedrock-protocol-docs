@@ -1,0 +1,24 @@
+digraph "SharedTypes::v1_21_50::CameraPresetAimAssistDefinition" {
+rankdir = LR
+76
+76 -> 77
+77 -> 78
+76 -> 79
+79 -> 88
+76 -> 89
+89 -> 90
+76 -> 91
+91 -> 92
+
+76 [label="SharedTypes::v1_21_50::CameraPresetAimAssistDefinition",comment="name: \"SharedTypes::v1_21_50::CameraPresetAimAssistDefinition\", typeName: \"\", id: 76, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+77 [label="Preset Id",comment="name: \"Preset Id\", typeName: \"std::optional<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >\", id: 77, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+78 [label="std::optional<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >",comment="name: \"std::optional<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >\", typeName: \"\", id: 78, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+79 [label="Target Mode",comment="name: \"Target Mode\", typeName: \"std::optional<enum CameraAimAssist::TargetMode>\", id: 79, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+88 [label="std::optional<enum CameraAimAssist::TargetMode>",comment="name: \"std::optional<enum CameraAimAssist::TargetMode>\", typeName: \"\", id: 88, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+89 [label="View Angle",comment="name: \"View Angle\", typeName: \"std::optional<class Vec2>\", id: 89, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+90 [label="std::optional<class Vec2>",comment="name: \"std::optional<class Vec2>\", typeName: \"\", id: 90, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+91 [label="Distance",comment="name: \"Distance\", typeName: \"std::optional<float>\", id: 91, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+92 [label="std::optional<float>",comment="name: \"std::optional<float>\", typeName: \"\", id: 92, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;78;88;90;92}
+
+}
