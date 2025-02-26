@@ -1,0 +1,12 @@
+digraph "bool" {
+rankdir = LR
+36
+36 -> 37
+37 -> 38
+
+36 [label="bool",comment="name: \"bool\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+37 [label="Bool",comment="name: \"Bool\", typeName: \"\", id: 37, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+38 [label="bool",comment="name: \"bool\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;38}
+
+}
