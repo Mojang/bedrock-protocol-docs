@@ -28,22 +28,24 @@ LevelSoundEventV2
 * Update SetHudPacket fields to use enum varInt serialization
 * Modified the internal JSON structure used by ModalFormRequestPacket
 
+## Enum Changes
+
 ActorFlags:
-  Added BODY_ROTATION_AXIS_ALIGNED (120) []
-  Added COLLIDABLE (121) []
-  Added WASD_AIR_CONTROLLED (122) []
-  Displaced Count
+  * Added BODY_ROTATION_AXIS_ALIGNED (120) []
+  * Added COLLIDABLE (121) []
+  * Added WASD_AIR_CONTROLLED (122) []
+  * Displaced Count
 
 ## New Enums
 
 GraphicsMode:
- Added Simple (0)
- Added Fancy (1)
- Added Advanced (2)
- Added RayTraced(3)
+ * Added Simple (0)
+ * Added Fancy (1)
+ * Added Advanced (2)
+ * Added RayTraced(3)
 
 UpdateType:
- Added ClearOverrides (0)
- Added RemoveOverride (1)
- Added SetIntOverride (2)
- Added SetFloatOverride (3)
+ * Added ClearOverrides (0)
+ * Added RemoveOverride (1)
+ * Added SetIntOverride (2)
+ * Added SetFloatOverride (3)
