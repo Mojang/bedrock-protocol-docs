@@ -1,0 +1,38 @@
+digraph "PlayerUpdateEntityOverridesPacket" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+0 -> 5
+5 -> 6
+0 -> 7
+7 -> 8
+8 -> 9
+9 -> 10
+7 -> 11
+11 -> 12
+12 -> 13
+7 -> 14
+14 -> 15
+
+0 [label="PlayerUpdateEntityOverridesPacket",comment="name: \"PlayerUpdateEntityOverridesPacket\", typeName: \"\", id: 0, branchId: 325, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Target ID",comment="name: \"Target ID\", typeName: \"ActorUniqueID\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+2 [label="ActorUniqueID",comment="name: \"ActorUniqueID\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="Property Index",comment="name: \"Property Index\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+5 [label="Update Type",comment="name: \"Update Type\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+6 [label="byte",comment="name: \"byte\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+7 [label="Dependency on 'Value Type'",shape=note,comment="name: \"Dependency on 'Value Type'\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
+8 [label="Set Int Override",shape=diamond,comment="name: \"Set Int Override\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
+9 [label="Int Value",comment="name: \"Int Value\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+10 [label="int",comment="name: \"int\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+11 [label="Set Float Override",shape=diamond,comment="name: \"Set Float Override\", typeName: \"\", id: 11, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
+12 [label="Float Value",comment="name: \"Float Value\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+13 [label="float",comment="name: \"float\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+14 [label="Default",shape=diamond,comment="name: \"Default\", typeName: \"\", id: 14, branchId: 2, recurseId: -1, attributes: 4, notes: \"\""];
+15 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;6;10;13;15}
+
+}

@@ -9,6 +9,8 @@ rankdir = LR
 18 -> 32
 0 -> 33
 33 -> 34
+0 -> 35
+35 -> 39
 
 0 [label="ClientMovementPredictionSyncPacket",comment="name: \"ClientMovementPredictionSyncPacket\", typeName: \"\", id: 0, branchId: 322, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Actor Data Flag",comment="name: \"Actor Data Flag\", typeName: \"ActorDataFlagComponent\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
@@ -19,6 +21,8 @@ rankdir = LR
 32 [label="MovementAttributesComponent",comment="name: \"MovementAttributesComponent\", typeName: \"\", id: 32, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 33 [label="Actor Unique ID",comment="name: \"Actor Unique ID\", typeName: \"ActorUniqueID\", id: 33, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 34 [label="ActorUniqueID",comment="name: \"ActorUniqueID\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;8;17;32;34}
+35 [label="Actor Flying State",comment="name: \"Actor Flying State\", typeName: \"bool\", id: 35, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+39 [label="bool",comment="name: \"bool\", typeName: \"\", id: 39, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;8;17;32;34;39}
 
 }

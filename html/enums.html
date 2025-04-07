@@ -1142,8 +1142,17 @@
 </tr><tr><td>RENDERS_WHEN_INVISIBLE</td>
 <td>119</td>
 <td></td>
-</tr><tr><td>Count</td>
+</tr><tr><td>BODY_ROTATION_AXIS_ALIGNED</td>
 <td>120</td>
+<td></td>
+</tr><tr><td>COLLIDABLE</td>
+<td>121</td>
+<td></td>
+</tr><tr><td>WASD_AIR_CONTROLLED</td>
+<td>122</td>
+<td></td>
+</tr><tr><td>Count</td>
+<td>123</td>
 <td></td>
 </tr></table></td>
 </tr><tr><td>ActorLinkType</td>
@@ -3547,6 +3556,20 @@
 <td>6</td>
 <td></td>
 </tr></table></td>
+</tr><tr><td>GraphicsMode</td>
+<td><table><colgroup><col width="40%"><col width="10%"><col width="50%"></colgroup><tr><td>Simple</td>
+<td>0</td>
+<td></td>
+</tr><tr><td>Fancy</td>
+<td>1</td>
+<td></td>
+</tr><tr><td>Advanced</td>
+<td>2</td>
+<td></td>
+</tr><tr><td>RayTraced</td>
+<td>3</td>
+<td></td>
+</tr></table></td>
 </tr><tr><td>HudElement</td>
 <td><table><colgroup><col width="40%"><col width="10%"><col width="50%"></colgroup><tr><td>PaperDoll</td>
 <td>0</td>
@@ -5040,7 +5063,7 @@
 </tr><tr><td>TickSync_deprecated</td>
 <td>23</td>
 <td></td>
-</tr><tr><td>LevelSoundEventV1</td>
+</tr><tr><td>LevelSoundEventV1_DEPRECATED</td>
 <td>24</td>
 <td></td>
 </tr><tr><td>LevelEvent</td>
@@ -5328,7 +5351,7 @@
 </tr><tr><td>AvailableActorIDList</td>
 <td>119</td>
 <td></td>
-</tr><tr><td>LevelSoundEventV2</td>
+</tr><tr><td>LevelSoundEventV2_DEPRECATED</td>
 <td>120</td>
 <td></td>
 </tr><tr><td>NetworkChunkPublisherUpdate</td>
@@ -5643,8 +5666,17 @@
 </tr><tr><td>ClientMovementPredictionSyncPacket</td>
 <td>322</td>
 <td></td>
-</tr><tr><td>EndId</td>
+</tr><tr><td>UpdateClientOptions</td>
 <td>323</td>
+<td></td>
+</tr><tr><td>PlayerVideoCapturePacket</td>
+<td>324</td>
+<td></td>
+</tr><tr><td>PlayerUpdateEntityOverridesPacket</td>
+<td>325</td>
+<td></td>
+</tr><tr><td>EndId</td>
+<td>326</td>
 <td></td>
 </tr></table></td>
 </tr><tr><td>Mirror</td>
@@ -8632,6 +8664,20 @@
 <td>2</td>
 <td></td>
 </tr><tr><td>Count</td>
+<td>3</td>
+<td></td>
+</tr></table></td>
+</tr><tr><td>UpdateType</td>
+<td><table><colgroup><col width="40%"><col width="10%"><col width="50%"></colgroup><tr><td>ClearOverrides</td>
+<td>0</td>
+<td></td>
+</tr><tr><td>RemoveOverride</td>
+<td>1</td>
+<td></td>
+</tr><tr><td>SetIntOverride</td>
+<td>2</td>
+<td></td>
+</tr><tr><td>SetFloatOverride</td>
 <td>3</td>
 <td></td>
 </tr></table></td>
