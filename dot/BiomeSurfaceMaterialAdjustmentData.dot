@@ -1,0 +1,20 @@
+digraph "BiomeSurfaceMaterialAdjustmentData" {
+rankdir = LR
+172
+172 -> 173
+173 -> 174
+174 -> 175
+173 -> 176
+176 -> 177
+177 -> 208
+
+172 [label="BiomeSurfaceMaterialAdjustmentData",comment="name: \"BiomeSurfaceMaterialAdjustmentData\", typeName: \"\", id: 172, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+173 [label="adjustment",comment="name: \"adjustment\", typeName: \"\", id: 173, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+174 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 174, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+175 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 175, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+176 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 176, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+177 [label="adjustments",comment="name: \"adjustments\", typeName: \"BiomeElementData\", id: 177, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+208 [label="BiomeElementData",comment="name: \"BiomeElementData\", typeName: \"\", id: 208, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;175;208}
+
+}

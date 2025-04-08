@@ -1,0 +1,60 @@
+digraph "BiomeDefinitionData" {
+rankdir = LR
+11
+11 -> 12
+12 -> 18
+11 -> 19
+19 -> 20
+11 -> 21
+21 -> 22
+11 -> 23
+23 -> 24
+11 -> 25
+25 -> 26
+11 -> 27
+27 -> 28
+11 -> 29
+29 -> 30
+11 -> 31
+31 -> 32
+11 -> 33
+33 -> 34
+11 -> 35
+35 -> 36
+11 -> 37
+37 -> 38
+11 -> 39
+39 -> 52
+11 -> 53
+53 -> 370
+
+11 [label="BiomeDefinitionData",comment="name: \"BiomeDefinitionData\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+12 [label="id",comment="name: \"id\", typeName: \"std::optional<unsigned short>\", id: 12, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+18 [label="std::optional<unsigned short>",comment="name: \"std::optional<unsigned short>\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+19 [label="temperature",comment="name: \"temperature\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+20 [label="float",comment="name: \"float\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+21 [label="downfall",comment="name: \"downfall\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+22 [label="float",comment="name: \"float\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+23 [label="red spore desnity",comment="name: \"red spore desnity\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+24 [label="float",comment="name: \"float\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+25 [label="blue spore density",comment="name: \"blue spore density\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+26 [label="float",comment="name: \"float\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+27 [label="ash density",comment="name: \"ash density\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+28 [label="float",comment="name: \"float\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+29 [label="white ash density",comment="name: \"white ash density\", typeName: \"\", id: 29, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+30 [label="float",comment="name: \"float\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+31 [label="depth",comment="name: \"depth\", typeName: \"\", id: 31, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+32 [label="float",comment="name: \"float\", typeName: \"\", id: 32, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+33 [label="scale",comment="name: \"scale\", typeName: \"\", id: 33, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+34 [label="float",comment="name: \"float\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+35 [label="map water color ARGB",comment="name: \"map water color ARGB\", typeName: \"\", id: 35, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+36 [label="int",comment="name: \"int\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+37 [label="rain",comment="name: \"rain\", typeName: \"\", id: 37, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+38 [label="bool",comment="name: \"bool\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+39 [label="tags",comment="name: \"tags\", typeName: \"std::optional<struct BiomeTagsData>\", id: 39, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+52 [label="std::optional<struct BiomeTagsData>",comment="name: \"std::optional<struct BiomeTagsData>\", typeName: \"\", id: 52, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+53 [label="chunk gen data",comment="name: \"chunk gen data\", typeName: \"std::optional<struct BiomeDefinitionChunkGenData>\", id: 53, branchId: 0, recurseId: -1, attributes: 256, notes: \"Only used with client-side chunk generation\""];
+370 [label="std::optional<struct BiomeDefinitionChunkGenData>",comment="name: \"std::optional<struct BiomeDefinitionChunkGenData>\", typeName: \"\", id: 370, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;18;20;22;24;26;28;30;32;34;36;38;52;370}
+
+}

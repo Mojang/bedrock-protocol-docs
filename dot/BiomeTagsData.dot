@@ -1,0 +1,20 @@
+digraph "BiomeTagsData" {
+rankdir = LR
+44
+44 -> 45
+45 -> 46
+46 -> 47
+45 -> 48
+48 -> 49
+49 -> 50
+
+44 [label="BiomeTagsData",comment="name: \"BiomeTagsData\", typeName: \"\", id: 44, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+45 [label="tag",comment="name: \"tag\", typeName: \"\", id: 45, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+46 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 46, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+47 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 47, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+48 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 48, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+49 [label="tags",comment="name: \"tags\", typeName: \"short\", id: 49, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+50 [label="short",comment="name: \"short\", typeName: \"\", id: 50, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;47;50}
+
+}

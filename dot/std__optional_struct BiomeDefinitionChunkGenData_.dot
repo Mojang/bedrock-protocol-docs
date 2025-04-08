@@ -1,0 +1,16 @@
+digraph "std::optional<struct BiomeDefinitionChunkGenData>" {
+rankdir = LR
+54
+54 -> 55
+55 -> 56
+54 -> 57
+57 -> 369
+
+54 [label="std::optional<struct BiomeDefinitionChunkGenData>",comment="name: \"std::optional<struct BiomeDefinitionChunkGenData>\", typeName: \"\", id: 54, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+55 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 55, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
+56 [label="bool",comment="name: \"bool\", typeName: \"\", id: 56, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+57 [label="Value",comment="name: \"Value\", typeName: \"BiomeDefinitionChunkGenData\", id: 57, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+369 [label="BiomeDefinitionChunkGenData",comment="name: \"BiomeDefinitionChunkGenData\", typeName: \"\", id: 369, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;56;369}
+
+}

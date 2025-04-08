@@ -1,0 +1,16 @@
+digraph "std::optional<struct BiomeLegacyWorldGenRulesData>" {
+rankdir = LR
+356
+356 -> 357
+357 -> 358
+356 -> 359
+359 -> 367
+
+356 [label="std::optional<struct BiomeLegacyWorldGenRulesData>",comment="name: \"std::optional<struct BiomeLegacyWorldGenRulesData>\", typeName: \"\", id: 356, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+357 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 357, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
+358 [label="bool",comment="name: \"bool\", typeName: \"\", id: 358, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+359 [label="Value",comment="name: \"Value\", typeName: \"BiomeLegacyWorldGenRulesData\", id: 359, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+367 [label="BiomeLegacyWorldGenRulesData",comment="name: \"BiomeLegacyWorldGenRulesData\", typeName: \"\", id: 367, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;358;367}
+
+}

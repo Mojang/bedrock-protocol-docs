@@ -1,0 +1,48 @@
+digraph "BiomeScatterParamData" {
+rankdir = LR
+96
+96 -> 97
+97 -> 98
+98 -> 99
+97 -> 100
+100 -> 101
+101 -> 117
+96 -> 118
+118 -> 119
+96 -> 120
+120 -> 121
+96 -> 122
+122 -> 123
+96 -> 124
+124 -> 125
+96 -> 126
+126 -> 127
+96 -> 128
+128 -> 129
+96 -> 130
+130 -> 131
+
+96 [label="BiomeScatterParamData",comment="name: \"BiomeScatterParamData\", typeName: \"\", id: 96, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+97 [label="coordinate",comment="name: \"coordinate\", typeName: \"\", id: 97, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+98 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 98, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+99 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 99, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+100 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 100, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+101 [label="coordinates",comment="name: \"coordinates\", typeName: \"BiomeCoordinateData\", id: 101, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+117 [label="BiomeCoordinateData",comment="name: \"BiomeCoordinateData\", typeName: \"\", id: 117, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+118 [label="eval order",comment="name: \"eval order\", typeName: \"\", id: 118, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+119 [label="varint",comment="name: \"varint\", typeName: \"\", id: 119, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+120 [label="chance percent type",comment="name: \"chance percent type\", typeName: \"\", id: 120, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+121 [label="varint",comment="name: \"varint\", typeName: \"\", id: 121, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+122 [label="chance percent",comment="name: \"chance percent\", typeName: \"short\", id: 122, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+123 [label="short",comment="name: \"short\", typeName: \"\", id: 123, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+124 [label="chance numerator",comment="name: \"chance numerator\", typeName: \"\", id: 124, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+125 [label="int",comment="name: \"int\", typeName: \"\", id: 125, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+126 [label="chance denominator",comment="name: \"chance denominator\", typeName: \"\", id: 126, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+127 [label="int",comment="name: \"int\", typeName: \"\", id: 127, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+128 [label="iterations type",comment="name: \"iterations type\", typeName: \"\", id: 128, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+129 [label="varint",comment="name: \"varint\", typeName: \"\", id: 129, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+130 [label="iterations",comment="name: \"iterations\", typeName: \"short\", id: 130, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+131 [label="short",comment="name: \"short\", typeName: \"\", id: 131, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;99;117;119;121;123;125;127;129;131}
+
+}

@@ -4,13 +4,13 @@ rankdir = LR
 6 -> 7
 7 -> 8
 6 -> 9
-9 -> 39
+9 -> 36
 
 6 [label="SharedTypes::v1_21_50::CameraAimAssistCategoryDefinition",comment="name: \"SharedTypes::v1_21_50::CameraAimAssistCategoryDefinition\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 7 [label="Name",comment="name: \"Name\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 8 [label="string",comment="name: \"string\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 9 [label="Priorities",comment="name: \"Priorities\", typeName: \"SharedTypes::v1_21_50::CameraAimAssistCategoryPriorities\", id: 9, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-39 [label="SharedTypes::v1_21_50::CameraAimAssistCategoryPriorities",comment="name: \"SharedTypes::v1_21_50::CameraAimAssistCategoryPriorities\", typeName: \"\", id: 39, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;8;39}
+36 [label="SharedTypes::v1_21_50::CameraAimAssistCategoryPriorities",comment="name: \"SharedTypes::v1_21_50::CameraAimAssistCategoryPriorities\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;8;36}
 
 }

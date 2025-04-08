@@ -1,0 +1,16 @@
+digraph "BiomeWeightedData" {
+rankdir = LR
+277
+277 -> 278
+278 -> 279
+277 -> 280
+280 -> 281
+
+277 [label="BiomeWeightedData",comment="name: \"BiomeWeightedData\", typeName: \"\", id: 277, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+278 [label="biome",comment="name: \"biome\", typeName: \"short\", id: 278, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+279 [label="short",comment="name: \"short\", typeName: \"\", id: 279, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+280 [label="weight",comment="name: \"weight\", typeName: \"\", id: 280, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+281 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 281, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;279;281}
+
+}

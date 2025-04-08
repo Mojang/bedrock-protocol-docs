@@ -1,0 +1,12 @@
+digraph "short" {
+rankdir = LR
+6
+6 -> 7
+7 -> 8
+
+6 [label="short",comment="name: \"short\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="Unsigned Short",comment="name: \"Unsigned Short\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;8}
+
+}

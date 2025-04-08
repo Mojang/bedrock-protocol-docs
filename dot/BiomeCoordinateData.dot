@@ -1,0 +1,36 @@
+digraph "BiomeCoordinateData" {
+rankdir = LR
+102
+102 -> 103
+103 -> 104
+102 -> 105
+105 -> 106
+102 -> 107
+107 -> 108
+102 -> 109
+109 -> 110
+102 -> 111
+111 -> 112
+102 -> 113
+113 -> 114
+102 -> 115
+115 -> 116
+
+102 [label="BiomeCoordinateData",comment="name: \"BiomeCoordinateData\", typeName: \"\", id: 102, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+103 [label="min value type",comment="name: \"min value type\", typeName: \"\", id: 103, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+104 [label="varint",comment="name: \"varint\", typeName: \"\", id: 104, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+105 [label="min value",comment="name: \"min value\", typeName: \"short\", id: 105, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+106 [label="short",comment="name: \"short\", typeName: \"\", id: 106, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+107 [label="max value type",comment="name: \"max value type\", typeName: \"\", id: 107, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+108 [label="varint",comment="name: \"varint\", typeName: \"\", id: 108, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+109 [label="max value",comment="name: \"max value\", typeName: \"short\", id: 109, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+110 [label="short",comment="name: \"short\", typeName: \"\", id: 110, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+111 [label="grid offset",comment="name: \"grid offset\", typeName: \"\", id: 111, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+112 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 112, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+113 [label="grid step size",comment="name: \"grid step size\", typeName: \"\", id: 113, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+114 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 114, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+115 [label="distribution",comment="name: \"distribution\", typeName: \"\", id: 115, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+116 [label="varint",comment="name: \"varint\", typeName: \"\", id: 116, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;104;106;108;110;112;114;116}
+
+}

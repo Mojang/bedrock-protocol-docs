@@ -1,0 +1,12 @@
+digraph "std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >" {
+rankdir = LR
+379
+379 -> 380
+380 -> 381
+
+379 [label="std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >",comment="name: \"std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >\", typeName: \"\", id: 379, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+380 [label="String",comment="name: \"String\", typeName: \"\", id: 380, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+381 [label="string",comment="name: \"string\", typeName: \"\", id: 381, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;381}
+
+}
