@@ -3,10 +3,26 @@ rankdir = LR
 0
 0 -> 1
 1 -> 2
+2 -> 3
+1 -> 4
+4 -> 5
+5 -> 9
+4 -> 10
+10 -> 371
+0 -> 372
+372 -> 383
 
 0 [label="BiomeDefinitionListPacket",comment="name: \"BiomeDefinitionListPacket\", typeName: \"\", id: 0, branchId: 122, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Biome Definition Data",comment="name: \"Biome Definition Data\", typeName: \"CompoundTag\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"CompoundTag containing one object per biome definition: 		BiomeName: { 		temperature (float), 		downfall(float), 		red_spores (float), 		blue_spores (float), 		ash (float), 		white_ash (float), 		depth (float), 		height (float), 		waterColorR (float), 		waterColorG (float), 		waterColorB (float), 		waterColorA (float), 		waterTransparency (float), 		rain (bool), 		tags (ListTag), 		name_hash (std::string)}\""];
-2 [label="CompoundTag",comment="name: \"CompoundTag\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2}
+1 [label="Map of Biome names to data",comment="name: \"Map of Biome names to data\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+2 [label="Map Size",comment="name: \"Map Size\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+4 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+5 [label="String Index to Biome name",comment="name: \"String Index to Biome name\", typeName: \"short\", id: 5, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+9 [label="short",comment="name: \"short\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+10 [label="Biome Definition Data",comment="name: \"Biome Definition Data\", typeName: \"BiomeDefinitionData\", id: 10, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+371 [label="BiomeDefinitionData",comment="name: \"BiomeDefinitionData\", typeName: \"\", id: 371, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+372 [label="String list",comment="name: \"String list\", typeName: \"BiomeStringList\", id: 372, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+383 [label="BiomeStringList",comment="name: \"BiomeStringList\", typeName: \"\", id: 383, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3;9;371;383}
 
 }

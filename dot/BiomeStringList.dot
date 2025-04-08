@@ -1,0 +1,20 @@
+digraph "BiomeStringList" {
+rankdir = LR
+373
+373 -> 374
+374 -> 375
+375 -> 376
+374 -> 377
+377 -> 378
+378 -> 382
+
+373 [label="BiomeStringList",comment="name: \"BiomeStringList\", typeName: \"\", id: 373, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+374 [label="string",comment="name: \"string\", typeName: \"\", id: 374, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+375 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 375, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+376 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 376, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+377 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 377, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+378 [label="all biome strings",comment="name: \"all biome strings\", typeName: \"std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >\", id: 378, branchId: 0, recurseId: -1, attributes: 256, notes: \"List of strings referenced wherever a string index is used under BiomeDefinitionData\""];
+382 [label="std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >",comment="name: \"std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >\", typeName: \"\", id: 382, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;376;382}
+
+}

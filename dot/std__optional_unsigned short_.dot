@@ -1,0 +1,16 @@
+digraph "std::optional<unsigned short>" {
+rankdir = LR
+13
+13 -> 14
+14 -> 15
+13 -> 16
+16 -> 17
+
+13 [label="std::optional<unsigned short>",comment="name: \"std::optional<unsigned short>\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+14 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
+15 [label="bool",comment="name: \"bool\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+16 [label="Value",comment="name: \"Value\", typeName: \"short\", id: 16, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+17 [label="short",comment="name: \"short\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;15;17}
+
+}

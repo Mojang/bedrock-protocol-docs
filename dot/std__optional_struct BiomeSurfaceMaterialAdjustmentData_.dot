@@ -1,0 +1,16 @@
+digraph "std::optional<struct BiomeSurfaceMaterialAdjustmentData>" {
+rankdir = LR
+168
+168 -> 169
+169 -> 170
+168 -> 171
+171 -> 209
+
+168 [label="std::optional<struct BiomeSurfaceMaterialAdjustmentData>",comment="name: \"std::optional<struct BiomeSurfaceMaterialAdjustmentData>\", typeName: \"\", id: 168, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+169 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 169, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
+170 [label="bool",comment="name: \"bool\", typeName: \"\", id: 170, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+171 [label="Value",comment="name: \"Value\", typeName: \"BiomeSurfaceMaterialAdjustmentData\", id: 171, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+209 [label="BiomeSurfaceMaterialAdjustmentData",comment="name: \"BiomeSurfaceMaterialAdjustmentData\", typeName: \"\", id: 209, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;170;209}
+
+}

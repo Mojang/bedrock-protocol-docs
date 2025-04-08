@@ -6,15 +6,15 @@ rankdir = LR
 2 -> 3
 1 -> 4
 4 -> 5
-5 -> 40
-0 -> 41
+5 -> 37
+0 -> 38
+38 -> 39
+39 -> 40
+38 -> 41
 41 -> 42
-42 -> 43
-41 -> 44
-44 -> 45
-45 -> 73
-0 -> 74
-74 -> 75
+42 -> 70
+0 -> 71
+71 -> 72
 
 0 [label="CameraAimAssistPresetsPacket",comment="name: \"CameraAimAssistPresetsPacket\", typeName: \"\", id: 0, branchId: 320, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Camera Aim-Assist Categories",comment="name: \"Camera Aim-Assist Categories\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
@@ -22,15 +22,15 @@ rankdir = LR
 3 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 4 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 5 [label="Category",comment="name: \"Category\", typeName: \"SharedTypes::v1_21_50::CameraAimAssistCategoryDefinition\", id: 5, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-40 [label="SharedTypes::v1_21_50::CameraAimAssistCategoryDefinition",comment="name: \"SharedTypes::v1_21_50::CameraAimAssistCategoryDefinition\", typeName: \"\", id: 40, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-41 [label="Camera Aim-Assist Presets",comment="name: \"Camera Aim-Assist Presets\", typeName: \"\", id: 41, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-42 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 42, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-43 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 43, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-44 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 44, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-45 [label="Preset",comment="name: \"Preset\", typeName: \"SharedTypes::v1_21_50::CameraAimAssistPresetDefinition\", id: 45, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-73 [label="SharedTypes::v1_21_50::CameraAimAssistPresetDefinition",comment="name: \"SharedTypes::v1_21_50::CameraAimAssistPresetDefinition\", typeName: \"\", id: 73, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-74 [label="Operation",comment="name: \"Operation\", typeName: \"\", id: 74, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-75 [label="byte",comment="name: \"byte\", typeName: \"\", id: 75, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;3;40;43;73;75}
+37 [label="SharedTypes::v1_21_50::CameraAimAssistCategoryDefinition",comment="name: \"SharedTypes::v1_21_50::CameraAimAssistCategoryDefinition\", typeName: \"\", id: 37, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+38 [label="Camera Aim-Assist Presets",comment="name: \"Camera Aim-Assist Presets\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+39 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 39, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+40 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 40, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+41 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 41, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+42 [label="Preset",comment="name: \"Preset\", typeName: \"SharedTypes::v1_21_50::CameraAimAssistPresetDefinition\", id: 42, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+70 [label="SharedTypes::v1_21_50::CameraAimAssistPresetDefinition",comment="name: \"SharedTypes::v1_21_50::CameraAimAssistPresetDefinition\", typeName: \"\", id: 70, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+71 [label="Operation",comment="name: \"Operation\", typeName: \"\", id: 71, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+72 [label="byte",comment="name: \"byte\", typeName: \"\", id: 72, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3;37;40;70;72}
 
 }

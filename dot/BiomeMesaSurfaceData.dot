@@ -1,0 +1,24 @@
+digraph "BiomeMesaSurfaceData" {
+rankdir = LR
+229
+229 -> 230
+230 -> 231
+229 -> 232
+232 -> 233
+229 -> 234
+234 -> 235
+229 -> 236
+236 -> 237
+
+229 [label="BiomeMesaSurfaceData",comment="name: \"BiomeMesaSurfaceData\", typeName: \"\", id: 229, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+230 [label="clay material",comment="name: \"clay material\", typeName: \"\", id: 230, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+231 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 231, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+232 [label="hard clay material",comment="name: \"hard clay material\", typeName: \"\", id: 232, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+233 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 233, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+234 [label="bryce pillars",comment="name: \"bryce pillars\", typeName: \"\", id: 234, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+235 [label="bool",comment="name: \"bool\", typeName: \"\", id: 235, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+236 [label="has forest",comment="name: \"has forest\", typeName: \"\", id: 236, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+237 [label="bool",comment="name: \"bool\", typeName: \"\", id: 237, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;231;233;235;237}
+
+}

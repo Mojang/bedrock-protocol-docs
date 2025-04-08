@@ -1,0 +1,16 @@
+digraph "std::optional<struct BiomeOverworldGenRulesData>" {
+rankdir = LR
+267
+267 -> 268
+268 -> 269
+267 -> 270
+270 -> 335
+
+267 [label="std::optional<struct BiomeOverworldGenRulesData>",comment="name: \"std::optional<struct BiomeOverworldGenRulesData>\", typeName: \"\", id: 267, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+268 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 268, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
+269 [label="bool",comment="name: \"bool\", typeName: \"\", id: 269, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+270 [label="Value",comment="name: \"Value\", typeName: \"BiomeOverworldGenRulesData\", id: 270, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+335 [label="BiomeOverworldGenRulesData",comment="name: \"BiomeOverworldGenRulesData\", typeName: \"\", id: 335, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;269;335}
+
+}

@@ -51,13 +51,10 @@
 <td>A packet sent to the server when deal with picking up an item off the ground in the world. </td>
 </tr><tr><td>18</td>
 <td><a href = "MoveActorAbsolutePacket.html">Move Actor Absolute</a></td>
-<td>This is used primarily for motion updates of all actors from server to client.<br>    In legacy client authoritative movement mode it is also used for the client to position the vehicle they are in control of.<br>    See Player Auth Input for the equivalent in the latest protocol.</td>
+<td>This is used primarily for motion updates of all actors from server to client.<br></td>
 </tr><tr><td>19</td>
 <td><a href = "MovePlayerPacket.html">Move Player</a></td>
-<td>     This has different uses depending on the movement mode, see ServerAuthMovementMode enum documentation.<br>     In legacy client authoritative mode the client sends this to the server as the primary way of informing them of motion and input.<br>     It is sent when they have moved enough to warrant sending it, or every tick if they are in a vehicle.<br>     When in a vehicle they will also be sending a MoveActorAbsolutePacket for the vehicle they are controlling if it is client predicted.<br>     <br>     In client authoritative and server authoritative movement modes it is only intended as a client-bound packet.<br>     It forces the player to a specified position with slightly different behavior depending on the position mode.<br>     For similar packets that move the player, see also:<br>     - CorrectPlayerMovePredictionPacket (server authoritative)<br>     - SetActorMotionPacket<br>    </td>
-</tr><tr><td>20</td>
-<td><a href = "PassengerJumpPacket.html">Rider Jump</a></td>
-<td>Legacy client authoritative movement only. Sent for jumping in horses when releasing the spacebar. Specifically if the entity has `ActorFlags::CAN_POWER_JUMP`, `ActorFlags::WASD_CONTROLLED` and the `minecraft:horse.jump_strength` attribute.<br>    In server authoritative movement this is not explicitly specified but can be simulated using information from Player Auth Input, see that packet for more details.</td>
+<td>     For client authoritative and server authoritative movement modes, it is only intended as a client-bound packet.<br>     It forces the player to a specified position with slightly different behavior depending on the position mode.<br>     For similar packets that move the player, see also:<br>     - CorrectPlayerMovePredictionPacket (server authoritative)<br>     - SetActorMotionPacket<br>    </td>
 </tr><tr><td>21</td>
 <td><a href = "UpdateBlockPacket.html">Update Block</a></td>
 <td>Occasional packets sent from server when blocks update or are ticked. (For example, when digging.) </td>
@@ -120,7 +117,7 @@
 <td>When a player logs in or the SetWorldSpawnCommand is used this is sent from the server to the client. </td>
 </tr><tr><td>44</td>
 <td><a href = "AnimatePacket.html">Animate Actor</a></td>
-<td>Combination of server bound and client bound packets to trigger animations.<br>  In legacy client authoritative movement this is where boat paddle inputs arrive.<br>  See Player Auth Input for documentation on how to compute equivalents to Action::RowRight and Action::RowLeft</td>
+<td>Combination of server bound and client bound packets to trigger animations.<br></td>
 </tr><tr><td>45</td>
 <td><a href = "RespawnPacket.html">Respawn</a></td>
 <td>Sent as a handshake between the client and server to respawn the player. For some reason each respawn 1 packet is sent from the client </td>
@@ -151,9 +148,6 @@
 </tr><tr><td>56</td>
 <td><a href = "BlockActorDataPacket.html">Block Actor Data</a></td>
 <td>Sends the entire user data compound tag and the block position to the client. </td>
-</tr><tr><td>57</td>
-<td><a href = "PlayerInputPacket.html">Player Input</a></td>
-<td>Sent only to the server when using legacy client authoritative movement, see ServerAuthMovementMode documentation.  This is sent every tick along with MovePlayerPacket when the client is in control of a vehicle.</td>
 </tr><tr><td>58</td>
 <td><a href = "LevelChunkPacket.html">Level Chunk Packet</a></td>
 <td>Used to start a chunk transaction.Used to start a Chunk Transaction - sends a list of hashes for the chunks it needs to send, followed by border blocks, block entities, and biomes. </td>
@@ -390,7 +384,7 @@
 <td>Sends tunable options from host to client (compression threshold and algorithm)</td>
 </tr><tr><td>144</td>
 <td><a href = "PlayerAuthInputPacket.html">Player Auth Input</a></td>
-<td>Added for Server Authoritative Movement to sync all player input with the server. See ServerAuthMovementMode for a description of the movement modes.<br>  This takes the place of the following packets from legacy client authoritative movement:<br>  - PlayerActionPacket (one-off actions)<br>  - PlayerInputPacket (vehicle control)<br>  - MovePlayerPacket (primary input)<br>  - MoveActorAbsolutePacket (positioning client authoritative vehicles)<br>  - PassengerJumpPacket (horse jumping)<br>  - AnimatePacket (boat row input and animation)<br>    The jump scale (progress bar for horse jumping) is computed like this:<br>  - Jump ticks start accumulating when `InputData::Jumping` is set in `PlayerAuthInputPacket`<br>  - Every following tick that `InputData::Jumping` is still set the jump ticks increase by 1<br>  - The first tick that releases `InputData::Jumping` expects the jump to trigger, producing the same jump scale as was in `PassengerJumpPacket` using this formula<br>  floor((ticks < 10.0f ? ticks x 0.1f : 0.8f + (2.0f / (ticks - 9.0f)) x 0.1f) x 100.0)<br>  <br>  Boat paddling determines the ActorDataIDs::ROW_TIME_LEFT and ROW_TIME_RIGHT like this:<br>  Every tick the row time is incremented on that side if it is paddling.<br>  Paddle input is determined in two different ways depending on input mode. 'Paddle force' mode is used if:<br>  - `PlayerAuthInputPacket::mInputMode` is anything other than `InputMode::Touch`<br>  - `PlayerAuthInputPacket::mPlayMode` is `ClientPlayMode::Reality` (VR)<br>  - `PlayerAuthInputPacket::mNewInteractionModel` is `NewInteractionModel::Touch` or `NewInteractionModel::Classic`<br>  <br>  <b>Paddle force mode</b><br>  <br>  Paddle force uses the `PlayerAuthInputPacket::mMove` direction to paddle the boat relative to its orientation like in keyboard mode. Left will paddle the left oar meaning the boat turns right. This means the paddle state can be implied from `mMove`:<br>  - Left is paddling if `mMove.y` is nonzero or `mMove.x` is negative<br>  - Right is paddling if `mMove.y` is nonzero or `mMove.x` is positive<br>  <br>  <b>Non paddle force mode</b><br>  <br>  - Left is paddling if `InputData::PaddlingLeft` is set<br>  - Right is paddling if `InputData::PaddlingRight` is set<br>  <br>  <b>Adopting server authoritative movement protocol</b><br>  <br>  This packet can be used to implement client authoritative motion by blindly accepting the Player Position and Rotation values except for the caveat described in PlayerActionType::HandledTeleport.<br>  If they are riding a client predicted vehicle as determined by a previous SetActorLinkPacket from the server, the position and velocity is interpreted as the vehicle, not the player.<br>  If desired, the server can additionally simulate motion and send CorrectPlayerMovePredictionPackets rather than accepting client reported positions.<br>  The server may also reject the InputData state transitions usually by sending a corrective SetActorDataPacket, see the PlayerAuthInputPacket::InputData enum table for details.<br>  All tick values for client bound packets that have them should be written as specified in the documentation on PlayerInputTick.</td>
+<td>Added for Server Authoritative Movement to sync all player input with the server. See ServerAuthMovementMode for a description of the movement modes.<br>  - PlayerActionPacket (one-off actions)<br>  - MovePlayerPacket (primary input)<br>  - MoveActorAbsolutePacket (positioning client authoritative vehicles)<br>  - AnimatePacket (boat row input and animation)<br>    The jump scale (progress bar for horse jumping) is computed like this:<br>  - Jump ticks start accumulating when `InputData::Jumping` is set in `PlayerAuthInputPacket`<br>  - Every following tick that `InputData::Jumping` is still set the jump ticks increase by 1<br>  - The first tick that releases `InputData::Jumping` expects the jump to trigger, producing the jump scale using this formula<br>  floor((ticks < 10.0f ? ticks x 0.1f : 0.8f + (2.0f / (ticks - 9.0f)) x 0.1f) x 100.0)<br>  <br>  Boat paddling determines the ActorDataIDs::ROW_TIME_LEFT and ROW_TIME_RIGHT like this:<br>  Every tick the row time is incremented on that side if it is paddling.<br>  Paddle input is determined in two different ways depending on input mode. 'Paddle force' mode is used if:<br>  - `PlayerAuthInputPacket::mInputMode` is anything other than `InputMode::Touch`<br>  - `PlayerAuthInputPacket::mPlayMode` is `ClientPlayMode::Reality` (VR)<br>  - `PlayerAuthInputPacket::mNewInteractionModel` is `NewInteractionModel::Touch` or `NewInteractionModel::Classic`<br>  <br>  <b>Paddle force mode</b><br>  <br>  Paddle force uses the `PlayerAuthInputPacket::mMove` direction to paddle the boat relative to its orientation like in keyboard mode. Left will paddle the left oar meaning the boat turns right. This means the paddle state can be implied from `mMove`:<br>  - Left is paddling if `mMove.y` is nonzero or `mMove.x` is negative<br>  - Right is paddling if `mMove.y` is nonzero or `mMove.x` is positive<br>  <br>  <b>Non paddle force mode</b><br>  <br>  - Left is paddling if `InputData::PaddlingLeft` is set<br>  - Right is paddling if `InputData::PaddlingRight` is set<br>  <br>  <b>Adopting server authoritative movement protocol</b><br>  <br>  This packet can be used to implement client authoritative motion by blindly accepting the Player Position and Rotation values except for the caveat described in PlayerActionType::HandledTeleport.<br>  If they are riding a client predicted vehicle as determined by a previous SetActorLinkPacket from the server, the position and velocity is interpreted as the vehicle, not the player.<br>  If desired, the server can additionally simulate motion and send CorrectPlayerMovePredictionPackets rather than accepting client reported positions.<br>  The server may also reject the InputData state transitions usually by sending a corrective SetActorDataPacket, see the PlayerAuthInputPacket::InputData enum table for details.<br>  All tick values for client bound packets that have them should be written as specified in the documentation on PlayerInputTick.</td>
 </tr><tr><td>145</td>
 <td><a href = "CreativeContentPacket.html">Sent once by the server on startup to tell clients all of the items that can show up in the creative menu and recipe book.</a></td>
 <td>     This packet contains two lists, one for all the groups and one for all the items.<br>     Groups can either have an icon with a name, or can be loose groups of items that don't have a name (anonymous groups).     All items need a group to represent them. Groups will show up in each category based on the order they are provided in the list.<br>     Items will show up in the order that they are represented in this packet. Each item needs to reference the index of a group from the list of groups.    </td>
@@ -550,9 +544,6 @@
 </tr><tr><td>300</td>
 <td><a href = "CameraInstructionPacket.html">CameraInstructionPacket</a></td>
 <td>Used to send a CameraInstruction from the server to the specified clients.</td>
-</tr><tr><td>301</td>
-<td><a href = "CompressedBiomeDefinitionList.html">CompressedBiomeDefinitionList</a></td>
-<td></td>
 </tr><tr><td>302</td>
 <td><a href = "TrimDataPacket.html">TrimDataPacket</a></td>
 <td>Sent from the server on level startup to send all trim patterns to the client.</td>
@@ -617,9 +608,15 @@
 <td><a href = "UpdateClientOptions.html">UpdateClientOptions</a></td>
 <td></td>
 </tr><tr><td>324</td>
-<td><a href = "PlayerVideoCapturePacket.html">PlayerVideoCapturePacket</a></td>
-<td></td>
+<td><a href = "PlayerVideoCapturePacket.html">Start/stops video capture for a player. Non-publish/test only.</a></td>
+<td>internalInternal. Used by a test command to start/stop video capture. Non-publish/test only.</td>
 </tr><tr><td>325</td>
-<td><a href = "PlayerUpdateEntityOverridesPacket.html">PlayerUpdateEntityOverridesPacket</a></td>
-<td></td>
+<td><a href = "PlayerUpdateEntityOverridesPacket.html">Updates client entity property override data</a></td>
+<td>This will set/remove an override for the indicated property for a specific entity on a client or clear all overrides for that entity. Does not affect server property values.</td>
+</tr><tr><td>326</td>
+<td><a href = "PlayerLocationPacket.html">PlayerLocationPacket</a></td>
+<td>Updates the client with the position of a player in the same dimension outside of simulation distance, or whether to hide a player.</td>
+</tr><tr><td>327</td>
+<td><a href = "ClientboundControlSchemeSetPacket.html">Client-Bound Control Scheme Set Packet</a></td>
+<td>The server sends this packet to clients upon client requests or the execution of control scheme commands</td>
 </tr></table></body> </html>

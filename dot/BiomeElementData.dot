@@ -1,0 +1,40 @@
+digraph "BiomeElementData" {
+rankdir = LR
+178
+178 -> 179
+179 -> 180
+178 -> 181
+181 -> 182
+178 -> 183
+183 -> 184
+178 -> 185
+185 -> 186
+178 -> 187
+187 -> 188
+178 -> 189
+189 -> 190
+178 -> 191
+191 -> 192
+178 -> 193
+193 -> 207
+
+178 [label="BiomeElementData",comment="name: \"BiomeElementData\", typeName: \"\", id: 178, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+179 [label="noise frequency scale",comment="name: \"noise frequency scale\", typeName: \"\", id: 179, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+180 [label="float",comment="name: \"float\", typeName: \"\", id: 180, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+181 [label="noise lower bound",comment="name: \"noise lower bound\", typeName: \"\", id: 181, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+182 [label="float",comment="name: \"float\", typeName: \"\", id: 182, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+183 [label="noise upper bound",comment="name: \"noise upper bound\", typeName: \"\", id: 183, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+184 [label="float",comment="name: \"float\", typeName: \"\", id: 184, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+185 [label="height min type",comment="name: \"height min type\", typeName: \"\", id: 185, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+186 [label="varint",comment="name: \"varint\", typeName: \"\", id: 186, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+187 [label="height min",comment="name: \"height min\", typeName: \"short\", id: 187, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+188 [label="short",comment="name: \"short\", typeName: \"\", id: 188, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+189 [label="height max type",comment="name: \"height max type\", typeName: \"\", id: 189, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+190 [label="varint",comment="name: \"varint\", typeName: \"\", id: 190, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+191 [label="height max",comment="name: \"height max\", typeName: \"short\", id: 191, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+192 [label="short",comment="name: \"short\", typeName: \"\", id: 192, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+193 [label="adjusted materials",comment="name: \"adjusted materials\", typeName: \"BiomeSurfaceMaterialData\", id: 193, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+207 [label="BiomeSurfaceMaterialData",comment="name: \"BiomeSurfaceMaterialData\", typeName: \"\", id: 207, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;180;182;184;186;188;190;192;207}
+
+}

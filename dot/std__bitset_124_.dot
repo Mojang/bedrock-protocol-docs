@@ -1,0 +1,12 @@
+digraph "std::bitset<124>" {
+rankdir = LR
+4
+4 -> 5
+5 -> 6
+
+4 [label="std::bitset<124>",comment="name: \"std::bitset<124>\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="Bitset bytes",comment="name: \"Bitset bytes\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+6 [label="byte",comment="name: \"byte\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;6}
+
+}

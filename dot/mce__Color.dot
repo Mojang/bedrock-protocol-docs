@@ -1,0 +1,12 @@
+digraph "mce::Color" {
+rankdir = LR
+121
+121 -> 122
+122 -> 123
+
+121 [label="mce::Color",comment="name: \"mce::Color\", typeName: \"\", id: 121, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+122 [label="Color",comment="name: \"Color\", typeName: \"\", id: 122, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+123 [label="int",comment="name: \"int\", typeName: \"\", id: 123, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;123}
+
+}

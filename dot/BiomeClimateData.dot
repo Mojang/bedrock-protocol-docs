@@ -1,0 +1,40 @@
+digraph "BiomeClimateData" {
+rankdir = LR
+64
+64 -> 65
+65 -> 66
+64 -> 67
+67 -> 68
+64 -> 69
+69 -> 70
+64 -> 71
+71 -> 72
+64 -> 73
+73 -> 74
+64 -> 75
+75 -> 76
+64 -> 77
+77 -> 78
+64 -> 79
+79 -> 80
+
+64 [label="BiomeClimateData",comment="name: \"BiomeClimateData\", typeName: \"\", id: 64, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+65 [label="temperature",comment="name: \"temperature\", typeName: \"\", id: 65, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+66 [label="float",comment="name: \"float\", typeName: \"\", id: 66, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+67 [label="downfall",comment="name: \"downfall\", typeName: \"\", id: 67, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+68 [label="float",comment="name: \"float\", typeName: \"\", id: 68, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+69 [label="red spore density",comment="name: \"red spore density\", typeName: \"\", id: 69, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+70 [label="float",comment="name: \"float\", typeName: \"\", id: 70, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+71 [label="blue spore density",comment="name: \"blue spore density\", typeName: \"\", id: 71, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+72 [label="float",comment="name: \"float\", typeName: \"\", id: 72, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+73 [label="ash density",comment="name: \"ash density\", typeName: \"\", id: 73, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+74 [label="float",comment="name: \"float\", typeName: \"\", id: 74, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+75 [label="white ash density",comment="name: \"white ash density\", typeName: \"\", id: 75, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+76 [label="float",comment="name: \"float\", typeName: \"\", id: 76, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+77 [label="snow accumulation min",comment="name: \"snow accumulation min\", typeName: \"\", id: 77, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+78 [label="float",comment="name: \"float\", typeName: \"\", id: 78, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+79 [label="snow accumulation max",comment="name: \"snow accumulation max\", typeName: \"\", id: 79, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+80 [label="float",comment="name: \"float\", typeName: \"\", id: 80, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;66;68;70;72;74;76;78;80}
+
+}
