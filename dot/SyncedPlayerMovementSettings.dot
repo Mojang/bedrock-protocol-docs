@@ -1,20 +1,16 @@
 digraph "SyncedPlayerMovementSettings" {
 rankdir = LR
-155
-155 -> 156
-156 -> 157
-155 -> 158
+157
+157 -> 158
 158 -> 159
-155 -> 160
+157 -> 160
 160 -> 161
 
-155 [label="SyncedPlayerMovementSettings",comment="name: \"SyncedPlayerMovementSettings\", typeName: \"\", id: 155, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-156 [label="Authority Mode",comment="name: \"Authority Mode\", typeName: \"\", id: 156, branchId: 0, recurseId: -1, attributes: 0, notes: \"See explanation of modes in enum table\""];
-157 [label="varint",comment="name: \"varint\", typeName: \"\", id: 157, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+157 [label="SyncedPlayerMovementSettings",comment="name: \"SyncedPlayerMovementSettings\", typeName: \"\", id: 157, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 158 [label="Rewind History Size",comment="name: \"Rewind History Size\", typeName: \"\", id: 158, branchId: 0, recurseId: -1, attributes: 0, notes: \"When using server authoritative movement mode, this determines the number of ticks the client keeps in history for use in processing corrections. Should at least account for the largest expected round trip latency. In Bedrock this is 40 ticks.\""];
 159 [label="varint",comment="name: \"varint\", typeName: \"\", id: 159, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 160 [label="Server Authoritative Block Breaking",comment="name: \"Server Authoritative Block Breaking\", typeName: \"\", id: 160, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 161 [label="bool",comment="name: \"bool\", typeName: \"\", id: 161, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;157;159;161}
+{ rank = max;159;161}
 
 }

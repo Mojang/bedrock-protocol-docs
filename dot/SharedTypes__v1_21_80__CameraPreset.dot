@@ -42,11 +42,9 @@ rankdir = LR
 8 -> 67
 67 -> 68
 8 -> 69
-69 -> 70
-8 -> 71
-71 -> 94
-8 -> 95
-95 -> 99
+69 -> 92
+8 -> 93
+93 -> 97
 
 8 [label="SharedTypes::v1_21_80::CameraPreset",comment="name: \"SharedTypes::v1_21_80::CameraPreset\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 9 [label="Name",comment="name: \"Name\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -89,12 +87,10 @@ rankdir = LR
 66 [label="std::optional<enum SharedTypes::v1_21_80::CameraPreset::AudioListener>",comment="name: \"std::optional<enum SharedTypes::v1_21_80::CameraPreset::AudioListener>\", typeName: \"\", id: 66, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 67 [label="Player Effects",comment="name: \"Player Effects\", typeName: \"std::optional<bool>\", id: 67, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 68 [label="std::optional<bool>",comment="name: \"std::optional<bool>\", typeName: \"\", id: 68, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-69 [label="Align target and camera forward",comment="name: \"Align target and camera forward\", typeName: \"std::optional<bool>\", id: 69, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-70 [label="std::optional<bool>",comment="name: \"std::optional<bool>\", typeName: \"\", id: 70, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-71 [label="Aim Assist",comment="name: \"Aim Assist\", typeName: \"std::optional<struct SharedTypes::v1_21_50::CameraPresetAimAssistDefinition>\", id: 71, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-94 [label="std::optional<struct SharedTypes::v1_21_50::CameraPresetAimAssistDefinition>",comment="name: \"std::optional<struct SharedTypes::v1_21_50::CameraPresetAimAssistDefinition>\", typeName: \"\", id: 94, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-95 [label="Control Scheme",comment="name: \"Control Scheme\", typeName: \"std::optional<enum ControlScheme::Scheme>\", id: 95, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-99 [label="std::optional<enum ControlScheme::Scheme>",comment="name: \"std::optional<enum ControlScheme::Scheme>\", typeName: \"\", id: 99, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;10;12;17;19;21;23;25;27;32;37;39;41;43;45;50;52;54;56;66;68;70;94;99}
+69 [label="Aim Assist",comment="name: \"Aim Assist\", typeName: \"std::optional<struct SharedTypes::v1_21_50::CameraPresetAimAssistDefinition>\", id: 69, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+92 [label="std::optional<struct SharedTypes::v1_21_50::CameraPresetAimAssistDefinition>",comment="name: \"std::optional<struct SharedTypes::v1_21_50::CameraPresetAimAssistDefinition>\", typeName: \"\", id: 92, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+93 [label="Control Scheme",comment="name: \"Control Scheme\", typeName: \"std::optional<enum ControlScheme::Scheme>\", id: 93, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+97 [label="std::optional<enum ControlScheme::Scheme>",comment="name: \"std::optional<enum ControlScheme::Scheme>\", typeName: \"\", id: 97, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;10;12;17;19;21;23;25;27;32;37;39;41;43;45;50;52;54;56;66;68;92;97}
 
 }

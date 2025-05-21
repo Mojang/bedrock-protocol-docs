@@ -1,0 +1,68 @@
+digraph "ServerScriptDebugDrawerPacket" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+2 -> 3
+1 -> 4
+4 -> 5
+5 -> 6
+4 -> 7
+7 -> 16
+4 -> 17
+17 -> 18
+4 -> 19
+19 -> 20
+4 -> 21
+21 -> 22
+4 -> 23
+23 -> 24
+4 -> 25
+25 -> 31
+4 -> 32
+32 -> 33
+4 -> 34
+34 -> 35
+4 -> 36
+36 -> 37
+4 -> 38
+38 -> 39
+4 -> 40
+40 -> 41
+4 -> 42
+42 -> 49
+
+0 [label="ServerScriptDebugDrawerPacket",comment="name: \"ServerScriptDebugDrawerPacket\", typeName: \"\", id: 0, branchId: 328, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Shapes",comment="name: \"Shapes\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 8, notes: \"List of shapes that have changed\""];
+2 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+4 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+5 [label="NetworkId",comment="name: \"NetworkId\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"uint64 network id used to identify the matching shape on the client as the server\""];
+6 [label="unsigned varint64",comment="name: \"unsigned varint64\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+7 [label="Shape Type",comment="name: \"Shape Type\", typeName: \"std::optional<enum ScriptModuleDebugUtilities::ScriptDebugShapeType>\", id: 7, branchId: 0, recurseId: -1, attributes: 256, notes: \"Byte representing the type of debug shape (Line, Box, Sphere, Circle, Text).\""];
+16 [label="std::optional<enum ScriptModuleDebugUtilities::ScriptDebugShapeType>",comment="name: \"std::optional<enum ScriptModuleDebugUtilities::ScriptDebugShapeType>\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+17 [label="Location",comment="name: \"Location\", typeName: \"std::optional<class Vec3>\", id: 17, branchId: 0, recurseId: -1, attributes: 256, notes: \"Vec3 location of the debug shape in the world.\""];
+18 [label="std::optional<class Vec3>",comment="name: \"std::optional<class Vec3>\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+19 [label="Scale",comment="name: \"Scale\", typeName: \"std::optional<float>\", id: 19, branchId: 0, recurseId: -1, attributes: 256, notes: \"Float scale of the debug shape in the world.\""];
+20 [label="std::optional<float>",comment="name: \"std::optional<float>\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+21 [label="Rotation",comment="name: \"Rotation\", typeName: \"std::optional<class Vec3>\", id: 21, branchId: 0, recurseId: -1, attributes: 256, notes: \"Vec3 (Euler angles in radians, PYR) rotation of the debug shape in the world.\""];
+22 [label="std::optional<class Vec3>",comment="name: \"std::optional<class Vec3>\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+23 [label="Total Time Left",comment="name: \"Total Time Left\", typeName: \"std::optional<float>\", id: 23, branchId: 0, recurseId: -1, attributes: 256, notes: \"The total time left in seconds until this debug shape will be removed (0 meaning never).\""];
+24 [label="std::optional<float>",comment="name: \"std::optional<float>\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+25 [label="Color",comment="name: \"Color\", typeName: \"std::optional<class mce::Color>\", id: 25, branchId: 0, recurseId: -1, attributes: 256, notes: \"Color (ARGB Hex string) of the debug shape.\""];
+31 [label="std::optional<class mce::Color>",comment="name: \"std::optional<class mce::Color>\", typeName: \"\", id: 31, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+32 [label="Text",comment="name: \"Text\", typeName: \"std::optional<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >\", id: 32, branchId: 0, recurseId: -1, attributes: 256, notes: \"Text (string) of the debug text shape.\""];
+33 [label="std::optional<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >",comment="name: \"std::optional<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >\", typeName: \"\", id: 33, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+34 [label="Box Bound",comment="name: \"Box Bound\", typeName: \"std::optional<class Vec3>\", id: 34, branchId: 0, recurseId: -1, attributes: 256, notes: \"Vec3 bound of the debug box shape.\""];
+35 [label="std::optional<class Vec3>",comment="name: \"std::optional<class Vec3>\", typeName: \"\", id: 35, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+36 [label="Line End Location",comment="name: \"Line End Location\", typeName: \"std::optional<class Vec3>\", id: 36, branchId: 0, recurseId: -1, attributes: 256, notes: \"Vec3 end location of the debug line.\""];
+37 [label="std::optional<class Vec3>",comment="name: \"std::optional<class Vec3>\", typeName: \"\", id: 37, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+38 [label="Arrow Head Length",comment="name: \"Arrow Head Length\", typeName: \"std::optional<float>\", id: 38, branchId: 0, recurseId: -1, attributes: 256, notes: \"Length of the head of the debug arrow.\""];
+39 [label="std::optional<float>",comment="name: \"std::optional<float>\", typeName: \"\", id: 39, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+40 [label="Arrow Head Radius",comment="name: \"Arrow Head Radius\", typeName: \"std::optional<float>\", id: 40, branchId: 0, recurseId: -1, attributes: 256, notes: \"Radius of the head of the debug arrow.\""];
+41 [label="std::optional<float>",comment="name: \"std::optional<float>\", typeName: \"\", id: 41, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+42 [label="Num Segments",comment="name: \"Num Segments\", typeName: \"std::optional<unsigned char>\", id: 42, branchId: 0, recurseId: -1, attributes: 256, notes: \"Integer number of segments used for the debug circle, sphere or debug arrow's head.\""];
+49 [label="std::optional<unsigned char>",comment="name: \"std::optional<unsigned char>\", typeName: \"\", id: 49, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3;6;16;18;20;22;24;31;33;35;37;39;41;49}
+
+}

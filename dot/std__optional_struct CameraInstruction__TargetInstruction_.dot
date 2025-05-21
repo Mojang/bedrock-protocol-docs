@@ -1,16 +1,16 @@
 digraph "std::optional<struct CameraInstruction::TargetInstruction>" {
 rankdir = LR
-127
-127 -> 128
-128 -> 129
-127 -> 130
-130 -> 136
+132
+132 -> 133
+133 -> 134
+132 -> 135
+135 -> 141
 
-127 [label="std::optional<struct CameraInstruction::TargetInstruction>",comment="name: \"std::optional<struct CameraInstruction::TargetInstruction>\", typeName: \"\", id: 127, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-128 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 128, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
-129 [label="bool",comment="name: \"bool\", typeName: \"\", id: 129, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-130 [label="Value",comment="name: \"Value\", typeName: \"CameraInstruction::TargetInstruction\", id: 130, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-136 [label="CameraInstruction::TargetInstruction",comment="name: \"CameraInstruction::TargetInstruction\", typeName: \"\", id: 136, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;129;136}
+132 [label="std::optional<struct CameraInstruction::TargetInstruction>",comment="name: \"std::optional<struct CameraInstruction::TargetInstruction>\", typeName: \"\", id: 132, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+133 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 133, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
+134 [label="bool",comment="name: \"bool\", typeName: \"\", id: 134, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+135 [label="Value",comment="name: \"Value\", typeName: \"CameraInstruction::TargetInstruction\", id: 135, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+141 [label="CameraInstruction::TargetInstruction",comment="name: \"CameraInstruction::TargetInstruction\", typeName: \"\", id: 141, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;134;141}
 
 }

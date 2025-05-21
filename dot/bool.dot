@@ -1,12 +1,12 @@
 digraph "bool" {
 rankdir = LR
-36
-36 -> 37
-37 -> 38
+87
+87 -> 88
+88 -> 89
 
-36 [label="bool",comment="name: \"bool\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-37 [label="Bool",comment="name: \"Bool\", typeName: \"\", id: 37, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-38 [label="bool",comment="name: \"bool\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;38}
+87 [label="bool",comment="name: \"bool\", typeName: \"\", id: 87, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+88 [label="Bool",comment="name: \"Bool\", typeName: \"\", id: 88, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+89 [label="bool",comment="name: \"bool\", typeName: \"\", id: 89, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;89}
 
 }

@@ -1,0 +1,30 @@
+<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/ServerScriptDebugDrawerPacket.svg" alt="ServerScriptDebugDrawerPacket">
+<br><table><col width="10%"><col width="90%"><tr><th>Field Name</th><th>Field Notes</th></tr><tr><td>Shapes</td>
+<td>List of shapes that have changed</td>
+</tr><tr><td>NetworkId</td>
+<td>uint64 network id used to identify the matching shape on the client as the server</td>
+</tr><tr><td>Shape Type</td>
+<td>Byte representing the type of debug shape (Line, Box, Sphere, Circle, Text).</td>
+</tr><tr><td>Location</td>
+<td>Vec3 location of the debug shape in the world.</td>
+</tr><tr><td>Scale</td>
+<td>Float scale of the debug shape in the world.</td>
+</tr><tr><td>Rotation</td>
+<td>Vec3 (Euler angles in radians, PYR) rotation of the debug shape in the world.</td>
+</tr><tr><td>Total Time Left</td>
+<td>The total time left in seconds until this debug shape will be removed (0 meaning never).</td>
+</tr><tr><td>Color</td>
+<td>Color (ARGB Hex string) of the debug shape.</td>
+</tr><tr><td>Text</td>
+<td>Text (string) of the debug text shape.</td>
+</tr><tr><td>Box Bound</td>
+<td>Vec3 bound of the debug box shape.</td>
+</tr><tr><td>Line End Location</td>
+<td>Vec3 end location of the debug line.</td>
+</tr><tr><td>Arrow Head Length</td>
+<td>Length of the head of the debug arrow.</td>
+</tr><tr><td>Arrow Head Radius</td>
+<td>Radius of the head of the debug arrow.</td>
+</tr><tr><td>Num Segments</td>
+<td>Integer number of segments used for the debug circle, sphere or debug arrow's head.</td>
+</tr></table></body> </html>

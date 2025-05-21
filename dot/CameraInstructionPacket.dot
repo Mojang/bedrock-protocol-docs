@@ -2,11 +2,11 @@ digraph "CameraInstructionPacket" {
 rankdir = LR
 0
 0 -> 1
-1 -> 140
+1 -> 145
 
 0 [label="CameraInstructionPacket",comment="name: \"CameraInstructionPacket\", typeName: \"\", id: 0, branchId: 300, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Camera Instruction",comment="name: \"Camera Instruction\", typeName: \"CameraInstruction\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-140 [label="CameraInstruction",comment="name: \"CameraInstruction\", typeName: \"\", id: 140, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;140}
+145 [label="CameraInstruction",comment="name: \"CameraInstruction\", typeName: \"\", id: 145, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;145}
 
 }

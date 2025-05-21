@@ -1,16 +1,16 @@
 digraph "std::optional<struct CameraInstruction::FadeInstruction::ColorOption>" {
 rankdir = LR
-111
-111 -> 112
-112 -> 113
-111 -> 114
-114 -> 122
+116
+116 -> 117
+117 -> 118
+116 -> 119
+119 -> 127
 
-111 [label="std::optional<struct CameraInstruction::FadeInstruction::ColorOption>",comment="name: \"std::optional<struct CameraInstruction::FadeInstruction::ColorOption>\", typeName: \"\", id: 111, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-112 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 112, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
-113 [label="bool",comment="name: \"bool\", typeName: \"\", id: 113, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-114 [label="Value",comment="name: \"Value\", typeName: \"CameraInstruction::FadeInstruction::ColorOption\", id: 114, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-122 [label="CameraInstruction::FadeInstruction::ColorOption",comment="name: \"CameraInstruction::FadeInstruction::ColorOption\", typeName: \"\", id: 122, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;113;122}
+116 [label="std::optional<struct CameraInstruction::FadeInstruction::ColorOption>",comment="name: \"std::optional<struct CameraInstruction::FadeInstruction::ColorOption>\", typeName: \"\", id: 116, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+117 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 117, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
+118 [label="bool",comment="name: \"bool\", typeName: \"\", id: 118, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+119 [label="Value",comment="name: \"Value\", typeName: \"CameraInstruction::FadeInstruction::ColorOption\", id: 119, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+127 [label="CameraInstruction::FadeInstruction::ColorOption",comment="name: \"CameraInstruction::FadeInstruction::ColorOption\", typeName: \"\", id: 127, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;118;127}
 
 }

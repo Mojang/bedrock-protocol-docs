@@ -1,0 +1,12 @@
+digraph "ScriptModuleDebugUtilities::ScriptDebugShapeType" {
+rankdir = LR
+12
+12 -> 13
+13 -> 14
+
+12 [label="ScriptModuleDebugUtilities::ScriptDebugShapeType",comment="name: \"ScriptModuleDebugUtilities::ScriptDebugShapeType\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+13 [label="DebugShapeType",comment="name: \"DebugShapeType\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+14 [label="byte",comment="name: \"byte\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;14}
+
+}

@@ -9,62 +9,62 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 94)">
 <title>std::optional&lt;enum CameraAimAssist::TargetMode&gt;</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-94 854.97,-94 854.97,4 -4,4"/>
-<!-- 80 -->
-<!-- name: &quot;std::optional&lt;enum CameraAimAssist::TargetMode&gt;&quot;, typeName: &quot;&quot;, id: 80, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;&quot; -->
+<!-- 78 -->
+<!-- name: &quot;std::optional&lt;enum CameraAimAssist::TargetMode&gt;&quot;, typeName: &quot;&quot;, id: 78, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;&quot; -->
 <g id="node1" class="node">
-<title>80</title>
+<title>78</title>
 <ellipse fill="none" stroke="black" cx="211.04" cy="-45" rx="211.04" ry="18"/>
 <text text-anchor="middle" x="211.04" y="-39.95" font-family="Times New Roman,serif" font-size="14.00">std::optional&lt;enum CameraAimAssist::TargetMode&gt;</text>
 </g>
-<!-- 81 -->
-<!-- name: &quot;Has Value&quot;, typeName: &quot;&quot;, id: 81, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;If true, follow with appropriate data type, otherwise nothing&quot; -->
+<!-- 79 -->
+<!-- name: &quot;Has Value&quot;, typeName: &quot;&quot;, id: 79, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;If true, follow with appropriate data type, otherwise nothing&quot; -->
 <g id="node2" class="node">
-<title>81</title>
+<title>79</title>
 <ellipse fill="none" stroke="black" cx="506.35" cy="-72" rx="48.28" ry="18"/>
 <text text-anchor="middle" x="506.35" y="-66.95" font-family="Times New Roman,serif" font-size="14.00">Has Value</text>
 </g>
-<!-- 80&#45;&gt;81 -->
+<!-- 78&#45;&gt;79 -->
 <g id="edge1" class="edge">
-<title>80&#45;&gt;81</title>
+<title>78&#45;&gt;79</title>
 <path fill="none" stroke="black" d="M356.97,-58.34C389.29,-61.32 421.71,-64.3 447.97,-66.72"/>
 <polygon fill="black" stroke="black" points="447.41,-70.18 457.69,-67.61 448.06,-63.21 447.41,-70.18"/>
 </g>
-<!-- 83 -->
-<!-- name: &quot;Value&quot;, typeName: &quot;CameraAimAssist::TargetMode&quot;, id: 83, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;&quot; -->
+<!-- 81 -->
+<!-- name: &quot;Value&quot;, typeName: &quot;CameraAimAssist::TargetMode&quot;, id: 81, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;&quot; -->
 <g id="node4" class="node">
-<title>83</title>
+<title>81</title>
 <ellipse fill="none" stroke="black" cx="506.35" cy="-18" rx="31.9" ry="18"/>
 <text text-anchor="middle" x="506.35" y="-12.95" font-family="Times New Roman,serif" font-size="14.00">Value</text>
 </g>
-<!-- 80&#45;&gt;83 -->
+<!-- 78&#45;&gt;81 -->
 <g id="edge3" class="edge">
-<title>80&#45;&gt;83</title>
+<title>78&#45;&gt;81</title>
 <path fill="none" stroke="black" d="M356.97,-31.66C395.75,-28.09 434.68,-24.51 462.93,-21.91"/>
 <polygon fill="black" stroke="black" points="463.21,-25.39 472.84,-20.99 462.56,-18.42 463.21,-25.39"/>
 </g>
-<!-- 82 -->
-<!-- name: &quot;bool&quot;, typeName: &quot;&quot;, id: 82, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
+<!-- 80 -->
+<!-- name: &quot;bool&quot;, typeName: &quot;&quot;, id: 80, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
 <g id="node3" class="node">
-<title>82</title>
+<title>80</title>
 <ellipse fill="none" stroke="black" cx="720.8" cy="-72" rx="27.3" ry="18"/>
 <text text-anchor="middle" x="720.8" y="-66.95" font-family="Times New Roman,serif" font-size="14.00">bool</text>
 </g>
-<!-- 81&#45;&gt;82 -->
+<!-- 79&#45;&gt;80 -->
 <g id="edge2" class="edge">
-<title>81&#45;&gt;82</title>
+<title>79&#45;&gt;80</title>
 <path fill="none" stroke="black" d="M555.03,-72C593.28,-72 646.26,-72 681.71,-72"/>
 <polygon fill="black" stroke="black" points="681.51,-75.5 691.51,-72 681.51,-68.5 681.51,-75.5"/>
 </g>
-<!-- 87 -->
-<!-- name: &quot;CameraAimAssist::TargetMode&quot;, typeName: &quot;&quot;, id: 87, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
+<!-- 85 -->
+<!-- name: &quot;CameraAimAssist::TargetMode&quot;, typeName: &quot;&quot;, id: 85, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
 <g id="node5" class="node">
-<title>87</title>
+<title>85</title>
 <ellipse fill="none" stroke="black" cx="720.8" cy="-18" rx="130.17" ry="18"/>
 <text text-anchor="middle" x="720.8" y="-12.95" font-family="Times New Roman,serif" font-size="14.00">CameraAimAssist::TargetMode</text>
 </g>
-<!-- 83&#45;&gt;87 -->
+<!-- 81&#45;&gt;85 -->
 <g id="edge4" class="edge">
-<title>83&#45;&gt;87</title>
+<title>81&#45;&gt;85</title>
 <path fill="none" stroke="black" d="M538.7,-18C550.31,-18 564.35,-18 579.41,-18"/>
 <polygon fill="black" stroke="black" points="579.03,-21.5 589.03,-18 579.03,-14.5 579.03,-21.5"/>
 </g>
