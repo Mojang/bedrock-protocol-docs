@@ -1,0 +1,32 @@
+digraph "BiomeMountainParamsData" {
+rankdir = LR
+149
+149 -> 150
+150 -> 154
+149 -> 155
+155 -> 156
+149 -> 157
+157 -> 158
+149 -> 159
+159 -> 160
+149 -> 161
+161 -> 162
+149 -> 163
+163 -> 164
+
+149 [label="BiomeMountainParamsData",comment="name: \"BiomeMountainParamsData\", typeName: \"\", id: 149, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+150 [label="steep block",comment="name: \"steep block\", typeName: \"int\", id: 150, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+154 [label="int",comment="name: \"int\", typeName: \"\", id: 154, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+155 [label="north slopes",comment="name: \"north slopes\", typeName: \"\", id: 155, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+156 [label="bool",comment="name: \"bool\", typeName: \"\", id: 156, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+157 [label="south slopes",comment="name: \"south slopes\", typeName: \"\", id: 157, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+158 [label="bool",comment="name: \"bool\", typeName: \"\", id: 158, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+159 [label="west slopes",comment="name: \"west slopes\", typeName: \"\", id: 159, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+160 [label="bool",comment="name: \"bool\", typeName: \"\", id: 160, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+161 [label="east slopes",comment="name: \"east slopes\", typeName: \"\", id: 161, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+162 [label="bool",comment="name: \"bool\", typeName: \"\", id: 162, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+163 [label="top slide enabled",comment="name: \"top slide enabled\", typeName: \"\", id: 163, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+164 [label="bool",comment="name: \"bool\", typeName: \"\", id: 164, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;154;156;158;160;162;164}
+
+}

@@ -1,0 +1,92 @@
+digraph "BiomeOverworldGenRulesData" {
+rankdir = LR
+271
+271 -> 272
+272 -> 273
+273 -> 274
+272 -> 275
+275 -> 276
+276 -> 282
+271 -> 283
+283 -> 284
+284 -> 285
+283 -> 286
+286 -> 287
+287 -> 288
+271 -> 289
+289 -> 290
+290 -> 291
+289 -> 292
+292 -> 293
+293 -> 294
+271 -> 295
+295 -> 296
+296 -> 297
+295 -> 298
+298 -> 299
+299 -> 300
+271 -> 301
+301 -> 302
+302 -> 303
+301 -> 304
+304 -> 305
+305 -> 317
+271 -> 318
+318 -> 319
+319 -> 320
+318 -> 321
+321 -> 322
+322 -> 323
+271 -> 324
+324 -> 325
+325 -> 326
+324 -> 327
+327 -> 328
+328 -> 334
+
+271 [label="BiomeOverworldGenRulesData",comment="name: \"BiomeOverworldGenRulesData\", typeName: \"\", id: 271, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+272 [label="transformation",comment="name: \"transformation\", typeName: \"\", id: 272, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+273 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 273, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+274 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 274, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+275 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 275, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+276 [label="hills transformations",comment="name: \"hills transformations\", typeName: \"BiomeWeightedData\", id: 276, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+282 [label="BiomeWeightedData",comment="name: \"BiomeWeightedData\", typeName: \"\", id: 282, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+283 [label="transformation",comment="name: \"transformation\", typeName: \"\", id: 283, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+284 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 284, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+285 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 285, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+286 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 286, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+287 [label="mutate transformations",comment="name: \"mutate transformations\", typeName: \"BiomeWeightedData\", id: 287, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+288 [label="BiomeWeightedData",comment="name: \"BiomeWeightedData\", typeName: \"\", id: 288, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+289 [label="transformation",comment="name: \"transformation\", typeName: \"\", id: 289, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+290 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 290, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+291 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 291, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+292 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 292, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+293 [label="river transformations",comment="name: \"river transformations\", typeName: \"BiomeWeightedData\", id: 293, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+294 [label="BiomeWeightedData",comment="name: \"BiomeWeightedData\", typeName: \"\", id: 294, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+295 [label="transformation",comment="name: \"transformation\", typeName: \"\", id: 295, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+296 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 296, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+297 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 297, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+298 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 298, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+299 [label="shore transformations",comment="name: \"shore transformations\", typeName: \"BiomeWeightedData\", id: 299, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+300 [label="BiomeWeightedData",comment="name: \"BiomeWeightedData\", typeName: \"\", id: 300, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+301 [label="conditional transformation",comment="name: \"conditional transformation\", typeName: \"\", id: 301, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+302 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 302, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+303 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 303, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+304 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 304, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+305 [label="pre hills edge",comment="name: \"pre hills edge\", typeName: \"BiomeConditionalTransformationData\", id: 305, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+317 [label="BiomeConditionalTransformationData",comment="name: \"BiomeConditionalTransformationData\", typeName: \"\", id: 317, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+318 [label="conditional transformation",comment="name: \"conditional transformation\", typeName: \"\", id: 318, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+319 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 319, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+320 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 320, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+321 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 321, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+322 [label="post shore edge",comment="name: \"post shore edge\", typeName: \"BiomeConditionalTransformationData\", id: 322, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+323 [label="BiomeConditionalTransformationData",comment="name: \"BiomeConditionalTransformationData\", typeName: \"\", id: 323, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+324 [label="weighted temperature",comment="name: \"weighted temperature\", typeName: \"\", id: 324, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+325 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 325, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+326 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 326, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+327 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 327, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+328 [label="climate",comment="name: \"climate\", typeName: \"BiomeWeightedTemperatureData\", id: 328, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+334 [label="BiomeWeightedTemperatureData",comment="name: \"BiomeWeightedTemperatureData\", typeName: \"\", id: 334, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;274;282;285;288;291;294;297;300;303;317;320;323;326;334}
+
+}

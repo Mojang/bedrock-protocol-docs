@@ -1,0 +1,16 @@
+digraph "std::optional<struct BiomeMultinoiseGenRulesData>" {
+rankdir = LR
+338
+338 -> 339
+339 -> 340
+338 -> 341
+341 -> 353
+
+338 [label="std::optional<struct BiomeMultinoiseGenRulesData>",comment="name: \"std::optional<struct BiomeMultinoiseGenRulesData>\", typeName: \"\", id: 338, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+339 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 339, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
+340 [label="bool",comment="name: \"bool\", typeName: \"\", id: 340, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+341 [label="Value",comment="name: \"Value\", typeName: \"BiomeMultinoiseGenRulesData\", id: 341, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+353 [label="BiomeMultinoiseGenRulesData",comment="name: \"BiomeMultinoiseGenRulesData\", typeName: \"\", id: 353, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;340;353}
+
+}

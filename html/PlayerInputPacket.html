@@ -1,8 +1,0 @@
-<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/PlayerInputPacket.svg" alt="PlayerInputPacket">
-<br><table><col width="10%"><col width="90%"><tr><th>Field Name</th><th>Field Notes</th></tr><tr><td>Move</td>
-<td>The desired local space move direction of the player in the vehicle. Convert this to world space by rotating by `mRot.y` along the Y (up) axis.<br>The server authoritative near-equivalent is PlayerAuthInputPacket::mMove with the only difference being that this is scaled by expected movement slowdowns like sneaking and using items.</td>
-</tr><tr><td>Jumping</td>
-<td>True if the player is holding down the jump input or is auto-jumping.<br>In server authoritative movement this is equivalent to `PlayerAuthInputPacket::InputData::Jumping` bit.</td>
-</tr><tr><td>Sneaking</td>
-<td>This is either the predicted sneak state as determined by sneak input or the latest value received from `SetActorDataPacket` depending on timing.<br>In server authoritative movement the closest equivalent is `PlayerAuthInputPacket::InputData::Sneaking` and does not have the timing issue.</td>
-</tr></table></body> </html>

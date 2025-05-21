@@ -18,9 +18,9 @@ rankdir = LR
 22 -> 25
 25 -> 26
 10 -> 27
-27 -> 36
-10 -> 37
-37 -> 38
+27 -> 33
+10 -> 34
+34 -> 35
 
 10 [label="SharedTypes::v1_21_50::CameraAimAssistCategoryPriorities",comment="name: \"SharedTypes::v1_21_50::CameraAimAssistCategoryPriorities\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 11 [label="Entities",comment="name: \"Entities\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
@@ -40,9 +40,9 @@ rankdir = LR
 25 [label="Priority",comment="name: \"Priority\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 26 [label="int",comment="name: \"int\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 27 [label="Entity Default",comment="name: \"Entity Default\", typeName: \"std::optional<int>\", id: 27, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-36 [label="std::optional<int>",comment="name: \"std::optional<int>\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-37 [label="Block Default",comment="name: \"Block Default\", typeName: \"std::optional<int>\", id: 37, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-38 [label="std::optional<int>",comment="name: \"std::optional<int>\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;13;16;18;21;24;26;36;38}
+33 [label="std::optional<int>",comment="name: \"std::optional<int>\", typeName: \"\", id: 33, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+34 [label="Block Default",comment="name: \"Block Default\", typeName: \"std::optional<int>\", id: 34, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+35 [label="std::optional<int>",comment="name: \"std::optional<int>\", typeName: \"\", id: 35, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;13;16;18;21;24;26;33;35}
 
 }

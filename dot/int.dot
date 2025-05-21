@@ -1,12 +1,12 @@
 digraph "int" {
 rankdir = LR
-32
-32 -> 33
-33 -> 34
+151
+151 -> 152
+152 -> 153
 
-32 [label="int",comment="name: \"int\", typeName: \"\", id: 32, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-33 [label="Signed Int",comment="name: \"Signed Int\", typeName: \"\", id: 33, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-34 [label="int",comment="name: \"int\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;34}
+151 [label="int",comment="name: \"int\", typeName: \"\", id: 151, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+152 [label="Unsigned Int",comment="name: \"Unsigned Int\", typeName: \"\", id: 152, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+153 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 153, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;153}
 
 }
