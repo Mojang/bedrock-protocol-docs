@@ -1,0 +1,16 @@
+digraph "std::optional<enum ScriptModuleDebugUtilities::ScriptDebugShapeType>" {
+rankdir = LR
+8
+8 -> 9
+9 -> 10
+8 -> 11
+11 -> 15
+
+8 [label="std::optional<enum ScriptModuleDebugUtilities::ScriptDebugShapeType>",comment="name: \"std::optional<enum ScriptModuleDebugUtilities::ScriptDebugShapeType>\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
+10 [label="bool",comment="name: \"bool\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+11 [label="Value",comment="name: \"Value\", typeName: \"ScriptModuleDebugUtilities::ScriptDebugShapeType\", id: 11, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+15 [label="ScriptModuleDebugUtilities::ScriptDebugShapeType",comment="name: \"ScriptModuleDebugUtilities::ScriptDebugShapeType\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;10;15}
+
+}

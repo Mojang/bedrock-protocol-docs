@@ -81,7 +81,6 @@ The last certificate in the chain will have a property &#39;extraData&#39; that 
 				&#39;LanguageCode&#39;
 				&#39;PlatformUserId&#39;
 				&#39;ThirdPartyName&#39;
-				&#39;ThirdPartyNameOnly&#39;
 				&#39;PlatformOnlineId&#39;
 				&#39;PlatformOfflineId&#39;
 				&#39;DeviceId&#39;

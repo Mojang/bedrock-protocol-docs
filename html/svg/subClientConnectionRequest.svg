@@ -72,7 +72,6 @@
 				&#39;DefaultInputMode&#39; = (see enumeration: InputMode)
 				&#39;CurrentInputMode&#39; = (see enumeration: InputMode)
 				&#39;ThirdPartyName&#39;
-				&#39;ThirdPartyNameOnly&#39;
 				&#39;PlatformOnlineId&#39;
 				&#39;PlatformOfflineId&#39;
  &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#39;DeviceOS&#39; = (see enumeration: BuildPlatform)

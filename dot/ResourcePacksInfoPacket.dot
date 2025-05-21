@@ -13,28 +13,30 @@ rankdir = LR
 9 -> 10
 0 -> 11
 11 -> 12
-12 -> 13
-11 -> 14
+0 -> 13
+13 -> 14
 14 -> 15
-15 -> 16
-14 -> 17
+13 -> 16
+16 -> 17
 17 -> 18
-14 -> 19
+16 -> 19
 19 -> 20
-14 -> 21
+16 -> 21
 21 -> 22
-14 -> 23
+16 -> 23
 23 -> 24
-14 -> 25
+16 -> 25
 25 -> 26
-14 -> 27
+16 -> 27
 27 -> 28
-14 -> 29
+16 -> 29
 29 -> 30
-14 -> 31
+16 -> 31
 31 -> 32
-14 -> 33
+16 -> 33
 33 -> 34
+16 -> 35
+35 -> 36
 
 0 [label="ResourcePacksInfoPacket",comment="name: \"ResourcePacksInfoPacket\", typeName: \"\", id: 0, branchId: 6, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Resource Pack Required",comment="name: \"Resource Pack Required\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -43,34 +45,36 @@ rankdir = LR
 4 [label="bool",comment="name: \"bool\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 5 [label="Has Scripts",comment="name: \"Has Scripts\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 6 [label="bool",comment="name: \"bool\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-7 [label="World Template UUID",comment="name: \"World Template UUID\", typeName: \"mce::UUID\", id: 7, branchId: 0, recurseId: -1, attributes: 256, notes: \"Indicates what template if any was used to create the world on the server.\""];
-8 [label="mce::UUID",comment="name: \"mce::UUID\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-9 [label="World Template Version",comment="name: \"World Template Version\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"Indicates the version of the template used to create the world on the server.\""];
-10 [label="string",comment="name: \"string\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-11 [label="Resource Packs",comment="name: \"Resource Packs\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-12 [label="Resource Packs Size",comment="name: \"Resource Packs Size\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-13 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-14 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-15 [label="Pack Id Version Id",comment="name: \"Pack Id Version Id\", typeName: \"mce::UUID\", id: 15, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-16 [label="mce::UUID",comment="name: \"mce::UUID\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-17 [label="Pack Id Version Version",comment="name: \"Pack Id Version Version\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-18 [label="string",comment="name: \"string\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-19 [label="Pack Size",comment="name: \"Pack Size\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-20 [label="unsigned int64",comment="name: \"unsigned int64\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-21 [label="Content Key",comment="name: \"Content Key\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-22 [label="string",comment="name: \"string\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-23 [label="Subpack Name",comment="name: \"Subpack Name\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="Force Disable Vibrant Visuals",comment="name: \"Force Disable Vibrant Visuals\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"Whether the client should disable Vibrant Visuals when connecting to the server.\""];
+8 [label="bool",comment="name: \"bool\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+9 [label="World Template UUID",comment="name: \"World Template UUID\", typeName: \"mce::UUID\", id: 9, branchId: 0, recurseId: -1, attributes: 256, notes: \"Indicates what template if any was used to create the world on the server.\""];
+10 [label="mce::UUID",comment="name: \"mce::UUID\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+11 [label="World Template Version",comment="name: \"World Template Version\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"Indicates the version of the template used to create the world on the server.\""];
+12 [label="string",comment="name: \"string\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+13 [label="Resource Packs",comment="name: \"Resource Packs\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+14 [label="Resource Packs Size",comment="name: \"Resource Packs Size\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+15 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+16 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+17 [label="Pack Id Version Id",comment="name: \"Pack Id Version Id\", typeName: \"mce::UUID\", id: 17, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+18 [label="mce::UUID",comment="name: \"mce::UUID\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+19 [label="Pack Id Version Version",comment="name: \"Pack Id Version Version\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+20 [label="string",comment="name: \"string\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+21 [label="Pack Size",comment="name: \"Pack Size\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+22 [label="unsigned int64",comment="name: \"unsigned int64\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+23 [label="Content Key",comment="name: \"Content Key\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 24 [label="string",comment="name: \"string\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-25 [label="Content Identity",comment="name: \"Content Identity\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+25 [label="Subpack Name",comment="name: \"Subpack Name\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 26 [label="string",comment="name: \"string\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-27 [label="Has Scripts",comment="name: \"Has Scripts\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-28 [label="bool",comment="name: \"bool\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-29 [label="Is Addon Pack",comment="name: \"Is Addon Pack\", typeName: \"\", id: 29, branchId: 0, recurseId: -1, attributes: 0, notes: \"Indicates this pack is part of an Add-On. Helps clients determine if the pack must be downloaded to join the server as Add-On packs are required to play without issues.\""];
+27 [label="Content Identity",comment="name: \"Content Identity\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+28 [label="string",comment="name: \"string\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+29 [label="Has Scripts",comment="name: \"Has Scripts\", typeName: \"\", id: 29, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 30 [label="bool",comment="name: \"bool\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-31 [label="Is Ray Tracing Capable",comment="name: \"Is Ray Tracing Capable\", typeName: \"\", id: 31, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+31 [label="Is Addon Pack",comment="name: \"Is Addon Pack\", typeName: \"\", id: 31, branchId: 0, recurseId: -1, attributes: 0, notes: \"Indicates this pack is part of an Add-On. Helps clients determine if the pack must be downloaded to join the server as Add-On packs are required to play without issues.\""];
 32 [label="bool",comment="name: \"bool\", typeName: \"\", id: 32, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-33 [label="CDN URL",comment="name: \"CDN URL\", typeName: \"\", id: 33, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-34 [label="string",comment="name: \"string\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2;4;6;8;10;13;16;18;20;22;24;26;28;30;32;34}
+33 [label="Is Ray Tracing Capable",comment="name: \"Is Ray Tracing Capable\", typeName: \"\", id: 33, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+34 [label="bool",comment="name: \"bool\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+35 [label="CDN URL",comment="name: \"CDN URL\", typeName: \"\", id: 35, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+36 [label="string",comment="name: \"string\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;6;8;10;12;15;18;20;22;24;26;28;30;32;34;36}
 
 }
