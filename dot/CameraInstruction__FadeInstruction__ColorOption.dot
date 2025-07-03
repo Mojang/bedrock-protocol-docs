@@ -1,20 +1,20 @@
 digraph "CameraInstruction::FadeInstruction::ColorOption" {
 rankdir = LR
-115
-115 -> 116
-116 -> 117
-115 -> 118
-118 -> 119
-115 -> 120
+120
 120 -> 121
+121 -> 122
+120 -> 123
+123 -> 124
+120 -> 125
+125 -> 126
 
-115 [label="CameraInstruction::FadeInstruction::ColorOption",comment="name: \"CameraInstruction::FadeInstruction::ColorOption\", typeName: \"\", id: 115, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-116 [label="Red",comment="name: \"Red\", typeName: \"\", id: 116, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-117 [label="float",comment="name: \"float\", typeName: \"\", id: 117, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-118 [label="Green",comment="name: \"Green\", typeName: \"\", id: 118, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-119 [label="float",comment="name: \"float\", typeName: \"\", id: 119, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-120 [label="Blue",comment="name: \"Blue\", typeName: \"\", id: 120, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-121 [label="float",comment="name: \"float\", typeName: \"\", id: 121, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;117;119;121}
+120 [label="CameraInstruction::FadeInstruction::ColorOption",comment="name: \"CameraInstruction::FadeInstruction::ColorOption\", typeName: \"\", id: 120, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+121 [label="Red",comment="name: \"Red\", typeName: \"\", id: 121, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+122 [label="float",comment="name: \"float\", typeName: \"\", id: 122, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+123 [label="Green",comment="name: \"Green\", typeName: \"\", id: 123, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+124 [label="float",comment="name: \"float\", typeName: \"\", id: 124, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+125 [label="Blue",comment="name: \"Blue\", typeName: \"\", id: 125, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+126 [label="float",comment="name: \"float\", typeName: \"\", id: 126, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;122;124;126}
 
 }

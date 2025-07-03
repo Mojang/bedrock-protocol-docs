@@ -2,27 +2,27 @@ digraph "CameraInstruction" {
 rankdir = LR
 2
 2 -> 3
-3 -> 87
-2 -> 88
-88 -> 89
-2 -> 90
-90 -> 125
-2 -> 126
-126 -> 137
-2 -> 138
-138 -> 139
+3 -> 92
+2 -> 93
+93 -> 94
+2 -> 95
+95 -> 130
+2 -> 131
+131 -> 142
+2 -> 143
+143 -> 144
 
 2 [label="CameraInstruction",comment="name: \"CameraInstruction\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 3 [label="Set",comment="name: \"Set\", typeName: \"std::optional<struct CameraInstruction::SetInstruction>\", id: 3, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-87 [label="std::optional<struct CameraInstruction::SetInstruction>",comment="name: \"std::optional<struct CameraInstruction::SetInstruction>\", typeName: \"\", id: 87, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-88 [label="Clear",comment="name: \"Clear\", typeName: \"std::optional<bool>\", id: 88, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-89 [label="std::optional<bool>",comment="name: \"std::optional<bool>\", typeName: \"\", id: 89, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-90 [label="Fade",comment="name: \"Fade\", typeName: \"std::optional<struct CameraInstruction::FadeInstruction>\", id: 90, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-125 [label="std::optional<struct CameraInstruction::FadeInstruction>",comment="name: \"std::optional<struct CameraInstruction::FadeInstruction>\", typeName: \"\", id: 125, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-126 [label="Target",comment="name: \"Target\", typeName: \"std::optional<struct CameraInstruction::TargetInstruction>\", id: 126, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-137 [label="std::optional<struct CameraInstruction::TargetInstruction>",comment="name: \"std::optional<struct CameraInstruction::TargetInstruction>\", typeName: \"\", id: 137, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-138 [label="RemoveTarget",comment="name: \"RemoveTarget\", typeName: \"std::optional<bool>\", id: 138, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-139 [label="std::optional<bool>",comment="name: \"std::optional<bool>\", typeName: \"\", id: 139, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;87;89;125;137;139}
+92 [label="std::optional<struct CameraInstruction::SetInstruction>",comment="name: \"std::optional<struct CameraInstruction::SetInstruction>\", typeName: \"\", id: 92, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+93 [label="Clear",comment="name: \"Clear\", typeName: \"std::optional<bool>\", id: 93, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+94 [label="std::optional<bool>",comment="name: \"std::optional<bool>\", typeName: \"\", id: 94, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+95 [label="Fade",comment="name: \"Fade\", typeName: \"std::optional<struct CameraInstruction::FadeInstruction>\", id: 95, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+130 [label="std::optional<struct CameraInstruction::FadeInstruction>",comment="name: \"std::optional<struct CameraInstruction::FadeInstruction>\", typeName: \"\", id: 130, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+131 [label="Target",comment="name: \"Target\", typeName: \"std::optional<struct CameraInstruction::TargetInstruction>\", id: 131, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+142 [label="std::optional<struct CameraInstruction::TargetInstruction>",comment="name: \"std::optional<struct CameraInstruction::TargetInstruction>\", typeName: \"\", id: 142, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+143 [label="RemoveTarget",comment="name: \"RemoveTarget\", typeName: \"std::optional<bool>\", id: 143, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+144 [label="std::optional<bool>",comment="name: \"std::optional<bool>\", typeName: \"\", id: 144, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;92;94;130;142;144}
 
 }

@@ -1,20 +1,20 @@
 digraph "CameraInstruction::FadeInstruction::TimeOption" {
 rankdir = LR
-101
-101 -> 102
-102 -> 103
-101 -> 104
-104 -> 105
-101 -> 106
+106
 106 -> 107
+107 -> 108
+106 -> 109
+109 -> 110
+106 -> 111
+111 -> 112
 
-101 [label="CameraInstruction::FadeInstruction::TimeOption",comment="name: \"CameraInstruction::FadeInstruction::TimeOption\", typeName: \"\", id: 101, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-102 [label="Fade In Time",comment="name: \"Fade In Time\", typeName: \"\", id: 102, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-103 [label="float",comment="name: \"float\", typeName: \"\", id: 103, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-104 [label="Hold Time",comment="name: \"Hold Time\", typeName: \"\", id: 104, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-105 [label="float",comment="name: \"float\", typeName: \"\", id: 105, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-106 [label="Fade Out Time",comment="name: \"Fade Out Time\", typeName: \"\", id: 106, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-107 [label="float",comment="name: \"float\", typeName: \"\", id: 107, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;103;105;107}
+106 [label="CameraInstruction::FadeInstruction::TimeOption",comment="name: \"CameraInstruction::FadeInstruction::TimeOption\", typeName: \"\", id: 106, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+107 [label="Fade In Time",comment="name: \"Fade In Time\", typeName: \"\", id: 107, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+108 [label="float",comment="name: \"float\", typeName: \"\", id: 108, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+109 [label="Hold Time",comment="name: \"Hold Time\", typeName: \"\", id: 109, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+110 [label="float",comment="name: \"float\", typeName: \"\", id: 110, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+111 [label="Fade Out Time",comment="name: \"Fade Out Time\", typeName: \"\", id: 111, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+112 [label="float",comment="name: \"float\", typeName: \"\", id: 112, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;108;110;112}
 
 }

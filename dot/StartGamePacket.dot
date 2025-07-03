@@ -12,9 +12,7 @@ rankdir = LR
 0 -> 15
 15 -> 21
 0 -> 22
-22 -> 145
-0 -> 146
-146 -> 147
+22 -> 147
 0 -> 148
 148 -> 149
 0 -> 150
@@ -22,7 +20,9 @@ rankdir = LR
 0 -> 152
 152 -> 153
 0 -> 154
-154 -> 162
+154 -> 155
+0 -> 156
+156 -> 162
 0 -> 163
 163 -> 164
 0 -> 165
@@ -66,16 +66,16 @@ rankdir = LR
 15 [label="Rotation",comment="name: \"Rotation\", typeName: \"Vec2\", id: 15, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 21 [label="Vec2",comment="name: \"Vec2\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 22 [label="Settings",comment="name: \"Settings\", typeName: \"LevelSettings\", id: 22, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-145 [label="LevelSettings",comment="name: \"LevelSettings\", typeName: \"\", id: 145, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-146 [label="Level ID",comment="name: \"Level ID\", typeName: \"\", id: 146, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-147 [label="string",comment="name: \"string\", typeName: \"\", id: 147, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-148 [label="Level Name",comment="name: \"Level Name\", typeName: \"\", id: 148, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+147 [label="LevelSettings",comment="name: \"LevelSettings\", typeName: \"\", id: 147, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+148 [label="Level ID",comment="name: \"Level ID\", typeName: \"\", id: 148, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 149 [label="string",comment="name: \"string\", typeName: \"\", id: 149, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-150 [label="Template Content Identity",comment="name: \"Template Content Identity\", typeName: \"\", id: 150, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+150 [label="Level Name",comment="name: \"Level Name\", typeName: \"\", id: 150, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 151 [label="string",comment="name: \"string\", typeName: \"\", id: 151, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-152 [label="Is Trial?",comment="name: \"Is Trial?\", typeName: \"\", id: 152, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-153 [label="bool",comment="name: \"bool\", typeName: \"\", id: 153, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-154 [label="Movement Settings",comment="name: \"Movement Settings\", typeName: \"SyncedPlayerMovementSettings\", id: 154, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+152 [label="Template Content Identity",comment="name: \"Template Content Identity\", typeName: \"\", id: 152, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+153 [label="string",comment="name: \"string\", typeName: \"\", id: 153, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+154 [label="Is Trial?",comment="name: \"Is Trial?\", typeName: \"\", id: 154, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+155 [label="bool",comment="name: \"bool\", typeName: \"\", id: 155, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+156 [label="Movement Settings",comment="name: \"Movement Settings\", typeName: \"SyncedPlayerMovementSettings\", id: 156, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 162 [label="SyncedPlayerMovementSettings",comment="name: \"SyncedPlayerMovementSettings\", typeName: \"\", id: 162, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 163 [label="Level Current Time",comment="name: \"Level Current Time\", typeName: \"\", id: 163, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 164 [label="unsigned int64",comment="name: \"unsigned int64\", typeName: \"\", id: 164, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
@@ -107,6 +107,6 @@ rankdir = LR
 190 [label="bool",comment="name: \"bool\", typeName: \"\", id: 190, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 191 [label="NetworkPermissions",comment="name: \"NetworkPermissions\", typeName: \"NetworkPermissions\", id: 191, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 195 [label="NetworkPermissions",comment="name: \"NetworkPermissions\", typeName: \"\", id: 195, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;5;10;12;14;21;145;147;149;151;153;162;164;166;169;172;174;176;178;180;182;184;186;188;190;195}
+{ rank = max;5;10;12;14;21;147;149;151;153;155;162;164;166;169;172;174;176;178;180;182;184;186;188;190;195}
 
 }

@@ -5,8 +5,8 @@ rankdir = LR
 3 -> 7
 
 2 [label="ActorDataFlagComponent",comment="name: \"ActorDataFlagComponent\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-3 [label="Actor Flag Bitset Data",comment="name: \"Actor Flag Bitset Data\", typeName: \"std::bitset<124>\", id: 3, branchId: 0, recurseId: -1, attributes: 256, notes: \"Bitset where the bits are indexed by ActorFlags, see ActorFlagsBitset\""];
-7 [label="std::bitset<124>",comment="name: \"std::bitset<124>\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="Actor Flag Bitset Data",comment="name: \"Actor Flag Bitset Data\", typeName: \"std::bitset<125>\", id: 3, branchId: 0, recurseId: -1, attributes: 256, notes: \"Bitset where the bits are indexed by ActorFlags, see ActorFlagsBitset\""];
+7 [label="std::bitset<125>",comment="name: \"std::bitset<125>\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 { rank = max;7}
 
 }

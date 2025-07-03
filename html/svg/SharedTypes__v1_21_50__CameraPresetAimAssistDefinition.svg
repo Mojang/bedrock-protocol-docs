@@ -9,114 +9,114 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 202)">
 <title>SharedTypes::v1_21_50::CameraPresetAimAssistDefinition</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-202 1436.39,-202 1436.39,4 -4,4"/>
-<!-- 76 -->
-<!-- name: &quot;SharedTypes::v1_21_50::CameraPresetAimAssistDefinition&quot;, typeName: &quot;&quot;, id: 76, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;&quot; -->
+<!-- 74 -->
+<!-- name: &quot;SharedTypes::v1_21_50::CameraPresetAimAssistDefinition&quot;, typeName: &quot;&quot;, id: 74, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;&quot; -->
 <g id="node1" class="node">
-<title>76</title>
+<title>74</title>
 <ellipse fill="none" stroke="black" cx="234.58" cy="-99" rx="234.58" ry="18"/>
 <text text-anchor="middle" x="234.58" y="-93.95" font-family="Times New Roman,serif" font-size="14.00">SharedTypes::v1_21_50::CameraPresetAimAssistDefinition</text>
 </g>
-<!-- 77 -->
-<!-- name: &quot;Preset Id&quot;, typeName: &quot;std::optional&lt;class std::basic_string&lt;char,struct std::char_traits&lt;char&gt;,class std::allocator&lt;char&gt; &gt; &gt;&quot;, id: 77, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;&quot; -->
+<!-- 75 -->
+<!-- name: &quot;Preset Id&quot;, typeName: &quot;std::optional&lt;class std::basic_string&lt;char,struct std::char_traits&lt;char&gt;,class std::allocator&lt;char&gt; &gt; &gt;&quot;, id: 75, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;&quot; -->
 <g id="node2" class="node">
-<title>77</title>
+<title>75</title>
 <ellipse fill="none" stroke="black" cx="564.19" cy="-180" rx="43.67" ry="18"/>
 <text text-anchor="middle" x="564.19" y="-174.95" font-family="Times New Roman,serif" font-size="14.00">Preset Id</text>
 </g>
-<!-- 76&#45;&gt;77 -->
+<!-- 74&#45;&gt;75 -->
 <g id="edge1" class="edge">
-<title>76&#45;&gt;77</title>
+<title>74&#45;&gt;75</title>
 <path fill="none" stroke="black" d="M306.66,-116.58C369.74,-132.17 460.16,-154.53 515.09,-168.11"/>
 <polygon fill="black" stroke="black" points="514.24,-171.5 524.79,-170.51 515.92,-164.71 514.24,-171.5"/>
 </g>
-<!-- 79 -->
-<!-- name: &quot;Target Mode&quot;, typeName: &quot;std::optional&lt;enum CameraAimAssist::TargetMode&gt;&quot;, id: 79, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;&quot; -->
+<!-- 77 -->
+<!-- name: &quot;Target Mode&quot;, typeName: &quot;std::optional&lt;enum CameraAimAssist::TargetMode&gt;&quot;, id: 77, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;&quot; -->
 <g id="node4" class="node">
-<title>79</title>
+<title>77</title>
 <ellipse fill="none" stroke="black" cx="564.19" cy="-126" rx="59.03" ry="18"/>
 <text text-anchor="middle" x="564.19" y="-120.95" font-family="Times New Roman,serif" font-size="14.00">Target Mode</text>
 </g>
-<!-- 76&#45;&gt;79 -->
+<!-- 74&#45;&gt;77 -->
 <g id="edge3" class="edge">
-<title>76&#45;&gt;79</title>
+<title>74&#45;&gt;77</title>
 <path fill="none" stroke="black" d="M396.98,-112.3C431.77,-115.17 466.71,-118.05 495.51,-120.42"/>
 <polygon fill="black" stroke="black" points="494.88,-123.88 505.13,-121.22 495.45,-116.91 494.88,-123.88"/>
 </g>
-<!-- 89 -->
-<!-- name: &quot;View Angle&quot;, typeName: &quot;std::optional&lt;class Vec2&gt;&quot;, id: 89, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;&quot; -->
+<!-- 87 -->
+<!-- name: &quot;View Angle&quot;, typeName: &quot;std::optional&lt;class Vec2&gt;&quot;, id: 87, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;&quot; -->
 <g id="node6" class="node">
-<title>89</title>
+<title>87</title>
 <ellipse fill="none" stroke="black" cx="564.19" cy="-72" rx="54.93" ry="18"/>
 <text text-anchor="middle" x="564.19" y="-66.95" font-family="Times New Roman,serif" font-size="14.00">View Angle</text>
 </g>
-<!-- 76&#45;&gt;89 -->
+<!-- 74&#45;&gt;87 -->
 <g id="edge5" class="edge">
-<title>76&#45;&gt;89</title>
+<title>74&#45;&gt;87</title>
 <path fill="none" stroke="black" d="M396.98,-85.7C433.2,-82.71 469.57,-79.72 499.02,-77.29"/>
 <polygon fill="black" stroke="black" points="499.17,-80.79 508.85,-76.48 498.6,-73.81 499.17,-80.79"/>
 </g>
-<!-- 91 -->
-<!-- name: &quot;Distance&quot;, typeName: &quot;std::optional&lt;float&gt;&quot;, id: 91, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;&quot; -->
+<!-- 89 -->
+<!-- name: &quot;Distance&quot;, typeName: &quot;std::optional&lt;float&gt;&quot;, id: 89, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;&quot; -->
 <g id="node8" class="node">
-<title>91</title>
+<title>89</title>
 <ellipse fill="none" stroke="black" cx="564.19" cy="-18" rx="43.16" ry="18"/>
 <text text-anchor="middle" x="564.19" y="-12.95" font-family="Times New Roman,serif" font-size="14.00">Distance</text>
 </g>
-<!-- 76&#45;&gt;91 -->
+<!-- 74&#45;&gt;89 -->
 <g id="edge7" class="edge">
-<title>76&#45;&gt;91</title>
+<title>74&#45;&gt;89</title>
 <path fill="none" stroke="black" d="M306.66,-81.42C369.74,-65.83 460.16,-43.47 515.09,-29.89"/>
 <polygon fill="black" stroke="black" points="515.92,-33.29 524.79,-27.49 514.24,-26.5 515.92,-33.29"/>
 </g>
-<!-- 78 -->
-<!-- name: &quot;std::optional&lt;class std::basic_string&lt;char,struct std::char_traits&lt;char&gt;,class std::allocator&lt;char&gt; &gt; &gt;&quot;, typeName: &quot;&quot;, id: 78, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
+<!-- 76 -->
+<!-- name: &quot;std::optional&lt;class std::basic_string&lt;char,struct std::char_traits&lt;char&gt;,class std::allocator&lt;char&gt; &gt; &gt;&quot;, typeName: &quot;&quot;, id: 76, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
 <g id="node3" class="node">
-<title>78</title>
+<title>76</title>
 <ellipse fill="none" stroke="black" cx="1045.8" cy="-180" rx="386.59" ry="18"/>
 <text text-anchor="middle" x="1045.8" y="-174.95" font-family="Times New Roman,serif" font-size="14.00">std::optional&lt;class std::basic_string&lt;char,struct std::char_traits&lt;char&gt;,class std::allocator&lt;char&gt; &gt; &gt;</text>
 </g>
-<!-- 77&#45;&gt;78 -->
+<!-- 75&#45;&gt;76 -->
 <g id="edge2" class="edge">
-<title>77&#45;&gt;78</title>
+<title>75&#45;&gt;76</title>
 <path fill="none" stroke="black" d="M608.17,-180C619.53,-180 632.76,-180 647.4,-180"/>
 <polygon fill="black" stroke="black" points="647.35,-183.5 657.35,-180 647.35,-176.5 647.35,-183.5"/>
 </g>
-<!-- 88 -->
-<!-- name: &quot;std::optional&lt;enum CameraAimAssist::TargetMode&gt;&quot;, typeName: &quot;&quot;, id: 88, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
+<!-- 86 -->
+<!-- name: &quot;std::optional&lt;enum CameraAimAssist::TargetMode&gt;&quot;, typeName: &quot;&quot;, id: 86, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
 <g id="node5" class="node">
-<title>88</title>
+<title>86</title>
 <ellipse fill="none" stroke="black" cx="1045.8" cy="-126" rx="211.04" ry="18"/>
 <text text-anchor="middle" x="1045.8" y="-120.95" font-family="Times New Roman,serif" font-size="14.00">std::optional&lt;enum CameraAimAssist::TargetMode&gt;</text>
 </g>
-<!-- 79&#45;&gt;88 -->
+<!-- 77&#45;&gt;86 -->
 <g id="edge4" class="edge">
-<title>79&#45;&gt;88</title>
+<title>77&#45;&gt;86</title>
 <path fill="none" stroke="black" d="M623.52,-126C673.74,-126 749.53,-126 823.05,-126"/>
 <polygon fill="black" stroke="black" points="822.84,-129.5 832.84,-126 822.84,-122.5 822.84,-129.5"/>
 </g>
-<!-- 90 -->
-<!-- name: &quot;std::optional&lt;class Vec2&gt;&quot;, typeName: &quot;&quot;, id: 90, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
+<!-- 88 -->
+<!-- name: &quot;std::optional&lt;class Vec2&gt;&quot;, typeName: &quot;&quot;, id: 88, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
 <g id="node7" class="node">
-<title>90</title>
+<title>88</title>
 <ellipse fill="none" stroke="black" cx="1045.8" cy="-72" rx="106.63" ry="18"/>
 <text text-anchor="middle" x="1045.8" y="-66.95" font-family="Times New Roman,serif" font-size="14.00">std::optional&lt;class Vec2&gt;</text>
 </g>
-<!-- 89&#45;&gt;90 -->
+<!-- 87&#45;&gt;88 -->
 <g id="edge6" class="edge">
-<title>89&#45;&gt;90</title>
+<title>87&#45;&gt;88</title>
 <path fill="none" stroke="black" d="M619.27,-72C693.62,-72 829.34,-72 927.55,-72"/>
 <polygon fill="black" stroke="black" points="927.52,-75.5 937.52,-72 927.52,-68.5 927.52,-75.5"/>
 </g>
-<!-- 92 -->
-<!-- name: &quot;std::optional&lt;float&gt;&quot;, typeName: &quot;&quot;, id: 92, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
+<!-- 90 -->
+<!-- name: &quot;std::optional&lt;float&gt;&quot;, typeName: &quot;&quot;, id: 90, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
 <g id="node9" class="node">
-<title>92</title>
+<title>90</title>
 <ellipse fill="none" stroke="black" cx="1045.8" cy="-18" rx="85.13" ry="18"/>
 <text text-anchor="middle" x="1045.8" y="-12.95" font-family="Times New Roman,serif" font-size="14.00">std::optional&lt;float&gt;</text>
 </g>
-<!-- 91&#45;&gt;92 -->
+<!-- 89&#45;&gt;90 -->
 <g id="edge8" class="edge">
-<title>91&#45;&gt;92</title>
+<title>89&#45;&gt;90</title>
 <path fill="none" stroke="black" d="M607.75,-18C683.87,-18 845.08,-18 949,-18"/>
 <polygon fill="black" stroke="black" points="948.92,-21.5 958.92,-18 948.92,-14.5 948.92,-21.5"/>
 </g>

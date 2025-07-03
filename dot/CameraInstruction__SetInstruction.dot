@@ -17,6 +17,8 @@ rankdir = LR
 67 -> 83
 8 -> 84
 84 -> 85
+8 -> 86
+86 -> 90
 
 8 [label="CameraInstruction::SetInstruction",comment="name: \"CameraInstruction::SetInstruction\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 9 [label="Preset Index",comment="name: \"Preset Index\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -35,6 +37,8 @@ rankdir = LR
 83 [label="std::optional<struct CameraInstruction::SetInstruction::EntityOffsetOption>",comment="name: \"std::optional<struct CameraInstruction::SetInstruction::EntityOffsetOption>\", typeName: \"\", id: 83, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 84 [label="Default",comment="name: \"Default\", typeName: \"std::optional<bool>\", id: 84, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 85 [label="std::optional<bool>",comment="name: \"std::optional<bool>\", typeName: \"\", id: 85, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;10;22;32;44;54;66;83;85}
+86 [label="Remove IgnoreStartingValuesComponent",comment="name: \"Remove IgnoreStartingValuesComponent\", typeName: \"bool\", id: 86, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+90 [label="bool",comment="name: \"bool\", typeName: \"\", id: 90, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;10;22;32;44;54;66;83;85;90}
 
 }

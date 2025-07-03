@@ -103,6 +103,8 @@ rankdir = LR
 141 -> 142
 23 -> 143
 143 -> 144
+23 -> 145
+145 -> 146
 
 23 [label="LevelSettings",comment="name: \"LevelSettings\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 24 [label="Seed",comment="name: \"Seed\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -207,6 +209,8 @@ rankdir = LR
 142 [label="string",comment="name: \"string\", typeName: \"\", id: 142, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 143 [label="Scenario Identifier from the server.",comment="name: \"Scenario Identifier from the server.\", typeName: \"\", id: 143, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 144 [label="string",comment="name: \"string\", typeName: \"\", id: 144, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;25;34;36;38;40;42;51;53;55;57;59;61;63;65;67;69;71;73;75;77;79;81;83;85;87;89;91;93;95;97;99;101;103;105;107;109;111;113;115;117;119;121;123;125;132;134;136;138;140;142;144}
+145 [label="Owner Identifier from the server.",comment="name: \"Owner Identifier from the server.\", typeName: \"\", id: 145, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+146 [label="string",comment="name: \"string\", typeName: \"\", id: 146, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;25;34;36;38;40;42;51;53;55;57;59;61;63;65;67;69;71;73;75;77;79;81;83;85;87;89;91;93;95;97;99;101;103;105;107;109;111;113;115;117;119;121;123;125;132;134;136;138;140;142;144;146}
 
 }
