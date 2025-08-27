@@ -2,11 +2,29 @@ digraph "UpdateAdventureSettingsPacket" {
 rankdir = LR
 0
 0 -> 1
-1 -> 13
+1 -> 2
+2 -> 3
+1 -> 4
+4 -> 5
+1 -> 6
+6 -> 7
+1 -> 8
+8 -> 9
+1 -> 10
+10 -> 11
 
-0 [label="UpdateAdventureSettingsPacket",comment="name: \"UpdateAdventureSettingsPacket\", typeName: \"\", id: 0, branchId: 188, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Adventure Settings",comment="name: \"Adventure Settings\", typeName: \"AdventureSettings\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-13 [label="AdventureSettings",comment="name: \"AdventureSettings\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;13}
+0 [label="UpdateAdventureSettingsPacket",comment="name: \"UpdateAdventureSettingsPacket\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"UpdateAdventureSettingsPacket\""];
+1 [label="Adventure Settings",comment="name: \"Adventure Settings\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="no PvM",comment="name: \"no PvM\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="bool",comment="name: \"bool\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+4 [label="no MvP",comment="name: \"no MvP\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="bool",comment="name: \"bool\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+6 [label="Immutable World",comment="name: \"Immutable World\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="bool",comment="name: \"bool\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+8 [label="Show Name Tags",comment="name: \"Show Name Tags\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="bool",comment="name: \"bool\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+10 [label="Auto Jump",comment="name: \"Auto Jump\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+11 [label="bool",comment="name: \"bool\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3;5;7;9;11}
 
 }

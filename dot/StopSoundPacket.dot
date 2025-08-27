@@ -8,7 +8,7 @@ rankdir = LR
 0 -> 5
 5 -> 6
 
-0 [label="StopSoundPacket",comment="name: \"StopSoundPacket\", typeName: \"\", id: 0, branchId: 87, recurseId: -1, attributes: 0, notes: \"\""];
+0 [label="StopSoundPacket",comment="name: \"StopSoundPacket\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"Allows you to stop a sound or all sounds on all clients, only used in a /command\""];
 1 [label="Sound Name",comment="name: \"Sound Name\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="string",comment="name: \"string\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 3 [label="Stop All Sounds?",comment="name: \"Stop All Sounds?\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];

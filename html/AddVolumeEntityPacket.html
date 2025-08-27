@@ -1,4 +1,40 @@
-<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/AddVolumeEntityPacket.svg" alt="AddVolumeEntityPacket">
-<br><table><col width="10%"><col width="90%"><tr><th>Field Name</th><th>Field Notes</th></tr><tr><td>Engine Version</td>
+<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><h1>AddVolumeEntityPacket (id: 166)</h1>
+<table><col width="1%"><col width="99%"><tr><th></th><th></th></tr><tr><td> <b>Purpose:</b> </td>
+<td>Sends a volume entity's definition and components from server to client.</td>
+</tr><tr><td> <b>Notes:</b> </td>
+<td></td>
+</tr></table><br><h2>Payload</h2>
+<img src="svg/AddVolumeEntityPacket.svg" alt="AddVolumeEntityPacket">
+<br><br><br><table><col width="10%"><col width="10%"><col width="15%"><col width="80%"><tr><th>Field Name</th><th>Field Type</th><th>Field Constraints</th><th>Field Notes</th></tr><tr><td>Entity Network Id</td>
+<td>EntityNetId</td>
+<td></td>
+<td></td>
+</tr><tr><td>Components</td>
+<td></td>
+<td></td>
+<td></td>
+</tr><tr><td>JSON Identifier</td>
+<td>string</td>
+<td>&lt;div style="padding-left: 0px;"&gt;MinLength = 1&lt;/div&gt;</td>
+<td></td>
+</tr><tr><td>Instance Name</td>
+<td>string</td>
+<td>&lt;div style="padding-left: 0px;"&gt;MinLength = 1&lt;/div&gt;</td>
+<td></td>
+</tr><tr><td>Min Bounds</td>
+<td>NetworkBlockPosition</td>
+<td></td>
+<td></td>
+</tr><tr><td>Max Bounds</td>
+<td>NetworkBlockPosition</td>
+<td></td>
+<td></td>
+</tr><tr><td>Dimension Type</td>
+<td>DimensionType</td>
+<td></td>
+<td></td>
+</tr><tr><td>Engine Version</td>
+<td>string</td>
+<td></td>
 <td>Semantic version string</td>
 </tr></table></body> </html>

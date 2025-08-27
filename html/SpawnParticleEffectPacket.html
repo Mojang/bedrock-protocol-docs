@@ -1,4 +1,28 @@
-<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/SpawnParticleEffectPacket.svg" alt="SpawnParticleEffectPacket">
-<br><table><col width="10%"><col width="90%"><tr><th>Field Name</th><th>Field Notes</th></tr><tr><td>Effect Name</td>
+<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><h1>SpawnParticleEffectPacket (id: 118)</h1>
+<table><col width="1%"><col width="99%"><tr><th></th><th></th></tr><tr><td> <b>Purpose:</b> </td>
+<td>Tell client to spawn a particle effect.</td>
+</tr><tr><td> <b>Notes:</b> </td>
+<td>This is not used for much anymore, only the Particle command (spawn particle by name at a location) and for ScriptServerSpawnParticleAttachedToActor and ScriptServerSpawnParticleInWorldEvent.</td>
+</tr></table><br><h2>Payload</h2>
+<img src="svg/SpawnParticleEffectPacket.svg" alt="SpawnParticleEffectPacket">
+<br><br><br><table><col width="10%"><col width="10%"><col width="15%"><col width="80%"><tr><th>Field Name</th><th>Field Type</th><th>Field Constraints</th><th>Field Notes</th></tr><tr><td>Dimension Id</td>
+<td>unsigned byte</td>
+<td></td>
+<td></td>
+</tr><tr><td>Actor Id</td>
+<td>ActorUniqueID</td>
+<td></td>
+<td></td>
+</tr><tr><td>Position</td>
+<td>Vec3</td>
+<td></td>
+<td></td>
+</tr><tr><td>Effect Name</td>
+<td>string</td>
+<td></td>
 <td>Should be an effect that exists on the client. No-op if the effect doesn't exist.</td>
+</tr><tr><td>Molang Variables</td>
+<td>MolangVariableMap</td>
+<td></td>
+<td></td>
 </tr></table></body> </html>

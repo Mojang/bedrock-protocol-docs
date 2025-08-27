@@ -1,0 +1,28 @@
+digraph "CameraAimAssistCategoryDefinition" {
+rankdir = LR
+0
+0 -> 1
+0 -> 2
+2 -> 3
+3 -> 4
+2 -> 5
+5 -> 6
+2 -> 7
+7 -> 8
+2 -> 9
+9 -> 10
+
+0 [label="CameraAimAssistCategoryDefinition",comment="name: \"CameraAimAssistCategoryDefinition\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="name",comment="name: \"name\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"Name of the Aim-Assist Category used during lookup.\""];
+2 [label="priorities",comment="name: \"priorities\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"The set of priorities used when determining aim-assist selection.\""];
+3 [label="entities",comment="name: \"entities\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"Optional. Map of Entity identifiers to Aim-Assist targeting priority. Larger numbers have greater priority.\""];
+4 [label="map<Reference,int>",comment="name: \"map<Reference,int>\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"Optional. Map of Entity identifiers to Aim-Assist targeting priority. Larger numbers have greater priority.\""];
+5 [label="blocks",comment="name: \"blocks\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"Optional. Map of Block identifiers to Aim-Assist targeting priority. Larger numbers have greater priority.\""];
+6 [label="map<Reference,int>",comment="name: \"map<Reference,int>\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"Optional. Map of Block identifiers to Aim-Assist targeting priority. Larger numbers have greater priority.\""];
+7 [label="entity_default",comment="name: \"entity_default\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"Optional. Default Aim-Assist targeting priority used for Entities not found in 'entities'.\""];
+8 [label="int",comment="name: \"int\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"Optional. Default Aim-Assist targeting priority used for Entities not found in 'entities'.\""];
+9 [label="block_default",comment="name: \"block_default\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"Optional. Default Aim-Assist targeting priority used for Blocks not found in 'blocks'.\""];
+10 [label="int",comment="name: \"int\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"Optional. Default Aim-Assist targeting priority used for Blocks not found in 'blocks'.\""];
+{ rank = max;4;6;8;10}
+
+}

@@ -8,7 +8,7 @@ rankdir = LR
 0 -> 5
 5 -> 6
 
-0 [label="CreatePhotoPacket",comment="name: \"CreatePhotoPacket\", typeName: \"\", id: 0, branchId: 171, recurseId: -1, attributes: 0, notes: \"\""];
+0 [label="CreatePhotoPacket",comment="name: \"CreatePhotoPacket\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"Players now have the possibility to export photos from their portfolios into photo items in their inventory. EDU.\""];
 1 [label="Raw ID",comment="name: \"Raw ID\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="unsigned int64",comment="name: \"unsigned int64\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 3 [label="Photo Name",comment="name: \"Photo Name\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];

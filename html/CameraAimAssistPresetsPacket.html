@@ -1,2 +1,23 @@
-<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/CameraAimAssistPresetsPacket.svg" alt="CameraAimAssistPresetsPacket">
-<br></body> </html>
+<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><h1>CameraAimAssistPresetsPacket (id: 320)</h1>
+<table><col width="1%"><col width="99%"><tr><th></th><th></th></tr><tr><td> <b>Purpose:</b> </td>
+<td>Camera aim-assist registry presets/categories data sent from the server to clients.</td>
+</tr><tr><td> <b>Notes:</b> </td>
+<td>
+	Sent by the server to clients for initializing and updating the client aim-assist registry.
+	AddToExisting operations are sent by the server when new presets/categories are added to the registry through creator facing APIs.
+	</td>
+</tr></table><br><h2>Payload</h2>
+<img src="svg/CameraAimAssistPresetsPacket.svg" alt="CameraAimAssistPresetsPacket">
+<br><br><br><table><col width="10%"><col width="10%"><col width="15%"><col width="80%"><tr><th>Field Name</th><th>Field Type</th><th>Field Constraints</th><th>Field Notes</th></tr><tr><td>Camera Aim-Assist Presets</td>
+<td>vector&lt;CameraAimAssistCategoryDefinition&gt;</td>
+<td></td>
+<td></td>
+</tr><tr><td>Camera Aim-Assist Categories</td>
+<td>vector&lt;CameraAimAssistPresetDefinition&gt;</td>
+<td></td>
+<td></td>
+</tr><tr><td>Operation</td>
+<td>enum enum CameraAimAssistPresetsPacketOperation</td>
+<td></td>
+<td></td>
+</tr></table></body> </html>

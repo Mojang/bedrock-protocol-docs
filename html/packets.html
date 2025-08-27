@@ -1,7 +1,7 @@
 <!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><table><col width="5%"><col width="10%"><col width="20%"><col width="65%"><tr><th>Packet ID</th><th>Name</th><th>Purpose</th><th>Notes</th></tr><tr><td>1</td>
 <td><a href = "LoginPacket.html">LoginPacket</a></td>
-<td>Login</td>
-<td>Sent once from client to server at login. </td>
+<td>Sent once from client to server at login. About 100k.</td>
+<td></td>
 </tr><tr><td>2</td>
 <td><a href = "PlayStatusPacket.html">PlayStatusPacket</a></td>
 <td>Describes the login status of the player</td>
@@ -56,8 +56,8 @@
 <td>Newly created entities on server use AddActorPacket to notify clients that they exist. </td>
 </tr><tr><td>14</td>
 <td><a href = "RemoveActorPacket.html">RemoveActorPacket</a></td>
-<td>Remove Actor</td>
-<td>Occasionally, during the server player tick some time is taken to remove nearby actors from the world. </td>
+<td>Occasionally, during the server player tick some time is taken to remove nearby actors from the world.</td>
+<td>This is sent to the client to confirm which entity is being removed. This is done by sending an ActorUniqueID</td>
 </tr><tr><td>15</td>
 <td><a href = "AddItemActorPacket.html">AddItemActorPacket</a></td>
 <td>Add Item Actor</td>
@@ -72,24 +72,24 @@
 <td>From this the item and count is turned into an item and the transaction is handled afterwards.</td>
 </tr><tr><td>18</td>
 <td><a href = "MoveActorAbsolutePacket.html">MoveActorAbsolutePacket</a></td>
-<td>Move Actor Absolute</td>
-<td>This is used primarily for motion updates of all actors from server to client.<br></td>
+<td>This is used primarily for motion updates of all actors from server to client.</td>
+<td></td>
 </tr><tr><td>19</td>
 <td><a href = "MovePlayerPacket.html">MovePlayerPacket</a></td>
 <td>Move Player</td>
 <td>     For client authoritative and server authoritative movement modes, it is only intended as a client-bound packet.<br>     It forces the player to a specified position with slightly different behavior depending on the position mode.<br>     For similar packets that move the player, see also:<br>     - CorrectPlayerMovePredictionPacket (server authoritative)<br>     - SetActorMotionPacket<br>    </td>
 </tr><tr><td>21</td>
 <td><a href = "UpdateBlockPacket.html">UpdateBlockPacket</a></td>
-<td>Update Block</td>
-<td>Occasional packets sent from server when blocks update or are ticked. (For example, when digging.) </td>
+<td>Occasional packets sent from server when blocks update or are ticked. (For example, when digging.)</td>
+<td>This happens often. Luckily, the packets are small.</td>
 </tr><tr><td>22</td>
 <td><a href = "AddPaintingPacket.html">AddPaintingPacket</a></td>
 <td>Sends the information for a new painting actor from server to client.</td>
 <td></td>
 </tr><tr><td>25</td>
 <td><a href = "LevelEventPacket.html">LevelEventPacket</a></td>
-<td>Level Event</td>
 <td>Splash Potions, weather events, global pause, simlock commands, oh my!</td>
+<td></td>
 </tr><tr><td>26</td>
 <td><a href = "BlockEventPacket.html">BlockEventPacket</a></td>
 <td>Whenever a block event happens it is sent from the server to sync client and server, with arbitrarily encoded information in b0 and b1.</td>
@@ -101,7 +101,15 @@
 </tr><tr><td>28</td>
 <td><a href = "MobEffectPacket.html">MobEffectPacket</a></td>
 <td>Mob Effect</td>
-<td>At the start of the game the server sends any mob effects with _sendAdditionalLevelData() if the joining player saved out with them,  and then anytime a mob effect is added, removed, or updated this packet is sent.<br>  It is important for player movement simulation to ensure that the following effects are sent for the player or any client predicted vehicle they are in control of:<br>  - levitation<br>  - slow_falling<br>  - jump<br>  - movement_speed<br>  - movement_slowdown<br>  - weaving</td>
+<td>At the start of the game the server sends any mob effects with _sendAdditionalLevelData() if the joining player saved out with them,
+and then anytime a mob effect is added, removed, or updated this packet is sent.<br>
+It is important for player movement simulation to ensure that the following effects are sent for the player or any client predicted vehicle they are in control of:<br>
+- levitation<br>
+- slow_falling<br>
+- jump<br>
+- movement_speed<br>
+- movement_slowdown<br>
+- weaving</td>
 </tr><tr><td>29</td>
 <td><a href = "UpdateAttributesPacket.html">UpdateAttributesPacket</a></td>
 <td>Update Attributes</td>
@@ -148,23 +156,24 @@
 <td><a href = "SetActorMotionPacket.html">SetActorMotionPacket</a></td>
 <td>This is used for the server to set the velocity of a client actor.</td>
 <td>
-	It is primarily relevant for client predicted entities like the player or a boat or horse they are in control of. For most other actor types it does nothing.<br>
+	It is primarily relevant for client predicted entities like the player or a boat or horse they are in control of.
+	For most other actor types it does nothing.<br>
 	This is one of the packets that can directly affect player motion, for others, see:<br>
 	- MovePlayerPacket<br>
 	- CorrectPlayerMovePredictionPacket
 	</td>
 </tr><tr><td>41</td>
 <td><a href = "SetActorLinkPacket.html">SetActorLinkPacket</a></td>
-<td>Set Actor Link</td>
 <td>Sent by both client and server, only received by LegacyClientHandler.</td>
+<td>Sent when the player starts riding something. Two are sent at a time for some reason.</td>
 </tr><tr><td>42</td>
 <td><a href = "SetHealthPacket.html">SetHealthPacket</a></td>
 <td>This packet is sent to the client when the player is spawned in and when they respawn.</td>
 <td></td>
 </tr><tr><td>43</td>
 <td><a href = "SetSpawnPositionPacket.html">SetSpawnPositionPacket</a></td>
-<td>Set Spawn Position</td>
-<td>When a player logs in or the SetWorldSpawnCommand is used this is sent from the server to the client. </td>
+<td>When a player logs in or the SetWorldSpawnCommand is used this is sent from the server to the client. Does not change when using a bed, that is a separate packet (RespawnPacket)</td>
+<td>see RespawnPacket</td>
 </tr><tr><td>44</td>
 <td><a href = "AnimatePacket.html">AnimatePacket</a></td>
 <td>Animate Actor</td>
@@ -179,10 +188,8 @@
 <td></td>
 </tr><tr><td>47</td>
 <td><a href = "ContainerClosePacket.html">ContainerClosePacket</a></td>
-<td>
-	After the game deletes the container manager on the client, the client sends this packet.
-	Then the server deletes its container manager, and sends a packet back to the client that closes the container screen.
-	</td>
+<td>After the game deletes the container manager on the client, the client sends this packet.
+	Then the server deletes its container manager, and sends a packet back to the client that closes the container screen.</td>
 <td></td>
 </tr><tr><td>48</td>
 <td><a href = "PlayerHotbarPacket.html">PlayerHotbarPacket</a></td>
@@ -210,8 +217,8 @@
 <td>This is only used when players use pick block, a command is used, tests, and some 3rd party content.</td>
 </tr><tr><td>56</td>
 <td><a href = "BlockActorDataPacket.html">BlockActorDataPacket</a></td>
-<td>Block Actor Data</td>
-<td>Sends the entire user data compound tag and the block position to the client. </td>
+<td>Sends the entire user data compound tag and the block position to the client.</td>
+<td></td>
 </tr><tr><td>58</td>
 <td><a href = "LevelChunkPacket.html">LevelChunkPacket</a></td>
 <td>Level Chunk Packet</td>
@@ -222,8 +229,8 @@
 <td>see SimpleEventPacket</td>
 </tr><tr><td>60</td>
 <td><a href = "SetDifficultyPacket.html">SetDifficultyPacket</a></td>
+<td>Set Difficulty</td>
 <td>Used for when a client changes difficulty through the menu or when the server changes the difficulty.</td>
-<td></td>
 </tr><tr><td>61</td>
 <td><a href = "ChangeDimensionPacket.html">ChangeDimensionPacket</a></td>
 <td>The server sends this packet from the level to kick off dimension changing process.</td>
@@ -254,20 +261,28 @@
 <td>This is sent either if the user is creating a new map, if a map that exists cannot be found, or if the user is creating a locked copy of a map.</td>
 </tr><tr><td>68</td>
 <td><a href = "MapInfoRequestPacket.html">MapInfoRequestPacket</a></td>
-<td>MapInfoRequestPacket</td>
-<td>In the case of the client being unable to find map data for a map item it sends a uuid for a map to the server. </td>
+<td>In the case of the client being unable to find map data for a map item it sends a uuid for a map to the server.</td>
+<td>
+	If the server finds the map, it sends the data back. If it can't find the map, it creates it and sends the map and data back. 
+	(the map creation data packet and the map data packet are separate packets). 
+	The response from the server potentially has to load from disk, just an fyi. 
+	This packet is fired via map item tick, if the map data we have is invalid, or if the map is placed in an item frame.
+
+	For Client Side Generation when we re-sample pixels from the Client's ChunkSource we need to inform the Server's map about
+	these new pixels so that it can save them to LevelStorage. Use this packet to send to the Server the extra pixels
+	</td>
 </tr><tr><td>69</td>
 <td><a href = "RequestChunkRadiusPacket.html">RequestChunkRadiusPacket</a></td>
-<td>Request Chunk Radius</td>
 <td>The client can't just change the view radius without the server's approval, otherwise there could be holes on unrendered area.</td>
+<td>This packet is to make sure that the server expands/shrinks first. Additionally for ClientSide Chunk Generation we can send a byte, based on client's hardware capabilities what is the max chunk radius client can handle.</td>
 </tr><tr><td>70</td>
 <td><a href = "ChunkRadiusUpdatedPacket.html">ChunkRadiusUpdatedPacket</a></td>
-<td>Sent when the world is loading.</td>
-<td>We don't know why it is sent four times. Defines the tick distance.</td>
+<td>Sent when the world is loading. We don't know why it is sent four times. Defines the tick distance.</td>
+<td></td>
 </tr><tr><td>72</td>
 <td><a href = "GameRulesChangedPacket.html">GameRulesChangedPacket</a></td>
-<td>Game Rules Changed</td>
-<td>Sent from server whenever any combination of gamerules is changed. the underlying data is a vector of GameRules</td>
+<td>Updates game rules.</td>
+<td>Informs client about any changes to the game rules.</td>
 </tr><tr><td>73</td>
 <td><a href = "CameraPacket.html">CameraPacket</a></td>
 <td>Used only in EDU through the tripod camera item or the TakePictureCommand. Sends the camera actor id and the target player id from the server.</td>
@@ -298,23 +313,23 @@
 <td>"slash" command execution, server to client. </td>
 </tr><tr><td>80</td>
 <td><a href = "UpdateTradePacket.html">UpdateTradePacket</a></td>
-<td>UpdateTradePacket</td>
 <td>This is used when the player trades with an npc. This sends all of the updated trade info in one big ol' packet.</td>
+<td></td>
 </tr><tr><td>81</td>
 <td><a href = "UpdateEquipPacket.html">UpdateEquipPacket</a></td>
-<td>Update Equip</td>
 <td>Seemingly only used for the Horse Inventory... More specifically when the player opens the horse inventory.</td>
+<td></td>
 </tr><tr><td>82</td>
 <td><a href = "ResourcePackDataInfoPacket.html">ResourcePackDataInfoPacket</a></td>
 <td>Resource Pack Data Info</td>
-<td>Sent from the serverFileChunkUploader during the initialization of the file uploader. This packet is sent to the primary client. </td>
+<td>Sent from the serverFileChunkUploader during the initialization of the file uploader. This packet is sent to the primary client.</td>
 </tr><tr><td>83</td>
 <td><a href = "ResourcePackChunkDataPacket.html">ResourcePackChunkDataPacket</a></td>
-<td>-</td>
-<td></td>
+<td>Resource Pack Chunk Data</td>
+<td>(only one marked for uncompressed) realms resource pack download</td>
 </tr><tr><td>84</td>
 <td><a href = "ResourcePackChunkRequestPacket.html">ResourcePackChunkRequestPacket</a></td>
-<td>-</td>
+<td>Resource Pack Chunk Request</td>
 <td></td>
 </tr><tr><td>85</td>
 <td><a href = "TransferPacket.html">TransferPacket</a></td>
@@ -326,13 +341,14 @@
 <td></td>
 </tr><tr><td>87</td>
 <td><a href = "StopSoundPacket.html">StopSoundPacket</a></td>
-<td>Stop Sound</td>
 <td>Allows you to stop a sound or all sounds on all clients, only used in a /command</td>
+<td></td>
 </tr><tr><td>88</td>
 <td><a href = "SetTitlePacket.html">SetTitlePacket</a></td>
 <td>Used by 3rd party content for the purpose of showing ui banners</td>
 <td>There are 2 commands associated with it: title and titleraw.
-	Both of which have functionality to change fade in/out time for titles, sub titles, and action bar text.</td>
+	Both of which have functionality to change fade in/out time for titles, sub titles, and action bar text.
+	titleraw is using json to format so it will be bigger (i don't have an example)</td>
 </tr><tr><td>89</td>
 <td><a href = "AddBehaviorTreePacket.html">AddBehaviorTreePacket</a></td>
 <td>Add Behavior Tree</td>
@@ -360,8 +376,8 @@ It sends a vector of purchase receipts(string).There is a handler and a multiple
 <td>This packet starts the login process of subclients (splitscreen)</td>
 </tr><tr><td>95</td>
 <td><a href = "AutomationClientConnectPacket.html">AutomationClientConnectPacket</a></td>
-<td>Initiates websocket connection.</td>
-<td>Only used though command to connect to server URLs. This is primarily used by EDU for connecting to their companion apps </td>
+<td>Initiates websocket connection</td>
+<td>Only used though command to connect to server URLs. This is primarily used by EDU for connecting to their companion apps and other external applications through web sockets. Some mods/3rd party packs use it as well.</td>
 </tr><tr><td>96</td>
 <td><a href = "SetLastHurtByPacket.html">SetLastHurtByPacket</a></td>
 <td>Any time a player is hit, the id of the last mob that attacked them is sent to the client</td>
@@ -374,19 +390,25 @@ It sends a vector of purchase receipts(string).There is a handler and a multiple
 <td><a href = "NpcRequestPacket.html">NpcRequestPacket</a></td>
 <td>Used for a number of interactions with the NPC Component</td>
 <td>A request is made from the client during an interaction with an NPC then the request is processed by the server. 
-	Actor MUST have the NPCComponent to be handled.</td>
+	Actor MUST have the NPCComponent to be handled. 
+	We currently only use this for EDU, but the goal was to expose the NPC Component to creators.</td>
 </tr><tr><td>99</td>
 <td><a href = "PhotoTransferPacket.html">PhotoTransferPacket</a></td>
-<td>Photo Transfer</td>
-<td>There is a camera item in EDU and they can use it to take screenshots and add them to a scrapbook. </td>
+<td>There is a camera item in EDU and they can use it to take screenshots and add them to a scrapbook.</td>
+<td>
+	When the player uses the camera item or adds a photo to the scrapbook it sends the photo to the server, 
+	then the server sends a response back on whether that was successful or not. 
+	Either uploads a photo to the server's photoStorage or request one from it to be stored in client's photoStorage.
+	If no mPhotoData is provided it is a request for the given filename.
+	</td>
 </tr><tr><td>100</td>
 <td><a href = "ModalFormRequestPacket.html">ModalFormRequestPacket</a></td>
 <td>Modal Form Request</td>
 <td>Not sent from vanilla. The feature is meant for third-party servers to be able to drive dynamic ui forms. The request comes with some JSON that describes a custom UI screen thirdparty uses.Server->client.</td>
 </tr><tr><td>101</td>
 <td><a href = "ModalFormResponsePacket.html">ModalFormResponsePacket</a></td>
-<td>Modal Form Response</td>
 <td>Fired in response to third party server request to show the custom UI screen.</td>
+<td>see ModalFormRequestPacket</td>
 </tr><tr><td>102</td>
 <td><a href = "ServerSettingsRequestPacket.html">ServerSettingsRequestPacket</a></td>
 <td>Sent during the initialization of world settings on the client.</td>
@@ -401,8 +423,8 @@ It sends a vector of purchase receipts(string).There is a handler and a multiple
 <td>The only use in vanilla is a test command called ProfileCommand. It makes the user's xbox profile popup.</td>
 </tr><tr><td>105</td>
 <td><a href = "SetDefaultGameTypePacket.html">SetDefaultGameTypePacket</a></td>
-<td>Set Default Game Type</td>
-<td>Same as SetPlayerGameTypePacket & UpdatePlayerGameTypePacket, the only difference is that this changes the default for all clients</td>
+<td>Same as SetPlayerGameTypePacket & UpdatePlayerGameTypePacket, the only difference is that this changes the default for all clients.</td>
+<td></td>
 </tr><tr><td>106</td>
 <td><a href = "RemoveObjectivePacket.html">RemoveObjectivePacket</a></td>
 <td>Using the scoreboard command, users can remove objectives that are tracked on the scoreboard.</td>
@@ -421,8 +443,8 @@ It sends a vector of purchase receipts(string).There is a handler and a multiple
 <td>The packet can be fired from the client through the UI or from the server during updates.</td>
 </tr><tr><td>110</td>
 <td><a href = "UpdateBlockSyncedPacket.html">UpdateBlockSyncedPacket</a></td>
-<td>Update Block Synced</td>
-<td>Used to sync moving blocks with clients so they render correctlyVariation of UpdateBlockPacket that includes information to sync entities with renderchunk generation.</td>
+<td>Used to sync moving blocks with clients so they render correctly</td>
+<td>Variation of UpdateBlockSyncedPacket that includes information to sync entities with renderchunk generation. Occasionally when blocks change a sync message is sent and during the change on the dimension, this packet is sent to the client to alert the update flags and sync info at a specific position.</td>
 </tr><tr><td>111</td>
 <td><a href = "MoveActorDeltaPacket.html">MoveActorDeltaPacket</a></td>
 <td>Move Actor Delta</td>
@@ -442,19 +464,19 @@ It sends a vector of purchase receipts(string).There is a handler and a multiple
 </tr><tr><td>115</td>
 <td><a href = "NetworkStackLatencyPacket.html">NetworkStackLatencyPacket</a></td>
 <td>Ping Packet</td>
-<td>DEPRECATED. Was for testing / debug / telemetryFor testing / debug / telemetry:</td>
+<td>DEPRECATED. Was for testing/debug/telemetry: Used to provide ping time to in game debug graph, also for realms telemetry of actual in game latency.  Sent from both client & server.</td>
 </tr><tr><td>118</td>
 <td><a href = "SpawnParticleEffectPacket.html">SpawnParticleEffectPacket</a></td>
-<td>SpawnParticleEffectPacket</td>
-<td>This is not used for much anymore, only the Particle command (spawn particle by name at a location) and for </td>
+<td>Tell client to spawn a particle effect.</td>
+<td>This is not used for much anymore, only the Particle command (spawn particle by name at a location) and for ScriptServerSpawnParticleAttachedToActor and ScriptServerSpawnParticleInWorldEvent.</td>
 </tr><tr><td>119</td>
 <td><a href = "AvailableActorIdentifiersPacket.html">AvailableActorIdentifiersPacket</a></td>
-<td>Available Actor Identifiers</td>
-<td>On world start, send clients the info for all available actors.Sends the whole list of actor identifiers at game start from the server.</td>
+<td>Sends the whole list of actor identifiers at game start from the server.</td>
+<td></td>
 </tr><tr><td>121</td>
 <td><a href = "NetworkChunkPublisherUpdatePacket.html">NetworkChunkPublisherUpdatePacket</a></td>
-<td>Tells clients to update the chunk view for the local player. </td>
-<td>Used (from the server) when a user's Chunk View moves, I.e. the area that determines what chunks exist.  For ClientSideGeneration we also send the client a list of ChunkPos that the Server will fully build.</td>
+<td>Tells clients to update the chunk view for the local player.</td>
+<td>Used (from the server) when a user's Chunk View moves, I.e. the area that determines what chunks exist. For ClientSideGeneration we also send the client a list of ChunkPos that the Server will fully build.</td>
 </tr><tr><td>122</td>
 <td><a href = "BiomeDefinitionListPacket.html">BiomeDefinitionListPacket</a></td>
 <td>Biome Definition List</td>
@@ -463,9 +485,9 @@ It sends a vector of purchase receipts(string).There is a handler and a multiple
 <td><a href = "LevelSoundEventPacket.html">LevelSoundEventPacket</a></td>
 <td>Level Sound Event</td>
 <td>
-Most sounds get launched on server and replicated to clients, but a handful of player initiated sounds are launched on their client and replicated through the network. 
-(In most of the codebase 'Event' means telemetry events; this is not the case here, this is how sounds get replicated across the network in vanilla.)
-With support for custom entities. Entity Id is a string and Event Id is an integer.
+	Most sounds get launched on server and replicated to clients, but a handful of player initiated sounds are launched on their client and replicated through the network.
+	(In most of the codebase 'Event' means telemetry events; this is not the case here, this is how sounds get replicated across the network in vanilla.)
+	With support for custom entities. Entity Id is a string and Event Id is an integer.
 	</td>
 </tr><tr><td>124</td>
 <td><a href = "LevelEventGenericPacket.html">LevelEventGenericPacket</a></td>
@@ -493,12 +515,12 @@ With support for custom entities. Entity Id is a string and Event Id is an integ
 	</td>
 </tr><tr><td>132</td>
 <td><a href = "StructureTemplateDataRequestPacket.html">StructureTemplateDataRequestPacket</a></td>
-<td>Structure Data Request</td>
-<td>Used to request structure information from a server.How we want to get our structure: by capturing what is live in the world, </td>
+<td>Used to request structure information from a server.</td>
+<td>This is used to kick off the process of loading and returning a structure in a Tag from the server back to the client. Currently this functionality is completely disabled and does nothing.</td>
 </tr><tr><td>133</td>
 <td><a href = "StructureTemplateDataResponsePacket.html">StructureTemplateDataResponsePacket</a></td>
-<td>Structure Data Response</td>
-<td>Used to reply to a request for structure information.This is used in exporting from load, exporting from save, and querying saved structures from structure blocks. </td>
+<td>This is used in exporting from load, exporting from save, and querying saved structures from structure blocks.</td>
+<td>The client sends a packet to the server, from there the structure is built and then put into a Tag where it is sent back to the client, from there you can view the structure in the Structure Block Screen. Currently this functionality is completely disabled and does nothing. Used to reply to a request for structure information.</td>
 </tr><tr><td>135</td>
 <td><a href = "ClientCacheBlobStatusPacket.html">ClientCacheBlobStatusPacket</a></td>
 <td>Client Cache Blob Status Packet</td>
@@ -509,12 +531,12 @@ With support for custom entities. Entity Id is a string and Event Id is an integ
 <td>Any missing blob should just be thrown into one of these packet ASAP and sent.Only active in a *real* client-server scenario. This packet is just a list of <blobId, blob> pairs sent from server to client.</td>
 </tr><tr><td>137</td>
 <td><a href = "EducationSettingsPacket.html">EducationSettingsPacket</a></td>
-<td>Education Settings Packet</td>
-<td>Transmits EducationLevelSettings to all clients.Currently transmits EducationLevelSettings to all clients when the game is starting.</td>
+<td>Transmits EducationLevelSettings to all clients.</td>
+<td>Currently transmits EducationLevelSettings to all clients when the game is starting.</td>
 </tr><tr><td>138</td>
 <td><a href = "EmotePacket.html">EmotePacket</a></td>
-<td>Emote Packet</td>
-<td>A client sends this to the server to notify other clients about the emote.Sent in both directions; by client to request that an emote is played and then from the server to the clients</td>
+<td>A client sends this to the server to notify other clients about the emote.</td>
+<td>Sent in both directions; by client to request that an emote is played and then from the server to the clients to indicate which player needs to now emote.</td>
 </tr><tr><td>139</td>
 <td><a href = "MultiplayerSettingsPacket.html">MultiplayerSettingsPacket</a></td>
 <td>Syncs multiplayer settings</td>
@@ -529,12 +551,12 @@ With support for custom entities. Entity Id is a string and Event Id is an integ
 <td>Used when the player changes the world settings like doDayNightCycle or WeatherCycle via the world settings menu</td>
 </tr><tr><td>141</td>
 <td><a href = "AnvilDamagePacket.html">AnvilDamagePacket</a></td>
-<td>Anvil Damage Packet</td>
-<td>Requests an anvil to be damaged.Sends the current damage the anvil has taken per use from client.</td>
+<td>Requests an anvil to be damaged.</td>
+<td>Sends the current damage the anvil has taken per use from client.</td>
 </tr><tr><td>142</td>
 <td><a href = "CompletedUsingItemPacket.html">CompletedUsingItemPacket</a></td>
-<td>Send server to client to complete the using item process.</td>
-<td>An example is when you finish drinking or eating.</td>
+<td>Send server to client to complete the using item process. An example is when you finish drinking or eating.</td>
+<td></td>
 </tr><tr><td>143</td>
 <td><a href = "NetworkSettingsPacket.html">NetworkSettingsPacket</a></td>
 <td>Sends tunable options from host to client (compression threshold and algorithm)</td>
@@ -561,28 +583,29 @@ With support for custom entities. Entity Id is a string and Event Id is an integ
 <td>The new server auth inventory item transaction response, sent from the server.</td>
 </tr><tr><td>149</td>
 <td><a href = "PlayerArmorDamagePacket.html">PlayerArmorDamagePacket</a></td>
-<td>PlayerArmorDamagePacket</td>
-<td>Sent from server whenever the player's armor takes damage. This packet sends all armor data at once. </td>
+<td>Sent from server whenever the player's armor takes damage.</td>
+<td></td>
 </tr><tr><td>150</td>
 <td><a href = "CodeBuilderPacket.html">CodeBuilderPacket</a></td>
-<td>This is EDU exclusively.</td>
-<td>It is sent once from _sendLevelData() in the start of a game from the server, and once per CodeBuilderCommand</td>
+<td>Code Builder Packet</td>
+<td>This is EDU exclusively.It is sent once from _sendLevelData() in the start of a game from the server,
+	and once per CodeBuilderCommand</td>
 </tr><tr><td>151</td>
 <td><a href = "UpdatePlayerGameTypePacket.html">UpdatePlayerGameTypePacket</a></td>
-<td>Update Player Game Type</td>
 <td>The server will send this back to all clients on receipt of the SetPlayerGameTypePacket so that cached game type and permissions flags in mLevel on all clients is kept up to date.</td>
+<td></td>
 </tr><tr><td>152</td>
 <td><a href = "EmoteListPacket.html">EmoteListPacket</a></td>
 <td>Allows clients to download emotes that other clients have equipped.</td>
 <td></td>
 </tr><tr><td>153</td>
 <td><a href = "PositionTrackingDBServerBroadcastPacket.html">PositionTrackingDBServerBroadcastPacket</a></td>
-<td>PositionTrackingDBServerBroadcastPacket</td>
 <td>Server to client packet for server authoratative runtime database (with persistent LevelStorage backup) designed primarily to track lodestone stuff. See Position Tracking DB Notes.md in bedrock-docs.</td>
+<td></td>
 </tr><tr><td>154</td>
 <td><a href = "PositionTrackingDBClientRequestPacket.html">PositionTrackingDBClientRequestPacket</a></td>
-<td>PositionTrackingDBClientRequestPacket</td>
-<td>Client to server packet for server authoratative runtime database (with persistent LevelStorage backup) designed primarily to track lodestone stuff. See Position Tracking DB Notes.md in bedrock-docs.</td>
+<td>Position Tracking DB Client Request</td>
+<td>Client to server packet for server authoratative runtime database (with persistent LevelStorage backup) designed primarily to track lodestone stuff. See Position Tracking DB Notes.md in bedrock-docs. see PositionTrackingDBServerBroadcastPacket</td>
 </tr><tr><td>155</td>
 <td><a href = "DebugInfoPacket.html">DebugInfoPacket</a></td>
 <td>The system sends debug information via a generic network packet. This enables rendering of any server information on the client in for instance ImGui.</td>
@@ -597,8 +620,14 @@ With support for custom entities. Entity Id is a string and Event Id is an integ
 <td>This is from the server when spatial optimizations are enabled and the server does not send a spatial update.</td>
 </tr><tr><td>158</td>
 <td><a href = "AnimateEntityPacket.html">AnimateEntityPacket</a></td>
-<td>AnimateEntityPacket</td>
-<td>The AnimateEntityPacket is used to trigger a one-off animation on the client it is sent to.</td>
+<td>The AnimateEntityPacket is used to trigger a one - off animation on the client it is sent to.</td>
+<td>Several properties can be specified in the following order:</br>
+	- The name of the animation (a string) that the specified entities are to play.</br>
+	- The next state to transition to (a string) once the specified animation is finished playing.</br>
+	- The stop expression (a string), the condition that determines when to transition to the next state.</br>
+	- The name of an animation controller (a string) that you would like to use.</br>
+	- The blend out time (a float), the amount of time to blend out of this animation.</br>
+	- A vector of ActorRuntimeIds of the entities that will play the specified animation.</td>
 </tr><tr><td>159</td>
 <td><a href = "CameraShakePacket.html">CameraShakePacket</a></td>
 <td>Used to control trigger camera shake movements on the client's player camera</td>
@@ -616,44 +645,44 @@ With support for custom entities. Entity Id is a string and Event Id is an integ
 	through MovePlayerPacket, although doing so would likely provide less smooth results.</td>
 </tr><tr><td>162</td>
 <td><a href = "ItemRegistryPacket.html">ItemRegistryPacket</a></td>
-<td>ItemRegistryPacket</td>
 <td>Item data from the server. Contains component information.</td>
+<td>This packet needs to be sent immediately after the StartGamePacket for primary clients.</td>
 </tr><tr><td>164</td>
 <td><a href = "ClientboundDebugRendererPacket.html">ClientboundDebugRendererPacket</a></td>
 <td>ClientboundDebugRendererPacket</td>
 <td>Sent from the server to client to add/remove debug rendering objects</td>
 </tr><tr><td>165</td>
 <td><a href = "SyncActorPropertyPacket.html">SyncActorPropertyPacket</a></td>
-<td>SyncActorPropertyPacket</td>
 <td>Allows us to synchronize Actor properties across the network.</td>
+<td>Intended to one day replace SynchedActorData.</td>
 </tr><tr><td>166</td>
 <td><a href = "AddVolumeEntityPacket.html">AddVolumeEntityPacket</a></td>
-<td>AddVolumeEntityPacket</td>
 <td>Sends a volume entity's definition and components from server to client.</td>
+<td></td>
 </tr><tr><td>167</td>
 <td><a href = "RemoveVolumeEntityPacket.html">RemoveVolumeEntityPacket</a></td>
-<td>RemoveVolumeEntityPacket</td>
 <td>Sends a volume entity to be removed from server to client.</td>
+<td></td>
 </tr><tr><td>168</td>
 <td><a href = "SimulationTypePacket.html">SimulationTypePacket</a></td>
 <td>Sent from the server to the client when setting the simulation type for toolbox mode. (Not yet suported)</td>
 <td>- mSimType: an enum representing the simulation type to switch to.</td>
 </tr><tr><td>169</td>
 <td><a href = "NpcDialoguePacket.html">NpcDialoguePacket</a></td>
-<td>NpcDialoguePacket</td>
-<td>Sent from the server to client when remote firing an NPC dialogue window for a client.</td>
+<td>Sent from the server to client when remote firing an NPC dialogue window for a client</td>
+<td></td>
 </tr><tr><td>170</td>
 <td><a href = "EduUriResourcePacket.html">EduUriResourcePacket</a></td>
-<td>EduUriResourcePacket</td>
 <td>Transmits Edu Shared Uri Resource settings to all clients.</td>
+<td></td>
 </tr><tr><td>171</td>
 <td><a href = "CreatePhotoPacket.html">CreatePhotoPacket</a></td>
-<td>CreatePhotoPacket</td>
 <td>Players now have the possibility to export photos from their portfolios into photo items in their inventory. EDU.</td>
+<td></td>
 </tr><tr><td>172</td>
 <td><a href = "UpdateSubChunkBlocksPacket.html">UpdateSubChunkBlocksPacket</a></td>
-<td>UpdateSubChunkBlocksPacket</td>
 <td>Packet sent for every set of blocks changed in a sub chunk every tick.</td>
+<td></td>
 </tr><tr><td>174</td>
 <td><a href = "SubChunkPacket.html">SubChunkPacket</a></td>
 <td>SubChunkPacket</td>
@@ -684,24 +713,24 @@ With support for custom entities. Entity Id is a string and Event Id is an integ
 <td>brief packet containing data-driven dimension properties</td>
 </tr><tr><td>181</td>
 <td><a href = "AgentActionEventPacket.html">AgentActionEventPacket</a></td>
-<td>AgentActionEventPacket</td>
 <td>packet containing data of Agent Action Type</td>
+<td></td>
 </tr><tr><td>182</td>
 <td><a href = "ChangeMobPropertyPacket.html">ChangeMobPropertyPacket</a></td>
-<td>ChangeMobPropertyPacket</td>
 <td>packet containing data for changing mob property</td>
+<td></td>
 </tr><tr><td>183</td>
 <td><a href = "LessonProgressPacket.html">LessonProgressPacket</a></td>
 <td>Lesson Progress</td>
 <td></td>
 </tr><tr><td>184</td>
 <td><a href = "RequestAbilityPacket.html">RequestAbilityPacket</a></td>
-<td>RequestAbilityPacket</td>
-<td>Sent from client to server. Used to request an ability change. </td>
+<td>Sent from client to server. Used to request an ability change.</td>
+<td>Once changed, the server will broadcast the updated state of abilities for that player. If the request is rejected, the caller will receive their reverted state of Abilities.  Can only be used to modify the calling player.  	- mVariable: Info about this variable</td>
 </tr><tr><td>185</td>
 <td><a href = "RequestPermissionsPacket.html">RequestPermissionsPacket</a></td>
-<td>RequestPermissionsPacket</td>
-<td>Sent from client to server. Used to request a new Permissions Levels. Can only be used by Operators or Hosts.</td>
+<td>Sent from client to server. Used to request a new Permissions Levels.</td>
+<td>Can only be used by Operators or Hosts.</td>
 </tr><tr><td>186</td>
 <td><a href = "ToastRequestPacket.html">ToastRequestPacket</a></td>
 <td>Pushes a UI toast message to be displayed by the client</td>
@@ -724,16 +753,16 @@ With support for custom entities. Entity Id is a string and Event Id is an integ
 <td></td>
 </tr><tr><td>191</td>
 <td><a href = "FeatureRegistryPacket.html">FeatureRegistryPacket</a></td>
-<td>FeatureRegistryPacket</td>
 <td>This is the packet that tracks the active feature registry data from the server so that client can place the features themselves.</td>
+<td></td>
 </tr><tr><td>192</td>
 <td><a href = "ServerStatsPacket.html">ServerStatsPacket</a></td>
 <td>Used to send performance and other valuable stats back to the client</td>
 <td>Sent from server.</td>
 </tr><tr><td>193</td>
 <td><a href = "RequestNetworkSettingsPacket.html">RequestNetworkSettingsPacket</a></td>
-<td>RequestNetworkSettingsPacket</td>
-<td>requests tunable options from host to client (compression threshold and algorithm)</td>
+<td>Requests tunable options from host to client (compression threshold and algorithm).</td>
+<td>This is the initial packet sent from the client to initiate a connection.  NOTE: this packet should not contain anything other than the client version, don't add new data here.</td>
 </tr><tr><td>194</td>
 <td><a href = "GameTestRequestPacket.html">GameTestRequestPacket</a></td>
 <td>Internal Text Packet</td>
@@ -748,16 +777,16 @@ With support for custom entities. Entity Id is a string and Event Id is an integ
 <td>Used to update the players input permissions. Sends the full permission set and the server position of the player at the time the permission was modified.</td>
 </tr><tr><td>198</td>
 <td><a href = "CameraPresetsPacket.html">CameraPresetsPacket</a></td>
-<td>CameraPresetsPacket</td>
 <td>Used to sync CameraPresets data from server to clients.</td>
+<td></td>
 </tr><tr><td>199</td>
 <td><a href = "UnlockedRecipesPacket.html">UnlockedRecipesPacket</a></td>
 <td>Sent from server to client, for all previously unlocked recipes on load and for any newly unlocked recipes during gameplay.</td>
 <td></td>
 </tr><tr><td>300</td>
 <td><a href = "CameraInstructionPacket.html">CameraInstructionPacket</a></td>
-<td>CameraInstructionPacket</td>
 <td>Used to send a CameraInstruction from the server to the specified clients.</td>
+<td></td>
 </tr><tr><td>302</td>
 <td><a href = "TrimDataPacket.html">TrimDataPacket</a></td>
 <td>TrimDataPacket</td>
@@ -784,8 +813,8 @@ With support for custom entities. Entity Id is a string and Event Id is an integ
 <td></td>
 </tr><tr><td>308</td>
 <td><a href = "SetHudPacket.html">SetHudPacket</a></td>
-<td>SetHudPacket</td>
 <td>This packet is only used via the set hud command. This is for 3rd party content.</td>
+<td>This packet will toggle the HUD visibility.</td>
 </tr><tr><td>309</td>
 <td><a href = "AwardAchievementPacket.html">AwardAchievementPacket</a></td>
 <td>Contains the ID of the achievement to award</td>
@@ -804,17 +833,17 @@ The Loading Screen Id field will be empty if the loading screen is triggered by 
 The Loading Screen Id field will have a value if sent by the server. This currently happens as part of ChangeDimensionPacket if the player is alive.</td>
 </tr><tr><td>313</td>
 <td><a href = "JigsawStructureDataPacket.html">JigsawStructureDataPacket</a></td>
-<td>Jigsaw Structure data used by client jigsaw structure worldgen</td>
-<td>This packet contains a copy of the behavior pack jigsaw structure rulesSends the serialized jigsaw rule JSON to the client as it's needed on both the client and server.</td>
+<td>Jigsaw Structure data used by client jigsaw structure worldgen. This packet contains a copy of the behavior pack jigsaw structure rules.</td>
+<td>Sends the serialized jigsaw rule JSON to the client as it's needed on both the client and server.</td>
 </tr><tr><td>314</td>
 <td><a href = "CurrentStructureFeaturePacket.html">CurrentStructureFeaturePacket</a></td>
 <td>Informs the client of which Structure Feature they are currently occupying.</td>
 <td>Sends the name of the Structure Feature the player is currently occupying to the client.
-If the player is not in a structure, this packet contains an empty string.</td>
+	If the player is not in a structure, this packet contains an empty string.</td>
 </tr><tr><td>315</td>
 <td><a href = "ServerboundDiagnosticsPacket.html">ServerboundDiagnosticsPacket</a></td>
-<td>ServerboundDiagnosticsPacket</td>
-<td>Sent from the client to the server IF ProfilerLite is enabled AND the creator toggle for</td>
+<td>Sent from the client to the server IF ProfilerLite is enabled AND the creator toggle for additional client telemetry is enabled AND new telemetry data is ready (every 500 ms).</td>
+<td></td>
 </tr><tr><td>316</td>
 <td><a href = "CameraAimAssistPacket.html">CameraAimAssistPacket</a></td>
 <td>CameraAimAssist</td>
@@ -836,7 +865,10 @@ If the player is not in a structure, this packet contains an empty string.</td>
 </tr><tr><td>320</td>
 <td><a href = "CameraAimAssistPresetsPacket.html">CameraAimAssistPresetsPacket</a></td>
 <td>Camera aim-assist registry presets/categories data sent from the server to clients.</td>
-<td>     Sent by the server to clients for initializing and updating the client aim-assist registry.<br>     AddToExisting operations are sent by the server when new presets/categories are added to the<br>     registry through creator facing APIs.    </td>
+<td>
+	Sent by the server to clients for initializing and updating the client aim-assist registry.
+	AddToExisting operations are sent by the server when new presets/categories are added to the registry through creator facing APIs.
+	</td>
 </tr><tr><td>321</td>
 <td><a href = "ClientCameraAimAssistPacket.html">ClientCameraAimAssistPacket</a></td>
 <td>Client-side activation of aim-assist</td>
@@ -850,9 +882,9 @@ If the player is not in a structure, this packet contains an empty string.</td>
 <td>Sends client movement prediction information to the server</td>
 <td>Only used in Server-Authoritative Movement.<br>    Sent periodically if the client has received corrections from the server.<br>    Contains information about client-predictions that are relevant to movement.    </td>
 </tr><tr><td>323</td>
-<td><a href = "UpdateClientOptions.html">UpdateClientOptions</a></td>
-<td>-</td>
-<td></td>
+<td><a href = "UpdateClientOptionsPacket.html">UpdateClientOptionsPacket</a></td>
+<td>Sync the player's options (mostly settings) to the server.</td>
+<td>The values in this packet are originally synced through the Connection Request and then updated via this packet.</td>
 </tr><tr><td>324</td>
 <td><a href = "PlayerVideoCapturePacket.html">PlayerVideoCapturePacket</a></td>
 <td>Start/stops video capture for a player. Non-publish/test only.</td>
@@ -873,4 +905,8 @@ If the player is not in a structure, this packet contains an empty string.</td>
 <td><a href = "ServerScriptDebugDrawerPacket.html">ServerScriptDebugDrawerPacket</a></td>
 <td>Debug Shapes Update</td>
 <td>Used by Scripting to send new, removed or modified debug shapes<br>     information to the client to be used for rendering.     </td>
+</tr><tr><td>329</td>
+<td><a href = "ServerboundPackSettingChangePacket.html">ServerboundPackSettingChangePacket</a></td>
+<td>Sent from the client to the server when players change Pack Settings (pack UI).</td>
+<td></td>
 </tr></table></body> </html>

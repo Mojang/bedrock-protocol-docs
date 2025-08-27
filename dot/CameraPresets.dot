@@ -1,20 +1,146 @@
 digraph "CameraPresets" {
 rankdir = LR
-2
+0
+0 -> 1
+1 -> 2
 2 -> 3
-3 -> 4
+1 -> 4
 4 -> 5
-3 -> 6
-6 -> 7
-7 -> 98
+4 -> 6
+4 -> 7
+7 -> 8
+4 -> 9
+9 -> 10
+4 -> 11
+11 -> 12
+4 -> 13
+13 -> 14
+4 -> 15
+15 -> 16
+4 -> 17
+17 -> 18
+4 -> 19
+19 -> 20
+4 -> 21
+21 -> 22
+22 -> 23
+21 -> 24
+24 -> 25
+4 -> 26
+26 -> 27
+27 -> 28
+26 -> 29
+29 -> 30
+4 -> 31
+31 -> 32
+4 -> 33
+33 -> 34
+4 -> 35
+35 -> 36
+36 -> 37
+35 -> 38
+38 -> 39
+4 -> 40
+40 -> 41
+41 -> 42
+40 -> 43
+43 -> 44
+40 -> 45
+45 -> 46
+4 -> 47
+47 -> 48
+4 -> 49
+49 -> 50
+4 -> 51
+51 -> 52
+4 -> 53
+53 -> 54
+4 -> 55
+55 -> 56
+4 -> 57
+57 -> 58
+57 -> 59
+59 -> 60
+57 -> 61
+61 -> 62
+62 -> 63
+61 -> 64
+64 -> 65
+57 -> 66
+66 -> 67
+4 -> 68
+68 -> 69
 
-2 [label="CameraPresets",comment="name: \"CameraPresets\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-3 [label="Presets",comment="name: \"Presets\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-4 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-5 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-6 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-7 [label="Camera Preset",comment="name: \"Camera Preset\", typeName: \"SharedTypes::v1_21_90::CameraPreset\", id: 7, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-98 [label="SharedTypes::v1_21_90::CameraPreset",comment="name: \"SharedTypes::v1_21_90::CameraPreset\", typeName: \"\", id: 98, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;5;98}
+0 [label="CameraPresets",comment="name: \"CameraPresets\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Presets",comment="name: \"Presets\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+5 [label="Name",comment="name: \"Name\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+6 [label="Inherit From",comment="name: \"Inherit From\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="Pos X",comment="name: \"Pos X\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="float",comment="name: \"float\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+9 [label="Pos Y",comment="name: \"Pos Y\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+10 [label="float",comment="name: \"float\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+11 [label="Pos Z",comment="name: \"Pos Z\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+12 [label="float",comment="name: \"float\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+13 [label="Rot X",comment="name: \"Rot X\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+14 [label="float",comment="name: \"float\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+15 [label="Rot Y",comment="name: \"Rot Y\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+16 [label="float",comment="name: \"float\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+17 [label="Rotation Speed",comment="name: \"Rotation Speed\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+18 [label="float",comment="name: \"float\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+19 [label="Snap to Target",comment="name: \"Snap to Target\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+20 [label="bool",comment="name: \"bool\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+21 [label="Horizontal Rotation Limit",comment="name: \"Horizontal Rotation Limit\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+22 [label="X",comment="name: \"X\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+23 [label="float",comment="name: \"float\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+24 [label="Y",comment="name: \"Y\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+25 [label="float",comment="name: \"float\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+26 [label="Vertical Rotation Limit",comment="name: \"Vertical Rotation Limit\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+27 [label="X",comment="name: \"X\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+28 [label="float",comment="name: \"float\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+29 [label="Y",comment="name: \"Y\", typeName: \"\", id: 29, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+30 [label="float",comment="name: \"float\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+31 [label="Continue Targeting",comment="name: \"Continue Targeting\", typeName: \"\", id: 31, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+32 [label="bool",comment="name: \"bool\", typeName: \"\", id: 32, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+33 [label="Block Listening Radius",comment="name: \"Block Listening Radius\", typeName: \"\", id: 33, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+34 [label="float",comment="name: \"float\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+35 [label="View Offset",comment="name: \"View Offset\", typeName: \"\", id: 35, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+36 [label="X",comment="name: \"X\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+37 [label="float",comment="name: \"float\", typeName: \"\", id: 37, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+38 [label="Y",comment="name: \"Y\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+39 [label="float",comment="name: \"float\", typeName: \"\", id: 39, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+40 [label="Entity Offset",comment="name: \"Entity Offset\", typeName: \"\", id: 40, branchId: 0, recurseId: -1, attributes: 0, notes: \"Changing the camera's pivot point from the center of the entity\""];
+41 [label="X",comment="name: \"X\", typeName: \"\", id: 41, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+42 [label="float",comment="name: \"float\", typeName: \"\", id: 42, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+43 [label="Y",comment="name: \"Y\", typeName: \"\", id: 43, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+44 [label="float",comment="name: \"float\", typeName: \"\", id: 44, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+45 [label="Z",comment="name: \"Z\", typeName: \"\", id: 45, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+46 [label="float",comment="name: \"float\", typeName: \"\", id: 46, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+47 [label="Radius",comment="name: \"Radius\", typeName: \"\", id: 47, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+48 [label="float",comment="name: \"float\", typeName: \"\", id: 48, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+49 [label="Yaw Limit Min",comment="name: \"Yaw Limit Min\", typeName: \"\", id: 49, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+50 [label="float",comment="name: \"float\", typeName: \"\", id: 50, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+51 [label="Yaw Limit Max",comment="name: \"Yaw Limit Max\", typeName: \"\", id: 51, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+52 [label="float",comment="name: \"float\", typeName: \"\", id: 52, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+53 [label="Listener",comment="name: \"Listener\", typeName: \"\", id: 53, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+54 [label="enum SharedTypes::Comprehensive::CameraPreset::AudioListener",comment="name: \"enum SharedTypes::Comprehensive::CameraPreset::AudioListener\", typeName: \"\", id: 54, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+55 [label="Player Effects",comment="name: \"Player Effects\", typeName: \"\", id: 55, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+56 [label="bool",comment="name: \"bool\", typeName: \"\", id: 56, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+57 [label="Aim Assist",comment="name: \"Aim Assist\", typeName: \"\", id: 57, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+58 [label="Preset Id",comment="name: \"Preset Id\", typeName: \"\", id: 58, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+59 [label="Target Mode",comment="name: \"Target Mode\", typeName: \"\", id: 59, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+60 [label="enum Aim-Assist Target Mode",comment="name: \"enum Aim-Assist Target Mode\", typeName: \"\", id: 60, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+61 [label="View Angle",comment="name: \"View Angle\", typeName: \"\", id: 61, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+62 [label="X",comment="name: \"X\", typeName: \"\", id: 62, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+63 [label="float",comment="name: \"float\", typeName: \"\", id: 63, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+64 [label="Y",comment="name: \"Y\", typeName: \"\", id: 64, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+65 [label="float",comment="name: \"float\", typeName: \"\", id: 65, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+66 [label="Distance",comment="name: \"Distance\", typeName: \"\", id: 66, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+67 [label="float",comment="name: \"float\", typeName: \"\", id: 67, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+68 [label="Control Scheme",comment="name: \"Control Scheme\", typeName: \"\", id: 68, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+69 [label="enum Control Scheme",comment="name: \"enum Control Scheme\", typeName: \"\", id: 69, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;8;10;12;14;16;18;20;23;25;28;30;32;34;37;39;42;44;46;48;50;52;54;56;60;63;65;67;69}
 
 }

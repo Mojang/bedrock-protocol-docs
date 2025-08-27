@@ -1,0 +1,26 @@
+digraph "ServerboundPackSettingChangePacket" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+2 -> 3
+1 -> 4
+4 -> 5
+0 -> 6
+6 -> 7
+0 -> 8
+8 -> 9
+
+0 [label="ServerboundPackSettingChangePacket",comment="name: \"ServerboundPackSettingChangePacket\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"Sent from the client to the server when players change Pack Settings (pack UI).\""];
+1 [label="PackId",comment="name: \"PackId\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"The UUID of the pack whose setting is being changed.\""];
+2 [label="Most Significant Bits",comment="name: \"Most Significant Bits\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="unsigned int64",comment="name: \"unsigned int64\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+4 [label="Least Significant Bits",comment="name: \"Least Significant Bits\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="unsigned int64",comment="name: \"unsigned int64\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+6 [label="PackSettingName",comment="name: \"PackSettingName\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"The name of the setting being changed.\""];
+7 [label="string",comment="name: \"string\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"The name of the setting being changed.\""];
+8 [label="PackSettingValue",comment="name: \"PackSettingValue\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"The value of the setting being changed.\""];
+9 [label="",comment="name: \"\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"The value of the setting being changed.\""];
+{ rank = max;3;5;7;9}
+
+}

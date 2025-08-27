@@ -5,12 +5,22 @@ rankdir = LR
 1 -> 2
 0 -> 3
 3 -> 4
+4 -> 5
+3 -> 6
+6 -> 7
+3 -> 8
+8 -> 9
 
-0 [label="AnvilDamagePacket",comment="name: \"AnvilDamagePacket\", typeName: \"\", id: 0, branchId: 141, recurseId: -1, attributes: 0, notes: \"\""];
+0 [label="AnvilDamagePacket",comment="name: \"AnvilDamagePacket\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"Requests an anvil to be damaged.\""];
 1 [label="Damage Amount",comment="name: \"Damage Amount\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-2 [label="byte",comment="name: \"byte\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-3 [label="Block Position",comment="name: \"Block Position\", typeName: \"NetworkBlockPosition\", id: 3, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-4 [label="NetworkBlockPosition",comment="name: \"NetworkBlockPosition\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2;4}
+2 [label="unsigned byte",comment="name: \"unsigned byte\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="Block Position",comment="name: \"Block Position\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="X",comment="name: \"X\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="varint",comment="name: \"varint\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+6 [label="Y",comment="name: \"Y\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+8 [label="Z",comment="name: \"Z\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="varint",comment="name: \"varint\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;5;7;9}
 
 }

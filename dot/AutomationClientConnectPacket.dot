@@ -2,11 +2,13 @@ digraph "AutomationClientConnectPacket" {
 rankdir = LR
 0
 0 -> 1
-1 -> 5
+1 -> 2
+2 -> 3
 
-0 [label="AutomationClientConnectPacket",comment="name: \"AutomationClientConnectPacket\", typeName: \"\", id: 0, branchId: 95, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Web Socket Data",comment="name: \"Web Socket Data\", typeName: \"WebSocketPacketData\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-5 [label="WebSocketPacketData",comment="name: \"WebSocketPacketData\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;5}
+0 [label="AutomationClientConnectPacket",comment="name: \"AutomationClientConnectPacket\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"Initiates websocket connection\""];
+1 [label="Web Socket Data",comment="name: \"Web Socket Data\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="Websocket Server URI",comment="name: \"Websocket Server URI\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="string",comment="name: \"string\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3}
 
 }

@@ -3,10 +3,36 @@ rankdir = LR
 0
 0 -> 1
 1 -> 2
+2 -> 3
+3 -> 4
+1 -> 5
+5 -> 6
+6 -> 7
+1 -> 8
+8 -> 9
+1 -> 10
+10 -> 11
+1 -> 12
+12 -> 13
+1 -> 14
+14 -> 15
 
-0 [label="SetActorLinkPacket",comment="name: \"SetActorLinkPacket\", typeName: \"\", id: 0, branchId: 41, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Link",comment="name: \"Link\", typeName: \"ActorLink\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-2 [label="ActorLink",comment="name: \"ActorLink\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2}
+0 [label="SetActorLinkPacket",comment="name: \"SetActorLinkPacket\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"Sent by both client and server, only received by LegacyClientHandler.\""];
+1 [label="Link",comment="name: \"Link\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="Target A",comment="name: \"Target A\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="Actor Unique ID",comment="name: \"Actor Unique ID\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="varint64",comment="name: \"varint64\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+5 [label="Target B",comment="name: \"Target B\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+6 [label="Actor Unique ID",comment="name: \"Actor Unique ID\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="varint64",comment="name: \"varint64\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+8 [label="Type",comment="name: \"Type\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="enum enum ActorLinkType",comment="name: \"enum enum ActorLinkType\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+10 [label="Immediate",comment="name: \"Immediate\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+11 [label="bool",comment="name: \"bool\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+12 [label="Passenger Initiated",comment="name: \"Passenger Initiated\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 0, notes: \"Whether the link was changed by the passenger\""];
+13 [label="bool",comment="name: \"bool\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 512, notes: \"Whether the link was changed by the passenger\""];
+14 [label="Vehicle Angular Velocity",comment="name: \"Vehicle Angular Velocity\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+15 [label="float",comment="name: \"float\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;4;7;9;11;13;15}
 
 }

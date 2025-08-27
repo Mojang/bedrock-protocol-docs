@@ -1,12 +1,22 @@
 digraph "CameraInstruction::SetInstruction::FacingOption" {
 rankdir = LR
-50
-50 -> 51
-51 -> 52
+0
+0 -> 1
+1 -> 2
+2 -> 3
+1 -> 4
+4 -> 5
+1 -> 6
+6 -> 7
 
-50 [label="CameraInstruction::SetInstruction::FacingOption",comment="name: \"CameraInstruction::SetInstruction::FacingOption\", typeName: \"\", id: 50, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-51 [label="Facing Pos",comment="name: \"Facing Pos\", typeName: \"Vec3\", id: 51, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-52 [label="Vec3",comment="name: \"Vec3\", typeName: \"\", id: 52, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;52}
+0 [label="CameraInstruction::SetInstruction::FacingOption",comment="name: \"CameraInstruction::SetInstruction::FacingOption\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="pos",comment="name: \"pos\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="X",comment="name: \"X\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="float",comment="name: \"float\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+4 [label="Y",comment="name: \"Y\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="float",comment="name: \"float\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+6 [label="Z",comment="name: \"Z\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="float",comment="name: \"float\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3;5;7}
 
 }

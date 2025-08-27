@@ -1,4 +1,12 @@
-<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/SyncActorPropertyPacket.svg" alt="SyncActorPropertyPacket">
-<br><table><col width="10%"><col width="90%"><tr><th>Field Name</th><th>Field Notes</th></tr><tr><td>Property Data</td>
+<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><h1>SyncActorPropertyPacket (id: 165)</h1>
+<table><col width="1%"><col width="99%"><tr><th></th><th></th></tr><tr><td> <b>Purpose:</b> </td>
+<td>Allows us to synchronize Actor properties across the network.</td>
+</tr><tr><td> <b>Notes:</b> </td>
+<td>Intended to one day replace SynchedActorData.</td>
+</tr></table><br><h2>Payload</h2>
+<img src="svg/SyncActorPropertyPacket.svg" alt="SyncActorPropertyPacket">
+<br><br><br><table><col width="10%"><col width="10%"><col width="15%"><col width="80%"><tr><th>Field Name</th><th>Field Type</th><th>Field Constraints</th><th>Field Notes</th></tr><tr><td>Property Data</td>
+<td></td>
+<td></td>
 <td>type: actor identifier hash; properties: properties of actor that have been flagged for client sync as a sub-compound tag</td>
 </tr></table></body> </html>

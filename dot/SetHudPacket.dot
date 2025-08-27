@@ -6,19 +6,17 @@ rankdir = LR
 2 -> 3
 1 -> 4
 4 -> 5
-5 -> 6
-0 -> 7
-7 -> 8
+0 -> 6
+6 -> 7
 
-0 [label="SetHudPacket",comment="name: \"SetHudPacket\", typeName: \"\", id: 0, branchId: 308, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="HUD Element List",comment="name: \"HUD Element List\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+0 [label="SetHudPacket",comment="name: \"SetHudPacket\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"This packet is only used via the set hud command. This is for 3rd party content.\""];
+1 [label="Hud Element",comment="name: \"Hud Element\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-3 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 4 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-5 [label="HUD Element",comment="name: \"HUD Element\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-6 [label="varint",comment="name: \"varint\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-7 [label="HUD Visible",comment="name: \"HUD Visible\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-8 [label="varint",comment="name: \"varint\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;3;6;8}
+5 [label="enum HudElement",comment="name: \"enum HudElement\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+6 [label="Hud Visible",comment="name: \"Hud Visible\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="enum HudVisibility",comment="name: \"enum HudVisibility\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;5;7}
 
 }

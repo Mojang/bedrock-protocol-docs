@@ -1,16 +1,16 @@
 digraph "std::optional<struct BiomeMultinoiseGenRulesData>" {
 rankdir = LR
-336
-336 -> 337
-337 -> 338
-336 -> 339
-339 -> 351
+322
+322 -> 323
+323 -> 324
+322 -> 325
+325 -> 337
 
-336 [label="std::optional<struct BiomeMultinoiseGenRulesData>",comment="name: \"std::optional<struct BiomeMultinoiseGenRulesData>\", typeName: \"\", id: 336, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-337 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 337, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
-338 [label="bool",comment="name: \"bool\", typeName: \"\", id: 338, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-339 [label="Value",comment="name: \"Value\", typeName: \"BiomeMultinoiseGenRulesData\", id: 339, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-351 [label="BiomeMultinoiseGenRulesData",comment="name: \"BiomeMultinoiseGenRulesData\", typeName: \"\", id: 351, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;338;351}
+322 [label="std::optional<struct BiomeMultinoiseGenRulesData>",comment="name: \"std::optional<struct BiomeMultinoiseGenRulesData>\", typeName: \"\", id: 322, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+323 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 323, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
+324 [label="bool",comment="name: \"bool\", typeName: \"\", id: 324, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+325 [label="Value",comment="name: \"Value\", typeName: \"BiomeMultinoiseGenRulesData\", id: 325, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+337 [label="BiomeMultinoiseGenRulesData",comment="name: \"BiomeMultinoiseGenRulesData\", typeName: \"\", id: 337, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;324;337}
 
 }

@@ -6,15 +6,29 @@ rankdir = LR
 2 -> 3
 1 -> 4
 4 -> 5
-5 -> 17
+4 -> 6
+6 -> 7
+4 -> 8
+8 -> 9
+4 -> 10
+10 -> 11
+4 -> 12
+12 -> 13
 
-0 [label="ItemRegistryPacket",comment="name: \"ItemRegistryPacket\", typeName: \"\", id: 0, branchId: 162, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Item Data",comment="name: \"Item Data\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+0 [label="ItemRegistryPacket",comment="name: \"ItemRegistryPacket\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"Item data from the server. Contains component information.\""];
+1 [label="Item Data",comment="name: \"Item Data\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-3 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 4 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-5 [label="Info",comment="name: \"Info\", typeName: \"ItemData\", id: 5, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-17 [label="ItemData",comment="name: \"ItemData\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;3;17}
+5 [label="Item Name",comment="name: \"Item Name\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+6 [label="Item Id",comment="name: \"Item Id\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"Block id's < 256 (can be negative); Item id's >= 257\""];
+7 [label="short",comment="name: \"short\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"Block id's < 256 (can be negative); Item id's >= 257\""];
+8 [label="Is Component Based",comment="name: \"Is Component Based\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="bool",comment="name: \"bool\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+10 [label="Item Version",comment="name: \"Item Version\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+11 [label="enum ItemVersion",comment="name: \"enum ItemVersion\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+12 [label="Item Component Data",comment="name: \"Item Component Data\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+13 [label="",comment="name: \"\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;7;9;11;13}
 
 }

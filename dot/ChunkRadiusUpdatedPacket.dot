@@ -4,7 +4,7 @@ rankdir = LR
 0 -> 1
 1 -> 2
 
-0 [label="ChunkRadiusUpdatedPacket",comment="name: \"ChunkRadiusUpdatedPacket\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"Sent when the world is loading.\""];
+0 [label="ChunkRadiusUpdatedPacket",comment="name: \"ChunkRadiusUpdatedPacket\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"Sent when the world is loading. We don't know why it is sent four times. Defines the tick distance.\""];
 1 [label="Chunk Radius",comment="name: \"Chunk Radius\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="varint",comment="name: \"varint\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 { rank = max;2}

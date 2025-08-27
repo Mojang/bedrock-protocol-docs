@@ -3,34 +3,46 @@ rankdir = LR
 0
 0 -> 1
 1 -> 2
-0 -> 3
-3 -> 4
-0 -> 5
-5 -> 6
-0 -> 7
-7 -> 8
-0 -> 9
-9 -> 10
-0 -> 11
-11 -> 12
-0 -> 13
-13 -> 14
+2 -> 3
+0 -> 4
+4 -> 5
+0 -> 6
+6 -> 7
+0 -> 8
+8 -> 9
+0 -> 10
+10 -> 11
+0 -> 12
+12 -> 13
+0 -> 14
+14 -> 15
+15 -> 16
 
-0 [label="MobEffectPacket",comment="name: \"MobEffectPacket\", typeName: \"\", id: 0, branchId: 28, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Target Runtime ID",comment="name: \"Target Runtime ID\", typeName: \"ActorRuntimeID\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-2 [label="ActorRuntimeID",comment="name: \"ActorRuntimeID\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-3 [label="Event ID",comment="name: \"Event ID\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-4 [label="byte",comment="name: \"byte\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-5 [label="Effect ID",comment="name: \"Effect ID\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-6 [label="varint",comment="name: \"varint\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-7 [label="Effect Amplifier",comment="name: \"Effect Amplifier\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-8 [label="varint",comment="name: \"varint\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-9 [label="Show Particles",comment="name: \"Show Particles\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-10 [label="bool",comment="name: \"bool\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-11 [label="Effect Duration Ticks",comment="name: \"Effect Duration Ticks\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-12 [label="varint",comment="name: \"varint\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-13 [label="Tick",comment="name: \"Tick\", typeName: \"PlayerInputTick\", id: 13, branchId: 0, recurseId: -1, attributes: 256, notes: \"If this packet is referring to the player or a client predicted vehicle they are in control of, this should be the most recently processed PlayerInputTick from their PlayerAuthInputPacket. Otherwise zero.\""];
-14 [label="PlayerInputTick",comment="name: \"PlayerInputTick\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2;4;6;8;10;12;14}
+0 [label="MobEffectPacket",comment="name: \"MobEffectPacket\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"Mob Effect\""];
+1 [label="Target Runtime ID",comment="name: \"Target Runtime ID\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="Actor Runtime ID",comment="name: \"Actor Runtime ID\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="unsigned varint64",comment="name: \"unsigned varint64\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+4 [label="Event ID",comment="name: \"Event ID\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="enum MobEffectPacketPayload::Event",comment="name: \"enum MobEffectPacketPayload::Event\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+6 [label="Effect ID",comment="name: \"Effect ID\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="varint",comment="name: \"varint\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+8 [label="Effect Amplifier",comment="name: \"Effect Amplifier\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="varint",comment="name: \"varint\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+10 [label="Show Particles",comment="name: \"Show Particles\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+11 [label="bool",comment="name: \"bool\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+12 [label="Effect Duration Ticks",comment="name: \"Effect Duration Ticks\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+13 [label="varint",comment="name: \"varint\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+14 [label="Tick",comment="name: \"Tick\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 0, notes: \"If this packet is referring to the player or a client predicted vehicle they are in control of, this should be the most recently processed PlayerInputTick from their PlayerAuthInputPacket. Otherwise zero.\""];
+15 [label="Input tick",comment="name: \"Input tick\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"In server authoritative movement mode the client supplies this in PlayerAuthInputPacket.
+For any client-bound packets containing a tick, the server should supply the tick value corresponding to the most recently processed PlayerAuthInputPacket.
+This allows the client to adjust any client predictions made while the packet was in flight.
+If the packet is being sent to the client but not relating to data of the player or a client-predicted vehicle, it can be zero.
+It is also acceptable to specify zero for players, although this may lead to minor visual flickers and less smooth application of CorrectPlayerMovePredictionPacket.\""];
+16 [label="unsigned varint64",comment="name: \"unsigned varint64\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"In server authoritative movement mode the client supplies this in PlayerAuthInputPacket.
+For any client-bound packets containing a tick, the server should supply the tick value corresponding to the most recently processed PlayerAuthInputPacket.
+This allows the client to adjust any client predictions made while the packet was in flight.
+If the packet is being sent to the client but not relating to data of the player or a client-predicted vehicle, it can be zero.
+It is also acceptable to specify zero for players, although this may lead to minor visual flickers and less smooth application of CorrectPlayerMovePredictionPacket.\""];
+{ rank = max;3;5;7;9;11;13;16}
 
 }

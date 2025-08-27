@@ -5,20 +5,116 @@ rankdir = LR
 1 -> 2
 0 -> 3
 3 -> 4
-0 -> 5
-5 -> 6
-0 -> 7
-7 -> 8
+4 -> 5
+3 -> 6
+6 -> 7
+3 -> 8
+8 -> 9
+0 -> 10
+10 -> 11
+11 -> 12
+10 -> 13
+13 -> 14
+10 -> 15
+15 -> 16
+10 -> 17
+17 -> 18
+10 -> 19
+19 -> 20
+20 -> 21
+19 -> 22
+22 -> 23
+19 -> 24
+24 -> 25
+10 -> 26
+26 -> 27
+27 -> 28
+26 -> 29
+29 -> 30
+26 -> 31
+31 -> 32
+10 -> 33
+33 -> 34
+34 -> 35
+10 -> 36
+36 -> 37
+10 -> 38
+38 -> 39
+10 -> 40
+40 -> 41
+10 -> 42
+42 -> 43
+10 -> 44
+44 -> 45
+10 -> 46
+46 -> 47
+10 -> 48
+48 -> 49
+49 -> 50
+48 -> 51
+51 -> 52
+48 -> 53
+53 -> 54
+0 -> 55
+55 -> 56
 
-0 [label="StructureTemplateDataRequestPacket",comment="name: \"StructureTemplateDataRequestPacket\", typeName: \"\", id: 0, branchId: 132, recurseId: -1, attributes: 0, notes: \"\""];
+0 [label="StructureTemplateDataRequestPacket",comment="name: \"StructureTemplateDataRequestPacket\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"Used to request structure information from a server.\""];
 1 [label="Structure Name",comment="name: \"Structure Name\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="string",comment="name: \"string\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-3 [label="Structure Position",comment="name: \"Structure Position\", typeName: \"NetworkBlockPosition\", id: 3, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-4 [label="NetworkBlockPosition",comment="name: \"NetworkBlockPosition\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-5 [label="Structure Settings",comment="name: \"Structure Settings\", typeName: \"StructureSettings\", id: 5, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-6 [label="StructureSettings",comment="name: \"StructureSettings\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-7 [label="Requested Operation",comment="name: \"Requested Operation\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-8 [label="byte",comment="name: \"byte\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2;4;6;8}
+3 [label="Structure Position",comment="name: \"Structure Position\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="X",comment="name: \"X\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="varint",comment="name: \"varint\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+6 [label="Y",comment="name: \"Y\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+8 [label="Z",comment="name: \"Z\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="varint",comment="name: \"varint\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+10 [label="Structure Settings",comment="name: \"Structure Settings\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+11 [label="Structure Palette Name",comment="name: \"Structure Palette Name\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+12 [label="string",comment="name: \"string\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+13 [label="Should ignore entities?",comment="name: \"Should ignore entities?\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+14 [label="bool",comment="name: \"bool\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+15 [label="Should ignore blocks?",comment="name: \"Should ignore blocks?\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+16 [label="bool",comment="name: \"bool\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+17 [label="Should Allow Non Ticking Player and Ticking Area Chunks",comment="name: \"Should Allow Non Ticking Player and Ticking Area Chunks\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+18 [label="bool",comment="name: \"bool\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+19 [label="Structure Size",comment="name: \"Structure Size\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+20 [label="X",comment="name: \"X\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+21 [label="varint",comment="name: \"varint\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+22 [label="Y",comment="name: \"Y\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+23 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+24 [label="Z",comment="name: \"Z\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+25 [label="varint",comment="name: \"varint\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+26 [label="Structure Offset",comment="name: \"Structure Offset\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+27 [label="X",comment="name: \"X\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+28 [label="varint",comment="name: \"varint\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+29 [label="Y",comment="name: \"Y\", typeName: \"\", id: 29, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+30 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+31 [label="Z",comment="name: \"Z\", typeName: \"\", id: 31, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+32 [label="varint",comment="name: \"varint\", typeName: \"\", id: 32, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+33 [label="Last Edit Player",comment="name: \"Last Edit Player\", typeName: \"\", id: 33, branchId: 0, recurseId: -1, attributes: 0, notes: \"Player who last edited the structure block.\""];
+34 [label="Actor Unique ID",comment="name: \"Actor Unique ID\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+35 [label="varint64",comment="name: \"varint64\", typeName: \"\", id: 35, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+36 [label="Rotation",comment="name: \"Rotation\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+37 [label="enum Rotation",comment="name: \"enum Rotation\", typeName: \"\", id: 37, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+38 [label="Mirror",comment="name: \"Mirror\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+39 [label="enum enum Mirror",comment="name: \"enum enum Mirror\", typeName: \"\", id: 39, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+40 [label="Animation Mode",comment="name: \"Animation Mode\", typeName: \"\", id: 40, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+41 [label="enum enum AnimationMode",comment="name: \"enum enum AnimationMode\", typeName: \"\", id: 41, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+42 [label="Animation Seconds",comment="name: \"Animation Seconds\", typeName: \"\", id: 42, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+43 [label="float",comment="name: \"float\", typeName: \"\", id: 43, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+44 [label="Integrity Value",comment="name: \"Integrity Value\", typeName: \"\", id: 44, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+45 [label="float",comment="name: \"float\", typeName: \"\", id: 45, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+46 [label="Integrity Seed",comment="name: \"Integrity Seed\", typeName: \"\", id: 46, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+47 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 47, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+48 [label="Rotation Pivot",comment="name: \"Rotation Pivot\", typeName: \"\", id: 48, branchId: 0, recurseId: -1, attributes: 0, notes: \"Pivot used to rotate a structure around.\""];
+49 [label="X",comment="name: \"X\", typeName: \"\", id: 49, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+50 [label="float",comment="name: \"float\", typeName: \"\", id: 50, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+51 [label="Y",comment="name: \"Y\", typeName: \"\", id: 51, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+52 [label="float",comment="name: \"float\", typeName: \"\", id: 52, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+53 [label="Z",comment="name: \"Z\", typeName: \"\", id: 53, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+54 [label="float",comment="name: \"float\", typeName: \"\", id: 54, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+55 [label="Requested Operation",comment="name: \"Requested Operation\", typeName: \"\", id: 55, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+56 [label="enum enum StructureTemplateRequestOperation",comment="name: \"enum enum StructureTemplateRequestOperation\", typeName: \"\", id: 56, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;5;7;9;12;14;16;18;21;23;25;28;30;32;35;37;39;41;43;45;47;50;52;54;56}
 
 }

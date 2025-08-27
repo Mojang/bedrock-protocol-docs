@@ -6,11 +6,11 @@ rankdir = LR
 0 -> 3
 3 -> 4
 
-0 [label="LevelEventGenericPacket",comment="name: \"LevelEventGenericPacket\", typeName: \"\", id: 0, branchId: 124, recurseId: -1, attributes: 0, notes: \"\""];
+0 [label="LevelEventGenericPacket",comment="name: \"LevelEventGenericPacket\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"LevelEventGenericPacket\""];
 1 [label="Event Id",comment="name: \"Event Id\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="varint",comment="name: \"varint\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-3 [label="Byte",comment="name: \"Byte\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-4 [label="byte",comment="name: \"byte\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="__[[CTD]]__",comment="name: \"__[[CTD]]__\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="",comment="name: \"\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 { rank = max;2;4}
 
 }

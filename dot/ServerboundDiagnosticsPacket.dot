@@ -20,7 +20,7 @@ rankdir = LR
 0 -> 17
 17 -> 18
 
-0 [label="ServerboundDiagnosticsPacket",comment="name: \"ServerboundDiagnosticsPacket\", typeName: \"\", id: 0, branchId: 315, recurseId: -1, attributes: 0, notes: \"\""];
+0 [label="ServerboundDiagnosticsPacket",comment="name: \"ServerboundDiagnosticsPacket\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"Sent from the client to the server IF ProfilerLite is enabled AND the creator toggle for additional client telemetry is enabled AND new telemetry data is ready (every 500 ms).\""];
 1 [label="AvgFps",comment="name: \"AvgFps\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="float",comment="name: \"float\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 3 [label="AvgServerSimTickTimeMS",comment="name: \"AvgServerSimTickTimeMS\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];

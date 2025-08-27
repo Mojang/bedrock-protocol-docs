@@ -5,12 +5,14 @@ rankdir = LR
 1 -> 2
 0 -> 3
 3 -> 4
+4 -> 5
 
-0 [label="PositionTrackingDBClientRequestPacket",comment="name: \"PositionTrackingDBClientRequestPacket\", typeName: \"\", id: 0, branchId: 154, recurseId: -1, attributes: 0, notes: \"\""];
+0 [label="PositionTrackingDBClientRequestPacket",comment="name: \"PositionTrackingDBClientRequestPacket\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"Position Tracking DB Client Request\""];
 1 [label="Action",comment="name: \"Action\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-2 [label="byte",comment="name: \"byte\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-3 [label="Id",comment="name: \"Id\", typeName: \"PositionTrackingId\", id: 3, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-4 [label="PositionTrackingId",comment="name: \"PositionTrackingId\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2;4}
+2 [label="enum enum PositionTrackingDBClientRequestPacketPayload::Action",comment="name: \"enum enum PositionTrackingDBClientRequestPacketPayload::Action\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="Id",comment="name: \"Id\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="Value",comment="name: \"Value\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="varint",comment="name: \"varint\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;5}
 
 }

@@ -1,4 +1,20 @@
-<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/LevelEventPacket.svg" alt="LevelEventPacket">
-<br><table><col width="10%"><col width="90%"><tr><th>Field Name</th><th>Field Notes</th></tr><tr><td>Position</td>
+<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><h1>LevelEventPacket (id: 25)</h1>
+<table><col width="1%"><col width="99%"><tr><th></th><th></th></tr><tr><td> <b>Purpose:</b> </td>
+<td>Splash Potions, weather events, global pause, simlock commands, oh my!</td>
+</tr><tr><td> <b>Notes:</b> </td>
+<td></td>
+</tr></table><br><h2>Payload</h2>
+<img src="svg/LevelEventPacket.svg" alt="LevelEventPacket">
+<br><br><br><table><col width="10%"><col width="10%"><col width="15%"><col width="80%"><tr><th>Field Name</th><th>Field Type</th><th>Field Constraints</th><th>Field Notes</th></tr><tr><td>Event Id</td>
+<td>varint</td>
+<td></td>
+<td></td>
+</tr><tr><td>Position</td>
+<td>Vec3</td>
+<td></td>
 <td>Note about Event ID: Legacy particles use the <a href = "enums.html">Particle Type</a>enum |ed with ParticleLegacyEvent(0x4000)</td>
+</tr><tr><td>Data</td>
+<td>varint</td>
+<td></td>
+<td></td>
 </tr></table></body> </html>

@@ -10,7 +10,7 @@ rankdir = LR
 0 -> 7
 7 -> 8
 
-0 [label="ResourcePackChunkDataPacket",comment="name: \"ResourcePackChunkDataPacket\", typeName: \"\", id: 0, branchId: 83, recurseId: -1, attributes: 0, notes: \"\""];
+0 [label="ResourcePackChunkDataPacket",comment="name: \"ResourcePackChunkDataPacket\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"Resource Pack Chunk Data\""];
 1 [label="Resource Name",comment="name: \"Resource Name\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="string",comment="name: \"string\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 3 [label="Chunk ID",comment="name: \"Chunk ID\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];

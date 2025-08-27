@@ -1,24 +1,24 @@
 digraph "BiomeMesaSurfaceData" {
 rankdir = LR
-227
-227 -> 228
-228 -> 229
-227 -> 230
-230 -> 231
-227 -> 232
-232 -> 233
-227 -> 234
-234 -> 235
+213
+213 -> 214
+214 -> 215
+213 -> 216
+216 -> 217
+213 -> 218
+218 -> 219
+213 -> 220
+220 -> 221
 
-227 [label="BiomeMesaSurfaceData",comment="name: \"BiomeMesaSurfaceData\", typeName: \"\", id: 227, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-228 [label="clay material",comment="name: \"clay material\", typeName: \"\", id: 228, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-229 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 229, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-230 [label="hard clay material",comment="name: \"hard clay material\", typeName: \"\", id: 230, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-231 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 231, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-232 [label="bryce pillars",comment="name: \"bryce pillars\", typeName: \"\", id: 232, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-233 [label="bool",comment="name: \"bool\", typeName: \"\", id: 233, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-234 [label="has forest",comment="name: \"has forest\", typeName: \"\", id: 234, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-235 [label="bool",comment="name: \"bool\", typeName: \"\", id: 235, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;229;231;233;235}
+213 [label="BiomeMesaSurfaceData",comment="name: \"BiomeMesaSurfaceData\", typeName: \"\", id: 213, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+214 [label="clay material",comment="name: \"clay material\", typeName: \"\", id: 214, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+215 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 215, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+216 [label="hard clay material",comment="name: \"hard clay material\", typeName: \"\", id: 216, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+217 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 217, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+218 [label="bryce pillars",comment="name: \"bryce pillars\", typeName: \"\", id: 218, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+219 [label="bool",comment="name: \"bool\", typeName: \"\", id: 219, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+220 [label="has forest",comment="name: \"has forest\", typeName: \"\", id: 220, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+221 [label="bool",comment="name: \"bool\", typeName: \"\", id: 221, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;215;217;219;221}
 
 }

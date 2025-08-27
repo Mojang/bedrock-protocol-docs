@@ -1,28 +1,28 @@
 digraph "BiomeConditionalTransformationData" {
 rankdir = LR
-304
-304 -> 305
-305 -> 306
-306 -> 307
-305 -> 308
-308 -> 309
-309 -> 310
-304 -> 311
-311 -> 312
-304 -> 313
-313 -> 314
+290
+290 -> 291
+291 -> 292
+292 -> 293
+291 -> 294
+294 -> 295
+295 -> 296
+290 -> 297
+297 -> 298
+290 -> 299
+299 -> 300
 
-304 [label="BiomeConditionalTransformationData",comment="name: \"BiomeConditionalTransformationData\", typeName: \"\", id: 304, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-305 [label="weighted biome",comment="name: \"weighted biome\", typeName: \"\", id: 305, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-306 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 306, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-307 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 307, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-308 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 308, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-309 [label="transforms into",comment="name: \"transforms into\", typeName: \"BiomeWeightedData\", id: 309, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-310 [label="BiomeWeightedData",comment="name: \"BiomeWeightedData\", typeName: \"\", id: 310, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-311 [label="condition JSON",comment="name: \"condition JSON\", typeName: \"short\", id: 311, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-312 [label="short",comment="name: \"short\", typeName: \"\", id: 312, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-313 [label="min passing neighbors",comment="name: \"min passing neighbors\", typeName: \"\", id: 313, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-314 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 314, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;307;310;312;314}
+290 [label="BiomeConditionalTransformationData",comment="name: \"BiomeConditionalTransformationData\", typeName: \"\", id: 290, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+291 [label="weighted biome",comment="name: \"weighted biome\", typeName: \"\", id: 291, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+292 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 292, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+293 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 293, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+294 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 294, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+295 [label="transforms into",comment="name: \"transforms into\", typeName: \"BiomeWeightedData\", id: 295, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+296 [label="BiomeWeightedData",comment="name: \"BiomeWeightedData\", typeName: \"\", id: 296, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+297 [label="condition JSON",comment="name: \"condition JSON\", typeName: \"short\", id: 297, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+298 [label="short",comment="name: \"short\", typeName: \"\", id: 298, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+299 [label="min passing neighbors",comment="name: \"min passing neighbors\", typeName: \"\", id: 299, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+300 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 300, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;293;296;298;300}
 
 }

@@ -1,32 +1,174 @@
 digraph "CameraInstruction" {
 rankdir = LR
-2
+0
+0 -> 1
+1 -> 2
 2 -> 3
-3 -> 92
-2 -> 93
-93 -> 94
-2 -> 95
-95 -> 130
-2 -> 131
-131 -> 142
-2 -> 143
-143 -> 144
-2 -> 145
-145 -> 160
+1 -> 4
+4 -> 5
+5 -> 6
+4 -> 7
+7 -> 8
+1 -> 9
+9 -> 10
+10 -> 11
+11 -> 12
+10 -> 13
+13 -> 14
+10 -> 15
+15 -> 16
+1 -> 17
+17 -> 18
+18 -> 19
+17 -> 20
+20 -> 21
+1 -> 22
+22 -> 23
+23 -> 24
+24 -> 25
+23 -> 26
+26 -> 27
+23 -> 28
+28 -> 29
+1 -> 30
+30 -> 31
+31 -> 32
+30 -> 33
+33 -> 34
+1 -> 35
+35 -> 36
+36 -> 37
+35 -> 38
+38 -> 39
+35 -> 40
+40 -> 41
+1 -> 42
+42 -> 43
+1 -> 44
+44 -> 45
+0 -> 46
+46 -> 47
+0 -> 48
+48 -> 49
+49 -> 50
+50 -> 51
+49 -> 52
+52 -> 53
+49 -> 54
+54 -> 55
+48 -> 56
+56 -> 57
+57 -> 58
+56 -> 59
+59 -> 60
+56 -> 61
+61 -> 62
+0 -> 63
+63 -> 64
+64 -> 65
+65 -> 66
+64 -> 67
+67 -> 68
+64 -> 69
+69 -> 70
+63 -> 71
+71 -> 72
+0 -> 73
+73 -> 74
+0 -> 75
+75 -> 76
+76 -> 77
+75 -> 78
+78 -> 79
+75 -> 80
+80 -> 81
+75 -> 82
+82 -> 83
 
-2 [label="CameraInstruction",comment="name: \"CameraInstruction\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-3 [label="Set",comment="name: \"Set\", typeName: \"std::optional<struct CameraInstruction::SetInstruction>\", id: 3, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-92 [label="std::optional<struct CameraInstruction::SetInstruction>",comment="name: \"std::optional<struct CameraInstruction::SetInstruction>\", typeName: \"\", id: 92, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-93 [label="Clear",comment="name: \"Clear\", typeName: \"std::optional<bool>\", id: 93, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-94 [label="std::optional<bool>",comment="name: \"std::optional<bool>\", typeName: \"\", id: 94, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-95 [label="Fade",comment="name: \"Fade\", typeName: \"std::optional<struct CameraInstruction::FadeInstruction>\", id: 95, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-130 [label="std::optional<struct CameraInstruction::FadeInstruction>",comment="name: \"std::optional<struct CameraInstruction::FadeInstruction>\", typeName: \"\", id: 130, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-131 [label="Target",comment="name: \"Target\", typeName: \"std::optional<struct CameraInstruction::TargetInstruction>\", id: 131, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-142 [label="std::optional<struct CameraInstruction::TargetInstruction>",comment="name: \"std::optional<struct CameraInstruction::TargetInstruction>\", typeName: \"\", id: 142, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-143 [label="RemoveTarget",comment="name: \"RemoveTarget\", typeName: \"std::optional<bool>\", id: 143, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-144 [label="std::optional<bool>",comment="name: \"std::optional<bool>\", typeName: \"\", id: 144, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-145 [label="FieldOfView",comment="name: \"FieldOfView\", typeName: \"std::optional<struct CameraInstruction::FovInstruction>\", id: 145, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-160 [label="std::optional<struct CameraInstruction::FovInstruction>",comment="name: \"std::optional<struct CameraInstruction::FovInstruction>\", typeName: \"\", id: 160, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;92;94;130;142;144;160}
+0 [label="CameraInstruction",comment="name: \"CameraInstruction\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Set",comment="name: \"Set\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="preset",comment="name: \"preset\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+4 [label="ease",comment="name: \"ease\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="type",comment="name: \"type\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+6 [label="unsigned byte",comment="name: \"unsigned byte\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+7 [label="time",comment="name: \"time\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="float",comment="name: \"float\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+9 [label="pos",comment="name: \"pos\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+10 [label="Pos",comment="name: \"Pos\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+11 [label="X",comment="name: \"X\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+12 [label="float",comment="name: \"float\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+13 [label="Y",comment="name: \"Y\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+14 [label="float",comment="name: \"float\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+15 [label="Z",comment="name: \"Z\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+16 [label="float",comment="name: \"float\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+17 [label="rot",comment="name: \"rot\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+18 [label="x",comment="name: \"x\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+19 [label="float",comment="name: \"float\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+20 [label="y",comment="name: \"y\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+21 [label="float",comment="name: \"float\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+22 [label="facing",comment="name: \"facing\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+23 [label="pos",comment="name: \"pos\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+24 [label="X",comment="name: \"X\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+25 [label="float",comment="name: \"float\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+26 [label="Y",comment="name: \"Y\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+27 [label="float",comment="name: \"float\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+28 [label="Z",comment="name: \"Z\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+29 [label="float",comment="name: \"float\", typeName: \"\", id: 29, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+30 [label="view_offset",comment="name: \"view_offset\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+31 [label="x",comment="name: \"x\", typeName: \"\", id: 31, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+32 [label="float",comment="name: \"float\", typeName: \"\", id: 32, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+33 [label="y",comment="name: \"y\", typeName: \"\", id: 33, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+34 [label="float",comment="name: \"float\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+35 [label="entity_offset",comment="name: \"entity_offset\", typeName: \"\", id: 35, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+36 [label="entity_offset_x",comment="name: \"entity_offset_x\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+37 [label="float",comment="name: \"float\", typeName: \"\", id: 37, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+38 [label="entity_offset_y",comment="name: \"entity_offset_y\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+39 [label="float",comment="name: \"float\", typeName: \"\", id: 39, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+40 [label="entity_offset_z",comment="name: \"entity_offset_z\", typeName: \"\", id: 40, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+41 [label="float",comment="name: \"float\", typeName: \"\", id: 41, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+42 [label="default",comment="name: \"default\", typeName: \"\", id: 42, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+43 [label="bool",comment="name: \"bool\", typeName: \"\", id: 43, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+44 [label="removeIgnoreStartingValuesComponent",comment="name: \"removeIgnoreStartingValuesComponent\", typeName: \"\", id: 44, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+45 [label="bool",comment="name: \"bool\", typeName: \"\", id: 45, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+46 [label="Clear",comment="name: \"Clear\", typeName: \"\", id: 46, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+47 [label="bool",comment="name: \"bool\", typeName: \"\", id: 47, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+48 [label="Fade",comment="name: \"Fade\", typeName: \"\", id: 48, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+49 [label="Time",comment="name: \"Time\", typeName: \"\", id: 49, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+50 [label="Fade In Time",comment="name: \"Fade In Time\", typeName: \"\", id: 50, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+51 [label="float",comment="name: \"float\", typeName: \"\", id: 51, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+52 [label="Hold Time",comment="name: \"Hold Time\", typeName: \"\", id: 52, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+53 [label="float",comment="name: \"float\", typeName: \"\", id: 53, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+54 [label="Fade Out Time",comment="name: \"Fade Out Time\", typeName: \"\", id: 54, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+55 [label="float",comment="name: \"float\", typeName: \"\", id: 55, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+56 [label="Color",comment="name: \"Color\", typeName: \"\", id: 56, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+57 [label="Red",comment="name: \"Red\", typeName: \"\", id: 57, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+58 [label="float",comment="name: \"float\", typeName: \"\", id: 58, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+59 [label="Green",comment="name: \"Green\", typeName: \"\", id: 59, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+60 [label="float",comment="name: \"float\", typeName: \"\", id: 60, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+61 [label="Blue",comment="name: \"Blue\", typeName: \"\", id: 61, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+62 [label="float",comment="name: \"float\", typeName: \"\", id: 62, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+63 [label="Target",comment="name: \"Target\", typeName: \"\", id: 63, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+64 [label="Target Center Offset",comment="name: \"Target Center Offset\", typeName: \"\", id: 64, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+65 [label="X",comment="name: \"X\", typeName: \"\", id: 65, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+66 [label="float",comment="name: \"float\", typeName: \"\", id: 66, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+67 [label="Y",comment="name: \"Y\", typeName: \"\", id: 67, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+68 [label="float",comment="name: \"float\", typeName: \"\", id: 68, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+69 [label="Z",comment="name: \"Z\", typeName: \"\", id: 69, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+70 [label="float",comment="name: \"float\", typeName: \"\", id: 70, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+71 [label="Target Actor ID",comment="name: \"Target Actor ID\", typeName: \"\", id: 71, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+72 [label="int64",comment="name: \"int64\", typeName: \"\", id: 72, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+73 [label="RemoveTarget",comment="name: \"RemoveTarget\", typeName: \"\", id: 73, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+74 [label="bool",comment="name: \"bool\", typeName: \"\", id: 74, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+75 [label="FieldOfView",comment="name: \"FieldOfView\", typeName: \"\", id: 75, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+76 [label="Field of View",comment="name: \"Field of View\", typeName: \"\", id: 76, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+77 [label="float",comment="name: \"float\", typeName: \"\", id: 77, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+78 [label="FOV Ease Time",comment="name: \"FOV Ease Time\", typeName: \"\", id: 78, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+79 [label="float",comment="name: \"float\", typeName: \"\", id: 79, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+80 [label="FOV Ease Type",comment="name: \"FOV Ease Type\", typeName: \"\", id: 80, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+81 [label="enum easing_function",comment="name: \"enum easing_function\", typeName: \"\", id: 81, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+82 [label="Field of View Clear",comment="name: \"Field of View Clear\", typeName: \"\", id: 82, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+83 [label="bool",comment="name: \"bool\", typeName: \"\", id: 83, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3;6;8;12;14;16;19;21;25;27;29;32;34;37;39;41;43;45;47;51;53;55;58;60;62;66;68;70;72;74;77;79;81;83}
 
 }

@@ -2,11 +2,45 @@ digraph "MoveActorAbsolutePacket" {
 rankdir = LR
 0
 0 -> 1
-1 -> 15
+1 -> 2
+2 -> 3
+3 -> 4
+1 -> 5
+5 -> 6
+1 -> 7
+7 -> 8
+8 -> 9
+7 -> 10
+10 -> 11
+7 -> 12
+12 -> 13
+1 -> 14
+14 -> 15
+1 -> 16
+16 -> 17
+1 -> 18
+18 -> 19
 
-0 [label="MoveActorAbsolutePacket",comment="name: \"MoveActorAbsolutePacket\", typeName: \"\", id: 0, branchId: 18, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Move Data",comment="name: \"Move Data\", typeName: \"MoveActorAbsoluteData\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"This is client bound for normal actor motion updates.\""];
-15 [label="MoveActorAbsoluteData",comment="name: \"MoveActorAbsoluteData\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;15}
+0 [label="MoveActorAbsolutePacket",comment="name: \"MoveActorAbsolutePacket\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"This is used primarily for motion updates of all actors from server to client.\""];
+1 [label="Move Data",comment="name: \"Move Data\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"This is client bound for normal actor motion updates.\""];
+2 [label="ActorRuntimeID",comment="name: \"ActorRuntimeID\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"The runtime id of the actor being moved\""];
+3 [label="Actor Runtime ID",comment="name: \"Actor Runtime ID\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="unsigned varint64",comment="name: \"unsigned varint64\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+5 [label="Header",comment="name: \"Header\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"Header bits describing the status of the actor, see additional documentation in the supplemental documentation folder\""];
+6 [label="unsigned byte",comment="name: \"unsigned byte\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"Header bits describing the status of the actor, see additional documentation in the supplemental documentation folder\""];
+7 [label="Position",comment="name: \"Position\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"X/Y/Z coordinates of the position of the actor, each being a 4 byte float\""];
+8 [label="X",comment="name: \"X\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="float",comment="name: \"float\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+10 [label="Y",comment="name: \"Y\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+11 [label="float",comment="name: \"float\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+12 [label="Z",comment="name: \"Z\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+13 [label="float",comment="name: \"float\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+14 [label="Rotation X",comment="name: \"Rotation X\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 0, notes: \"The X rotation of the actor stored as an integer\""];
+15 [label="unsigned byte",comment="name: \"unsigned byte\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 512, notes: \"The X rotation of the actor stored as an integer\""];
+16 [label="Rotation Y",comment="name: \"Rotation Y\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 0, notes: \"The Y rotation of the actor stored as an integer\""];
+17 [label="unsigned byte",comment="name: \"unsigned byte\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 512, notes: \"The Y rotation of the actor stored as an integer\""];
+18 [label="Rotation Y Head",comment="name: \"Rotation Y Head\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 0, notes: \"The head rotation of the actor if and only if it's a Mob type, stored as an integer\""];
+19 [label="unsigned byte",comment="name: \"unsigned byte\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 512, notes: \"The head rotation of the actor if and only if it's a Mob type, stored as an integer\""];
+{ rank = max;4;6;9;11;13;15;17;19}
 
 }

@@ -3,10 +3,28 @@ rankdir = LR
 0
 0 -> 1
 1 -> 2
+2 -> 3
+3 -> 4
+2 -> 5
+5 -> 6
+6 -> 7
+5 -> 8
+8 -> 9
+5 -> 10
+10 -> 11
 
-0 [label="GameRulesChangedPacket",comment="name: \"GameRulesChangedPacket\", typeName: \"\", id: 0, branchId: 72, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Rules Data",comment="name: \"Rules Data\", typeName: \"GameRulesChangedPacketData\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-2 [label="GameRulesChangedPacketData",comment="name: \"GameRulesChangedPacketData\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2}
+0 [label="GameRulesChangedPacket",comment="name: \"GameRulesChangedPacket\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"Updates game rules.\""];
+1 [label="Rule Data",comment="name: \"Rule Data\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="Rules List",comment="name: \"Rules List\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+6 [label="Rule Name",comment="name: \"Rule Name\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="string",comment="name: \"string\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+8 [label="Rule Can Be Modified",comment="name: \"Rule Can Be Modified\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="bool",comment="name: \"bool\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+10 [label="Rule Value",comment="name: \"Rule Value\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+11 [label="",comment="name: \"\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;7;9;11}
 
 }

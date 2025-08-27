@@ -1,0 +1,34 @@
+digraph "CameraAimAssistPresetDefinition" {
+rankdir = LR
+0
+0 -> 1
+0 -> 2
+2 -> 3
+3 -> 4
+2 -> 5
+0 -> 6
+6 -> 7
+7 -> 8
+6 -> 9
+0 -> 10
+10 -> 11
+0 -> 12
+0 -> 13
+
+0 [label="CameraAimAssistPresetDefinition",comment="name: \"CameraAimAssistPresetDefinition\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="identifier",comment="name: \"identifier\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"Namespaced identifier for Camera Aim-Assist preset. Namespace and name must be separated by a ':'.\""];
+2 [label="exclusion_list",comment="name: \"exclusion_list\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"Optional. List of block/entity identifiers to exclude from aim assist targeting.\""];
+3 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+6 [label="liquid_targeting_list",comment="name: \"liquid_targeting_list\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"Optional. List of item identifiers that will target liquid blocks with aim-assist when being held.\""];
+7 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+10 [label="item_settings",comment="name: \"item_settings\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"Optional. Map of Item identifiers to Aim-Assist Category names found in the specified 'categories'.\""];
+11 [label="map<Reference,Reference>",comment="name: \"map<Reference,Reference>\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 512, notes: \"Optional. Map of Item identifiers to Aim-Assist Category names found in the specified 'categories'.\""];
+12 [label="default_item_settings",comment="name: \"default_item_settings\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 0, notes: \"Optional. Default Aim-Assist Category used for Items not found in 'item_settings'.\""];
+13 [label="hand_settings",comment="name: \"hand_settings\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"Optional. Aim-assist Category used for an empty hand.\""];
+{ rank = max;11}
+
+}

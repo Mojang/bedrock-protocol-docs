@@ -3,10 +3,12 @@ rankdir = LR
 0
 0 -> 1
 1 -> 2
+2 -> 3
 
-0 [label="RemoveActorPacket",comment="name: \"RemoveActorPacket\", typeName: \"\", id: 0, branchId: 14, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Target Actor ID",comment="name: \"Target Actor ID\", typeName: \"ActorUniqueID\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-2 [label="ActorUniqueID",comment="name: \"ActorUniqueID\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2}
+0 [label="RemoveActorPacket",comment="name: \"RemoveActorPacket\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"Occasionally, during the server player tick some time is taken to remove nearby actors from the world.\""];
+1 [label="Target Actor ID",comment="name: \"Target Actor ID\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="Actor Unique ID",comment="name: \"Actor Unique ID\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="varint64",comment="name: \"varint64\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3}
 
 }

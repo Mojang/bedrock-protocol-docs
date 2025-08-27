@@ -1,16 +1,16 @@
 digraph "std::optional<struct BiomeSurfaceMaterialAdjustmentData>" {
 rankdir = LR
-166
-166 -> 167
-167 -> 168
-166 -> 169
-169 -> 207
+152
+152 -> 153
+153 -> 154
+152 -> 155
+155 -> 193
 
-166 [label="std::optional<struct BiomeSurfaceMaterialAdjustmentData>",comment="name: \"std::optional<struct BiomeSurfaceMaterialAdjustmentData>\", typeName: \"\", id: 166, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-167 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 167, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
-168 [label="bool",comment="name: \"bool\", typeName: \"\", id: 168, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-169 [label="Value",comment="name: \"Value\", typeName: \"BiomeSurfaceMaterialAdjustmentData\", id: 169, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-207 [label="BiomeSurfaceMaterialAdjustmentData",comment="name: \"BiomeSurfaceMaterialAdjustmentData\", typeName: \"\", id: 207, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;168;207}
+152 [label="std::optional<struct BiomeSurfaceMaterialAdjustmentData>",comment="name: \"std::optional<struct BiomeSurfaceMaterialAdjustmentData>\", typeName: \"\", id: 152, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+153 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 153, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
+154 [label="bool",comment="name: \"bool\", typeName: \"\", id: 154, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+155 [label="Value",comment="name: \"Value\", typeName: \"BiomeSurfaceMaterialAdjustmentData\", id: 155, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+193 [label="BiomeSurfaceMaterialAdjustmentData",comment="name: \"BiomeSurfaceMaterialAdjustmentData\", typeName: \"\", id: 193, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;154;193}
 
 }

@@ -1,16 +1,16 @@
 digraph "EduSharedUriResource" {
 rankdir = LR
-127
-127 -> 128
-128 -> 129
-127 -> 130
-130 -> 131
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
 
-127 [label="EduSharedUriResource",comment="name: \"EduSharedUriResource\", typeName: \"\", id: 127, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-128 [label="Button Name",comment="name: \"Button Name\", typeName: \"\", id: 128, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-129 [label="string",comment="name: \"string\", typeName: \"\", id: 129, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-130 [label="Link Uri",comment="name: \"Link Uri\", typeName: \"\", id: 130, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-131 [label="string",comment="name: \"string\", typeName: \"\", id: 131, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;129;131}
+0 [label="EduSharedUriResource",comment="name: \"EduSharedUriResource\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Button Name",comment="name: \"Button Name\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="string",comment="name: \"string\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="Link Uri",comment="name: \"Link Uri\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="string",comment="name: \"string\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4}
 
 }

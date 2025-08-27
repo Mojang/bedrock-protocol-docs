@@ -1,16 +1,16 @@
 digraph "std::optional<struct BiomeLegacyWorldGenRulesData>" {
 rankdir = LR
-354
-354 -> 355
-355 -> 356
-354 -> 357
-357 -> 365
+340
+340 -> 341
+341 -> 342
+340 -> 343
+343 -> 351
 
-354 [label="std::optional<struct BiomeLegacyWorldGenRulesData>",comment="name: \"std::optional<struct BiomeLegacyWorldGenRulesData>\", typeName: \"\", id: 354, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-355 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 355, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
-356 [label="bool",comment="name: \"bool\", typeName: \"\", id: 356, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-357 [label="Value",comment="name: \"Value\", typeName: \"BiomeLegacyWorldGenRulesData\", id: 357, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-365 [label="BiomeLegacyWorldGenRulesData",comment="name: \"BiomeLegacyWorldGenRulesData\", typeName: \"\", id: 365, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;356;365}
+340 [label="std::optional<struct BiomeLegacyWorldGenRulesData>",comment="name: \"std::optional<struct BiomeLegacyWorldGenRulesData>\", typeName: \"\", id: 340, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+341 [label="Has Value",comment="name: \"Has Value\", typeName: \"\", id: 341, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, follow with appropriate data type, otherwise nothing\""];
+342 [label="bool",comment="name: \"bool\", typeName: \"\", id: 342, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+343 [label="Value",comment="name: \"Value\", typeName: \"BiomeLegacyWorldGenRulesData\", id: 343, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+351 [label="BiomeLegacyWorldGenRulesData",comment="name: \"BiomeLegacyWorldGenRulesData\", typeName: \"\", id: 351, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;342;351}
 
 }

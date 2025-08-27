@@ -1,28 +1,28 @@
 digraph "BiomeConsolidatedFeatureData" {
 rankdir = LR
-92
-92 -> 93
-93 -> 130
-92 -> 131
-131 -> 132
-92 -> 133
-133 -> 134
-92 -> 135
-135 -> 136
-92 -> 137
-137 -> 138
+78
+78 -> 79
+79 -> 116
+78 -> 117
+117 -> 118
+78 -> 119
+119 -> 120
+78 -> 121
+121 -> 122
+78 -> 123
+123 -> 124
 
-92 [label="BiomeConsolidatedFeatureData",comment="name: \"BiomeConsolidatedFeatureData\", typeName: \"\", id: 92, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-93 [label="scatter",comment="name: \"scatter\", typeName: \"BiomeScatterParamData\", id: 93, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-130 [label="BiomeScatterParamData",comment="name: \"BiomeScatterParamData\", typeName: \"\", id: 130, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-131 [label="feature",comment="name: \"feature\", typeName: \"short\", id: 131, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-132 [label="short",comment="name: \"short\", typeName: \"\", id: 132, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-133 [label="identifier",comment="name: \"identifier\", typeName: \"short\", id: 133, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-134 [label="short",comment="name: \"short\", typeName: \"\", id: 134, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-135 [label="pass",comment="name: \"pass\", typeName: \"short\", id: 135, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-136 [label="short",comment="name: \"short\", typeName: \"\", id: 136, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-137 [label="can use internal",comment="name: \"can use internal\", typeName: \"\", id: 137, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-138 [label="bool",comment="name: \"bool\", typeName: \"\", id: 138, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;130;132;134;136;138}
+78 [label="BiomeConsolidatedFeatureData",comment="name: \"BiomeConsolidatedFeatureData\", typeName: \"\", id: 78, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+79 [label="scatter",comment="name: \"scatter\", typeName: \"BiomeScatterParamData\", id: 79, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+116 [label="BiomeScatterParamData",comment="name: \"BiomeScatterParamData\", typeName: \"\", id: 116, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+117 [label="feature",comment="name: \"feature\", typeName: \"short\", id: 117, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+118 [label="short",comment="name: \"short\", typeName: \"\", id: 118, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+119 [label="identifier",comment="name: \"identifier\", typeName: \"short\", id: 119, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+120 [label="short",comment="name: \"short\", typeName: \"\", id: 120, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+121 [label="pass",comment="name: \"pass\", typeName: \"short\", id: 121, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+122 [label="short",comment="name: \"short\", typeName: \"\", id: 122, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+123 [label="can use internal",comment="name: \"can use internal\", typeName: \"\", id: 123, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+124 [label="bool",comment="name: \"bool\", typeName: \"\", id: 124, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;116;118;120;122;124}
 
 }

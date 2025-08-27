@@ -3,10 +3,16 @@ rankdir = LR
 0
 0 -> 1
 1 -> 2
+2 -> 3
+1 -> 4
+4 -> 5
 
-0 [label="EduUriResourcePacket",comment="name: \"EduUriResourcePacket\", typeName: \"\", id: 0, branchId: 170, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Edu Shared URI Resource",comment="name: \"Edu Shared URI Resource\", typeName: \"EduSharedUriResource\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-2 [label="EduSharedUriResource",comment="name: \"EduSharedUriResource\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2}
+0 [label="EduUriResourcePacket",comment="name: \"EduUriResourcePacket\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"Transmits Edu Shared Uri Resource settings to all clients.\""];
+1 [label="Edu Shared URI Resource",comment="name: \"Edu Shared URI Resource\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="Button Name",comment="name: \"Button Name\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="string",comment="name: \"string\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+4 [label="Link Uri",comment="name: \"Link Uri\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="string",comment="name: \"string\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3;5}
 
 }

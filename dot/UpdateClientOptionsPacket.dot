@@ -1,0 +1,12 @@
+digraph "UpdateClientOptionsPacket" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+
+0 [label="UpdateClientOptionsPacket",comment="name: \"UpdateClientOptionsPacket\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"Sync the player's options (mostly settings) to the server.\""];
+1 [label="Graphics Mode Change",comment="name: \"Graphics Mode Change\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"New graphics mode value\""];
+2 [label="enum GraphicsMode",comment="name: \"enum GraphicsMode\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"New graphics mode value\""];
+{ rank = max;2}
+
+}

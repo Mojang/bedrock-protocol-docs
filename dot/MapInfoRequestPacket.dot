@@ -3,34 +3,28 @@ rankdir = LR
 0
 0 -> 1
 1 -> 2
-0 -> 3
-3 -> 4
-0 -> 5
+2 -> 3
+0 -> 4
+4 -> 5
 5 -> 6
-6 -> 7
-5 -> 8
+4 -> 7
+7 -> 8
 8 -> 9
-9 -> 10
+7 -> 10
 10 -> 11
-11 -> 12
-10 -> 13
-13 -> 14
 
-0 [label="MapInfoRequestPacket",comment="name: \"MapInfoRequestPacket\", typeName: \"\", id: 0, branchId: 68, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Map Unique ID",comment="name: \"Map Unique ID\", typeName: \"ActorUniqueID\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-2 [label="ActorUniqueID",comment="name: \"ActorUniqueID\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-3 [label="Client Pixels List Size",comment="name: \"Client Pixels List Size\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-4 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-5 [label="Dependency on 'Client Pixels List Size > 0 ?'",shape=note,comment="name: \"Dependency on 'Client Pixels List Size > 0 ?'\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
-6 [label="If False",shape=diamond,comment="name: \"If False\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
-7 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-8 [label="If True",shape=diamond,comment="name: \"If True\", typeName: \"\", id: 8, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
-9 [label="Client Pixels List",comment="name: \"Client Pixels List\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 8, notes: \"These are sent from the client to tell the Server map about terrain pixels it doesn't know about\""];
-10 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-11 [label="pixel",comment="name: \"pixel\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-12 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-13 [label="index",comment="name: \"index\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-14 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2;4;7;12;14}
+0 [label="MapInfoRequestPacket",comment="name: \"MapInfoRequestPacket\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"In the case of the client being unable to find map data for a map item it sends a uuid for a map to the server.\""];
+1 [label="Map Unique ID",comment="name: \"Map Unique ID\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="Actor Unique ID",comment="name: \"Actor Unique ID\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="varint64",comment="name: \"varint64\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+4 [label="Client Pixels List",comment="name: \"Client Pixels List\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"These are sent from the client to tell the Server map about terrain pixels it doesn't know about\""];
+5 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+6 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+8 [label="pixel",comment="name: \"pixel\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+10 [label="index",comment="name: \"index\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+11 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3;9;11}
 
 }

@@ -1,44 +1,96 @@
 digraph "CameraInstruction::SetInstruction" {
 rankdir = LR
-8
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+4 -> 5
+3 -> 6
+6 -> 7
+0 -> 8
 8 -> 9
 9 -> 10
-8 -> 11
-11 -> 22
-8 -> 23
-23 -> 32
-8 -> 33
-33 -> 44
-8 -> 45
-45 -> 54
-8 -> 55
-55 -> 66
-8 -> 67
-67 -> 83
-8 -> 84
-84 -> 85
-8 -> 86
-86 -> 90
+10 -> 11
+9 -> 12
+12 -> 13
+9 -> 14
+14 -> 15
+0 -> 16
+16 -> 17
+17 -> 18
+16 -> 19
+19 -> 20
+0 -> 21
+21 -> 22
+22 -> 23
+23 -> 24
+22 -> 25
+25 -> 26
+22 -> 27
+27 -> 28
+0 -> 29
+29 -> 30
+30 -> 31
+29 -> 32
+32 -> 33
+0 -> 34
+34 -> 35
+35 -> 36
+34 -> 37
+37 -> 38
+34 -> 39
+39 -> 40
+0 -> 41
+41 -> 42
+0 -> 43
+43 -> 44
 
-8 [label="CameraInstruction::SetInstruction",comment="name: \"CameraInstruction::SetInstruction\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-9 [label="Preset Index",comment="name: \"Preset Index\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-10 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-11 [label="Ease",comment="name: \"Ease\", typeName: \"std::optional<struct CameraInstruction::SetInstruction::EaseOption>\", id: 11, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-22 [label="std::optional<struct CameraInstruction::SetInstruction::EaseOption>",comment="name: \"std::optional<struct CameraInstruction::SetInstruction::EaseOption>\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-23 [label="Pos",comment="name: \"Pos\", typeName: \"std::optional<struct CameraInstruction::SetInstruction::PosOption>\", id: 23, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-32 [label="std::optional<struct CameraInstruction::SetInstruction::PosOption>",comment="name: \"std::optional<struct CameraInstruction::SetInstruction::PosOption>\", typeName: \"\", id: 32, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-33 [label="Rot",comment="name: \"Rot\", typeName: \"std::optional<struct CameraInstruction::SetInstruction::RotOption>\", id: 33, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-44 [label="std::optional<struct CameraInstruction::SetInstruction::RotOption>",comment="name: \"std::optional<struct CameraInstruction::SetInstruction::RotOption>\", typeName: \"\", id: 44, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-45 [label="Facing",comment="name: \"Facing\", typeName: \"std::optional<struct CameraInstruction::SetInstruction::FacingOption>\", id: 45, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-54 [label="std::optional<struct CameraInstruction::SetInstruction::FacingOption>",comment="name: \"std::optional<struct CameraInstruction::SetInstruction::FacingOption>\", typeName: \"\", id: 54, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-55 [label="View Offset",comment="name: \"View Offset\", typeName: \"std::optional<struct CameraInstruction::SetInstruction::ViewOffsetOption>\", id: 55, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-66 [label="std::optional<struct CameraInstruction::SetInstruction::ViewOffsetOption>",comment="name: \"std::optional<struct CameraInstruction::SetInstruction::ViewOffsetOption>\", typeName: \"\", id: 66, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-67 [label="Entity Offset",comment="name: \"Entity Offset\", typeName: \"std::optional<struct CameraInstruction::SetInstruction::EntityOffsetOption>\", id: 67, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-83 [label="std::optional<struct CameraInstruction::SetInstruction::EntityOffsetOption>",comment="name: \"std::optional<struct CameraInstruction::SetInstruction::EntityOffsetOption>\", typeName: \"\", id: 83, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-84 [label="Default",comment="name: \"Default\", typeName: \"std::optional<bool>\", id: 84, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-85 [label="std::optional<bool>",comment="name: \"std::optional<bool>\", typeName: \"\", id: 85, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-86 [label="Remove IgnoreStartingValuesComponent",comment="name: \"Remove IgnoreStartingValuesComponent\", typeName: \"bool\", id: 86, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-90 [label="bool",comment="name: \"bool\", typeName: \"\", id: 90, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;10;22;32;44;54;66;83;85;90}
+0 [label="CameraInstruction::SetInstruction",comment="name: \"CameraInstruction::SetInstruction\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="preset",comment="name: \"preset\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="ease",comment="name: \"ease\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="type",comment="name: \"type\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="unsigned byte",comment="name: \"unsigned byte\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+6 [label="time",comment="name: \"time\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="float",comment="name: \"float\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+8 [label="pos",comment="name: \"pos\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="Pos",comment="name: \"Pos\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+10 [label="X",comment="name: \"X\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+11 [label="float",comment="name: \"float\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+12 [label="Y",comment="name: \"Y\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+13 [label="float",comment="name: \"float\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+14 [label="Z",comment="name: \"Z\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+15 [label="float",comment="name: \"float\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+16 [label="rot",comment="name: \"rot\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+17 [label="x",comment="name: \"x\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+18 [label="float",comment="name: \"float\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+19 [label="y",comment="name: \"y\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+20 [label="float",comment="name: \"float\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+21 [label="facing",comment="name: \"facing\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+22 [label="pos",comment="name: \"pos\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+23 [label="X",comment="name: \"X\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+24 [label="float",comment="name: \"float\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+25 [label="Y",comment="name: \"Y\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+26 [label="float",comment="name: \"float\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+27 [label="Z",comment="name: \"Z\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+28 [label="float",comment="name: \"float\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+29 [label="view_offset",comment="name: \"view_offset\", typeName: \"\", id: 29, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+30 [label="x",comment="name: \"x\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+31 [label="float",comment="name: \"float\", typeName: \"\", id: 31, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+32 [label="y",comment="name: \"y\", typeName: \"\", id: 32, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+33 [label="float",comment="name: \"float\", typeName: \"\", id: 33, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+34 [label="entity_offset",comment="name: \"entity_offset\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+35 [label="entity_offset_x",comment="name: \"entity_offset_x\", typeName: \"\", id: 35, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+36 [label="float",comment="name: \"float\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+37 [label="entity_offset_y",comment="name: \"entity_offset_y\", typeName: \"\", id: 37, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+38 [label="float",comment="name: \"float\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+39 [label="entity_offset_z",comment="name: \"entity_offset_z\", typeName: \"\", id: 39, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+40 [label="float",comment="name: \"float\", typeName: \"\", id: 40, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+41 [label="default",comment="name: \"default\", typeName: \"\", id: 41, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+42 [label="bool",comment="name: \"bool\", typeName: \"\", id: 42, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+43 [label="removeIgnoreStartingValuesComponent",comment="name: \"removeIgnoreStartingValuesComponent\", typeName: \"\", id: 43, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+44 [label="bool",comment="name: \"bool\", typeName: \"\", id: 44, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;5;7;11;13;15;18;20;24;26;28;31;33;36;38;40;42;44}
 
 }

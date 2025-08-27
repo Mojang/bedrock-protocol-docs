@@ -1,28 +1,28 @@
 digraph "BiomeMultinoiseGenRulesData" {
 rankdir = LR
-340
-340 -> 341
-341 -> 342
-340 -> 343
-343 -> 344
-340 -> 345
-345 -> 346
-340 -> 347
-347 -> 348
-340 -> 349
-349 -> 350
+326
+326 -> 327
+327 -> 328
+326 -> 329
+329 -> 330
+326 -> 331
+331 -> 332
+326 -> 333
+333 -> 334
+326 -> 335
+335 -> 336
 
-340 [label="BiomeMultinoiseGenRulesData",comment="name: \"BiomeMultinoiseGenRulesData\", typeName: \"\", id: 340, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-341 [label="temperature",comment="name: \"temperature\", typeName: \"\", id: 341, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-342 [label="float",comment="name: \"float\", typeName: \"\", id: 342, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-343 [label="humidity",comment="name: \"humidity\", typeName: \"\", id: 343, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-344 [label="float",comment="name: \"float\", typeName: \"\", id: 344, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-345 [label="altitude",comment="name: \"altitude\", typeName: \"\", id: 345, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-346 [label="float",comment="name: \"float\", typeName: \"\", id: 346, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-347 [label="weirdness",comment="name: \"weirdness\", typeName: \"\", id: 347, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-348 [label="float",comment="name: \"float\", typeName: \"\", id: 348, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-349 [label="weight",comment="name: \"weight\", typeName: \"\", id: 349, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-350 [label="float",comment="name: \"float\", typeName: \"\", id: 350, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;342;344;346;348;350}
+326 [label="BiomeMultinoiseGenRulesData",comment="name: \"BiomeMultinoiseGenRulesData\", typeName: \"\", id: 326, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+327 [label="temperature",comment="name: \"temperature\", typeName: \"\", id: 327, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+328 [label="float",comment="name: \"float\", typeName: \"\", id: 328, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+329 [label="humidity",comment="name: \"humidity\", typeName: \"\", id: 329, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+330 [label="float",comment="name: \"float\", typeName: \"\", id: 330, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+331 [label="altitude",comment="name: \"altitude\", typeName: \"\", id: 331, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+332 [label="float",comment="name: \"float\", typeName: \"\", id: 332, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+333 [label="weirdness",comment="name: \"weirdness\", typeName: \"\", id: 333, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+334 [label="float",comment="name: \"float\", typeName: \"\", id: 334, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+335 [label="weight",comment="name: \"weight\", typeName: \"\", id: 335, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+336 [label="float",comment="name: \"float\", typeName: \"\", id: 336, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;328;330;332;334;336}
 
 }

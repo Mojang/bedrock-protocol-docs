@@ -1,4 +1,36 @@
-<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/ResourcePackDataInfoPacket.svg" alt="ResourcePackDataInfoPacket">
-<br><table><col width="10%"><col width="90%"><tr><th>Field Name</th><th>Field Notes</th></tr><tr><td>Is Premium Pack</td>
+<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><h1>ResourcePackDataInfoPacket (id: 82)</h1>
+<table><col width="1%"><col width="99%"><tr><th></th><th></th></tr><tr><td> <b>Purpose:</b> </td>
+<td>Resource Pack Data Info</td>
+</tr><tr><td> <b>Notes:</b> </td>
+<td>Sent from the serverFileChunkUploader during the initialization of the file uploader. This packet is sent to the primary client.</td>
+</tr></table><br><h2>Payload</h2>
+<img src="svg/ResourcePackDataInfoPacket.svg" alt="ResourcePackDataInfoPacket">
+<br><br><br><table><col width="10%"><col width="10%"><col width="15%"><col width="80%"><tr><th>Field Name</th><th>Field Type</th><th>Field Constraints</th><th>Field Notes</th></tr><tr><td>Resource Name</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr><tr><td>Chunk Size</td>
+<td>unsigned int</td>
+<td></td>
+<td></td>
+</tr><tr><td>Number of Chunks</td>
+<td>unsigned int</td>
+<td></td>
+<td></td>
+</tr><tr><td>File Size</td>
+<td>unsigned int64</td>
+<td></td>
+<td></td>
+</tr><tr><td>File Hash</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr><tr><td>Is Premium Pack</td>
+<td>bool</td>
+<td></td>
 <td>Do you need an entitlement to use this pack?</td>
+</tr><tr><td>Pack Type</td>
+<td>unsigned byte</td>
+<td></td>
+<td></td>
 </tr></table></body> </html>

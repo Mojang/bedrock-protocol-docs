@@ -1,4 +1,44 @@
-<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/MobEffectPacket.svg" alt="MobEffectPacket">
-<br><table><col width="10%"><col width="90%"><tr><th>Field Name</th><th>Field Notes</th></tr><tr><td>Tick</td>
+<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><h1>MobEffectPacket (id: 28)</h1>
+<table><col width="1%"><col width="99%"><tr><th></th><th></th></tr><tr><td> <b>Purpose:</b> </td>
+<td>Mob Effect</td>
+</tr><tr><td> <b>Notes:</b> </td>
+<td>At the start of the game the server sends any mob effects with _sendAdditionalLevelData() if the joining player saved out with them,
+and then anytime a mob effect is added, removed, or updated this packet is sent.<br>
+It is important for player movement simulation to ensure that the following effects are sent for the player or any client predicted vehicle they are in control of:<br>
+- levitation<br>
+- slow_falling<br>
+- jump<br>
+- movement_speed<br>
+- movement_slowdown<br>
+- weaving</td>
+</tr></table><br><h2>Payload</h2>
+<img src="svg/MobEffectPacket.svg" alt="MobEffectPacket">
+<br><br><br><table><col width="10%"><col width="10%"><col width="15%"><col width="80%"><tr><th>Field Name</th><th>Field Type</th><th>Field Constraints</th><th>Field Notes</th></tr><tr><td>Target Runtime ID</td>
+<td>ActorRuntimeID</td>
+<td></td>
+<td></td>
+</tr><tr><td>Event ID</td>
+<td>enum MobEffectPacketPayload::Event</td>
+<td></td>
+<td></td>
+</tr><tr><td>Effect ID</td>
+<td>varint</td>
+<td></td>
+<td></td>
+</tr><tr><td>Effect Amplifier</td>
+<td>varint</td>
+<td></td>
+<td></td>
+</tr><tr><td>Show Particles</td>
+<td>bool</td>
+<td></td>
+<td></td>
+</tr><tr><td>Effect Duration Ticks</td>
+<td>varint</td>
+<td></td>
+<td></td>
+</tr><tr><td>Tick</td>
+<td>PlayerInputTick</td>
+<td></td>
 <td>If this packet is referring to the player or a client predicted vehicle they are in control of, this should be the most recently processed PlayerInputTick from their PlayerAuthInputPacket. Otherwise zero.</td>
 </tr></table></body> </html>

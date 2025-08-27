@@ -1,0 +1,26 @@
+<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/CameraAimAssistPresetDefinition.svg" alt="CameraAimAssistPresetDefinition">
+<br><table><col width="10%"><col width="10%"><col width="15%"><col width="80%"><tr><th>Field Name</th><th>Field Type</th><th>Field Constraints</th><th>Field Notes</th></tr><tr><td>identifier</td>
+<td>Identifier</td>
+<td></td>
+<td>Namespaced identifier for Camera Aim-Assist preset. Namespace and name must be separated by a ':'.</td>
+</tr><tr><td>exclusion_list</td>
+<td>vector&lt;Reference&gt;</td>
+<td></td>
+<td>Optional. List of block/entity identifiers to exclude from aim assist targeting.</td>
+</tr><tr><td>liquid_targeting_list</td>
+<td>vector&lt;Reference&gt;</td>
+<td></td>
+<td>Optional. List of item identifiers that will target liquid blocks with aim-assist when being held.</td>
+</tr><tr><td>item_settings</td>
+<td>map&lt;Reference,Reference&gt;</td>
+<td></td>
+<td>Optional. Map of Item identifiers to Aim-Assist Category names found in the specified 'categories'.</td>
+</tr><tr><td>default_item_settings</td>
+<td>Reference</td>
+<td></td>
+<td>Optional. Default Aim-Assist Category used for Items not found in 'item_settings'.</td>
+</tr><tr><td>hand_settings</td>
+<td>Reference</td>
+<td></td>
+<td>Optional. Aim-assist Category used for an empty hand.</td>
+</tr></table></body> </html>

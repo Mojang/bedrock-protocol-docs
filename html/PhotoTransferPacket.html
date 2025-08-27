@@ -1,2 +1,41 @@
-<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/PhotoTransferPacket.svg" alt="PhotoTransferPacket">
-<br></body> </html>
+<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><h1>PhotoTransferPacket (id: 99)</h1>
+<table><col width="1%"><col width="99%"><tr><th></th><th></th></tr><tr><td> <b>Purpose:</b> </td>
+<td>There is a camera item in EDU and they can use it to take screenshots and add them to a scrapbook.</td>
+</tr><tr><td> <b>Notes:</b> </td>
+<td>
+	When the player uses the camera item or adds a photo to the scrapbook it sends the photo to the server, 
+	then the server sends a response back on whether that was successful or not. 
+	Either uploads a photo to the server's photoStorage or request one from it to be stored in client's photoStorage.
+	If no mPhotoData is provided it is a request for the given filename.
+	</td>
+</tr></table><br><h2>Payload</h2>
+<img src="svg/PhotoTransferPacket.svg" alt="PhotoTransferPacket">
+<br><br><br><table><col width="10%"><col width="10%"><col width="15%"><col width="80%"><tr><th>Field Name</th><th>Field Type</th><th>Field Constraints</th><th>Field Notes</th></tr><tr><td>Photo Name</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr><tr><td>Photo Data</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr><tr><td>Book ID</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr><tr><td>Type</td>
+<td>enum PhotoType</td>
+<td></td>
+<td></td>
+</tr><tr><td>Source Type</td>
+<td>enum PhotoType</td>
+<td></td>
+<td></td>
+</tr><tr><td>Owner ID</td>
+<td>int64</td>
+<td></td>
+<td></td>
+</tr><tr><td>New Photo Name</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr></table></body> </html>

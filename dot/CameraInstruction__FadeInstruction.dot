@@ -1,16 +1,36 @@
 digraph "CameraInstruction::FadeInstruction" {
 rankdir = LR
-100
-100 -> 101
-101 -> 114
-100 -> 115
-115 -> 128
+0
+0 -> 1
+1 -> 2
+2 -> 3
+1 -> 4
+4 -> 5
+1 -> 6
+6 -> 7
+0 -> 8
+8 -> 9
+9 -> 10
+8 -> 11
+11 -> 12
+8 -> 13
+13 -> 14
 
-100 [label="CameraInstruction::FadeInstruction",comment="name: \"CameraInstruction::FadeInstruction\", typeName: \"\", id: 100, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-101 [label="Time",comment="name: \"Time\", typeName: \"std::optional<struct CameraInstruction::FadeInstruction::TimeOption>\", id: 101, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-114 [label="std::optional<struct CameraInstruction::FadeInstruction::TimeOption>",comment="name: \"std::optional<struct CameraInstruction::FadeInstruction::TimeOption>\", typeName: \"\", id: 114, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-115 [label="Color",comment="name: \"Color\", typeName: \"std::optional<struct CameraInstruction::FadeInstruction::ColorOption>\", id: 115, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-128 [label="std::optional<struct CameraInstruction::FadeInstruction::ColorOption>",comment="name: \"std::optional<struct CameraInstruction::FadeInstruction::ColorOption>\", typeName: \"\", id: 128, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;114;128}
+0 [label="CameraInstruction::FadeInstruction",comment="name: \"CameraInstruction::FadeInstruction\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Time",comment="name: \"Time\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="Fade In Time",comment="name: \"Fade In Time\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="float",comment="name: \"float\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+4 [label="Hold Time",comment="name: \"Hold Time\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="float",comment="name: \"float\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+6 [label="Fade Out Time",comment="name: \"Fade Out Time\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="float",comment="name: \"float\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+8 [label="Color",comment="name: \"Color\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="Red",comment="name: \"Red\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+10 [label="float",comment="name: \"float\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+11 [label="Green",comment="name: \"Green\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+12 [label="float",comment="name: \"float\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+13 [label="Blue",comment="name: \"Blue\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+14 [label="float",comment="name: \"float\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3;5;7;10;12;14}
 
 }

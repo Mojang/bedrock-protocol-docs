@@ -1,60 +1,60 @@
 digraph "BiomeDefinitionChunkGenData" {
 rankdir = LR
-56
-56 -> 57
-57 -> 80
-56 -> 81
-81 -> 141
-56 -> 142
-142 -> 164
-56 -> 165
-165 -> 208
-56 -> 209
-209 -> 215
-56 -> 216
-216 -> 217
-56 -> 218
-218 -> 219
-56 -> 220
-220 -> 221
-56 -> 222
-222 -> 237
-56 -> 238
-238 -> 263
-56 -> 264
-264 -> 334
-56 -> 335
-335 -> 352
-56 -> 353
-353 -> 366
+50
+50 -> 51
+51 -> 66
+50 -> 67
+67 -> 127
+50 -> 128
+128 -> 150
+50 -> 151
+151 -> 194
+50 -> 195
+195 -> 201
+50 -> 202
+202 -> 203
+50 -> 204
+204 -> 205
+50 -> 206
+206 -> 207
+50 -> 208
+208 -> 223
+50 -> 224
+224 -> 249
+50 -> 250
+250 -> 320
+50 -> 321
+321 -> 338
+50 -> 339
+339 -> 352
 
-56 [label="BiomeDefinitionChunkGenData",comment="name: \"BiomeDefinitionChunkGenData\", typeName: \"\", id: 56, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-57 [label="climate",comment="name: \"climate\", typeName: \"std::optional<struct BiomeClimateData>\", id: 57, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-80 [label="std::optional<struct BiomeClimateData>",comment="name: \"std::optional<struct BiomeClimateData>\", typeName: \"\", id: 80, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-81 [label="consolidated featres",comment="name: \"consolidated featres\", typeName: \"std::optional<struct BiomeConsolidatedFeaturesData>\", id: 81, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-141 [label="std::optional<struct BiomeConsolidatedFeaturesData>",comment="name: \"std::optional<struct BiomeConsolidatedFeaturesData>\", typeName: \"\", id: 141, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-142 [label="mountain params",comment="name: \"mountain params\", typeName: \"std::optional<struct BiomeMountainParamsData>\", id: 142, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-164 [label="std::optional<struct BiomeMountainParamsData>",comment="name: \"std::optional<struct BiomeMountainParamsData>\", typeName: \"\", id: 164, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-165 [label="surface material adjustments",comment="name: \"surface material adjustments\", typeName: \"std::optional<struct BiomeSurfaceMaterialAdjustmentData>\", id: 165, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-208 [label="std::optional<struct BiomeSurfaceMaterialAdjustmentData>",comment="name: \"std::optional<struct BiomeSurfaceMaterialAdjustmentData>\", typeName: \"\", id: 208, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-209 [label="surface materials",comment="name: \"surface materials\", typeName: \"std::optional<struct BiomeSurfaceMaterialData>\", id: 209, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-215 [label="std::optional<struct BiomeSurfaceMaterialData>",comment="name: \"std::optional<struct BiomeSurfaceMaterialData>\", typeName: \"\", id: 215, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-216 [label="has swamp surface",comment="name: \"has swamp surface\", typeName: \"\", id: 216, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-217 [label="bool",comment="name: \"bool\", typeName: \"\", id: 217, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-218 [label="has frozen ocean surface",comment="name: \"has frozen ocean surface\", typeName: \"\", id: 218, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-219 [label="bool",comment="name: \"bool\", typeName: \"\", id: 219, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-220 [label="has the end surface",comment="name: \"has the end surface\", typeName: \"\", id: 220, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-221 [label="bool",comment="name: \"bool\", typeName: \"\", id: 221, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-222 [label="mesa surface",comment="name: \"mesa surface\", typeName: \"std::optional<struct BiomeMesaSurfaceData>\", id: 222, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-237 [label="std::optional<struct BiomeMesaSurfaceData>",comment="name: \"std::optional<struct BiomeMesaSurfaceData>\", typeName: \"\", id: 237, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-238 [label="capped surface",comment="name: \"capped surface\", typeName: \"std::optional<struct BiomeCappedSurfaceData>\", id: 238, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-263 [label="std::optional<struct BiomeCappedSurfaceData>",comment="name: \"std::optional<struct BiomeCappedSurfaceData>\", typeName: \"\", id: 263, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-264 [label="overworld gen rules",comment="name: \"overworld gen rules\", typeName: \"std::optional<struct BiomeOverworldGenRulesData>\", id: 264, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-334 [label="std::optional<struct BiomeOverworldGenRulesData>",comment="name: \"std::optional<struct BiomeOverworldGenRulesData>\", typeName: \"\", id: 334, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-335 [label="multinoise gen rules",comment="name: \"multinoise gen rules\", typeName: \"std::optional<struct BiomeMultinoiseGenRulesData>\", id: 335, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-352 [label="std::optional<struct BiomeMultinoiseGenRulesData>",comment="name: \"std::optional<struct BiomeMultinoiseGenRulesData>\", typeName: \"\", id: 352, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-353 [label="legacy world gen rules",comment="name: \"legacy world gen rules\", typeName: \"std::optional<struct BiomeLegacyWorldGenRulesData>\", id: 353, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-366 [label="std::optional<struct BiomeLegacyWorldGenRulesData>",comment="name: \"std::optional<struct BiomeLegacyWorldGenRulesData>\", typeName: \"\", id: 366, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;80;141;164;208;215;217;219;221;237;263;334;352;366}
+50 [label="BiomeDefinitionChunkGenData",comment="name: \"BiomeDefinitionChunkGenData\", typeName: \"\", id: 50, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+51 [label="climate",comment="name: \"climate\", typeName: \"std::optional<struct BiomeClimateData>\", id: 51, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+66 [label="std::optional<struct BiomeClimateData>",comment="name: \"std::optional<struct BiomeClimateData>\", typeName: \"\", id: 66, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+67 [label="consolidated featres",comment="name: \"consolidated featres\", typeName: \"std::optional<struct BiomeConsolidatedFeaturesData>\", id: 67, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+127 [label="std::optional<struct BiomeConsolidatedFeaturesData>",comment="name: \"std::optional<struct BiomeConsolidatedFeaturesData>\", typeName: \"\", id: 127, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+128 [label="mountain params",comment="name: \"mountain params\", typeName: \"std::optional<struct BiomeMountainParamsData>\", id: 128, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+150 [label="std::optional<struct BiomeMountainParamsData>",comment="name: \"std::optional<struct BiomeMountainParamsData>\", typeName: \"\", id: 150, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+151 [label="surface material adjustments",comment="name: \"surface material adjustments\", typeName: \"std::optional<struct BiomeSurfaceMaterialAdjustmentData>\", id: 151, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+194 [label="std::optional<struct BiomeSurfaceMaterialAdjustmentData>",comment="name: \"std::optional<struct BiomeSurfaceMaterialAdjustmentData>\", typeName: \"\", id: 194, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+195 [label="surface materials",comment="name: \"surface materials\", typeName: \"std::optional<struct BiomeSurfaceMaterialData>\", id: 195, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+201 [label="std::optional<struct BiomeSurfaceMaterialData>",comment="name: \"std::optional<struct BiomeSurfaceMaterialData>\", typeName: \"\", id: 201, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+202 [label="has swamp surface",comment="name: \"has swamp surface\", typeName: \"\", id: 202, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+203 [label="bool",comment="name: \"bool\", typeName: \"\", id: 203, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+204 [label="has frozen ocean surface",comment="name: \"has frozen ocean surface\", typeName: \"\", id: 204, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+205 [label="bool",comment="name: \"bool\", typeName: \"\", id: 205, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+206 [label="has the end surface",comment="name: \"has the end surface\", typeName: \"\", id: 206, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+207 [label="bool",comment="name: \"bool\", typeName: \"\", id: 207, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+208 [label="mesa surface",comment="name: \"mesa surface\", typeName: \"std::optional<struct BiomeMesaSurfaceData>\", id: 208, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+223 [label="std::optional<struct BiomeMesaSurfaceData>",comment="name: \"std::optional<struct BiomeMesaSurfaceData>\", typeName: \"\", id: 223, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+224 [label="capped surface",comment="name: \"capped surface\", typeName: \"std::optional<struct BiomeCappedSurfaceData>\", id: 224, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+249 [label="std::optional<struct BiomeCappedSurfaceData>",comment="name: \"std::optional<struct BiomeCappedSurfaceData>\", typeName: \"\", id: 249, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+250 [label="overworld gen rules",comment="name: \"overworld gen rules\", typeName: \"std::optional<struct BiomeOverworldGenRulesData>\", id: 250, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+320 [label="std::optional<struct BiomeOverworldGenRulesData>",comment="name: \"std::optional<struct BiomeOverworldGenRulesData>\", typeName: \"\", id: 320, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+321 [label="multinoise gen rules",comment="name: \"multinoise gen rules\", typeName: \"std::optional<struct BiomeMultinoiseGenRulesData>\", id: 321, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+338 [label="std::optional<struct BiomeMultinoiseGenRulesData>",comment="name: \"std::optional<struct BiomeMultinoiseGenRulesData>\", typeName: \"\", id: 338, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+339 [label="legacy world gen rules",comment="name: \"legacy world gen rules\", typeName: \"std::optional<struct BiomeLegacyWorldGenRulesData>\", id: 339, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+352 [label="std::optional<struct BiomeLegacyWorldGenRulesData>",comment="name: \"std::optional<struct BiomeLegacyWorldGenRulesData>\", typeName: \"\", id: 352, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;66;127;150;194;201;203;205;207;223;249;320;338;352}
 
 }

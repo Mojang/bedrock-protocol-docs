@@ -1,0 +1,28 @@
+digraph "SharedTypes::Comprehensive::CameraPresetAimAssistDefinition" {
+rankdir = LR
+0
+0 -> 1
+0 -> 2
+2 -> 3
+0 -> 4
+4 -> 5
+5 -> 6
+4 -> 7
+7 -> 8
+0 -> 9
+9 -> 10
+
+0 [label="SharedTypes::Comprehensive::CameraPresetAimAssistDefinition",comment="name: \"SharedTypes::Comprehensive::CameraPresetAimAssistDefinition\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Preset Id",comment="name: \"Preset Id\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="Target Mode",comment="name: \"Target Mode\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="enum Aim-Assist Target Mode",comment="name: \"enum Aim-Assist Target Mode\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+4 [label="View Angle",comment="name: \"View Angle\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="X",comment="name: \"X\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+6 [label="float",comment="name: \"float\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+7 [label="Y",comment="name: \"Y\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="float",comment="name: \"float\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+9 [label="Distance",comment="name: \"Distance\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+10 [label="float",comment="name: \"float\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3;6;8;10}
+
+}

@@ -1,2 +1,24 @@
-<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/SetSpawnPositionPacket.svg" alt="SetSpawnPositionPacket">
-<br></body> </html>
+<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><h1>SetSpawnPositionPacket (id: 43)</h1>
+<table><col width="1%"><col width="99%"><tr><th></th><th></th></tr><tr><td> <b>Purpose:</b> </td>
+<td>When a player logs in or the SetWorldSpawnCommand is used this is sent from the server to the client. Does not change when using a bed, that is a separate packet (RespawnPacket)</td>
+</tr><tr><td> <b>Notes:</b> </td>
+<td>see RespawnPacket</td>
+</tr></table><br><h2>Payload</h2>
+<img src="svg/SetSpawnPositionPacket.svg" alt="SetSpawnPositionPacket">
+<br><br><br><table><col width="10%"><col width="10%"><col width="15%"><col width="80%"><tr><th>Field Name</th><th>Field Type</th><th>Field Constraints</th><th>Field Notes</th></tr><tr><td>Spawn Position Type</td>
+<td>enum SpawnPositionType</td>
+<td></td>
+<td></td>
+</tr><tr><td>Block Position</td>
+<td>NetworkBlockPosition</td>
+<td></td>
+<td></td>
+</tr><tr><td>Dimension type</td>
+<td>DimensionType</td>
+<td></td>
+<td></td>
+</tr><tr><td>Spawn Block Pos</td>
+<td>NetworkBlockPosition</td>
+<td></td>
+<td></td>
+</tr></table></body> </html>

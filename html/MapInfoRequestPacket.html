@@ -1,4 +1,24 @@
-<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/MapInfoRequestPacket.svg" alt="MapInfoRequestPacket">
-<br><table><col width="10%"><col width="90%"><tr><th>Field Name</th><th>Field Notes</th></tr><tr><td>Client Pixels List</td>
+<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><h1>MapInfoRequestPacket (id: 68)</h1>
+<table><col width="1%"><col width="99%"><tr><th></th><th></th></tr><tr><td> <b>Purpose:</b> </td>
+<td>In the case of the client being unable to find map data for a map item it sends a uuid for a map to the server.</td>
+</tr><tr><td> <b>Notes:</b> </td>
+<td>
+	If the server finds the map, it sends the data back. If it can't find the map, it creates it and sends the map and data back. 
+	(the map creation data packet and the map data packet are separate packets). 
+	The response from the server potentially has to load from disk, just an fyi. 
+	This packet is fired via map item tick, if the map data we have is invalid, or if the map is placed in an item frame.
+
+	For Client Side Generation when we re-sample pixels from the Client's ChunkSource we need to inform the Server's map about
+	these new pixels so that it can save them to LevelStorage. Use this packet to send to the Server the extra pixels
+	</td>
+</tr></table><br><h2>Payload</h2>
+<img src="svg/MapInfoRequestPacket.svg" alt="MapInfoRequestPacket">
+<br><br><br><table><col width="10%"><col width="10%"><col width="15%"><col width="80%"><tr><th>Field Name</th><th>Field Type</th><th>Field Constraints</th><th>Field Notes</th></tr><tr><td>Map Unique ID</td>
+<td>ActorUniqueID</td>
+<td></td>
+<td></td>
+</tr><tr><td>Client Pixels List</td>
+<td>vector&lt;`anonymous-namespace'::unity_5eb3f6f7962d9979d50bf7c8efaa92c9::ClientPixelsProxy&gt;</td>
+<td>&lt;div style="padding-left: 0px;"&gt;MaxItems = 16384&lt;/div&gt;</td>
 <td>These are sent from the client to tell the Server map about terrain pixels it doesn't know about</td>
 </tr></table></body> </html>

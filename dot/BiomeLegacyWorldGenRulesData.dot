@@ -1,20 +1,20 @@
 digraph "BiomeLegacyWorldGenRulesData" {
 rankdir = LR
-358
-358 -> 359
-359 -> 360
-360 -> 361
-359 -> 362
-362 -> 363
-363 -> 364
+344
+344 -> 345
+345 -> 346
+346 -> 347
+345 -> 348
+348 -> 349
+349 -> 350
 
-358 [label="BiomeLegacyWorldGenRulesData",comment="name: \"BiomeLegacyWorldGenRulesData\", typeName: \"\", id: 358, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-359 [label="conditional transformation",comment="name: \"conditional transformation\", typeName: \"\", id: 359, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-360 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 360, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-361 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 361, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-362 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 362, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-363 [label="legacy pre hills",comment="name: \"legacy pre hills\", typeName: \"BiomeConditionalTransformationData\", id: 363, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-364 [label="BiomeConditionalTransformationData",comment="name: \"BiomeConditionalTransformationData\", typeName: \"\", id: 364, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;361;364}
+344 [label="BiomeLegacyWorldGenRulesData",comment="name: \"BiomeLegacyWorldGenRulesData\", typeName: \"\", id: 344, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+345 [label="conditional transformation",comment="name: \"conditional transformation\", typeName: \"\", id: 345, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+346 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 346, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+347 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 347, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+348 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 348, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+349 [label="legacy pre hills",comment="name: \"legacy pre hills\", typeName: \"BiomeConditionalTransformationData\", id: 349, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+350 [label="BiomeConditionalTransformationData",comment="name: \"BiomeConditionalTransformationData\", typeName: \"\", id: 350, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;347;350}
 
 }

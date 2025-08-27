@@ -1,2 +1,16 @@
-<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/RequestChunkRadiusPacket.svg" alt="RequestChunkRadiusPacket">
-<br></body> </html>
+<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><h1>RequestChunkRadiusPacket (id: 69)</h1>
+<table><col width="1%"><col width="99%"><tr><th></th><th></th></tr><tr><td> <b>Purpose:</b> </td>
+<td>The client can't just change the view radius without the server's approval, otherwise there could be holes on unrendered area.</td>
+</tr><tr><td> <b>Notes:</b> </td>
+<td>This packet is to make sure that the server expands/shrinks first. Additionally for ClientSide Chunk Generation we can send a byte, based on client's hardware capabilities what is the max chunk radius client can handle.</td>
+</tr></table><br><h2>Payload</h2>
+<img src="svg/RequestChunkRadiusPacket.svg" alt="RequestChunkRadiusPacket">
+<br><br><br><table><col width="10%"><col width="10%"><col width="15%"><col width="80%"><tr><th>Field Name</th><th>Field Type</th><th>Field Constraints</th><th>Field Notes</th></tr><tr><td>Chunk Radius</td>
+<td>varint</td>
+<td></td>
+<td></td>
+</tr><tr><td>Max ChunkRadius</td>
+<td>unsigned byte</td>
+<td></td>
+<td></td>
+</tr></table></body> </html>

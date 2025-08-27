@@ -1,16 +1,16 @@
 digraph "CameraInstruction::SetInstruction::ViewOffsetOption" {
 rankdir = LR
-60
-60 -> 61
-61 -> 62
-60 -> 63
-63 -> 64
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
 
-60 [label="CameraInstruction::SetInstruction::ViewOffsetOption",comment="name: \"CameraInstruction::SetInstruction::ViewOffsetOption\", typeName: \"\", id: 60, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-61 [label="View Offset X",comment="name: \"View Offset X\", typeName: \"\", id: 61, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-62 [label="float",comment="name: \"float\", typeName: \"\", id: 62, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-63 [label="View Offset Y",comment="name: \"View Offset Y\", typeName: \"\", id: 63, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-64 [label="float",comment="name: \"float\", typeName: \"\", id: 64, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;62;64}
+0 [label="CameraInstruction::SetInstruction::ViewOffsetOption",comment="name: \"CameraInstruction::SetInstruction::ViewOffsetOption\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="x",comment="name: \"x\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="float",comment="name: \"float\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="y",comment="name: \"y\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="float",comment="name: \"float\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4}
 
 }

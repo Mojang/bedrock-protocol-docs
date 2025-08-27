@@ -1,2 +1,24 @@
-<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/RequestAbilityPacket.svg" alt="RequestAbilityPacket">
-<br></body> </html>
+<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><h1>RequestAbilityPacket (id: 184)</h1>
+<table><col width="1%"><col width="99%"><tr><th></th><th></th></tr><tr><td> <b>Purpose:</b> </td>
+<td>Sent from client to server. Used to request an ability change.</td>
+</tr><tr><td> <b>Notes:</b> </td>
+<td>Once changed, the server will broadcast the updated state of abilities for that player. If the request is rejected, the caller will receive their reverted state of Abilities.  Can only be used to modify the calling player.  	- mVariable: Info about this variable</td>
+</tr></table><br><h2>Payload</h2>
+<img src="svg/RequestAbilityPacket.svg" alt="RequestAbilityPacket">
+<br><br><br><table><col width="10%"><col width="10%"><col width="15%"><col width="80%"><tr><th>Field Name</th><th>Field Type</th><th>Field Constraints</th><th>Field Notes</th></tr><tr><td>Ability</td>
+<td>varint</td>
+<td></td>
+<td></td>
+</tr><tr><td>Value Type</td>
+<td>enum enum RequestAbilityPacketPayload::Type</td>
+<td></td>
+<td></td>
+</tr><tr><td>Bool</td>
+<td>bool</td>
+<td></td>
+<td></td>
+</tr><tr><td>Float</td>
+<td>float</td>
+<td></td>
+<td></td>
+</tr></table></body> </html>

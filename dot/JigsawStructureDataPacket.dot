@@ -4,9 +4,9 @@ rankdir = LR
 0 -> 1
 1 -> 2
 
-0 [label="JigsawStructureDataPacket",comment="name: \"JigsawStructureDataPacket\", typeName: \"\", id: 0, branchId: 313, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Jigsaw Structure Data Tag",comment="name: \"Jigsaw Structure Data Tag\", typeName: \"CompoundTag\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-2 [label="CompoundTag",comment="name: \"CompoundTag\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+0 [label="JigsawStructureDataPacket",comment="name: \"JigsawStructureDataPacket\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"Jigsaw Structure data used by client jigsaw structure worldgen. This packet contains a copy of the behavior pack jigsaw structure rules.\""];
+1 [label="Jigsaw Structure Data Tag",comment="name: \"Jigsaw Structure Data Tag\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="",comment="name: \"\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 { rank = max;2}
 
 }

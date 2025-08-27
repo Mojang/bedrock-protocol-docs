@@ -1,32 +1,32 @@
 digraph "BiomeSurfaceMaterialData" {
 rankdir = LR
-192
-192 -> 193
-193 -> 194
-192 -> 195
-195 -> 196
-192 -> 197
-197 -> 198
-192 -> 199
-199 -> 200
-192 -> 201
-201 -> 202
-192 -> 203
-203 -> 204
+178
+178 -> 179
+179 -> 180
+178 -> 181
+181 -> 182
+178 -> 183
+183 -> 184
+178 -> 185
+185 -> 186
+178 -> 187
+187 -> 188
+178 -> 189
+189 -> 190
 
-192 [label="BiomeSurfaceMaterialData",comment="name: \"BiomeSurfaceMaterialData\", typeName: \"\", id: 192, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-193 [label="top block",comment="name: \"top block\", typeName: \"int\", id: 193, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-194 [label="int",comment="name: \"int\", typeName: \"\", id: 194, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-195 [label="mid block",comment="name: \"mid block\", typeName: \"int\", id: 195, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-196 [label="int",comment="name: \"int\", typeName: \"\", id: 196, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-197 [label="sea floor block",comment="name: \"sea floor block\", typeName: \"int\", id: 197, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-198 [label="int",comment="name: \"int\", typeName: \"\", id: 198, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-199 [label="foundation block",comment="name: \"foundation block\", typeName: \"int\", id: 199, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-200 [label="int",comment="name: \"int\", typeName: \"\", id: 200, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-201 [label="sea block",comment="name: \"sea block\", typeName: \"int\", id: 201, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-202 [label="int",comment="name: \"int\", typeName: \"\", id: 202, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-203 [label="sea floor depth",comment="name: \"sea floor depth\", typeName: \"\", id: 203, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-204 [label="int",comment="name: \"int\", typeName: \"\", id: 204, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;194;196;198;200;202;204}
+178 [label="BiomeSurfaceMaterialData",comment="name: \"BiomeSurfaceMaterialData\", typeName: \"\", id: 178, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+179 [label="top block",comment="name: \"top block\", typeName: \"int\", id: 179, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+180 [label="int",comment="name: \"int\", typeName: \"\", id: 180, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+181 [label="mid block",comment="name: \"mid block\", typeName: \"int\", id: 181, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+182 [label="int",comment="name: \"int\", typeName: \"\", id: 182, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+183 [label="sea floor block",comment="name: \"sea floor block\", typeName: \"int\", id: 183, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+184 [label="int",comment="name: \"int\", typeName: \"\", id: 184, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+185 [label="foundation block",comment="name: \"foundation block\", typeName: \"int\", id: 185, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+186 [label="int",comment="name: \"int\", typeName: \"\", id: 186, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+187 [label="sea block",comment="name: \"sea block\", typeName: \"int\", id: 187, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+188 [label="int",comment="name: \"int\", typeName: \"\", id: 188, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+189 [label="sea floor depth",comment="name: \"sea floor depth\", typeName: \"\", id: 189, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+190 [label="int",comment="name: \"int\", typeName: \"\", id: 190, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;180;182;184;186;188;190}
 
 }
