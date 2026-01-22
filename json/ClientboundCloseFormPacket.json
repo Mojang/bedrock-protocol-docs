@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1791253252",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
     "title": "ClientboundCloseFormPacket",
     "description": "Sent from the server to client to force close all server forms on the stack and return to the HUD screen.",
     "$metaProperties": {

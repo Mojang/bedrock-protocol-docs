@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CameraSplinePacket (338)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        h4 {
+            color: #666;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        table {
+            background-color: white;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        th {
+            font-weight: bold;
+            text-align: left;
+            padding: 8px !important;
+        }
+        td {
+            padding: 8px !important;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #e8f4f8;
+        }
+        .description {
+            color: #555;
+            font-style: italic;
+            margin: 10px 0 20px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .packet-list {
+            columns: 3;
+            column-gap: 20px;
+        }
+        .packet-list li {
+            margin-bottom: 8px;
+            break-inside: avoid;
+        }
+        details {
+            margin: 10px 0;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            padding: 8px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            user-select: none;
+        }
+        summary:hover {
+            background-color: #e8e8e8;
+        }
+        details[open] summary {
+            background-color: #d4edff;
+            border-color: #3498db;
+            border-left: 4px solid #3498db;
+        }
+        @media (max-width: 900px) {
+            .packet-list {
+                columns: 2;
+            }
+        }
+        @media (max-width: 600px) {
+            .packet-list {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p><a href="index.html">← Back to Index</a></p>
+        <h1>CameraSplinePacket (338)</h1>
+<div class="description">Camera custom spline data sent from server to client.</div>
+<div class="description">
+	Sent by the server to clients for initializing custom spline data that can be played later through the camera command.
+	</div>
+<div style="margin-left: 0px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Camera Data Splines (Required)</strong></td>
+<td>array&lt;CameraSplineDefinition&gt;</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>CameraSplineDefinition (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name (Required)</strong></td>
+<td>string</td>
+<td>0</td>
+<td>The identifier for this spline, in &quot;namespace:name&quot; format.</td>
+</tr>
+<tr>
+<td><strong>total_time (Required)</strong></td>
+<td>float</td>
+<td>1</td>
+<td>The total time, in seconds, to play back the spline.</td>
+</tr>
+<tr>
+<td><strong>spline_type</strong></td>
+<td>string</td>
+<td>2</td>
+<td>The spline interpolation type: &quot;catmullrom&quot; or &quot;linear&quot;. Defaults to &quot;catmullrom&quot;.</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>control_points (Required)</strong></td>
+<td>array&lt;CameraSplineControlPoint&gt;</td>
+<td>3</td>
+<td>Array of control point positions, each as [x, y, z] in world space.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>CameraSplineControlPoint (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>position (Required)</strong></td>
+<td>Vec3</td>
+<td>0</td>
+<td>The [x, y, z] position of a spline node.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>Vec3</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>float</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>float</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Z (Required)</strong></td>
+<td>float</td>
+<td>2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>progress_key_frames (Required)</strong></td>
+<td>array&lt;CameraSplineProgressKeyFrame&gt;</td>
+<td>4</td>
+<td>Key frames where each entry defines a progress alpha [0–1] and a time (in seconds) when the spline should reach that progress.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>CameraSplineProgressKeyFrame (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>progress (Required)</strong></td>
+<td>float</td>
+<td>0</td>
+<td>Normalized progress of this frame along the spline, from 0.0 (start) to 1.0 (end).</td>
+</tr>
+<tr>
+<td><strong>time (Required)</strong></td>
+<td>float</td>
+<td>1</td>
+<td>Time (in seconds) at which this progress should be applied.</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>easing</strong></td>
+<td>string</td>
+<td>2</td>
+<td>Optional easing function used to interpolate towards this progress key frame. Defaults to &quot;linear&quot; if omitted.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>linear</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>spring</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>in_quad</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>out_quad</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>in_out_quad</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><code>in_cubic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td><code>out_cubic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td><code>in_out_cubic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td><code>in_quart</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td><code>out_quart</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td><code>in_out_quart</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td><code>in_quint</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td><code>out_quint</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">13</td>
+<td><code>in_out_quint</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td><code>in_sine</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td><code>out_sine</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">16</td>
+<td><code>in_out_sine</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">17</td>
+<td><code>in_expo</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">18</td>
+<td><code>out_expo</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">19</td>
+<td><code>in_out_expo</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">20</td>
+<td><code>in_circ</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">21</td>
+<td><code>out_circ</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">22</td>
+<td><code>in_out_circ</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">23</td>
+<td><code>in_bounce</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">24</td>
+<td><code>out_bounce</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">25</td>
+<td><code>in_out_bounce</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">26</td>
+<td><code>in_back</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">27</td>
+<td><code>out_back</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">28</td>
+<td><code>in_out_back</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">29</td>
+<td><code>in_elastic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">30</td>
+<td><code>out_elastic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">31</td>
+<td><code>in_out_elastic</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>rotation_key_frames (Required)</strong></td>
+<td>array&lt;CameraSplineRotationKeyFrame&gt;</td>
+<td>5</td>
+<td>Array of rotation key frames, each with a rotation value and the time (in seconds) when it should be applied.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>CameraSplineRotationKeyFrame (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>rotation (Required)</strong></td>
+<td>Vec3</td>
+<td>0</td>
+<td>Rotation [x, y, z] value.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>Vec3</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>float</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>float</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Z (Required)</strong></td>
+<td>float</td>
+<td>2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>time (Required)</strong></td>
+<td>float</td>
+<td>1</td>
+<td>Time (in seconds) at which this rotation should be applied.</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>easing</strong></td>
+<td>string</td>
+<td>2</td>
+<td>Optional easing function used to interpolate towards this rotation key frame. Defaults to &quot;linear&quot; if omitted.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>linear</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>spring</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>in_quad</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>out_quad</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>in_out_quad</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><code>in_cubic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td><code>out_cubic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td><code>in_out_cubic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td><code>in_quart</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td><code>out_quart</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td><code>in_out_quart</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td><code>in_quint</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td><code>out_quint</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">13</td>
+<td><code>in_out_quint</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td><code>in_sine</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td><code>out_sine</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">16</td>
+<td><code>in_out_sine</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">17</td>
+<td><code>in_expo</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">18</td>
+<td><code>out_expo</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">19</td>
+<td><code>in_out_expo</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">20</td>
+<td><code>in_circ</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">21</td>
+<td><code>out_circ</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">22</td>
+<td><code>in_out_circ</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">23</td>
+<td><code>in_bounce</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">24</td>
+<td><code>out_bounce</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">25</td>
+<td><code>in_out_bounce</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">26</td>
+<td><code>in_back</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">27</td>
+<td><code>out_back</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">28</td>
+<td><code>in_out_back</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">29</td>
+<td><code>in_elastic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">30</td>
+<td><code>out_elastic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">31</td>
+<td><code>in_out_elastic</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+    </div>
+</body>
+</html>

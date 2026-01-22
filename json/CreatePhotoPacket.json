@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3626316911",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
     "title": "CreatePhotoPacket",
     "description": "Players now have the possibility to export photos from their portfolios into photo items in their inventory. EDU.",
     "type": "object",
@@ -20,8 +20,7 @@
             "type": "integer",
             "x-underlying-type": "uint64",
             "x-ordinal-index": 0,
-            "minimum": 0.0,
-            "maximum": 18446744073709553000.0
+            "minimum": 0.0
         }
     },
     "required": [

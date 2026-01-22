@@ -1,0 +1,92 @@
+digraph "CameraSplineDefinition" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+0 -> 5
+5 -> 6
+0 -> 7
+7 -> 8
+8 -> 9
+7 -> 10
+10 -> 11
+11 -> 12
+12 -> 13
+11 -> 14
+14 -> 15
+11 -> 16
+16 -> 17
+0 -> 18
+18 -> 19
+19 -> 20
+18 -> 21
+21 -> 22
+22 -> 23
+21 -> 24
+24 -> 25
+21 -> 26
+26 -> 27
+0 -> 28
+28 -> 29
+29 -> 30
+28 -> 31
+31 -> 32
+32 -> 33
+33 -> 34
+32 -> 35
+35 -> 36
+32 -> 37
+37 -> 38
+31 -> 39
+39 -> 40
+31 -> 41
+41 -> 42
+
+0 [label="CameraSplineDefinition",comment="name: \"CameraSplineDefinition\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="name",comment="name: \"name\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"The identifier for this spline, in \"namespace:name\" format.\""];
+2 [label="string",comment="name: \"string\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"The identifier for this spline, in \"namespace:name\" format.\""];
+3 [label="total_time",comment="name: \"total_time\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"The total time, in seconds, to play back the spline.\""];
+4 [label="float",comment="name: \"float\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"The total time, in seconds, to play back the spline.\""];
+5 [label="spline_type",comment="name: \"spline_type\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"The spline interpolation type: \"catmullrom\" or \"linear\". Defaults to \"catmullrom\".\""];
+6 [label="string",comment="name: \"string\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"The spline interpolation type: \"catmullrom\" or \"linear\". Defaults to \"catmullrom\".\""];
+7 [label="control_points",comment="name: \"control_points\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"Array of control point positions, each as [x, y, z] in world space.\""];
+8 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+10 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+11 [label="position",comment="name: \"position\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"The [x, y, z] position of a spline node.\""];
+12 [label="X",comment="name: \"X\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+13 [label="float",comment="name: \"float\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+14 [label="Y",comment="name: \"Y\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+15 [label="float",comment="name: \"float\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+16 [label="Z",comment="name: \"Z\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+17 [label="float",comment="name: \"float\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+18 [label="progress_key_frames",comment="name: \"progress_key_frames\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 0, notes: \"Key frames where each entry defines a progress alpha [0–1] and a time (in seconds) when the spline should reach that progress.\""];
+19 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+20 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+21 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+22 [label="progress",comment="name: \"progress\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 0, notes: \"Normalized progress of this frame along the spline, from 0.0 (start) to 1.0 (end).\""];
+23 [label="float",comment="name: \"float\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 512, notes: \"Normalized progress of this frame along the spline, from 0.0 (start) to 1.0 (end).\""];
+24 [label="time",comment="name: \"time\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 0, notes: \"Time (in seconds) at which this progress should be applied.\""];
+25 [label="float",comment="name: \"float\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 512, notes: \"Time (in seconds) at which this progress should be applied.\""];
+26 [label="easing",comment="name: \"easing\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 0, notes: \"Optional easing function used to interpolate towards this progress key frame. Defaults to \"linear\" if omitted.\""];
+27 [label="enum easing_function",comment="name: \"enum easing_function\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 512, notes: \"Optional easing function used to interpolate towards this progress key frame. Defaults to \"linear\" if omitted.\""];
+28 [label="rotation_key_frames",comment="name: \"rotation_key_frames\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 0, notes: \"Array of rotation key frames, each with a rotation value and the time (in seconds) when it should be applied.\""];
+29 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 29, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+30 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+31 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 31, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+32 [label="rotation",comment="name: \"rotation\", typeName: \"\", id: 32, branchId: 0, recurseId: -1, attributes: 0, notes: \"Rotation [x, y, z] value.\""];
+33 [label="X",comment="name: \"X\", typeName: \"\", id: 33, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+34 [label="float",comment="name: \"float\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+35 [label="Y",comment="name: \"Y\", typeName: \"\", id: 35, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+36 [label="float",comment="name: \"float\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+37 [label="Z",comment="name: \"Z\", typeName: \"\", id: 37, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+38 [label="float",comment="name: \"float\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+39 [label="time",comment="name: \"time\", typeName: \"\", id: 39, branchId: 0, recurseId: -1, attributes: 0, notes: \"Time (in seconds) at which this rotation should be applied.\""];
+40 [label="float",comment="name: \"float\", typeName: \"\", id: 40, branchId: 0, recurseId: -1, attributes: 512, notes: \"Time (in seconds) at which this rotation should be applied.\""];
+41 [label="easing",comment="name: \"easing\", typeName: \"\", id: 41, branchId: 0, recurseId: -1, attributes: 0, notes: \"Optional easing function used to interpolate towards this rotation key frame. Defaults to \"linear\" if omitted.\""];
+42 [label="enum easing_function",comment="name: \"enum easing_function\", typeName: \"\", id: 42, branchId: 0, recurseId: -1, attributes: 512, notes: \"Optional easing function used to interpolate towards this rotation key frame. Defaults to \"linear\" if omitted.\""];
+{ rank = max;2;4;6;13;15;17;23;25;27;34;36;38;40;42}
+
+}

@@ -20,7 +20,7 @@ rankdir = LR
 11 -> 31
 31 -> 44
 11 -> 45
-45 -> 387
+45 -> 392
 
 11 [label="BiomeDefinitionData",comment="name: \"BiomeDefinitionData\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 12 [label="id",comment="name: \"id\", typeName: \"BiomeIdType\", id: 12, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
@@ -42,7 +42,7 @@ rankdir = LR
 31 [label="tags",comment="name: \"tags\", typeName: \"std::optional<struct BiomeTagsData>\", id: 31, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 44 [label="std::optional<struct BiomeTagsData>",comment="name: \"std::optional<struct BiomeTagsData>\", typeName: \"\", id: 44, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 45 [label="chunk gen data",comment="name: \"chunk gen data\", typeName: \"std::optional<struct BiomeDefinitionChunkGenData>\", id: 45, branchId: 0, recurseId: -1, attributes: 256, notes: \"Only used with client-side chunk generation\""];
-387 [label="std::optional<struct BiomeDefinitionChunkGenData>",comment="name: \"std::optional<struct BiomeDefinitionChunkGenData>\", typeName: \"\", id: 387, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;16;18;20;22;24;26;28;30;44;387}
+392 [label="std::optional<struct BiomeDefinitionChunkGenData>",comment="name: \"std::optional<struct BiomeDefinitionChunkGenData>\", typeName: \"\", id: 392, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;16;18;20;22;24;26;28;30;44;392}
 
 }

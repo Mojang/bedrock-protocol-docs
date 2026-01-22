@@ -15,8 +15,12 @@
 <td></td>
 <td></td>
 <td>The value that is updating</td>
-</tr><tr><td>Update Count</td>
+</tr><tr><td>Property Update Count</td>
 <td>unsigned int</td>
 <td>&lt;div style="padding-left: 0px;"&gt;Minimum = 0&lt;br&gt;Maximum = 4294967294&lt;/div&gt;</td>
-<td>The number of times this property has updated</td>
+<td>The number of times this property has updated. Does not increment unless the entire property updates</td>
+</tr><tr><td>Path Update Count</td>
+<td>unsigned int</td>
+<td>&lt;div style="padding-left: 0px;"&gt;Minimum = 0&lt;br&gt;Maximum = 4294967294&lt;/div&gt;</td>
+<td>The number of times this path has updated. Resets if the entire property has changed.</td>
 </tr></table></body> </html>

@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3800421896",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
     "definitions": {
         "3667194778": {
             "title": "InventoryOptions",
@@ -19,9 +19,9 @@
                     "type": "string",
                     "enum": [
                         "None",
-                        "Survival",
-                        "RecipeBook",
-                        "Creative"
+                        "InventoryOnly",
+                        "Default",
+                        "RecipeBookOnly"
                     ],
                     "x-underlying-type": "int32",
                     "x-serialization-options": [
@@ -35,9 +35,9 @@
                     "type": "string",
                     "enum": [
                         "None",
-                        "Survival",
-                        "RecipeBook",
-                        "Creative"
+                        "InventoryOnly",
+                        "Default",
+                        "RecipeBookOnly"
                     ],
                     "x-underlying-type": "int32",
                     "x-serialization-options": [

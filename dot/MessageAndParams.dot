@@ -7,32 +7,20 @@ rankdir = LR
 3 -> 4
 0 -> 5
 5 -> 6
-0 -> 7
-7 -> 8
-0 -> 9
-9 -> 10
-0 -> 11
-11 -> 12
-12 -> 13
-11 -> 14
-14 -> 15
+6 -> 7
+5 -> 8
+8 -> 9
 
 0 [label="MessageAndParams",comment="name: \"MessageAndParams\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="translate",comment="name: \"translate\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Message Type",comment="name: \"Message Type\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="enum TextPacketType",comment="name: \"enum TextPacketType\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-3 [label="popup",comment="name: \"popup\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-4 [label="enum TextPacketType",comment="name: \"enum TextPacketType\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-5 [label="jukeboxPopup",comment="name: \"jukeboxPopup\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-6 [label="enum TextPacketType",comment="name: \"enum TextPacketType\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-7 [label="Message Type",comment="name: \"Message Type\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-8 [label="enum TextPacketType",comment="name: \"enum TextPacketType\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-9 [label="Message",comment="name: \"Message\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-10 [label="string",comment="name: \"string\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-11 [label="Parameter List",comment="name: \"Parameter List\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-12 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-13 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-14 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-15 [label="string",comment="name: \"string\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2;4;6;8;10;15}
+3 [label="Message",comment="name: \"Message\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="string",comment="name: \"string\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+5 [label="Parameter List",comment="name: \"Parameter List\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+6 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+9 [label="string",comment="name: \"string\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;9}
 
 }

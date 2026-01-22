@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3179482359",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
     "definitions": {
         "320823778": {
             "title": "CommandOutputMessage",
@@ -12,8 +12,7 @@
                 "Message ID": {
                     "description": "The unique identifier for the message.",
                     "type": "string",
-                    "x-ordinal-index": 0,
-                    "maxLength": 1000
+                    "x-ordinal-index": 0
                 },
                 "Parameters": {
                     "description": "The parameters for the message.",
@@ -22,8 +21,7 @@
                     "items": {
                         "type": "string"
                     },
-                    "x-ordinal-index": 2,
-                    "maxItems": 1000
+                    "x-ordinal-index": 2
                 },
                 "Successful?": {
                     "description": "The command output type.",
@@ -46,9 +44,7 @@
                     "type": "integer",
                     "default": 0,
                     "x-underlying-type": "int64",
-                    "x-ordinal-index": 3,
-                    "minimum": -9223372036854776000.0,
-                    "maximum": 9223372036854776000.0
+                    "x-ordinal-index": 3
                 },
                 "RequestId": {
                     "description": "The request Id.",
@@ -89,15 +85,13 @@
                     "type": "integer",
                     "x-underlying-type": "uint64",
                     "x-ordinal-index": 1,
-                    "minimum": 0.0,
-                    "maximum": 18446744073709553000.0
+                    "minimum": 0.0
                 },
                 "Most Significant Bits": {
                     "type": "integer",
                     "x-underlying-type": "uint64",
                     "x-ordinal-index": 0,
-                    "minimum": 0.0,
-                    "maximum": 18446744073709553000.0
+                    "minimum": 0.0
                 }
             },
             "required": [
@@ -121,8 +115,7 @@
                     "items": {
                         "$ref": "#/definitions/320823778"
                     },
-                    "x-ordinal-index": 2,
-                    "maxItems": 100
+                    "x-ordinal-index": 2
                 },
                 "Output Type": {
                     "title": "CommandOutputType",
@@ -143,8 +136,7 @@
                     "type": "integer",
                     "x-underlying-type": "uint32",
                     "x-ordinal-index": 1,
-                    "minimum": 0.0,
-                    "maximum": 4294967295.0
+                    "minimum": 0.0
                 }
             },
             "required": [

@@ -7,18 +7,36 @@ rankdir = LR
 3 -> 4
 0 -> 5
 5 -> 6
-0 -> 7
-7 -> 8
+6 -> 7
+5 -> 8
+8 -> 9
+5 -> 10
+10 -> 11
+0 -> 12
+12 -> 13
+0 -> 14
+14 -> 15
+0 -> 16
+16 -> 17
 
 0 [label="GraphicsParameterOverridePacketPayload",comment="name: \"GraphicsParameterOverridePacketPayload\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Parameter Keyframe Values",comment="name: \"Parameter Keyframe Values\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"Time of Day key to Graphics Parameter value, Depending on the parameters, either all three components are used as a color or just the x component is used as a float, int, or bool\""];
 2 [label="map<float,Vec3>",comment="name: \"map<float,Vec3>\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"Time of Day key to Graphics Parameter value, Depending on the parameters, either all three components are used as a color or just the x component is used as a float, int, or bool\""];
-3 [label="Biome Identifier",comment="name: \"Biome Identifier\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"Determines which biome the override parameter is applied to\""];
-4 [label="string",comment="name: \"string\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"Determines which biome the override parameter is applied to\""];
-5 [label="Identifier for Parameter",comment="name: \"Identifier for Parameter\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"Identifier for the parameter that is having its value changed\""];
-6 [label="enum GraphicsOverrideParameterType",comment="name: \"enum GraphicsOverrideParameterType\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"Identifier for the parameter that is having its value changed\""];
-7 [label="Reset Parameter",comment="name: \"Reset Parameter\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, the specified parameter will be reset. If false, the parameter will be set using the data fields.\""];
-8 [label="bool",comment="name: \"bool\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"If true, the specified parameter will be reset. If false, the parameter will be set using the data fields.\""];
-{ rank = max;2;4;6;8}
+3 [label="Float Value",comment="name: \"Float Value\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"If set, contains a single float graphics parameter to be overriden\""];
+4 [label="float",comment="name: \"float\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"If set, contains a single float graphics parameter to be overriden\""];
+5 [label="Vec3 Value",comment="name: \"Vec3 Value\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"If set, contains a single Vec3 graphics parameter to be overriden\""];
+6 [label="X",comment="name: \"X\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="float",comment="name: \"float\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+8 [label="Y",comment="name: \"Y\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="float",comment="name: \"float\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+10 [label="Z",comment="name: \"Z\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+11 [label="float",comment="name: \"float\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+12 [label="Biome Identifier",comment="name: \"Biome Identifier\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 0, notes: \"Determines which biome the override parameter is applied to\""];
+13 [label="string",comment="name: \"string\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 512, notes: \"Determines which biome the override parameter is applied to\""];
+14 [label="Identifier for Parameter",comment="name: \"Identifier for Parameter\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 0, notes: \"Identifier for the parameter that is having its value changed\""];
+15 [label="enum GraphicsOverrideParameterType",comment="name: \"enum GraphicsOverrideParameterType\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 512, notes: \"Identifier for the parameter that is having its value changed\""];
+16 [label="Reset Parameter",comment="name: \"Reset Parameter\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, the specified parameter will be reset. If false, the parameter will be set using the data fields.\""];
+17 [label="bool",comment="name: \"bool\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 512, notes: \"If true, the specified parameter will be reset. If false, the parameter will be set using the data fields.\""];
+{ rank = max;2;4;7;9;11;13;15;17}
 
 }

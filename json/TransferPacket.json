@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1307871798",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
     "title": "TransferPacket",
     "description": "Used to kick off transferring the client between online games, or it can be used to cause players to quit the world and rejoin.",
     "type": "object",
@@ -21,8 +21,7 @@
             "type": "integer",
             "x-underlying-type": "uint16",
             "x-ordinal-index": 1,
-            "minimum": 0.0,
-            "maximum": 65535.0
+            "minimum": 0.0
         }
     },
     "required": [

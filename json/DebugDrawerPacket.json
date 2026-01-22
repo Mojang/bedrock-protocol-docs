@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "122829297",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
     "definitions": {
         "96730425": {
             "title": "struct ArrowDataPayload",
@@ -18,17 +18,13 @@
                     "description": "Length of the head of the debug arrow.",
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 1,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 1
                 },
                 "Arrow Head Radius": {
                     "description": "Radius of the head of the debug arrow.",
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 2,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 2
                 },
                 "Num Segments": {
                     "description": "Integer number of segments used for the debug arrow's head.",
@@ -67,6 +63,11 @@
             "title": "struct ShapeDataPayload",
             "type": "object",
             "properties": {
+                "Attached To Entity ID": {
+                    "description": "Runtime ID of the entity this shape is attached to.",
+                    "$ref": "#/definitions/3541243607",
+                    "x-ordinal-index": 8
+                },
                 "Color": {
                     "description": "Color (ARGB Hex string) of the debug shape.",
                     "$ref": "#/definitions/1315424487",
@@ -107,7 +108,7 @@
                         }
                     ],
                     "x-control-value-type": "uint32",
-                    "x-ordinal-index": 8
+                    "x-ordinal-index": 9
                 },
                 "Location": {
                     "description": "Vec3 location of the debug shape in the world.",
@@ -122,8 +123,7 @@
                         "Compression"
                     ],
                     "x-ordinal-index": 0,
-                    "minimum": 0.0,
-                    "maximum": 18446744073709553000.0
+                    "minimum": 0.0
                 },
                 "Rotation": {
                     "description": "Vec3 (Euler angles in radians, PYR) rotation of the debug shape in the world.",
@@ -134,9 +134,7 @@
                     "description": "Float scale of the debug shape in the world.",
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 3,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 3
                 },
                 "Shape Type": {
                     "title": "enum ScriptModuleDebugUtilities::ScriptDebugShapeType",
@@ -160,14 +158,61 @@
                     "description": "The total time left in seconds until this debug shape will be removed (0 meaning never).",
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 5,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 5
                 }
             },
             "required": [
                 "Dimension ID",
                 "NetworkId"
+            ]
+        },
+        "2872336518": {
+            "title": "DimensionType",
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "value"
+            ]
+        },
+        "1315424487": {
+            "title": "Color",
+            "type": "object",
+            "properties": {
+                "Color": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Color"
+            ]
+        },
+        "3541243607": {
+            "title": "ActorRuntimeID",
+            "type": "object",
+            "properties": {
+                "Actor Runtime ID": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Actor Runtime ID"
             ]
         },
         "3254662607": {
@@ -184,73 +229,6 @@
                 "Text"
             ]
         },
-        "1315424487": {
-            "title": "Color",
-            "type": "object",
-            "properties": {
-                "Color": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-ordinal-index": 0,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
-                }
-            },
-            "required": [
-                "Color"
-            ]
-        },
-        "2872336518": {
-            "title": "DimensionType",
-            "type": "object",
-            "properties": {
-                "value": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
-                }
-            },
-            "required": [
-                "value"
-            ]
-        },
-        "4004946602": {
-            "title": "Vec3",
-            "type": "object",
-            "properties": {
-                "X": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 0,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
-                },
-                "Y": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 1,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
-                },
-                "Z": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 2,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
-                }
-            },
-            "required": [
-                "X",
-                "Y",
-                "Z"
-            ]
-        },
         "3414789328": {
             "title": "struct LineDataPayload",
             "type": "object",
@@ -263,6 +241,32 @@
             },
             "required": [
                 "Line End Location"
+            ]
+        },
+        "4004946602": {
+            "title": "Vec3",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "Z": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "X",
+                "Y",
+                "Z"
             ]
         },
         "3006597033": {

@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1161582602",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
     "definitions": {
         "1492643634": {
             "title": "struct SharedTypes::Reference<5>",
@@ -40,9 +40,7 @@
                 "Block Listening Radius": {
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 12,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 12
                 },
                 "Continue Targeting": {
                     "type": "boolean",
@@ -103,51 +101,37 @@
                 "Pos X": {
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 2,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 2
                 },
                 "Pos Y": {
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 3,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 3
                 },
                 "Pos Z": {
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 4,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 4
                 },
                 "Radius": {
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 15,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 15
                 },
                 "Rot X": {
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 5,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 5
                 },
                 "Rot Y": {
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 6,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 6
                 },
                 "Rotation Speed": {
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 7,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 7
                 },
                 "Snap to Target": {
                     "type": "boolean",
@@ -165,16 +149,12 @@
                 "Yaw Limit Max": {
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 17,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 17
                 },
                 "Yaw Limit Min": {
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 16,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 16
                 }
             },
             "required": [
@@ -209,9 +189,7 @@
                 "Distance": {
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 3,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 3
                 },
                 "Preset Id": {
                     "$ref": "#/definitions/1492643634",
@@ -249,16 +227,12 @@
                 "X": {
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 0,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 0
                 },
                 "Y": {
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 1,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 1
                 }
             },
             "required": [
@@ -273,23 +247,17 @@
                 "X": {
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 0,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 0
                 },
                 "Y": {
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 1,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 1
                 },
                 "Z": {
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 2,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 2
                 }
             },
             "required": [

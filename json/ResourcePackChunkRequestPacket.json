@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3722660954",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
     "title": "ResourcePackChunkRequestPacket",
     "description": "Resource Pack Chunk Request",
     "type": "object",
@@ -12,8 +12,7 @@
             "type": "integer",
             "x-underlying-type": "uint32",
             "x-ordinal-index": 1,
-            "minimum": 0.0,
-            "maximum": 4294967295.0
+            "minimum": 0.0
         },
         "Resource Name": {
             "type": "string",

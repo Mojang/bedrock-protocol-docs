@@ -119,7 +119,7 @@
     <div class="container">
         
         <h1>Game Protocol Documentation</h1>
-<p>Documentation for 166 protocol packets.</p>
+<p>Documentation for 174 protocol packets.</p>
 <h2>Packet List</h2>
 <ul class="packet-list">
 <li>
@@ -374,6 +374,10 @@
 <li>
 <a href="SetLastHurtByPacket.html"><strong>SetLastHurtByPacket (96)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Any time a player is hit, the id of the last mob that attacked them is sent to the client</span>
+</li>
+<li>
+<a href="BookEditPacket.html"><strong>BookEditPacket (97)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sends the updated state of the Book and Quill item from client to server during use.</span>
 </li>
 <li>
 <a href="NpcRequestPacket.html"><strong>NpcRequestPacket (98)</strong></a>
@@ -786,6 +790,34 @@
 <li>
 <a href="ServerboundDataStorePacket.html"><strong>ServerboundDataStorePacket (332)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Applies a single update to the server data store from the client.</span>
+</li>
+<li>
+<a href="ClientboundDataDrivenUIShowScreenPacket.html"><strong>ClientboundDataDrivenUIShowScreenPacket (333)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Allows the server to tell the client to show a Data Driven UI screen.</span>
+</li>
+<li>
+<a href="ClientboundDataDrivenUICloseAllScreensPacket.html"><strong>ClientboundDataDrivenUICloseAllScreensPacket (334)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Allows the server to tell the client to close all the Data Driven UI screens.</span>
+</li>
+<li>
+<a href="ClientboundDataDrivenUIReloadPacket.html"><strong>ClientboundDataDrivenUIReloadPacket (335)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Allows the server to tell the client to reload the Data Driven UI.</span>
+</li>
+<li>
+<a href="ClientboundTextureShiftPacket.html"><strong>ClientboundTextureShiftPacket (336)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sends a set of update properties for the texture shift system from the server to the client.</span>
+</li>
+<li>
+<a href="VoxelShapesPacket.html"><strong>VoxelShapesPacket (337)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Syncs client with server voxel shape data on world join. This packet contains a copy of all behavior...</span>
+</li>
+<li>
+<a href="CameraSplinePacket.html"><strong>CameraSplinePacket (338)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Camera custom spline data sent from server to client.</span>
+</li>
+<li>
+<a href="CameraAimAssistActorPriorityPacket.html"><strong>CameraAimAssistActorPriorityPacket (339)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Camera aim-assist actor priority data sent from the server to clients.</span>
 </li>
 </ul>
     </div>

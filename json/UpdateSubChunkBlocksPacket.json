@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2908865809",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
     "definitions": {
         "2375526472": {
             "title": "UpdateSubChunkBlocksChangedInfo",
@@ -39,9 +39,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 0,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 0
                 },
                 "Y": {
                     "type": "integer",
@@ -50,8 +48,7 @@
                         "Compression"
                     ],
                     "x-ordinal-index": 1,
-                    "minimum": 0.0,
-                    "maximum": 4294967295.0
+                    "minimum": 0.0
                 },
                 "Z": {
                     "type": "integer",
@@ -59,9 +56,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 2,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 2
                 }
             },
             "required": [
@@ -85,8 +80,7 @@
                         "Compression"
                     ],
                     "x-ordinal-index": 1,
-                    "minimum": 0.0,
-                    "maximum": 4294967295.0
+                    "minimum": 0.0
                 },
                 "Sync Message - Entity Unique ID": {
                     "type": "integer",
@@ -95,8 +89,7 @@
                         "Compression"
                     ],
                     "x-ordinal-index": 3,
-                    "minimum": 0.0,
-                    "maximum": 18446744073709553000.0
+                    "minimum": 0.0
                 },
                 "Sync Message - Message": {
                     "type": "integer",
@@ -105,8 +98,7 @@
                         "Compression"
                     ],
                     "x-ordinal-index": 4,
-                    "minimum": 0.0,
-                    "maximum": 4294967295.0
+                    "minimum": 0.0
                 },
                 "Update Flags": {
                     "type": "integer",
@@ -115,8 +107,7 @@
                         "Compression"
                     ],
                     "x-ordinal-index": 2,
-                    "minimum": 0.0,
-                    "maximum": 4294967295.0
+                    "minimum": 0.0
                 }
             },
             "required": [

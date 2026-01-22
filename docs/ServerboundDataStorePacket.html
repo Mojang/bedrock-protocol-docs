@@ -206,10 +206,16 @@
 </div></td>
 </tr>
 <tr>
-<td><strong>Update Count (Required)</strong></td>
+<td><strong>Property Update Count (Required)</strong></td>
 <td>uint32</td>
 <td>4</td>
-<td>The number of times this property has updated</td>
+<td>The number of times this property has updated. Does not increment unless the entire property updates</td>
+</tr>
+<tr>
+<td><strong>Path Update Count (Required)</strong></td>
+<td>uint32</td>
+<td>5</td>
+<td>The number of times this path has updated. Resets if the entire property has changed.</td>
 </tr>
 </tbody>
 </table>

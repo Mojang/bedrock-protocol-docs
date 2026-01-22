@@ -11,6 +11,8 @@ rankdir = LR
 7 -> 8
 0 -> 9
 9 -> 10
+0 -> 11
+11 -> 12
 
 0 [label="Store Update",comment="name: \"Store Update\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Data Store Name",comment="name: \"Data Store Name\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -21,8 +23,10 @@ rankdir = LR
 6 [label="string",comment="name: \"string\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"The path through the property that needs updating\""];
 7 [label="Data",comment="name: \"Data\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"The value that is updating\""];
 8 [label="",comment="name: \"\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"The value that is updating\""];
-9 [label="Update Count",comment="name: \"Update Count\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"The number of times this property has updated\""];
-10 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"The number of times this property has updated\""];
-{ rank = max;2;4;6;8;10}
+9 [label="Property Update Count",comment="name: \"Property Update Count\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"The number of times this property has updated. Does not increment unless the entire property updates\""];
+10 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"The number of times this property has updated. Does not increment unless the entire property updates\""];
+11 [label="Path Update Count",comment="name: \"Path Update Count\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"The number of times this path has updated. Resets if the entire property has changed.\""];
+12 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"The number of times this path has updated. Resets if the entire property has changed.\""];
+{ rank = max;2;4;6;8;10;12}
 
 }

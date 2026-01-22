@@ -1,0 +1,20 @@
+digraph "CameraSplineProgressKeyFrame" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+0 -> 5
+5 -> 6
+
+0 [label="CameraSplineProgressKeyFrame",comment="name: \"CameraSplineProgressKeyFrame\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="progress",comment="name: \"progress\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"Normalized progress of this frame along the spline, from 0.0 (start) to 1.0 (end).\""];
+2 [label="float",comment="name: \"float\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"Normalized progress of this frame along the spline, from 0.0 (start) to 1.0 (end).\""];
+3 [label="time",comment="name: \"time\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"Time (in seconds) at which this progress should be applied.\""];
+4 [label="float",comment="name: \"float\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"Time (in seconds) at which this progress should be applied.\""];
+5 [label="easing",comment="name: \"easing\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"Optional easing function used to interpolate towards this progress key frame. Defaults to \"linear\" if omitted.\""];
+6 [label="enum easing_function",comment="name: \"enum easing_function\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"Optional easing function used to interpolate towards this progress key frame. Defaults to \"linear\" if omitted.\""];
+{ rank = max;2;4;6}
+
+}

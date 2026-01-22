@@ -8,9 +8,9 @@ rankdir = LR
 4 -> 5
 5 -> 9
 4 -> 10
-10 -> 388
-0 -> 389
-389 -> 400
+10 -> 393
+0 -> 394
+394 -> 405
 
 0 [label="BiomeDefinitionListPacket",comment="name: \"BiomeDefinitionListPacket\", typeName: \"\", id: 0, branchId: 122, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Map of Biome names to data",comment="name: \"Map of Biome names to data\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
@@ -20,9 +20,9 @@ rankdir = LR
 5 [label="String Index to Biome name",comment="name: \"String Index to Biome name\", typeName: \"short\", id: 5, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 9 [label="short",comment="name: \"short\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 10 [label="Biome Definition Data",comment="name: \"Biome Definition Data\", typeName: \"BiomeDefinitionData\", id: 10, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-388 [label="BiomeDefinitionData",comment="name: \"BiomeDefinitionData\", typeName: \"\", id: 388, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-389 [label="String list",comment="name: \"String list\", typeName: \"BiomeStringList\", id: 389, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-400 [label="BiomeStringList",comment="name: \"BiomeStringList\", typeName: \"\", id: 400, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;3;9;388;400}
+393 [label="BiomeDefinitionData",comment="name: \"BiomeDefinitionData\", typeName: \"\", id: 393, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+394 [label="String list",comment="name: \"String list\", typeName: \"BiomeStringList\", id: 394, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+405 [label="BiomeStringList",comment="name: \"BiomeStringList\", typeName: \"\", id: 405, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3;9;393;405}
 
 }

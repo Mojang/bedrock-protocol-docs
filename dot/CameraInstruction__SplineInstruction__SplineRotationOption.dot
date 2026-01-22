@@ -10,17 +10,21 @@ rankdir = LR
 6 -> 7
 0 -> 8
 8 -> 9
+0 -> 10
+10 -> 11
 
 0 [label="CameraInstruction::SplineInstruction::SplineRotationOption",comment="name: \"CameraInstruction::SplineInstruction::SplineRotationOption\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Key frame values",comment="name: \"Key frame values\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Key frame value",comment="name: \"Key frame value\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="X",comment="name: \"X\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 3 [label="float",comment="name: \"float\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 4 [label="Y",comment="name: \"Y\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 5 [label="float",comment="name: \"float\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 6 [label="Z",comment="name: \"Z\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 7 [label="float",comment="name: \"float\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-8 [label="Key frame times",comment="name: \"Key frame times\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="Key frame time",comment="name: \"Key frame time\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 9 [label="float",comment="name: \"float\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;3;5;7;9}
+10 [label="Key frame easing func",comment="name: \"Key frame easing func\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+11 [label="enum easing_function",comment="name: \"enum easing_function\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3;5;7;9;11}
 
 }

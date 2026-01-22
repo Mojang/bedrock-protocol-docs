@@ -1,0 +1,30 @@
+digraph "CameraSplineRotationKeyFrame" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+2 -> 3
+1 -> 4
+4 -> 5
+1 -> 6
+6 -> 7
+0 -> 8
+8 -> 9
+0 -> 10
+10 -> 11
+
+0 [label="CameraSplineRotationKeyFrame",comment="name: \"CameraSplineRotationKeyFrame\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="rotation",comment="name: \"rotation\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"Rotation [x, y, z] value.\""];
+2 [label="X",comment="name: \"X\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="float",comment="name: \"float\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+4 [label="Y",comment="name: \"Y\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="float",comment="name: \"float\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+6 [label="Z",comment="name: \"Z\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="float",comment="name: \"float\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+8 [label="time",comment="name: \"time\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"Time (in seconds) at which this rotation should be applied.\""];
+9 [label="float",comment="name: \"float\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"Time (in seconds) at which this rotation should be applied.\""];
+10 [label="easing",comment="name: \"easing\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"Optional easing function used to interpolate towards this rotation key frame. Defaults to \"linear\" if omitted.\""];
+11 [label="enum easing_function",comment="name: \"enum easing_function\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 512, notes: \"Optional easing function used to interpolate towards this rotation key frame. Defaults to \"linear\" if omitted.\""];
+{ rank = max;3;5;7;9;11}
+
+}

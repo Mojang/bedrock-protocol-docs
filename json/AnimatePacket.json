@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2397598400",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
     "definitions": {
         "3541243607": {
             "title": "ActorRuntimeID",
@@ -16,8 +16,7 @@
                         "Compression"
                     ],
                     "x-ordinal-index": 0,
-                    "minimum": 0.0,
-                    "maximum": 18446744073709553000.0
+                    "minimum": 0.0
                 }
             },
             "required": [
@@ -48,9 +47,7 @@
         "Data": {
             "type": "number",
             "x-underlying-type": "float",
-            "x-ordinal-index": 2,
-            "minimum": 1.1754943508222876e-38,
-            "maximum": 3.4028234663852887e38
+            "x-ordinal-index": 2
         },
         "Swing Source": {
             "title": "ActorSwingSource",

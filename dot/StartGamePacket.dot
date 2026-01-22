@@ -12,28 +12,36 @@ rankdir = LR
 0 -> 15
 15 -> 21
 0 -> 22
-22 -> 147
+22 -> 139
+0 -> 140
+140 -> 141
+0 -> 142
+142 -> 143
+0 -> 144
+144 -> 145
+0 -> 146
+146 -> 147
 0 -> 148
-148 -> 149
-0 -> 150
-150 -> 151
-0 -> 152
-152 -> 153
-0 -> 154
-154 -> 155
-0 -> 156
-156 -> 162
-0 -> 163
+148 -> 154
+0 -> 155
+155 -> 156
+0 -> 157
+157 -> 158
+0 -> 159
+159 -> 160
+160 -> 161
+159 -> 162
+162 -> 163
 163 -> 164
-0 -> 165
+162 -> 165
 165 -> 166
 0 -> 167
 167 -> 168
-168 -> 169
-167 -> 170
-170 -> 171
+0 -> 169
+169 -> 170
+0 -> 171
 171 -> 172
-170 -> 173
+0 -> 173
 173 -> 174
 0 -> 175
 175 -> 176
@@ -44,15 +52,11 @@ rankdir = LR
 0 -> 181
 181 -> 182
 0 -> 183
-183 -> 184
-0 -> 185
-185 -> 186
-0 -> 187
-187 -> 188
-0 -> 189
-189 -> 190
-0 -> 191
-191 -> 195
+183 -> 187
+0 -> 188
+188 -> 189
+0 -> 190
+190 -> 200
 
 0 [label="StartGamePacket",comment="name: \"StartGamePacket\", typeName: \"\", id: 0, branchId: 11, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Entity ID",comment="name: \"Entity ID\", typeName: \"ActorUniqueID\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
@@ -66,47 +70,51 @@ rankdir = LR
 15 [label="Rotation",comment="name: \"Rotation\", typeName: \"Vec2\", id: 15, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 21 [label="Vec2",comment="name: \"Vec2\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 22 [label="Settings",comment="name: \"Settings\", typeName: \"LevelSettings\", id: 22, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-147 [label="LevelSettings",comment="name: \"LevelSettings\", typeName: \"\", id: 147, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-148 [label="Level ID",comment="name: \"Level ID\", typeName: \"\", id: 148, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-149 [label="string",comment="name: \"string\", typeName: \"\", id: 149, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-150 [label="Level Name",comment="name: \"Level Name\", typeName: \"\", id: 150, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-151 [label="string",comment="name: \"string\", typeName: \"\", id: 151, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-152 [label="Template Content Identity",comment="name: \"Template Content Identity\", typeName: \"\", id: 152, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-153 [label="string",comment="name: \"string\", typeName: \"\", id: 153, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-154 [label="Is Trial?",comment="name: \"Is Trial?\", typeName: \"\", id: 154, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-155 [label="bool",comment="name: \"bool\", typeName: \"\", id: 155, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-156 [label="Movement Settings",comment="name: \"Movement Settings\", typeName: \"SyncedPlayerMovementSettings\", id: 156, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-162 [label="SyncedPlayerMovementSettings",comment="name: \"SyncedPlayerMovementSettings\", typeName: \"\", id: 162, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-163 [label="Level Current Time",comment="name: \"Level Current Time\", typeName: \"\", id: 163, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-164 [label="unsigned int64",comment="name: \"unsigned int64\", typeName: \"\", id: 164, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-165 [label="Enchantment Seed",comment="name: \"Enchantment Seed\", typeName: \"\", id: 165, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-166 [label="varint",comment="name: \"varint\", typeName: \"\", id: 166, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-167 [label="Block Properties",comment="name: \"Block Properties\", typeName: \"\", id: 167, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-168 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 168, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-169 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 169, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-170 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 170, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-171 [label="Block Name",comment="name: \"Block Name\", typeName: \"\", id: 171, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+139 [label="LevelSettings",comment="name: \"LevelSettings\", typeName: \"\", id: 139, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+140 [label="Level ID",comment="name: \"Level ID\", typeName: \"\", id: 140, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+141 [label="string",comment="name: \"string\", typeName: \"\", id: 141, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+142 [label="Level Name",comment="name: \"Level Name\", typeName: \"\", id: 142, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+143 [label="string",comment="name: \"string\", typeName: \"\", id: 143, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+144 [label="Template Content Identity",comment="name: \"Template Content Identity\", typeName: \"\", id: 144, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+145 [label="string",comment="name: \"string\", typeName: \"\", id: 145, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+146 [label="Is Trial?",comment="name: \"Is Trial?\", typeName: \"\", id: 146, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+147 [label="bool",comment="name: \"bool\", typeName: \"\", id: 147, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+148 [label="Movement Settings",comment="name: \"Movement Settings\", typeName: \"SyncedPlayerMovementSettings\", id: 148, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+154 [label="SyncedPlayerMovementSettings",comment="name: \"SyncedPlayerMovementSettings\", typeName: \"\", id: 154, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+155 [label="Level Current Time",comment="name: \"Level Current Time\", typeName: \"\", id: 155, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+156 [label="unsigned int64",comment="name: \"unsigned int64\", typeName: \"\", id: 156, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+157 [label="Enchantment Seed",comment="name: \"Enchantment Seed\", typeName: \"\", id: 157, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+158 [label="varint",comment="name: \"varint\", typeName: \"\", id: 158, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+159 [label="Block Properties",comment="name: \"Block Properties\", typeName: \"\", id: 159, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+160 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 160, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+161 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 161, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+162 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 162, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+163 [label="Block Name",comment="name: \"Block Name\", typeName: \"\", id: 163, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+164 [label="string",comment="name: \"string\", typeName: \"\", id: 164, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+165 [label="Block Definition",comment="name: \"Block Definition\", typeName: \"CompoundTag\", id: 165, branchId: 0, recurseId: -1, attributes: 256, notes: \"Map of block states. { key (component name):[label,value] } (Can be left empty.)\""];
+166 [label="CompoundTag",comment="name: \"CompoundTag\", typeName: \"\", id: 166, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+167 [label="Multiplayer Correlation Id",comment="name: \"Multiplayer Correlation Id\", typeName: \"\", id: 167, branchId: 0, recurseId: -1, attributes: 0, notes: \"A UUID to identify this multiplayer session.\""];
+168 [label="string",comment="name: \"string\", typeName: \"\", id: 168, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+169 [label="Enable Item Stack Net Manager",comment="name: \"Enable Item Stack Net Manager\", typeName: \"\", id: 169, branchId: 0, recurseId: -1, attributes: 0, notes: \"Whether the new item stack net manager is enabled for server authoritative inventory. This will eventually be required.\""];
+170 [label="bool",comment="name: \"bool\", typeName: \"\", id: 170, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+171 [label="Server version",comment="name: \"Server version\", typeName: \"\", id: 171, branchId: 0, recurseId: -1, attributes: 0, notes: \"For telemetry purposes - sending your own string with your own server name and version here would be useful for Mojang's telemetry.\""];
 172 [label="string",comment="name: \"string\", typeName: \"\", id: 172, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-173 [label="Block Definition",comment="name: \"Block Definition\", typeName: \"CompoundTag\", id: 173, branchId: 0, recurseId: -1, attributes: 256, notes: \"Map of block states. { key (component name):[label,value] } (Can be left empty.)\""];
+173 [label="Player Property Data",comment="name: \"Player Property Data\", typeName: \"CompoundTag\", id: 173, branchId: 0, recurseId: -1, attributes: 256, notes: \"like SyncActorPropertyPacket, specifically for minecraft:player properties\""];
 174 [label="CompoundTag",comment="name: \"CompoundTag\", typeName: \"\", id: 174, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-175 [label="Multiplayer Correlation Id",comment="name: \"Multiplayer Correlation Id\", typeName: \"\", id: 175, branchId: 0, recurseId: -1, attributes: 0, notes: \"A UUID to identify this multiplayer session.\""];
-176 [label="string",comment="name: \"string\", typeName: \"\", id: 176, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-177 [label="Enable Item Stack Net Manager",comment="name: \"Enable Item Stack Net Manager\", typeName: \"\", id: 177, branchId: 0, recurseId: -1, attributes: 0, notes: \"Whether the new item stack net manager is enabled for server authoritative inventory. This will eventually be required.\""];
-178 [label="bool",comment="name: \"bool\", typeName: \"\", id: 178, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-179 [label="Server version",comment="name: \"Server version\", typeName: \"\", id: 179, branchId: 0, recurseId: -1, attributes: 0, notes: \"For telemetry purposes - sending your own string with your own server name and version here would be useful for Mojang's telemetry.\""];
-180 [label="string",comment="name: \"string\", typeName: \"\", id: 180, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-181 [label="Player Property Data",comment="name: \"Player Property Data\", typeName: \"CompoundTag\", id: 181, branchId: 0, recurseId: -1, attributes: 256, notes: \"like SyncActorPropertyPacket, specifically for minecraft:player properties\""];
-182 [label="CompoundTag",comment="name: \"CompoundTag\", typeName: \"\", id: 182, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-183 [label="Server Block Type Registry Checksum",comment="name: \"Server Block Type Registry Checksum\", typeName: \"\", id: 183, branchId: 0, recurseId: -1, attributes: 0, notes: \"Checksum for detecting mismatches in block types between server and client.\""];
-184 [label="unsigned int64",comment="name: \"unsigned int64\", typeName: \"\", id: 184, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-185 [label="World Template ID",comment="name: \"World Template ID\", typeName: \"mce::UUID\", id: 185, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-186 [label="mce::UUID",comment="name: \"mce::UUID\", typeName: \"\", id: 186, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-187 [label="Server Enabled ClientSide Generation",comment="name: \"Server Enabled ClientSide Generation\", typeName: \"\", id: 187, branchId: 0, recurseId: -1, attributes: 0, notes: \"BiomeComponentFactory needs to know about this toggle before we start parsing BiomeComponents\""];
-188 [label="bool",comment="name: \"bool\", typeName: \"\", id: 188, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-189 [label="BlockNetworkIds Are Hashes",comment="name: \"BlockNetworkIds Are Hashes\", typeName: \"\", id: 189, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-190 [label="bool",comment="name: \"bool\", typeName: \"\", id: 190, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-191 [label="NetworkPermissions",comment="name: \"NetworkPermissions\", typeName: \"NetworkPermissions\", id: 191, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-195 [label="NetworkPermissions",comment="name: \"NetworkPermissions\", typeName: \"\", id: 195, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;5;10;12;14;21;147;149;151;153;155;162;164;166;169;172;174;176;178;180;182;184;186;188;190;195}
+175 [label="Server Block Type Registry Checksum",comment="name: \"Server Block Type Registry Checksum\", typeName: \"\", id: 175, branchId: 0, recurseId: -1, attributes: 0, notes: \"Checksum for detecting mismatches in block types between server and client.\""];
+176 [label="unsigned int64",comment="name: \"unsigned int64\", typeName: \"\", id: 176, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+177 [label="World Template ID",comment="name: \"World Template ID\", typeName: \"mce::UUID\", id: 177, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+178 [label="mce::UUID",comment="name: \"mce::UUID\", typeName: \"\", id: 178, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+179 [label="Server Enabled ClientSide Generation",comment="name: \"Server Enabled ClientSide Generation\", typeName: \"\", id: 179, branchId: 0, recurseId: -1, attributes: 0, notes: \"BiomeComponentFactory needs to know about this toggle before we start parsing BiomeComponents\""];
+180 [label="bool",comment="name: \"bool\", typeName: \"\", id: 180, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+181 [label="BlockNetworkIds Are Hashes",comment="name: \"BlockNetworkIds Are Hashes\", typeName: \"\", id: 181, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+182 [label="bool",comment="name: \"bool\", typeName: \"\", id: 182, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+183 [label="NetworkPermissions",comment="name: \"NetworkPermissions\", typeName: \"NetworkPermissions\", id: 183, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+187 [label="NetworkPermissions",comment="name: \"NetworkPermissions\", typeName: \"\", id: 187, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+188 [label="Does the packet contain server join information.",comment="name: \"Does the packet contain server join information.\", typeName: \"\", id: 188, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+189 [label="bool",comment="name: \"bool\", typeName: \"\", id: 189, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+190 [label="Server Telemetry Data",comment="name: \"Server Telemetry Data\", typeName: \"Social::Events::ServerTelemetryData\", id: 190, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+200 [label="Social::Events::ServerTelemetryData",comment="name: \"Social::Events::ServerTelemetryData\", typeName: \"\", id: 200, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;5;10;12;14;21;139;141;143;145;147;154;156;158;161;164;166;168;170;172;174;176;178;180;182;187;189;200}
 
 }

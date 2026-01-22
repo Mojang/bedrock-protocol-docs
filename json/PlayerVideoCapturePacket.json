@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "59941711",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
     "definitions": {
         "958149751": {
             "title": "Start Video Capture",
@@ -17,8 +17,7 @@
                     "type": "integer",
                     "x-underlying-type": "uint32",
                     "x-ordinal-index": 0,
-                    "minimum": 0.0,
-                    "maximum": 4294967295.0
+                    "minimum": 0.0
                 }
             },
             "required": [

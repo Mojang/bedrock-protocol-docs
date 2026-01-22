@@ -198,15 +198,21 @@
 <td>Optional. Map of Block tags to Aim-Assist targeting priority. Larger numbers have greater priority.</td>
 </tr>
 <tr>
+<td><strong>entity_type_families</strong></td>
+<td>object</td>
+<td>3</td>
+<td>Optional. Map of Entity type families to Aim-Assist targeting priority. Larger numbers have greater priority.</td>
+</tr>
+<tr>
 <td><strong>entity_default</strong></td>
 <td>int32</td>
-<td>3</td>
+<td>4</td>
 <td>Optional. Default Aim-Assist targeting priority used for Entities not found in &#x27;entities&#x27;.</td>
 </tr>
 <tr>
 <td><strong>block_default</strong></td>
 <td>int32</td>
-<td>4</td>
+<td>5</td>
 <td>Optional. Default Aim-Assist targeting priority used for Blocks not found in &#x27;blocks&#x27;.</td>
 </tr>
 </tbody>
@@ -278,6 +284,12 @@
 <td>array&lt;string&gt;</td>
 <td>2</td>
 <td>Optional. List of block tags to exclude from aim assist targeting.</td>
+</tr>
+<tr>
+<td><strong>entity_type_families</strong></td>
+<td>array&lt;string&gt;</td>
+<td>3</td>
+<td>Optional. List of entity type families to exclude from aim assist targeting.</td>
 </tr>
 </tbody>
 </table>

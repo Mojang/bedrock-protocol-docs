@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1531795524",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
     "definitions": {
         "3541243607": {
             "title": "ActorRuntimeID",
@@ -16,8 +16,7 @@
                         "Compression"
                     ],
                     "x-ordinal-index": 0,
-                    "minimum": 0.0,
-                    "maximum": 18446744073709553000.0
+                    "minimum": 0.0
                 }
             },
             "required": [
@@ -36,8 +35,7 @@
                         "Compression"
                     ],
                     "x-ordinal-index": 0,
-                    "minimum": 0.0,
-                    "maximum": 18446744073709553000.0
+                    "minimum": 0.0
                 }
             },
             "required": [
@@ -61,9 +59,7 @@
             "x-serialization-options": [
                 "Compression"
             ],
-            "x-ordinal-index": 3,
-            "minimum": -2147483648.0,
-            "maximum": 2147483647.0
+            "x-ordinal-index": 3
         },
         "Effect Duration Ticks": {
             "type": "integer",
@@ -71,9 +67,7 @@
             "x-serialization-options": [
                 "Compression"
             ],
-            "x-ordinal-index": 5,
-            "minimum": -2147483648.0,
-            "maximum": 2147483647.0
+            "x-ordinal-index": 5
         },
         "Effect ID": {
             "type": "integer",
@@ -81,9 +75,7 @@
             "x-serialization-options": [
                 "Compression"
             ],
-            "x-ordinal-index": 2,
-            "minimum": -2147483648.0,
-            "maximum": 2147483647.0
+            "x-ordinal-index": 2
         },
         "Event ID": {
             "title": "MobEffectPacketPayload::Event",

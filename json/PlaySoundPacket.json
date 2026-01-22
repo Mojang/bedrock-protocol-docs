@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "830379746",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
     "definitions": {
         "269289973": {
             "title": "NetworkBlockPosition",
@@ -15,9 +15,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 0,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 0
                 },
                 "Y": {
                     "type": "integer",
@@ -26,8 +24,7 @@
                         "Compression"
                     ],
                     "x-ordinal-index": 1,
-                    "minimum": 0.0,
-                    "maximum": 4294967295.0
+                    "minimum": 0.0
                 },
                 "Z": {
                     "type": "integer",
@@ -35,9 +32,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 2,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 2
                 }
             },
             "required": [
@@ -58,9 +53,7 @@
         "Pitch": {
             "type": "number",
             "x-underlying-type": "float",
-            "x-ordinal-index": 3,
-            "minimum": 1.1754943508222876e-38,
-            "maximum": 3.4028234663852887e38
+            "x-ordinal-index": 3
         },
         "Position": {
             "$ref": "#/definitions/269289973",
@@ -69,9 +62,7 @@
         "Volume": {
             "type": "number",
             "x-underlying-type": "float",
-            "x-ordinal-index": 2,
-            "minimum": 1.1754943508222876e-38,
-            "maximum": 3.4028234663852887e38
+            "x-ordinal-index": 2
         }
     },
     "required": [

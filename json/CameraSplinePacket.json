@@ -1,0 +1,254 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "2873317179",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
+    "definitions": {
+        "546677968": {
+            "title": "CameraSplineDefinition",
+            "type": "object",
+            "properties": {
+                "control_points": {
+                    "description": "Array of control point positions, each as [x, y, z] in world space.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/1274567168"
+                    },
+                    "x-ordinal-index": 3
+                },
+                "name": {
+                    "description": "The identifier for this spline, in \"namespace:name\" format.",
+                    "type": "string",
+                    "x-ordinal-index": 0,
+                    "pattern": "^\\w+:\\w+$"
+                },
+                "progress_key_frames": {
+                    "description": "Key frames where each entry defines a progress alpha [0–1] and a time (in seconds) when the spline should reach that progress.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/3914468974"
+                    },
+                    "x-ordinal-index": 4
+                },
+                "rotation_key_frames": {
+                    "description": "Array of rotation key frames, each with a rotation value and the time (in seconds) when it should be applied.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/790401607"
+                    },
+                    "x-ordinal-index": 5
+                },
+                "spline_type": {
+                    "description": "The spline interpolation type: \"catmullrom\" or \"linear\". Defaults to \"catmullrom\".",
+                    "type": "string",
+                    "default": "catmullrom",
+                    "x-ordinal-index": 2,
+                    "pattern": "^(?:catmullrom|linear)$"
+                },
+                "total_time": {
+                    "description": "The total time, in seconds, to play back the spline.",
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "control_points",
+                "name",
+                "progress_key_frames",
+                "rotation_key_frames",
+                "total_time"
+            ]
+        },
+        "1274567168": {
+            "title": "CameraSplineControlPoint",
+            "type": "object",
+            "properties": {
+                "position": {
+                    "description": "The [x, y, z] position of a spline node.",
+                    "$ref": "#/definitions/4004946602",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "position"
+            ]
+        },
+        "4004946602": {
+            "title": "Vec3",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "Z": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "X",
+                "Y",
+                "Z"
+            ]
+        },
+        "3914468974": {
+            "title": "CameraSplineProgressKeyFrame",
+            "type": "object",
+            "properties": {
+                "easing": {
+                    "title": "easing_function",
+                    "description": "Optional easing function used to interpolate towards this progress key frame. Defaults to \"linear\" if omitted.",
+                    "type": "string",
+                    "enum": [
+                        "linear",
+                        "spring",
+                        "in_quad",
+                        "out_quad",
+                        "in_out_quad",
+                        "in_cubic",
+                        "out_cubic",
+                        "in_out_cubic",
+                        "in_quart",
+                        "out_quart",
+                        "in_out_quart",
+                        "in_quint",
+                        "out_quint",
+                        "in_out_quint",
+                        "in_sine",
+                        "out_sine",
+                        "in_out_sine",
+                        "in_expo",
+                        "out_expo",
+                        "in_out_expo",
+                        "in_circ",
+                        "out_circ",
+                        "in_out_circ",
+                        "in_bounce",
+                        "out_bounce",
+                        "in_out_bounce",
+                        "in_back",
+                        "out_back",
+                        "in_out_back",
+                        "in_elastic",
+                        "out_elastic",
+                        "in_out_elastic"
+                    ],
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 2
+                },
+                "progress": {
+                    "description": "Normalized progress of this frame along the spline, from 0.0 (start) to 1.0 (end).",
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0,
+                    "maximum": 1.0
+                },
+                "time": {
+                    "description": "Time (in seconds) at which this progress should be applied.",
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "progress",
+                "time"
+            ]
+        },
+        "790401607": {
+            "title": "CameraSplineRotationKeyFrame",
+            "type": "object",
+            "properties": {
+                "easing": {
+                    "title": "easing_function",
+                    "description": "Optional easing function used to interpolate towards this rotation key frame. Defaults to \"linear\" if omitted.",
+                    "type": "string",
+                    "enum": [
+                        "linear",
+                        "spring",
+                        "in_quad",
+                        "out_quad",
+                        "in_out_quad",
+                        "in_cubic",
+                        "out_cubic",
+                        "in_out_cubic",
+                        "in_quart",
+                        "out_quart",
+                        "in_out_quart",
+                        "in_quint",
+                        "out_quint",
+                        "in_out_quint",
+                        "in_sine",
+                        "out_sine",
+                        "in_out_sine",
+                        "in_expo",
+                        "out_expo",
+                        "in_out_expo",
+                        "in_circ",
+                        "out_circ",
+                        "in_out_circ",
+                        "in_bounce",
+                        "out_bounce",
+                        "in_out_bounce",
+                        "in_back",
+                        "out_back",
+                        "in_out_back",
+                        "in_elastic",
+                        "out_elastic",
+                        "in_out_elastic"
+                    ],
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 2
+                },
+                "rotation": {
+                    "description": "Rotation [x, y, z] value.",
+                    "$ref": "#/definitions/4004946602",
+                    "x-ordinal-index": 0
+                },
+                "time": {
+                    "description": "Time (in seconds) at which this rotation should be applied.",
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "rotation",
+                "time"
+            ]
+        }
+    },
+    "title": "CameraSplinePacket",
+    "description": "Camera custom spline data sent from server to client.",
+    "type": "object",
+    "properties": {
+        "Camera Data Splines": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/546677968"
+            },
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Camera Data Splines"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 338,
+        "[cereal:packet_details]": "\n\tSent by the server to clients for initializing custom spline data that can be played later through the camera command.\n\t"
+    }
+}

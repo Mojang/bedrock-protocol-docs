@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3797810866",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
     "title": "PlayerToggleCrafterSlotRequestPacket",
     "description": "PlayerToggleCrafterSlotRequestPacket",
     "type": "object",
@@ -16,23 +16,17 @@
         "Pos X": {
             "type": "integer",
             "x-underlying-type": "int32",
-            "x-ordinal-index": 0,
-            "minimum": -2147483648.0,
-            "maximum": 2147483647.0
+            "x-ordinal-index": 0
         },
         "Pos Y": {
             "type": "integer",
             "x-underlying-type": "int32",
-            "x-ordinal-index": 1,
-            "minimum": -2147483648.0,
-            "maximum": 2147483647.0
+            "x-ordinal-index": 1
         },
         "Pos Z": {
             "type": "integer",
             "x-underlying-type": "int32",
-            "x-ordinal-index": 2,
-            "minimum": -2147483648.0,
-            "maximum": 2147483647.0
+            "x-ordinal-index": 2
         },
         "Slot Index": {
             "type": "integer",

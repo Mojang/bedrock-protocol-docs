@@ -5,36 +5,12 @@ rankdir = LR
 1 -> 2
 0 -> 3
 3 -> 4
-0 -> 5
-5 -> 6
-0 -> 7
-7 -> 8
-0 -> 9
-9 -> 10
-0 -> 11
-11 -> 12
-0 -> 13
-13 -> 14
-0 -> 15
-15 -> 16
 
 0 [label="MessageOnly",comment="name: \"MessageOnly\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="raw",comment="name: \"raw\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Message Type",comment="name: \"Message Type\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="enum TextPacketType",comment="name: \"enum TextPacketType\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-3 [label="tip",comment="name: \"tip\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-4 [label="enum TextPacketType",comment="name: \"enum TextPacketType\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-5 [label="systemMessage",comment="name: \"systemMessage\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-6 [label="enum TextPacketType",comment="name: \"enum TextPacketType\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-7 [label="textObjectWhisper",comment="name: \"textObjectWhisper\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-8 [label="enum TextPacketType",comment="name: \"enum TextPacketType\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-9 [label="textObjectAnnouncement",comment="name: \"textObjectAnnouncement\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-10 [label="enum TextPacketType",comment="name: \"enum TextPacketType\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-11 [label="textObject",comment="name: \"textObject\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-12 [label="enum TextPacketType",comment="name: \"enum TextPacketType\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-13 [label="Message Type",comment="name: \"Message Type\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-14 [label="enum TextPacketType",comment="name: \"enum TextPacketType\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-15 [label="Message",comment="name: \"Message\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-16 [label="string",comment="name: \"string\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2;4;6;8;10;12;14;16}
+3 [label="Message",comment="name: \"Message\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="string",comment="name: \"string\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4}
 
 }

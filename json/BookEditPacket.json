@@ -1,0 +1,184 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "1403456780",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
+    "definitions": {
+        "2462692219": {
+            "title": "BookEditAction::DeletePage",
+            "type": "object",
+            "properties": {
+                "Page Index": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Page Index"
+            ]
+        },
+        "1666873252": {
+            "title": "BookEditAction::SwapPages",
+            "type": "object",
+            "properties": {
+                "Page Index": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Swap With Index": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Page Index",
+                "Swap With Index"
+            ]
+        },
+        "3077279485": {
+            "title": "BookEditAction::AddPage",
+            "type": "object",
+            "properties": {
+                "Page Index": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Page Text": {
+                    "type": "string",
+                    "x-ordinal-index": 1,
+                    "maxLength": 512
+                },
+                "Photo Name": {
+                    "type": "string",
+                    "x-ordinal-index": 2,
+                    "maxLength": 512
+                }
+            },
+            "required": [
+                "Page Index",
+                "Page Text",
+                "Photo Name"
+            ]
+        },
+        "4171811454": {
+            "title": "BookEditAction::ReplacePage",
+            "type": "object",
+            "properties": {
+                "Page Index": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Page Text": {
+                    "type": "string",
+                    "x-ordinal-index": 1,
+                    "maxLength": 512
+                },
+                "Photo Name": {
+                    "type": "string",
+                    "x-ordinal-index": 2,
+                    "maxLength": 512
+                }
+            },
+            "required": [
+                "Page Index",
+                "Page Text",
+                "Photo Name"
+            ]
+        },
+        "2642647073": {
+            "title": "BookEditAction::Finalize",
+            "type": "object",
+            "properties": {
+                "Author": {
+                    "type": "string",
+                    "x-ordinal-index": 1,
+                    "maxLength": 512
+                },
+                "Title": {
+                    "type": "string",
+                    "x-ordinal-index": 0,
+                    "maxLength": 512
+                },
+                "XUID": {
+                    "type": "string",
+                    "x-ordinal-index": 2,
+                    "maxLength": 512
+                }
+            },
+            "required": [
+                "Author",
+                "Title",
+                "XUID"
+            ]
+        }
+    },
+    "title": "BookEditPacket",
+    "description": "Sends the updated state of the Book and Quill item from client to server during use.",
+    "type": "object",
+    "properties": {
+        "Book Slot": {
+            "type": "integer",
+            "x-underlying-type": "int32",
+            "x-serialization-options": [
+                "Compression"
+            ],
+            "x-ordinal-index": 0
+        },
+        "Operation": {
+            "description": "Payload variant holding data specific to the type of Book Edit Operation.",
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/4171811454",
+                    "x-ordinal-index": 0
+                },
+                {
+                    "$ref": "#/definitions/3077279485",
+                    "x-ordinal-index": 1
+                },
+                {
+                    "$ref": "#/definitions/2462692219",
+                    "x-ordinal-index": 2
+                },
+                {
+                    "$ref": "#/definitions/1666873252",
+                    "x-ordinal-index": 3
+                },
+                {
+                    "$ref": "#/definitions/2642647073",
+                    "x-ordinal-index": 4
+                }
+            ],
+            "x-control-value-type": "uint32",
+            "x-ordinal-index": 1
+        }
+    },
+    "required": [
+        "Book Slot",
+        "Operation"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 97,
+        "[cereal:packet_details]": ""
+    }
+}

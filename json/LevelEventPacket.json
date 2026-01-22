@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "4270035307",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
     "definitions": {
         "4004946602": {
             "title": "Vec3",
@@ -12,23 +12,17 @@
                 "X": {
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 0,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 0
                 },
                 "Y": {
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 1,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 1
                 },
                 "Z": {
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 2,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 2
                 }
             },
             "required": [
@@ -48,9 +42,7 @@
             "x-serialization-options": [
                 "Compression"
             ],
-            "x-ordinal-index": 2,
-            "minimum": -2147483648.0,
-            "maximum": 2147483647.0
+            "x-ordinal-index": 2
         },
         "Event Id": {
             "type": "integer",
@@ -58,9 +50,7 @@
             "x-serialization-options": [
                 "Compression"
             ],
-            "x-ordinal-index": 0,
-            "minimum": -2147483648.0,
-            "maximum": 2147483647.0
+            "x-ordinal-index": 0
         },
         "Position": {
             "description": "Note about Event ID: Legacy particles use the @enums.html#Particle Type@ enum |ed with ParticleLegacyEvent(0x4000)",

@@ -31,6 +31,8 @@ rankdir = LR
 341 -> 354
 50 -> 355
 355 -> 385
+50 -> 386
+386 -> 390
 
 50 [label="BiomeDefinitionChunkGenData",comment="name: \"BiomeDefinitionChunkGenData\", typeName: \"\", id: 50, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 51 [label="climate",comment="name: \"climate\", typeName: \"std::optional<struct BiomeClimateData>\", id: 51, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
@@ -63,6 +65,8 @@ rankdir = LR
 354 [label="std::optional<struct BiomeLegacyWorldGenRulesData>",comment="name: \"std::optional<struct BiomeLegacyWorldGenRulesData>\", typeName: \"\", id: 354, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 355 [label="replacement biomes",comment="name: \"replacement biomes\", typeName: \"std::optional<struct BiomeReplacementsData>\", id: 355, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 385 [label="std::optional<struct BiomeReplacementsData>",comment="name: \"std::optional<struct BiomeReplacementsData>\", typeName: \"\", id: 385, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;66;127;150;194;201;203;205;207;209;225;251;322;340;354;385}
+386 [label="Village Type",comment="name: \"Village Type\", typeName: \"std::optional<enum SharedTypes::VillageType>\", id: 386, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+390 [label="std::optional<enum SharedTypes::VillageType>",comment="name: \"std::optional<enum SharedTypes::VillageType>\", typeName: \"\", id: 390, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;66;127;150;194;201;203;205;207;209;225;251;322;340;354;385;390}
 
 }

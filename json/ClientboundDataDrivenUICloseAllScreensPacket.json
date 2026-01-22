@@ -1,0 +1,13 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "2177342058",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
+    "title": "ClientboundDataDrivenUICloseAllScreensPacket",
+    "description": "Allows the server to tell the client to close all the Data Driven UI screens.",
+    "$metaProperties": {
+        "[cereal:packet]": 334,
+        "[cereal:packet_details]": ""
+    }
+}

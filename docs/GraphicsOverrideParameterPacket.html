@@ -138,15 +138,62 @@
 <td>Time of Day key to Graphics Parameter value, Depending on the parameters, either all three components are used as a color or just the x component is used as a float, int, or bool</td>
 </tr>
 <tr>
+<td><strong>Float Value (Required)</strong></td>
+<td>float</td>
+<td>1</td>
+<td>If set, contains a single float graphics parameter to be overriden</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Vec3 Value (Required)</strong></td>
+<td>Vec3</td>
+<td>2</td>
+<td>If set, contains a single Vec3 graphics parameter to be overriden</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>Vec3</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>float</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>float</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Z (Required)</strong></td>
+<td>float</td>
+<td>2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
 <td><strong>Biome Identifier (Required)</strong></td>
 <td>string</td>
-<td>1</td>
+<td>3</td>
 <td>Determines which biome the override parameter is applied to</td>
 </tr>
 <tr>
 <td rowspan="2"><strong>Identifier for Parameter (Required)</strong></td>
 <td>uint8</td>
-<td>2</td>
+<td>4</td>
 <td>Identifier for the parameter that is having its value changed</td>
 </tr>
 <tr>
@@ -200,6 +247,70 @@
 <td style="text-align: center;">9</td>
 <td><code>SunGlareShape</code></td>
 </tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td><code>Chlorophyll</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td><code>CDOM</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td><code>SuspendedSediment</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">13</td>
+<td><code>WavesDepth</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td><code>WavesFrequency</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td><code>WavesFrequencyScaling</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">16</td>
+<td><code>WavesSpeed</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">17</td>
+<td><code>WavesSpeedScaling</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">18</td>
+<td><code>WavesShape</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">19</td>
+<td><code>WavesOctaves</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">20</td>
+<td><code>WavesMix</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">21</td>
+<td><code>WavesPull</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">22</td>
+<td><code>WavesDirectionIncrement</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">23</td>
+<td><code>MidtonesContrast</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">24</td>
+<td><code>HighlightsContrast</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">25</td>
+<td><code>ShadowsContrast</code></td>
+</tr>
 </tbody>
 </table>
 </div></td>
@@ -207,7 +318,7 @@
 <tr>
 <td><strong>Reset Parameter (Required)</strong></td>
 <td>boolean</td>
-<td>3</td>
+<td>5</td>
 <td>If true, the specified parameter will be reset. If false, the parameter will be set using the data fields.</td>
 </tr>
 </tbody>

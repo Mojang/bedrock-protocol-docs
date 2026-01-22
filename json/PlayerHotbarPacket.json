@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "771627580",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
     "title": "PlayerHotbarPacket",
     "description": "Sent from the server when the player uses pick block on actors or blocks, in addition to the player uses the clear, give, or replace item command or if the serverplayer uses _sendAdditionalLevelData(). ",
     "type": "object",
@@ -25,8 +25,7 @@
                 "Compression"
             ],
             "x-ordinal-index": 0,
-            "minimum": 0.0,
-            "maximum": 4294967295.0
+            "minimum": 0.0
         },
         "Should select slot?": {
             "type": "boolean",

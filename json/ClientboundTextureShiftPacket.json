@@ -1,0 +1,84 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "2714813927",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
+    "title": "ClientboundTextureShiftPacket",
+    "description": "Sends a set of update properties for the texture shift system from the server to the client.",
+    "type": "object",
+    "properties": {
+        "Action ID": {
+            "title": "ClientboundTextureShiftPacketPayload::Action",
+            "type": "string",
+            "enum": [
+                "Invalid",
+                "Initialize",
+                "Start",
+                "SetEnabled",
+                "Sync"
+            ],
+            "x-underlying-type": "uint8",
+            "x-serialization-options": [
+                "Enum-as-Value"
+            ],
+            "x-ordinal-index": 0
+        },
+        "All Steps": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "x-ordinal-index": 4
+        },
+        "Collection Name": {
+            "type": "string",
+            "x-ordinal-index": 1
+        },
+        "Current Length In Ticks": {
+            "type": "integer",
+            "x-underlying-type": "uint64",
+            "x-serialization-options": [
+                "Compression"
+            ],
+            "x-ordinal-index": 5,
+            "minimum": 0.0
+        },
+        "Enabled": {
+            "type": "boolean",
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 7
+        },
+        "From Step": {
+            "type": "string",
+            "x-ordinal-index": 2
+        },
+        "To Step": {
+            "type": "string",
+            "x-ordinal-index": 3
+        },
+        "Total Length In Ticks": {
+            "type": "integer",
+            "x-underlying-type": "uint64",
+            "x-serialization-options": [
+                "Compression"
+            ],
+            "x-ordinal-index": 6,
+            "minimum": 0.0
+        }
+    },
+    "required": [
+        "Action ID",
+        "All Steps",
+        "Collection Name",
+        "Current Length In Ticks",
+        "Enabled",
+        "From Step",
+        "To Step",
+        "Total Length In Ticks"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 336,
+        "[cereal:packet_details]": ""
+    }
+}

@@ -916,13 +916,13 @@
 </tr>
 <tr>
 <td rowspan="2"><strong>progressKeyFrames (Required)</strong></td>
-<td>array&lt;Vec2&gt;</td>
+<td>array&lt;CameraInstruction::SplineInstruction::SplineProgressOption&gt;</td>
 <td>3</td>
 <td></td>
 </tr>
 <tr>
 <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
-<h3>Vec2 (Array Item)</h3>
+<h3>CameraInstruction::SplineInstruction::SplineProgressOption (Array Item)</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
 <thead>
 <tr style="background-color: #f0f0f0;">
@@ -934,16 +934,165 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>X (Required)</strong></td>
+<td><strong>Key frame value (Required)</strong></td>
 <td>float</td>
 <td>0</td>
 <td></td>
 </tr>
 <tr>
-<td><strong>Y (Required)</strong></td>
+<td><strong>Key frame time (Required)</strong></td>
 <td>float</td>
 <td>1</td>
 <td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Key frame easing func (Required)</strong></td>
+<td>string</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>linear</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>spring</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>in_quad</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>out_quad</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>in_out_quad</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><code>in_cubic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td><code>out_cubic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td><code>in_out_cubic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td><code>in_quart</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td><code>out_quart</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td><code>in_out_quart</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td><code>in_quint</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td><code>out_quint</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">13</td>
+<td><code>in_out_quint</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td><code>in_sine</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td><code>out_sine</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">16</td>
+<td><code>in_out_sine</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">17</td>
+<td><code>in_expo</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">18</td>
+<td><code>out_expo</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">19</td>
+<td><code>in_out_expo</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">20</td>
+<td><code>in_circ</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">21</td>
+<td><code>out_circ</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">22</td>
+<td><code>in_out_circ</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">23</td>
+<td><code>in_bounce</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">24</td>
+<td><code>out_bounce</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">25</td>
+<td><code>in_out_bounce</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">26</td>
+<td><code>in_back</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">27</td>
+<td><code>out_back</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">28</td>
+<td><code>in_out_back</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">29</td>
+<td><code>in_elastic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">30</td>
+<td><code>out_elastic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">31</td>
+<td><code>in_out_elastic</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
 </tr>
 </tbody>
 </table>
@@ -969,7 +1118,7 @@
 </thead>
 <tbody>
 <tr>
-<td rowspan="2"><strong>Key frame values (Required)</strong></td>
+<td rowspan="2"><strong>Key frame value (Required)</strong></td>
 <td>Vec3</td>
 <td>0</td>
 <td></td>
@@ -1010,10 +1159,159 @@
 </div></td>
 </tr>
 <tr>
-<td><strong>Key frame times (Required)</strong></td>
+<td><strong>Key frame time (Required)</strong></td>
 <td>float</td>
 <td>1</td>
 <td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Key frame easing func (Required)</strong></td>
+<td>string</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>linear</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>spring</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>in_quad</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>out_quad</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>in_out_quad</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><code>in_cubic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td><code>out_cubic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td><code>in_out_cubic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td><code>in_quart</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td><code>out_quart</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td><code>in_out_quart</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td><code>in_quint</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td><code>out_quint</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">13</td>
+<td><code>in_out_quint</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td><code>in_sine</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td><code>out_sine</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">16</td>
+<td><code>in_out_sine</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">17</td>
+<td><code>in_expo</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">18</td>
+<td><code>out_expo</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">19</td>
+<td><code>in_out_expo</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">20</td>
+<td><code>in_circ</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">21</td>
+<td><code>out_circ</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">22</td>
+<td><code>in_out_circ</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">23</td>
+<td><code>in_bounce</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">24</td>
+<td><code>out_bounce</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">25</td>
+<td><code>in_out_bounce</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">26</td>
+<td><code>in_back</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">27</td>
+<td><code>out_back</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">28</td>
+<td><code>in_out_back</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">29</td>
+<td><code>in_elastic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">30</td>
+<td><code>out_elastic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">31</td>
+<td><code>in_out_elastic</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
 </tr>
 </tbody>
 </table>

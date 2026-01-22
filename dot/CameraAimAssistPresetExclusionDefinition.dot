@@ -14,6 +14,11 @@ rankdir = LR
 10 -> 11
 9 -> 12
 12 -> 13
+0 -> 14
+14 -> 15
+15 -> 16
+14 -> 17
+17 -> 18
 
 0 [label="CameraAimAssistPresetExclusionDefinition",comment="name: \"CameraAimAssistPresetExclusionDefinition\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="blocks",comment="name: \"blocks\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"Optional. List of block identifiers to exclude from aim assist targeting.\""];
@@ -29,6 +34,11 @@ rankdir = LR
 11 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 12 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
 13 [label="string",comment="name: \"string\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;13}
+14 [label="entity_type_families",comment="name: \"entity_type_families\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 0, notes: \"Optional. List of entity type families to exclude from aim assist targeting.\""];
+15 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+16 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+17 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+18 [label="string",comment="name: \"string\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;13;18}
 
 }

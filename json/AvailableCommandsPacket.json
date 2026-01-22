@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2689147654",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
     "definitions": {
         "884300654": {
             "title": "AvailableCommandsPacketChainedSubcommandRelationship",
@@ -17,8 +17,7 @@
                         "Compression"
                     ],
                     "x-ordinal-index": 0,
-                    "minimum": 0.0,
-                    "maximum": 4294967295.0
+                    "minimum": 0.0
                 },
                 "SubCommand Second Value": {
                     "description": "The second value, the enum id.",
@@ -28,8 +27,7 @@
                         "Compression"
                     ],
                     "x-ordinal-index": 1,
-                    "minimum": 0.0,
-                    "maximum": 4294967295.0
+                    "minimum": 0.0
                 }
             },
             "required": [
@@ -58,16 +56,14 @@
                     "type": "integer",
                     "x-underlying-type": "uint32",
                     "x-ordinal-index": 1,
-                    "minimum": 0.0,
-                    "maximum": 4294967295.0
+                    "minimum": 0.0
                 },
                 "Enum Value Symbol": {
                     "description": "The enum value symbol.",
                     "type": "integer",
                     "x-underlying-type": "uint32",
                     "x-ordinal-index": 0,
-                    "minimum": 0.0,
-                    "maximum": 4294967295.0
+                    "minimum": 0.0
                 }
             },
             "required": [
@@ -109,9 +105,7 @@
                     "description": "The command alias enum.",
                     "type": "integer",
                     "x-underlying-type": "int32",
-                    "x-ordinal-index": 4,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 4
                 },
                 "CommandData Chained Subcommand Indexes": {
                     "description": "The command chained subcommand indexes.",
@@ -119,8 +113,7 @@
                     "items": {
                         "type": "integer",
                         "x-underlying-type": "uint32",
-                        "minimum": 0.0,
-                        "maximum": 4294967295.0
+                        "minimum": 0.0
                     },
                     "x-ordinal-index": 5,
                     "maxItems": 250
@@ -136,8 +129,7 @@
                     "type": "integer",
                     "x-underlying-type": "uint16",
                     "x-ordinal-index": 2,
-                    "minimum": 0.0,
-                    "maximum": 65535.0
+                    "minimum": 0.0
                 },
                 "Name": {
                     "description": "The name.",
@@ -232,8 +224,7 @@
                     "type": "integer",
                     "x-underlying-type": "uint32",
                     "x-ordinal-index": 1,
-                    "minimum": 0.0,
-                    "maximum": 4294967295.0
+                    "minimum": 0.0
                 }
             },
             "required": [
@@ -259,8 +250,7 @@
                     "items": {
                         "type": "string"
                     },
-                    "x-ordinal-index": 1,
-                    "maxItems": 10000
+                    "x-ordinal-index": 1
                 }
             },
             "required": [
@@ -283,8 +273,7 @@
                     "items": {
                         "type": "integer",
                         "x-underlying-type": "uint32",
-                        "minimum": 0.0,
-                        "maximum": 4294967295.0
+                        "minimum": 0.0
                     },
                     "x-ordinal-index": 1
                 }

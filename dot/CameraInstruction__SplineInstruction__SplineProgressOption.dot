@@ -1,0 +1,20 @@
+digraph "CameraInstruction::SplineInstruction::SplineProgressOption" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+0 -> 5
+5 -> 6
+
+0 [label="CameraInstruction::SplineInstruction::SplineProgressOption",comment="name: \"CameraInstruction::SplineInstruction::SplineProgressOption\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Key frame value",comment="name: \"Key frame value\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="float",comment="name: \"float\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="Key frame time",comment="name: \"Key frame time\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="float",comment="name: \"float\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+5 [label="Key frame easing func",comment="name: \"Key frame easing func\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+6 [label="enum easing_function",comment="name: \"enum easing_function\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;6}
+
+}

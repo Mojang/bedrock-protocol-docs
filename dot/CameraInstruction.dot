@@ -107,24 +107,28 @@ rankdir = LR
 103 -> 104
 102 -> 105
 105 -> 106
-84 -> 107
+102 -> 107
 107 -> 108
-108 -> 109
-107 -> 110
+84 -> 109
+109 -> 110
 110 -> 111
-111 -> 112
+109 -> 112
 112 -> 113
-111 -> 114
+113 -> 114
 114 -> 115
-111 -> 116
+113 -> 116
 116 -> 117
-110 -> 118
+113 -> 118
 118 -> 119
-0 -> 120
+112 -> 120
 120 -> 121
-121 -> 122
-0 -> 123
-123 -> 124
+112 -> 122
+122 -> 123
+0 -> 124
+124 -> 125
+125 -> 126
+0 -> 127
+127 -> 128
 
 0 [label="CameraInstruction",comment="name: \"CameraInstruction\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Set",comment="name: \"Set\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -229,28 +233,32 @@ rankdir = LR
 100 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 100, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 101 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 101, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 102 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 102, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-103 [label="X",comment="name: \"X\", typeName: \"\", id: 103, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+103 [label="Key frame value",comment="name: \"Key frame value\", typeName: \"\", id: 103, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 104 [label="float",comment="name: \"float\", typeName: \"\", id: 104, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-105 [label="Y",comment="name: \"Y\", typeName: \"\", id: 105, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+105 [label="Key frame time",comment="name: \"Key frame time\", typeName: \"\", id: 105, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 106 [label="float",comment="name: \"float\", typeName: \"\", id: 106, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-107 [label="rotationOption",comment="name: \"rotationOption\", typeName: \"\", id: 107, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-108 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 108, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-109 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 109, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-110 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 110, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-111 [label="Key frame values",comment="name: \"Key frame values\", typeName: \"\", id: 111, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-112 [label="X",comment="name: \"X\", typeName: \"\", id: 112, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-113 [label="float",comment="name: \"float\", typeName: \"\", id: 113, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-114 [label="Y",comment="name: \"Y\", typeName: \"\", id: 114, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+107 [label="Key frame easing func",comment="name: \"Key frame easing func\", typeName: \"\", id: 107, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+108 [label="enum easing_function",comment="name: \"enum easing_function\", typeName: \"\", id: 108, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+109 [label="rotationOption",comment="name: \"rotationOption\", typeName: \"\", id: 109, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+110 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 110, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+111 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 111, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+112 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 112, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+113 [label="Key frame value",comment="name: \"Key frame value\", typeName: \"\", id: 113, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+114 [label="X",comment="name: \"X\", typeName: \"\", id: 114, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 115 [label="float",comment="name: \"float\", typeName: \"\", id: 115, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-116 [label="Z",comment="name: \"Z\", typeName: \"\", id: 116, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+116 [label="Y",comment="name: \"Y\", typeName: \"\", id: 116, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 117 [label="float",comment="name: \"float\", typeName: \"\", id: 117, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-118 [label="Key frame times",comment="name: \"Key frame times\", typeName: \"\", id: 118, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+118 [label="Z",comment="name: \"Z\", typeName: \"\", id: 118, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 119 [label="float",comment="name: \"float\", typeName: \"\", id: 119, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-120 [label="AttachToEntity",comment="name: \"AttachToEntity\", typeName: \"\", id: 120, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-121 [label="Entity Actor ID",comment="name: \"Entity Actor ID\", typeName: \"\", id: 121, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-122 [label="int64",comment="name: \"int64\", typeName: \"\", id: 122, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-123 [label="DetachFromEntity",comment="name: \"DetachFromEntity\", typeName: \"\", id: 123, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-124 [label="bool",comment="name: \"bool\", typeName: \"\", id: 124, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;3;6;8;12;14;16;19;21;25;27;29;32;34;37;39;41;43;45;47;51;53;55;58;60;62;66;68;70;72;74;77;79;81;83;86;88;94;96;98;104;106;113;115;117;119;122;124}
+120 [label="Key frame time",comment="name: \"Key frame time\", typeName: \"\", id: 120, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+121 [label="float",comment="name: \"float\", typeName: \"\", id: 121, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+122 [label="Key frame easing func",comment="name: \"Key frame easing func\", typeName: \"\", id: 122, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+123 [label="enum easing_function",comment="name: \"enum easing_function\", typeName: \"\", id: 123, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+124 [label="AttachToEntity",comment="name: \"AttachToEntity\", typeName: \"\", id: 124, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+125 [label="Entity Actor ID",comment="name: \"Entity Actor ID\", typeName: \"\", id: 125, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+126 [label="int64",comment="name: \"int64\", typeName: \"\", id: 126, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+127 [label="DetachFromEntity",comment="name: \"DetachFromEntity\", typeName: \"\", id: 127, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+128 [label="bool",comment="name: \"bool\", typeName: \"\", id: 128, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3;6;8;12;14;16;19;21;25;27;29;32;34;37;39;41;43;45;47;51;53;55;58;60;62;66;68;70;72;74;77;79;81;83;86;88;94;96;98;104;106;108;115;117;119;121;123;126;128}
 
 }

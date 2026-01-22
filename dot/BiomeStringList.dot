@@ -1,20 +1,20 @@
 digraph "BiomeStringList" {
 rankdir = LR
-390
-390 -> 391
-391 -> 392
-392 -> 393
-391 -> 394
-394 -> 395
-395 -> 399
+395
+395 -> 396
+396 -> 397
+397 -> 398
+396 -> 399
+399 -> 400
+400 -> 404
 
-390 [label="BiomeStringList",comment="name: \"BiomeStringList\", typeName: \"\", id: 390, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-391 [label="string",comment="name: \"string\", typeName: \"\", id: 391, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-392 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 392, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-393 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 393, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-394 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 394, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-395 [label="all biome strings",comment="name: \"all biome strings\", typeName: \"std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >\", id: 395, branchId: 0, recurseId: -1, attributes: 256, notes: \"List of strings referenced wherever a string index is used under BiomeDefinitionData\""];
-399 [label="std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >",comment="name: \"std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >\", typeName: \"\", id: 399, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;393;399}
+395 [label="BiomeStringList",comment="name: \"BiomeStringList\", typeName: \"\", id: 395, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+396 [label="string",comment="name: \"string\", typeName: \"\", id: 396, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+397 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 397, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+398 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 398, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+399 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 399, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+400 [label="all biome strings",comment="name: \"all biome strings\", typeName: \"std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >\", id: 400, branchId: 0, recurseId: -1, attributes: 256, notes: \"List of strings referenced wherever a string index is used under BiomeDefinitionData\""];
+404 [label="std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >",comment="name: \"std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >\", typeName: \"\", id: 404, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;398;404}
 
 }

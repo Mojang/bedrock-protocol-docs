@@ -1,0 +1,24 @@
+digraph "Social::Events::ServerTelemetryData" {
+rankdir = LR
+191
+191 -> 192
+192 -> 193
+191 -> 194
+194 -> 195
+191 -> 196
+196 -> 197
+191 -> 198
+198 -> 199
+
+191 [label="Social::Events::ServerTelemetryData",comment="name: \"Social::Events::ServerTelemetryData\", typeName: \"\", id: 191, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+192 [label="Server ID",comment="name: \"Server ID\", typeName: \"\", id: 192, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+193 [label="string",comment="name: \"string\", typeName: \"\", id: 193, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+194 [label="Scenario ID",comment="name: \"Scenario ID\", typeName: \"\", id: 194, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+195 [label="string",comment="name: \"string\", typeName: \"\", id: 195, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+196 [label="World ID",comment="name: \"World ID\", typeName: \"\", id: 196, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+197 [label="string",comment="name: \"string\", typeName: \"\", id: 197, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+198 [label="Owner ID",comment="name: \"Owner ID\", typeName: \"\", id: 198, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+199 [label="string",comment="name: \"string\", typeName: \"\", id: 199, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;193;195;197;199}
+
+}

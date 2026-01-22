@@ -5,8 +5,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 18446744073709553000.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint64"
@@ -268,10 +267,6 @@
       "Data": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -559,10 +554,6 @@
       "Actor ID": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -9223372036854776000.0,
-          "maximum": 9223372036854776000.0
-        },
         "id": 0,
         "type": "int64",
         "description": "Target Actor ID"
@@ -644,10 +635,6 @@
       "Actor Unique ID": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -9223372036854776000.0,
-          "maximum": 9223372036854776000.0
-        },
         "id": 0,
         "type": "int64"
       }
@@ -661,30 +648,18 @@
       "X": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "Y": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "Z": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       }
@@ -698,10 +673,6 @@
       "Direction": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -782,10 +753,6 @@
       "data": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -32768.0,
-          "maximum": 32767.0
-        },
         "id": 0,
         "type": "int16"
       }
@@ -799,10 +766,6 @@
       "data": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -816,10 +779,6 @@
       "data": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -9223372036854776000.0,
-          "maximum": 9223372036854776000.0
-        },
         "id": 0,
         "type": "int64"
       }
@@ -833,10 +792,6 @@
       "data": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       }
@@ -850,10 +805,6 @@
       "data": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 2.2250738585072014e-308,
-          "maximum": 1.7976931348623157e308
-        },
         "id": 0,
         "type": "double"
       }
@@ -880,10 +831,6 @@
       "X": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -891,8 +838,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -900,10 +846,6 @@
       "Z": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -917,10 +859,6 @@
       "value": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -935,8 +873,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -1125,11 +1062,6 @@
     "id": 315535208,
     "name": "Json::Value",
     "type": "object"
-  },
-  {
-    "id": 3983312184,
-    "name": "class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >",
-    "type": "string"
   },
   {
     "members": {
@@ -1400,10 +1332,6 @@
       "mBlendOutTime": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
@@ -1439,10 +1367,6 @@
       "mStopExpressionVersion": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -1573,10 +1497,6 @@
       "Data": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
@@ -1783,8 +1703,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32",
@@ -1794,8 +1713,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32",
@@ -1852,8 +1770,7 @@
         "deprecated": false,
         "value_type": {
           "constraint": {
-            "minimum": 0.0,
-            "maximum": 4294967295.0
+            "minimum": 0.0
           },
           "id": 0,
           "type": "uint32"
@@ -1929,8 +1846,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32",
@@ -1972,10 +1888,6 @@
       "Alias Enum": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32",
         "description": "The command alias enum."
@@ -1988,8 +1900,7 @@
         },
         "value_type": {
           "constraint": {
-            "minimum": 0.0,
-            "maximum": 4294967295.0
+            "minimum": 0.0
           },
           "id": 0,
           "type": "uint32"
@@ -2012,8 +1923,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 65535.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint16",
@@ -2098,9 +2008,6 @@
       "Enum Options": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "maxItems": 10000
-        },
         "value_type": {
           "id": 0,
           "type": "string"
@@ -2138,8 +2045,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32",
@@ -2149,8 +2055,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32",
@@ -2287,10 +2192,6 @@
       "AchievementID": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -2367,20 +2268,12 @@
       "Event Type": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
       "Event Value": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -2412,30 +2305,18 @@
       "X": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
       "Y": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
       "Z": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -2494,23 +2375,274 @@
   },
   {
     "members": {
-      "X": {
+      "Page Index": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "int32"
+      },
+      "Page Text": {
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
+          "maxLength": 512
         },
+        "id": 0,
+        "type": "string"
+      },
+      "Photo Name": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxLength": 512
+        },
+        "id": 0,
+        "type": "string"
+      }
+    },
+    "id": 4171811454,
+    "name": "BookEditAction::ReplacePage",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Page Index": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "int32"
+      },
+      "Page Text": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxLength": 512
+        },
+        "id": 0,
+        "type": "string"
+      },
+      "Photo Name": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxLength": 512
+        },
+        "id": 0,
+        "type": "string"
+      }
+    },
+    "id": 3077279485,
+    "name": "BookEditAction::AddPage",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Page Index": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "int32"
+      }
+    },
+    "id": 2462692219,
+    "name": "BookEditAction::DeletePage",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Page Index": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "int32"
+      },
+      "Swap With Index": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "int32"
+      }
+    },
+    "id": 1666873252,
+    "name": "BookEditAction::SwapPages",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Author": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxLength": 512
+        },
+        "id": 0,
+        "type": "string"
+      },
+      "Title": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxLength": 512
+        },
+        "id": 0,
+        "type": "string"
+      },
+      "XUID": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxLength": 512
+        },
+        "id": 0,
+        "type": "string"
+      }
+    },
+    "id": 2642647073,
+    "name": "BookEditAction::Finalize",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Book Slot": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "int32"
+      },
+      "Operation": {
+        "required": true,
+        "deprecated": false,
+        "setters": [
+          {
+            "id": 4171811454,
+            "name": "BookEditAction::ReplacePage",
+            "type": "object"
+          },
+          {
+            "id": 3077279485,
+            "name": "BookEditAction::AddPage",
+            "type": "object"
+          },
+          {
+            "id": 2462692219,
+            "name": "BookEditAction::DeletePage",
+            "type": "object"
+          },
+          {
+            "id": 1666873252,
+            "name": "BookEditAction::SwapPages",
+            "type": "object"
+          },
+          {
+            "id": 2642647073,
+            "name": "BookEditAction::Finalize",
+            "type": "object"
+          }
+        ],
+        "id": 0,
+        "description": "Payload variant holding data specific to the type of Book Edit Operation."
+      }
+    },
+    "id": 4094215277,
+    "name": "BookEditPacketPayload",
+    "type": "object"
+  },
+  {
+    "parents": [],
+    "setters": [
+      {
+        "id": 4094215277,
+        "name": "BookEditPacketPayload",
+        "type": "object"
+      }
+    ],
+    "cereal_properties": {
+      "[cereal:packet]": 97,
+      "[cereal:packet_details]": ""
+    },
+    "id": 1403456780,
+    "name": "BookEditPacket",
+    "type": "object",
+    "description": "Sends the updated state of the Book and Quill item from client to server during use."
+  },
+  {
+    "members": {
+      "Actor Index": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "int32"
+      },
+      "Category Index": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "int32"
+      },
+      "Preset Index": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "int32"
+      },
+      "Priority Value": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "int32"
+      }
+    },
+    "id": 2019948772,
+    "name": "AimAssistActorPriorityData",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Camera Aim-Assist Actor Priority List": {
+        "required": true,
+        "deprecated": false,
+        "value_type": {
+          "id": 2019948772,
+          "name": "AimAssistActorPriorityData",
+          "type": "object"
+        },
+        "id": 1928118193,
+        "type": "sequence_container"
+      }
+    },
+    "id": 3399952238,
+    "name": "struct CameraAimAssistActorPriorityPacketPayload",
+    "type": "object"
+  },
+  {
+    "parents": [],
+    "setters": [
+      {
+        "id": 3399952238,
+        "name": "struct CameraAimAssistActorPriorityPacketPayload",
+        "type": "object"
+      }
+    ],
+    "cereal_properties": {
+      "[cereal:packet]": 339,
+      "[cereal:packet_details]": "\n\tSent by the server to clients for updating the actor priority for client aim-assist systems.\n\t"
+    },
+    "id": 2532993457,
+    "name": "CameraAimAssistActorPriorityPacket",
+    "type": "object",
+    "description": "Camera aim-assist actor priority data sent from the server to clients."
+  },
+  {
+    "members": {
+      "X": {
+        "required": true,
+        "deprecated": false,
         "id": 0,
         "type": "float"
       },
       "Y": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       }
@@ -2752,6 +2884,17 @@
         "id": 1024660433,
         "type": "sequence_container",
         "description": "Optional. List of entity identifiers to exclude from aim assist targeting."
+      },
+      "entity_type_families": {
+        "required": false,
+        "deprecated": false,
+        "value_type": {
+          "id": 0,
+          "type": "string"
+        },
+        "id": 1093136171,
+        "type": "sequence_container",
+        "description": "Optional. List of entity type families to exclude from aim assist targeting."
       }
     },
     "id": 1582287622,
@@ -2894,10 +3037,6 @@
           "type": "string"
         },
         "mapped_type": {
-          "constraint": {
-            "minimum": -2147483648.0,
-            "maximum": 2147483647.0
-          },
           "id": 0,
           "type": "int32"
         },
@@ -2920,10 +3059,6 @@
           "type": "object"
         },
         "mapped_type": {
-          "constraint": {
-            "minimum": -2147483648.0,
-            "maximum": 2147483647.0
-          },
           "id": 0,
           "type": "int32"
         },
@@ -2946,10 +3081,6 @@
           "type": "object"
         },
         "mapped_type": {
-          "constraint": {
-            "minimum": -2147483648.0,
-            "maximum": 2147483647.0
-          },
           "id": 0,
           "type": "int32"
         },
@@ -2967,6 +3098,27 @@
         "id": 0,
         "type": "int32",
         "description": "Optional. Default Aim-Assist targeting priority used for Entities not found in 'entities'."
+      },
+      "entity_type_families": {
+        "required": false,
+        "deprecated": false,
+        "constraint": {
+          "additionalProperties": {
+            "minimum": 0.0,
+            "maximum": 100.0
+          }
+        },
+        "key_type": {
+          "id": 0,
+          "type": "string"
+        },
+        "mapped_type": {
+          "id": 0,
+          "type": "int32"
+        },
+        "id": 3940738628,
+        "type": "associative_container",
+        "description": "Optional. Map of Entity type families to Aim-Assist targeting priority. Larger numbers have greater priority."
       }
     },
     "id": 1765013198,
@@ -3147,8 +3299,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -3318,10 +3469,6 @@
       "time": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
@@ -3359,20 +3506,12 @@
       "x": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "y": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       }
@@ -3400,20 +3539,12 @@
       "x": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "y": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       }
@@ -3427,30 +3558,18 @@
       "entity_offset_x": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "entity_offset_y": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "entity_offset_z": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       }
@@ -3464,10 +3583,6 @@
       "Target Actor ID": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -9223372036854776000.0,
-          "maximum": 9223372036854776000.0
-        },
         "id": 0,
         "type": "int64"
       },
@@ -3509,30 +3624,18 @@
       "Fade In Time": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "Fade Out Time": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "Hold Time": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       }
@@ -3546,30 +3649,18 @@
       "Blue": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "Green": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "Red": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       }
@@ -3583,10 +3674,6 @@
       "FOV Ease Time": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
@@ -3730,10 +3817,6 @@
       "Field of View": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
@@ -3753,10 +3836,6 @@
       "Entity Actor ID": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -9223372036854776000.0,
-          "maximum": 9223372036854776000.0
-        },
         "id": 0,
         "type": "int64"
       }
@@ -3782,11 +3861,11 @@
         "required": true,
         "deprecated": false,
         "value_type": {
-          "id": 4021724221,
-          "name": "Vec2",
+          "id": 3583232855,
+          "name": "CameraInstruction::SplineInstruction::SplineProgressOption",
           "type": "object"
         },
-        "id": 3009690707,
+        "id": 1266934295,
         "type": "sequence_container"
       },
       "rotationOption": {
@@ -3803,10 +3882,6 @@
       "totalTime": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
@@ -3827,17 +3902,150 @@
   },
   {
     "members": {
-      "Key frame times": {
+      "Key frame easing func": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
+        "enum_values": [
+          {
+            "value": 0,
+            "name": "linear"
+          },
+          {
+            "value": 1,
+            "name": "spring"
+          },
+          {
+            "value": 2,
+            "name": "in_quad"
+          },
+          {
+            "value": 3,
+            "name": "out_quad"
+          },
+          {
+            "value": 4,
+            "name": "in_out_quad"
+          },
+          {
+            "value": 5,
+            "name": "in_cubic"
+          },
+          {
+            "value": 6,
+            "name": "out_cubic"
+          },
+          {
+            "value": 7,
+            "name": "in_out_cubic"
+          },
+          {
+            "value": 8,
+            "name": "in_quart"
+          },
+          {
+            "value": 9,
+            "name": "out_quart"
+          },
+          {
+            "value": 10,
+            "name": "in_out_quart"
+          },
+          {
+            "value": 11,
+            "name": "in_quint"
+          },
+          {
+            "value": 12,
+            "name": "out_quint"
+          },
+          {
+            "value": 13,
+            "name": "in_out_quint"
+          },
+          {
+            "value": 14,
+            "name": "in_sine"
+          },
+          {
+            "value": 15,
+            "name": "out_sine"
+          },
+          {
+            "value": 16,
+            "name": "in_out_sine"
+          },
+          {
+            "value": 17,
+            "name": "in_expo"
+          },
+          {
+            "value": 18,
+            "name": "out_expo"
+          },
+          {
+            "value": 19,
+            "name": "in_out_expo"
+          },
+          {
+            "value": 20,
+            "name": "in_circ"
+          },
+          {
+            "value": 21,
+            "name": "out_circ"
+          },
+          {
+            "value": 22,
+            "name": "in_out_circ"
+          },
+          {
+            "value": 23,
+            "name": "in_bounce"
+          },
+          {
+            "value": 24,
+            "name": "out_bounce"
+          },
+          {
+            "value": 25,
+            "name": "in_out_bounce"
+          },
+          {
+            "value": 26,
+            "name": "in_back"
+          },
+          {
+            "value": 27,
+            "name": "out_back"
+          },
+          {
+            "value": 28,
+            "name": "in_out_back"
+          },
+          {
+            "value": 29,
+            "name": "in_elastic"
+          },
+          {
+            "value": 30,
+            "name": "out_elastic"
+          },
+          {
+            "value": 31,
+            "name": "in_out_elastic"
+          }
+        ],
+        "id": 820476229,
+        "name": "easing_function",
+        "type": "enum"
+      },
+      "Key frame time": {
+        "required": true,
+        "deprecated": false,
         "id": 0,
         "type": "float"
       },
-      "Key frame values": {
+      "Key frame value": {
         "required": true,
         "deprecated": false,
         "id": 4004946602,
@@ -3847,6 +4055,162 @@
     },
     "id": 3609314310,
     "name": "CameraInstruction::SplineInstruction::SplineRotationOption",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Key frame easing func": {
+        "required": true,
+        "deprecated": false,
+        "enum_values": [
+          {
+            "value": 0,
+            "name": "linear"
+          },
+          {
+            "value": 1,
+            "name": "spring"
+          },
+          {
+            "value": 2,
+            "name": "in_quad"
+          },
+          {
+            "value": 3,
+            "name": "out_quad"
+          },
+          {
+            "value": 4,
+            "name": "in_out_quad"
+          },
+          {
+            "value": 5,
+            "name": "in_cubic"
+          },
+          {
+            "value": 6,
+            "name": "out_cubic"
+          },
+          {
+            "value": 7,
+            "name": "in_out_cubic"
+          },
+          {
+            "value": 8,
+            "name": "in_quart"
+          },
+          {
+            "value": 9,
+            "name": "out_quart"
+          },
+          {
+            "value": 10,
+            "name": "in_out_quart"
+          },
+          {
+            "value": 11,
+            "name": "in_quint"
+          },
+          {
+            "value": 12,
+            "name": "out_quint"
+          },
+          {
+            "value": 13,
+            "name": "in_out_quint"
+          },
+          {
+            "value": 14,
+            "name": "in_sine"
+          },
+          {
+            "value": 15,
+            "name": "out_sine"
+          },
+          {
+            "value": 16,
+            "name": "in_out_sine"
+          },
+          {
+            "value": 17,
+            "name": "in_expo"
+          },
+          {
+            "value": 18,
+            "name": "out_expo"
+          },
+          {
+            "value": 19,
+            "name": "in_out_expo"
+          },
+          {
+            "value": 20,
+            "name": "in_circ"
+          },
+          {
+            "value": 21,
+            "name": "out_circ"
+          },
+          {
+            "value": 22,
+            "name": "in_out_circ"
+          },
+          {
+            "value": 23,
+            "name": "in_bounce"
+          },
+          {
+            "value": 24,
+            "name": "out_bounce"
+          },
+          {
+            "value": 25,
+            "name": "in_out_bounce"
+          },
+          {
+            "value": 26,
+            "name": "in_back"
+          },
+          {
+            "value": 27,
+            "name": "out_back"
+          },
+          {
+            "value": 28,
+            "name": "in_out_back"
+          },
+          {
+            "value": 29,
+            "name": "in_elastic"
+          },
+          {
+            "value": 30,
+            "name": "out_elastic"
+          },
+          {
+            "value": 31,
+            "name": "in_out_elastic"
+          }
+        ],
+        "id": 820476229,
+        "name": "easing_function",
+        "type": "enum"
+      },
+      "Key frame time": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "float"
+      },
+      "Key frame value": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "float"
+      }
+    },
+    "id": 3583232855,
+    "name": "CameraInstruction::SplineInstruction::SplineProgressOption",
     "type": "object"
   },
   {
@@ -3950,10 +4314,6 @@
       "Block Listening Radius": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
@@ -4047,70 +4407,42 @@
       "Pos X": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "Pos Y": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "Pos Z": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "Radius": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "Rot X": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "Rot Y": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "Rotation Speed": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
@@ -4137,20 +4469,12 @@
       "Yaw Limit Max": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "Yaw Limit Min": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       }
@@ -4179,10 +4503,6 @@
       "Distance": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
@@ -4364,10 +4684,6 @@
       "Intensity": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float",
         "description": "Camera shake intensity"
@@ -4375,10 +4691,6 @@
       "Seconds": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float",
         "description": "Camera shake duration in seconds"
@@ -4444,6 +4756,459 @@
   },
   {
     "members": {
+      "position": {
+        "required": true,
+        "deprecated": false,
+        "id": 4004946602,
+        "name": "Vec3",
+        "type": "object",
+        "description": "The [x, y, z] position of a spline node."
+      }
+    },
+    "id": 1274567168,
+    "name": "CameraSplineControlPoint",
+    "type": "object"
+  },
+  {
+    "members": {
+      "easing": {
+        "required": false,
+        "deprecated": false,
+        "enum_values": [
+          {
+            "value": 0,
+            "name": "linear"
+          },
+          {
+            "value": 1,
+            "name": "spring"
+          },
+          {
+            "value": 2,
+            "name": "in_quad"
+          },
+          {
+            "value": 3,
+            "name": "out_quad"
+          },
+          {
+            "value": 4,
+            "name": "in_out_quad"
+          },
+          {
+            "value": 5,
+            "name": "in_cubic"
+          },
+          {
+            "value": 6,
+            "name": "out_cubic"
+          },
+          {
+            "value": 7,
+            "name": "in_out_cubic"
+          },
+          {
+            "value": 8,
+            "name": "in_quart"
+          },
+          {
+            "value": 9,
+            "name": "out_quart"
+          },
+          {
+            "value": 10,
+            "name": "in_out_quart"
+          },
+          {
+            "value": 11,
+            "name": "in_quint"
+          },
+          {
+            "value": 12,
+            "name": "out_quint"
+          },
+          {
+            "value": 13,
+            "name": "in_out_quint"
+          },
+          {
+            "value": 14,
+            "name": "in_sine"
+          },
+          {
+            "value": 15,
+            "name": "out_sine"
+          },
+          {
+            "value": 16,
+            "name": "in_out_sine"
+          },
+          {
+            "value": 17,
+            "name": "in_expo"
+          },
+          {
+            "value": 18,
+            "name": "out_expo"
+          },
+          {
+            "value": 19,
+            "name": "in_out_expo"
+          },
+          {
+            "value": 20,
+            "name": "in_circ"
+          },
+          {
+            "value": 21,
+            "name": "out_circ"
+          },
+          {
+            "value": 22,
+            "name": "in_out_circ"
+          },
+          {
+            "value": 23,
+            "name": "in_bounce"
+          },
+          {
+            "value": 24,
+            "name": "out_bounce"
+          },
+          {
+            "value": 25,
+            "name": "in_out_bounce"
+          },
+          {
+            "value": 26,
+            "name": "in_back"
+          },
+          {
+            "value": 27,
+            "name": "out_back"
+          },
+          {
+            "value": 28,
+            "name": "in_out_back"
+          },
+          {
+            "value": 29,
+            "name": "in_elastic"
+          },
+          {
+            "value": 30,
+            "name": "out_elastic"
+          },
+          {
+            "value": 31,
+            "name": "in_out_elastic"
+          }
+        ],
+        "id": 820476229,
+        "name": "easing_function",
+        "type": "enum",
+        "description": "Optional easing function used to interpolate towards this progress key frame. Defaults to \"linear\" if omitted."
+      },
+      "progress": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "id": 0,
+        "type": "float",
+        "description": "Normalized progress of this frame along the spline, from 0.0 (start) to 1.0 (end)."
+      },
+      "time": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0
+        },
+        "id": 0,
+        "type": "float",
+        "description": "Time (in seconds) at which this progress should be applied."
+      }
+    },
+    "id": 3914468974,
+    "name": "CameraSplineProgressKeyFrame",
+    "type": "object"
+  },
+  {
+    "members": {
+      "easing": {
+        "required": false,
+        "deprecated": false,
+        "enum_values": [
+          {
+            "value": 0,
+            "name": "linear"
+          },
+          {
+            "value": 1,
+            "name": "spring"
+          },
+          {
+            "value": 2,
+            "name": "in_quad"
+          },
+          {
+            "value": 3,
+            "name": "out_quad"
+          },
+          {
+            "value": 4,
+            "name": "in_out_quad"
+          },
+          {
+            "value": 5,
+            "name": "in_cubic"
+          },
+          {
+            "value": 6,
+            "name": "out_cubic"
+          },
+          {
+            "value": 7,
+            "name": "in_out_cubic"
+          },
+          {
+            "value": 8,
+            "name": "in_quart"
+          },
+          {
+            "value": 9,
+            "name": "out_quart"
+          },
+          {
+            "value": 10,
+            "name": "in_out_quart"
+          },
+          {
+            "value": 11,
+            "name": "in_quint"
+          },
+          {
+            "value": 12,
+            "name": "out_quint"
+          },
+          {
+            "value": 13,
+            "name": "in_out_quint"
+          },
+          {
+            "value": 14,
+            "name": "in_sine"
+          },
+          {
+            "value": 15,
+            "name": "out_sine"
+          },
+          {
+            "value": 16,
+            "name": "in_out_sine"
+          },
+          {
+            "value": 17,
+            "name": "in_expo"
+          },
+          {
+            "value": 18,
+            "name": "out_expo"
+          },
+          {
+            "value": 19,
+            "name": "in_out_expo"
+          },
+          {
+            "value": 20,
+            "name": "in_circ"
+          },
+          {
+            "value": 21,
+            "name": "out_circ"
+          },
+          {
+            "value": 22,
+            "name": "in_out_circ"
+          },
+          {
+            "value": 23,
+            "name": "in_bounce"
+          },
+          {
+            "value": 24,
+            "name": "out_bounce"
+          },
+          {
+            "value": 25,
+            "name": "in_out_bounce"
+          },
+          {
+            "value": 26,
+            "name": "in_back"
+          },
+          {
+            "value": 27,
+            "name": "out_back"
+          },
+          {
+            "value": 28,
+            "name": "in_out_back"
+          },
+          {
+            "value": 29,
+            "name": "in_elastic"
+          },
+          {
+            "value": 30,
+            "name": "out_elastic"
+          },
+          {
+            "value": 31,
+            "name": "in_out_elastic"
+          }
+        ],
+        "id": 820476229,
+        "name": "easing_function",
+        "type": "enum",
+        "description": "Optional easing function used to interpolate towards this rotation key frame. Defaults to \"linear\" if omitted."
+      },
+      "rotation": {
+        "required": true,
+        "deprecated": false,
+        "id": 4004946602,
+        "name": "Vec3",
+        "type": "object",
+        "description": "Rotation [x, y, z] value."
+      },
+      "time": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0
+        },
+        "id": 0,
+        "type": "float",
+        "description": "Time (in seconds) at which this rotation should be applied."
+      }
+    },
+    "id": 790401607,
+    "name": "CameraSplineRotationKeyFrame",
+    "type": "object"
+  },
+  {
+    "members": {
+      "control_points": {
+        "required": true,
+        "deprecated": false,
+        "value_type": {
+          "id": 1274567168,
+          "name": "CameraSplineControlPoint",
+          "type": "object"
+        },
+        "id": 1523465373,
+        "type": "sequence_container",
+        "description": "Array of control point positions, each as [x, y, z] in world space."
+      },
+      "name": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "pattern": "^\\w+:\\w+$"
+        },
+        "id": 0,
+        "type": "string",
+        "description": "The identifier for this spline, in \"namespace:name\" format."
+      },
+      "progress_key_frames": {
+        "required": true,
+        "deprecated": false,
+        "value_type": {
+          "id": 3914468974,
+          "name": "CameraSplineProgressKeyFrame",
+          "type": "object"
+        },
+        "id": 1854067857,
+        "type": "sequence_container",
+        "description": "Key frames where each entry defines a progress alpha [0–1] and a time (in seconds) when the spline should reach that progress."
+      },
+      "rotation_key_frames": {
+        "required": true,
+        "deprecated": false,
+        "value_type": {
+          "id": 790401607,
+          "name": "CameraSplineRotationKeyFrame",
+          "type": "object"
+        },
+        "id": 3795347615,
+        "type": "sequence_container",
+        "description": "Array of rotation key frames, each with a rotation value and the time (in seconds) when it should be applied."
+      },
+      "spline_type": {
+        "required": false,
+        "deprecated": false,
+        "constraint": {
+          "pattern": "^(?:catmullrom|linear)$"
+        },
+        "id": 0,
+        "type": "string",
+        "description": "The spline interpolation type: \"catmullrom\" or \"linear\". Defaults to \"catmullrom\"."
+      },
+      "total_time": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0
+        },
+        "id": 0,
+        "type": "float",
+        "description": "The total time, in seconds, to play back the spline."
+      }
+    },
+    "id": 546677968,
+    "name": "CameraSplineDefinition",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Camera Data Splines": {
+        "required": true,
+        "deprecated": false,
+        "value_type": {
+          "id": 546677968,
+          "name": "CameraSplineDefinition",
+          "type": "object"
+        },
+        "id": 2061041013,
+        "type": "sequence_container"
+      }
+    },
+    "id": 1953853596,
+    "name": "struct CameraSplinePacketPayload",
+    "type": "object"
+  },
+  {
+    "parents": [],
+    "setters": [
+      {
+        "id": 1953853596,
+        "name": "struct CameraSplinePacketPayload",
+        "type": "object"
+      }
+    ],
+    "cereal_properties": {
+      "[cereal:packet]": 338,
+      "[cereal:packet_details]": "\n\tSent by the server to clients for initializing custom spline data that can be played later through the camera command.\n\t"
+    },
+    "id": 2873317179,
+    "name": "CameraSplinePacket",
+    "type": "object",
+    "description": "Camera custom spline data sent from server to client."
+  },
+  {
+    "members": {
       "Dimension ID": {
         "required": true,
         "deprecated": false,
@@ -4456,8 +5221,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32",
@@ -4517,20 +5281,12 @@
       "FloatComponent Value": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "IntComponent Value": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -4574,10 +5330,6 @@
       "Chunk Radius": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -4705,10 +5457,6 @@
       "Color": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -4749,8 +5497,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 18446744073709553000.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint64",
@@ -4822,6 +5569,139 @@
     "name": "ClientboundDebugRendererPacket",
     "type": "object",
     "description": "Used to add/remove debug rendering objects."
+  },
+  {
+    "enum_values": [
+      {
+        "value": 0,
+        "name": "Invalid"
+      },
+      {
+        "value": 1,
+        "name": "Initialize"
+      },
+      {
+        "value": 2,
+        "name": "Start"
+      },
+      {
+        "value": 3,
+        "name": "SetEnabled"
+      },
+      {
+        "value": 4,
+        "name": "Sync"
+      }
+    ],
+    "id": 1114552976,
+    "name": "ClientboundTextureShiftPacketPayload::Action",
+    "type": "enum"
+  },
+  {
+    "members": {
+      "Action ID": {
+        "required": true,
+        "deprecated": false,
+        "enum_values": [
+          {
+            "value": 0,
+            "name": "Invalid"
+          },
+          {
+            "value": 1,
+            "name": "Initialize"
+          },
+          {
+            "value": 2,
+            "name": "Start"
+          },
+          {
+            "value": 3,
+            "name": "SetEnabled"
+          },
+          {
+            "value": 4,
+            "name": "Sync"
+          }
+        ],
+        "id": 1114552976,
+        "name": "ClientboundTextureShiftPacketPayload::Action",
+        "type": "enum"
+      },
+      "All Steps": {
+        "required": true,
+        "deprecated": false,
+        "value_type": {
+          "id": 0,
+          "type": "string"
+        },
+        "id": 1093136171,
+        "type": "sequence_container"
+      },
+      "Collection Name": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "string"
+      },
+      "Current Length In Ticks": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0
+        },
+        "id": 0,
+        "type": "uint64"
+      },
+      "Enabled": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "bool"
+      },
+      "From Step": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "string"
+      },
+      "To Step": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "string"
+      },
+      "Total Length In Ticks": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0
+        },
+        "id": 0,
+        "type": "uint64"
+      }
+    },
+    "id": 1396152798,
+    "name": "ClientboundTextureShiftPacketPayload",
+    "type": "object"
+  },
+  {
+    "parents": [],
+    "setters": [
+      {
+        "id": 1396152798,
+        "name": "ClientboundTextureShiftPacketPayload",
+        "type": "object"
+      }
+    ],
+    "cereal_properties": {
+      "[cereal:packet]": 336,
+      "[cereal:packet_details]": ""
+    },
+    "id": 2714813927,
+    "name": "ClientboundTextureShiftPacket",
+    "type": "object",
+    "description": "Sends a set of update properties for the texture shift system from the server to the client."
   },
   {
     "members": {
@@ -5239,8 +6119,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 18446744073709553000.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint64"
@@ -5249,8 +6128,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 18446744073709553000.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint64"
@@ -5265,10 +6143,6 @@
       "PlayerId": {
         "required": false,
         "deprecated": false,
-        "constraint": {
-          "minimum": -9223372036854776000.0,
-          "maximum": 9223372036854776000.0
-        },
         "id": 0,
         "type": "int64",
         "description": "The player Id."
@@ -5383,9 +6257,6 @@
       "Message ID": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "maxLength": 1000
-        },
         "id": 0,
         "type": "string",
         "description": "The unique identifier for the message."
@@ -5393,9 +6264,6 @@
       "Parameters": {
         "required": false,
         "deprecated": false,
-        "constraint": {
-          "maxItems": 1000
-        },
         "value_type": {
           "id": 0,
           "type": "string"
@@ -5455,9 +6323,6 @@
       "Output Messages": {
         "required": false,
         "deprecated": false,
-        "constraint": {
-          "maxItems": 100
-        },
         "value_type": {
           "id": 320823778,
           "name": "CommandOutputMessage",
@@ -5501,8 +6366,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32",
@@ -6018,20 +6882,12 @@
       "Item Id": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -32768.0,
-          "maximum": 32767.0
-        },
         "id": 0,
         "type": "int16"
       },
       "Item Use Method": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -6909,8 +7765,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -6971,20 +7826,12 @@
       "ID": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
       "Value": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -7017,8 +7864,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 18446744073709553000.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint64",
@@ -7106,10 +7952,6 @@
       "VehicleAngularVelocity": {
         "required": false,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float",
         "description": "Angular Velocity for a vehicle. Only sent when PredictionType is Vehicle"
@@ -7155,8 +7997,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 18446744073709553000.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint64"
@@ -7606,8 +8447,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -7739,18 +8579,10 @@
             "type": "bool"
           },
           {
-            "constraint": {
-              "minimum": -2147483648.0,
-              "maximum": 2147483647.0
-            },
             "id": 0,
             "type": "int32"
           },
           {
-            "constraint": {
-              "minimum": 1.1754943508222876e-38,
-              "maximum": 3.4028234663852887e38
-            },
             "id": 0,
             "type": "float"
           }
@@ -7852,20 +8684,12 @@
       "MaxTestsPerBatch": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
       "RepeatCount": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -7928,10 +8752,6 @@
       "TestsPerRow": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -8052,6 +8872,86 @@
         "value": 9,
         "name": "SunGlareShape",
         "description": "Sent to set the sun glare shape"
+      },
+      {
+        "value": 10,
+        "name": "Chlorophyll",
+        "description": "Sent to set the water chlorophyll value"
+      },
+      {
+        "value": 11,
+        "name": "CDOM",
+        "description": "Sent to set the water CDOM value"
+      },
+      {
+        "value": 12,
+        "name": "SuspendedSediment",
+        "description": "Sent to set the water SuspendedSediment value"
+      },
+      {
+        "value": 13,
+        "name": "WavesDepth",
+        "description": "Sent to set the water waves depth value"
+      },
+      {
+        "value": 14,
+        "name": "WavesFrequency",
+        "description": "Sent to set the water waves frequency value"
+      },
+      {
+        "value": 15,
+        "name": "WavesFrequencyScaling",
+        "description": "Sent to set the water waves frequency scaling value"
+      },
+      {
+        "value": 16,
+        "name": "WavesSpeed",
+        "description": "Sent to set the water waves speed value"
+      },
+      {
+        "value": 17,
+        "name": "WavesSpeedScaling",
+        "description": "Sent to set the water waves speed scaling value"
+      },
+      {
+        "value": 18,
+        "name": "WavesShape",
+        "description": "Sent to set the water waves shape value"
+      },
+      {
+        "value": 19,
+        "name": "WavesOctaves",
+        "description": "Sent to set the water waves octaves value"
+      },
+      {
+        "value": 20,
+        "name": "WavesMix",
+        "description": "Sent to set the water waves mix value"
+      },
+      {
+        "value": 21,
+        "name": "WavesPull",
+        "description": "Sent to set the water waves pull value"
+      },
+      {
+        "value": 22,
+        "name": "WavesDirectionIncrement",
+        "description": "Sent to set the water waves direction increment value"
+      },
+      {
+        "value": 23,
+        "name": "MidtonesContrast",
+        "description": "Sent to set the color grading midtones contrast value"
+      },
+      {
+        "value": 24,
+        "name": "HighlightsContrast",
+        "description": "Sent to set the color grading highlights contrast value"
+      },
+      {
+        "value": 25,
+        "name": "ShadowsContrast",
+        "description": "Sent to set the color grading shadows contrast value"
       }
     ],
     "id": 3078966536,
@@ -8069,6 +8969,13 @@
         "id": 0,
         "type": "string",
         "description": "Determines which biome the override parameter is applied to"
+      },
+      "Float Value": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "float",
+        "description": "If set, contains a single float graphics parameter to be overriden"
       },
       "Identifier for Parameter": {
         "required": true,
@@ -8113,6 +9020,70 @@
           {
             "value": 9,
             "name": "SunGlareShape"
+          },
+          {
+            "value": 10,
+            "name": "Chlorophyll"
+          },
+          {
+            "value": 11,
+            "name": "CDOM"
+          },
+          {
+            "value": 12,
+            "name": "SuspendedSediment"
+          },
+          {
+            "value": 13,
+            "name": "WavesDepth"
+          },
+          {
+            "value": 14,
+            "name": "WavesFrequency"
+          },
+          {
+            "value": 15,
+            "name": "WavesFrequencyScaling"
+          },
+          {
+            "value": 16,
+            "name": "WavesSpeed"
+          },
+          {
+            "value": 17,
+            "name": "WavesSpeedScaling"
+          },
+          {
+            "value": 18,
+            "name": "WavesShape"
+          },
+          {
+            "value": 19,
+            "name": "WavesOctaves"
+          },
+          {
+            "value": 20,
+            "name": "WavesMix"
+          },
+          {
+            "value": 21,
+            "name": "WavesPull"
+          },
+          {
+            "value": 22,
+            "name": "WavesDirectionIncrement"
+          },
+          {
+            "value": 23,
+            "name": "MidtonesContrast"
+          },
+          {
+            "value": 24,
+            "name": "HighlightsContrast"
+          },
+          {
+            "value": 25,
+            "name": "ShadowsContrast"
           }
         ],
         "id": 3078966536,
@@ -8127,10 +9098,6 @@
           "maxProperties": 255
         },
         "key_type": {
-          "constraint": {
-            "minimum": 1.1754943508222876e-38,
-            "maximum": 3.4028234663852887e38
-          },
           "id": 0,
           "type": "float"
         },
@@ -8149,6 +9116,14 @@
         "id": 0,
         "type": "bool",
         "description": "If true, the specified parameter will be reset. If false, the parameter will be set using the data fields."
+      },
+      "Vec3 Value": {
+        "required": true,
+        "deprecated": false,
+        "id": 4004946602,
+        "name": "Vec3",
+        "type": "object",
+        "description": "If set, contains a single Vec3 graphics parameter to be overriden"
       }
     },
     "id": 2955598982,
@@ -8190,10 +9165,6 @@
       "Slot": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -8373,8 +9344,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 18446744073709553000.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint64",
@@ -8383,20 +9353,12 @@
       "Cause": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
       "Damage": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -8586,10 +9548,6 @@
       "Item Id": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -32768.0,
-          "maximum": 32767.0
-        },
         "id": 0,
         "type": "int16",
         "description": "Block id's < 256 (can be negative); Item id's >= 257"
@@ -9209,6 +10167,10 @@
           {
             "value": 115,
             "name": "MobKabob"
+          },
+          {
+            "value": 116,
+            "name": "AdventuringTime"
           }
         ],
         "id": 2485043280,
@@ -9225,10 +10187,6 @@
       "Interacted Entity ID": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -9223372036854776000.0,
-          "maximum": 9223372036854776000.0
-        },
         "id": 0,
         "type": "int64"
       },
@@ -9245,20 +10203,12 @@
       "Interaction Actor Type": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
       "Interaction Actor Variant": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -9345,10 +10295,6 @@
       "Dimension ID": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32",
         "description": "Currently supported: (0 -> Overworld, 1 -> Nether, 2 -> The End, 3 -> Undefined)"
@@ -9363,10 +10309,6 @@
       "Source Dimension ID": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32",
         "description": "Currently supported: (0 -> Overworld, 1 -> Nether, 2 -> The End, 3 -> Undefined)"
@@ -9374,10 +10316,6 @@
       "Target Dimension ID": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32",
         "description": "Currently supported: (0 -> Overworld, 1 -> Nether, 2 -> The End, 3 -> Undefined)"
@@ -9392,20 +10330,12 @@
       "Damage Source": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
       "Instigator Actor ID": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -9223372036854776000.0,
-          "maximum": 9223372036854776000.0
-        },
         "id": 0,
         "type": "int64"
       },
@@ -9443,7 +10373,7 @@
           },
           {
             "value": 68352,
-            "name": "UndeadMob"
+            "name": "UndeadMonster"
           },
           {
             "value": 199424,
@@ -9562,11 +10492,11 @@
             "name": "Mule"
           },
           {
-            "value": 2186010,
+            "value": 2183962,
             "name": "SkeletonHorse"
           },
           {
-            "value": 2186011,
+            "value": 2183963,
             "name": "ZombieHorse"
           },
           {
@@ -10030,7 +10960,7 @@
             "name": "Nautilus"
           },
           {
-            "value": 76694,
+            "value": 74646,
             "name": "ZombieNautilus"
           },
           {
@@ -10038,7 +10968,7 @@
             "name": "Parched"
           },
           {
-            "value": 68504,
+            "value": 70552,
             "name": "CamelHusk"
           }
         ],
@@ -10049,20 +10979,12 @@
       "Target Actor ID": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -9223372036854776000.0,
-          "maximum": 9223372036854776000.0
-        },
         "id": 0,
         "type": "int64"
       },
       "Trade Tier": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32",
         "description": "-1 if not a trading actor."
@@ -10088,8 +11010,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -10097,20 +11018,12 @@
       "Contents Type": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -32768.0,
-          "maximum": 32767.0
-        },
         "id": 0,
         "type": "int16"
       },
       "Fill Level": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -32768.0,
-          "maximum": 32767.0
-        },
         "id": 0,
         "type": "int16"
       }
@@ -10124,10 +11037,6 @@
       "Damage Source": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -10140,20 +11049,12 @@
       "Instigator Actor ID": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
       "Instigator Mob Variant": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -10167,30 +11068,18 @@
       "Boss Actor ID": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -9223372036854776000.0,
-          "maximum": 9223372036854776000.0
-        },
         "id": 0,
         "type": "int64"
       },
       "Boss Type": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
       "Party Size": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -10213,10 +11102,6 @@
       "Error Count": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -10232,10 +11117,6 @@
       "Success Count": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -10259,20 +11140,12 @@
       "Born Baby: Entity Type": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
       "Born Baby: Entity Variant": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -10399,10 +11272,6 @@
       "Item Id": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -32768.0,
-          "maximum": 32767.0
-        },
         "id": 0,
         "type": "int16",
         "description": "Id of the relevant item used in the interaction."
@@ -10530,10 +11399,6 @@
       "Item Id": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -32768.0,
-          "maximum": 32767.0
-        },
         "id": 0,
         "type": "int16",
         "description": "Id of the relevant item used in the interaction."
@@ -10548,10 +11413,6 @@
       "Item Id": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -32768.0,
-          "maximum": 32767.0
-        },
         "id": 0,
         "type": "int16",
         "description": "Id of the relevant item used in the interaction."
@@ -10582,10 +11443,6 @@
       "Current Wave": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -10598,10 +11455,6 @@
       "Total Waves": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -10615,10 +11468,6 @@
       "Redstone Level": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -10632,10 +11481,6 @@
       "Item Id": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -10655,10 +11500,6 @@
       "Player Waxed or Unwaxed Copper Block ID": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -10697,10 +11538,6 @@
       "Score": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -10714,40 +11551,24 @@
       "Count": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
       "Item Aux": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
       "Item Id": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -32768.0,
-          "maximum": 32767.0
-        },
         "id": 0,
         "type": "int16"
       },
       "Use Method": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -11181,6 +12002,10 @@
       {
         "value": 115,
         "name": "MobKabob"
+      },
+      {
+        "value": 116,
+        "name": "AdventuringTime"
       }
     ],
     "id": 2485043280,
@@ -11290,7 +12115,7 @@
       },
       {
         "value": 68352,
-        "name": "UndeadMob"
+        "name": "UndeadMonster"
       },
       {
         "value": 199424,
@@ -11409,11 +12234,11 @@
         "name": "Mule"
       },
       {
-        "value": 2186010,
+        "value": 2183962,
         "name": "SkeletonHorse"
       },
       {
-        "value": 2186011,
+        "value": 2183963,
         "name": "ZombieHorse"
       },
       {
@@ -11877,7 +12702,7 @@
         "name": "Nautilus"
       },
       {
-        "value": 76694,
+        "value": 74646,
         "name": "ZombieNautilus"
       },
       {
@@ -11885,7 +12710,7 @@
         "name": "Parched"
       },
       {
-        "value": 68504,
+        "value": 70552,
         "name": "CamelHusk"
       }
     ],
@@ -12327,20 +13152,12 @@
       "Lesson Action": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
       "Score": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -12372,10 +13189,6 @@
       "Event Id": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -12413,20 +13226,12 @@
       "Data": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
       "Event Id": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -14621,7 +15426,83 @@
       },
       {
         "value": 578,
+        "name": "SaddleInWater"
+      },
+      {
+        "value": 597,
         "name": "Undefined"
+      },
+      {
+        "value": 579,
+        "name": "StoneSpearAttackHit"
+      },
+      {
+        "value": 580,
+        "name": "IronSpearAttackHit"
+      },
+      {
+        "value": 581,
+        "name": "CopperSpearAttackHit"
+      },
+      {
+        "value": 582,
+        "name": "GoldenSpearAttackHit"
+      },
+      {
+        "value": 583,
+        "name": "DiamondSpearAttackHit"
+      },
+      {
+        "value": 584,
+        "name": "NetheriteSpearAttackHit"
+      },
+      {
+        "value": 585,
+        "name": "StoneSpearAttackMiss"
+      },
+      {
+        "value": 586,
+        "name": "IronSpearAttackMiss"
+      },
+      {
+        "value": 587,
+        "name": "CopperSpearAttackMiss"
+      },
+      {
+        "value": 588,
+        "name": "GoldenSpearAttackMiss"
+      },
+      {
+        "value": 589,
+        "name": "DiamondSpearAttackMiss"
+      },
+      {
+        "value": 590,
+        "name": "NetheriteSpearAttackMiss"
+      },
+      {
+        "value": 591,
+        "name": "StoneSpearUse"
+      },
+      {
+        "value": 592,
+        "name": "IronSpearUse"
+      },
+      {
+        "value": 593,
+        "name": "CopperSpearUse"
+      },
+      {
+        "value": 594,
+        "name": "GoldenSpearUse"
+      },
+      {
+        "value": 595,
+        "name": "DiamondSpearUse"
+      },
+      {
+        "value": 596,
+        "name": "NetheriteSpearUse"
       }
     ],
     "id": 2017226404,
@@ -14639,20 +15520,12 @@
       "Actor Unique Id": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -9223372036854776000.0,
-          "maximum": 9223372036854776000.0
-        },
         "id": 0,
         "type": "int64"
       },
       "Data": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -16818,7 +17691,83 @@
           },
           {
             "value": 578,
+            "name": "SaddleInWater"
+          },
+          {
+            "value": 597,
             "name": "Undefined"
+          },
+          {
+            "value": 579,
+            "name": "StoneSpearAttackHit"
+          },
+          {
+            "value": 580,
+            "name": "IronSpearAttackHit"
+          },
+          {
+            "value": 581,
+            "name": "CopperSpearAttackHit"
+          },
+          {
+            "value": 582,
+            "name": "GoldenSpearAttackHit"
+          },
+          {
+            "value": 583,
+            "name": "DiamondSpearAttackHit"
+          },
+          {
+            "value": 584,
+            "name": "NetheriteSpearAttackHit"
+          },
+          {
+            "value": 585,
+            "name": "StoneSpearAttackMiss"
+          },
+          {
+            "value": 586,
+            "name": "IronSpearAttackMiss"
+          },
+          {
+            "value": 587,
+            "name": "CopperSpearAttackMiss"
+          },
+          {
+            "value": 588,
+            "name": "GoldenSpearAttackMiss"
+          },
+          {
+            "value": 589,
+            "name": "DiamondSpearAttackMiss"
+          },
+          {
+            "value": 590,
+            "name": "NetheriteSpearAttackMiss"
+          },
+          {
+            "value": 591,
+            "name": "StoneSpearUse"
+          },
+          {
+            "value": 592,
+            "name": "IronSpearUse"
+          },
+          {
+            "value": 593,
+            "name": "CopperSpearUse"
+          },
+          {
+            "value": 594,
+            "name": "GoldenSpearUse"
+          },
+          {
+            "value": 595,
+            "name": "DiamondSpearUse"
+          },
+          {
+            "value": 596,
+            "name": "NetheriteSpearUse"
           }
         ],
         "id": 2017226404,
@@ -16872,10 +17821,6 @@
       "Client Network Version": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -16988,8 +17933,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 65535.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint16"
@@ -16998,8 +17942,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -17062,30 +18005,18 @@
       "Effect Amplifier": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
       "Effect Duration Ticks": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
       "Effect ID": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -17164,8 +18095,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -17237,8 +18167,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -17441,10 +18370,6 @@
       "Effect Duration": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -17573,20 +18498,12 @@
       "X": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
       "Z": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -17608,8 +18525,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -17681,10 +18597,6 @@
       "Client Throttle Scalar": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
@@ -17702,8 +18614,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 65535.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint16",
@@ -17759,8 +18670,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 18446744073709553000.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint64"
@@ -17849,8 +18759,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 18446744073709553000.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint64",
@@ -18025,8 +18934,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -19017,6 +19925,10 @@
         "name": "SetMovementAuthorityMode"
       },
       {
+        "value": 339,
+        "name": "CameraAimAssistActorPriority"
+      },
+      {
         "value": 320,
         "name": "CameraAimAssistPresets"
       },
@@ -19060,10 +19972,6 @@
       "Violation PacketId": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -19168,10 +20076,6 @@
       "Owner ID": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -9223372036854776000.0,
-          "maximum": 9223372036854776000.0
-        },
         "id": 0,
         "type": "int64"
       },
@@ -19633,10 +20537,6 @@
       "Face": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -19738,10 +20638,6 @@
       "Damage": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -32768.0,
-          "maximum": 32767.0
-        },
         "id": 0,
         "type": "int16"
       }
@@ -19841,8 +20737,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -19881,10 +20776,6 @@
       "Duration Ticks": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -19928,30 +20819,18 @@
       "Pos X": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
       "Pos Y": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
       "Pos Z": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -20000,8 +20879,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -20086,10 +20964,6 @@
       "Pitch": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
@@ -20103,10 +20977,6 @@
       "Volume": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       }
@@ -20270,10 +21140,6 @@
       "Value": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -20594,10 +21460,6 @@
       "Ability": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -20610,10 +21472,6 @@
       "Float": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
@@ -20666,10 +21524,6 @@
       "Chunk Radius": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -20712,8 +21566,8 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 897.0,
-          "maximum": 897.0
+          "minimum": 924.0,
+          "maximum": 924.0
         },
         "id": 0,
         "type": "int32"
@@ -20770,8 +21624,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 65535.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint16"
@@ -20779,20 +21632,12 @@
       "Player Permission Level": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
       "Target Player Id's Raw ID": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -9223372036854776000.0,
-          "maximum": 9223372036854776000.0
-        },
         "id": 0,
         "type": "int64",
         "description": "mTargetPlayerId is a ActorUniqueID"
@@ -20826,8 +21671,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 18446744073709553000.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint64"
@@ -20842,8 +21686,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -20883,8 +21726,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -20967,8 +21809,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -20983,8 +21824,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 18446744073709553000.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint64"
@@ -21000,8 +21840,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -21162,96 +22001,751 @@
     "description": "Used to send custom messages between client and server."
   },
   {
+    "enum_values": [
+      {
+        "value": 0,
+        "name": "Unknown"
+      },
+      {
+        "value": 1,
+        "name": "Invalid_SizeUnknown"
+      },
+      {
+        "value": 2,
+        "name": "Actor"
+      },
+      {
+        "value": 3,
+        "name": "ActorAnimation"
+      },
+      {
+        "value": 4,
+        "name": "ActorRendering"
+      },
+      {
+        "value": 5,
+        "name": "Balancer"
+      },
+      {
+        "value": 6,
+        "name": "BlockTickingQueues"
+      },
+      {
+        "value": 7,
+        "name": "Biome_Storage"
+      },
+      {
+        "value": 8,
+        "name": "Cereal"
+      },
+      {
+        "value": 9,
+        "name": "CircuitSystem"
+      },
+      {
+        "value": 10,
+        "name": "Client"
+      },
+      {
+        "value": 11,
+        "name": "Commands"
+      },
+      {
+        "value": 12,
+        "name": "DBStorage"
+      },
+      {
+        "value": 13,
+        "name": "Debug"
+      },
+      {
+        "value": 14,
+        "name": "Documentation"
+      },
+      {
+        "value": 15,
+        "name": "ECSSystems"
+      },
+      {
+        "value": 16,
+        "name": "FMOD"
+      },
+      {
+        "value": 17,
+        "name": "Fonts"
+      },
+      {
+        "value": 18,
+        "name": "ImGui"
+      },
+      {
+        "value": 19,
+        "name": "Input"
+      },
+      {
+        "value": 20,
+        "name": "JsonUI"
+      },
+      {
+        "value": 21,
+        "name": "JsonUI_ControlFactory_Json"
+      },
+      {
+        "value": 22,
+        "name": "JsonUI_ControlTree"
+      },
+      {
+        "value": 23,
+        "name": "JsonUI_ControlTree_ControlElement"
+      },
+      {
+        "value": 24,
+        "name": "JsonUI_ControlTree_PopulateDataBinding"
+      },
+      {
+        "value": 25,
+        "name": "JsonUI_ControlTree_PopulateFocus"
+      },
+      {
+        "value": 26,
+        "name": "JsonUI_ControlTree_PopulateLayout"
+      },
+      {
+        "value": 27,
+        "name": "JsonUI_ControlTree_PopulateOther"
+      },
+      {
+        "value": 28,
+        "name": "JsonUI_ControlTree_PopulateSprite"
+      },
+      {
+        "value": 29,
+        "name": "JsonUI_ControlTree_PopulateText"
+      },
+      {
+        "value": 30,
+        "name": "JsonUI_ControlTree_PopulateTTS"
+      },
+      {
+        "value": 31,
+        "name": "JsonUI_ControlTree_Visibility"
+      },
+      {
+        "value": 32,
+        "name": "JsonUI_CreateUI"
+      },
+      {
+        "value": 33,
+        "name": "JsonUI_Defs"
+      },
+      {
+        "value": 34,
+        "name": "JsonUI_LayoutManager"
+      },
+      {
+        "value": 35,
+        "name": "JsonUI_LayoutManager_RemoveDependencies"
+      },
+      {
+        "value": 36,
+        "name": "JsonUI_LayoutManager_InitVariable"
+      },
+      {
+        "value": 37,
+        "name": "Languages"
+      },
+      {
+        "value": 38,
+        "name": "Level"
+      },
+      {
+        "value": 39,
+        "name": "LevelStructures"
+      },
+      {
+        "value": 40,
+        "name": "LevelChunk"
+      },
+      {
+        "value": 41,
+        "name": "LevelChunkGen"
+      },
+      {
+        "value": 42,
+        "name": "LevelChunkGenThreadLocal"
+      },
+      {
+        "value": 43,
+        "name": "Network"
+      },
+      {
+        "value": 44,
+        "name": "Marketplace"
+      },
+      {
+        "value": 45,
+        "name": "Material_DragonCompiledDefinition"
+      },
+      {
+        "value": 46,
+        "name": "Material_DragonMaterial"
+      },
+      {
+        "value": 47,
+        "name": "Material_DragonResource"
+      },
+      {
+        "value": 48,
+        "name": "Material_DragonUniformMap"
+      },
+      {
+        "value": 49,
+        "name": "Material_RenderMaterial"
+      },
+      {
+        "value": 50,
+        "name": "Material_RenderMaterialGroup"
+      },
+      {
+        "value": 51,
+        "name": "Material_VariationManager"
+      },
+      {
+        "value": 52,
+        "name": "Molang"
+      },
+      {
+        "value": 53,
+        "name": "OreUI"
+      },
+      {
+        "value": 54,
+        "name": "Persona"
+      },
+      {
+        "value": 55,
+        "name": "Player"
+      },
+      {
+        "value": 56,
+        "name": "RenderChunk"
+      },
+      {
+        "value": 57,
+        "name": "RenderChunk_IndexBuffer"
+      },
+      {
+        "value": 58,
+        "name": "RenderChunk_VertexBuffer"
+      },
+      {
+        "value": 59,
+        "name": "Rendering"
+      },
+      {
+        "value": 60,
+        "name": "Rendering_Library"
+      },
+      {
+        "value": 61,
+        "name": "RequestLog"
+      },
+      {
+        "value": 62,
+        "name": "ResourcePacks"
+      },
+      {
+        "value": 63,
+        "name": "Sound"
+      },
+      {
+        "value": 64,
+        "name": "SubChunk_BiomeData"
+      },
+      {
+        "value": 65,
+        "name": "SubChunk_BlockData"
+      },
+      {
+        "value": 66,
+        "name": "SubChunk_LightData"
+      },
+      {
+        "value": 67,
+        "name": "Textures"
+      },
+      {
+        "value": 68,
+        "name": "VR"
+      },
+      {
+        "value": 69,
+        "name": "WeatherRenderer"
+      },
+      {
+        "value": 70,
+        "name": "World_Generator"
+      },
+      {
+        "value": 71,
+        "name": "Tasks"
+      },
+      {
+        "value": 72,
+        "name": "Test"
+      },
+      {
+        "value": 73,
+        "name": "Scripting"
+      },
+      {
+        "value": 74,
+        "name": "Scripting_Runtime"
+      },
+      {
+        "value": 75,
+        "name": "Scripting_Context"
+      },
+      {
+        "value": 76,
+        "name": "Scripting_Context_Bindings_MC"
+      },
+      {
+        "value": 77,
+        "name": "Scripting_Context_Bindings_GT"
+      },
+      {
+        "value": 78,
+        "name": "Scripting_Context_Run"
+      },
+      {
+        "value": 79,
+        "name": "DataDrivenUI"
+      },
+      {
+        "value": 80,
+        "name": "DataDrivenUI_Defs"
+      }
+    ],
+    "id": 156975172,
+    "name": "enum Memory::MemoryCategory",
+    "type": "enum"
+  },
+  {
+    "members": {
+      "Category": {
+        "required": true,
+        "deprecated": false,
+        "enum_values": [
+          {
+            "value": 0,
+            "name": "Unknown"
+          },
+          {
+            "value": 1,
+            "name": "Invalid_SizeUnknown"
+          },
+          {
+            "value": 2,
+            "name": "Actor"
+          },
+          {
+            "value": 3,
+            "name": "ActorAnimation"
+          },
+          {
+            "value": 4,
+            "name": "ActorRendering"
+          },
+          {
+            "value": 5,
+            "name": "Balancer"
+          },
+          {
+            "value": 6,
+            "name": "BlockTickingQueues"
+          },
+          {
+            "value": 7,
+            "name": "Biome_Storage"
+          },
+          {
+            "value": 8,
+            "name": "Cereal"
+          },
+          {
+            "value": 9,
+            "name": "CircuitSystem"
+          },
+          {
+            "value": 10,
+            "name": "Client"
+          },
+          {
+            "value": 11,
+            "name": "Commands"
+          },
+          {
+            "value": 12,
+            "name": "DBStorage"
+          },
+          {
+            "value": 13,
+            "name": "Debug"
+          },
+          {
+            "value": 14,
+            "name": "Documentation"
+          },
+          {
+            "value": 15,
+            "name": "ECSSystems"
+          },
+          {
+            "value": 16,
+            "name": "FMOD"
+          },
+          {
+            "value": 17,
+            "name": "Fonts"
+          },
+          {
+            "value": 18,
+            "name": "ImGui"
+          },
+          {
+            "value": 19,
+            "name": "Input"
+          },
+          {
+            "value": 20,
+            "name": "JsonUI"
+          },
+          {
+            "value": 21,
+            "name": "JsonUI_ControlFactory_Json"
+          },
+          {
+            "value": 22,
+            "name": "JsonUI_ControlTree"
+          },
+          {
+            "value": 23,
+            "name": "JsonUI_ControlTree_ControlElement"
+          },
+          {
+            "value": 24,
+            "name": "JsonUI_ControlTree_PopulateDataBinding"
+          },
+          {
+            "value": 25,
+            "name": "JsonUI_ControlTree_PopulateFocus"
+          },
+          {
+            "value": 26,
+            "name": "JsonUI_ControlTree_PopulateLayout"
+          },
+          {
+            "value": 27,
+            "name": "JsonUI_ControlTree_PopulateOther"
+          },
+          {
+            "value": 28,
+            "name": "JsonUI_ControlTree_PopulateSprite"
+          },
+          {
+            "value": 29,
+            "name": "JsonUI_ControlTree_PopulateText"
+          },
+          {
+            "value": 30,
+            "name": "JsonUI_ControlTree_PopulateTTS"
+          },
+          {
+            "value": 31,
+            "name": "JsonUI_ControlTree_Visibility"
+          },
+          {
+            "value": 32,
+            "name": "JsonUI_CreateUI"
+          },
+          {
+            "value": 33,
+            "name": "JsonUI_Defs"
+          },
+          {
+            "value": 34,
+            "name": "JsonUI_LayoutManager"
+          },
+          {
+            "value": 35,
+            "name": "JsonUI_LayoutManager_RemoveDependencies"
+          },
+          {
+            "value": 36,
+            "name": "JsonUI_LayoutManager_InitVariable"
+          },
+          {
+            "value": 37,
+            "name": "Languages"
+          },
+          {
+            "value": 38,
+            "name": "Level"
+          },
+          {
+            "value": 39,
+            "name": "LevelStructures"
+          },
+          {
+            "value": 40,
+            "name": "LevelChunk"
+          },
+          {
+            "value": 41,
+            "name": "LevelChunkGen"
+          },
+          {
+            "value": 42,
+            "name": "LevelChunkGenThreadLocal"
+          },
+          {
+            "value": 43,
+            "name": "Network"
+          },
+          {
+            "value": 44,
+            "name": "Marketplace"
+          },
+          {
+            "value": 45,
+            "name": "Material_DragonCompiledDefinition"
+          },
+          {
+            "value": 46,
+            "name": "Material_DragonMaterial"
+          },
+          {
+            "value": 47,
+            "name": "Material_DragonResource"
+          },
+          {
+            "value": 48,
+            "name": "Material_DragonUniformMap"
+          },
+          {
+            "value": 49,
+            "name": "Material_RenderMaterial"
+          },
+          {
+            "value": 50,
+            "name": "Material_RenderMaterialGroup"
+          },
+          {
+            "value": 51,
+            "name": "Material_VariationManager"
+          },
+          {
+            "value": 52,
+            "name": "Molang"
+          },
+          {
+            "value": 53,
+            "name": "OreUI"
+          },
+          {
+            "value": 54,
+            "name": "Persona"
+          },
+          {
+            "value": 55,
+            "name": "Player"
+          },
+          {
+            "value": 56,
+            "name": "RenderChunk"
+          },
+          {
+            "value": 57,
+            "name": "RenderChunk_IndexBuffer"
+          },
+          {
+            "value": 58,
+            "name": "RenderChunk_VertexBuffer"
+          },
+          {
+            "value": 59,
+            "name": "Rendering"
+          },
+          {
+            "value": 60,
+            "name": "Rendering_Library"
+          },
+          {
+            "value": 61,
+            "name": "RequestLog"
+          },
+          {
+            "value": 62,
+            "name": "ResourcePacks"
+          },
+          {
+            "value": 63,
+            "name": "Sound"
+          },
+          {
+            "value": 64,
+            "name": "SubChunk_BiomeData"
+          },
+          {
+            "value": 65,
+            "name": "SubChunk_BlockData"
+          },
+          {
+            "value": 66,
+            "name": "SubChunk_LightData"
+          },
+          {
+            "value": 67,
+            "name": "Textures"
+          },
+          {
+            "value": 68,
+            "name": "VR"
+          },
+          {
+            "value": 69,
+            "name": "WeatherRenderer"
+          },
+          {
+            "value": 70,
+            "name": "World_Generator"
+          },
+          {
+            "value": 71,
+            "name": "Tasks"
+          },
+          {
+            "value": 72,
+            "name": "Test"
+          },
+          {
+            "value": 73,
+            "name": "Scripting"
+          },
+          {
+            "value": 74,
+            "name": "Scripting_Runtime"
+          },
+          {
+            "value": 75,
+            "name": "Scripting_Context"
+          },
+          {
+            "value": 76,
+            "name": "Scripting_Context_Bindings_MC"
+          },
+          {
+            "value": 77,
+            "name": "Scripting_Context_Bindings_GT"
+          },
+          {
+            "value": 78,
+            "name": "Scripting_Context_Run"
+          },
+          {
+            "value": 79,
+            "name": "DataDrivenUI"
+          },
+          {
+            "value": 80,
+            "name": "DataDrivenUI_Defs"
+          }
+        ],
+        "id": 156975172,
+        "name": "enum Memory::MemoryCategory",
+        "type": "enum"
+      },
+      "Current Bytes": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0
+        },
+        "id": 0,
+        "type": "uint64"
+      }
+    },
+    "id": 1494345208,
+    "name": "MemoryCategoryCounter",
+    "type": "object"
+  },
+  {
     "members": {
       "AvgBeginFrameTimeMS": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "AvgClientSimTickTimeMS": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "AvgEndFrameTimeMS": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "AvgFps": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "AvgInputTimeMS": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "AvgRemainderTimePercent": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "AvgRenderTimeMS": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "AvgServerSimTickTimeMS": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "AvgUnaccountedTimePercent": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
+      },
+      "Memory Category Values": {
+        "required": true,
+        "deprecated": false,
+        "value_type": {
+          "id": 1494345208,
+          "name": "MemoryCategoryCounter",
+          "type": "object"
+        },
+        "id": 1413534399,
+        "type": "sequence_container"
       }
     },
     "id": 833110655,
@@ -21301,8 +22795,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32",
@@ -21383,10 +22876,6 @@
         "deprecated": false,
         "setters": [
           {
-            "constraint": {
-              "minimum": 1.1754943508222876e-38,
-              "maximum": 3.4028234663852887e38
-            },
             "id": 0,
             "type": "float"
           },
@@ -21501,10 +22990,6 @@
       "Arrow Head Length": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float",
         "description": "Length of the head of the debug arrow."
@@ -21512,10 +22997,6 @@
       "Arrow Head Radius": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float",
         "description": "Radius of the head of the debug arrow."
@@ -21600,6 +23081,14 @@
   },
   {
     "members": {
+      "Attached To Entity ID": {
+        "required": false,
+        "deprecated": false,
+        "id": 3541243607,
+        "name": "ActorRuntimeID",
+        "type": "object",
+        "description": "Runtime ID of the entity this shape is attached to."
+      },
       "Color": {
         "required": false,
         "deprecated": false,
@@ -21665,8 +23154,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 18446744073709553000.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint64",
@@ -21683,10 +23171,6 @@
       "Scale": {
         "required": false,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float",
         "description": "Float scale of the debug shape in the world."
@@ -21728,10 +23212,6 @@
       "Total Time Left": {
         "required": false,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float",
         "description": "The total time left in seconds until this debug shape will be removed (0 meaning never)."
@@ -21810,8 +23290,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -21850,20 +23329,12 @@
       "NetworkTime": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
       "ServerTime": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       }
@@ -21994,10 +23465,6 @@
       "Vehicle Angular Velocity": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       }
@@ -22260,8 +23727,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -22333,10 +23799,6 @@
       "SortOrder": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -22368,10 +23830,6 @@
       "Health": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -22615,7 +24073,7 @@
           },
           {
             "value": 68352,
-            "name": "UndeadMob"
+            "name": "UndeadMonster"
           },
           {
             "value": 199424,
@@ -22734,11 +24192,11 @@
             "name": "Mule"
           },
           {
-            "value": 2186010,
+            "value": 2183962,
             "name": "SkeletonHorse"
           },
           {
-            "value": 2186011,
+            "value": 2183963,
             "name": "ZombieHorse"
           },
           {
@@ -23202,7 +24660,7 @@
             "name": "Nautilus"
           },
           {
-            "value": 76694,
+            "value": 74646,
             "name": "ZombieNautilus"
           },
           {
@@ -23210,7 +24668,7 @@
             "name": "Parched"
           },
           {
-            "value": 68504,
+            "value": 70552,
             "name": "CamelHusk"
           }
         ],
@@ -23353,15 +24811,15 @@
           },
           {
             "value": 1,
-            "name": "Survival"
+            "name": "InventoryOnly"
           },
           {
             "value": 2,
-            "name": "RecipeBook"
+            "name": "Default"
           },
           {
             "value": 3,
-            "name": "Creative"
+            "name": "RecipeBookOnly"
           }
         ],
         "id": 1258196778,
@@ -23378,15 +24836,15 @@
           },
           {
             "value": 1,
-            "name": "Survival"
+            "name": "InventoryOnly"
           },
           {
             "value": 2,
-            "name": "RecipeBook"
+            "name": "Default"
           },
           {
             "value": 3,
-            "name": "Creative"
+            "name": "RecipeBookOnly"
           }
         ],
         "id": 1258196778,
@@ -23468,15 +24926,15 @@
       },
       {
         "value": 1,
-        "name": "Survival"
+        "name": "InventoryOnly"
       },
       {
         "value": 2,
-        "name": "RecipeBook"
+        "name": "Default"
       },
       {
         "value": 3,
-        "name": "Creative"
+        "name": "RecipeBookOnly"
       }
     ],
     "id": 1258196778,
@@ -23691,10 +25149,6 @@
       "Time": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -23807,20 +25261,12 @@
       "Fade In Time": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
       "Fade Out Time": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -23839,10 +25285,6 @@
       "Stay Time": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -23931,10 +25373,6 @@
       "Credits State": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -24246,10 +25684,6 @@
       "XP Value": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       }
@@ -24465,10 +25899,6 @@
       "Animation Seconds": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
@@ -24476,8 +25906,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -24485,10 +25914,6 @@
       "Integrity Value": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 1.1754943508222876e-38,
-          "maximum": 3.4028234663852887e38
-        },
         "id": 0,
         "type": "float"
       },
@@ -24935,354 +26360,16 @@
       "Message Type": {
         "required": true,
         "deprecated": false,
-        "enum_values": [
-          {
-            "value": 0,
-            "name": "raw"
-          },
-          {
-            "value": 1,
-            "name": "chat"
-          },
-          {
-            "value": 2,
-            "name": "translate"
-          },
-          {
-            "value": 3,
-            "name": "popup"
-          },
-          {
-            "value": 4,
-            "name": "jukeboxPopup"
-          },
-          {
-            "value": 5,
-            "name": "tip"
-          },
-          {
-            "value": 6,
-            "name": "systemMessage"
-          },
-          {
-            "value": 7,
-            "name": "whisper"
-          },
-          {
-            "value": 8,
-            "name": "announcement"
-          },
-          {
-            "value": 9,
-            "name": "textObjectWhisper"
-          },
-          {
-            "value": 10,
-            "name": "textObject"
-          },
-          {
-            "value": 11,
-            "name": "textObjectAnnouncement"
-          }
-        ],
-        "id": 410460859,
-        "name": "TextPacketType",
-        "type": "enum"
-      },
-      "raw": {
-        "required": true,
-        "deprecated": false,
-        "constValue": "raw",
-        "enum_values": [
-          {
-            "value": 0,
-            "name": "raw"
-          },
-          {
-            "value": 1,
-            "name": "chat"
-          },
-          {
-            "value": 2,
-            "name": "translate"
-          },
-          {
-            "value": 3,
-            "name": "popup"
-          },
-          {
-            "value": 4,
-            "name": "jukeboxPopup"
-          },
-          {
-            "value": 5,
-            "name": "tip"
-          },
-          {
-            "value": 6,
-            "name": "systemMessage"
-          },
-          {
-            "value": 7,
-            "name": "whisper"
-          },
-          {
-            "value": 8,
-            "name": "announcement"
-          },
-          {
-            "value": 9,
-            "name": "textObjectWhisper"
-          },
-          {
-            "value": 10,
-            "name": "textObject"
-          },
-          {
-            "value": 11,
-            "name": "textObjectAnnouncement"
-          }
-        ],
-        "id": 410460859,
-        "name": "TextPacketType",
-        "type": "enum"
-      },
-      "systemMessage": {
-        "required": true,
-        "deprecated": false,
-        "constValue": "systemmessage",
-        "enum_values": [
-          {
-            "value": 0,
-            "name": "raw"
-          },
-          {
-            "value": 1,
-            "name": "chat"
-          },
-          {
-            "value": 2,
-            "name": "translate"
-          },
-          {
-            "value": 3,
-            "name": "popup"
-          },
-          {
-            "value": 4,
-            "name": "jukeboxPopup"
-          },
-          {
-            "value": 5,
-            "name": "tip"
-          },
-          {
-            "value": 6,
-            "name": "systemMessage"
-          },
-          {
-            "value": 7,
-            "name": "whisper"
-          },
-          {
-            "value": 8,
-            "name": "announcement"
-          },
-          {
-            "value": 9,
-            "name": "textObjectWhisper"
-          },
-          {
-            "value": 10,
-            "name": "textObject"
-          },
-          {
-            "value": 11,
-            "name": "textObjectAnnouncement"
-          }
-        ],
-        "id": 410460859,
-        "name": "TextPacketType",
-        "type": "enum"
-      },
-      "textObject": {
-        "required": true,
-        "deprecated": false,
-        "constValue": "textobject",
-        "enum_values": [
-          {
-            "value": 0,
-            "name": "raw"
-          },
-          {
-            "value": 1,
-            "name": "chat"
-          },
-          {
-            "value": 2,
-            "name": "translate"
-          },
-          {
-            "value": 3,
-            "name": "popup"
-          },
-          {
-            "value": 4,
-            "name": "jukeboxPopup"
-          },
-          {
-            "value": 5,
-            "name": "tip"
-          },
-          {
-            "value": 6,
-            "name": "systemMessage"
-          },
-          {
-            "value": 7,
-            "name": "whisper"
-          },
-          {
-            "value": 8,
-            "name": "announcement"
-          },
-          {
-            "value": 9,
-            "name": "textObjectWhisper"
-          },
-          {
-            "value": 10,
-            "name": "textObject"
-          },
-          {
-            "value": 11,
-            "name": "textObjectAnnouncement"
-          }
-        ],
-        "id": 410460859,
-        "name": "TextPacketType",
-        "type": "enum"
-      },
-      "textObjectAnnouncement": {
-        "required": true,
-        "deprecated": false,
-        "constValue": "textobjectannouncement",
-        "enum_values": [
-          {
-            "value": 0,
-            "name": "raw"
-          },
-          {
-            "value": 1,
-            "name": "chat"
-          },
-          {
-            "value": 2,
-            "name": "translate"
-          },
-          {
-            "value": 3,
-            "name": "popup"
-          },
-          {
-            "value": 4,
-            "name": "jukeboxPopup"
-          },
-          {
-            "value": 5,
-            "name": "tip"
-          },
-          {
-            "value": 6,
-            "name": "systemMessage"
-          },
-          {
-            "value": 7,
-            "name": "whisper"
-          },
-          {
-            "value": 8,
-            "name": "announcement"
-          },
-          {
-            "value": 9,
-            "name": "textObjectWhisper"
-          },
-          {
-            "value": 10,
-            "name": "textObject"
-          },
-          {
-            "value": 11,
-            "name": "textObjectAnnouncement"
-          }
-        ],
-        "id": 410460859,
-        "name": "TextPacketType",
-        "type": "enum"
-      },
-      "textObjectWhisper": {
-        "required": true,
-        "deprecated": false,
-        "constValue": "textobjectwhisper",
-        "enum_values": [
-          {
-            "value": 0,
-            "name": "raw"
-          },
-          {
-            "value": 1,
-            "name": "chat"
-          },
-          {
-            "value": 2,
-            "name": "translate"
-          },
-          {
-            "value": 3,
-            "name": "popup"
-          },
-          {
-            "value": 4,
-            "name": "jukeboxPopup"
-          },
-          {
-            "value": 5,
-            "name": "tip"
-          },
-          {
-            "value": 6,
-            "name": "systemMessage"
-          },
-          {
-            "value": 7,
-            "name": "whisper"
-          },
-          {
-            "value": 8,
-            "name": "announcement"
-          },
-          {
-            "value": 9,
-            "name": "textObjectWhisper"
-          },
-          {
-            "value": 10,
-            "name": "textObject"
-          },
-          {
-            "value": 11,
-            "name": "textObjectAnnouncement"
-          }
-        ],
-        "id": 410460859,
-        "name": "TextPacketType",
-        "type": "enum"
-      },
-      "tip": {
-        "required": true,
-        "deprecated": false,
-        "constValue": "tip",
+        "constraint": {
+          "enumValues": [
+            0,
+            5,
+            6,
+            9,
+            11,
+            10
+          ]
+        },
         "enum_values": [
           {
             "value": 0,
@@ -25356,6 +26443,13 @@
       "Message Type": {
         "required": true,
         "deprecated": false,
+        "constraint": {
+          "enumValues": [
+            1,
+            7,
+            8
+          ]
+        },
         "enum_values": [
           {
             "value": 0,
@@ -25413,185 +26507,8 @@
       "Player Name": {
         "required": false,
         "deprecated": false,
-        "constraint": {
-          "maxLength": 32
-        },
         "id": 0,
         "type": "string"
-      },
-      "announcement": {
-        "required": true,
-        "deprecated": false,
-        "constValue": "announcement",
-        "enum_values": [
-          {
-            "value": 0,
-            "name": "raw"
-          },
-          {
-            "value": 1,
-            "name": "chat"
-          },
-          {
-            "value": 2,
-            "name": "translate"
-          },
-          {
-            "value": 3,
-            "name": "popup"
-          },
-          {
-            "value": 4,
-            "name": "jukeboxPopup"
-          },
-          {
-            "value": 5,
-            "name": "tip"
-          },
-          {
-            "value": 6,
-            "name": "systemMessage"
-          },
-          {
-            "value": 7,
-            "name": "whisper"
-          },
-          {
-            "value": 8,
-            "name": "announcement"
-          },
-          {
-            "value": 9,
-            "name": "textObjectWhisper"
-          },
-          {
-            "value": 10,
-            "name": "textObject"
-          },
-          {
-            "value": 11,
-            "name": "textObjectAnnouncement"
-          }
-        ],
-        "id": 410460859,
-        "name": "TextPacketType",
-        "type": "enum"
-      },
-      "chat": {
-        "required": true,
-        "deprecated": false,
-        "constValue": "chat",
-        "enum_values": [
-          {
-            "value": 0,
-            "name": "raw"
-          },
-          {
-            "value": 1,
-            "name": "chat"
-          },
-          {
-            "value": 2,
-            "name": "translate"
-          },
-          {
-            "value": 3,
-            "name": "popup"
-          },
-          {
-            "value": 4,
-            "name": "jukeboxPopup"
-          },
-          {
-            "value": 5,
-            "name": "tip"
-          },
-          {
-            "value": 6,
-            "name": "systemMessage"
-          },
-          {
-            "value": 7,
-            "name": "whisper"
-          },
-          {
-            "value": 8,
-            "name": "announcement"
-          },
-          {
-            "value": 9,
-            "name": "textObjectWhisper"
-          },
-          {
-            "value": 10,
-            "name": "textObject"
-          },
-          {
-            "value": 11,
-            "name": "textObjectAnnouncement"
-          }
-        ],
-        "id": 410460859,
-        "name": "TextPacketType",
-        "type": "enum"
-      },
-      "whisper": {
-        "required": true,
-        "deprecated": false,
-        "constValue": "whisper",
-        "enum_values": [
-          {
-            "value": 0,
-            "name": "raw"
-          },
-          {
-            "value": 1,
-            "name": "chat"
-          },
-          {
-            "value": 2,
-            "name": "translate"
-          },
-          {
-            "value": 3,
-            "name": "popup"
-          },
-          {
-            "value": 4,
-            "name": "jukeboxPopup"
-          },
-          {
-            "value": 5,
-            "name": "tip"
-          },
-          {
-            "value": 6,
-            "name": "systemMessage"
-          },
-          {
-            "value": 7,
-            "name": "whisper"
-          },
-          {
-            "value": 8,
-            "name": "announcement"
-          },
-          {
-            "value": 9,
-            "name": "textObjectWhisper"
-          },
-          {
-            "value": 10,
-            "name": "textObject"
-          },
-          {
-            "value": 11,
-            "name": "textObjectAnnouncement"
-          }
-        ],
-        "id": 410460859,
-        "name": "TextPacketType",
-        "type": "enum"
       }
     },
     "id": 2049426924,
@@ -25612,6 +26529,13 @@
       "Message Type": {
         "required": true,
         "deprecated": false,
+        "constraint": {
+          "enumValues": [
+            2,
+            3,
+            4
+          ]
+        },
         "enum_values": [
           {
             "value": 0,
@@ -25678,180 +26602,6 @@
         },
         "id": 1093136171,
         "type": "sequence_container"
-      },
-      "jukeboxPopup": {
-        "required": true,
-        "deprecated": false,
-        "constValue": "jukeboxpopup",
-        "enum_values": [
-          {
-            "value": 0,
-            "name": "raw"
-          },
-          {
-            "value": 1,
-            "name": "chat"
-          },
-          {
-            "value": 2,
-            "name": "translate"
-          },
-          {
-            "value": 3,
-            "name": "popup"
-          },
-          {
-            "value": 4,
-            "name": "jukeboxPopup"
-          },
-          {
-            "value": 5,
-            "name": "tip"
-          },
-          {
-            "value": 6,
-            "name": "systemMessage"
-          },
-          {
-            "value": 7,
-            "name": "whisper"
-          },
-          {
-            "value": 8,
-            "name": "announcement"
-          },
-          {
-            "value": 9,
-            "name": "textObjectWhisper"
-          },
-          {
-            "value": 10,
-            "name": "textObject"
-          },
-          {
-            "value": 11,
-            "name": "textObjectAnnouncement"
-          }
-        ],
-        "id": 410460859,
-        "name": "TextPacketType",
-        "type": "enum"
-      },
-      "popup": {
-        "required": true,
-        "deprecated": false,
-        "constValue": "popup",
-        "enum_values": [
-          {
-            "value": 0,
-            "name": "raw"
-          },
-          {
-            "value": 1,
-            "name": "chat"
-          },
-          {
-            "value": 2,
-            "name": "translate"
-          },
-          {
-            "value": 3,
-            "name": "popup"
-          },
-          {
-            "value": 4,
-            "name": "jukeboxPopup"
-          },
-          {
-            "value": 5,
-            "name": "tip"
-          },
-          {
-            "value": 6,
-            "name": "systemMessage"
-          },
-          {
-            "value": 7,
-            "name": "whisper"
-          },
-          {
-            "value": 8,
-            "name": "announcement"
-          },
-          {
-            "value": 9,
-            "name": "textObjectWhisper"
-          },
-          {
-            "value": 10,
-            "name": "textObject"
-          },
-          {
-            "value": 11,
-            "name": "textObjectAnnouncement"
-          }
-        ],
-        "id": 410460859,
-        "name": "TextPacketType",
-        "type": "enum"
-      },
-      "translate": {
-        "required": true,
-        "deprecated": false,
-        "constValue": "translate",
-        "enum_values": [
-          {
-            "value": 0,
-            "name": "raw"
-          },
-          {
-            "value": 1,
-            "name": "chat"
-          },
-          {
-            "value": 2,
-            "name": "translate"
-          },
-          {
-            "value": 3,
-            "name": "popup"
-          },
-          {
-            "value": 4,
-            "name": "jukeboxPopup"
-          },
-          {
-            "value": 5,
-            "name": "tip"
-          },
-          {
-            "value": 6,
-            "name": "systemMessage"
-          },
-          {
-            "value": 7,
-            "name": "whisper"
-          },
-          {
-            "value": 8,
-            "name": "announcement"
-          },
-          {
-            "value": 9,
-            "name": "textObjectWhisper"
-          },
-          {
-            "value": 10,
-            "name": "textObject"
-          },
-          {
-            "value": 11,
-            "name": "textObjectAnnouncement"
-          }
-        ],
-        "id": 410460859,
-        "name": "TextPacketType",
-        "type": "enum"
       }
     },
     "id": 3338540673,
@@ -25891,20 +26641,20 @@
         "description": "Profanity-filtered version of the message (if applicable)"
       },
       "Localize?": {
-        "required": false,
+        "required": true,
         "deprecated": false,
         "id": 0,
         "type": "bool"
       },
       "Platform Id": {
-        "required": true,
+        "required": false,
         "deprecated": false,
         "id": 0,
         "type": "string",
         "description": "Platform-specific user identifier"
       },
       "Sender's XUID": {
-        "required": true,
+        "required": false,
         "deprecated": false,
         "id": 0,
         "type": "string",
@@ -26021,8 +26771,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 65535.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint16"
@@ -26223,8 +26972,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -26233,8 +26981,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -26243,8 +26990,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -26297,8 +27043,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 18446744073709553000.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint64"
@@ -26314,8 +27059,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -26324,8 +27068,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -26334,8 +27077,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -26344,8 +27086,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 18446744073709553000.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint64",
@@ -26380,8 +27121,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -26518,10 +27258,6 @@
       "Size": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -26729,8 +27465,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -26739,8 +27474,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 18446744073709553000.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint64"
@@ -26749,8 +27483,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -26759,8 +27492,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 4294967295.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint32"
@@ -26880,20 +27612,12 @@
       "Size": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
       "Trader Tier": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": -2147483648.0,
-          "maximum": 2147483647.0
-        },
         "id": 0,
         "type": "int32"
       },
@@ -26945,6 +27669,194 @@
   },
   {
     "members": {
+      "Storage": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxItems": 256048
+        },
+        "value_type": {
+          "constraint": {
+            "minimum": 0.0,
+            "maximum": 255.0
+          },
+          "id": 0,
+          "type": "uint8"
+        },
+        "id": 4283623929,
+        "type": "sequence_container",
+        "description": "Solid/empty state per cell"
+      },
+      "X Size": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0,
+          "maximum": 127.0
+        },
+        "id": 0,
+        "type": "uint8",
+        "description": "Number of cells along the X axis"
+      },
+      "Y Size": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0,
+          "maximum": 127.0
+        },
+        "id": 0,
+        "type": "uint8",
+        "description": "Number of cells along the Y axis"
+      },
+      "Z Size": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0,
+          "maximum": 127.0
+        },
+        "id": 0,
+        "type": "uint8",
+        "description": "Number of cells along the Z axis"
+      }
+    },
+    "id": 3157178346,
+    "name": "struct VoxelShapes::SerializableCells",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Cells": {
+        "required": true,
+        "deprecated": false,
+        "id": 3157178346,
+        "name": "struct VoxelShapes::SerializableCells",
+        "type": "object",
+        "description": "Grid of cells representing solid and empty regions"
+      },
+      "X Coordinates": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minItems": 1,
+          "maxItems": 128
+        },
+        "value_type": {
+          "id": 0,
+          "type": "float"
+        },
+        "id": 1421727703,
+        "type": "sequence_container",
+        "description": "Cell boundaries along the X axis"
+      },
+      "Y Coordinates": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minItems": 1,
+          "maxItems": 128
+        },
+        "value_type": {
+          "id": 0,
+          "type": "float"
+        },
+        "id": 1421727703,
+        "type": "sequence_container",
+        "description": "Cell boundaries along the Y axis"
+      },
+      "Z Coordinates": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minItems": 1,
+          "maxItems": 128
+        },
+        "value_type": {
+          "id": 0,
+          "type": "float"
+        },
+        "id": 1421727703,
+        "type": "sequence_container",
+        "description": "Cell boundaries along the Z axis"
+      }
+    },
+    "id": 4245181320,
+    "name": "struct VoxelShapes::SerializableVoxelShape",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Value": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0
+        },
+        "id": 0,
+        "type": "uint16"
+      }
+    },
+    "id": 1101503948,
+    "name": "class VoxelShapes::RegistryHandle",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Name Map": {
+        "required": true,
+        "deprecated": false,
+        "key_type": {
+          "id": 2715320761,
+          "name": "hashed_string",
+          "type": "object"
+        },
+        "mapped_type": {
+          "id": 1101503948,
+          "name": "class VoxelShapes::RegistryHandle",
+          "type": "object"
+        },
+        "id": 2123129820,
+        "type": "associative_container",
+        "description": "Voxel shape name-to-handle mappings"
+      },
+      "Shapes": {
+        "required": true,
+        "deprecated": false,
+        "value_type": {
+          "id": 4245181320,
+          "name": "struct VoxelShapes::SerializableVoxelShape",
+          "type": "object"
+        },
+        "id": 219982179,
+        "type": "sequence_container",
+        "description": "Voxel shape structural data"
+      }
+    },
+    "id": 4113682996,
+    "name": "struct VoxelShapesPacketPayload",
+    "type": "object"
+  },
+  {
+    "parents": [],
+    "setters": [
+      {
+        "id": 4113682996,
+        "name": "struct VoxelShapesPacketPayload",
+        "type": "object"
+      }
+    ],
+    "cereal_properties": {
+      "[cereal:packet]": 337,
+      "[cereal:packet_details]": "Sends the serializable voxel shapes data to the client as it's needed on both the client and server."
+    },
+    "id": 4149212477,
+    "name": "VoxelShapesPacket",
+    "type": "object",
+    "description": "Syncs client with server voxel shape data on world join. This packet contains a copy of all behavior pack voxel shapes data."
+  },
+  {
+    "members": {
       "Data": {
         "required": true,
         "deprecated": false,
@@ -26988,6 +27900,17 @@
         "type": "string",
         "description": "The path through the property that needs updating"
       },
+      "Path Update Count": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0,
+          "maximum": 4294967294.0
+        },
+        "id": 0,
+        "type": "uint32",
+        "description": "The number of times this path has updated. Resets if the entire property has changed."
+      },
       "Property": {
         "required": true,
         "deprecated": false,
@@ -26999,7 +27922,7 @@
         "type": "string",
         "description": "The name of the property in the data store that has changed"
       },
-      "Update Count": {
+      "Property Update Count": {
         "required": true,
         "deprecated": false,
         "constraint": {
@@ -27008,7 +27931,7 @@
         },
         "id": 0,
         "type": "uint32",
-        "description": "The number of times this property has updated"
+        "description": "The number of times this property has updated. Does not increment unless the entire property updates"
       }
     },
     "id": 3726916960,
@@ -27164,5 +28087,86 @@
     "name": "ClientboundDataStorePacket",
     "type": "object",
     "description": "Sends a list of data store properties from the server to the client."
+  },
+  {
+    "id": 831548923,
+    "name": "Clientbound Data Driven UI Close All Screens Payload",
+    "type": "object"
+  },
+  {
+    "parents": [],
+    "setters": [
+      {
+        "id": 831548923,
+        "name": "Clientbound Data Driven UI Close All Screens Payload",
+        "type": "object"
+      }
+    ],
+    "cereal_properties": {
+      "[cereal:packet]": 334,
+      "[cereal:packet_details]": ""
+    },
+    "id": 2177342058,
+    "name": "ClientboundDataDrivenUICloseAllScreensPacket",
+    "type": "object",
+    "description": "Allows the server to tell the client to close all the Data Driven UI screens."
+  },
+  {
+    "id": 2977847550,
+    "name": "Clientbound Data Driven UI Reload Payload",
+    "type": "object"
+  },
+  {
+    "parents": [],
+    "setters": [
+      {
+        "id": 2977847550,
+        "name": "Clientbound Data Driven UI Reload Payload",
+        "type": "object"
+      }
+    ],
+    "cereal_properties": {
+      "[cereal:packet]": 335,
+      "[cereal:packet_details]": ""
+    },
+    "id": 4117516047,
+    "name": "ClientboundDataDrivenUIReloadPacket",
+    "type": "object",
+    "description": "Allows the server to tell the client to reload the Data Driven UI."
+  },
+  {
+    "members": {
+      "ScreenId": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxLength": 500
+        },
+        "id": 0,
+        "type": "string",
+        "description": "The ID of the screen to show"
+      }
+    },
+    "id": 1267480178,
+    "name": "Clientbound Data Driven UI Show Screen Payload",
+    "type": "object"
+  },
+  {
+    "parents": [],
+    "setters": [
+      {
+        "id": 1267480178,
+        "name": "Clientbound Data Driven UI Show Screen Payload",
+        "type": "object"
+      }
+    ],
+    "cereal_properties": {
+      "[cereal:packet]": 333,
+      "[cereal:packet_details]": ""
+    },
+    "id": 2581768811,
+    "name": "ClientboundDataDrivenUIShowScreenPacket",
+    "type": "object",
+    "description": "Allows the server to tell the client to show a Data Driven UI screen."
   }
 ]

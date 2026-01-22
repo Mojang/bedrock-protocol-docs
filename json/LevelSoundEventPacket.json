@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "4285361124",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
     "definitions": {
         "4004946602": {
             "title": "Vec3",
@@ -12,23 +12,17 @@
                 "X": {
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 0,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 0
                 },
                 "Y": {
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 1,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 1
                 },
                 "Z": {
                     "type": "number",
                     "x-underlying-type": "float",
-                    "x-ordinal-index": 2,
-                    "minimum": 1.1754943508222876e-38,
-                    "maximum": 3.4028234663852887e38
+                    "x-ordinal-index": 2
                 }
             },
             "required": [
@@ -49,9 +43,7 @@
         "Actor Unique Id": {
             "type": "integer",
             "x-underlying-type": "int64",
-            "x-ordinal-index": 6,
-            "minimum": -9223372036854776000.0,
-            "maximum": 9223372036854776000.0
+            "x-ordinal-index": 6
         },
         "Data": {
             "type": "integer",
@@ -59,9 +51,7 @@
             "x-serialization-options": [
                 "Compression"
             ],
-            "x-ordinal-index": 2,
-            "minimum": -2147483648.0,
-            "maximum": 2147483647.0
+            "x-ordinal-index": 2
         },
         "Event ID": {
             "title": "LevelSoundEvent",
@@ -606,7 +596,26 @@
                 "ImitateCamelHusk",
                 "SpearUse",
                 "WoodenSpearUse",
-                "Undefined"
+                "SaddleInWater",
+                "Undefined",
+                "StoneSpearAttackHit",
+                "IronSpearAttackHit",
+                "CopperSpearAttackHit",
+                "GoldenSpearAttackHit",
+                "DiamondSpearAttackHit",
+                "NetheriteSpearAttackHit",
+                "StoneSpearAttackMiss",
+                "IronSpearAttackMiss",
+                "CopperSpearAttackMiss",
+                "GoldenSpearAttackMiss",
+                "DiamondSpearAttackMiss",
+                "NetheriteSpearAttackMiss",
+                "StoneSpearUse",
+                "IronSpearUse",
+                "CopperSpearUse",
+                "GoldenSpearUse",
+                "DiamondSpearUse",
+                "NetheriteSpearUse"
             ],
             "x-underlying-type": "uint32",
             "x-serialization-options": [

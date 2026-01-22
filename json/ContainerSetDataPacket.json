@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "920402992",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
     "title": "ContainerSetDataPacket",
     "description": "This is sent from the server basically any time that the \"cooking\" state of the brewing stand or the furnace changes (i.e. the loading bar)",
     "type": "object",
@@ -21,9 +21,7 @@
             "x-serialization-options": [
                 "Compression"
             ],
-            "x-ordinal-index": 1,
-            "minimum": -2147483648.0,
-            "maximum": 2147483647.0
+            "x-ordinal-index": 1
         },
         "Value": {
             "type": "integer",
@@ -31,9 +29,7 @@
             "x-serialization-options": [
                 "Compression"
             ],
-            "x-ordinal-index": 2,
-            "minimum": -2147483648.0,
-            "maximum": 2147483647.0
+            "x-ordinal-index": 2
         }
     },
     "required": [

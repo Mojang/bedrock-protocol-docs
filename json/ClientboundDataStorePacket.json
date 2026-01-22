@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1005145003",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
     "definitions": {
         "3726916960": {
             "title": "Data Store Update",
@@ -43,6 +43,14 @@
                     "x-ordinal-index": 2,
                     "maxLength": 1000
                 },
+                "Path Update Count": {
+                    "description": "The number of times this path has updated. Resets if the entire property has changed.",
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 5,
+                    "minimum": 0.0,
+                    "maximum": 4294967294.0
+                },
                 "Property": {
                     "description": "The name of the property in the data store that has changed",
                     "type": "string",
@@ -50,8 +58,8 @@
                     "minLength": 1,
                     "maxLength": 1000
                 },
-                "Update Count": {
-                    "description": "The number of times this property has updated",
+                "Property Update Count": {
+                    "description": "The number of times this property has updated. Does not increment unless the entire property updates",
                     "type": "integer",
                     "x-underlying-type": "uint32",
                     "x-ordinal-index": 4,
@@ -63,8 +71,9 @@
                 "Data",
                 "Data Store Name",
                 "Path",
+                "Path Update Count",
                 "Property",
-                "Update Count"
+                "Property Update Count"
             ]
         },
         "1547361": {

@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2453260875",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
     "definitions": {
         "315535208": {
             "title": "Json::Value",
@@ -35,8 +35,7 @@
                 "Compression"
             ],
             "x-ordinal-index": 0,
-            "minimum": 0.0,
-            "maximum": 4294967295.0
+            "minimum": 0.0
         },
         "JSON Response": {
             "$ref": "#/definitions/315535208",

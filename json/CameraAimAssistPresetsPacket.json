@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2895740380",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
     "definitions": {
         "3607524763": {
             "title": "Identifier",
@@ -37,7 +37,7 @@
                     "description": "Optional. Default Aim-Assist targeting priority used for Blocks not found in 'blocks'.",
                     "type": "integer",
                     "x-underlying-type": "int32",
-                    "x-ordinal-index": 4,
+                    "x-ordinal-index": 5,
                     "minimum": 0.0,
                     "maximum": 100.0
                 },
@@ -65,9 +65,7 @@
                             },
                             "value": {
                                 "type": "integer",
-                                "x-underlying-type": "int32",
-                                "minimum": -2147483648.0,
-                                "maximum": 2147483647.0
+                                "x-underlying-type": "int32"
                             }
                         },
                         "minimum": 0.0,
@@ -88,9 +86,7 @@
                             },
                             "value": {
                                 "type": "integer",
-                                "x-underlying-type": "int32",
-                                "minimum": -2147483648.0,
-                                "maximum": 2147483647.0
+                                "x-underlying-type": "int32"
                             }
                         },
                         "minimum": 0.0,
@@ -103,9 +99,21 @@
                     "description": "Optional. Default Aim-Assist targeting priority used for Entities not found in 'entities'.",
                     "type": "integer",
                     "x-underlying-type": "int32",
-                    "x-ordinal-index": 3,
+                    "x-ordinal-index": 4,
                     "minimum": 0.0,
                     "maximum": 100.0
+                },
+                "entity_type_families": {
+                    "description": "Optional. Map of Entity type families to Aim-Assist targeting priority. Larger numbers have greater priority.",
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "integer",
+                        "x-underlying-type": "int32",
+                        "minimum": 0.0,
+                        "maximum": 100.0
+                    },
+                    "default": {},
+                    "x-ordinal-index": 3
                 }
             }
         },
@@ -135,7 +143,8 @@
                     "default": {
                         "blocks": [],
                         "block_tags": [],
-                        "entities": []
+                        "entities": [],
+                        "entity_type_families": []
                     },
                     "$ref": "#/definitions/1582287622",
                     "x-ordinal-index": 1
@@ -220,6 +229,15 @@
                         "$ref": "#/definitions/1493335182"
                     },
                     "x-ordinal-index": 1
+                },
+                "entity_type_families": {
+                    "description": "Optional. List of entity type families to exclude from aim assist targeting.",
+                    "type": "array",
+                    "default": [],
+                    "items": {
+                        "type": "string"
+                    },
+                    "x-ordinal-index": 3
                 }
             }
         }

@@ -2,8 +2,118 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1692583562",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
+    "definitions": {
+        "1494345208": {
+            "title": "MemoryCategoryCounter",
+            "type": "object",
+            "properties": {
+                "Category": {
+                    "title": "enum Memory::MemoryCategory",
+                    "type": "string",
+                    "enum": [
+                        "Unknown",
+                        "Invalid_SizeUnknown",
+                        "Actor",
+                        "ActorAnimation",
+                        "ActorRendering",
+                        "Balancer",
+                        "BlockTickingQueues",
+                        "Biome_Storage",
+                        "Cereal",
+                        "CircuitSystem",
+                        "Client",
+                        "Commands",
+                        "DBStorage",
+                        "Debug",
+                        "Documentation",
+                        "ECSSystems",
+                        "FMOD",
+                        "Fonts",
+                        "ImGui",
+                        "Input",
+                        "JsonUI",
+                        "JsonUI_ControlFactory_Json",
+                        "JsonUI_ControlTree",
+                        "JsonUI_ControlTree_ControlElement",
+                        "JsonUI_ControlTree_PopulateDataBinding",
+                        "JsonUI_ControlTree_PopulateFocus",
+                        "JsonUI_ControlTree_PopulateLayout",
+                        "JsonUI_ControlTree_PopulateOther",
+                        "JsonUI_ControlTree_PopulateSprite",
+                        "JsonUI_ControlTree_PopulateText",
+                        "JsonUI_ControlTree_PopulateTTS",
+                        "JsonUI_ControlTree_Visibility",
+                        "JsonUI_CreateUI",
+                        "JsonUI_Defs",
+                        "JsonUI_LayoutManager",
+                        "JsonUI_LayoutManager_RemoveDependencies",
+                        "JsonUI_LayoutManager_InitVariable",
+                        "Languages",
+                        "Level",
+                        "LevelStructures",
+                        "LevelChunk",
+                        "LevelChunkGen",
+                        "LevelChunkGenThreadLocal",
+                        "Network",
+                        "Marketplace",
+                        "Material_DragonCompiledDefinition",
+                        "Material_DragonMaterial",
+                        "Material_DragonResource",
+                        "Material_DragonUniformMap",
+                        "Material_RenderMaterial",
+                        "Material_RenderMaterialGroup",
+                        "Material_VariationManager",
+                        "Molang",
+                        "OreUI",
+                        "Persona",
+                        "Player",
+                        "RenderChunk",
+                        "RenderChunk_IndexBuffer",
+                        "RenderChunk_VertexBuffer",
+                        "Rendering",
+                        "Rendering_Library",
+                        "RequestLog",
+                        "ResourcePacks",
+                        "Sound",
+                        "SubChunk_BiomeData",
+                        "SubChunk_BlockData",
+                        "SubChunk_LightData",
+                        "Textures",
+                        "VR",
+                        "WeatherRenderer",
+                        "World_Generator",
+                        "Tasks",
+                        "Test",
+                        "Scripting",
+                        "Scripting_Runtime",
+                        "Scripting_Context",
+                        "Scripting_Context_Bindings_MC",
+                        "Scripting_Context_Bindings_GT",
+                        "Scripting_Context_Run",
+                        "DataDrivenUI",
+                        "DataDrivenUI_Defs"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Current Bytes": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Category",
+                "Current Bytes"
+            ]
+        }
+    },
     "title": "ServerboundDiagnosticsPacket",
     "description": "Sent from the client to the server IF ProfilerLite is enabled AND the creator toggle for additional client telemetry is enabled AND new telemetry data is ready (every 500 ms).",
     "type": "object",
@@ -11,65 +121,54 @@
         "AvgBeginFrameTimeMS": {
             "type": "number",
             "x-underlying-type": "float",
-            "x-ordinal-index": 3,
-            "minimum": 1.1754943508222876e-38,
-            "maximum": 3.4028234663852887e38
+            "x-ordinal-index": 3
         },
         "AvgClientSimTickTimeMS": {
             "type": "number",
             "x-underlying-type": "float",
-            "x-ordinal-index": 2,
-            "minimum": 1.1754943508222876e-38,
-            "maximum": 3.4028234663852887e38
+            "x-ordinal-index": 2
         },
         "AvgEndFrameTimeMS": {
             "type": "number",
             "x-underlying-type": "float",
-            "x-ordinal-index": 6,
-            "minimum": 1.1754943508222876e-38,
-            "maximum": 3.4028234663852887e38
+            "x-ordinal-index": 6
         },
         "AvgFps": {
             "type": "number",
             "x-underlying-type": "float",
-            "x-ordinal-index": 0,
-            "minimum": 1.1754943508222876e-38,
-            "maximum": 3.4028234663852887e38
+            "x-ordinal-index": 0
         },
         "AvgInputTimeMS": {
             "type": "number",
             "x-underlying-type": "float",
-            "x-ordinal-index": 4,
-            "minimum": 1.1754943508222876e-38,
-            "maximum": 3.4028234663852887e38
+            "x-ordinal-index": 4
         },
         "AvgRemainderTimePercent": {
             "type": "number",
             "x-underlying-type": "float",
-            "x-ordinal-index": 7,
-            "minimum": 1.1754943508222876e-38,
-            "maximum": 3.4028234663852887e38
+            "x-ordinal-index": 7
         },
         "AvgRenderTimeMS": {
             "type": "number",
             "x-underlying-type": "float",
-            "x-ordinal-index": 5,
-            "minimum": 1.1754943508222876e-38,
-            "maximum": 3.4028234663852887e38
+            "x-ordinal-index": 5
         },
         "AvgServerSimTickTimeMS": {
             "type": "number",
             "x-underlying-type": "float",
-            "x-ordinal-index": 1,
-            "minimum": 1.1754943508222876e-38,
-            "maximum": 3.4028234663852887e38
+            "x-ordinal-index": 1
         },
         "AvgUnaccountedTimePercent": {
             "type": "number",
             "x-underlying-type": "float",
-            "x-ordinal-index": 8,
-            "minimum": 1.1754943508222876e-38,
-            "maximum": 3.4028234663852887e38
+            "x-ordinal-index": 8
+        },
+        "Memory Category Values": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/1494345208"
+            },
+            "x-ordinal-index": 9
         }
     },
     "required": [
@@ -81,7 +180,8 @@
         "AvgRemainderTimePercent",
         "AvgRenderTimeMS",
         "AvgServerSimTickTimeMS",
-        "AvgUnaccountedTimePercent"
+        "AvgUnaccountedTimePercent",
+        "Memory Category Values"
     ],
     "$metaProperties": {
         "[cereal:packet]": 315,

@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "2581768811",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
+    "title": "ClientboundDataDrivenUIShowScreenPacket",
+    "description": "Allows the server to tell the client to show a Data Driven UI screen.",
+    "type": "object",
+    "properties": {
+        "ScreenId": {
+            "description": "The ID of the screen to show",
+            "type": "string",
+            "x-ordinal-index": 0,
+            "maxLength": 500
+        }
+    },
+    "required": [
+        "ScreenId"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 333,
+        "[cereal:packet_details]": ""
+    }
+}

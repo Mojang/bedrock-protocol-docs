@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "905956163",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
     "definitions": {
         "3489467127": {
             "title": "Achievement",
@@ -83,7 +83,8 @@
                         "OverOverkill",
                         "HeartTransplanter",
                         "StayHydrated",
-                        "MobKabob"
+                        "MobKabob",
+                        "AdventuringTime"
                     ],
                     "x-underlying-type": "uint8",
                     "x-serialization-options": [
@@ -107,9 +108,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 2,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 2
                 },
                 "Died in Raid?": {
                     "type": "boolean",
@@ -125,9 +124,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 0,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 0
                 },
                 "Instigator Mob Variant": {
                     "type": "integer",
@@ -135,9 +132,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 1,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 1
                 }
             },
             "required": [
@@ -157,9 +152,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 0,
-                    "minimum": -9223372036854776000.0,
-                    "maximum": 9223372036854776000.0
+                    "x-ordinal-index": 0
                 },
                 "Interaction Actor Color": {
                     "type": "integer",
@@ -177,9 +170,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 2,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 2
                 },
                 "Interaction Actor Variant": {
                     "type": "integer",
@@ -187,9 +178,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 3,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 3
                 },
                 "Interaction Type": {
                     "title": "enum MinecraftEventing::InteractionType",
@@ -239,9 +228,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 0,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 0
                 }
             },
             "required": [
@@ -259,8 +246,7 @@
                         "Compression"
                     ],
                     "x-ordinal-index": 0,
-                    "minimum": 0.0,
-                    "maximum": 4294967295.0
+                    "minimum": 0.0
                 },
                 "Contents Type": {
                     "type": "integer",
@@ -268,9 +254,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 1,
-                    "minimum": -32768.0,
-                    "maximum": 32767.0
+                    "x-ordinal-index": 1
                 },
                 "Fill Level": {
                     "type": "integer",
@@ -278,9 +262,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 2,
-                    "minimum": -32768.0,
-                    "maximum": 32767.0
+                    "x-ordinal-index": 2
                 }
             },
             "required": [
@@ -299,9 +281,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 3,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 3
                 },
                 "Instigator Actor ID": {
                     "type": "integer",
@@ -309,9 +289,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 0,
-                    "minimum": -9223372036854776000.0,
-                    "maximum": 9223372036854776000.0
+                    "x-ordinal-index": 0
                 },
                 "Instigator's Child Actor Type": {
                     "title": "ActorType",
@@ -324,7 +302,7 @@
                         "Animal",
                         "TamableAnimal",
                         "Ambient",
-                        "UndeadMob",
+                        "UndeadMonster",
                         "ZombieMonster",
                         "Arthropod",
                         "Minecart",
@@ -488,9 +466,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 1,
-                    "minimum": -9223372036854776000.0,
-                    "maximum": 9223372036854776000.0
+                    "x-ordinal-index": 1
                 },
                 "Trade Tier": {
                     "description": "-1 if not a trading actor.",
@@ -499,9 +475,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 4,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 4
                 },
                 "Trader Name": {
                     "description": "Empty if not a trading actor.",
@@ -530,9 +504,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 0,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 0
                 },
                 "Target Dimension ID": {
                     "description": "Currently supported: (0 -> Overworld, 1 -> Nether, 2 -> The End, 3 -> Undefined)",
@@ -541,9 +513,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 1,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 1
                 }
             },
             "required": [
@@ -600,9 +570,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 1,
-                    "minimum": -32768.0,
-                    "maximum": 32767.0
+                    "x-ordinal-index": 1
                 }
             },
             "required": [
@@ -620,9 +588,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 0,
-                    "minimum": -9223372036854776000.0,
-                    "maximum": 9223372036854776000.0
+                    "x-ordinal-index": 0
                 },
                 "Boss Type": {
                     "type": "integer",
@@ -630,9 +596,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 2,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 2
                 },
                 "Party Size": {
                     "type": "integer",
@@ -640,9 +604,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 1,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 1
                 }
             },
             "required": [
@@ -666,9 +628,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 1,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 1
                 },
                 "Error List": {
                     "type": "string",
@@ -681,9 +641,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 0,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 0
                 }
             },
             "required": [
@@ -713,9 +671,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 0,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 0
                 },
                 "Born Baby: Entity Variant": {
                     "type": "integer",
@@ -723,9 +679,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 1,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 1
                 }
             },
             "required": [
@@ -783,9 +737,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 1,
-                    "minimum": -32768.0,
-                    "maximum": 32767.0
+                    "x-ordinal-index": 1
                 }
             },
             "required": [
@@ -804,9 +756,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 0,
-                    "minimum": -32768.0,
-                    "maximum": 32767.0
+                    "x-ordinal-index": 0
                 }
             },
             "required": [
@@ -837,9 +787,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 0,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 0
                 },
                 "Success": {
                     "type": "boolean",
@@ -855,9 +803,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 1,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 1
                 }
             },
             "required": [
@@ -876,9 +822,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 0,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 0
                 }
             },
             "required": [
@@ -895,9 +839,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 0,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 0
                 },
                 "Was Targeting Bartering Player": {
                     "type": "boolean",
@@ -923,9 +865,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 0,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 0
                 }
             },
             "required": [
@@ -961,9 +901,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 1,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 1
                 }
             },
             "required": [
@@ -978,30 +916,22 @@
                 "Count": {
                     "type": "integer",
                     "x-underlying-type": "int32",
-                    "x-ordinal-index": 3,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 3
                 },
                 "Item Aux": {
                     "type": "integer",
                     "x-underlying-type": "int32",
-                    "x-ordinal-index": 1,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 1
                 },
                 "Item Id": {
                     "type": "integer",
                     "x-underlying-type": "int16",
-                    "x-ordinal-index": 0,
-                    "minimum": -32768.0,
-                    "maximum": 32767.0
+                    "x-ordinal-index": 0
                 },
                 "Use Method": {
                     "type": "integer",
                     "x-underlying-type": "int32",
-                    "x-ordinal-index": 2,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 2
                 }
             },
             "required": [
@@ -1024,9 +954,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 0,
-                    "minimum": -9223372036854776000.0,
-                    "maximum": 9223372036854776000.0
+                    "x-ordinal-index": 0
                 }
             },
             "required": [

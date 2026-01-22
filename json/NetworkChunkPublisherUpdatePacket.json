@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "43940255",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.21.130",
-    "x-protocol-version": 897,
+    "x-minecraft-version": "1.26.0",
+    "x-protocol-version": 924,
     "definitions": {
         "820712576": {
             "title": "BlockPos",
@@ -15,9 +15,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 0,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 0
                 },
                 "Y": {
                     "type": "integer",
@@ -25,9 +23,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 1,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 1
                 },
                 "Z": {
                     "type": "integer",
@@ -35,9 +31,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 2,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 2
                 }
             },
             "required": [
@@ -56,9 +50,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 0,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 0
                 },
                 "Z": {
                     "type": "integer",
@@ -66,9 +58,7 @@
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 1,
-                    "minimum": -2147483648.0,
-                    "maximum": 2147483647.0
+                    "x-ordinal-index": 1
                 }
             },
             "required": [
@@ -92,8 +82,7 @@
                 "Compression"
             ],
             "x-ordinal-index": 1,
-            "minimum": 0.0,
-            "maximum": 4294967295.0
+            "minimum": 0.0
         },
         "Server Built Chunks List": {
             "type": "array",
