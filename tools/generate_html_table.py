@@ -118,6 +118,22 @@ class PacketDocGenerator:
         if 'enum' in field_data:
             return field_data.get('title', 'enum')
         
+        # Check for additionalProperties
+        if field_data.get('type') == 'object' and 'additionalProperties' in field_data:
+            additional_props = field_data['additionalProperties']
+            if additional_props.get('type') == 'object' and 'properties' in additional_props:
+                props = additional_props['properties']
+                key_type = 'string'
+                value_type = 'object'
+                if 'key' in props:
+                    key_type = PacketDocGenerator.get_underlying_type(props['key'], definitions)
+                if 'value' in props:
+                    value_type = PacketDocGenerator.get_underlying_type(props['value'], definitions)
+                return f"object&lt;{key_type}, {value_type}&gt;"
+            else:
+                value_type = PacketDocGenerator.get_underlying_type(additional_props, definitions)
+                return f"object&lt;string, {value_type}&gt;"
+        
         # Fallback to basic type
         return field_data.get('type', 'unknown')
     
@@ -347,6 +363,17 @@ class PacketDocGenerator:
                                 f"{ref_title} (Array Item)", 
                                 1  # Nested indent
                             )
+            # Check if this is an object with additionalProperties (map type)
+            elif field_data.get('type') == 'object' and 'additionalProperties' in field_data:
+                additional_props = field_data['additionalProperties']
+                if additional_props.get('type') == 'object' and 'properties' in additional_props:
+                    # Build a nested table showing key and value structure
+                    nested_html = self.generate_nested_table(
+                        additional_props,
+                        definitions,
+                        "Map Entry",
+                        1  # Nested indent
+                    )
             
             # Build the main row
             html.append('<tr>')

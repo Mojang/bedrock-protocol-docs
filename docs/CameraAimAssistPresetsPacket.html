@@ -180,26 +180,84 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>entities</strong></td>
-<td>object</td>
+<td rowspan="2"><strong>entities</strong></td>
+<td>object&lt;Reference, int32&gt;</td>
 <td>0</td>
 <td>Optional. Map of Entity identifiers to Aim-Assist targeting priority. Larger numbers have greater priority.</td>
 </tr>
 <tr>
-<td><strong>blocks</strong></td>
-<td>object</td>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>Map Entry</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>key</strong></td>
+<td>Reference</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>value</strong></td>
+<td>int32</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>blocks</strong></td>
+<td>object&lt;Reference, int32&gt;</td>
 <td>1</td>
 <td>Optional. Map of Block identifiers to Aim-Assist targeting priority. Larger numbers have greater priority.</td>
 </tr>
 <tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>Map Entry</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>key</strong></td>
+<td>Reference</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>value</strong></td>
+<td>int32</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
 <td><strong>block_tags</strong></td>
-<td>object</td>
+<td>object&lt;string, int32&gt;</td>
 <td>2</td>
 <td>Optional. Map of Block tags to Aim-Assist targeting priority. Larger numbers have greater priority.</td>
 </tr>
 <tr>
 <td><strong>entity_type_families</strong></td>
-<td>object</td>
+<td>object&lt;string, int32&gt;</td>
 <td>3</td>
 <td>Optional. Map of Entity type families to Aim-Assist targeting priority. Larger numbers have greater priority.</td>
 </tr>
@@ -302,10 +360,39 @@
 <td>Optional. List of item identifiers that will target liquid blocks with aim-assist when being held.</td>
 </tr>
 <tr>
-<td><strong>item_settings</strong></td>
-<td>object</td>
+<td rowspan="2"><strong>item_settings</strong></td>
+<td>object&lt;Reference, Reference&gt;</td>
 <td>3</td>
 <td>Optional. Map of Item identifiers to Aim-Assist Category names found in the specified &#x27;categories&#x27;.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>Map Entry</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>key</strong></td>
+<td>Reference</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>value</strong></td>
+<td>Reference</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
 </tr>
 <tr>
 <td><strong>default_item_settings</strong></td>
