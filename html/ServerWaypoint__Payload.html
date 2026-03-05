@@ -1,0 +1,30 @@
+<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/ServerWaypoint__Payload.svg" alt="ServerWaypoint::Payload">
+<br><table><col width="10%"><col width="10%"><col width="15%"><col width="80%"><tr><th>Field Name</th><th>Field Type</th><th>Field Constraints</th><th>Field Notes</th></tr><tr><td>UpdateFlag</td>
+<td>unsigned int</td>
+<td>&lt;div style="padding-left: 0px;"&gt;Minimum = 0&lt;/div&gt;</td>
+<td>A bitflag uint used to map to which of the optional values in this payload should be updated.</td>
+</tr><tr><td>IsVisible</td>
+<td>bool</td>
+<td></td>
+<td>Boolean used to tell the client if the Waypoint is visible or not.</td>
+</tr><tr><td>WorldPosition</td>
+<td>WorldPosition</td>
+<td></td>
+<td>The Vec3 position and DimensionID of the waypoint.</td>
+</tr><tr><td>TextureId</td>
+<td>unsigned int</td>
+<td>&lt;div style="padding-left: 0px;"&gt;Minimum = 0&lt;/div&gt;</td>
+<td>A runtime id used to select which texture the Waypoint should use.</td>
+</tr><tr><td>Color</td>
+<td>Color</td>
+<td></td>
+<td>The color that the client with tint the waypoint texture.</td>
+</tr><tr><td>ClientPositionAuthority</td>
+<td>bool</td>
+<td></td>
+<td>Boolean that if true the client will update the Waypoints position per tick.</td>
+</tr><tr><td>ActorUniqueID</td>
+<td>ActorUniqueID</td>
+<td></td>
+<td>The entity id that Waypoint will be attached to.</td>
+</tr></table></body> </html>

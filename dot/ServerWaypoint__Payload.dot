@@ -1,0 +1,58 @@
+digraph "ServerWaypoint::Payload" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+0 -> 5
+5 -> 6
+6 -> 7
+7 -> 8
+6 -> 9
+9 -> 10
+6 -> 11
+11 -> 12
+5 -> 13
+13 -> 14
+14 -> 15
+0 -> 16
+16 -> 17
+0 -> 18
+18 -> 19
+19 -> 20
+0 -> 21
+21 -> 22
+0 -> 23
+23 -> 24
+24 -> 25
+
+0 [label="ServerWaypoint::Payload",comment="name: \"ServerWaypoint::Payload\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="UpdateFlag",comment="name: \"UpdateFlag\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"A bitflag uint used to map to which of the optional values in this payload should be updated.\""];
+2 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"A bitflag uint used to map to which of the optional values in this payload should be updated.\""];
+3 [label="IsVisible",comment="name: \"IsVisible\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"Boolean used to tell the client if the Waypoint is visible or not.\""];
+4 [label="bool",comment="name: \"bool\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"Boolean used to tell the client if the Waypoint is visible or not.\""];
+5 [label="WorldPosition",comment="name: \"WorldPosition\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"The Vec3 position and DimensionID of the waypoint.\""];
+6 [label="Position",comment="name: \"Position\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"The Vec3 position in the dimension.\""];
+7 [label="X",comment="name: \"X\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="float",comment="name: \"float\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+9 [label="Y",comment="name: \"Y\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+10 [label="float",comment="name: \"float\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+11 [label="Z",comment="name: \"Z\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+12 [label="float",comment="name: \"float\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+13 [label="DimensionType",comment="name: \"DimensionType\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"The runtime id of the dimension.\""];
+14 [label="value",comment="name: \"value\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+15 [label="varint",comment="name: \"varint\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+16 [label="TextureId",comment="name: \"TextureId\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 0, notes: \"A runtime id used to select which texture the Waypoint should use.\""];
+17 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 512, notes: \"A runtime id used to select which texture the Waypoint should use.\""];
+18 [label="Color",comment="name: \"Color\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 0, notes: \"The color that the client with tint the waypoint texture.\""];
+19 [label="Color",comment="name: \"Color\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+20 [label="int",comment="name: \"int\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+21 [label="ClientPositionAuthority",comment="name: \"ClientPositionAuthority\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 0, notes: \"Boolean that if true the client will update the Waypoints position per tick.\""];
+22 [label="bool",comment="name: \"bool\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 512, notes: \"Boolean that if true the client will update the Waypoints position per tick.\""];
+23 [label="ActorUniqueID",comment="name: \"ActorUniqueID\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 0, notes: \"The entity id that Waypoint will be attached to.\""];
+24 [label="Actor Unique ID",comment="name: \"Actor Unique ID\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+25 [label="varint64",comment="name: \"varint64\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;8;10;12;15;17;20;22;25}
+
+}

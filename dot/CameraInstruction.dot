@@ -124,11 +124,15 @@ rankdir = LR
 120 -> 121
 112 -> 122
 122 -> 123
-0 -> 124
+84 -> 124
 124 -> 125
-125 -> 126
-0 -> 127
-127 -> 128
+84 -> 126
+126 -> 127
+0 -> 128
+128 -> 129
+129 -> 130
+0 -> 131
+131 -> 132
 
 0 [label="CameraInstruction",comment="name: \"CameraInstruction\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Set",comment="name: \"Set\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -254,11 +258,15 @@ rankdir = LR
 121 [label="float",comment="name: \"float\", typeName: \"\", id: 121, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 122 [label="Key frame easing func",comment="name: \"Key frame easing func\", typeName: \"\", id: 122, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 123 [label="enum easing_function",comment="name: \"enum easing_function\", typeName: \"\", id: 123, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-124 [label="AttachToEntity",comment="name: \"AttachToEntity\", typeName: \"\", id: 124, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-125 [label="Entity Actor ID",comment="name: \"Entity Actor ID\", typeName: \"\", id: 125, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-126 [label="int64",comment="name: \"int64\", typeName: \"\", id: 126, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-127 [label="DetachFromEntity",comment="name: \"DetachFromEntity\", typeName: \"\", id: 127, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-128 [label="bool",comment="name: \"bool\", typeName: \"\", id: 128, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;3;6;8;12;14;16;19;21;25;27;29;32;34;37;39;41;43;45;47;51;53;55;58;60;62;66;68;70;72;74;77;79;81;83;86;88;94;96;98;104;106;108;115;117;119;121;123;126;128}
+124 [label="splineIdentifier",comment="name: \"splineIdentifier\", typeName: \"\", id: 124, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+125 [label="string",comment="name: \"string\", typeName: \"\", id: 125, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+126 [label="loadFromJson",comment="name: \"loadFromJson\", typeName: \"\", id: 126, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+127 [label="bool",comment="name: \"bool\", typeName: \"\", id: 127, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+128 [label="AttachToEntity",comment="name: \"AttachToEntity\", typeName: \"\", id: 128, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+129 [label="Entity Actor ID",comment="name: \"Entity Actor ID\", typeName: \"\", id: 129, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+130 [label="int64",comment="name: \"int64\", typeName: \"\", id: 130, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+131 [label="DetachFromEntity",comment="name: \"DetachFromEntity\", typeName: \"\", id: 131, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+132 [label="bool",comment="name: \"bool\", typeName: \"\", id: 132, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3;6;8;12;14;16;19;21;25;27;29;32;34;37;39;41;43;45;47;51;53;55;58;60;62;66;68;70;72;74;77;79;81;83;86;88;94;96;98;104;106;108;115;117;119;121;123;125;127;130;132}
 
 }

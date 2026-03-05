@@ -1,0 +1,2510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClientboundAttributeLayerSyncPacket (345)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        h4 {
+            color: #666;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        table {
+            background-color: white;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        th {
+            font-weight: bold;
+            text-align: left;
+            padding: 8px !important;
+        }
+        td {
+            padding: 8px !important;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #e8f4f8;
+        }
+        .description {
+            color: #555;
+            font-style: italic;
+            margin: 10px 0 20px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .packet-list {
+            columns: 3;
+            column-gap: 20px;
+        }
+        .packet-list li {
+            margin-bottom: 8px;
+            break-inside: avoid;
+        }
+        details {
+            margin: 10px 0;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            padding: 8px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            user-select: none;
+        }
+        summary:hover {
+            background-color: #e8e8e8;
+        }
+        details[open] summary {
+            background-color: #d4edff;
+            border-color: #3498db;
+            border-left: 4px solid #3498db;
+        }
+        @media (max-width: 900px) {
+            .packet-list {
+                columns: 2;
+            }
+        }
+        @media (max-width: 600px) {
+            .packet-list {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p><a href="index.html">← Back to Index</a></p>
+        <h1>ClientboundAttributeLayerSyncPacket (345)</h1>
+<div class="description">Syncs Attribute Layers to the Client (Currently disabled)</div>
+<div style="margin-left: 0px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Data (Required)</strong></td>
+<td>oneOf</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
+<strong>oneOf&lt;UpdateAttributeLayersData, UpdateAttributeLayerSettingsData, UpdateEnvironmentAttributesData, RemoveEnvironmentAttributesData&gt;:</strong>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th>Control Value [uint32]</th>
+<th>Type</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>UpdateAttributeLayersData</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>UpdateAttributeLayerSettingsData</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>UpdateEnvironmentAttributesData</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>RemoveEnvironmentAttributesData</strong></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>UpdateAttributeLayersData (Variant 0)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Attribute Layers (Required)</strong></td>
+<td>array&lt;AttributeLayerData&gt;</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>AttributeLayerData (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Name (Required)</strong></td>
+<td>string</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Dimension (Required)</strong></td>
+<td>DimensionType</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>DimensionType</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>value (Required)</strong></td>
+<td>varint32</td>
+<td>0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Settings (Required)</strong></td>
+<td>AttributeLayerSettings</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>AttributeLayerSettings</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Priority (Required)</strong></td>
+<td>int32</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Weight (Required)</strong></td>
+<td>oneOf</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
+<strong>oneOf&lt;float, string&gt;:</strong>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th>Control Value [uint32]</th>
+<th>Type</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>float</strong></td>
+<td>Underlying: float</td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>string</strong></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>Enabled (Required)</strong></td>
+<td>boolean</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>TransitionsPaused (Required)</strong></td>
+<td>boolean</td>
+<td>3</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Attributes (Required)</strong></td>
+<td>array&lt;EnvironmentAttributeData&gt;</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>EnvironmentAttributeData (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AttributeName (Required)</strong></td>
+<td>string</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>FromAttribute</strong></td>
+<td>oneOf</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
+<strong>oneOf&lt;BoolAttributeData, FloatAttributeData, ColorAttributeData&gt;:</strong>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th>Control Value [uint32]</th>
+<th>Type</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>BoolAttributeData</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>FloatAttributeData</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>ColorAttributeData</strong></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>BoolAttributeData (Variant 0)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>value (Required)</strong></td>
+<td>boolean</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>operation</strong></td>
+<td>string</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>OVERRIDE</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>ALPHA_BLEND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>AND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>NAND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>OR</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><code>NOR</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td><code>XOR</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td><code>XNOR</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>FloatAttributeData (Variant 1)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>value (Required)</strong></td>
+<td>float</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>operation</strong></td>
+<td>string</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>OVERRIDE</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>ALPHA_BLEND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>ADD</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>SUBTRACT</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>MULTIPLY</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><code>MINIMUM</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td><code>MAXIMUM</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>constraintMin</strong></td>
+<td>float</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>constraintMax</strong></td>
+<td>float</td>
+<td>3</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>ColorAttributeData (Variant 2)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>value (Required)</strong></td>
+<td>Color255RGBA</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>operation</strong></td>
+<td>string</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>OVERRIDE</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>ALPHA_BLEND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>ADD</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>SUBTRACT</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>MULTIPLY</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Attribute (Required)</strong></td>
+<td>oneOf</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
+<strong>oneOf&lt;BoolAttributeData, FloatAttributeData, ColorAttributeData&gt;:</strong>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th>Control Value [uint32]</th>
+<th>Type</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>BoolAttributeData</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>FloatAttributeData</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>ColorAttributeData</strong></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>BoolAttributeData (Variant 0)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>value (Required)</strong></td>
+<td>boolean</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>operation</strong></td>
+<td>string</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>OVERRIDE</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>ALPHA_BLEND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>AND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>NAND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>OR</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><code>NOR</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td><code>XOR</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td><code>XNOR</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>FloatAttributeData (Variant 1)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>value (Required)</strong></td>
+<td>float</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>operation</strong></td>
+<td>string</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>OVERRIDE</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>ALPHA_BLEND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>ADD</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>SUBTRACT</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>MULTIPLY</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><code>MINIMUM</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td><code>MAXIMUM</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>constraintMin</strong></td>
+<td>float</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>constraintMax</strong></td>
+<td>float</td>
+<td>3</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>ColorAttributeData (Variant 2)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>value (Required)</strong></td>
+<td>Color255RGBA</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>operation</strong></td>
+<td>string</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>OVERRIDE</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>ALPHA_BLEND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>ADD</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>SUBTRACT</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>MULTIPLY</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>ToAttribute</strong></td>
+<td>oneOf</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
+<strong>oneOf&lt;BoolAttributeData, FloatAttributeData, ColorAttributeData&gt;:</strong>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th>Control Value [uint32]</th>
+<th>Type</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>BoolAttributeData</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>FloatAttributeData</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>ColorAttributeData</strong></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>BoolAttributeData (Variant 0)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>value (Required)</strong></td>
+<td>boolean</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>operation</strong></td>
+<td>string</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>OVERRIDE</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>ALPHA_BLEND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>AND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>NAND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>OR</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><code>NOR</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td><code>XOR</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td><code>XNOR</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>FloatAttributeData (Variant 1)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>value (Required)</strong></td>
+<td>float</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>operation</strong></td>
+<td>string</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>OVERRIDE</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>ALPHA_BLEND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>ADD</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>SUBTRACT</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>MULTIPLY</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><code>MINIMUM</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td><code>MAXIMUM</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>constraintMin</strong></td>
+<td>float</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>constraintMax</strong></td>
+<td>float</td>
+<td>3</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>ColorAttributeData (Variant 2)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>value (Required)</strong></td>
+<td>Color255RGBA</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>operation</strong></td>
+<td>string</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>OVERRIDE</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>ALPHA_BLEND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>ADD</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>SUBTRACT</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>MULTIPLY</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+</div></td>
+</tr>
+<tr>
+<td><strong>CurrentTransitionTicks (Required)</strong></td>
+<td>uint32</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>TotalTransitionTicks (Required)</strong></td>
+<td>uint32</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Easing (Required)</strong></td>
+<td>string</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>linear</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>spring</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>in_quad</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>out_quad</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>in_out_quad</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><code>in_cubic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td><code>out_cubic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td><code>in_out_cubic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td><code>in_quart</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td><code>out_quart</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td><code>in_out_quart</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td><code>in_quint</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td><code>out_quint</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">13</td>
+<td><code>in_out_quint</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td><code>in_sine</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td><code>out_sine</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">16</td>
+<td><code>in_out_sine</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">17</td>
+<td><code>in_expo</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">18</td>
+<td><code>out_expo</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">19</td>
+<td><code>in_out_expo</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">20</td>
+<td><code>in_circ</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">21</td>
+<td><code>out_circ</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">22</td>
+<td><code>in_out_circ</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">23</td>
+<td><code>in_bounce</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">24</td>
+<td><code>out_bounce</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">25</td>
+<td><code>in_out_bounce</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">26</td>
+<td><code>in_back</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">27</td>
+<td><code>out_back</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">28</td>
+<td><code>in_out_back</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">29</td>
+<td><code>in_elastic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">30</td>
+<td><code>out_elastic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">31</td>
+<td><code>in_out_elastic</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>UpdateAttributeLayerSettingsData (Variant 1)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Attribute Layer Name (Required)</strong></td>
+<td>string</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Attribute Layer Dimension (Required)</strong></td>
+<td>DimensionType</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>DimensionType</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>value (Required)</strong></td>
+<td>varint32</td>
+<td>0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Attributes Layer Settings (Required)</strong></td>
+<td>AttributeLayerSettings</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>AttributeLayerSettings</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Priority (Required)</strong></td>
+<td>int32</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Weight (Required)</strong></td>
+<td>oneOf</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
+<strong>oneOf&lt;float, string&gt;:</strong>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th>Control Value [uint32]</th>
+<th>Type</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>float</strong></td>
+<td>Underlying: float</td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>string</strong></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>Enabled (Required)</strong></td>
+<td>boolean</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>TransitionsPaused (Required)</strong></td>
+<td>boolean</td>
+<td>3</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>UpdateEnvironmentAttributesData (Variant 2)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Attribute Layer Name (Required)</strong></td>
+<td>string</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Attribute Layer Dimension (Required)</strong></td>
+<td>DimensionType</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>DimensionType</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>value (Required)</strong></td>
+<td>varint32</td>
+<td>0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Attributes (Required)</strong></td>
+<td>array&lt;EnvironmentAttributeData&gt;</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>EnvironmentAttributeData (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AttributeName (Required)</strong></td>
+<td>string</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>FromAttribute</strong></td>
+<td>oneOf</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
+<strong>oneOf&lt;BoolAttributeData, FloatAttributeData, ColorAttributeData&gt;:</strong>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th>Control Value [uint32]</th>
+<th>Type</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>BoolAttributeData</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>FloatAttributeData</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>ColorAttributeData</strong></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>BoolAttributeData (Variant 0)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>value (Required)</strong></td>
+<td>boolean</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>operation</strong></td>
+<td>string</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>OVERRIDE</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>ALPHA_BLEND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>AND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>NAND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>OR</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><code>NOR</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td><code>XOR</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td><code>XNOR</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>FloatAttributeData (Variant 1)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>value (Required)</strong></td>
+<td>float</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>operation</strong></td>
+<td>string</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>OVERRIDE</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>ALPHA_BLEND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>ADD</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>SUBTRACT</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>MULTIPLY</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><code>MINIMUM</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td><code>MAXIMUM</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>constraintMin</strong></td>
+<td>float</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>constraintMax</strong></td>
+<td>float</td>
+<td>3</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>ColorAttributeData (Variant 2)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>value (Required)</strong></td>
+<td>Color255RGBA</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>operation</strong></td>
+<td>string</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>OVERRIDE</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>ALPHA_BLEND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>ADD</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>SUBTRACT</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>MULTIPLY</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Attribute (Required)</strong></td>
+<td>oneOf</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
+<strong>oneOf&lt;BoolAttributeData, FloatAttributeData, ColorAttributeData&gt;:</strong>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th>Control Value [uint32]</th>
+<th>Type</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>BoolAttributeData</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>FloatAttributeData</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>ColorAttributeData</strong></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>BoolAttributeData (Variant 0)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>value (Required)</strong></td>
+<td>boolean</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>operation</strong></td>
+<td>string</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>OVERRIDE</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>ALPHA_BLEND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>AND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>NAND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>OR</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><code>NOR</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td><code>XOR</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td><code>XNOR</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>FloatAttributeData (Variant 1)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>value (Required)</strong></td>
+<td>float</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>operation</strong></td>
+<td>string</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>OVERRIDE</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>ALPHA_BLEND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>ADD</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>SUBTRACT</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>MULTIPLY</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><code>MINIMUM</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td><code>MAXIMUM</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>constraintMin</strong></td>
+<td>float</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>constraintMax</strong></td>
+<td>float</td>
+<td>3</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>ColorAttributeData (Variant 2)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>value (Required)</strong></td>
+<td>Color255RGBA</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>operation</strong></td>
+<td>string</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>OVERRIDE</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>ALPHA_BLEND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>ADD</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>SUBTRACT</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>MULTIPLY</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>ToAttribute</strong></td>
+<td>oneOf</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
+<strong>oneOf&lt;BoolAttributeData, FloatAttributeData, ColorAttributeData&gt;:</strong>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th>Control Value [uint32]</th>
+<th>Type</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>BoolAttributeData</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>FloatAttributeData</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>ColorAttributeData</strong></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>BoolAttributeData (Variant 0)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>value (Required)</strong></td>
+<td>boolean</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>operation</strong></td>
+<td>string</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>OVERRIDE</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>ALPHA_BLEND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>AND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>NAND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>OR</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><code>NOR</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td><code>XOR</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td><code>XNOR</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>FloatAttributeData (Variant 1)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>value (Required)</strong></td>
+<td>float</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>operation</strong></td>
+<td>string</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>OVERRIDE</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>ALPHA_BLEND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>ADD</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>SUBTRACT</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>MULTIPLY</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><code>MINIMUM</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td><code>MAXIMUM</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>constraintMin</strong></td>
+<td>float</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>constraintMax</strong></td>
+<td>float</td>
+<td>3</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>ColorAttributeData (Variant 2)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>value (Required)</strong></td>
+<td>Color255RGBA</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>operation</strong></td>
+<td>string</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>OVERRIDE</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>ALPHA_BLEND</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>ADD</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>SUBTRACT</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>MULTIPLY</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+</div></td>
+</tr>
+<tr>
+<td><strong>CurrentTransitionTicks (Required)</strong></td>
+<td>uint32</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>TotalTransitionTicks (Required)</strong></td>
+<td>uint32</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Easing (Required)</strong></td>
+<td>string</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>linear</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>spring</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>in_quad</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>out_quad</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>in_out_quad</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><code>in_cubic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td><code>out_cubic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td><code>in_out_cubic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td><code>in_quart</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td><code>out_quart</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td><code>in_out_quart</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td><code>in_quint</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td><code>out_quint</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">13</td>
+<td><code>in_out_quint</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td><code>in_sine</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td><code>out_sine</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">16</td>
+<td><code>in_out_sine</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">17</td>
+<td><code>in_expo</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">18</td>
+<td><code>out_expo</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">19</td>
+<td><code>in_out_expo</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">20</td>
+<td><code>in_circ</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">21</td>
+<td><code>out_circ</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">22</td>
+<td><code>in_out_circ</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">23</td>
+<td><code>in_bounce</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">24</td>
+<td><code>out_bounce</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">25</td>
+<td><code>in_out_bounce</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">26</td>
+<td><code>in_back</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">27</td>
+<td><code>out_back</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">28</td>
+<td><code>in_out_back</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">29</td>
+<td><code>in_elastic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">30</td>
+<td><code>out_elastic</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">31</td>
+<td><code>in_out_elastic</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>RemoveEnvironmentAttributesData (Variant 3)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Attribute Layer Name (Required)</strong></td>
+<td>string</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Attribute Layer Dimension (Required)</strong></td>
+<td>DimensionType</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>DimensionType</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>value (Required)</strong></td>
+<td>varint32</td>
+<td>0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>Attributes (Required)</strong></td>
+<td>array&lt;string&gt;</td>
+<td>2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+    </div>
+</body>
+</html>

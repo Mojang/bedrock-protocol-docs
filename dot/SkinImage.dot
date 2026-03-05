@@ -1,0 +1,26 @@
+digraph "SkinImage" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+0 -> 5
+5 -> 6
+6 -> 7
+5 -> 8
+8 -> 9
+
+0 [label="SkinImage",comment="name: \"SkinImage\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Width",comment="name: \"Width\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="Height",comment="name: \"Height\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+5 [label="ImageBytes",comment="name: \"ImageBytes\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+6 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+9 [label="unsigned byte",comment="name: \"unsigned byte\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;9}
+
+}

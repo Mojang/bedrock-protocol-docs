@@ -1,0 +1,28 @@
+digraph "RemoveEnvironmentAttributesData" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+4 -> 5
+0 -> 6
+6 -> 7
+7 -> 8
+6 -> 9
+9 -> 10
+
+0 [label="RemoveEnvironmentAttributesData",comment="name: \"RemoveEnvironmentAttributesData\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Attribute Layer Name",comment="name: \"Attribute Layer Name\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="string",comment="name: \"string\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="Attribute Layer Dimension",comment="name: \"Attribute Layer Dimension\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="value",comment="name: \"value\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="varint",comment="name: \"varint\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+6 [label="Attributes",comment="name: \"Attributes\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+10 [label="string",comment="name: \"string\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;5;10}
+
+}

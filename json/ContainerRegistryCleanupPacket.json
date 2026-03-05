@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2122488333",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.0",
-    "x-protocol-version": 924,
+    "x-minecraft-version": "1.26.10",
+    "x-protocol-version": 944,
     "definitions": {
         "2021346555": {
             "title": "FullContainerName",
@@ -31,6 +31,9 @@
                         "RecipeConstructionContainer",
                         "RecipeNatureContainer",
                         "RecipeItemsContainer",
+                        "RecipeFoodContainer",
+                        "RecipeBlocksContainer",
+                        "RecipeFurnaceItemsContainer",
                         "RecipeSearchContainer",
                         "RecipeSearchBarContainer",
                         "RecipeEquipmentContainer",

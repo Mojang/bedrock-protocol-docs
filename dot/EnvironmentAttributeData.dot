@@ -1,0 +1,36 @@
+digraph "EnvironmentAttributeData" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+0 -> 5
+5 -> 6
+0 -> 7
+7 -> 8
+0 -> 9
+9 -> 10
+0 -> 11
+11 -> 12
+0 -> 13
+13 -> 14
+
+0 [label="EnvironmentAttributeData",comment="name: \"EnvironmentAttributeData\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="AttributeName",comment="name: \"AttributeName\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="string",comment="name: \"string\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="FromAttribute",comment="name: \"FromAttribute\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="",comment="name: \"\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+5 [label="Attribute",comment="name: \"Attribute\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+6 [label="",comment="name: \"\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+7 [label="ToAttribute",comment="name: \"ToAttribute\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="",comment="name: \"\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+9 [label="CurrentTransitionTicks",comment="name: \"CurrentTransitionTicks\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+10 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+11 [label="TotalTransitionTicks",comment="name: \"TotalTransitionTicks\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+12 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+13 [label="Easing",comment="name: \"Easing\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+14 [label="enum easing_function",comment="name: \"enum easing_function\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;6;8;10;12;14}
+
+}

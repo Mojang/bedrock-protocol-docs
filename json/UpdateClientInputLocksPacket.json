@@ -2,36 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2580383211",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.0",
-    "x-protocol-version": 924,
-    "definitions": {
-        "4004946602": {
-            "title": "Vec3",
-            "type": "object",
-            "properties": {
-                "X": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 0
-                },
-                "Y": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 1
-                },
-                "Z": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 2
-                }
-            },
-            "required": [
-                "X",
-                "Y",
-                "Z"
-            ]
-        }
-    },
+    "x-minecraft-version": "1.26.10",
+    "x-protocol-version": 944,
     "title": "UpdateClientInputLocksPacket",
     "description": "UpdateClientInputLocksPacket",
     "type": "object",
@@ -44,15 +16,10 @@
             ],
             "x-ordinal-index": 0,
             "minimum": 0.0
-        },
-        "Server Pos": {
-            "$ref": "#/definitions/4004946602",
-            "x-ordinal-index": 1
         }
     },
     "required": [
-        "Input Lock ComponentData",
-        "Server Pos"
+        "Input Lock ComponentData"
     ],
     "$metaProperties": {
         "[cereal:packet]": 196,

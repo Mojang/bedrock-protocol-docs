@@ -1,0 +1,248 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "1403455042",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.10",
+    "x-protocol-version": 944,
+    "definitions": {
+        "941965018": {
+            "title": "struct LocatorBarWaypointPayload",
+            "type": "object",
+            "properties": {
+                "ActionFlag": {
+                    "title": "enum ServerWaypointGroup::Action",
+                    "description": "Enum which defines if the Waypoint operation was an add, remove or update.",
+                    "type": "string",
+                    "enum": [
+                        "None",
+                        "Add",
+                        "Remove",
+                        "Update"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 2
+                },
+                "GroupHandle": {
+                    "description": "WaypointGroup::WaypointHandle used to lookup Waypoint in WaypointGroups.",
+                    "$ref": "#/definitions/3456071204",
+                    "x-ordinal-index": 0
+                },
+                "ServerWaypointPayload": {
+                    "description": "Contains the optional data to add or update the client Waypoint.",
+                    "$ref": "#/definitions/4264961054",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "ActionFlag",
+                "GroupHandle",
+                "ServerWaypointPayload"
+            ]
+        },
+        "1616419299": {
+            "title": "mce::UUID",
+            "type": "object",
+            "properties": {
+                "Least Significant Bits": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                },
+                "Most Significant Bits": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Least Significant Bits",
+                "Most Significant Bits"
+            ]
+        },
+        "3456071204": {
+            "title": "class WaypointGroup::WaypointHandle",
+            "type": "object",
+            "properties": {
+                "UUID": {
+                    "description": "mce::UUID used to lookup Waypoint in WaypointGroups.",
+                    "$ref": "#/definitions/1616419299",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "UUID"
+            ]
+        },
+        "4004946602": {
+            "title": "Vec3",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "Z": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "X",
+                "Y",
+                "Z"
+            ]
+        },
+        "4264961054": {
+            "title": "ServerWaypoint::Payload",
+            "type": "object",
+            "properties": {
+                "ActorUniqueID": {
+                    "description": "The entity id that Waypoint will be attached to.",
+                    "$ref": "#/definitions/1221684255",
+                    "x-ordinal-index": 6
+                },
+                "ClientPositionAuthority": {
+                    "description": "Boolean that if true the client will update the Waypoints position per tick.",
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 5
+                },
+                "Color": {
+                    "description": "The color that the client with tint the waypoint texture.",
+                    "$ref": "#/definitions/1315424487",
+                    "x-ordinal-index": 4
+                },
+                "IsVisible": {
+                    "description": "Boolean used to tell the client if the Waypoint is visible or not.",
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 1
+                },
+                "TextureId": {
+                    "description": "A runtime id used to select which texture the Waypoint should use.",
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 3,
+                    "minimum": 0.0
+                },
+                "UpdateFlag": {
+                    "description": "A bitflag uint used to map to which of the optional values in this payload should be updated.",
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                },
+                "WorldPosition": {
+                    "description": "The Vec3 position and DimensionID of the waypoint.",
+                    "$ref": "#/definitions/2304738551",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "UpdateFlag"
+            ]
+        },
+        "2304738551": {
+            "title": "WorldPosition",
+            "type": "object",
+            "properties": {
+                "DimensionType": {
+                    "description": "The runtime id of the dimension.",
+                    "$ref": "#/definitions/2872336518",
+                    "x-ordinal-index": 1
+                },
+                "Position": {
+                    "description": "The Vec3 position in the dimension.",
+                    "$ref": "#/definitions/4004946602",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "DimensionType",
+                "Position"
+            ]
+        },
+        "1221684255": {
+            "title": "ActorUniqueID",
+            "type": "object",
+            "properties": {
+                "Actor Unique ID": {
+                    "type": "integer",
+                    "x-underlying-type": "int64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Actor Unique ID"
+            ]
+        },
+        "2872336518": {
+            "title": "DimensionType",
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "value"
+            ]
+        },
+        "1315424487": {
+            "title": "Color",
+            "type": "object",
+            "properties": {
+                "Color": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Color"
+            ]
+        }
+    },
+    "title": "LocatorBarPacket",
+    "description": "Syncs LocatorBar changes on the server with the client.",
+    "type": "object",
+    "properties": {
+        "Waypoints": {
+            "description": "Array of LocatorBarWaypointPayload's",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/941965018"
+            },
+            "x-ordinal-index": 0,
+            "maxItems": 40000
+        }
+    },
+    "required": [
+        "Waypoints"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 341,
+        "[cereal:packet_details]": ""
+    }
+}

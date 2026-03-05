@@ -41,6 +41,8 @@ rankdir = LR
 81 -> 82
 41 -> 83
 83 -> 84
+41 -> 85
+85 -> 86
 
 41 [label="PackedItemUseLegacyInventoryTransaction",comment="name: \"PackedItemUseLegacyInventoryTransaction\", typeName: \"\", id: 41, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 42 [label="ID",comment="name: \"ID\", typeName: \"TypedClientNetId<struct ItemStackLegacyRequestIdTag,int,0>\", id: 42, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
@@ -67,8 +69,8 @@ rankdir = LR
 66 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 66, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 67 [label="Trigger Type",comment="name: \"Trigger Type\", typeName: \"\", id: 67, branchId: 0, recurseId: -1, attributes: 0, notes: \"PlayerInput if it's a direct result from a player's initial button input,		SimulationTick if the player is holding down the input button started from a previous tick.\""];
 68 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 68, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-69 [label="Position",comment="name: \"Position\", typeName: \"NetworkBlockPosition\", id: 69, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-70 [label="NetworkBlockPosition",comment="name: \"NetworkBlockPosition\", typeName: \"\", id: 70, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+69 [label="Position",comment="name: \"Position\", typeName: \"BlockPos\", id: 69, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+70 [label="BlockPos",comment="name: \"BlockPos\", typeName: \"\", id: 70, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 71 [label="Face",comment="name: \"Face\", typeName: \"\", id: 71, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 72 [label="varint",comment="name: \"varint\", typeName: \"\", id: 72, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 73 [label="Slot",comment="name: \"Slot\", typeName: \"\", id: 73, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -83,6 +85,8 @@ rankdir = LR
 82 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 82, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 83 [label="Client Interact Prediction",comment="name: \"Client Interact Prediction\", typeName: \"\", id: 83, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 84 [label="byte",comment="name: \"byte\", typeName: \"\", id: 84, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;46;49;53;56;59;62;64;66;68;70;72;74;76;78;80;82;84}
+85 [label="Client Cooldown State",comment="name: \"Client Cooldown State\", typeName: \"\", id: 85, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+86 [label="byte",comment="name: \"byte\", typeName: \"\", id: 86, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;46;49;53;56;59;62;64;66;68;70;72;74;76;78;80;82;84;86}
 
 }

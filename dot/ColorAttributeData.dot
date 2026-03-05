@@ -1,0 +1,14 @@
+digraph "ColorAttributeData" {
+rankdir = LR
+0
+0 -> 1
+0 -> 2
+2 -> 3
+
+0 [label="ColorAttributeData",comment="name: \"ColorAttributeData\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="value",comment="name: \"value\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="operation",comment="name: \"operation\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="enum ColorAttributeOperation",comment="name: \"enum ColorAttributeOperation\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3}
+
+}

@@ -1,16 +1,16 @@
 digraph "SyncedPlayerMovementSettings" {
 rankdir = LR
-149
-149 -> 150
-150 -> 151
-149 -> 152
-152 -> 153
+142
+142 -> 143
+143 -> 144
+142 -> 145
+145 -> 146
 
-149 [label="SyncedPlayerMovementSettings",comment="name: \"SyncedPlayerMovementSettings\", typeName: \"\", id: 149, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-150 [label="Rewind History Size",comment="name: \"Rewind History Size\", typeName: \"\", id: 150, branchId: 0, recurseId: -1, attributes: 0, notes: \"When using server authoritative movement mode, this determines the number of ticks the client keeps in history for use in processing corrections. Should at least account for the largest expected round trip latency. In Bedrock this is 40 ticks.\""];
-151 [label="varint",comment="name: \"varint\", typeName: \"\", id: 151, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-152 [label="Server Authoritative Block Breaking",comment="name: \"Server Authoritative Block Breaking\", typeName: \"\", id: 152, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-153 [label="bool",comment="name: \"bool\", typeName: \"\", id: 153, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;151;153}
+142 [label="SyncedPlayerMovementSettings",comment="name: \"SyncedPlayerMovementSettings\", typeName: \"\", id: 142, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+143 [label="Rewind History Size",comment="name: \"Rewind History Size\", typeName: \"\", id: 143, branchId: 0, recurseId: -1, attributes: 0, notes: \"When using server authoritative movement mode, this determines the number of ticks the client keeps in history for use in processing corrections. Should at least account for the largest expected round trip latency. In Bedrock this is 40 ticks.\""];
+144 [label="varint",comment="name: \"varint\", typeName: \"\", id: 144, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+145 [label="Server Authoritative Block Breaking",comment="name: \"Server Authoritative Block Breaking\", typeName: \"\", id: 145, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+146 [label="bool",comment="name: \"bool\", typeName: \"\", id: 146, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;144;146}
 
 }

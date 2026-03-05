@@ -1,0 +1,40 @@
+digraph "AnimatedImageData" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+2 -> 3
+1 -> 4
+4 -> 5
+1 -> 6
+6 -> 7
+7 -> 8
+6 -> 9
+9 -> 10
+0 -> 11
+11 -> 12
+0 -> 13
+13 -> 14
+0 -> 15
+15 -> 16
+
+0 [label="AnimatedImageData",comment="name: \"AnimatedImageData\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="SkinImage",comment="name: \"SkinImage\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="Width",comment="name: \"Width\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+4 [label="Height",comment="name: \"Height\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+6 [label="ImageBytes",comment="name: \"ImageBytes\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+10 [label="unsigned byte",comment="name: \"unsigned byte\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+11 [label="AnimatedTextureType",comment="name: \"AnimatedTextureType\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+12 [label="enum persona::AnimatedTextureType",comment="name: \"enum persona::AnimatedTextureType\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+13 [label="Frames",comment="name: \"Frames\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+14 [label="float",comment="name: \"float\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+15 [label="AnimationExpression",comment="name: \"AnimationExpression\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+16 [label="enum persona::AnimationExpression",comment="name: \"enum persona::AnimationExpression\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3;5;10;12;14;16}
+
+}

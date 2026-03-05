@@ -1,0 +1,443 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "775086109",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.10",
+    "x-protocol-version": 944,
+    "definitions": {
+        "809664977": {
+            "title": "AnimatedImageData",
+            "type": "object",
+            "properties": {
+                "AnimatedTextureType": {
+                    "title": "persona::AnimatedTextureType",
+                    "type": "string",
+                    "enum": [
+                        "Face",
+                        "Body32x32",
+                        "Body128x128"
+                    ],
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 1
+                },
+                "AnimationExpression": {
+                    "title": "persona::AnimationExpression",
+                    "type": "string",
+                    "enum": [
+                        "Linear",
+                        "Blinking"
+                    ],
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 3
+                },
+                "Frames": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                },
+                "SkinImage": {
+                    "$ref": "#/definitions/2534576878",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "AnimatedTextureType",
+                "AnimationExpression",
+                "Frames",
+                "SkinImage"
+            ]
+        },
+        "3965240747": {
+            "title": "MinEngineVersion",
+            "type": "string"
+        },
+        "3902078879": {
+            "title": "SerializedSkin",
+            "type": "object",
+            "properties": {
+                "AnimatedImageData": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/809664977"
+                    },
+                    "x-ordinal-index": 4
+                },
+                "AnimationData": {
+                    "type": "string",
+                    "x-ordinal-index": 8
+                },
+                "ArmSize": {
+                    "title": "persona::ArmSize::Type",
+                    "type": "string",
+                    "enum": [
+                        "Slim",
+                        "Wide"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 11
+                },
+                "CapeID": {
+                    "type": "string",
+                    "x-ordinal-index": 9
+                },
+                "CapeImageData": {
+                    "$ref": "#/definitions/2534576878",
+                    "x-ordinal-index": 5
+                },
+                "FullID": {
+                    "type": "string",
+                    "x-ordinal-index": 10
+                },
+                "GeometryData": {
+                    "$ref": "#/definitions/315535208",
+                    "x-ordinal-index": 6
+                },
+                "GeometryDataMinEngineVersion": {
+                    "$ref": "#/definitions/3965240747",
+                    "x-ordinal-index": 7
+                },
+                "ID": {
+                    "type": "string",
+                    "x-ordinal-index": 0
+                },
+                "ImageData": {
+                    "$ref": "#/definitions/2534576878",
+                    "x-ordinal-index": 3
+                },
+                "IsPersona": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 16
+                },
+                "IsPersonaCapeOnClassicSkin": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 17
+                },
+                "IsPremium": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 15
+                },
+                "IsPrimaryUser": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 18
+                },
+                "OverridesPlayerAppearance": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 19
+                },
+                "PersonaPieces": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/1140301959"
+                    },
+                    "x-ordinal-index": 13
+                },
+                "PieceTintColors": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "object",
+                        "properties": {
+                            "key": {
+                                "title": "persona::PieceType",
+                                "type": "string",
+                                "enum": [
+                                    "Skeleton",
+                                    "Body",
+                                    "Skin",
+                                    "Bottom",
+                                    "Feet",
+                                    "Dress",
+                                    "Top",
+                                    "High_Pants",
+                                    "Hands",
+                                    "Outerwear",
+                                    "FacialHair",
+                                    "Mouth",
+                                    "Eyes",
+                                    "Hair",
+                                    "Hood",
+                                    "Back",
+                                    "FaceAccessory",
+                                    "Head",
+                                    "Legs",
+                                    "LeftLeg",
+                                    "RightLeg",
+                                    "Arms",
+                                    "LeftArm",
+                                    "RightArm",
+                                    "Capes",
+                                    "ClassicSkin",
+                                    "Emote"
+                                ],
+                                "x-underlying-type": "uint32"
+                            },
+                            "value": {
+                                "$ref": "#/definitions/1239139757"
+                            }
+                        }
+                    },
+                    "x-ordinal-index": 14
+                },
+                "PlayFabID": {
+                    "type": "string",
+                    "x-ordinal-index": 1
+                },
+                "ResourcePatch": {
+                    "type": "string",
+                    "x-ordinal-index": 2
+                },
+                "SkinColor": {
+                    "$ref": "#/definitions/1315424487",
+                    "x-ordinal-index": 12
+                },
+                "TrustedSkinFlag": {
+                    "title": "TrustedSkinFlag",
+                    "type": "string",
+                    "enum": [
+                        "Unset",
+                        "False",
+                        "True"
+                    ],
+                    "x-underlying-type": "object",
+                    "x-ordinal-index": 20
+                }
+            },
+            "required": [
+                "AnimatedImageData",
+                "AnimationData",
+                "ArmSize",
+                "CapeID",
+                "CapeImageData",
+                "FullID",
+                "GeometryData",
+                "GeometryDataMinEngineVersion",
+                "ID",
+                "ImageData",
+                "IsPersona",
+                "IsPersonaCapeOnClassicSkin",
+                "IsPremium",
+                "IsPrimaryUser",
+                "OverridesPlayerAppearance",
+                "PersonaPieces",
+                "PieceTintColors",
+                "PlayFabID",
+                "ResourcePatch",
+                "SkinColor",
+                "TrustedSkinFlag"
+            ]
+        },
+        "2534576878": {
+            "title": "SkinImage",
+            "type": "object",
+            "properties": {
+                "Height": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0,
+                    "maximum": 4096.0
+                },
+                "ImageBytes": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "x-underlying-type": "uint8",
+                        "minimum": 0.0,
+                        "maximum": 255.0
+                    },
+                    "x-ordinal-index": 2,
+                    "maxItems": 67108864
+                },
+                "Width": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0,
+                    "maximum": 4096.0
+                }
+            },
+            "required": [
+                "Height",
+                "ImageBytes",
+                "Width"
+            ]
+        },
+        "1239139757": {
+            "title": "TintMapColor",
+            "type": "object",
+            "properties": {
+                "Colors": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/1315424487"
+                    },
+                    "x-ordinal-index": 0,
+                    "minItems": 4,
+                    "maxItems": 4
+                }
+            },
+            "required": [
+                "Colors"
+            ]
+        },
+        "1140301959": {
+            "title": "SerializedPersonaPieceHandle",
+            "type": "object",
+            "properties": {
+                "IsDefaultPiece": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 3
+                },
+                "PackId": {
+                    "$ref": "#/definitions/1616419299",
+                    "x-ordinal-index": 2
+                },
+                "PieceId": {
+                    "type": "string",
+                    "x-ordinal-index": 0
+                },
+                "PieceType": {
+                    "title": "persona::PieceType",
+                    "type": "string",
+                    "enum": [
+                        "Skeleton",
+                        "Body",
+                        "Skin",
+                        "Bottom",
+                        "Feet",
+                        "Dress",
+                        "Top",
+                        "High_Pants",
+                        "Hands",
+                        "Outerwear",
+                        "FacialHair",
+                        "Mouth",
+                        "Eyes",
+                        "Hair",
+                        "Hood",
+                        "Back",
+                        "FaceAccessory",
+                        "Head",
+                        "Legs",
+                        "LeftLeg",
+                        "RightLeg",
+                        "Arms",
+                        "LeftArm",
+                        "RightArm",
+                        "Capes",
+                        "ClassicSkin",
+                        "Emote"
+                    ],
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 1
+                },
+                "ProductId": {
+                    "type": "string",
+                    "x-ordinal-index": 4
+                }
+            },
+            "required": [
+                "IsDefaultPiece",
+                "PackId",
+                "PieceId",
+                "PieceType",
+                "ProductId"
+            ]
+        },
+        "1315424487": {
+            "title": "Color",
+            "type": "object",
+            "properties": {
+                "Color": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Color"
+            ]
+        },
+        "315535208": {
+            "title": "Json::Value",
+            "type": "string",
+            "x-runtime-constraint-description": "Verify that the string can be parsed as valid JSON"
+        },
+        "1616419299": {
+            "title": "mce::UUID",
+            "type": "object",
+            "properties": {
+                "Least Significant Bits": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                },
+                "Most Significant Bits": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Least Significant Bits",
+                "Most Significant Bits"
+            ]
+        }
+    },
+    "title": "PlayerSkinPacket",
+    "description": "Used when the player changes their skin",
+    "type": "object",
+    "properties": {
+        "Localized New Skin Name": {
+            "description": "The player's localized new skin name",
+            "type": "string",
+            "x-ordinal-index": 2
+        },
+        "Localized Old Skin Name": {
+            "description": "The player's localized old skin name",
+            "type": "string",
+            "x-ordinal-index": 3
+        },
+        "Serialized Skin": {
+            "description": "The player's serialized skin",
+            "$ref": "#/definitions/3902078879",
+            "x-ordinal-index": 1
+        },
+        "UUID": {
+            "description": "The player's UUID",
+            "$ref": "#/definitions/1616419299",
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Localized New Skin Name",
+        "Localized Old Skin Name",
+        "Serialized Skin",
+        "UUID"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 93,
+        "[cereal:packet_details]": "Sent from the client to server, then processed and broadcasted to all clients. This is used by third-party(3P) servers to send custom geometry."
+    }
+}

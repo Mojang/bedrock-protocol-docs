@@ -2,14 +2,18 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1217545134",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.0",
-    "x-protocol-version": 924,
+    "x-minecraft-version": "1.26.10",
+    "x-protocol-version": 944,
     "title": "EditorNetworkPacket",
     "description": "General use Editor specific packet - carries a payload of whatever serialized data that the individual IEditorNetworkPayload generates.",
     "type": "object",
     "properties": {
-        "Binary Payload": {
-            "$ref": "#/definitions/4158325036",
+        "Raw Variant Data": {
+            "type": "string",
+            "x-ordinal-index": 2
+        },
+        "Raw Variant Name": {
+            "type": "string",
             "x-ordinal-index": 1
         },
         "Route To Manager": {
@@ -19,7 +23,8 @@
         }
     },
     "required": [
-        "Binary Payload",
+        "Raw Variant Data",
+        "Raw Variant Name",
         "Route To Manager"
     ],
     "$metaProperties": {

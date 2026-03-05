@@ -540,10 +540,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 27,
-      "[cereal:packet_details]": "Ranges from a crossbow being ready to fire to taming animals..., some of which may be obsolete (frex, ADD_PLAYER_LEVELS)"
-    },
     "id": 931742870,
     "name": "ActorEventPacket",
     "type": "object",
@@ -590,10 +586,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 35,
-      "[cereal:packet_details]": ""
-    },
     "id": 3472086964,
     "name": "ActorPickRequestPacket",
     "type": "object",
@@ -621,10 +613,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 89,
-      "[cereal:packet_details]": "For automation"
-    },
     "id": 2405358778,
     "name": "AddBehaviorTreePacket",
     "type": "object",
@@ -717,10 +705,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 22,
-      "[cereal:packet_details]": ""
-    },
     "id": 3166459952,
     "name": "AddPaintingPacket",
     "type": "object",
@@ -837,11 +821,8 @@
       "Y": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minimum": 0.0
-        },
         "id": 0,
-        "type": "uint32"
+        "type": "int32"
       },
       "Z": {
         "required": true,
@@ -850,8 +831,8 @@
         "type": "int32"
       }
     },
-    "id": 269289973,
-    "name": "NetworkBlockPosition",
+    "id": 820712576,
+    "name": "BlockPos",
     "type": "object"
   },
   {
@@ -936,15 +917,15 @@
       "Max Bounds": {
         "required": true,
         "deprecated": false,
-        "id": 269289973,
-        "name": "NetworkBlockPosition",
+        "id": 820712576,
+        "name": "BlockPos",
         "type": "object"
       },
       "Min Bounds": {
         "required": true,
         "deprecated": false,
-        "id": 269289973,
-        "name": "NetworkBlockPosition",
+        "id": 820712576,
+        "name": "BlockPos",
         "type": "object"
       }
     },
@@ -961,10 +942,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 166,
-      "[cereal:packet_details]": ""
-    },
     "id": 2427712553,
     "name": "AddVolumeEntityPacket",
     "type": "object",
@@ -1173,10 +1150,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 181,
-      "[cereal:packet_details]": ""
-    },
     "id": 1200923524,
     "name": "AgentActionEventPacket",
     "type": "object",
@@ -1237,10 +1210,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 304,
-      "[cereal:packet_details]": ""
-    },
     "id": 898453668,
     "name": "AgentAnimationPacket",
     "type": "object",
@@ -1384,10 +1353,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 158,
-      "[cereal:packet_details]": "Several properties can be specified in the following order:</br>\n\t- The name of the animation (a string) that the specified entities are to play.</br>\n\t- The next state to transition to (a string) once the specified animation is finished playing.</br>\n\t- The stop expression (a string), the condition that determines when to transition to the next state.</br>\n\t- The name of an animation controller (a string) that you would like to use.</br>\n\t- The blend out time (a float), the amount of time to blend out of this animation.</br>\n\t- A vector of ActorRuntimeIds of the entities that will play the specified animation."
-    },
     "id": 439727887,
     "name": "AnimateEntityPacket",
     "type": "object",
@@ -1566,10 +1531,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 44,
-      "[cereal:packet_details]": "Combination of server bound and client bound packets to trigger animations."
-    },
     "id": 2397598400,
     "name": "AnimatePacket",
     "type": "object",
@@ -1580,8 +1541,8 @@
       "Block Position": {
         "required": true,
         "deprecated": false,
-        "id": 269289973,
-        "name": "NetworkBlockPosition",
+        "id": 820712576,
+        "name": "BlockPos",
         "type": "object"
       },
       "Damage Amount": {
@@ -1608,10 +1569,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 141,
-      "[cereal:packet_details]": "Sends the current damage the anvil has taken per use from client."
-    },
     "id": 752507792,
     "name": "AnvilDamagePacket",
     "type": "object",
@@ -1653,10 +1610,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 95,
-      "[cereal:packet_details]": "Only used though command to connect to server URLs. This is primarily used by EDU for connecting to their companion apps and other external applications through web sockets. Some mods/3rd party packs use it as well."
-    },
     "id": 832422225,
     "name": "AutomationClientConnectPacket",
     "type": "object",
@@ -1688,10 +1641,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 119,
-      "[cereal:packet_details]": ""
-    },
     "id": 2941616583,
     "name": "AvailableActorIdentifiersPacket",
     "type": "object",
@@ -2178,10 +2127,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 76,
-      "[cereal:packet_details]": ""
-    },
     "id": 2689147654,
     "name": "AvailableCommandsPacket",
     "type": "object",
@@ -2209,10 +2154,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 309,
-      "[cereal:packet_details]": ""
-    },
     "id": 1286288593,
     "name": "AwardAchievementPacket",
     "type": "object",
@@ -2229,8 +2170,8 @@
       "Block Position": {
         "required": true,
         "deprecated": false,
-        "id": 269289973,
-        "name": "NetworkBlockPosition",
+        "id": 820712576,
+        "name": "BlockPos",
         "type": "object"
       }
     },
@@ -2247,10 +2188,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 56,
-      "[cereal:packet_details]": ""
-    },
     "id": 907041711,
     "name": "BlockActorDataPacket",
     "type": "object",
@@ -2261,8 +2198,8 @@
       "Block Position": {
         "required": true,
         "deprecated": false,
-        "id": 269289973,
-        "name": "NetworkBlockPosition",
+        "id": 820712576,
+        "name": "BlockPos",
         "type": "object"
       },
       "Event Type": {
@@ -2291,39 +2228,10 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 26,
-      "[cereal:packet_details]": ""
-    },
     "id": 887652270,
     "name": "BlockEventPacket",
     "type": "object",
     "description": "Whenever a block event happens it is sent from the server to sync client and server, with arbitrarily encoded information in b0 and b1."
-  },
-  {
-    "members": {
-      "X": {
-        "required": true,
-        "deprecated": false,
-        "id": 0,
-        "type": "int32"
-      },
-      "Y": {
-        "required": true,
-        "deprecated": false,
-        "id": 0,
-        "type": "int32"
-      },
-      "Z": {
-        "required": true,
-        "deprecated": false,
-        "id": 0,
-        "type": "int32"
-      }
-    },
-    "id": 820712576,
-    "name": "BlockPos",
-    "type": "object"
   },
   {
     "members": {
@@ -2364,10 +2272,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 34,
-      "[cereal:packet_details]": ""
-    },
     "id": 3367404220,
     "name": "BlockPickRequestPacket",
     "type": "object",
@@ -2385,7 +2289,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "maxLength": 512
+          "maxLength": 768
         },
         "id": 0,
         "type": "string"
@@ -2394,7 +2298,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "maxLength": 512
+          "maxLength": 768
         },
         "id": 0,
         "type": "string"
@@ -2416,7 +2320,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "maxLength": 512
+          "maxLength": 768
         },
         "id": 0,
         "type": "string"
@@ -2425,7 +2329,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "maxLength": 512
+          "maxLength": 768
         },
         "id": 0,
         "type": "string"
@@ -2473,7 +2377,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "maxLength": 512
+          "maxLength": 768
         },
         "id": 0,
         "type": "string"
@@ -2482,7 +2386,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "maxLength": 512
+          "maxLength": 768
         },
         "id": 0,
         "type": "string"
@@ -2491,7 +2395,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "maxLength": 512
+          "maxLength": 768
         },
         "id": 0,
         "type": "string"
@@ -2556,10 +2460,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 97,
-      "[cereal:packet_details]": ""
-    },
     "id": 1403456780,
     "name": "BookEditPacket",
     "type": "object",
@@ -2623,10 +2523,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 339,
-      "[cereal:packet_details]": "\n\tSent by the server to clients for updating the actor priority for client aim-assist systems.\n\t"
-    },
     "id": 2532993457,
     "name": "CameraAimAssistActorPriorityPacket",
     "type": "object",
@@ -2763,10 +2659,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 316,
-      "[cereal:packet_details]": ""
-    },
     "id": 2713328744,
     "name": "CameraAimAssistPacket",
     "type": "object",
@@ -3183,10 +3075,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 320,
-      "[cereal:packet_details]": "\n\tSent by the server to clients for initializing and updating the client aim-assist registry.\n\tAddToExisting operations are sent by the server when new presets/categories are added to the registry through creator facing APIs.\n\t"
-    },
     "id": 2895740380,
     "name": "CameraAimAssistPresetsPacket",
     "type": "object",
@@ -3857,6 +3745,12 @@
         "id": 1611346063,
         "type": "sequence_container"
       },
+      "loadFromJson": {
+        "required": false,
+        "deprecated": false,
+        "id": 0,
+        "type": "bool"
+      },
       "progressKeyFrames": {
         "required": true,
         "deprecated": false,
@@ -3878,6 +3772,15 @@
         },
         "id": 1049399983,
         "type": "sequence_container"
+      },
+      "splineIdentifier": {
+        "required": false,
+        "deprecated": false,
+        "constraint": {
+          "maxLength": 1024
+        },
+        "id": 0,
+        "type": "string"
       },
       "totalTime": {
         "required": true,
@@ -4236,10 +4139,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 300,
-      "[cereal:packet_details]": ""
-    },
     "id": 4233761218,
     "name": "CameraInstructionPacket",
     "type": "object",
@@ -4275,10 +4174,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 73,
-      "[cereal:packet_details]": ""
-    },
     "id": 1165808590,
     "name": "CameraPacket",
     "type": "object",
@@ -4640,10 +4535,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 198,
-      "[cereal:packet_details]": ""
-    },
     "id": 1161582602,
     "name": "CameraPresetsPacket",
     "type": "object",
@@ -4745,10 +4636,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 159,
-      "[cereal:packet_details]": "It may be used to queue or stop a camera shake"
-    },
     "id": 1381201720,
     "name": "CameraShakePacket",
     "type": "object",
@@ -5198,10 +5085,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 338,
-      "[cereal:packet_details]": "\n\tSent by the server to clients for initializing custom spline data that can be played later through the camera command.\n\t"
-    },
     "id": 2873317179,
     "name": "CameraSplinePacket",
     "type": "object",
@@ -5254,10 +5137,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 61,
-      "[cereal:packet_details]": ""
-    },
     "id": 1121437839,
     "name": "ChangeDimensionPacket",
     "type": "object",
@@ -5316,10 +5195,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 182,
-      "[cereal:packet_details]": ""
-    },
     "id": 3160430912,
     "name": "ChangeMobPropertyPacket",
     "type": "object",
@@ -5347,10 +5222,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 70,
-      "[cereal:packet_details]": ""
-    },
     "id": 315169571,
     "name": "ChunkRadiusUpdatedPacket",
     "type": "object",
@@ -5370,10 +5241,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 310,
-      "[cereal:packet_details]": "This will only have an affect if the client currently has a server form on the UI stack."
-    },
     "id": 1791253252,
     "name": "ClientboundCloseFormPacket",
     "type": "object",
@@ -5424,10 +5291,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 327,
-      "[cereal:packet_details]": ""
-    },
     "id": 917696448,
     "name": "ClientboundControlSchemeSetPacket",
     "type": "object",
@@ -5561,10 +5424,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 164,
-      "[cereal:packet_details]": ""
-    },
     "id": 2800638962,
     "name": "ClientboundDebugRendererPacket",
     "type": "object",
@@ -5694,10 +5553,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 336,
-      "[cereal:packet_details]": ""
-    },
     "id": 2714813927,
     "name": "ClientboundTextureShiftPacket",
     "type": "object",
@@ -5725,10 +5580,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 129,
-      "[cereal:packet_details]": "Sent by the Client once, at login, to communicate if it supports the client blob cache protocol or not.\n\t<br> Documented in <a href=https://github.com/Mojang/bedrock-docs/blob/master/GameplaySystems/ClientBlobCacheProtocol.md>https://github.com/Mojang/bedrock-docs/blob/master/GameplaySystems/ClientBlobCacheProtocol.md</a>"
-    },
     "id": 296946390,
     "name": "ClientCacheStatusPacket",
     "type": "object",
@@ -5796,14 +5647,40 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 321,
-      "[cereal:packet_details]": "\n\tSent by clients to the server for activating/deactivating aim-assist.\n\tActivation uses the CameraPreset Id for server-side lookup and uses its aim_assist field\n\tfor aim-assist activation settings.\n\t"
-    },
     "id": 1977148901,
     "name": "ClientCameraAimAssistPacket",
     "type": "object",
     "description": "Client-side activation of aim-assist"
+  },
+  {
+    "members": {
+      "party_id": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxLength": 49
+        },
+        "id": 0,
+        "type": "string"
+      }
+    },
+    "id": 1039906646,
+    "name": "PartyChangedPacketPayload",
+    "type": "object"
+  },
+  {
+    "parents": [],
+    "setters": [
+      {
+        "id": 1039906646,
+        "name": "PartyChangedPacketPayload",
+        "type": "object"
+      }
+    ],
+    "id": 1948449961,
+    "name": "PartyChangedPacket",
+    "type": "object",
+    "description": "Sent by the client to provide additional client metadata."
   },
   {
     "id": 4173920828,
@@ -5819,10 +5696,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 4,
-      "[cereal:packet_details]": ""
-    },
     "id": 2105845429,
     "name": "ClientToServerHandshakePacket",
     "type": "object",
@@ -5856,10 +5729,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 150,
-      "[cereal:packet_details]": "This is EDU exclusively.It is sent once from _sendLevelData() in the start of a game from the server,\n\tand once per CodeBuilderCommand"
-    },
     "id": 2293538647,
     "name": "CodeBuilderPacket",
     "type": "object",
@@ -6033,10 +5902,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 178,
-      "[cereal:packet_details]": ""
-    },
     "id": 3085914774,
     "name": "CodeBuilderSourcePacket",
     "type": "object",
@@ -6409,10 +6274,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 79,
-      "[cereal:packet_details]": ""
-    },
     "id": 3179482359,
     "name": "CommandOutputPacket",
     "type": "object",
@@ -6868,10 +6729,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 77,
-      "[cereal:packet_details]": ""
-    },
     "id": 4188102451,
     "name": "CommandRequestPacket",
     "type": "object",
@@ -6905,10 +6762,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 142,
-      "[cereal:packet_details]": ""
-    },
     "id": 517874177,
     "name": "CompletedUsingItemPacket",
     "type": "object",
@@ -7163,10 +7016,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 47,
-      "[cereal:packet_details]": ""
-    },
     "id": 1471495628,
     "name": "ContainerClosePacket",
     "type": "object",
@@ -7197,8 +7046,8 @@
       "Position": {
         "required": true,
         "deprecated": false,
-        "id": 269289973,
-        "name": "NetworkBlockPosition",
+        "id": 820712576,
+        "name": "BlockPos",
         "type": "object"
       },
       "Target Actor ID": {
@@ -7222,10 +7071,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 46,
-      "[cereal:packet_details]": ""
-    },
     "id": 1116981856,
     "name": "ContainerOpenPacket",
     "type": "object",
@@ -7304,6 +7149,18 @@
       {
         "value": 17,
         "name": "RecipeItemsContainer"
+      },
+      {
+        "value": 64,
+        "name": "RecipeFoodContainer"
+      },
+      {
+        "value": 65,
+        "name": "RecipeBlocksContainer"
+      },
+      {
+        "value": 66,
+        "name": "RecipeFurnaceItemsContainer"
       },
       {
         "value": 18,
@@ -7573,6 +7430,18 @@
             "name": "RecipeItemsContainer"
           },
           {
+            "value": 64,
+            "name": "RecipeFoodContainer"
+          },
+          {
+            "value": 65,
+            "name": "RecipeBlocksContainer"
+          },
+          {
+            "value": 66,
+            "name": "RecipeFurnaceItemsContainer"
+          },
+          {
             "value": 18,
             "name": "RecipeSearchContainer"
           },
@@ -7802,10 +7671,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 317,
-      "[cereal:packet_details]": "\n\tWhenever the serverside ContainerRegistry does a clean, identifiers for the removed containers are gathered in a ContainerRegistryCleanUp\n\tpacket and sent to the client so that the clientside container registry can remove those same containers.\n\t"
-    },
     "id": 2122488333,
     "name": "ContainerRegistryCleanupPacket",
     "type": "object",
@@ -7849,10 +7714,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 51,
-      "[cereal:packet_details]": ""
-    },
     "id": 920402992,
     "name": "ContainerSetDataPacket",
     "type": "object",
@@ -7970,10 +7831,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 161,
-      "[cereal:packet_details]": "Used only in server authoritative movement mode, see ServerAuthMovementMode documentation.<br>\n\tSince it is sent to the specified client the target player is implied to be the receiver.<br>\n\tIt is an optional part of the server authoritative protocol. A server could choose to never send this or do all corrections\n\tthrough MovePlayerPacket, although doing so would likely provide less smooth results."
-    },
     "id": 1600343552,
     "name": "CorrectPlayerMovePredictionPacket",
     "type": "object",
@@ -8016,10 +7873,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 171,
-      "[cereal:packet_details]": ""
-    },
     "id": 3626316911,
     "name": "CreatePhotoPacket",
     "type": "object",
@@ -8048,14 +7901,321 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 314,
-      "[cereal:packet_details]": "Sends the name of the Structure Feature the player is currently occupying to the client.\n\tIf the player is not in a structure, this packet contains an empty string."
-    },
     "id": 2102801979,
     "name": "CurrentStructureFeaturePacket",
     "type": "object",
     "description": "Informs the client of which Structure Feature they are currently occupying."
+  },
+  {
+    "enum_values": [
+      {
+        "value": 0,
+        "name": "Line"
+      },
+      {
+        "value": 1,
+        "name": "Box"
+      },
+      {
+        "value": 2,
+        "name": "Sphere"
+      },
+      {
+        "value": 3,
+        "name": "Circle"
+      },
+      {
+        "value": 4,
+        "name": "Text"
+      },
+      {
+        "value": 5,
+        "name": "Arrow"
+      }
+    ],
+    "id": 3404362253,
+    "name": "enum ScriptModuleDebugUtilities::ScriptDebugShapeType",
+    "type": "enum"
+  },
+  {
+    "members": {
+      "Arrow End Location": {
+        "required": true,
+        "deprecated": false,
+        "id": 4004946602,
+        "name": "Vec3",
+        "type": "object",
+        "description": "Vec3 end location of the debug arrow."
+      },
+      "Arrow Head Length": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "float",
+        "description": "Length of the head of the debug arrow."
+      },
+      "Arrow Head Radius": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "float",
+        "description": "Radius of the head of the debug arrow."
+      },
+      "Num Segments": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0,
+          "maximum": 255.0
+        },
+        "id": 0,
+        "type": "uint8",
+        "description": "Integer number of segments used for the debug arrow's head."
+      }
+    },
+    "id": 96730425,
+    "name": "struct ArrowDataPayload",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Text": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "string",
+        "description": "Text (string) of the debug text shape."
+      }
+    },
+    "id": 3254662607,
+    "name": "struct TextDataPayload",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Box Bound": {
+        "required": true,
+        "deprecated": false,
+        "id": 4004946602,
+        "name": "Vec3",
+        "type": "object",
+        "description": "Vec3 bound of the debug box shape."
+      }
+    },
+    "id": 3006597033,
+    "name": "struct BoxDataPayload",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Line End Location": {
+        "required": true,
+        "deprecated": false,
+        "id": 4004946602,
+        "name": "Vec3",
+        "type": "object",
+        "description": "Vec3 end location of the debug line."
+      }
+    },
+    "id": 3414789328,
+    "name": "struct LineDataPayload",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Num Segments": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0,
+          "maximum": 255.0
+        },
+        "id": 0,
+        "type": "uint8",
+        "description": "Integer number of segments used for the debug circle or sphere."
+      }
+    },
+    "id": 2883805925,
+    "name": "struct SphereDataPayload",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Attached To Entity ID": {
+        "required": false,
+        "deprecated": false,
+        "id": 3541243607,
+        "name": "ActorRuntimeID",
+        "type": "object",
+        "description": "Runtime ID of the entity this shape is attached to."
+      },
+      "Color": {
+        "required": false,
+        "deprecated": false,
+        "id": 1315424487,
+        "name": "Color",
+        "type": "object",
+        "description": "Color (ARGB Hex string) of the debug shape."
+      },
+      "Dimension ID": {
+        "required": true,
+        "deprecated": false,
+        "id": 2872336518,
+        "name": "DimensionType",
+        "type": "object",
+        "description": "Currently supported: (0 -> Overworld, 1 -> Nether, 2 -> The End, 3 -> Undefined)"
+      },
+      "Extra Shape Data": {
+        "required": false,
+        "deprecated": false,
+        "setters": [
+          {
+            "id": 0,
+            "type": "null"
+          },
+          {
+            "id": 96730425,
+            "name": "struct ArrowDataPayload",
+            "type": "object"
+          },
+          {
+            "id": 3254662607,
+            "name": "struct TextDataPayload",
+            "type": "object"
+          },
+          {
+            "id": 3006597033,
+            "name": "struct BoxDataPayload",
+            "type": "object"
+          },
+          {
+            "id": 3414789328,
+            "name": "struct LineDataPayload",
+            "type": "object"
+          },
+          {
+            "id": 2883805925,
+            "name": "struct SphereDataPayload",
+            "type": "object"
+          }
+        ],
+        "id": 0,
+        "description": "Extra payload (variant) holding data specific to the type of shape (such as text string for the text shape)."
+      },
+      "Location": {
+        "required": false,
+        "deprecated": false,
+        "id": 4004946602,
+        "name": "Vec3",
+        "type": "object",
+        "description": "Vec3 location of the debug shape in the world."
+      },
+      "NetworkId": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0
+        },
+        "id": 0,
+        "type": "uint64",
+        "description": "uint64 network id used to identify the matching shape on the client as the server"
+      },
+      "Rotation": {
+        "required": false,
+        "deprecated": false,
+        "id": 4004946602,
+        "name": "Vec3",
+        "type": "object",
+        "description": "Vec3 (Euler angles in radians, PYR) rotation of the debug shape in the world."
+      },
+      "Scale": {
+        "required": false,
+        "deprecated": false,
+        "id": 0,
+        "type": "float",
+        "description": "Float scale of the debug shape in the world."
+      },
+      "Shape Type": {
+        "required": false,
+        "deprecated": false,
+        "enum_values": [
+          {
+            "value": 0,
+            "name": "Line"
+          },
+          {
+            "value": 1,
+            "name": "Box"
+          },
+          {
+            "value": 2,
+            "name": "Sphere"
+          },
+          {
+            "value": 3,
+            "name": "Circle"
+          },
+          {
+            "value": 4,
+            "name": "Text"
+          },
+          {
+            "value": 5,
+            "name": "Arrow"
+          }
+        ],
+        "id": 3404362253,
+        "name": "enum ScriptModuleDebugUtilities::ScriptDebugShapeType",
+        "type": "enum",
+        "description": "Byte representing the type of debug shape (Line, Box, Sphere, Circle, Text)."
+      },
+      "Total Time Left": {
+        "required": false,
+        "deprecated": false,
+        "id": 0,
+        "type": "float",
+        "description": "The total time left in seconds until this debug shape will be removed (0 meaning never)."
+      }
+    },
+    "id": 3553763893,
+    "name": "struct ShapeDataPayload",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Array of debug shapes (can be a mix of new, updated or removed)": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxItems": 1048576
+        },
+        "value_type": {
+          "id": 3553763893,
+          "name": "struct ShapeDataPayload",
+          "type": "object"
+        },
+        "id": 3934910779,
+        "type": "sequence_container",
+        "description": "Semantic version string"
+      }
+    },
+    "id": 818882612,
+    "name": "struct DebugDrawerPacketPayload",
+    "type": "object"
+  },
+  {
+    "parents": [],
+    "setters": [
+      {
+        "id": 818882612,
+        "name": "struct DebugDrawerPacketPayload",
+        "type": "object"
+      }
+    ],
+    "id": 122829297,
+    "name": "DebugDrawerPacket",
+    "type": "object",
+    "description": "Send debug drawing shape info (from scripting) to the client for rendering"
   },
   {
     "members": {
@@ -8103,10 +8263,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 189,
-      "[cereal:packet_details]": "mDeathCauseMessage: is untranslated cause of death string vector returned from ActorDamageSource"
-    },
     "id": 130434945,
     "name": "DeathInfoPacket",
     "type": "object",
@@ -8141,10 +8297,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 155,
-      "[cereal:packet_details]": ""
-    },
     "id": 1364892468,
     "name": "DebugInfoPacket",
     "type": "object",
@@ -8152,11 +8304,17 @@
   },
   {
     "members": {
-      "Binary Payload": {
+      "Raw Variant Data": {
         "required": true,
         "deprecated": false,
-        "id": 4158325036,
-        "name": "CompoundTag"
+        "id": 0,
+        "type": "string"
+      },
+      "Raw Variant Name": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "string"
       },
       "Route To Manager": {
         "required": true,
@@ -8165,23 +8323,19 @@
         "type": "bool"
       }
     },
-    "id": 2222396645,
-    "name": "EditorNetworkPacketPayload",
+    "id": 3817242428,
+    "name": "EditorNetworkPacketVariantPayload",
     "type": "object"
   },
   {
     "parents": [],
     "setters": [
       {
-        "id": 2222396645,
-        "name": "EditorNetworkPacketPayload",
+        "id": 3817242428,
+        "name": "EditorNetworkPacketVariantPayload",
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 190,
-      "[cereal:packet_details]": ""
-    },
     "id": 1217545134,
     "name": "EditorNetworkPacket",
     "type": "object",
@@ -8325,10 +8479,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 137,
-      "[cereal:packet_details]": "Currently transmits EducationLevelSettings to all clients when the game is starting."
-    },
     "id": 2331457496,
     "name": "EducationSettingsPacket",
     "type": "object",
@@ -8376,10 +8526,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 170,
-      "[cereal:packet_details]": ""
-    },
     "id": 4061203411,
     "name": "EduUriResourcePacket",
     "type": "object",
@@ -8419,10 +8565,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 152,
-      "[cereal:packet_details]": ""
-    },
     "id": 1147720015,
     "name": "EmoteListPacket",
     "type": "object",
@@ -8488,10 +8630,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 138,
-      "[cereal:packet_details]": "Sent in both directions; by client to request that an emote is played and then from the server to the clients to indicate which player needs to now emote."
-    },
     "id": 1385893495,
     "name": "EmotePacket",
     "type": "object",
@@ -8543,10 +8681,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 191,
-      "[cereal:packet_details]": ""
-    },
     "id": 742107478,
     "name": "FeatureRegistryPacket",
     "type": "object",
@@ -8635,10 +8769,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 72,
-      "[cereal:packet_details]": "Informs client about any changes to the game rules."
-    },
     "id": 2148583626,
     "name": "GameRulesChangedPacket",
     "type": "object",
@@ -8769,10 +8899,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 194,
-      "[cereal:packet_details]": ""
-    },
     "id": 3910318668,
     "name": "GameTestRequestPacket",
     "type": "object",
@@ -8812,10 +8938,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 195,
-      "[cereal:packet_details]": "Internal Text Packet"
-    },
     "id": 1706712431,
     "name": "GameTestResultsPacket",
     "type": "object",
@@ -8952,6 +9074,121 @@
         "value": 25,
         "name": "ShadowsContrast",
         "description": "Sent to set the color grading shadows contrast value"
+      },
+      {
+        "value": 26,
+        "name": "HighlightsGain",
+        "description": "Sent to set the color grading highlights gain value"
+      },
+      {
+        "value": 27,
+        "name": "HighlightsGamma",
+        "description": "Sent to set the color grading highlights gamma value"
+      },
+      {
+        "value": 28,
+        "name": "HighlightsOffset",
+        "description": "Sent to set the color grading highlights offset value"
+      },
+      {
+        "value": 29,
+        "name": "HighlightsSaturation",
+        "description": "Sent to set the color grading highlights saturation value"
+      },
+      {
+        "value": 30,
+        "name": "MidtonesGain",
+        "description": "Sent to set the color grading midtones gain value"
+      },
+      {
+        "value": 31,
+        "name": "MidtonesGamma",
+        "description": "Sent to set the color grading midtones gamma value"
+      },
+      {
+        "value": 32,
+        "name": "MidtonesOffset",
+        "description": "Sent to set the color grading midtones offset value"
+      },
+      {
+        "value": 33,
+        "name": "MidtonesSaturation",
+        "description": "Sent to set the color grading midtones saturation value"
+      },
+      {
+        "value": 34,
+        "name": "ShadowsGain",
+        "description": "Sent to set the color grading shadows gain value"
+      },
+      {
+        "value": 35,
+        "name": "ShadowsGamma",
+        "description": "Sent to set the color grading shadows gamma value"
+      },
+      {
+        "value": 36,
+        "name": "ShadowsOffset",
+        "description": "Sent to set the color grading shadows offset value"
+      },
+      {
+        "value": 37,
+        "name": "ShadowsSaturation",
+        "description": "Sent to set the color grading shadows saturation value"
+      },
+      {
+        "value": 38,
+        "name": "HighlightsMin",
+        "description": "Sent to set the color grading highlights min value"
+      },
+      {
+        "value": 39,
+        "name": "ShadowsMax",
+        "description": "Sent to set the color grading shadows max value"
+      },
+      {
+        "value": 40,
+        "name": "Temperature",
+        "description": "Sent to set the color grading temperature value"
+      },
+      {
+        "value": 41,
+        "name": "SunColor",
+        "description": "Sent to set the lighting sun color value"
+      },
+      {
+        "value": 42,
+        "name": "SunIlluminance",
+        "description": "Sent to set the lighting sun illuminance value"
+      },
+      {
+        "value": 43,
+        "name": "MoonColor",
+        "description": "Sent to set the lighting moon color value"
+      },
+      {
+        "value": 44,
+        "name": "MoonIlluminance",
+        "description": "Sent to set the lighting moon illuminance value"
+      },
+      {
+        "value": 45,
+        "name": "FlashColor",
+        "description": "Sent to set the lighting flash color value"
+      },
+      {
+        "value": 46,
+        "name": "FlashIlluminance",
+        "description": "Sent to set the lighting flash illuminance value"
+      },
+      {
+        "value": 47,
+        "name": "AmbientColor",
+        "description": "Sent to set the lighting ambient color value"
+      },
+      {
+        "value": 48,
+        "name": "AmbientIlluminance",
+        "description": "Sent to set the lighting ambient illuminance value"
       }
     ],
     "id": 3078966536,
@@ -9084,6 +9321,98 @@
           {
             "value": 25,
             "name": "ShadowsContrast"
+          },
+          {
+            "value": 26,
+            "name": "HighlightsGain"
+          },
+          {
+            "value": 27,
+            "name": "HighlightsGamma"
+          },
+          {
+            "value": 28,
+            "name": "HighlightsOffset"
+          },
+          {
+            "value": 29,
+            "name": "HighlightsSaturation"
+          },
+          {
+            "value": 30,
+            "name": "MidtonesGain"
+          },
+          {
+            "value": 31,
+            "name": "MidtonesGamma"
+          },
+          {
+            "value": 32,
+            "name": "MidtonesOffset"
+          },
+          {
+            "value": 33,
+            "name": "MidtonesSaturation"
+          },
+          {
+            "value": 34,
+            "name": "ShadowsGain"
+          },
+          {
+            "value": 35,
+            "name": "ShadowsGamma"
+          },
+          {
+            "value": 36,
+            "name": "ShadowsOffset"
+          },
+          {
+            "value": 37,
+            "name": "ShadowsSaturation"
+          },
+          {
+            "value": 38,
+            "name": "HighlightsMin"
+          },
+          {
+            "value": 39,
+            "name": "ShadowsMax"
+          },
+          {
+            "value": 40,
+            "name": "Temperature"
+          },
+          {
+            "value": 41,
+            "name": "SunColor"
+          },
+          {
+            "value": 42,
+            "name": "SunIlluminance"
+          },
+          {
+            "value": 43,
+            "name": "MoonColor"
+          },
+          {
+            "value": 44,
+            "name": "MoonIlluminance"
+          },
+          {
+            "value": 45,
+            "name": "FlashColor"
+          },
+          {
+            "value": 46,
+            "name": "FlashIlluminance"
+          },
+          {
+            "value": 47,
+            "name": "AmbientColor"
+          },
+          {
+            "value": 48,
+            "name": "AmbientIlluminance"
           }
         ],
         "id": 3078966536,
@@ -9139,10 +9468,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 331,
-      "[cereal:packet_details]": ""
-    },
     "id": 4150228171,
     "name": "GraphicsOverrideParameterPacket",
     "type": "object",
@@ -9182,10 +9507,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 54,
-      "[cereal:packet_details]": "This is only used when players use pick block, a command is used, tests, and some 3rd party content."
-    },
     "id": 3441939962,
     "name": "GuiDataPickItemPacket",
     "type": "object",
@@ -9376,10 +9697,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 38,
-      "[cereal:packet_details]": "Sends the damage taken after armor is taken into account. This looks like it is trying to be phased out, this is not sent while the ItemStackNetManagerServer is active. From the server."
-    },
     "id": 1848826019,
     "name": "HurtArmorPacket",
     "type": "object",
@@ -9471,10 +9788,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 33,
-      "[cereal:packet_details]": "Used for inventory button press and in _updateInteraction() for a variety of purposes. From the client."
-    },
     "id": 1152572643,
     "name": "InteractPacket",
     "type": "object",
@@ -9594,10 +9907,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 162,
-      "[cereal:packet_details]": "This packet needs to be sent immediately after the StartGamePacket for primary clients."
-    },
     "id": 1824368073,
     "name": "ItemRegistryPacket",
     "type": "object",
@@ -9625,10 +9934,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 313,
-      "[cereal:packet_details]": "Sends the serialized jigsaw rule JSON to the client as it's needed on both the client and server."
-    },
     "id": 82818363,
     "name": "JigsawStructureDataPacket",
     "type": "object",
@@ -9817,10 +10122,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 109,
-      "[cereal:packet_details]": "The packet can be fired from the client through the UI or from the server during updates."
-    },
     "id": 2373651880,
     "name": "LabTablePacket",
     "type": "object",
@@ -9841,8 +10142,8 @@
       "Position of Lectern to update": {
         "required": true,
         "deprecated": false,
-        "id": 269289973,
-        "name": "NetworkBlockPosition",
+        "id": 820712576,
+        "name": "BlockPos",
         "type": "object"
       },
       "Total Pages": {
@@ -9869,10 +10170,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 125,
-      "[cereal:packet_details]": "It is a request from the client to either turn the page in the lectern or drop the book."
-    },
     "id": 604954837,
     "name": "LecternUpdatePacket",
     "type": "object",
@@ -13113,10 +13410,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 65,
-      "[cereal:packet_details]": ""
-    },
     "id": 905956163,
     "name": "LegacyTelemetryEventPacket",
     "type": "object",
@@ -13175,10 +13468,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 183,
-      "[cereal:packet_details]": ""
-    },
     "id": 1151833066,
     "name": "LessonProgressPacket",
     "type": "object",
@@ -13212,10 +13501,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 124,
-      "[cereal:packet_details]": ""
-    },
     "id": 3942862760,
     "name": "LevelEventGenericPacket",
     "type": "object",
@@ -13257,10 +13542,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 25,
-      "[cereal:packet_details]": ""
-    },
     "id": 4270035307,
     "name": "LevelEventPacket",
     "type": "object",
@@ -15429,7 +15710,7 @@
         "name": "SaddleInWater"
       },
       {
-        "value": 597,
+        "value": 599,
         "name": "Undefined"
       },
       {
@@ -15503,6 +15784,14 @@
       {
         "value": 596,
         "name": "NetheriteSpearUse"
+      },
+      {
+        "value": 597,
+        "name": "PauseGrowth"
+      },
+      {
+        "value": 598,
+        "name": "ResetGrowth"
       }
     ],
     "id": 2017226404,
@@ -17694,7 +17983,7 @@
             "name": "SaddleInWater"
           },
           {
-            "value": 597,
+            "value": 599,
             "name": "Undefined"
           },
           {
@@ -17768,6 +18057,14 @@
           {
             "value": 596,
             "name": "NetheriteSpearUse"
+          },
+          {
+            "value": 597,
+            "name": "PauseGrowth"
+          },
+          {
+            "value": 598,
+            "name": "ResetGrowth"
           }
         ],
         "id": 2017226404,
@@ -17807,14 +18104,221 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 123,
-      "[cereal:packet_details]": "\n\tMost sounds get launched on server and replicated to clients, but a handful of player initiated sounds are launched on their client and replicated through the network.\n\t(In most of the codebase 'Event' means telemetry events; this is not the case here, this is how sounds get replicated across the network in vanilla.)\n\tWith support for custom entities. Entity Id is a string and Event Id is an integer.\n\t"
-    },
     "id": 4285361124,
     "name": "LevelSoundEventPacket",
     "type": "object",
     "description": "Level Sound Event"
+  },
+  {
+    "members": {
+      "DimensionType": {
+        "required": true,
+        "deprecated": false,
+        "id": 2872336518,
+        "name": "DimensionType",
+        "type": "object",
+        "description": "The runtime id of the dimension."
+      },
+      "Position": {
+        "required": true,
+        "deprecated": false,
+        "id": 4004946602,
+        "name": "Vec3",
+        "type": "object",
+        "description": "The Vec3 position in the dimension."
+      }
+    },
+    "id": 2304738551,
+    "name": "WorldPosition",
+    "type": "object"
+  },
+  {
+    "members": {
+      "ActorUniqueID": {
+        "required": false,
+        "deprecated": false,
+        "id": 1221684255,
+        "name": "ActorUniqueID",
+        "type": "object",
+        "description": "The entity id that Waypoint will be attached to."
+      },
+      "ClientPositionAuthority": {
+        "required": false,
+        "deprecated": false,
+        "id": 0,
+        "type": "bool",
+        "description": "Boolean that if true the client will update the Waypoints position per tick."
+      },
+      "Color": {
+        "required": false,
+        "deprecated": false,
+        "id": 1315424487,
+        "name": "Color",
+        "type": "object",
+        "description": "The color that the client with tint the waypoint texture."
+      },
+      "IsVisible": {
+        "required": false,
+        "deprecated": false,
+        "id": 0,
+        "type": "bool",
+        "description": "Boolean used to tell the client if the Waypoint is visible or not."
+      },
+      "TextureId": {
+        "required": false,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0
+        },
+        "id": 0,
+        "type": "uint32",
+        "description": "A runtime id used to select which texture the Waypoint should use."
+      },
+      "UpdateFlag": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0
+        },
+        "id": 0,
+        "type": "uint32",
+        "description": "A bitflag uint used to map to which of the optional values in this payload should be updated."
+      },
+      "WorldPosition": {
+        "required": false,
+        "deprecated": false,
+        "id": 2304738551,
+        "name": "WorldPosition",
+        "type": "object",
+        "description": "The Vec3 position and DimensionID of the waypoint."
+      }
+    },
+    "id": 4264961054,
+    "name": "ServerWaypoint::Payload",
+    "type": "object"
+  },
+  {
+    "members": {
+      "UUID": {
+        "required": true,
+        "deprecated": false,
+        "id": 1616419299,
+        "name": "mce::UUID",
+        "type": "object",
+        "description": "mce::UUID used to lookup Waypoint in WaypointGroups."
+      }
+    },
+    "id": 3456071204,
+    "name": "class WaypointGroup::WaypointHandle",
+    "type": "object"
+  },
+  {
+    "enum_values": [
+      {
+        "value": 0,
+        "name": "None"
+      },
+      {
+        "value": 1,
+        "name": "Add"
+      },
+      {
+        "value": 2,
+        "name": "Remove"
+      },
+      {
+        "value": 3,
+        "name": "Update"
+      }
+    ],
+    "id": 1480240605,
+    "name": "enum ServerWaypointGroup::Action",
+    "type": "enum"
+  },
+  {
+    "members": {
+      "ActionFlag": {
+        "required": true,
+        "deprecated": false,
+        "enum_values": [
+          {
+            "value": 0,
+            "name": "None"
+          },
+          {
+            "value": 1,
+            "name": "Add"
+          },
+          {
+            "value": 2,
+            "name": "Remove"
+          },
+          {
+            "value": 3,
+            "name": "Update"
+          }
+        ],
+        "id": 1480240605,
+        "name": "enum ServerWaypointGroup::Action",
+        "type": "enum",
+        "description": "Enum which defines if the Waypoint operation was an add, remove or update."
+      },
+      "GroupHandle": {
+        "required": true,
+        "deprecated": false,
+        "id": 3456071204,
+        "name": "class WaypointGroup::WaypointHandle",
+        "type": "object",
+        "description": "WaypointGroup::WaypointHandle used to lookup Waypoint in WaypointGroups."
+      },
+      "ServerWaypointPayload": {
+        "required": true,
+        "deprecated": false,
+        "id": 4264961054,
+        "name": "ServerWaypoint::Payload",
+        "type": "object",
+        "description": "Contains the optional data to add or update the client Waypoint."
+      }
+    },
+    "id": 941965018,
+    "name": "struct LocatorBarWaypointPayload",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Waypoints": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxItems": 40000
+        },
+        "value_type": {
+          "id": 941965018,
+          "name": "struct LocatorBarWaypointPayload",
+          "type": "object"
+        },
+        "id": 1530809827,
+        "type": "sequence_container",
+        "description": "Array of LocatorBarWaypointPayload's"
+      }
+    },
+    "id": 1474736095,
+    "name": "struct LocatorBarPacketPayload",
+    "type": "object"
+  },
+  {
+    "parents": [],
+    "setters": [
+      {
+        "id": 1474736095,
+        "name": "struct LocatorBarPacketPayload",
+        "type": "object"
+      }
+    ],
+    "id": 1403455042,
+    "name": "LocatorBarPacket",
+    "type": "object",
+    "description": "Syncs LocatorBar changes on the server with the client."
   },
   {
     "members": {
@@ -17848,10 +18352,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 1,
-      "[cereal:packet_details]": ""
-    },
     "id": 1627243602,
     "name": "LoginPacket",
     "type": "object",
@@ -17889,10 +18389,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 131,
-      "[cereal:packet_details]": "\n\tIt sends the original map id and the new map id. \n\tOn the server it follows a similar process to creating a new map, sends the data and the map info to the client.\n\t"
-    },
     "id": 2972498078,
     "name": "MapCreateLockedCopyPacket",
     "type": "object",
@@ -17961,10 +18457,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 68,
-      "[cereal:packet_details]": "\n\tIf the server finds the map, it sends the data back. If it can't find the map, it creates it and sends the map and data back. \n\t(the map creation data packet and the map data packet are separate packets). \n\tThe response from the server potentially has to load from disk, just an fyi. \n\tThis packet is fired via map item tick, if the map data we have is invalid, or if the map is placed in an item frame.\n\n\tFor Client Side Generation when we re-sample pixels from the Client's ChunkSource we need to inform the Server's map about\n\tthese new pixels so that it can save them to LevelStorage. Use this packet to send to the Server the extra pixels\n\t"
-    },
     "id": 2014591518,
     "name": "MapInfoRequestPacket",
     "type": "object",
@@ -18080,10 +18572,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 28,
-      "[cereal:packet_details]": "At the start of the game the server sends any mob effects with _sendAdditionalLevelData() if the joining player saved out with them,\nand then anytime a mob effect is added, removed, or updated this packet is sent.<br>\nIt is important for player movement simulation to ensure that the following effects are sent for the player or any client predicted vehicle they are in control of:<br>\n- levitation<br>\n- slow_falling<br>\n- jump<br>\n- movement_speed<br>\n- movement_slowdown<br>\n- weaving"
-    },
     "id": 1531795524,
     "name": "MobEffectPacket",
     "type": "object",
@@ -18120,10 +18608,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 100,
-      "[cereal:packet_details]": "Not sent from vanilla. The feature is meant for third-party servers to be able to drive dynamic ui forms. The request comes with some JSON that describes a custom UI screen thirdparty uses.Server->client."
-    },
     "id": 2380260781,
     "name": "ModalFormRequestPacket",
     "type": "object",
@@ -18193,10 +18677,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 101,
-      "[cereal:packet_details]": "see ModalFormRequestPacket"
-    },
     "id": 2453260875,
     "name": "ModalFormResponsePacket",
     "type": "object",
@@ -18241,10 +18721,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 157,
-      "[cereal:packet_details]": "This is from the server when spatial optimizations are enabled and the server does not send a spatial update."
-    },
     "id": 315512544,
     "name": "MotionPredictionHintsPacket",
     "type": "object",
@@ -18341,10 +18817,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 18,
-      "[cereal:packet_details]": ""
-    },
     "id": 1898950292,
     "name": "MoveActorAbsolutePacket",
     "type": "object",
@@ -18419,10 +18891,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 318,
-      "[cereal:packet_details]": "\n\tThese MovementEffects can be client-predicted.\n\tEx: Fireworks Rockets used while gliding send this packet to the client so they know the exact duration of the GLIDE_BOOST MovementEffect.\n\t"
-    },
     "id": 91121805,
     "name": "MovementEffectPacket",
     "type": "object",
@@ -18484,10 +18952,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 139,
-      "[cereal:packet_details]": "\n\tThis is used by EDU for joining players and removing players from your session,\n\tthe settings (there is only one) is an enum for enabling/disabling/refreshing multiplayer join codes.\n\tStarts on the client, and a response to the client is issued from the server.\n\t"
-    },
     "id": 892679638,
     "name": "MultiplayerSettingsPacket",
     "type": "object",
@@ -18558,10 +19022,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 121,
-      "[cereal:packet_details]": "Used (from the server) when a user's Chunk View moves, I.e. the area that determines what chunks exist. For ClientSideGeneration we also send the client a list of ChunkPos that the Server will fully build."
-    },
     "id": 43940255,
     "name": "NetworkChunkPublisherUpdatePacket",
     "type": "object",
@@ -18655,10 +19115,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 143,
-      "[cereal:packet_details]": ""
-    },
     "id": 1064173480,
     "name": "NetworkSettingsPacket",
     "type": "object",
@@ -18695,10 +19151,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 115,
-      "[cereal:packet_details]": "DEPRECATED. Was for testing/debug/telemetry: Used to provide ping time to in game debug graph, also for realms telemetry of actual in game latency.  Sent from both client & server."
-    },
     "id": 1686465347,
     "name": "NetworkStackLatencyPacket",
     "type": "object",
@@ -18793,10 +19245,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 169,
-      "[cereal:packet_details]": ""
-    },
     "id": 3224170366,
     "name": "NpcDialoguePacket",
     "type": "object",
@@ -18919,10 +19367,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 98,
-      "[cereal:packet_details]": "A request is made from the client during an interaction with an NPC then the request is processed by the server. \n\tActor MUST have the NPCComponent to be handled. \n\tWe currently only use this for EDU, but the goal was to expose the NPC Component to creators."
-    },
     "id": 3778433589,
     "name": "NpcRequestPacket",
     "type": "object",
@@ -18953,10 +19397,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 130,
-      "[cereal:packet_details]": "Sent from the player (and in one case from the village) to make those really cool animated effects for the hero of the village and the totem saving you. Just an id (unsigned int). At least thats what the code suggests. May be obsolete / deprecated."
-    },
     "id": 823403339,
     "name": "OnScreenTextureAnimationPacket",
     "type": "object",
@@ -18973,8 +19413,8 @@
       "Pos": {
         "required": true,
         "deprecated": false,
-        "id": 269289973,
-        "name": "NetworkBlockPosition",
+        "id": 820712576,
+        "name": "BlockPos",
         "type": "object"
       }
     },
@@ -18991,10 +19431,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 303,
-      "[cereal:packet_details]": ""
-    },
     "id": 4061523320,
     "name": "OpenSignPacket",
     "type": "object",
@@ -20031,10 +20467,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 156,
-      "[cereal:packet_details]": ""
-    },
     "id": 2736192880,
     "name": "PacketViolationWarningPacket",
     "type": "object",
@@ -20147,10 +20579,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 99,
-      "[cereal:packet_details]": "\n\tWhen the player uses the camera item or adds a photo to the scrapbook it sends the photo to the server, \n\tthen the server sends a response back on whether that was successful or not. \n\tEither uploads a photo to the server's photoStorage or request one from it to be stored in client's photoStorage.\n\tIf no mPhotoData is provided it is a request for the given filename.\n\t"
-    },
     "id": 1339922872,
     "name": "PhotoTransferPacket",
     "type": "object",
@@ -20530,8 +20958,8 @@
       "Block Position": {
         "required": true,
         "deprecated": false,
-        "id": 269289973,
-        "name": "NetworkBlockPosition",
+        "id": 820712576,
+        "name": "BlockPos",
         "type": "object"
       },
       "Face": {
@@ -20550,8 +20978,8 @@
       "Result Pos": {
         "required": true,
         "deprecated": false,
-        "id": 269289973,
-        "name": "NetworkBlockPosition",
+        "id": 820712576,
+        "name": "BlockPos",
         "type": "object"
       }
     },
@@ -20568,10 +20996,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 36,
-      "[cereal:packet_details]": "The expected actions change depending on the ServerAuthMovementMode specified in the StartGamePacket.\n\tSee the PlayerActionType enum for details on which have differing behavior.\n\tSee also PlayerAuthInputPacket and InventoryTransactionPacket for similar types of player actions."
-    },
     "id": 4021593386,
     "name": "PlayerActionPacket",
     "type": "object",
@@ -20676,10 +21100,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 149,
-      "[cereal:packet_details]": ""
-    },
     "id": 2749481094,
     "name": "PlayerArmorDamagePacket",
     "type": "object",
@@ -20712,10 +21132,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 160,
-      "[cereal:packet_details]": "This is the packet that tracks the active fog stack from the server so the local players can apply different fog settings."
-    },
     "id": 2558364016,
     "name": "PlayerFogPacket",
     "type": "object",
@@ -20762,14 +21178,822 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 48,
-      "[cereal:packet_details]": ""
-    },
     "id": 771627580,
     "name": "PlayerHotbarPacket",
     "type": "object",
     "description": "Sent from the server when the player uses pick block on actors or blocks, in addition to the player uses the clear, give, or replace item command or if the serverplayer uses _sendAdditionalLevelData(). "
+  },
+  {
+    "members": {
+      "Height": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0,
+          "maximum": 4096.0
+        },
+        "id": 0,
+        "type": "uint32"
+      },
+      "ImageBytes": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxItems": 67108864
+        },
+        "value_type": {
+          "constraint": {
+            "minimum": 0.0,
+            "maximum": 255.0
+          },
+          "id": 0,
+          "type": "uint8"
+        },
+        "id": 4283623929,
+        "type": "sequence_container"
+      },
+      "Width": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0,
+          "maximum": 4096.0
+        },
+        "id": 0,
+        "type": "uint32"
+      }
+    },
+    "id": 2534576878,
+    "name": "SkinImage",
+    "type": "object"
+  },
+  {
+    "enum_values": [
+      {
+        "value": 1,
+        "name": "Face"
+      },
+      {
+        "value": 2,
+        "name": "Body32x32"
+      },
+      {
+        "value": 3,
+        "name": "Body128x128"
+      }
+    ],
+    "id": 3174207064,
+    "name": "persona::AnimatedTextureType",
+    "type": "enum"
+  },
+  {
+    "enum_values": [
+      {
+        "value": 0,
+        "name": "Linear"
+      },
+      {
+        "value": 1,
+        "name": "Blinking"
+      }
+    ],
+    "id": 3485704004,
+    "name": "persona::AnimationExpression",
+    "type": "enum"
+  },
+  {
+    "members": {
+      "AnimatedTextureType": {
+        "required": true,
+        "deprecated": false,
+        "enum_values": [
+          {
+            "value": 1,
+            "name": "Face"
+          },
+          {
+            "value": 2,
+            "name": "Body32x32"
+          },
+          {
+            "value": 3,
+            "name": "Body128x128"
+          }
+        ],
+        "id": 3174207064,
+        "name": "persona::AnimatedTextureType",
+        "type": "enum"
+      },
+      "AnimationExpression": {
+        "required": true,
+        "deprecated": false,
+        "enum_values": [
+          {
+            "value": 0,
+            "name": "Linear"
+          },
+          {
+            "value": 1,
+            "name": "Blinking"
+          }
+        ],
+        "id": 3485704004,
+        "name": "persona::AnimationExpression",
+        "type": "enum"
+      },
+      "Frames": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "float"
+      },
+      "SkinImage": {
+        "required": true,
+        "deprecated": false,
+        "id": 2534576878,
+        "name": "SkinImage",
+        "type": "object"
+      }
+    },
+    "id": 809664977,
+    "name": "AnimatedImageData",
+    "type": "object"
+  },
+  {
+    "setters": [
+      {
+        "id": 0,
+        "type": "string"
+      }
+    ],
+    "id": 3965240747,
+    "name": "MinEngineVersion",
+    "type": "object"
+  },
+  {
+    "enum_values": [
+      {
+        "value": 0,
+        "name": "Slim"
+      },
+      {
+        "value": 1,
+        "name": "Wide"
+      }
+    ],
+    "id": 2237482339,
+    "name": "persona::ArmSize::Type",
+    "type": "enum"
+  },
+  {
+    "enum_values": [
+      {
+        "value": 1,
+        "name": "Skeleton"
+      },
+      {
+        "value": 2,
+        "name": "Body"
+      },
+      {
+        "value": 3,
+        "name": "Skin"
+      },
+      {
+        "value": 4,
+        "name": "Bottom"
+      },
+      {
+        "value": 5,
+        "name": "Feet"
+      },
+      {
+        "value": 6,
+        "name": "Dress"
+      },
+      {
+        "value": 7,
+        "name": "Top"
+      },
+      {
+        "value": 8,
+        "name": "High_Pants"
+      },
+      {
+        "value": 9,
+        "name": "Hands"
+      },
+      {
+        "value": 10,
+        "name": "Outerwear"
+      },
+      {
+        "value": 11,
+        "name": "FacialHair"
+      },
+      {
+        "value": 12,
+        "name": "Mouth"
+      },
+      {
+        "value": 13,
+        "name": "Eyes"
+      },
+      {
+        "value": 14,
+        "name": "Hair"
+      },
+      {
+        "value": 15,
+        "name": "Hood"
+      },
+      {
+        "value": 16,
+        "name": "Back"
+      },
+      {
+        "value": 17,
+        "name": "FaceAccessory"
+      },
+      {
+        "value": 18,
+        "name": "Head"
+      },
+      {
+        "value": 19,
+        "name": "Legs"
+      },
+      {
+        "value": 20,
+        "name": "LeftLeg"
+      },
+      {
+        "value": 21,
+        "name": "RightLeg"
+      },
+      {
+        "value": 22,
+        "name": "Arms"
+      },
+      {
+        "value": 23,
+        "name": "LeftArm"
+      },
+      {
+        "value": 24,
+        "name": "RightArm"
+      },
+      {
+        "value": 25,
+        "name": "Capes"
+      },
+      {
+        "value": 26,
+        "name": "ClassicSkin"
+      },
+      {
+        "value": 27,
+        "name": "Emote"
+      }
+    ],
+    "id": 1156069330,
+    "name": "persona::PieceType",
+    "type": "enum"
+  },
+  {
+    "members": {
+      "IsDefaultPiece": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "bool"
+      },
+      "PackId": {
+        "required": true,
+        "deprecated": false,
+        "id": 1616419299,
+        "name": "mce::UUID",
+        "type": "object"
+      },
+      "PieceId": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "string"
+      },
+      "PieceType": {
+        "required": true,
+        "deprecated": false,
+        "enum_values": [
+          {
+            "value": 1,
+            "name": "Skeleton"
+          },
+          {
+            "value": 2,
+            "name": "Body"
+          },
+          {
+            "value": 3,
+            "name": "Skin"
+          },
+          {
+            "value": 4,
+            "name": "Bottom"
+          },
+          {
+            "value": 5,
+            "name": "Feet"
+          },
+          {
+            "value": 6,
+            "name": "Dress"
+          },
+          {
+            "value": 7,
+            "name": "Top"
+          },
+          {
+            "value": 8,
+            "name": "High_Pants"
+          },
+          {
+            "value": 9,
+            "name": "Hands"
+          },
+          {
+            "value": 10,
+            "name": "Outerwear"
+          },
+          {
+            "value": 11,
+            "name": "FacialHair"
+          },
+          {
+            "value": 12,
+            "name": "Mouth"
+          },
+          {
+            "value": 13,
+            "name": "Eyes"
+          },
+          {
+            "value": 14,
+            "name": "Hair"
+          },
+          {
+            "value": 15,
+            "name": "Hood"
+          },
+          {
+            "value": 16,
+            "name": "Back"
+          },
+          {
+            "value": 17,
+            "name": "FaceAccessory"
+          },
+          {
+            "value": 18,
+            "name": "Head"
+          },
+          {
+            "value": 19,
+            "name": "Legs"
+          },
+          {
+            "value": 20,
+            "name": "LeftLeg"
+          },
+          {
+            "value": 21,
+            "name": "RightLeg"
+          },
+          {
+            "value": 22,
+            "name": "Arms"
+          },
+          {
+            "value": 23,
+            "name": "LeftArm"
+          },
+          {
+            "value": 24,
+            "name": "RightArm"
+          },
+          {
+            "value": 25,
+            "name": "Capes"
+          },
+          {
+            "value": 26,
+            "name": "ClassicSkin"
+          },
+          {
+            "value": 27,
+            "name": "Emote"
+          }
+        ],
+        "id": 1156069330,
+        "name": "persona::PieceType",
+        "type": "enum"
+      },
+      "ProductId": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "string"
+      }
+    },
+    "id": 1140301959,
+    "name": "SerializedPersonaPieceHandle",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Colors": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "value_type": {
+          "id": 1315424487,
+          "name": "Color",
+          "type": "object"
+        },
+        "id": 2312909407,
+        "type": "sequence_container"
+      }
+    },
+    "id": 1239139757,
+    "name": "TintMapColor",
+    "type": "object"
+  },
+  {
+    "enum_values": [
+      {
+        "value": 0,
+        "name": "Unset"
+      },
+      {
+        "value": 1,
+        "name": "False"
+      },
+      {
+        "value": 2,
+        "name": "True"
+      }
+    ],
+    "id": 3322982004,
+    "name": "TrustedSkinFlag",
+    "type": "enum"
+  },
+  {
+    "members": {
+      "AnimatedImageData": {
+        "required": true,
+        "deprecated": false,
+        "value_type": {
+          "id": 809664977,
+          "name": "AnimatedImageData",
+          "type": "object"
+        },
+        "id": 1604764451,
+        "type": "sequence_container"
+      },
+      "AnimationData": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "string"
+      },
+      "ArmSize": {
+        "required": true,
+        "deprecated": false,
+        "enum_values": [
+          {
+            "value": 0,
+            "name": "Slim"
+          },
+          {
+            "value": 1,
+            "name": "Wide"
+          }
+        ],
+        "id": 2237482339,
+        "name": "persona::ArmSize::Type",
+        "type": "enum"
+      },
+      "CapeID": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "string"
+      },
+      "CapeImageData": {
+        "required": true,
+        "deprecated": false,
+        "id": 2534576878,
+        "name": "SkinImage",
+        "type": "object"
+      },
+      "FullID": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "string"
+      },
+      "GeometryData": {
+        "required": true,
+        "deprecated": false,
+        "id": 315535208,
+        "name": "Json::Value",
+        "type": "object"
+      },
+      "GeometryDataMinEngineVersion": {
+        "required": true,
+        "deprecated": false,
+        "id": 3965240747,
+        "name": "MinEngineVersion",
+        "type": "object"
+      },
+      "ID": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "string"
+      },
+      "ImageData": {
+        "required": true,
+        "deprecated": false,
+        "id": 2534576878,
+        "name": "SkinImage",
+        "type": "object"
+      },
+      "IsPersona": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "bool"
+      },
+      "IsPersonaCapeOnClassicSkin": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "bool"
+      },
+      "IsPremium": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "bool"
+      },
+      "IsPrimaryUser": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "bool"
+      },
+      "OverridesPlayerAppearance": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "bool"
+      },
+      "PersonaPieces": {
+        "required": true,
+        "deprecated": false,
+        "value_type": {
+          "id": 1140301959,
+          "name": "SerializedPersonaPieceHandle",
+          "type": "object"
+        },
+        "id": 2895190263,
+        "type": "sequence_container"
+      },
+      "PieceTintColors": {
+        "required": true,
+        "deprecated": false,
+        "key_type": {
+          "enum_values": [
+            {
+              "value": 1,
+              "name": "Skeleton"
+            },
+            {
+              "value": 2,
+              "name": "Body"
+            },
+            {
+              "value": 3,
+              "name": "Skin"
+            },
+            {
+              "value": 4,
+              "name": "Bottom"
+            },
+            {
+              "value": 5,
+              "name": "Feet"
+            },
+            {
+              "value": 6,
+              "name": "Dress"
+            },
+            {
+              "value": 7,
+              "name": "Top"
+            },
+            {
+              "value": 8,
+              "name": "High_Pants"
+            },
+            {
+              "value": 9,
+              "name": "Hands"
+            },
+            {
+              "value": 10,
+              "name": "Outerwear"
+            },
+            {
+              "value": 11,
+              "name": "FacialHair"
+            },
+            {
+              "value": 12,
+              "name": "Mouth"
+            },
+            {
+              "value": 13,
+              "name": "Eyes"
+            },
+            {
+              "value": 14,
+              "name": "Hair"
+            },
+            {
+              "value": 15,
+              "name": "Hood"
+            },
+            {
+              "value": 16,
+              "name": "Back"
+            },
+            {
+              "value": 17,
+              "name": "FaceAccessory"
+            },
+            {
+              "value": 18,
+              "name": "Head"
+            },
+            {
+              "value": 19,
+              "name": "Legs"
+            },
+            {
+              "value": 20,
+              "name": "LeftLeg"
+            },
+            {
+              "value": 21,
+              "name": "RightLeg"
+            },
+            {
+              "value": 22,
+              "name": "Arms"
+            },
+            {
+              "value": 23,
+              "name": "LeftArm"
+            },
+            {
+              "value": 24,
+              "name": "RightArm"
+            },
+            {
+              "value": 25,
+              "name": "Capes"
+            },
+            {
+              "value": 26,
+              "name": "ClassicSkin"
+            },
+            {
+              "value": 27,
+              "name": "Emote"
+            }
+          ],
+          "id": 1156069330,
+          "name": "persona::PieceType",
+          "type": "enum"
+        },
+        "mapped_type": {
+          "id": 1239139757,
+          "name": "TintMapColor",
+          "type": "object"
+        },
+        "id": 1993988872,
+        "type": "associative_container"
+      },
+      "PlayFabID": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "string"
+      },
+      "ResourcePatch": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "string"
+      },
+      "SkinColor": {
+        "required": true,
+        "deprecated": false,
+        "id": 1315424487,
+        "name": "Color",
+        "type": "object"
+      },
+      "TrustedSkinFlag": {
+        "required": true,
+        "deprecated": false,
+        "enum_values": [
+          {
+            "value": 0,
+            "name": "Unset"
+          },
+          {
+            "value": 1,
+            "name": "False"
+          },
+          {
+            "value": 2,
+            "name": "True"
+          }
+        ],
+        "id": 3322982004,
+        "name": "TrustedSkinFlag",
+        "type": "enum"
+      }
+    },
+    "id": 3902078879,
+    "name": "SerializedSkin",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Localized New Skin Name": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "string",
+        "description": "The player's localized new skin name"
+      },
+      "Localized Old Skin Name": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "string",
+        "description": "The player's localized old skin name"
+      },
+      "Serialized Skin": {
+        "required": true,
+        "deprecated": false,
+        "id": 3902078879,
+        "name": "SerializedSkin",
+        "type": "object",
+        "description": "The player's serialized skin"
+      },
+      "UUID": {
+        "required": true,
+        "deprecated": false,
+        "id": 1616419299,
+        "name": "mce::UUID",
+        "type": "object",
+        "description": "The player's UUID"
+      }
+    },
+    "id": 376902814,
+    "name": "PlayerSkinPacketPayload",
+    "type": "object"
+  },
+  {
+    "parents": [],
+    "setters": [
+      {
+        "id": 376902814,
+        "name": "PlayerSkinPacketPayload",
+        "type": "object"
+      }
+    ],
+    "id": 775086109,
+    "name": "PlayerSkinPacket",
+    "type": "object",
+    "description": "Used when the player changes their skin"
   },
   {
     "members": {
@@ -20799,10 +22023,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 176,
-      "[cereal:packet_details]": "Packet sent by the player to start the cooldown on an item."
-    },
     "id": 1611534694,
     "name": "PlayerStartItemCooldownPacket",
     "type": "object",
@@ -20858,10 +22078,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 306,
-      "[cereal:packet_details]": ""
-    },
     "id": 3797810866,
     "name": "PlayerToggleCrafterSlotRequestPacket",
     "type": "object",
@@ -20944,10 +22160,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 324,
-      "[cereal:packet_details]": "Internal"
-    },
     "id": 59941711,
     "name": "PlayerVideoCapturePacket",
     "type": "object",
@@ -20970,8 +22182,8 @@
       "Position": {
         "required": true,
         "deprecated": false,
-        "id": 269289973,
-        "name": "NetworkBlockPosition",
+        "id": 820712576,
+        "name": "BlockPos",
         "type": "object"
       },
       "Volume": {
@@ -20994,10 +22206,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 86,
-      "[cereal:packet_details]": ""
-    },
     "id": 830379746,
     "name": "PlaySoundPacket",
     "type": "object",
@@ -21115,10 +22323,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 2,
-      "[cereal:packet_details]": "\n\tUsed after the Server handles a Login or (Sub)Client Authentication Packet\n\tIf everything is good, then it sends this packet to the client to finish the handshake.\n\tIf everything is not good, it terminates the connection.\n\t"
-    },
     "id": 4147458681,
     "name": "PlayStatusPacket",
     "type": "object",
@@ -21184,10 +22388,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 154,
-      "[cereal:packet_details]": "Client to server packet for server authoratative runtime database (with persistent LevelStorage backup) designed primarily to track lodestone stuff. See Position Tracking DB Notes.md in bedrock-docs. see PositionTrackingDBServerBroadcastPacket"
-    },
     "id": 381612363,
     "name": "PositionTrackingDBClientRequestPacket",
     "type": "object",
@@ -21263,10 +22463,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 153,
-      "[cereal:packet_details]": ""
-    },
     "id": 2558215005,
     "name": "PositionTrackingDBServerBroadcastPacket",
     "type": "object",
@@ -21302,10 +22498,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 92,
-      "[cereal:packet_details]": "Sent from the client after we make a purchase in the store OR if we login and our entitlements are verified.\nIt sends a vector of purchase receipts(string).There is a handler and a multiple senders."
-    },
     "id": 2903769210,
     "name": "PurchaseReceiptPacket",
     "type": "object",
@@ -21325,10 +22517,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 305,
-      "[cereal:packet_details]": ""
-    },
     "id": 2645288336,
     "name": "RefreshEntitlementsPacket",
     "type": "object",
@@ -21357,10 +22545,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 14,
-      "[cereal:packet_details]": "This is sent to the client to confirm which entity is being removed. This is done by sending an ActorUniqueID"
-    },
     "id": 3441043906,
     "name": "RemoveActorPacket",
     "type": "object",
@@ -21388,10 +22572,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 106,
-      "[cereal:packet_details]": "This is just the name of the objective."
-    },
     "id": 3481231424,
     "name": "RemoveObjectivePacket",
     "type": "object",
@@ -21427,10 +22607,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 167,
-      "[cereal:packet_details]": ""
-    },
     "id": 2103671872,
     "name": "RemoveVolumeEntityPacket",
     "type": "object",
@@ -21510,10 +22686,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 184,
-      "[cereal:packet_details]": "Once changed, the server will broadcast the updated state of abilities for that player. If the request is rejected, the caller will receive their reverted state of Abilities.  Can only be used to modify the calling player.  \t- mVariable: Info about this variable"
-    },
     "id": 3547543896,
     "name": "RequestAbilityPacket",
     "type": "object",
@@ -21551,10 +22723,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 69,
-      "[cereal:packet_details]": "This packet is to make sure that the server expands/shrinks first. Additionally for ClientSide Chunk Generation we can send a byte, based on client's hardware capabilities what is the max chunk radius client can handle."
-    },
     "id": 2056542729,
     "name": "RequestChunkRadiusPacket",
     "type": "object",
@@ -21566,8 +22734,8 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 924.0,
-          "maximum": 924.0
+          "minimum": 944.0,
+          "maximum": 944.0
         },
         "id": 0,
         "type": "int32"
@@ -21586,10 +22754,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 193,
-      "[cereal:packet_details]": "This is the initial packet sent from the client to initiate a connection.  NOTE: this packet should not contain anything other than the client version, don't add new data here."
-    },
     "id": 986000289,
     "name": "RequestNetworkSettingsPacket",
     "type": "object",
@@ -21656,10 +22820,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 185,
-      "[cereal:packet_details]": "Can only be used by Operators or Hosts."
-    },
     "id": 3253254338,
     "name": "RequestPermissionsPacket",
     "type": "object",
@@ -21711,10 +22871,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 83,
-      "[cereal:packet_details]": "(only one marked for uncompressed) realms resource pack download"
-    },
     "id": 2420797313,
     "name": "ResourcePackChunkDataPacket",
     "type": "object",
@@ -21751,10 +22907,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 84,
-      "[cereal:packet_details]": ""
-    },
     "id": 3722660954,
     "name": "ResourcePackChunkRequestPacket",
     "type": "object",
@@ -21875,14 +23027,29 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 82,
-      "[cereal:packet_details]": "Sent from the serverFileChunkUploader during the initialization of the file uploader. This packet is sent to the primary client."
-    },
     "id": 121683812,
     "name": "ResourcePackDataInfoPacket",
     "type": "object",
     "description": "Resource Pack Data Info"
+  },
+  {
+    "id": 228524219,
+    "name": "ResourcePacksReadyForValidationPacketPayload",
+    "type": "object"
+  },
+  {
+    "parents": [],
+    "setters": [
+      {
+        "id": 228524219,
+        "name": "ResourcePacksReadyForValidationPacketPayload",
+        "type": "object"
+      }
+    ],
+    "id": 1591216448,
+    "name": "ResourcePacksReadyForValidationPacket",
+    "type": "object",
+    "description": "Used to inform the server that the client has finished loading all resource packs."
   },
   {
     "members": {
@@ -21954,10 +23121,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 45,
-      "[cereal:packet_details]": "For some reason each respawn 1 packet is sent from the client and 3 are sent from the server."
-    },
     "id": 3160484819,
     "name": "RespawnPacket",
     "type": "object",
@@ -21991,10 +23154,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 177,
-      "[cereal:packet_details]": ""
-    },
     "id": 2520262741,
     "name": "ScriptMessagePacket",
     "type": "object",
@@ -22024,155 +23183,155 @@
       },
       {
         "value": 5,
-        "name": "Balancer"
-      },
-      {
-        "value": 6,
         "name": "BlockTickingQueues"
       },
       {
-        "value": 7,
+        "value": 6,
         "name": "Biome_Storage"
       },
       {
-        "value": 8,
+        "value": 7,
         "name": "Cereal"
       },
       {
-        "value": 9,
+        "value": 8,
         "name": "CircuitSystem"
       },
       {
-        "value": 10,
+        "value": 9,
         "name": "Client"
       },
       {
-        "value": 11,
+        "value": 10,
         "name": "Commands"
       },
       {
-        "value": 12,
+        "value": 11,
         "name": "DBStorage"
       },
       {
-        "value": 13,
+        "value": 12,
         "name": "Debug"
       },
       {
-        "value": 14,
+        "value": 13,
         "name": "Documentation"
       },
       {
-        "value": 15,
+        "value": 14,
         "name": "ECSSystems"
       },
       {
-        "value": 16,
+        "value": 15,
         "name": "FMOD"
       },
       {
-        "value": 17,
+        "value": 16,
         "name": "Fonts"
       },
       {
-        "value": 18,
+        "value": 17,
         "name": "ImGui"
       },
       {
-        "value": 19,
+        "value": 18,
         "name": "Input"
       },
       {
-        "value": 20,
+        "value": 19,
         "name": "JsonUI"
       },
       {
-        "value": 21,
+        "value": 20,
         "name": "JsonUI_ControlFactory_Json"
       },
       {
-        "value": 22,
+        "value": 21,
         "name": "JsonUI_ControlTree"
       },
       {
-        "value": 23,
+        "value": 22,
         "name": "JsonUI_ControlTree_ControlElement"
       },
       {
-        "value": 24,
+        "value": 23,
         "name": "JsonUI_ControlTree_PopulateDataBinding"
       },
       {
-        "value": 25,
+        "value": 24,
         "name": "JsonUI_ControlTree_PopulateFocus"
       },
       {
-        "value": 26,
+        "value": 25,
         "name": "JsonUI_ControlTree_PopulateLayout"
       },
       {
-        "value": 27,
+        "value": 26,
         "name": "JsonUI_ControlTree_PopulateOther"
       },
       {
-        "value": 28,
+        "value": 27,
         "name": "JsonUI_ControlTree_PopulateSprite"
       },
       {
-        "value": 29,
+        "value": 28,
         "name": "JsonUI_ControlTree_PopulateText"
       },
       {
-        "value": 30,
+        "value": 29,
         "name": "JsonUI_ControlTree_PopulateTTS"
       },
       {
-        "value": 31,
+        "value": 30,
         "name": "JsonUI_ControlTree_Visibility"
       },
       {
-        "value": 32,
+        "value": 31,
         "name": "JsonUI_CreateUI"
       },
       {
-        "value": 33,
+        "value": 32,
         "name": "JsonUI_Defs"
       },
       {
-        "value": 34,
+        "value": 33,
         "name": "JsonUI_LayoutManager"
       },
       {
-        "value": 35,
+        "value": 34,
         "name": "JsonUI_LayoutManager_RemoveDependencies"
       },
       {
-        "value": 36,
+        "value": 35,
         "name": "JsonUI_LayoutManager_InitVariable"
       },
       {
-        "value": 37,
+        "value": 36,
         "name": "Languages"
       },
       {
-        "value": 38,
+        "value": 37,
         "name": "Level"
       },
       {
-        "value": 39,
+        "value": 38,
         "name": "LevelStructures"
       },
       {
-        "value": 40,
+        "value": 39,
         "name": "LevelChunk"
       },
       {
-        "value": 41,
+        "value": 40,
         "name": "LevelChunkGen"
       },
       {
-        "value": 42,
+        "value": 41,
         "name": "LevelChunkGenThreadLocal"
+      },
+      {
+        "value": 42,
+        "name": "LightVolumeManager"
       },
       {
         "value": 43,
@@ -22325,6 +23484,50 @@
       {
         "value": 80,
         "name": "DataDrivenUI_Defs"
+      },
+      {
+        "value": 81,
+        "name": "Gameface"
+      },
+      {
+        "value": 82,
+        "name": "Gameface_System"
+      },
+      {
+        "value": 83,
+        "name": "Gameface_DOM"
+      },
+      {
+        "value": 84,
+        "name": "Gameface_CSS"
+      },
+      {
+        "value": 85,
+        "name": "Gameface_Display"
+      },
+      {
+        "value": 86,
+        "name": "Gameface_TempAllocator"
+      },
+      {
+        "value": 87,
+        "name": "Gameface_PoolAllocator"
+      },
+      {
+        "value": 88,
+        "name": "Gameface_Dump"
+      },
+      {
+        "value": 89,
+        "name": "Gameface_Media"
+      },
+      {
+        "value": 90,
+        "name": "Gameface_JSON"
+      },
+      {
+        "value": 91,
+        "name": "Gameface_ScriptEngine"
       }
     ],
     "id": 156975172,
@@ -22359,155 +23562,155 @@
           },
           {
             "value": 5,
-            "name": "Balancer"
-          },
-          {
-            "value": 6,
             "name": "BlockTickingQueues"
           },
           {
-            "value": 7,
+            "value": 6,
             "name": "Biome_Storage"
           },
           {
-            "value": 8,
+            "value": 7,
             "name": "Cereal"
           },
           {
-            "value": 9,
+            "value": 8,
             "name": "CircuitSystem"
           },
           {
-            "value": 10,
+            "value": 9,
             "name": "Client"
           },
           {
-            "value": 11,
+            "value": 10,
             "name": "Commands"
           },
           {
-            "value": 12,
+            "value": 11,
             "name": "DBStorage"
           },
           {
-            "value": 13,
+            "value": 12,
             "name": "Debug"
           },
           {
-            "value": 14,
+            "value": 13,
             "name": "Documentation"
           },
           {
-            "value": 15,
+            "value": 14,
             "name": "ECSSystems"
           },
           {
-            "value": 16,
+            "value": 15,
             "name": "FMOD"
           },
           {
-            "value": 17,
+            "value": 16,
             "name": "Fonts"
           },
           {
-            "value": 18,
+            "value": 17,
             "name": "ImGui"
           },
           {
-            "value": 19,
+            "value": 18,
             "name": "Input"
           },
           {
-            "value": 20,
+            "value": 19,
             "name": "JsonUI"
           },
           {
-            "value": 21,
+            "value": 20,
             "name": "JsonUI_ControlFactory_Json"
           },
           {
-            "value": 22,
+            "value": 21,
             "name": "JsonUI_ControlTree"
           },
           {
-            "value": 23,
+            "value": 22,
             "name": "JsonUI_ControlTree_ControlElement"
           },
           {
-            "value": 24,
+            "value": 23,
             "name": "JsonUI_ControlTree_PopulateDataBinding"
           },
           {
-            "value": 25,
+            "value": 24,
             "name": "JsonUI_ControlTree_PopulateFocus"
           },
           {
-            "value": 26,
+            "value": 25,
             "name": "JsonUI_ControlTree_PopulateLayout"
           },
           {
-            "value": 27,
+            "value": 26,
             "name": "JsonUI_ControlTree_PopulateOther"
           },
           {
-            "value": 28,
+            "value": 27,
             "name": "JsonUI_ControlTree_PopulateSprite"
           },
           {
-            "value": 29,
+            "value": 28,
             "name": "JsonUI_ControlTree_PopulateText"
           },
           {
-            "value": 30,
+            "value": 29,
             "name": "JsonUI_ControlTree_PopulateTTS"
           },
           {
-            "value": 31,
+            "value": 30,
             "name": "JsonUI_ControlTree_Visibility"
           },
           {
-            "value": 32,
+            "value": 31,
             "name": "JsonUI_CreateUI"
           },
           {
-            "value": 33,
+            "value": 32,
             "name": "JsonUI_Defs"
           },
           {
-            "value": 34,
+            "value": 33,
             "name": "JsonUI_LayoutManager"
           },
           {
-            "value": 35,
+            "value": 34,
             "name": "JsonUI_LayoutManager_RemoveDependencies"
           },
           {
-            "value": 36,
+            "value": 35,
             "name": "JsonUI_LayoutManager_InitVariable"
           },
           {
-            "value": 37,
+            "value": 36,
             "name": "Languages"
           },
           {
-            "value": 38,
+            "value": 37,
             "name": "Level"
           },
           {
-            "value": 39,
+            "value": 38,
             "name": "LevelStructures"
           },
           {
-            "value": 40,
+            "value": 39,
             "name": "LevelChunk"
           },
           {
-            "value": 41,
+            "value": 40,
             "name": "LevelChunkGen"
           },
           {
-            "value": 42,
+            "value": 41,
             "name": "LevelChunkGenThreadLocal"
+          },
+          {
+            "value": 42,
+            "name": "LightVolumeManager"
           },
           {
             "value": 43,
@@ -22660,6 +23863,50 @@
           {
             "value": 80,
             "name": "DataDrivenUI_Defs"
+          },
+          {
+            "value": 81,
+            "name": "Gameface"
+          },
+          {
+            "value": 82,
+            "name": "Gameface_System"
+          },
+          {
+            "value": 83,
+            "name": "Gameface_DOM"
+          },
+          {
+            "value": 84,
+            "name": "Gameface_CSS"
+          },
+          {
+            "value": 85,
+            "name": "Gameface_Display"
+          },
+          {
+            "value": 86,
+            "name": "Gameface_TempAllocator"
+          },
+          {
+            "value": 87,
+            "name": "Gameface_PoolAllocator"
+          },
+          {
+            "value": 88,
+            "name": "Gameface_Dump"
+          },
+          {
+            "value": 89,
+            "name": "Gameface_Media"
+          },
+          {
+            "value": 90,
+            "name": "Gameface_JSON"
+          },
+          {
+            "value": 91,
+            "name": "Gameface_ScriptEngine"
           }
         ],
         "id": 156975172,
@@ -22761,10 +24008,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 315,
-      "[cereal:packet_details]": ""
-    },
     "id": 1692583562,
     "name": "ServerboundDiagnosticsPacket",
     "type": "object",
@@ -22842,10 +24085,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 312,
-      "[cereal:packet_details]": "In order for the client to send a packet with StartLoadingScreen, the server needs to anticipate that this packet is coming.\nIf the server doesn't expect that we are about to start a loading screen, the server will disconnect the client.\nEndLoadingScreen is sent by the client when the loading screen closes.\nThe Loading Screen Id field will be empty if the loading screen is triggered by the initial loading into of a world.\nThe Loading Screen Id field will have a value if sent by the server. This currently happens as part of ChangeDimensionPacket if the player is alive."
-    },
     "id": 826489530,
     "name": "ServerboundLoadingScreenPacket",
     "type": "object",
@@ -22905,10 +24144,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 329,
-      "[cereal:packet_details]": ""
-    },
     "id": 4020927845,
     "name": "ServerboundPackSettingChangePacket",
     "type": "object",
@@ -22937,329 +24172,10 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 16,
-      "[cereal:packet_details]": "Is currently only used for debug draw. Packets will not be sent if debug draw is not available."
-    },
     "id": 2457127683,
     "name": "ServerPlayerPostMovePositionPacket",
     "type": "object",
     "description": "Used to send a player's server position to the respective client at the end of movement."
-  },
-  {
-    "enum_values": [
-      {
-        "value": 0,
-        "name": "Line"
-      },
-      {
-        "value": 1,
-        "name": "Box"
-      },
-      {
-        "value": 2,
-        "name": "Sphere"
-      },
-      {
-        "value": 3,
-        "name": "Circle"
-      },
-      {
-        "value": 4,
-        "name": "Text"
-      },
-      {
-        "value": 5,
-        "name": "Arrow"
-      }
-    ],
-    "id": 3404362253,
-    "name": "enum ScriptModuleDebugUtilities::ScriptDebugShapeType",
-    "type": "enum"
-  },
-  {
-    "members": {
-      "Arrow End Location": {
-        "required": true,
-        "deprecated": false,
-        "id": 4004946602,
-        "name": "Vec3",
-        "type": "object",
-        "description": "Vec3 end location of the debug arrow."
-      },
-      "Arrow Head Length": {
-        "required": true,
-        "deprecated": false,
-        "id": 0,
-        "type": "float",
-        "description": "Length of the head of the debug arrow."
-      },
-      "Arrow Head Radius": {
-        "required": true,
-        "deprecated": false,
-        "id": 0,
-        "type": "float",
-        "description": "Radius of the head of the debug arrow."
-      },
-      "Num Segments": {
-        "required": true,
-        "deprecated": false,
-        "constraint": {
-          "minimum": 0.0,
-          "maximum": 255.0
-        },
-        "id": 0,
-        "type": "uint8",
-        "description": "Integer number of segments used for the debug arrow's head."
-      }
-    },
-    "id": 96730425,
-    "name": "struct ArrowDataPayload",
-    "type": "object"
-  },
-  {
-    "members": {
-      "Text": {
-        "required": true,
-        "deprecated": false,
-        "id": 0,
-        "type": "string",
-        "description": "Text (string) of the debug text shape."
-      }
-    },
-    "id": 3254662607,
-    "name": "struct TextDataPayload",
-    "type": "object"
-  },
-  {
-    "members": {
-      "Box Bound": {
-        "required": true,
-        "deprecated": false,
-        "id": 4004946602,
-        "name": "Vec3",
-        "type": "object",
-        "description": "Vec3 bound of the debug box shape."
-      }
-    },
-    "id": 3006597033,
-    "name": "struct BoxDataPayload",
-    "type": "object"
-  },
-  {
-    "members": {
-      "Line End Location": {
-        "required": true,
-        "deprecated": false,
-        "id": 4004946602,
-        "name": "Vec3",
-        "type": "object",
-        "description": "Vec3 end location of the debug line."
-      }
-    },
-    "id": 3414789328,
-    "name": "struct LineDataPayload",
-    "type": "object"
-  },
-  {
-    "members": {
-      "Num Segments": {
-        "required": true,
-        "deprecated": false,
-        "constraint": {
-          "minimum": 0.0,
-          "maximum": 255.0
-        },
-        "id": 0,
-        "type": "uint8",
-        "description": "Integer number of segments used for the debug circle or sphere."
-      }
-    },
-    "id": 2883805925,
-    "name": "struct SphereDataPayload",
-    "type": "object"
-  },
-  {
-    "members": {
-      "Attached To Entity ID": {
-        "required": false,
-        "deprecated": false,
-        "id": 3541243607,
-        "name": "ActorRuntimeID",
-        "type": "object",
-        "description": "Runtime ID of the entity this shape is attached to."
-      },
-      "Color": {
-        "required": false,
-        "deprecated": false,
-        "id": 1315424487,
-        "name": "Color",
-        "type": "object",
-        "description": "Color (ARGB Hex string) of the debug shape."
-      },
-      "Dimension ID": {
-        "required": true,
-        "deprecated": false,
-        "id": 2872336518,
-        "name": "DimensionType",
-        "type": "object",
-        "description": "Currently supported: (0 -> Overworld, 1 -> Nether, 2 -> The End, 3 -> Undefined)"
-      },
-      "Extra Shape Data": {
-        "required": false,
-        "deprecated": false,
-        "setters": [
-          {
-            "id": 0,
-            "type": "null"
-          },
-          {
-            "id": 96730425,
-            "name": "struct ArrowDataPayload",
-            "type": "object"
-          },
-          {
-            "id": 3254662607,
-            "name": "struct TextDataPayload",
-            "type": "object"
-          },
-          {
-            "id": 3006597033,
-            "name": "struct BoxDataPayload",
-            "type": "object"
-          },
-          {
-            "id": 3414789328,
-            "name": "struct LineDataPayload",
-            "type": "object"
-          },
-          {
-            "id": 2883805925,
-            "name": "struct SphereDataPayload",
-            "type": "object"
-          }
-        ],
-        "id": 0,
-        "description": "Extra payload (variant) holding data specific to the type of shape (such as text string for the text shape)."
-      },
-      "Location": {
-        "required": false,
-        "deprecated": false,
-        "id": 4004946602,
-        "name": "Vec3",
-        "type": "object",
-        "description": "Vec3 location of the debug shape in the world."
-      },
-      "NetworkId": {
-        "required": true,
-        "deprecated": false,
-        "constraint": {
-          "minimum": 0.0
-        },
-        "id": 0,
-        "type": "uint64",
-        "description": "uint64 network id used to identify the matching shape on the client as the server"
-      },
-      "Rotation": {
-        "required": false,
-        "deprecated": false,
-        "id": 4004946602,
-        "name": "Vec3",
-        "type": "object",
-        "description": "Vec3 (Euler angles in radians, PYR) rotation of the debug shape in the world."
-      },
-      "Scale": {
-        "required": false,
-        "deprecated": false,
-        "id": 0,
-        "type": "float",
-        "description": "Float scale of the debug shape in the world."
-      },
-      "Shape Type": {
-        "required": false,
-        "deprecated": false,
-        "enum_values": [
-          {
-            "value": 0,
-            "name": "Line"
-          },
-          {
-            "value": 1,
-            "name": "Box"
-          },
-          {
-            "value": 2,
-            "name": "Sphere"
-          },
-          {
-            "value": 3,
-            "name": "Circle"
-          },
-          {
-            "value": 4,
-            "name": "Text"
-          },
-          {
-            "value": 5,
-            "name": "Arrow"
-          }
-        ],
-        "id": 3404362253,
-        "name": "enum ScriptModuleDebugUtilities::ScriptDebugShapeType",
-        "type": "enum",
-        "description": "Byte representing the type of debug shape (Line, Box, Sphere, Circle, Text)."
-      },
-      "Total Time Left": {
-        "required": false,
-        "deprecated": false,
-        "id": 0,
-        "type": "float",
-        "description": "The total time left in seconds until this debug shape will be removed (0 meaning never)."
-      }
-    },
-    "id": 3553763893,
-    "name": "struct ShapeDataPayload",
-    "type": "object"
-  },
-  {
-    "members": {
-      "Array of debug shapes (can be a mix of new, updated or removed)": {
-        "required": true,
-        "deprecated": false,
-        "constraint": {
-          "maxItems": 1048576
-        },
-        "value_type": {
-          "id": 3553763893,
-          "name": "struct ShapeDataPayload",
-          "type": "object"
-        },
-        "id": 3934910779,
-        "type": "sequence_container",
-        "description": "Semantic version string"
-      }
-    },
-    "id": 818882612,
-    "name": "struct DebugDrawerPacketPayload",
-    "type": "object"
-  },
-  {
-    "parents": [],
-    "setters": [
-      {
-        "id": 818882612,
-        "name": "struct DebugDrawerPacketPayload",
-        "type": "object"
-      }
-    ],
-    "cereal_properties": {
-      "[cereal:packet]": 328,
-      "[cereal:packet_details]": ""
-    },
-    "id": 122829297,
-    "name": "DebugDrawerPacket",
-    "type": "object",
-    "description": "Send debug drawing shape info (from scripting) to the client for rendering"
   },
   {
     "id": 386514439,
@@ -23275,10 +24191,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 102,
-      "[cereal:packet_details]": "It is also an empty packet. There is no handler for this packet, should be removed."
-    },
     "id": 2368123512,
     "name": "ServerSettingsRequestPacket",
     "type": "object",
@@ -23315,10 +24227,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 103,
-      "[cereal:packet_details]": ""
-    },
     "id": 3053596948,
     "name": "ServerSettingsResponsePacket",
     "type": "object",
@@ -23352,10 +24260,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 192,
-      "[cereal:packet_details]": "Sent from server."
-    },
     "id": 987645125,
     "name": "ServerStatsPacket",
     "type": "object",
@@ -23384,10 +24288,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 3,
-      "[cereal:packet_details]": "Sent from the server at the end of the login packet"
-    },
     "id": 1154491613,
     "name": "ServerToClientHandshakePacket",
     "type": "object",
@@ -23496,10 +24396,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 41,
-      "[cereal:packet_details]": "Sent when the player starts riding something. Two are sent at a time for some reason."
-    },
     "id": 4218540248,
     "name": "SetActorLinkPacket",
     "type": "object",
@@ -23543,10 +24439,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 40,
-      "[cereal:packet_details]": "\n\tIt is primarily relevant for client predicted entities like the player or a boat or horse they are in control of.\n\tFor most other actor types it does nothing.<br>\n\tThis is one of the packets that can directly affect player motion, for others, see:<br>\n\t- MovePlayerPacket<br>\n\t- CorrectPlayerMovePredictionPacket\n\t"
-    },
     "id": 2445517866,
     "name": "SetActorMotionPacket",
     "type": "object",
@@ -23574,10 +24466,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 59,
-      "[cereal:packet_details]": "see SimpleEventPacket"
-    },
     "id": 3558097506,
     "name": "SetCommandsEnabledPacket",
     "type": "object",
@@ -23681,10 +24569,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 105,
-      "[cereal:packet_details]": ""
-    },
     "id": 2467890142,
     "name": "SetDefaultGameTypePacket",
     "type": "object",
@@ -23746,10 +24630,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 60,
-      "[cereal:packet_details]": "Used for when a client changes difficulty through the menu or when the server changes the difficulty."
-    },
     "id": 3143740386,
     "name": "SetDifficultyPacket",
     "type": "object",
@@ -23816,10 +24696,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 107,
-      "[cereal:packet_details]": ""
-    },
     "id": 1999392814,
     "name": "SetDisplayObjectivePacket",
     "type": "object",
@@ -23847,10 +24723,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 42,
-      "[cereal:packet_details]": ""
-    },
     "id": 2577070585,
     "name": "SetHealthPacket",
     "type": "object",
@@ -24028,10 +24900,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 308,
-      "[cereal:packet_details]": "This packet will toggle the HUD visibility."
-    },
     "id": 1181397288,
     "name": "SetHudPacket",
     "type": "object",
@@ -24690,10 +25558,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 96,
-      "[cereal:packet_details]": ""
-    },
     "id": 3146300535,
     "name": "SetLastHurtByPacket",
     "type": "object",
@@ -24722,10 +25586,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 113,
-      "[cereal:packet_details]": "Client tells the server that the client is ready to roll."
-    },
     "id": 2531603903,
     "name": "SetLocalPlayerAsInitializedPacket",
     "type": "object",
@@ -24784,10 +25644,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 62,
-      "[cereal:packet_details]": "The client handles the change of the UI element (the gametype dropdown, although this can be avoided by changing via command or on the server), then the client sends a packet to the server, then the server changes the player's gametype and sends a packet back (UpdatePlayerGameTypePacket) to make sure it matches on the client."
-    },
     "id": 1837652280,
     "name": "SetPlayerGameTypePacket",
     "type": "object",
@@ -25057,10 +25913,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 307,
-      "[cereal:packet_details]": ""
-    },
     "id": 3800421896,
     "name": "SetPlayerInventoryOptionsPacket",
     "type": "object",
@@ -25086,8 +25938,8 @@
       "Block Position": {
         "required": true,
         "deprecated": false,
-        "id": 269289973,
-        "name": "NetworkBlockPosition",
+        "id": 820712576,
+        "name": "BlockPos",
         "type": "object"
       },
       "Dimension type": {
@@ -25100,8 +25952,8 @@
       "Spawn Block Pos": {
         "required": true,
         "deprecated": false,
-        "id": 269289973,
-        "name": "NetworkBlockPosition",
+        "id": 820712576,
+        "name": "BlockPos",
         "type": "object"
       },
       "Spawn Position Type": {
@@ -25135,10 +25987,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 43,
-      "[cereal:packet_details]": "see RespawnPacket"
-    },
     "id": 323203397,
     "name": "SetSpawnPositionPacket",
     "type": "object",
@@ -25166,10 +26014,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 10,
-      "[cereal:packet_details]": "Every so often (and at login) the server sends the current time to the client, and additionally the client can set the server time through 2 commands: DayLockCommand and TimeCommand"
-    },
     "id": 523590090,
     "name": "SetTimePacket",
     "type": "object",
@@ -25204,10 +26048,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 140,
-      "[cereal:packet_details]": "Used when the player changes the world settings like doDayNightCycle or WeatherCycle via the world settings menu"
-    },
     "id": 2100411941,
     "name": "SettingsCommandPacket",
     "type": "object",
@@ -25359,10 +26199,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 88,
-      "[cereal:packet_details]": "There are 2 commands associated with it: title and titleraw.\n\tBoth of which have functionality to change fade in/out time for titles, sub titles, and action bar text.\n\ttitleraw is using json to format so it will be bigger (i don't have an example)"
-    },
     "id": 236421047,
     "name": "SetTitlePacket",
     "type": "object",
@@ -25412,10 +26248,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 75,
-      "[cereal:packet_details]": "That packet is sent to the client.  When the credits have concluded, a packet is sent back to the server to let it know to reinstate the player watching the credits."
-    },
     "id": 2203694174,
     "name": "ShowCreditsPacket",
     "type": "object",
@@ -25443,10 +26275,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 104,
-      "[cereal:packet_details]": "The only use in vanilla is a test command called ProfileCommand. It makes the user's xbox profile popup."
-    },
     "id": 3696891821,
     "name": "ShowProfilePacket",
     "type": "object",
@@ -25517,10 +26345,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 91,
-      "[cereal:packet_details]": "The server can redirect the user to a 3rd party server page, to a marketplace offer description page, or to a dressing room page containing desired offer."
-    },
     "id": 3443975977,
     "name": "ShowStoreOfferPacket",
     "type": "object",
@@ -25590,10 +26414,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 64,
-      "[cereal:packet_details]": "This is fired from the client to the server and a SetCommandsEnabledPacket is sent back when enabling commands."
-    },
     "id": 3601495873,
     "name": "SimpleEventPacket",
     "type": "object",
@@ -25663,10 +26483,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 168,
-      "[cereal:packet_details]": "- mSimType: an enum representing the simulation type to switch to."
-    },
     "id": 406421174,
     "name": "SimulationTypePacket",
     "type": "object",
@@ -25701,10 +26517,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 66,
-      "[cereal:packet_details]": "Note: This can be seen as \"ContainerWantSetSlotPacket\" when sent from client to server. Currently, the client handles side-effects relating to it's own inventory, regardless of the success of the operation."
-    },
     "id": 2609444773,
     "name": "SpawnExperienceOrbPacket",
     "type": "object",
@@ -25779,10 +26591,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 118,
-      "[cereal:packet_details]": "This is not used for much anymore, only the Particle command (spawn particle by name at a location) and for ScriptServerSpawnParticleAttachedToActor and ScriptServerSpawnParticleInWorldEvent."
-    },
     "id": 2905948627,
     "name": "SpawnParticleEffectPacket",
     "type": "object",
@@ -25822,10 +26630,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 87,
-      "[cereal:packet_details]": ""
-    },
     "id": 3646786948,
     "name": "StopSoundPacket",
     "type": "object",
@@ -26016,8 +26820,8 @@
       "Structure Offset": {
         "required": true,
         "deprecated": false,
-        "id": 269289973,
-        "name": "NetworkBlockPosition",
+        "id": 820712576,
+        "name": "BlockPos",
         "type": "object"
       },
       "Structure Palette Name": {
@@ -26029,8 +26833,8 @@
       "Structure Size": {
         "required": true,
         "deprecated": false,
-        "id": 269289973,
-        "name": "NetworkBlockPosition",
+        "id": 820712576,
+        "name": "BlockPos",
         "type": "object"
       }
     },
@@ -26074,8 +26878,8 @@
       "Structure Position": {
         "required": true,
         "deprecated": false,
-        "id": 269289973,
-        "name": "NetworkBlockPosition",
+        "id": 820712576,
+        "name": "BlockPos",
         "type": "object"
       },
       "Structure Settings": {
@@ -26122,10 +26926,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 132,
-      "[cereal:packet_details]": "This is used to kick off the process of loading and returning a structure in a Tag from the server back to the client. Currently this functionality is completely disabled and does nothing."
-    },
     "id": 1030299093,
     "name": "StructureTemplateDataRequestPacket",
     "type": "object",
@@ -26199,10 +26999,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 133,
-      "[cereal:packet_details]": "The client sends a packet to the server, from there the structure is built and then put into a Tag where it is sent back to the client, from there you can view the structure in the Structure Block Screen. Currently this functionality is completely disabled and does nothing. Used to reply to a request for structure information."
-    },
     "id": 3211677219,
     "name": "StructureTemplateDataResponsePacket",
     "type": "object",
@@ -26231,14 +27027,279 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 165,
-      "[cereal:packet_details]": "Intended to one day replace SynchedActorData."
-    },
     "id": 1781910050,
     "name": "SyncActorPropertyPacket",
     "type": "object",
     "description": "Allows us to synchronize Actor properties across the network."
+  },
+  {
+    "members": {
+      "ClockId": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0
+        },
+        "id": 0,
+        "type": "uint64"
+      },
+      "IsPaused": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "bool"
+      },
+      "Time": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "int32"
+      }
+    },
+    "id": 109381602,
+    "name": "SyncWorldClockStateData",
+    "type": "object"
+  },
+  {
+    "members": {
+      "ClockData": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxItems": 256
+        },
+        "value_type": {
+          "id": 109381602,
+          "name": "SyncWorldClockStateData",
+          "type": "object"
+        },
+        "id": 3760974071,
+        "type": "sequence_container"
+      }
+    },
+    "id": 677846036,
+    "name": "SyncStateData",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Id": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0
+        },
+        "id": 0,
+        "type": "uint64"
+      },
+      "Name": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxLength": 128
+        },
+        "id": 0,
+        "type": "string"
+      },
+      "Period": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "int32"
+      },
+      "Time": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "int32"
+      }
+    },
+    "id": 245078115,
+    "name": "TimeMarkerData",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Id": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0
+        },
+        "id": 0,
+        "type": "uint64"
+      },
+      "IsPaused": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "bool"
+      },
+      "Name": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxLength": 128
+        },
+        "id": 0,
+        "type": "string"
+      },
+      "Time": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "int32"
+      },
+      "TimeMarkers": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxItems": 256
+        },
+        "value_type": {
+          "id": 245078115,
+          "name": "TimeMarkerData",
+          "type": "object"
+        },
+        "id": 2457261703,
+        "type": "sequence_container"
+      }
+    },
+    "id": 2568868754,
+    "name": "WorldClockData",
+    "type": "object"
+  },
+  {
+    "members": {
+      "ClockData": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxItems": 256
+        },
+        "value_type": {
+          "id": 2568868754,
+          "name": "WorldClockData",
+          "type": "object"
+        },
+        "id": 2659412961,
+        "type": "sequence_container"
+      }
+    },
+    "id": 4012169973,
+    "name": "InitializeRegistryData",
+    "type": "object"
+  },
+  {
+    "members": {
+      "ClockId": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0
+        },
+        "id": 0,
+        "type": "uint64"
+      },
+      "TimeMarkers": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxItems": 256
+        },
+        "value_type": {
+          "id": 245078115,
+          "name": "TimeMarkerData",
+          "type": "object"
+        },
+        "id": 2457261703,
+        "type": "sequence_container"
+      }
+    },
+    "id": 2599647528,
+    "name": "AddTimeMarkerData",
+    "type": "object"
+  },
+  {
+    "members": {
+      "ClockId": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0
+        },
+        "id": 0,
+        "type": "uint64"
+      },
+      "TimeMarkerIds": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxItems": 256
+        },
+        "value_type": {
+          "constraint": {
+            "minimum": 0.0
+          },
+          "id": 0,
+          "type": "uint64"
+        },
+        "id": 2479660239,
+        "type": "sequence_container"
+      }
+    },
+    "id": 1269160059,
+    "name": "RemoveTimeMarkerData",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Data": {
+        "required": true,
+        "deprecated": false,
+        "setters": [
+          {
+            "id": 677846036,
+            "name": "SyncStateData",
+            "type": "object"
+          },
+          {
+            "id": 4012169973,
+            "name": "InitializeRegistryData",
+            "type": "object"
+          },
+          {
+            "id": 2599647528,
+            "name": "AddTimeMarkerData",
+            "type": "object"
+          },
+          {
+            "id": 1269160059,
+            "name": "RemoveTimeMarkerData",
+            "type": "object"
+          }
+        ],
+        "id": 0,
+        "description": "Variant data specific to what needs to be synced."
+      }
+    },
+    "id": 2972859956,
+    "name": "SyncWorldClocksPacketPayload",
+    "type": "object"
+  },
+  {
+    "parents": [],
+    "setters": [
+      {
+        "id": 2972859956,
+        "name": "SyncWorldClocksPacketPayload",
+        "type": "object"
+      }
+    ],
+    "id": 3967531941,
+    "name": "SyncWorldClocksPacket",
+    "type": "object",
+    "description": "Initializes and syncs world clocks from the server to clients. (Currently disabled)"
   },
   {
     "members": {
@@ -26270,10 +27331,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 17,
-      "[cereal:packet_details]": "From this the item and count is turned into an item and the transaction is handled afterwards."
-    },
     "id": 1184763514,
     "name": "TakeItemActorPacket",
     "type": "object",
@@ -26674,10 +27731,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 9,
-      "[cereal:packet_details]": "Used for commands, messages, and other info printed to the screen. Most of which are server->client or server broadcasted to all clients, but some cases have a client to other client via the server"
-    },
     "id": 3980576190,
     "name": "TextPacket",
     "type": "object",
@@ -26705,10 +27758,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 179,
-      "[cereal:packet_details]": ""
-    },
     "id": 2168122420,
     "name": "TickingAreasLoadStatusPacket",
     "type": "object",
@@ -26744,10 +27793,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 186,
-      "[cereal:packet_details]": ""
-    },
     "id": 2449303253,
     "name": "ToastRequestPacket",
     "type": "object",
@@ -26790,10 +27835,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 85,
-      "[cereal:packet_details]": ""
-    },
     "id": 1307871798,
     "name": "TransferPacket",
     "type": "object",
@@ -26881,10 +27922,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 199,
-      "[cereal:packet_details]": ""
-    },
     "id": 1677551807,
     "name": "UnlockedRecipesPacket",
     "type": "object",
@@ -26950,10 +27987,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 188,
-      "[cereal:packet_details]": "Sent by the server to update the state of AdventureSettings. Replaces the AdventureSettingsPacket for updating AdventureSettings from server to client."
-    },
     "id": 1983475801,
     "name": "UpdateAdventureSettingsPacket",
     "type": "object",
@@ -26964,8 +27997,8 @@
       "Block Position": {
         "required": true,
         "deprecated": false,
-        "id": 269289973,
-        "name": "NetworkBlockPosition",
+        "id": 820712576,
+        "name": "BlockPos",
         "type": "object"
       },
       "Block Runtime ID": {
@@ -27009,10 +28042,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 21,
-      "[cereal:packet_details]": "This happens often. Luckily, the packets are small."
-    },
     "id": 2708069345,
     "name": "UpdateBlockPacket",
     "type": "object",
@@ -27051,8 +28080,8 @@
       "Block Position": {
         "required": true,
         "deprecated": false,
-        "id": 269289973,
-        "name": "NetworkBlockPosition",
+        "id": 820712576,
+        "name": "BlockPos",
         "type": "object"
       },
       "Block Runtime ID": {
@@ -27106,10 +28135,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 110,
-      "[cereal:packet_details]": "Variation of UpdateBlockSyncedPacket that includes information to sync entities with renderchunk generation. Occasionally when blocks change a sync message is sent and during the change on the dimension, this packet is sent to the client to alert the update flags and sync info at a specific position."
-    },
     "id": 3613566615,
     "name": "UpdateBlockSyncedPacket",
     "type": "object",
@@ -27125,13 +28150,6 @@
         },
         "id": 0,
         "type": "uint32"
-      },
-      "Server Pos": {
-        "required": true,
-        "deprecated": false,
-        "id": 4004946602,
-        "name": "Vec3",
-        "type": "object"
       }
     },
     "id": 2432899724,
@@ -27147,10 +28165,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 196,
-      "[cereal:packet_details]": "Used to update the players input permissions. Sends the full permission set and the server position of the player at the time the permission was modified."
-    },
     "id": 2580383211,
     "name": "UpdateClientInputLocksPacket",
     "type": "object",
@@ -27221,10 +28235,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 323,
-      "[cereal:packet_details]": "The values in this packet are originally synced through the Connection Request and then updated via this packet."
-    },
     "id": 2492467419,
     "name": "UpdateClientOptionsPacket",
     "type": "object",
@@ -27285,10 +28295,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 81,
-      "[cereal:packet_details]": ""
-    },
     "id": 1336209520,
     "name": "UpdateEquipPacket",
     "type": "object",
@@ -27362,10 +28368,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 151,
-      "[cereal:packet_details]": ""
-    },
     "id": 586894191,
     "name": "UpdatePlayerGameTypePacket",
     "type": "object",
@@ -27443,10 +28445,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 114,
-      "[cereal:packet_details]": "This allows someone to sync between server and client tags and enums on mobs or on the level."
-    },
     "id": 3587589749,
     "name": "UpdateSoftEnumPacket",
     "type": "object",
@@ -27457,8 +28455,8 @@
       "Pos": {
         "required": true,
         "deprecated": false,
-        "id": 269289973,
-        "name": "NetworkBlockPosition",
+        "id": 820712576,
+        "name": "BlockPos",
         "type": "object"
       },
       "Runtime Id": {
@@ -27543,8 +28541,8 @@
       "Sub Chunk Block Position": {
         "required": true,
         "deprecated": false,
-        "id": 269289973,
-        "name": "NetworkBlockPosition",
+        "id": 820712576,
+        "name": "BlockPos",
         "type": "object"
       }
     },
@@ -27561,10 +28559,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 172,
-      "[cereal:packet_details]": ""
-    },
     "id": 2908865809,
     "name": "UpdateSubChunkBlocksPacket",
     "type": "object",
@@ -27658,10 +28652,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 80,
-      "[cereal:packet_details]": ""
-    },
     "id": 2435373266,
     "name": "UpdateTradePacket",
     "type": "object",
@@ -27803,6 +28793,16 @@
   },
   {
     "members": {
+      "Custom Shape Count": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0
+        },
+        "id": 0,
+        "type": "uint16",
+        "description": "The number of custom voxel shapes"
+      },
       "Name Map": {
         "required": true,
         "deprecated": false,
@@ -27846,10 +28846,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 337,
-      "[cereal:packet_details]": "Sends the serializable voxel shapes data to the client as it's needed on both the client and server."
-    },
     "id": 4149212477,
     "name": "VoxelShapesPacket",
     "type": "object",
@@ -27962,14 +28958,818 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 332,
-      "[cereal:packet_details]": ""
-    },
     "id": 3840691143,
     "name": "ServerboundDataStorePacket",
     "type": "object",
     "description": "Applies a single update to the server data store from the client."
+  },
+  {
+    "enum_values": [
+      {
+        "value": 0,
+        "name": "OVERRIDE"
+      },
+      {
+        "value": 1,
+        "name": "ALPHA_BLEND"
+      },
+      {
+        "value": 2,
+        "name": "AND"
+      },
+      {
+        "value": 3,
+        "name": "NAND"
+      },
+      {
+        "value": 4,
+        "name": "OR"
+      },
+      {
+        "value": 5,
+        "name": "NOR"
+      },
+      {
+        "value": 6,
+        "name": "XOR"
+      },
+      {
+        "value": 7,
+        "name": "XNOR"
+      }
+    ],
+    "id": 1882660886,
+    "name": "BoolAttributeOperation",
+    "type": "enum"
+  },
+  {
+    "members": {
+      "operation": {
+        "required": false,
+        "deprecated": false,
+        "enum_values": [
+          {
+            "value": 0,
+            "name": "OVERRIDE"
+          },
+          {
+            "value": 1,
+            "name": "ALPHA_BLEND"
+          },
+          {
+            "value": 2,
+            "name": "AND"
+          },
+          {
+            "value": 3,
+            "name": "NAND"
+          },
+          {
+            "value": 4,
+            "name": "OR"
+          },
+          {
+            "value": 5,
+            "name": "NOR"
+          },
+          {
+            "value": 6,
+            "name": "XOR"
+          },
+          {
+            "value": 7,
+            "name": "XNOR"
+          }
+        ],
+        "id": 1882660886,
+        "name": "BoolAttributeOperation",
+        "type": "enum"
+      },
+      "value": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "bool"
+      }
+    },
+    "id": 3678388341,
+    "name": "BoolAttributeData",
+    "type": "object"
+  },
+  {
+    "setters": [
+      {
+        "constraint": {
+          "pattern": "^#[a-fA-F0-9]{6}$"
+        },
+        "id": 0,
+        "type": "string"
+      },
+      {
+        "constraint": {
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "value_type": {
+          "id": 0,
+          "type": "int32"
+        },
+        "id": 830903583,
+        "type": "sequence_container"
+      }
+    ],
+    "id": 3915697282,
+    "name": "Color255RGB",
+    "type": "object"
+  },
+  {
+    "setters": [
+      {
+        "constraint": {
+          "pattern": "^#[a-fA-F0-9]{8}$"
+        },
+        "id": 0,
+        "type": "string"
+      },
+      {
+        "constraint": {
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "value_type": {
+          "id": 0,
+          "type": "int32"
+        },
+        "id": 798186988,
+        "type": "sequence_container"
+      }
+    ],
+    "id": 749623033,
+    "name": "Color255RGBA",
+    "type": "object"
+  },
+  {
+    "enum_values": [
+      {
+        "value": 0,
+        "name": "OVERRIDE"
+      },
+      {
+        "value": 1,
+        "name": "ALPHA_BLEND"
+      },
+      {
+        "value": 2,
+        "name": "ADD"
+      },
+      {
+        "value": 3,
+        "name": "SUBTRACT"
+      },
+      {
+        "value": 4,
+        "name": "MULTIPLY"
+      }
+    ],
+    "id": 3503502635,
+    "name": "ColorAttributeOperation",
+    "type": "enum"
+  },
+  {
+    "members": {
+      "operation": {
+        "required": false,
+        "deprecated": false,
+        "enum_values": [
+          {
+            "value": 0,
+            "name": "OVERRIDE"
+          },
+          {
+            "value": 1,
+            "name": "ALPHA_BLEND"
+          },
+          {
+            "value": 2,
+            "name": "ADD"
+          },
+          {
+            "value": 3,
+            "name": "SUBTRACT"
+          },
+          {
+            "value": 4,
+            "name": "MULTIPLY"
+          }
+        ],
+        "id": 3503502635,
+        "name": "ColorAttributeOperation",
+        "type": "enum"
+      },
+      "value": {
+        "required": true,
+        "deprecated": false,
+        "id": 749623033,
+        "name": "Color255RGBA",
+        "type": "object"
+      }
+    },
+    "id": 1504086022,
+    "name": "ColorAttributeData",
+    "type": "object"
+  },
+  {
+    "enum_values": [
+      {
+        "value": 0,
+        "name": "OVERRIDE"
+      },
+      {
+        "value": 1,
+        "name": "ALPHA_BLEND"
+      },
+      {
+        "value": 2,
+        "name": "ADD"
+      },
+      {
+        "value": 3,
+        "name": "SUBTRACT"
+      },
+      {
+        "value": 4,
+        "name": "MULTIPLY"
+      },
+      {
+        "value": 4,
+        "name": "MINIMUM"
+      },
+      {
+        "value": 4,
+        "name": "MAXIMUM"
+      }
+    ],
+    "id": 96121126,
+    "name": "FloatAttributeOperation",
+    "type": "enum"
+  },
+  {
+    "members": {
+      "constraintMax": {
+        "required": false,
+        "deprecated": false,
+        "id": 0,
+        "type": "float"
+      },
+      "constraintMin": {
+        "required": false,
+        "deprecated": false,
+        "id": 0,
+        "type": "float"
+      },
+      "operation": {
+        "required": false,
+        "deprecated": false,
+        "enum_values": [
+          {
+            "value": 0,
+            "name": "OVERRIDE"
+          },
+          {
+            "value": 1,
+            "name": "ALPHA_BLEND"
+          },
+          {
+            "value": 2,
+            "name": "ADD"
+          },
+          {
+            "value": 3,
+            "name": "SUBTRACT"
+          },
+          {
+            "value": 4,
+            "name": "MULTIPLY"
+          },
+          {
+            "value": 4,
+            "name": "MINIMUM"
+          },
+          {
+            "value": 4,
+            "name": "MAXIMUM"
+          }
+        ],
+        "id": 96121126,
+        "name": "FloatAttributeOperation",
+        "type": "enum"
+      },
+      "value": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "float"
+      }
+    },
+    "id": 2141238885,
+    "name": "FloatAttributeData",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Attribute": {
+        "required": true,
+        "deprecated": false,
+        "setters": [
+          {
+            "id": 3678388341,
+            "name": "BoolAttributeData",
+            "type": "object"
+          },
+          {
+            "id": 2141238885,
+            "name": "FloatAttributeData",
+            "type": "object"
+          },
+          {
+            "id": 1504086022,
+            "name": "ColorAttributeData",
+            "type": "object"
+          }
+        ],
+        "id": 0
+      },
+      "AttributeName": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxLength": 128
+        },
+        "id": 0,
+        "type": "string"
+      },
+      "CurrentTransitionTicks": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0
+        },
+        "id": 0,
+        "type": "uint32"
+      },
+      "Easing": {
+        "required": true,
+        "deprecated": false,
+        "enum_values": [
+          {
+            "value": 0,
+            "name": "linear"
+          },
+          {
+            "value": 1,
+            "name": "spring"
+          },
+          {
+            "value": 2,
+            "name": "in_quad"
+          },
+          {
+            "value": 3,
+            "name": "out_quad"
+          },
+          {
+            "value": 4,
+            "name": "in_out_quad"
+          },
+          {
+            "value": 5,
+            "name": "in_cubic"
+          },
+          {
+            "value": 6,
+            "name": "out_cubic"
+          },
+          {
+            "value": 7,
+            "name": "in_out_cubic"
+          },
+          {
+            "value": 8,
+            "name": "in_quart"
+          },
+          {
+            "value": 9,
+            "name": "out_quart"
+          },
+          {
+            "value": 10,
+            "name": "in_out_quart"
+          },
+          {
+            "value": 11,
+            "name": "in_quint"
+          },
+          {
+            "value": 12,
+            "name": "out_quint"
+          },
+          {
+            "value": 13,
+            "name": "in_out_quint"
+          },
+          {
+            "value": 14,
+            "name": "in_sine"
+          },
+          {
+            "value": 15,
+            "name": "out_sine"
+          },
+          {
+            "value": 16,
+            "name": "in_out_sine"
+          },
+          {
+            "value": 17,
+            "name": "in_expo"
+          },
+          {
+            "value": 18,
+            "name": "out_expo"
+          },
+          {
+            "value": 19,
+            "name": "in_out_expo"
+          },
+          {
+            "value": 20,
+            "name": "in_circ"
+          },
+          {
+            "value": 21,
+            "name": "out_circ"
+          },
+          {
+            "value": 22,
+            "name": "in_out_circ"
+          },
+          {
+            "value": 23,
+            "name": "in_bounce"
+          },
+          {
+            "value": 24,
+            "name": "out_bounce"
+          },
+          {
+            "value": 25,
+            "name": "in_out_bounce"
+          },
+          {
+            "value": 26,
+            "name": "in_back"
+          },
+          {
+            "value": 27,
+            "name": "out_back"
+          },
+          {
+            "value": 28,
+            "name": "in_out_back"
+          },
+          {
+            "value": 29,
+            "name": "in_elastic"
+          },
+          {
+            "value": 30,
+            "name": "out_elastic"
+          },
+          {
+            "value": 31,
+            "name": "in_out_elastic"
+          }
+        ],
+        "id": 820476229,
+        "name": "easing_function",
+        "type": "enum"
+      },
+      "FromAttribute": {
+        "required": false,
+        "deprecated": false,
+        "setters": [
+          {
+            "id": 3678388341,
+            "name": "BoolAttributeData",
+            "type": "object"
+          },
+          {
+            "id": 2141238885,
+            "name": "FloatAttributeData",
+            "type": "object"
+          },
+          {
+            "id": 1504086022,
+            "name": "ColorAttributeData",
+            "type": "object"
+          }
+        ],
+        "id": 0
+      },
+      "ToAttribute": {
+        "required": false,
+        "deprecated": false,
+        "setters": [
+          {
+            "id": 3678388341,
+            "name": "BoolAttributeData",
+            "type": "object"
+          },
+          {
+            "id": 2141238885,
+            "name": "FloatAttributeData",
+            "type": "object"
+          },
+          {
+            "id": 1504086022,
+            "name": "ColorAttributeData",
+            "type": "object"
+          }
+        ],
+        "id": 0
+      },
+      "TotalTransitionTicks": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0
+        },
+        "id": 0,
+        "type": "uint32"
+      }
+    },
+    "id": 2374371116,
+    "name": "EnvironmentAttributeData",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Enabled": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "bool"
+      },
+      "Priority": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "int32"
+      },
+      "TransitionsPaused": {
+        "required": true,
+        "deprecated": false,
+        "id": 0,
+        "type": "bool"
+      },
+      "Weight": {
+        "required": true,
+        "deprecated": false,
+        "setters": [
+          {
+            "id": 0,
+            "type": "float"
+          },
+          {
+            "id": 0,
+            "type": "string"
+          }
+        ],
+        "id": 0
+      }
+    },
+    "id": 1095718751,
+    "name": "AttributeLayerSettings",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Attributes": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxItems": 1024
+        },
+        "value_type": {
+          "id": 2374371116,
+          "name": "EnvironmentAttributeData",
+          "type": "object"
+        },
+        "id": 2576467051,
+        "type": "sequence_container"
+      },
+      "Dimension": {
+        "required": true,
+        "deprecated": false,
+        "id": 2872336518,
+        "name": "DimensionType",
+        "type": "object"
+      },
+      "Name": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxLength": 128
+        },
+        "id": 0,
+        "type": "string"
+      },
+      "Settings": {
+        "required": true,
+        "deprecated": false,
+        "id": 1095718751,
+        "name": "AttributeLayerSettings",
+        "type": "object"
+      }
+    },
+    "id": 2940756330,
+    "name": "AttributeLayerData",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Attribute Layers": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxItems": 512
+        },
+        "value_type": {
+          "id": 2940756330,
+          "name": "AttributeLayerData",
+          "type": "object"
+        },
+        "id": 2751999639,
+        "type": "sequence_container"
+      }
+    },
+    "id": 1785360263,
+    "name": "UpdateAttributeLayersData",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Attribute Layer Dimension": {
+        "required": true,
+        "deprecated": false,
+        "id": 2872336518,
+        "name": "DimensionType",
+        "type": "object"
+      },
+      "Attribute Layer Name": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxLength": 128
+        },
+        "id": 0,
+        "type": "string"
+      },
+      "Attributes Layer Settings": {
+        "required": true,
+        "deprecated": false,
+        "id": 1095718751,
+        "name": "AttributeLayerSettings",
+        "type": "object"
+      }
+    },
+    "id": 3217523179,
+    "name": "UpdateAttributeLayerSettingsData",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Attribute Layer Dimension": {
+        "required": true,
+        "deprecated": false,
+        "id": 2872336518,
+        "name": "DimensionType",
+        "type": "object"
+      },
+      "Attribute Layer Name": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxLength": 128
+        },
+        "id": 0,
+        "type": "string"
+      },
+      "Attributes": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxItems": 1024
+        },
+        "value_type": {
+          "id": 2374371116,
+          "name": "EnvironmentAttributeData",
+          "type": "object"
+        },
+        "id": 2576467051,
+        "type": "sequence_container"
+      }
+    },
+    "id": 2145410945,
+    "name": "UpdateEnvironmentAttributesData",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Attribute Layer Dimension": {
+        "required": true,
+        "deprecated": false,
+        "id": 2872336518,
+        "name": "DimensionType",
+        "type": "object"
+      },
+      "Attribute Layer Name": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxLength": 128
+        },
+        "id": 0,
+        "type": "string"
+      },
+      "Attributes": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "maxItems": 1024,
+          "items": {
+            "maxLength": 128
+          }
+        },
+        "value_type": {
+          "id": 0,
+          "type": "string"
+        },
+        "id": 1093136171,
+        "type": "sequence_container"
+      }
+    },
+    "id": 3342178242,
+    "name": "RemoveEnvironmentAttributesData",
+    "type": "object"
+  },
+  {
+    "members": {
+      "Data": {
+        "required": true,
+        "deprecated": false,
+        "setters": [
+          {
+            "id": 1785360263,
+            "name": "UpdateAttributeLayersData",
+            "type": "object"
+          },
+          {
+            "id": 3217523179,
+            "name": "UpdateAttributeLayerSettingsData",
+            "type": "object"
+          },
+          {
+            "id": 2145410945,
+            "name": "UpdateEnvironmentAttributesData",
+            "type": "object"
+          },
+          {
+            "id": 3342178242,
+            "name": "RemoveEnvironmentAttributesData",
+            "type": "object"
+          }
+        ],
+        "id": 0
+      }
+    },
+    "id": 3699899999,
+    "name": "ClientboundAttributeLayerSyncPacketPayload",
+    "type": "object"
+  },
+  {
+    "parents": [],
+    "setters": [
+      {
+        "id": 3699899999,
+        "name": "ClientboundAttributeLayerSyncPacketPayload",
+        "type": "object"
+      }
+    ],
+    "id": 1340418840,
+    "name": "ClientboundAttributeLayerSyncPacket",
+    "type": "object",
+    "description": "Syncs Attribute Layers to the Client (Currently disabled)"
   },
   {
     "members": {
@@ -28079,37 +29879,41 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 330,
-      "[cereal:packet_details]": ""
-    },
     "id": 1005145003,
     "name": "ClientboundDataStorePacket",
     "type": "object",
     "description": "Sends a list of data store properties from the server to the client."
   },
   {
-    "id": 831548923,
-    "name": "Clientbound Data Driven UI Close All Screens Payload",
+    "members": {
+      "FormId": {
+        "required": false,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0
+        },
+        "id": 0,
+        "type": "uint32",
+        "description": "The unique id of th form to close. If not supplied, this will close all forms"
+      }
+    },
+    "id": 2282239807,
+    "name": "Clientbound Data Driven UI Close Screen Payload",
     "type": "object"
   },
   {
     "parents": [],
     "setters": [
       {
-        "id": 831548923,
-        "name": "Clientbound Data Driven UI Close All Screens Payload",
+        "id": 2282239807,
+        "name": "Clientbound Data Driven UI Close Screen Payload",
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 334,
-      "[cereal:packet_details]": ""
-    },
-    "id": 2177342058,
-    "name": "ClientboundDataDrivenUICloseAllScreensPacket",
+    "id": 2185618606,
+    "name": "ClientboundDataDrivenUICloseScreenPacket",
     "type": "object",
-    "description": "Allows the server to tell the client to close all the Data Driven UI screens."
+    "description": "Allows the server to tell the client to close Data Driven UI screens."
   },
   {
     "id": 2977847550,
@@ -28125,10 +29929,6 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 335,
-      "[cereal:packet_details]": ""
-    },
     "id": 4117516047,
     "name": "ClientboundDataDrivenUIReloadPacket",
     "type": "object",
@@ -28136,6 +29936,26 @@
   },
   {
     "members": {
+      "DataInstanceId": {
+        "required": false,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0
+        },
+        "id": 0,
+        "type": "uint32",
+        "description": "The optional id of the data associated with this screen"
+      },
+      "FormId": {
+        "required": true,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0
+        },
+        "id": 0,
+        "type": "uint32",
+        "description": "The unique id of this instance of the form for tracking in scripting"
+      },
       "ScreenId": {
         "required": true,
         "deprecated": false,
@@ -28160,13 +29980,97 @@
         "type": "object"
       }
     ],
-    "cereal_properties": {
-      "[cereal:packet]": 333,
-      "[cereal:packet_details]": ""
-    },
     "id": 2581768811,
     "name": "ClientboundDataDrivenUIShowScreenPacket",
     "type": "object",
     "description": "Allows the server to tell the client to show a Data Driven UI screen."
+  },
+  {
+    "enum_values": [
+      {
+        "value": 0,
+        "name": "ProgrammaticClose"
+      },
+      {
+        "value": 1,
+        "name": "ProgrammaticCloseAll"
+      },
+      {
+        "value": 2,
+        "name": "ClientCanceled"
+      },
+      {
+        "value": 3,
+        "name": "UserBusy"
+      },
+      {
+        "value": 4,
+        "name": "InvalidForm"
+      }
+    ],
+    "id": 258511190,
+    "name": "DataDrivenScreenClosedReason",
+    "type": "enum"
+  },
+  {
+    "members": {
+      "CloseReason": {
+        "required": true,
+        "deprecated": false,
+        "enum_values": [
+          {
+            "value": 0,
+            "name": "ProgrammaticClose"
+          },
+          {
+            "value": 1,
+            "name": "ProgrammaticCloseAll"
+          },
+          {
+            "value": 2,
+            "name": "ClientCanceled"
+          },
+          {
+            "value": 3,
+            "name": "UserBusy"
+          },
+          {
+            "value": 4,
+            "name": "InvalidForm"
+          }
+        ],
+        "id": 258511190,
+        "name": "DataDrivenScreenClosedReason",
+        "type": "enum",
+        "description": "The reason the screen was closed."
+      },
+      "FormId": {
+        "required": false,
+        "deprecated": false,
+        "constraint": {
+          "minimum": 0.0
+        },
+        "id": 0,
+        "type": "uint32",
+        "description": "The form ID of the screen that was closed."
+      }
+    },
+    "id": 2872110875,
+    "name": "ServerboundDataDrivenScreenClosedPacketPayload",
+    "type": "object"
+  },
+  {
+    "parents": [],
+    "setters": [
+      {
+        "id": 2872110875,
+        "name": "ServerboundDataDrivenScreenClosedPacketPayload",
+        "type": "object"
+      }
+    ],
+    "id": 951560844,
+    "name": "ServerboundDataDrivenScreenClosedPacket",
+    "type": "object",
+    "description": "Sent from the client to the server when a data driven screen is closed."
   }
 ]

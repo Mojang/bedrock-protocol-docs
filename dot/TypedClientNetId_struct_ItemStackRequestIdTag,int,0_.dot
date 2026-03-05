@@ -1,12 +1,12 @@
 digraph "TypedClientNetId<struct ItemStackRequestIdTag,int,0>" {
 rankdir = LR
-91
-91 -> 92
-92 -> 93
+93
+93 -> 94
+94 -> 95
 
-91 [label="TypedClientNetId<struct ItemStackRequestIdTag,int,0>",comment="name: \"TypedClientNetId<struct ItemStackRequestIdTag,int,0>\", typeName: \"\", id: 91, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-92 [label="Raw Id (32 bit signed)",comment="name: \"Raw Id (32 bit signed)\", typeName: \"\", id: 92, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-93 [label="varint",comment="name: \"varint\", typeName: \"\", id: 93, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;93}
+93 [label="TypedClientNetId<struct ItemStackRequestIdTag,int,0>",comment="name: \"TypedClientNetId<struct ItemStackRequestIdTag,int,0>\", typeName: \"\", id: 93, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+94 [label="Raw Id (32 bit signed)",comment="name: \"Raw Id (32 bit signed)\", typeName: \"\", id: 94, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+95 [label="varint",comment="name: \"varint\", typeName: \"\", id: 95, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;95}
 
 }

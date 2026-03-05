@@ -2,9 +2,44 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "323203397",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.0",
-    "x-protocol-version": 924,
+    "x-minecraft-version": "1.26.10",
+    "x-protocol-version": 944,
     "definitions": {
+        "820712576": {
+            "title": "BlockPos",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1
+                },
+                "Z": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "X",
+                "Y",
+                "Z"
+            ]
+        },
         "2872336518": {
             "title": "DimensionType",
             "type": "object",
@@ -21,42 +56,6 @@
             "required": [
                 "value"
             ]
-        },
-        "269289973": {
-            "title": "NetworkBlockPosition",
-            "type": "object",
-            "properties": {
-                "X": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                },
-                "Y": {
-                    "type": "integer",
-                    "x-underlying-type": "uint32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 1,
-                    "minimum": 0.0
-                },
-                "Z": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 2
-                }
-            },
-            "required": [
-                "X",
-                "Y",
-                "Z"
-            ]
         }
     },
     "title": "SetSpawnPositionPacket",
@@ -64,7 +63,7 @@
     "type": "object",
     "properties": {
         "Block Position": {
-            "$ref": "#/definitions/269289973",
+            "$ref": "#/definitions/820712576",
             "x-ordinal-index": 1
         },
         "Dimension type": {
@@ -72,7 +71,7 @@
             "x-ordinal-index": 2
         },
         "Spawn Block Pos": {
-            "$ref": "#/definitions/269289973",
+            "$ref": "#/definitions/820712576",
             "x-ordinal-index": 3
         },
         "Spawn Position Type": {

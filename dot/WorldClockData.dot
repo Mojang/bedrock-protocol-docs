@@ -1,0 +1,48 @@
+digraph "WorldClockData" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+0 -> 5
+5 -> 6
+0 -> 7
+7 -> 8
+0 -> 9
+9 -> 10
+10 -> 11
+9 -> 12
+12 -> 13
+13 -> 14
+12 -> 15
+15 -> 16
+12 -> 17
+17 -> 18
+12 -> 19
+19 -> 20
+
+0 [label="WorldClockData",comment="name: \"WorldClockData\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Id",comment="name: \"Id\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="unsigned varint64",comment="name: \"unsigned varint64\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="Name",comment="name: \"Name\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="string",comment="name: \"string\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+5 [label="Time",comment="name: \"Time\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+6 [label="varint",comment="name: \"varint\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+7 [label="IsPaused",comment="name: \"IsPaused\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="bool",comment="name: \"bool\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+9 [label="TimeMarkers",comment="name: \"TimeMarkers\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+10 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+11 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+12 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+13 [label="Id",comment="name: \"Id\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+14 [label="unsigned varint64",comment="name: \"unsigned varint64\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+15 [label="Name",comment="name: \"Name\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+16 [label="string",comment="name: \"string\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+17 [label="Time",comment="name: \"Time\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+18 [label="varint",comment="name: \"varint\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+19 [label="Period",comment="name: \"Period\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+20 [label="int",comment="name: \"int\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;6;8;14;16;18;20}
+
+}
