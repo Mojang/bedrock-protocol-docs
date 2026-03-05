@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "156975172",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.0",
-    "x-protocol-version": 924,
+    "x-minecraft-version": "1.26.10",
+    "x-protocol-version": 944,
     "title": "enum Memory::MemoryCategory",
     "type": "string",
     "enum": [
@@ -12,7 +12,6 @@
         "Actor",
         "ActorAnimation",
         "ActorRendering",
-        "Balancer",
         "BlockTickingQueues",
         "Biome_Storage",
         "Cereal",
@@ -50,6 +49,7 @@
         "LevelChunk",
         "LevelChunkGen",
         "LevelChunkGenThreadLocal",
+        "LightVolumeManager",
         "Network",
         "Marketplace",
         "Material_DragonCompiledDefinition",
@@ -87,6 +87,17 @@
         "Scripting_Context_Bindings_GT",
         "Scripting_Context_Run",
         "DataDrivenUI",
-        "DataDrivenUI_Defs"
+        "DataDrivenUI_Defs",
+        "Gameface",
+        "Gameface_System",
+        "Gameface_DOM",
+        "Gameface_CSS",
+        "Gameface_Display",
+        "Gameface_TempAllocator",
+        "Gameface_PoolAllocator",
+        "Gameface_Dump",
+        "Gameface_Media",
+        "Gameface_JSON",
+        "Gameface_ScriptEngine"
     ]
 }

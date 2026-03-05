@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "43940255",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.0",
-    "x-protocol-version": 924,
+    "x-minecraft-version": "1.26.10",
+    "x-protocol-version": 944,
     "definitions": {
         "820712576": {
             "title": "BlockPos",

@@ -1,0 +1,36 @@
+digraph "UpdateAttributeLayerSettingsData" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+4 -> 5
+0 -> 6
+6 -> 7
+7 -> 8
+6 -> 9
+9 -> 10
+6 -> 11
+11 -> 12
+6 -> 13
+13 -> 14
+
+0 [label="UpdateAttributeLayerSettingsData",comment="name: \"UpdateAttributeLayerSettingsData\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Attribute Layer Name",comment="name: \"Attribute Layer Name\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="string",comment="name: \"string\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="Attribute Layer Dimension",comment="name: \"Attribute Layer Dimension\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="value",comment="name: \"value\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="varint",comment="name: \"varint\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+6 [label="Attributes Layer Settings",comment="name: \"Attributes Layer Settings\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="Priority",comment="name: \"Priority\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="int",comment="name: \"int\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+9 [label="Weight",comment="name: \"Weight\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+10 [label="",comment="name: \"\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+11 [label="Enabled",comment="name: \"Enabled\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+12 [label="bool",comment="name: \"bool\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+13 [label="TransitionsPaused",comment="name: \"TransitionsPaused\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+14 [label="bool",comment="name: \"bool\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;5;8;10;12;14}
+
+}

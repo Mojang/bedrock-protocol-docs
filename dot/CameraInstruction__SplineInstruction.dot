@@ -40,6 +40,10 @@ rankdir = LR
 36 -> 37
 28 -> 38
 38 -> 39
+0 -> 40
+40 -> 41
+0 -> 42
+42 -> 43
 
 0 [label="CameraInstruction::SplineInstruction",comment="name: \"CameraInstruction::SplineInstruction\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="totalTime",comment="name: \"totalTime\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -81,6 +85,10 @@ rankdir = LR
 37 [label="float",comment="name: \"float\", typeName: \"\", id: 37, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 38 [label="Key frame easing func",comment="name: \"Key frame easing func\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 39 [label="enum easing_function",comment="name: \"enum easing_function\", typeName: \"\", id: 39, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;2;4;10;12;14;20;22;24;31;33;35;37;39}
+40 [label="splineIdentifier",comment="name: \"splineIdentifier\", typeName: \"\", id: 40, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+41 [label="string",comment="name: \"string\", typeName: \"\", id: 41, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+42 [label="loadFromJson",comment="name: \"loadFromJson\", typeName: \"\", id: 42, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+43 [label="bool",comment="name: \"bool\", typeName: \"\", id: 43, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;10;12;14;20;22;24;31;33;35;37;39;41;43}
 
 }

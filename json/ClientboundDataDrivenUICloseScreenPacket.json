@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "2185618606",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.10",
+    "x-protocol-version": 944,
+    "title": "ClientboundDataDrivenUICloseScreenPacket",
+    "description": "Allows the server to tell the client to close Data Driven UI screens.",
+    "type": "object",
+    "properties": {
+        "FormId": {
+            "description": "The unique id of th form to close. If not supplied, this will close all forms",
+            "type": "integer",
+            "x-underlying-type": "uint32",
+            "x-ordinal-index": 0,
+            "minimum": 0.0
+        }
+    },
+    "$metaProperties": {
+        "[cereal:packet]": 334,
+        "[cereal:packet_details]": ""
+    }
+}

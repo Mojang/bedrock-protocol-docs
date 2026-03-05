@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1403456780",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.0",
-    "x-protocol-version": 924,
+    "x-minecraft-version": "1.26.10",
+    "x-protocol-version": 944,
     "definitions": {
         "2462692219": {
             "title": "BookEditAction::DeletePage",
@@ -63,12 +63,12 @@
                 "Page Text": {
                     "type": "string",
                     "x-ordinal-index": 1,
-                    "maxLength": 512
+                    "maxLength": 768
                 },
                 "Photo Name": {
                     "type": "string",
                     "x-ordinal-index": 2,
-                    "maxLength": 512
+                    "maxLength": 768
                 }
             },
             "required": [
@@ -92,12 +92,12 @@
                 "Page Text": {
                     "type": "string",
                     "x-ordinal-index": 1,
-                    "maxLength": 512
+                    "maxLength": 768
                 },
                 "Photo Name": {
                     "type": "string",
                     "x-ordinal-index": 2,
-                    "maxLength": 512
+                    "maxLength": 768
                 }
             },
             "required": [
@@ -113,17 +113,17 @@
                 "Author": {
                     "type": "string",
                     "x-ordinal-index": 1,
-                    "maxLength": 512
+                    "maxLength": 768
                 },
                 "Title": {
                     "type": "string",
                     "x-ordinal-index": 0,
-                    "maxLength": 512
+                    "maxLength": 768
                 },
                 "XUID": {
                     "type": "string",
                     "x-ordinal-index": 2,
-                    "maxLength": 512
+                    "maxLength": 768
                 }
             },
             "required": [

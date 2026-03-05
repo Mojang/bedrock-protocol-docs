@@ -11,8 +11,8 @@ rankdir = LR
 53 -> 54
 
 0 [label="StructureBlockUpdatePacket",comment="name: \"StructureBlockUpdatePacket\", typeName: \"\", id: 0, branchId: 90, recurseId: -1, attributes: 0, notes: \"\""];
-1 [label="Block Position",comment="name: \"Block Position\", typeName: \"NetworkBlockPosition\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-2 [label="NetworkBlockPosition",comment="name: \"NetworkBlockPosition\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+1 [label="Block Position",comment="name: \"Block Position\", typeName: \"BlockPos\", id: 1, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+2 [label="BlockPos",comment="name: \"BlockPos\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 3 [label="Structure Data",comment="name: \"Structure Data\", typeName: \"StructureEditorData\", id: 3, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 50 [label="StructureEditorData",comment="name: \"StructureEditorData\", typeName: \"\", id: 50, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 51 [label="Trigger?",comment="name: \"Trigger?\", typeName: \"\", id: 51, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];

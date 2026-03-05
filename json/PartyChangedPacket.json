@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "1948449961",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.10",
+    "x-protocol-version": 944,
+    "title": "PartyChangedPacket",
+    "description": "Sent by the client to provide additional client metadata.",
+    "type": "object",
+    "properties": {
+        "party_id": {
+            "type": "string",
+            "x-ordinal-index": 0,
+            "maxLength": 49
+        }
+    },
+    "required": [
+        "party_id"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 342,
+        "[cereal:packet_details]": ""
+    }
+}

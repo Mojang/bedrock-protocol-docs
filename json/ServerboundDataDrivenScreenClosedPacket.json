@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "951560844",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.10",
+    "x-protocol-version": 944,
+    "title": "ServerboundDataDrivenScreenClosedPacket",
+    "description": "Sent from the client to the server when a data driven screen is closed.",
+    "type": "object",
+    "properties": {
+        "CloseReason": {
+            "title": "DataDrivenScreenClosedReason",
+            "description": "The reason the screen was closed.",
+            "type": "string",
+            "enum": [
+                "ProgrammaticClose",
+                "ProgrammaticCloseAll",
+                "ClientCanceled",
+                "UserBusy",
+                "InvalidForm"
+            ],
+            "x-underlying-type": "uint8",
+            "x-ordinal-index": 1
+        },
+        "FormId": {
+            "description": "The form ID of the screen that was closed.",
+            "type": "integer",
+            "default": 0,
+            "x-underlying-type": "uint32",
+            "x-ordinal-index": 0,
+            "minimum": 0.0
+        }
+    },
+    "required": [
+        "CloseReason"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 343,
+        "[cereal:packet_details]": ""
+    }
+}

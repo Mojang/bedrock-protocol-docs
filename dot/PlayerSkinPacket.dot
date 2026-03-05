@@ -17,9 +17,9 @@ rankdir = LR
 2 [label="mce::UUID",comment="name: \"mce::UUID\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 3 [label="Serialized Skin",comment="name: \"Serialized Skin\", typeName: \"SerializedSkinRef\", id: 3, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
 4 [label="SerializedSkinRef",comment="name: \"SerializedSkinRef\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-5 [label="New Skin Name",comment="name: \"New Skin Name\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="Localized New Skin Name",comment="name: \"Localized New Skin Name\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 6 [label="string",comment="name: \"string\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-7 [label="Old Skin Name",comment="name: \"Old Skin Name\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="Localized Old Skin Name",comment="name: \"Localized Old Skin Name\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 8 [label="string",comment="name: \"string\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 9 [label="Whether skin is trusted marketplace content",comment="name: \"Whether skin is trusted marketplace content\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 10 [label="bool",comment="name: \"bool\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];

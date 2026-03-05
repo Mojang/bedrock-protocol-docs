@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "4149212477",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.0",
-    "x-protocol-version": 924,
+    "x-minecraft-version": "1.26.10",
+    "x-protocol-version": 944,
     "definitions": {
         "3157178346": {
             "title": "struct VoxelShapes::SerializableCells",
@@ -127,6 +127,13 @@
     "description": "Syncs client with server voxel shape data on world join. This packet contains a copy of all behavior pack voxel shapes data.",
     "type": "object",
     "properties": {
+        "Custom Shape Count": {
+            "description": "The number of custom voxel shapes",
+            "type": "integer",
+            "x-underlying-type": "uint16",
+            "x-ordinal-index": 2,
+            "minimum": 0.0
+        },
         "Name Map": {
             "description": "Voxel shape name-to-handle mappings",
             "type": "object",
@@ -154,6 +161,7 @@
         }
     },
     "required": [
+        "Custom Shape Count",
         "Name Map",
         "Shapes"
     ],

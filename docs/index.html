@@ -119,7 +119,7 @@
     <div class="container">
         
         <h1>Game Protocol Documentation</h1>
-<p>Documentation for 174 protocol packets.</p>
+<p>Documentation for 181 protocol packets.</p>
 <h2>Packet List</h2>
 <ul class="packet-list">
 <li>
@@ -366,6 +366,10 @@
 <li>
 <a href="PurchaseReceiptPacket.html"><strong>PurchaseReceiptPacket (92)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Sent from client to server</span>
+</li>
+<li>
+<a href="PlayerSkinPacket.html"><strong>PlayerSkinPacket (93)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Used when the player changes their skin</span>
 </li>
 <li>
 <a href="AutomationClientConnectPacket.html"><strong>AutomationClientConnectPacket (95)</strong></a>
@@ -796,8 +800,8 @@
 <br><span style="color: #666; font-size: 0.9em;">Allows the server to tell the client to show a Data Driven UI screen.</span>
 </li>
 <li>
-<a href="ClientboundDataDrivenUICloseAllScreensPacket.html"><strong>ClientboundDataDrivenUICloseAllScreensPacket (334)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Allows the server to tell the client to close all the Data Driven UI screens.</span>
+<a href="ClientboundDataDrivenUICloseScreenPacket.html"><strong>ClientboundDataDrivenUICloseScreenPacket (334)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Allows the server to tell the client to close Data Driven UI screens.</span>
 </li>
 <li>
 <a href="ClientboundDataDrivenUIReloadPacket.html"><strong>ClientboundDataDrivenUIReloadPacket (335)</strong></a>
@@ -818,6 +822,30 @@
 <li>
 <a href="CameraAimAssistActorPriorityPacket.html"><strong>CameraAimAssistActorPriorityPacket (339)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Camera aim-assist actor priority data sent from the server to clients.</span>
+</li>
+<li>
+<a href="ResourcePacksReadyForValidationPacket.html"><strong>ResourcePacksReadyForValidationPacket (340)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Used to inform the server that the client has finished loading all resource packs.</span>
+</li>
+<li>
+<a href="LocatorBarPacket.html"><strong>LocatorBarPacket (341)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Syncs LocatorBar changes on the server with the client.</span>
+</li>
+<li>
+<a href="PartyChangedPacket.html"><strong>PartyChangedPacket (342)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent by the client to provide additional client metadata.</span>
+</li>
+<li>
+<a href="ServerboundDataDrivenScreenClosedPacket.html"><strong>ServerboundDataDrivenScreenClosedPacket (343)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from the client to the server when a data driven screen is closed.</span>
+</li>
+<li>
+<a href="SyncWorldClocksPacket.html"><strong>SyncWorldClocksPacket (344)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Initializes and syncs world clocks from the server to clients. (Currently disabled)</span>
+</li>
+<li>
+<a href="ClientboundAttributeLayerSyncPacket.html"><strong>ClientboundAttributeLayerSyncPacket (345)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Syncs Attribute Layers to the Client (Currently disabled)</span>
 </li>
 </ul>
     </div>

@@ -1,0 +1,473 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "1340418840",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.10",
+    "x-protocol-version": 944,
+    "definitions": {
+        "1785360263": {
+            "title": "UpdateAttributeLayersData",
+            "type": "object",
+            "properties": {
+                "Attribute Layers": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/2940756330"
+                    },
+                    "x-ordinal-index": 0,
+                    "maxItems": 512
+                }
+            },
+            "required": [
+                "Attribute Layers"
+            ]
+        },
+        "2374371116": {
+            "title": "EnvironmentAttributeData",
+            "type": "object",
+            "properties": {
+                "Attribute": {
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/3678388341",
+                            "x-ordinal-index": 0
+                        },
+                        {
+                            "$ref": "#/definitions/2141238885",
+                            "x-ordinal-index": 1
+                        },
+                        {
+                            "$ref": "#/definitions/1504086022",
+                            "x-ordinal-index": 2
+                        }
+                    ],
+                    "x-control-value-type": "uint32",
+                    "x-ordinal-index": 2
+                },
+                "AttributeName": {
+                    "type": "string",
+                    "x-ordinal-index": 0,
+                    "maxLength": 128
+                },
+                "CurrentTransitionTicks": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 4,
+                    "minimum": 0.0
+                },
+                "Easing": {
+                    "title": "easing_function",
+                    "type": "string",
+                    "enum": [
+                        "linear",
+                        "spring",
+                        "in_quad",
+                        "out_quad",
+                        "in_out_quad",
+                        "in_cubic",
+                        "out_cubic",
+                        "in_out_cubic",
+                        "in_quart",
+                        "out_quart",
+                        "in_out_quart",
+                        "in_quint",
+                        "out_quint",
+                        "in_out_quint",
+                        "in_sine",
+                        "out_sine",
+                        "in_out_sine",
+                        "in_expo",
+                        "out_expo",
+                        "in_out_expo",
+                        "in_circ",
+                        "out_circ",
+                        "in_out_circ",
+                        "in_bounce",
+                        "out_bounce",
+                        "in_out_bounce",
+                        "in_back",
+                        "out_back",
+                        "in_out_back",
+                        "in_elastic",
+                        "out_elastic",
+                        "in_out_elastic"
+                    ],
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 6
+                },
+                "FromAttribute": {
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/3678388341",
+                            "x-ordinal-index": 0
+                        },
+                        {
+                            "$ref": "#/definitions/2141238885",
+                            "x-ordinal-index": 1
+                        },
+                        {
+                            "$ref": "#/definitions/1504086022",
+                            "x-ordinal-index": 2
+                        }
+                    ],
+                    "x-control-value-type": "uint32",
+                    "x-ordinal-index": 1
+                },
+                "ToAttribute": {
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/3678388341",
+                            "x-ordinal-index": 0
+                        },
+                        {
+                            "$ref": "#/definitions/2141238885",
+                            "x-ordinal-index": 1
+                        },
+                        {
+                            "$ref": "#/definitions/1504086022",
+                            "x-ordinal-index": 2
+                        }
+                    ],
+                    "x-control-value-type": "uint32",
+                    "x-ordinal-index": 3
+                },
+                "TotalTransitionTicks": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 5,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Attribute",
+                "AttributeName",
+                "CurrentTransitionTicks",
+                "Easing",
+                "TotalTransitionTicks"
+            ]
+        },
+        "749623033": {
+            "title": "Color255RGBA",
+            "oneOf": [
+                {
+                    "type": "string",
+                    "pattern": "^#[a-fA-F0-9]{8}$"
+                },
+                {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "x-underlying-type": "int32"
+                    },
+                    "minItems": 4,
+                    "maxItems": 4
+                }
+            ]
+        },
+        "2872336518": {
+            "title": "DimensionType",
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "value"
+            ]
+        },
+        "2145410945": {
+            "title": "UpdateEnvironmentAttributesData",
+            "type": "object",
+            "properties": {
+                "Attribute Layer Dimension": {
+                    "$ref": "#/definitions/2872336518",
+                    "x-ordinal-index": 1
+                },
+                "Attribute Layer Name": {
+                    "type": "string",
+                    "x-ordinal-index": 0,
+                    "maxLength": 128
+                },
+                "Attributes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/2374371116"
+                    },
+                    "x-ordinal-index": 2,
+                    "maxItems": 1024
+                }
+            },
+            "required": [
+                "Attribute Layer Dimension",
+                "Attribute Layer Name",
+                "Attributes"
+            ]
+        },
+        "2940756330": {
+            "title": "AttributeLayerData",
+            "type": "object",
+            "properties": {
+                "Attributes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/2374371116"
+                    },
+                    "x-ordinal-index": 3,
+                    "maxItems": 1024
+                },
+                "Dimension": {
+                    "$ref": "#/definitions/2872336518",
+                    "x-ordinal-index": 1
+                },
+                "Name": {
+                    "type": "string",
+                    "x-ordinal-index": 0,
+                    "maxLength": 128
+                },
+                "Settings": {
+                    "$ref": "#/definitions/1095718751",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "Attributes",
+                "Dimension",
+                "Name",
+                "Settings"
+            ]
+        },
+        "3678388341": {
+            "title": "BoolAttributeData",
+            "type": "object",
+            "properties": {
+                "operation": {
+                    "title": "BoolAttributeOperation",
+                    "type": "string",
+                    "default": "override",
+                    "enum": [
+                        "OVERRIDE",
+                        "ALPHA_BLEND",
+                        "AND",
+                        "NAND",
+                        "OR",
+                        "NOR",
+                        "XOR",
+                        "XNOR"
+                    ],
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 1
+                },
+                "value": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "value"
+            ]
+        },
+        "2141238885": {
+            "title": "FloatAttributeData",
+            "type": "object",
+            "properties": {
+                "constraintMax": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 3
+                },
+                "constraintMin": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                },
+                "operation": {
+                    "title": "FloatAttributeOperation",
+                    "type": "string",
+                    "default": "override",
+                    "enum": [
+                        "OVERRIDE",
+                        "ALPHA_BLEND",
+                        "ADD",
+                        "SUBTRACT",
+                        "MULTIPLY",
+                        "MINIMUM",
+                        "MAXIMUM"
+                    ],
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 1
+                },
+                "value": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "value"
+            ]
+        },
+        "1504086022": {
+            "title": "ColorAttributeData",
+            "type": "object",
+            "properties": {
+                "operation": {
+                    "title": "ColorAttributeOperation",
+                    "type": "string",
+                    "default": "override",
+                    "enum": [
+                        "OVERRIDE",
+                        "ALPHA_BLEND",
+                        "ADD",
+                        "SUBTRACT",
+                        "MULTIPLY"
+                    ],
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 1
+                },
+                "value": {
+                    "$ref": "#/definitions/749623033",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "value"
+            ]
+        },
+        "1095718751": {
+            "title": "AttributeLayerSettings",
+            "type": "object",
+            "properties": {
+                "Enabled": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 2
+                },
+                "Priority": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 0
+                },
+                "TransitionsPaused": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 3
+                },
+                "Weight": {
+                    "oneOf": [
+                        {
+                            "type": "number",
+                            "x-underlying-type": "float",
+                            "x-ordinal-index": 0
+                        },
+                        {
+                            "type": "string",
+                            "x-ordinal-index": 1
+                        }
+                    ],
+                    "x-control-value-type": "uint32",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Enabled",
+                "Priority",
+                "TransitionsPaused",
+                "Weight"
+            ]
+        },
+        "3217523179": {
+            "title": "UpdateAttributeLayerSettingsData",
+            "type": "object",
+            "properties": {
+                "Attribute Layer Dimension": {
+                    "$ref": "#/definitions/2872336518",
+                    "x-ordinal-index": 1
+                },
+                "Attribute Layer Name": {
+                    "type": "string",
+                    "x-ordinal-index": 0,
+                    "maxLength": 128
+                },
+                "Attributes Layer Settings": {
+                    "$ref": "#/definitions/1095718751",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "Attribute Layer Dimension",
+                "Attribute Layer Name",
+                "Attributes Layer Settings"
+            ]
+        },
+        "3342178242": {
+            "title": "RemoveEnvironmentAttributesData",
+            "type": "object",
+            "properties": {
+                "Attribute Layer Dimension": {
+                    "$ref": "#/definitions/2872336518",
+                    "x-ordinal-index": 1
+                },
+                "Attribute Layer Name": {
+                    "type": "string",
+                    "x-ordinal-index": 0,
+                    "maxLength": 128
+                },
+                "Attributes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "maxLength": 128
+                    },
+                    "x-ordinal-index": 2,
+                    "maxItems": 1024
+                }
+            },
+            "required": [
+                "Attribute Layer Dimension",
+                "Attribute Layer Name",
+                "Attributes"
+            ]
+        }
+    },
+    "title": "ClientboundAttributeLayerSyncPacket",
+    "description": "Syncs Attribute Layers to the Client (Currently disabled)",
+    "type": "object",
+    "properties": {
+        "Data": {
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/1785360263",
+                    "x-ordinal-index": 0
+                },
+                {
+                    "$ref": "#/definitions/3217523179",
+                    "x-ordinal-index": 1
+                },
+                {
+                    "$ref": "#/definitions/2145410945",
+                    "x-ordinal-index": 2
+                },
+                {
+                    "$ref": "#/definitions/3342178242",
+                    "x-ordinal-index": 3
+                }
+            ],
+            "x-control-value-type": "uint32",
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Data"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 345,
+        "[cereal:packet_details]": ""
+    }
+}

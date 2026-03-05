@@ -2,11 +2,11 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "4021593386",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.0",
-    "x-protocol-version": 924,
+    "x-minecraft-version": "1.26.10",
+    "x-protocol-version": 944,
     "definitions": {
-        "269289973": {
-            "title": "NetworkBlockPosition",
+        "820712576": {
+            "title": "BlockPos",
             "type": "object",
             "properties": {
                 "X": {
@@ -19,12 +19,11 @@
                 },
                 "Y": {
                     "type": "integer",
-                    "x-underlying-type": "uint32",
+                    "x-underlying-type": "int32",
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 1,
-                    "minimum": 0.0
+                    "x-ordinal-index": 1
                 },
                 "Z": {
                     "type": "integer",
@@ -117,7 +116,7 @@
             "x-ordinal-index": 1
         },
         "Block Position": {
-            "$ref": "#/definitions/269289973",
+            "$ref": "#/definitions/820712576",
             "x-ordinal-index": 2
         },
         "Face": {
@@ -133,7 +132,7 @@
             "x-ordinal-index": 0
         },
         "Result Pos": {
-            "$ref": "#/definitions/269289973",
+            "$ref": "#/definitions/820712576",
             "x-ordinal-index": 3
         }
     },

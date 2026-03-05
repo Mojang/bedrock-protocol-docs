@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "4233761218",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.0",
-    "x-protocol-version": 924,
+    "x-minecraft-version": "1.26.10",
+    "x-protocol-version": 944,
     "definitions": {
         "1219428877": {
             "title": "CameraInstruction",
@@ -171,6 +171,12 @@
                     },
                     "x-ordinal-index": 2
                 },
+                "loadFromJson": {
+                    "type": "boolean",
+                    "default": false,
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 6
+                },
                 "progressKeyFrames": {
                     "type": "array",
                     "items": {
@@ -184,6 +190,12 @@
                         "$ref": "#/definitions/3609314310"
                     },
                     "x-ordinal-index": 4
+                },
+                "splineIdentifier": {
+                    "type": "string",
+                    "default": "",
+                    "x-ordinal-index": 5,
+                    "maxLength": 1024
                 },
                 "totalTime": {
                     "type": "number",
