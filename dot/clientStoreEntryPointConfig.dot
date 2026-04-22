@@ -1,0 +1,16 @@
+digraph "clientStoreEntryPointConfig" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+
+0 [label="clientStoreEntryPointConfig",comment="name: \"clientStoreEntryPointConfig\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="storeId",comment="name: \"storeId\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"The unique identifier for the store.\""];
+2 [label="string",comment="name: \"string\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"The unique identifier for the store.\""];
+3 [label="storeName",comment="name: \"storeName\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"The name of the store.\""];
+4 [label="string",comment="name: \"string\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"The name of the store.\""];
+{ rank = max;2;4}
+
+}

@@ -1,20 +1,18 @@
 digraph "ActorDataBoundingBoxComponent" {
 rankdir = LR
-10
-10 -> 11
-11 -> 12
-10 -> 13
-13 -> 14
-10 -> 15
-15 -> 16
+0
+0 -> 1
+1 -> 2
+2 -> 3
+1 -> 4
+4 -> 5
 
-10 [label="ActorDataBoundingBoxComponent",comment="name: \"ActorDataBoundingBoxComponent\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-11 [label="Actor Data Bounding Box::Scale",comment="name: \"Actor Data Bounding Box::Scale\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"Array where the elements stores the bounding box of scale\""];
-12 [label="float",comment="name: \"float\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-13 [label="Actor Data Bounding Box::Width",comment="name: \"Actor Data Bounding Box::Width\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"Array where the elements stores the bounding box of width\""];
-14 [label="float",comment="name: \"float\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-15 [label="Actor Data Bounding Box::Heigth",comment="name: \"Actor Data Bounding Box::Heigth\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"Array where the elements stores the bounding box of height\""];
-16 [label="float",comment="name: \"float\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;12;14;16}
+0 [label="ActorDataBoundingBoxComponent",comment="name: \"ActorDataBoundingBoxComponent\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Actor Data Bounding Box",comment="name: \"Actor Data Bounding Box\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+5 [label="float",comment="name: \"float\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;5}
 
 }

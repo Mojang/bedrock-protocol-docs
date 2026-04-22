@@ -1,9 +1,9 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3601495873",
+    "$id": "1228646201",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "title": "SimpleEventPacket",
     "description": "This packet is used for enabling/disabling commands and for unlocking world template settings (both unlocking UI buttons on client and the actual setting on the server).",
     "type": "object",

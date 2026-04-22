@@ -1,53 +1,62 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2873317179",
+    "$id": "792295587",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "546677968": {
-            "title": "CameraSplineDefinition",
+        "2845098638": {
+            "title": "CameraSplineRotationKeyFrame",
             "type": "object",
             "properties": {
-                "control_points": {
-                    "description": "Array of control point positions, each as [x, y, z] in world space.",
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/1274567168"
-                    },
-                    "x-ordinal-index": 3
-                },
-                "name": {
-                    "description": "The identifier for this spline, in \"namespace:name\" format.",
+                "easing": {
+                    "title": "easing_function",
+                    "description": "Optional easing function used to interpolate towards this rotation key frame. Defaults to \"linear\" if omitted.",
                     "type": "string",
-                    "x-ordinal-index": 0,
-                    "pattern": "^\\w+:\\w+$"
+                    "enum": [
+                        "linear",
+                        "spring",
+                        "in_quad",
+                        "out_quad",
+                        "in_out_quad",
+                        "in_cubic",
+                        "out_cubic",
+                        "in_out_cubic",
+                        "in_quart",
+                        "out_quart",
+                        "in_out_quart",
+                        "in_quint",
+                        "out_quint",
+                        "in_out_quint",
+                        "in_sine",
+                        "out_sine",
+                        "in_out_sine",
+                        "in_expo",
+                        "out_expo",
+                        "in_out_expo",
+                        "in_circ",
+                        "out_circ",
+                        "in_out_circ",
+                        "in_bounce",
+                        "out_bounce",
+                        "in_out_bounce",
+                        "in_back",
+                        "out_back",
+                        "in_out_back",
+                        "in_elastic",
+                        "out_elastic",
+                        "in_out_elastic"
+                    ],
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 2
                 },
-                "progress_key_frames": {
-                    "description": "Key frames where each entry defines a progress alpha [0–1] and a time (in seconds) when the spline should reach that progress.",
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/3914468974"
-                    },
-                    "x-ordinal-index": 4
+                "rotation": {
+                    "description": "Rotation [x, y, z] value.",
+                    "$ref": "#/definitions/725374594",
+                    "x-ordinal-index": 0
                 },
-                "rotation_key_frames": {
-                    "description": "Array of rotation key frames, each with a rotation value and the time (in seconds) when it should be applied.",
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/790401607"
-                    },
-                    "x-ordinal-index": 5
-                },
-                "spline_type": {
-                    "description": "The spline interpolation type: \"catmullrom\" or \"linear\". Defaults to \"catmullrom\".",
-                    "type": "string",
-                    "default": "catmullrom",
-                    "x-ordinal-index": 2,
-                    "pattern": "^(?:catmullrom|linear)$"
-                },
-                "total_time": {
-                    "description": "The total time, in seconds, to play back the spline.",
+                "time": {
+                    "description": "Time (in seconds) at which this rotation should be applied.",
                     "type": "number",
                     "x-underlying-type": "float",
                     "x-ordinal-index": 1,
@@ -55,54 +64,11 @@
                 }
             },
             "required": [
-                "control_points",
-                "name",
-                "progress_key_frames",
-                "rotation_key_frames",
-                "total_time"
+                "rotation",
+                "time"
             ]
         },
-        "1274567168": {
-            "title": "CameraSplineControlPoint",
-            "type": "object",
-            "properties": {
-                "position": {
-                    "description": "The [x, y, z] position of a spline node.",
-                    "$ref": "#/definitions/4004946602",
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "position"
-            ]
-        },
-        "4004946602": {
-            "title": "Vec3",
-            "type": "object",
-            "properties": {
-                "X": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 0
-                },
-                "Y": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 1
-                },
-                "Z": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 2
-                }
-            },
-            "required": [
-                "X",
-                "Y",
-                "Z"
-            ]
-        },
-        "3914468974": {
+        "2645622011": {
             "title": "CameraSplineProgressKeyFrame",
             "type": "object",
             "properties": {
@@ -168,58 +134,49 @@
                 "time"
             ]
         },
-        "790401607": {
-            "title": "CameraSplineRotationKeyFrame",
+        "1921580785": {
+            "title": "CameraSplineDefinition",
             "type": "object",
             "properties": {
-                "easing": {
-                    "title": "easing_function",
-                    "description": "Optional easing function used to interpolate towards this rotation key frame. Defaults to \"linear\" if omitted.",
+                "control_points": {
+                    "description": "Array of control point positions, each as [x, y, z] in world space.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/2934684289"
+                    },
+                    "x-ordinal-index": 3
+                },
+                "name": {
+                    "description": "The identifier for this spline, in \"namespace:name\" format.",
                     "type": "string",
-                    "enum": [
-                        "linear",
-                        "spring",
-                        "in_quad",
-                        "out_quad",
-                        "in_out_quad",
-                        "in_cubic",
-                        "out_cubic",
-                        "in_out_cubic",
-                        "in_quart",
-                        "out_quart",
-                        "in_out_quart",
-                        "in_quint",
-                        "out_quint",
-                        "in_out_quint",
-                        "in_sine",
-                        "out_sine",
-                        "in_out_sine",
-                        "in_expo",
-                        "out_expo",
-                        "in_out_expo",
-                        "in_circ",
-                        "out_circ",
-                        "in_out_circ",
-                        "in_bounce",
-                        "out_bounce",
-                        "in_out_bounce",
-                        "in_back",
-                        "out_back",
-                        "in_out_back",
-                        "in_elastic",
-                        "out_elastic",
-                        "in_out_elastic"
-                    ],
-                    "x-underlying-type": "int32",
-                    "x-ordinal-index": 2
+                    "x-ordinal-index": 0,
+                    "pattern": "^\\w+:\\w+$"
                 },
-                "rotation": {
-                    "description": "Rotation [x, y, z] value.",
-                    "$ref": "#/definitions/4004946602",
-                    "x-ordinal-index": 0
+                "progress_key_frames": {
+                    "description": "Key frames where each entry defines a progress alpha [0–1] and a time (in seconds) when the spline should reach that progress.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/2645622011"
+                    },
+                    "x-ordinal-index": 4
                 },
-                "time": {
-                    "description": "Time (in seconds) at which this rotation should be applied.",
+                "rotation_key_frames": {
+                    "description": "Array of rotation key frames, each with a rotation value and the time (in seconds) when it should be applied.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/2845098638"
+                    },
+                    "x-ordinal-index": 5
+                },
+                "spline_type": {
+                    "description": "The spline interpolation type: \"catmullrom\" or \"linear\". Defaults to \"catmullrom\".",
+                    "type": "string",
+                    "default": "catmullrom",
+                    "x-ordinal-index": 2,
+                    "pattern": "^(?:catmullrom|linear)$"
+                },
+                "total_time": {
+                    "description": "The total time, in seconds, to play back the spline.",
                     "type": "number",
                     "x-underlying-type": "float",
                     "x-ordinal-index": 1,
@@ -227,8 +184,51 @@
                 }
             },
             "required": [
-                "rotation",
-                "time"
+                "control_points",
+                "name",
+                "progress_key_frames",
+                "rotation_key_frames",
+                "total_time"
+            ]
+        },
+        "2934684289": {
+            "title": "CameraSplineControlPoint",
+            "type": "object",
+            "properties": {
+                "position": {
+                    "description": "The [x, y, z] position of a spline node.",
+                    "$ref": "#/definitions/725374594",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "position"
+            ]
+        },
+        "725374594": {
+            "title": "Vec3",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "Z": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "X",
+                "Y",
+                "Z"
             ]
         }
     },
@@ -239,7 +239,7 @@
         "Camera Data Splines": {
             "type": "array",
             "items": {
-                "$ref": "#/definitions/546677968"
+                "$ref": "#/definitions/1921580785"
             },
             "x-ordinal-index": 0
         }

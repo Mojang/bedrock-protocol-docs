@@ -1,48 +1,72 @@
 digraph "BiomeScatterParamData" {
 rankdir = LR
-80
-80 -> 81
-81 -> 82
-82 -> 83
-81 -> 84
-84 -> 85
-85 -> 101
-80 -> 102
-102 -> 103
-80 -> 104
-104 -> 105
-80 -> 106
-106 -> 107
-80 -> 108
-108 -> 109
-80 -> 110
-110 -> 111
-80 -> 112
-112 -> 113
-80 -> 114
-114 -> 115
+0
+0 -> 1
+1 -> 2
+2 -> 3
+1 -> 4
+4 -> 5
+5 -> 6
+4 -> 7
+7 -> 8
+4 -> 9
+9 -> 10
+4 -> 11
+11 -> 12
+4 -> 13
+13 -> 14
+4 -> 15
+15 -> 16
+4 -> 17
+17 -> 18
+0 -> 19
+19 -> 20
+0 -> 21
+21 -> 22
+0 -> 23
+23 -> 24
+0 -> 25
+25 -> 26
+0 -> 27
+27 -> 28
+0 -> 29
+29 -> 30
+0 -> 31
+31 -> 32
 
-80 [label="BiomeScatterParamData",comment="name: \"BiomeScatterParamData\", typeName: \"\", id: 80, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-81 [label="coordinate",comment="name: \"coordinate\", typeName: \"\", id: 81, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-82 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 82, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-83 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 83, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-84 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 84, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-85 [label="coordinates",comment="name: \"coordinates\", typeName: \"BiomeCoordinateData\", id: 85, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-101 [label="BiomeCoordinateData",comment="name: \"BiomeCoordinateData\", typeName: \"\", id: 101, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-102 [label="eval order",comment="name: \"eval order\", typeName: \"\", id: 102, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-103 [label="varint",comment="name: \"varint\", typeName: \"\", id: 103, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-104 [label="chance percent type",comment="name: \"chance percent type\", typeName: \"\", id: 104, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-105 [label="varint",comment="name: \"varint\", typeName: \"\", id: 105, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-106 [label="chance percent",comment="name: \"chance percent\", typeName: \"short\", id: 106, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-107 [label="short",comment="name: \"short\", typeName: \"\", id: 107, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-108 [label="chance numerator",comment="name: \"chance numerator\", typeName: \"\", id: 108, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-109 [label="int",comment="name: \"int\", typeName: \"\", id: 109, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-110 [label="chance denominator",comment="name: \"chance denominator\", typeName: \"\", id: 110, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-111 [label="int",comment="name: \"int\", typeName: \"\", id: 111, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-112 [label="iterations type",comment="name: \"iterations type\", typeName: \"\", id: 112, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-113 [label="varint",comment="name: \"varint\", typeName: \"\", id: 113, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-114 [label="iterations",comment="name: \"iterations\", typeName: \"short\", id: 114, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-115 [label="short",comment="name: \"short\", typeName: \"\", id: 115, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;83;101;103;105;107;109;111;113;115}
+0 [label="BiomeScatterParamData",comment="name: \"BiomeScatterParamData\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="coordinates",comment="name: \"coordinates\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+5 [label="min value type",comment="name: \"min value type\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+6 [label="varint",comment="name: \"varint\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+7 [label="min value",comment="name: \"min value\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+9 [label="max value type",comment="name: \"max value type\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+10 [label="varint",comment="name: \"varint\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+11 [label="max value",comment="name: \"max value\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+12 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+13 [label="grid offset",comment="name: \"grid offset\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+14 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+15 [label="grid step size",comment="name: \"grid step size\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+16 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+17 [label="distribution",comment="name: \"distribution\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+18 [label="enum RandomDistributionType",comment="name: \"enum RandomDistributionType\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+19 [label="eval order",comment="name: \"eval order\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+20 [label="enum CoordinateEvaluationOrder",comment="name: \"enum CoordinateEvaluationOrder\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+21 [label="chance percent type",comment="name: \"chance percent type\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+22 [label="varint",comment="name: \"varint\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+23 [label="chance percent",comment="name: \"chance percent\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+24 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+25 [label="chance numerator",comment="name: \"chance numerator\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+26 [label="int",comment="name: \"int\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+27 [label="chance denominator",comment="name: \"chance denominator\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+28 [label="int",comment="name: \"int\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+29 [label="iterations type",comment="name: \"iterations type\", typeName: \"\", id: 29, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+30 [label="varint",comment="name: \"varint\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+31 [label="iterations",comment="name: \"iterations\", typeName: \"\", id: 31, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+32 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 32, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;6;8;10;12;14;16;18;20;22;24;26;28;30;32}
 
 }

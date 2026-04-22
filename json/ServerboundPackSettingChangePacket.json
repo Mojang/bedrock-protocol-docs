@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "4020927845",
+    "$id": "3637319069",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "1616419299": {
+        "234962571": {
             "title": "mce::UUID",
             "type": "object",
             "properties": {
@@ -34,7 +34,7 @@
     "properties": {
         "PackId": {
             "description": "The UUID of the pack whose setting is being changed.",
-            "$ref": "#/definitions/1616419299",
+            "$ref": "#/definitions/234962571",
             "x-ordinal-index": 0
         },
         "PackSettingName": {

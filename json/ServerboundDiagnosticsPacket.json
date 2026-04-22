@@ -1,16 +1,49 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1692583562",
+    "$id": "599317042",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "1494345208": {
+        "407141822": {
+            "title": "EntityDiagnosticTimingInfo",
+            "type": "object",
+            "properties": {
+                "Display Name": {
+                    "type": "string",
+                    "x-ordinal-index": 0
+                },
+                "Entity": {
+                    "type": "string",
+                    "x-ordinal-index": 1
+                },
+                "Percent of Total": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 3,
+                    "minimum": 0.0,
+                    "maximum": 255.0
+                },
+                "Time in NS": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-ordinal-index": 2,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Display Name",
+                "Entity",
+                "Percent of Total",
+                "Time in NS"
+            ]
+        },
+        "3675570279": {
             "title": "MemoryCategoryCounter",
             "type": "object",
             "properties": {
                 "Category": {
-                    "title": "enum Memory::MemoryCategory",
+                    "title": "Memory::MemoryCategory",
                     "type": "string",
                     "enum": [
                         "Unknown",
@@ -73,6 +106,7 @@
                         "RenderChunk_IndexBuffer",
                         "RenderChunk_VertexBuffer",
                         "Rendering",
+                        "Rendering_RenderRegistry",
                         "Rendering_Library",
                         "RequestLog",
                         "ResourcePacks",
@@ -81,7 +115,6 @@
                         "SubChunk_BlockData",
                         "SubChunk_LightData",
                         "Textures",
-                        "VR",
                         "WeatherRenderer",
                         "World_Generator",
                         "Tasks",
@@ -122,6 +155,41 @@
             "required": [
                 "Category",
                 "Current Bytes"
+            ]
+        },
+        "3819337508": {
+            "title": "SystemDiagnosticTimingInfo",
+            "type": "object",
+            "properties": {
+                "Display Name": {
+                    "type": "string",
+                    "x-ordinal-index": 0
+                },
+                "Percent of Total": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 3,
+                    "minimum": 0.0,
+                    "maximum": 255.0
+                },
+                "System Index": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                },
+                "Time in NS": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-ordinal-index": 2,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Display Name",
+                "Percent of Total",
+                "System Index",
+                "Time in NS"
             ]
         }
     },
@@ -174,12 +242,26 @@
             "x-underlying-type": "float",
             "x-ordinal-index": 8
         },
+        "Entity Diagnostics": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/407141822"
+            },
+            "x-ordinal-index": 10
+        },
         "Memory Category Values": {
             "type": "array",
             "items": {
-                "$ref": "#/definitions/1494345208"
+                "$ref": "#/definitions/3675570279"
             },
             "x-ordinal-index": 9
+        },
+        "System Diagnostics": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/3819337508"
+            },
+            "x-ordinal-index": 11
         }
     },
     "required": [
@@ -192,7 +274,9 @@
         "AvgRenderTimeMS",
         "AvgServerSimTickTimeMS",
         "AvgUnaccountedTimePercent",
-        "Memory Category Values"
+        "Entity Diagnostics",
+        "Memory Category Values",
+        "System Diagnostics"
     ],
     "$metaProperties": {
         "[cereal:packet]": 315,

@@ -1,11 +1,33 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "4188102451",
+    "$id": "3106203131",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "435823779": {
+        "234962571": {
+            "title": "mce::UUID",
+            "type": "object",
+            "properties": {
+                "Least Significant Bits": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                },
+                "Most Significant Bits": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Least Significant Bits",
+                "Most Significant Bits"
+            ]
+        },
+        "36326044": {
             "title": "CommandOriginData",
             "type": "object",
             "properties": {
@@ -38,35 +60,13 @@
                 },
                 "UUID": {
                     "description": "The unique UUID that represents an instantiation of a command. Each time a command is run it should be given a UUID to represent that instance.",
-                    "$ref": "#/definitions/1616419299",
+                    "$ref": "#/definitions/234962571",
                     "x-ordinal-index": 1
                 }
             },
             "required": [
                 "Type",
                 "UUID"
-            ]
-        },
-        "1616419299": {
-            "title": "mce::UUID",
-            "type": "object",
-            "properties": {
-                "Least Significant Bits": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-ordinal-index": 1,
-                    "minimum": 0.0
-                },
-                "Most Significant Bits": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
-                }
-            },
-            "required": [
-                "Least Significant Bits",
-                "Most Significant Bits"
             ]
         }
     },
@@ -88,11 +88,11 @@
         },
         "Origin": {
             "description": "The origin of the command.",
-            "$ref": "#/definitions/435823779",
+            "$ref": "#/definitions/36326044",
             "x-ordinal-index": 1
         },
         "Version": {
-            "title": "enum CurrentCmdVersion",
+            "title": "CurrentCmdVersion",
             "description": "The version of the command.",
             "type": "string",
             "enum": [

@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3980576190",
+    "$id": "3859742646",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "4075064780": {
+        "3960679329": {
             "title": "MessageOnly",
             "type": "object",
             "properties": {
@@ -38,7 +38,42 @@
                 "Message Type"
             ]
         },
-        "3338540673": {
+        "850792331": {
+            "title": "AuthorAndMessage",
+            "type": "object",
+            "properties": {
+                "Message": {
+                    "type": "string",
+                    "default": "",
+                    "x-ordinal-index": 2,
+                    "minLength": 1
+                },
+                "Message Type": {
+                    "title": "TextPacketType",
+                    "type": "string",
+                    "enum": [
+                        "chat",
+                        "whisper",
+                        "announcement"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Player Name": {
+                    "type": "string",
+                    "default": "",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Message Type"
+            ]
+        },
+        "4232358750": {
             "title": "MessageAndParams",
             "type": "object",
             "properties": {
@@ -76,41 +111,6 @@
             "required": [
                 "Message Type"
             ]
-        },
-        "2049426924": {
-            "title": "AuthorAndMessage",
-            "type": "object",
-            "properties": {
-                "Message": {
-                    "type": "string",
-                    "default": "",
-                    "x-ordinal-index": 2,
-                    "minLength": 1
-                },
-                "Message Type": {
-                    "title": "TextPacketType",
-                    "type": "string",
-                    "enum": [
-                        "chat",
-                        "whisper",
-                        "announcement"
-                    ],
-                    "x-underlying-type": "uint8",
-                    "x-serialization-options": [
-                        "Compression",
-                        "Enum-as-Value"
-                    ],
-                    "x-ordinal-index": 0
-                },
-                "Player Name": {
-                    "type": "string",
-                    "default": "",
-                    "x-ordinal-index": 1
-                }
-            },
-            "required": [
-                "Message Type"
-            ]
         }
     },
     "title": "TextPacket",
@@ -121,15 +121,15 @@
             "description": "Message content (variant based on message type)",
             "oneOf": [
                 {
-                    "$ref": "#/definitions/4075064780",
+                    "$ref": "#/definitions/3960679329",
                     "x-ordinal-index": 0
                 },
                 {
-                    "$ref": "#/definitions/2049426924",
+                    "$ref": "#/definitions/850792331",
                     "x-ordinal-index": 1
                 },
                 {
-                    "$ref": "#/definitions/3338540673",
+                    "$ref": "#/definitions/4232358750",
                     "x-ordinal-index": 2
                 }
             ],

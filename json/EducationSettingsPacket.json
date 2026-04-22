@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2331457496",
+    "$id": "2478805696",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "3556225321": {
+        "3482207152": {
             "title": "EducationLevelSettings",
             "type": "object",
             "properties": {
@@ -15,7 +15,7 @@
                     "x-ordinal-index": 8
                 },
                 "Agent Capabilities": {
-                    "$ref": "#/definitions/899239475",
+                    "$ref": "#/definitions/1249440280",
                     "x-ordinal-index": 6
                 },
                 "Can resize Code Builder": {
@@ -37,11 +37,11 @@
                     "x-ordinal-index": 3
                 },
                 "External Link Settings": {
-                    "$ref": "#/definitions/1442396934",
+                    "$ref": "#/definitions/2293549063",
                     "x-ordinal-index": 9
                 },
                 "Local Settings": {
-                    "$ref": "#/definitions/3861729832",
+                    "$ref": "#/definitions/888440699",
                     "x-ordinal-index": 7
                 },
                 "Post Process Filter": {
@@ -66,7 +66,20 @@
                 "Screenshot Border Resource Path"
             ]
         },
-        "899239475": {
+        "888440699": {
+            "title": "EducationLocalLevelSettings",
+            "type": "object",
+            "properties": {
+                "Code Builder Override Uri": {
+                    "type": "string",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Code Builder Override Uri"
+            ]
+        },
+        "1249440280": {
             "title": "AgentCapabilities",
             "type": "object",
             "properties": {
@@ -80,7 +93,7 @@
                 "Can Modify Blocks"
             ]
         },
-        "1442396934": {
+        "2293549063": {
             "title": "ExternalLinkSettings",
             "type": "object",
             "properties": {
@@ -97,19 +110,6 @@
                 "Display Name",
                 "URL"
             ]
-        },
-        "3861729832": {
-            "title": "EducationLocalLevelSettings",
-            "type": "object",
-            "properties": {
-                "Code Builder Override Uri": {
-                    "type": "string",
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "Code Builder Override Uri"
-            ]
         }
     },
     "title": "EducationSettingsPacket",
@@ -117,7 +117,7 @@
     "type": "object",
     "properties": {
         "Education Level Settings": {
-            "$ref": "#/definitions/3556225321",
+            "$ref": "#/definitions/3482207152",
             "x-ordinal-index": 0
         }
     },

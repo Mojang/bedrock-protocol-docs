@@ -1,9 +1,9 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "951560844",
+    "$id": "2932297172",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "title": "ServerboundDataDrivenScreenClosedPacket",
     "description": "Sent from the client to the server when a data driven screen is closed.",
     "type": "object",

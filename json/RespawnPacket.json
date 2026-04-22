@@ -1,29 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3160484819",
+    "$id": "4246936699",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "3541243607": {
-            "title": "ActorRuntimeID",
-            "type": "object",
-            "properties": {
-                "Actor Runtime ID": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
-                }
-            },
-            "required": [
-                "Actor Runtime ID"
-            ]
-        },
-        "4004946602": {
+        "725374594": {
             "title": "Vec3",
             "type": "object",
             "properties": {
@@ -48,6 +30,24 @@
                 "Y",
                 "Z"
             ]
+        },
+        "1750201151": {
+            "title": "ActorRuntimeID",
+            "type": "object",
+            "properties": {
+                "Actor Runtime ID": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Actor Runtime ID"
+            ]
         }
     },
     "title": "RespawnPacket",
@@ -55,11 +55,11 @@
     "type": "object",
     "properties": {
         "Player Runtime Id": {
-            "$ref": "#/definitions/3541243607",
+            "$ref": "#/definitions/1750201151",
             "x-ordinal-index": 2
         },
         "Position": {
-            "$ref": "#/definitions/4004946602",
+            "$ref": "#/definitions/725374594",
             "x-ordinal-index": 0
         },
         "State": {

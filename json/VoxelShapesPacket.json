@@ -1,12 +1,81 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "4149212477",
+    "$id": "2626587125",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "3157178346": {
-            "title": "struct VoxelShapes::SerializableCells",
+        "3381141713": {
+            "title": "hashed_string",
+            "type": "string"
+        },
+        "3030285956": {
+            "title": "VoxelShapes::RegistryHandle",
+            "type": "object",
+            "properties": {
+                "Value": {
+                    "type": "integer",
+                    "x-underlying-type": "uint16",
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Value"
+            ]
+        },
+        "505749491": {
+            "title": "VoxelShapes::SerializableVoxelShape",
+            "type": "object",
+            "properties": {
+                "Cells": {
+                    "description": "Grid of cells representing solid and empty regions",
+                    "$ref": "#/definitions/2442930327",
+                    "x-ordinal-index": 0
+                },
+                "X Coordinates": {
+                    "description": "Cell boundaries along the X axis",
+                    "type": "array",
+                    "items": {
+                        "type": "number",
+                        "x-underlying-type": "float"
+                    },
+                    "x-ordinal-index": 1,
+                    "minItems": 1,
+                    "maxItems": 128
+                },
+                "Y Coordinates": {
+                    "description": "Cell boundaries along the Y axis",
+                    "type": "array",
+                    "items": {
+                        "type": "number",
+                        "x-underlying-type": "float"
+                    },
+                    "x-ordinal-index": 2,
+                    "minItems": 1,
+                    "maxItems": 128
+                },
+                "Z Coordinates": {
+                    "description": "Cell boundaries along the Z axis",
+                    "type": "array",
+                    "items": {
+                        "type": "number",
+                        "x-underlying-type": "float"
+                    },
+                    "x-ordinal-index": 3,
+                    "minItems": 1,
+                    "maxItems": 128
+                }
+            },
+            "required": [
+                "Cells",
+                "X Coordinates",
+                "Y Coordinates",
+                "Z Coordinates"
+            ]
+        },
+        "2442930327": {
+            "title": "VoxelShapes::SerializableCells",
             "type": "object",
             "properties": {
                 "Storage": {
@@ -52,79 +121,10 @@
                 "Y Size",
                 "Z Size"
             ]
-        },
-        "2715320761": {
-            "title": "hashed_string",
-            "type": "string"
-        },
-        "1101503948": {
-            "title": "class VoxelShapes::RegistryHandle",
-            "type": "object",
-            "properties": {
-                "Value": {
-                    "type": "integer",
-                    "x-underlying-type": "uint16",
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
-                }
-            },
-            "required": [
-                "Value"
-            ]
-        },
-        "4245181320": {
-            "title": "struct VoxelShapes::SerializableVoxelShape",
-            "type": "object",
-            "properties": {
-                "Cells": {
-                    "description": "Grid of cells representing solid and empty regions",
-                    "$ref": "#/definitions/3157178346",
-                    "x-ordinal-index": 0
-                },
-                "X Coordinates": {
-                    "description": "Cell boundaries along the X axis",
-                    "type": "array",
-                    "items": {
-                        "type": "number",
-                        "x-underlying-type": "float"
-                    },
-                    "x-ordinal-index": 1,
-                    "minItems": 1,
-                    "maxItems": 128
-                },
-                "Y Coordinates": {
-                    "description": "Cell boundaries along the Y axis",
-                    "type": "array",
-                    "items": {
-                        "type": "number",
-                        "x-underlying-type": "float"
-                    },
-                    "x-ordinal-index": 2,
-                    "minItems": 1,
-                    "maxItems": 128
-                },
-                "Z Coordinates": {
-                    "description": "Cell boundaries along the Z axis",
-                    "type": "array",
-                    "items": {
-                        "type": "number",
-                        "x-underlying-type": "float"
-                    },
-                    "x-ordinal-index": 3,
-                    "minItems": 1,
-                    "maxItems": 128
-                }
-            },
-            "required": [
-                "Cells",
-                "X Coordinates",
-                "Y Coordinates",
-                "Z Coordinates"
-            ]
         }
     },
     "title": "VoxelShapesPacket",
-    "description": "Syncs client with server voxel shape data on world join. This packet contains a copy of all behavior pack voxel shapes data.",
+    "description": "Syncs client with server voxel shape data on world join. This packet contains a copy of all behavior pack voxel shapes data and is used by StartGamePacket.",
     "type": "object",
     "properties": {
         "Custom Shape Count": {
@@ -142,10 +142,10 @@
                 "type": "object",
                 "properties": {
                     "key": {
-                        "$ref": "#/definitions/2715320761"
+                        "$ref": "#/definitions/3381141713"
                     },
                     "value": {
-                        "$ref": "#/definitions/1101503948"
+                        "$ref": "#/definitions/3030285956"
                     }
                 }
             },
@@ -155,7 +155,7 @@
             "description": "Voxel shape structural data",
             "type": "array",
             "items": {
-                "$ref": "#/definitions/4245181320"
+                "$ref": "#/definitions/505749491"
             },
             "x-ordinal-index": 0
         }
@@ -167,6 +167,6 @@
     ],
     "$metaProperties": {
         "[cereal:packet]": 337,
-        "[cereal:packet_details]": "Sends the serializable voxel shapes data to the client as it's needed on both the client and server."
+        "[cereal:packet_details]": "Sends the serializable voxel shapes data to the client as it's needed on both the client and server. This packet should always be sent before StartGamePacket."
     }
 }

@@ -1,44 +1,40 @@
 digraph "BiomeCappedSurfaceData" {
 rankdir = LR
-231
-231 -> 232
-232 -> 233
-233 -> 234
-232 -> 235
-235 -> 236
-236 -> 237
-231 -> 238
-238 -> 239
-239 -> 240
-238 -> 241
-241 -> 242
-242 -> 243
-231 -> 244
-244 -> 245
-231 -> 246
-246 -> 247
-231 -> 248
-248 -> 249
+0
+0 -> 1
+1 -> 2
+2 -> 3
+1 -> 4
+4 -> 5
+0 -> 6
+6 -> 7
+7 -> 8
+6 -> 9
+9 -> 10
+0 -> 11
+11 -> 12
+0 -> 13
+13 -> 14
+0 -> 15
+15 -> 16
 
-231 [label="BiomeCappedSurfaceData",comment="name: \"BiomeCappedSurfaceData\", typeName: \"\", id: 231, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-232 [label="block",comment="name: \"block\", typeName: \"\", id: 232, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-233 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 233, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-234 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 234, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-235 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 235, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-236 [label="floor blocks",comment="name: \"floor blocks\", typeName: \"int\", id: 236, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-237 [label="int",comment="name: \"int\", typeName: \"\", id: 237, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-238 [label="block",comment="name: \"block\", typeName: \"\", id: 238, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-239 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 239, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-240 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 240, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-241 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 241, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-242 [label="ceiling blocks",comment="name: \"ceiling blocks\", typeName: \"int\", id: 242, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-243 [label="int",comment="name: \"int\", typeName: \"\", id: 243, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-244 [label="sea block",comment="name: \"sea block\", typeName: \"std::optional<unsigned int>\", id: 244, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-245 [label="std::optional<unsigned int>",comment="name: \"std::optional<unsigned int>\", typeName: \"\", id: 245, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-246 [label="foundation block",comment="name: \"foundation block\", typeName: \"std::optional<unsigned int>\", id: 246, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-247 [label="std::optional<unsigned int>",comment="name: \"std::optional<unsigned int>\", typeName: \"\", id: 247, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-248 [label="beach block",comment="name: \"beach block\", typeName: \"std::optional<unsigned int>\", id: 248, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-249 [label="std::optional<unsigned int>",comment="name: \"std::optional<unsigned int>\", typeName: \"\", id: 249, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;234;237;240;243;245;247;249}
+0 [label="BiomeCappedSurfaceData",comment="name: \"BiomeCappedSurfaceData\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="floor blocks",comment="name: \"floor blocks\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+5 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+6 [label="ceiling blocks",comment="name: \"ceiling blocks\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+10 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+11 [label="sea block",comment="name: \"sea block\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+12 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+13 [label="foundation block",comment="name: \"foundation block\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+14 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+15 [label="beach block",comment="name: \"beach block\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+16 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;5;10;12;14;16}
 
 }

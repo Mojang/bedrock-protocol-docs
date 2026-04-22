@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "315512544",
+    "$id": "4069499576",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "4004946602": {
+        "725374594": {
             "title": "Vec3",
             "type": "object",
             "properties": {
@@ -31,7 +31,7 @@
                 "Z"
             ]
         },
-        "3541243607": {
+        "1750201151": {
             "title": "ActorRuntimeID",
             "type": "object",
             "properties": {
@@ -56,7 +56,7 @@
     "properties": {
         "mMotion": {
             "description": "Position delta",
-            "$ref": "#/definitions/4004946602",
+            "$ref": "#/definitions/725374594",
             "x-ordinal-index": 1
         },
         "mOnGround": {
@@ -67,7 +67,7 @@
         },
         "mRuntimeId": {
             "description": "Id of moving actor",
-            "$ref": "#/definitions/3541243607",
+            "$ref": "#/definitions/1750201151",
             "x-ordinal-index": 0
         }
     },

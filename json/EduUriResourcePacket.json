@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "4061203411",
+    "$id": "1368262939",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "4222718913": {
+        "3560714072": {
             "title": "EduSharedUriResource",
             "type": "object",
             "properties": {
@@ -29,7 +29,7 @@
     "type": "object",
     "properties": {
         "Edu Shared URI Resource": {
-            "$ref": "#/definitions/4222718913",
+            "$ref": "#/definitions/3560714072",
             "x-ordinal-index": 0
         }
     },

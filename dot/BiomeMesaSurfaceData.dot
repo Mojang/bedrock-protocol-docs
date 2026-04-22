@@ -1,24 +1,24 @@
 digraph "BiomeMesaSurfaceData" {
 rankdir = LR
-215
-215 -> 216
-216 -> 217
-215 -> 218
-218 -> 219
-215 -> 220
-220 -> 221
-215 -> 222
-222 -> 223
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+0 -> 5
+5 -> 6
+0 -> 7
+7 -> 8
 
-215 [label="BiomeMesaSurfaceData",comment="name: \"BiomeMesaSurfaceData\", typeName: \"\", id: 215, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-216 [label="clay material",comment="name: \"clay material\", typeName: \"\", id: 216, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-217 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 217, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-218 [label="hard clay material",comment="name: \"hard clay material\", typeName: \"\", id: 218, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-219 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 219, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-220 [label="bryce pillars",comment="name: \"bryce pillars\", typeName: \"\", id: 220, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-221 [label="bool",comment="name: \"bool\", typeName: \"\", id: 221, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-222 [label="has forest",comment="name: \"has forest\", typeName: \"\", id: 222, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-223 [label="bool",comment="name: \"bool\", typeName: \"\", id: 223, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;217;219;221;223}
+0 [label="BiomeMesaSurfaceData",comment="name: \"BiomeMesaSurfaceData\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="clay material",comment="name: \"clay material\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="hard clay material",comment="name: \"hard clay material\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+5 [label="bryce pillars",comment="name: \"bryce pillars\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+6 [label="bool",comment="name: \"bool\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+7 [label="has forest",comment="name: \"has forest\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="bool",comment="name: \"bool\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;6;8}
 
 }

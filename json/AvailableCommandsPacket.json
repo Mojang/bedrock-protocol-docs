@@ -1,103 +1,73 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2689147654",
+    "$id": "2634246894",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "884300654": {
-            "title": "AvailableCommandsPacketChainedSubcommandRelationship",
+        "2688239457": {
+            "title": "AvailableCommandsPacketParamData",
             "type": "object",
             "properties": {
-                "SubCommand First Value": {
-                    "description": "The first value, the sub command value id.",
-                    "type": "integer",
-                    "x-underlying-type": "uint32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
+                "Is Optional?": {
+                    "description": "The parameter optional flag. True for an optional parameter.",
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 2
                 },
-                "SubCommand Second Value": {
-                    "description": "The second value, the enum id.",
-                    "type": "integer",
-                    "x-underlying-type": "uint32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 1,
-                    "minimum": 0.0
-                }
-            },
-            "required": [
-                "SubCommand First Value",
-                "SubCommand Second Value"
-            ]
-        },
-        "83056536": {
-            "title": "AvailableCommandsPacketConstrainedValueData",
-            "type": "object",
-            "properties": {
-                "Constraint Indices": {
-                    "description": "The constraint indices.",
-                    "type": "array",
-                    "items": {
-                        "type": "integer",
-                        "x-underlying-type": "uint8",
-                        "minimum": 0.0,
-                        "maximum": 255.0
-                    },
-                    "x-ordinal-index": 2,
-                    "maxItems": 250
-                },
-                "Enum Symbol": {
-                    "description": "The enum symbol.",
-                    "type": "integer",
-                    "x-underlying-type": "uint32",
-                    "x-ordinal-index": 1,
-                    "minimum": 0.0
-                },
-                "Enum Value Symbol": {
-                    "description": "The enum value symbol.",
-                    "type": "integer",
-                    "x-underlying-type": "uint32",
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
-                }
-            },
-            "required": [
-                "Constraint Indices",
-                "Enum Symbol",
-                "Enum Value Symbol"
-            ]
-        },
-        "1730688808": {
-            "title": "AvailableCommandsPacketChainedSubcommandData",
-            "type": "object",
-            "properties": {
                 "Name": {
-                    "description": "The name.",
+                    "description": "The parameter name.",
+                    "type": "string",
+                    "x-ordinal-index": 0
+                },
+                "Options": {
+                    "description": "The parameter options.",
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 3,
+                    "minimum": 0.0,
+                    "maximum": 255.0
+                },
+                "Parse Symbol": {
+                    "description": "The parameter parse symbol.",
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Is Optional?",
+                "Name",
+                "Options",
+                "Parse Symbol"
+            ]
+        },
+        "1760329909": {
+            "title": "AvailableCommandsPacketSoftEnumData",
+            "type": "object",
+            "properties": {
+                "Enum Name": {
+                    "description": "The enum name.",
                     "type": "string",
                     "x-ordinal-index": 0,
                     "maxLength": 1000
                 },
-                "SubCommand values": {
-                    "description": "The subcommand values.",
+                "Enum Options": {
+                    "description": "The enum options.",
                     "type": "array",
-                    "default": [],
                     "items": {
-                        "$ref": "#/definitions/884300654"
+                        "type": "string"
                     },
-                    "x-ordinal-index": 1,
-                    "maxItems": 32
+                    "x-ordinal-index": 1
                 }
             },
             "required": [
-                "Name"
+                "Enum Name",
+                "Enum Options"
             ]
         },
-        "622482426": {
+        "979634297": {
             "title": "AvailableCommandsPacketCommandData",
             "type": "object",
             "properties": {
@@ -141,7 +111,7 @@
                     "description": "The command overloads data.",
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/2332778279"
+                        "$ref": "#/definitions/1011714578"
                     },
                     "x-ordinal-index": 6,
                     "maxItems": 250
@@ -172,93 +142,62 @@
                 "Permission Level"
             ]
         },
-        "2332778279": {
-            "title": "AvailableCommandsPacketOverloadData",
+        "863893995": {
+            "title": "AvailableCommandsPacketChainedSubcommandData",
             "type": "object",
             "properties": {
-                "Parameter Data": {
-                    "description": "The parameters data.",
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/3535626250"
-                    },
-                    "x-ordinal-index": 1
+                "Name": {
+                    "description": "The name.",
+                    "type": "string",
+                    "x-ordinal-index": 0,
+                    "maxLength": 1000
                 },
-                "isChaining": {
-                    "description": "The is chaining command flag, true for chaining.",
-                    "type": "boolean",
-                    "x-underlying-type": "boolean",
-                    "x-ordinal-index": 0
+                "SubCommand values": {
+                    "description": "The subcommand values.",
+                    "type": "array",
+                    "default": [],
+                    "items": {
+                        "$ref": "#/definitions/446114433"
+                    },
+                    "x-ordinal-index": 1,
+                    "maxItems": 32
                 }
             },
             "required": [
-                "Parameter Data",
-                "isChaining"
+                "Name"
             ]
         },
-        "3535626250": {
-            "title": "AvailableCommandsPacketParamData",
+        "446114433": {
+            "title": "AvailableCommandsPacketChainedSubcommandRelationship",
             "type": "object",
             "properties": {
-                "Is Optional?": {
-                    "description": "The parameter optional flag. True for an optional parameter.",
-                    "type": "boolean",
-                    "x-underlying-type": "boolean",
-                    "x-ordinal-index": 2
-                },
-                "Name": {
-                    "description": "The parameter name.",
-                    "type": "string",
-                    "x-ordinal-index": 0
-                },
-                "Options": {
-                    "description": "The parameter options.",
-                    "type": "integer",
-                    "x-underlying-type": "uint8",
-                    "x-ordinal-index": 3,
-                    "minimum": 0.0,
-                    "maximum": 255.0
-                },
-                "Parse Symbol": {
-                    "description": "The parameter parse symbol.",
+                "SubCommand First Value": {
+                    "description": "The first value, the sub command value id.",
                     "type": "integer",
                     "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                },
+                "SubCommand Second Value": {
+                    "description": "The second value, the enum id.",
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
                     "x-ordinal-index": 1,
                     "minimum": 0.0
                 }
             },
             "required": [
-                "Is Optional?",
-                "Name",
-                "Options",
-                "Parse Symbol"
+                "SubCommand First Value",
+                "SubCommand Second Value"
             ]
         },
-        "1206714640": {
-            "title": "AvailableCommandsPacketSoftEnumData",
-            "type": "object",
-            "properties": {
-                "Enum Name": {
-                    "description": "The enum name.",
-                    "type": "string",
-                    "x-ordinal-index": 0,
-                    "maxLength": 1000
-                },
-                "Enum Options": {
-                    "description": "The enum options.",
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    },
-                    "x-ordinal-index": 1
-                }
-            },
-            "required": [
-                "Enum Name",
-                "Enum Options"
-            ]
-        },
-        "2740038832": {
+        "1139144157": {
             "title": "AvailableCommandsPacketEnumData",
             "type": "object",
             "properties": {
@@ -282,6 +221,67 @@
                 "Name",
                 "Values"
             ]
+        },
+        "1011714578": {
+            "title": "AvailableCommandsPacketOverloadData",
+            "type": "object",
+            "properties": {
+                "Parameter Data": {
+                    "description": "The parameters data.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/2688239457"
+                    },
+                    "x-ordinal-index": 1
+                },
+                "isChaining": {
+                    "description": "The is chaining command flag, true for chaining.",
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Parameter Data",
+                "isChaining"
+            ]
+        },
+        "2769518609": {
+            "title": "AvailableCommandsPacketConstrainedValueData",
+            "type": "object",
+            "properties": {
+                "Constraint Indices": {
+                    "description": "The constraint indices.",
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "x-underlying-type": "uint8",
+                        "minimum": 0.0,
+                        "maximum": 255.0
+                    },
+                    "x-ordinal-index": 2,
+                    "maxItems": 250
+                },
+                "Enum Symbol": {
+                    "description": "The enum symbol.",
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                },
+                "Enum Value Symbol": {
+                    "description": "The enum value symbol.",
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Constraint Indices",
+                "Enum Symbol",
+                "Enum Value Symbol"
+            ]
         }
     },
     "title": "AvailableCommandsPacket",
@@ -292,7 +292,7 @@
             "description": "The chained subcommand data.",
             "type": "array",
             "items": {
-                "$ref": "#/definitions/1730688808"
+                "$ref": "#/definitions/863893995"
             },
             "x-ordinal-index": 4,
             "maxItems": 16
@@ -309,7 +309,7 @@
             "description": "The commands data.",
             "type": "array",
             "items": {
-                "$ref": "#/definitions/622482426"
+                "$ref": "#/definitions/979634297"
             },
             "x-ordinal-index": 5
         },
@@ -317,7 +317,7 @@
             "description": "The constraints data.",
             "type": "array",
             "items": {
-                "$ref": "#/definitions/83056536"
+                "$ref": "#/definitions/2769518609"
             },
             "x-ordinal-index": 7
         },
@@ -325,7 +325,7 @@
             "description": "The enum data.",
             "type": "array",
             "items": {
-                "$ref": "#/definitions/2740038832"
+                "$ref": "#/definitions/1139144157"
             },
             "x-ordinal-index": 3
         },
@@ -349,7 +349,7 @@
             "description": "The soft enums data.",
             "type": "array",
             "items": {
-                "$ref": "#/definitions/1206714640"
+                "$ref": "#/definitions/1760329909"
             },
             "x-ordinal-index": 6
         }

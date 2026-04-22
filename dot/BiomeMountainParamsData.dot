@@ -1,32 +1,32 @@
 digraph "BiomeMountainParamsData" {
 rankdir = LR
-133
-133 -> 134
-134 -> 138
-133 -> 139
-139 -> 140
-133 -> 141
-141 -> 142
-133 -> 143
-143 -> 144
-133 -> 145
-145 -> 146
-133 -> 147
-147 -> 148
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+0 -> 5
+5 -> 6
+0 -> 7
+7 -> 8
+0 -> 9
+9 -> 10
+0 -> 11
+11 -> 12
 
-133 [label="BiomeMountainParamsData",comment="name: \"BiomeMountainParamsData\", typeName: \"\", id: 133, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-134 [label="steep block",comment="name: \"steep block\", typeName: \"int\", id: 134, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-138 [label="int",comment="name: \"int\", typeName: \"\", id: 138, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-139 [label="north slopes",comment="name: \"north slopes\", typeName: \"\", id: 139, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-140 [label="bool",comment="name: \"bool\", typeName: \"\", id: 140, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-141 [label="south slopes",comment="name: \"south slopes\", typeName: \"\", id: 141, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-142 [label="bool",comment="name: \"bool\", typeName: \"\", id: 142, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-143 [label="west slopes",comment="name: \"west slopes\", typeName: \"\", id: 143, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-144 [label="bool",comment="name: \"bool\", typeName: \"\", id: 144, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-145 [label="east slopes",comment="name: \"east slopes\", typeName: \"\", id: 145, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-146 [label="bool",comment="name: \"bool\", typeName: \"\", id: 146, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-147 [label="top slide enabled",comment="name: \"top slide enabled\", typeName: \"\", id: 147, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-148 [label="bool",comment="name: \"bool\", typeName: \"\", id: 148, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;138;140;142;144;146;148}
+0 [label="BiomeMountainParamsData",comment="name: \"BiomeMountainParamsData\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="steep block",comment="name: \"steep block\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="north slopes",comment="name: \"north slopes\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="bool",comment="name: \"bool\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+5 [label="south slopes",comment="name: \"south slopes\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+6 [label="bool",comment="name: \"bool\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+7 [label="west slopes",comment="name: \"west slopes\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="bool",comment="name: \"bool\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+9 [label="east slopes",comment="name: \"east slopes\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+10 [label="bool",comment="name: \"bool\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+11 [label="top slide enabled",comment="name: \"top slide enabled\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+12 [label="bool",comment="name: \"bool\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;6;8;10;12}
 
 }

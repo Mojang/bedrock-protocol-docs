@@ -1,15 +1,15 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3211677219",
+    "$id": "2755447067",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "title": "StructureTemplateDataResponsePacket",
     "description": "This is used in exporting from load, exporting from save, and querying saved structures from structure blocks.",
     "type": "object",
     "properties": {
         "Response Type": {
-            "title": "enum StructureTemplateResponseType",
+            "title": "StructureTemplateResponseType",
             "type": "string",
             "enum": [
                 "None",
@@ -27,7 +27,7 @@
             "x-ordinal-index": 0
         },
         "Structure's NBT": {
-            "$ref": "#/definitions/4158325036",
+            "$ref": "#/definitions/3172631924",
             "x-ordinal-index": 1
         }
     },

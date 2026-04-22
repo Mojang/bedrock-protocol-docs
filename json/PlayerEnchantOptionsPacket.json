@@ -1,0 +1,184 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "425066661",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
+    "definitions": {
+        "605048677": {
+            "title": "RecipeNetId",
+            "type": "object",
+            "properties": {
+                "Raw Id": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Raw Id"
+            ]
+        },
+        "4161204450": {
+            "title": "ItemEnchantOption",
+            "description": "A helper to group a potential enchantment by its name, cost, and resulting enchanted item -- effectively a mini-recipe.",
+            "type": "object",
+            "properties": {
+                "Cost": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0,
+                    "maximum": 255.0
+                },
+                "Enchant Name": {
+                    "type": "string",
+                    "x-ordinal-index": 2,
+                    "minLength": 1,
+                    "maxLength": 256
+                },
+                "Enchant Net Id": {
+                    "$ref": "#/definitions/605048677",
+                    "x-ordinal-index": 3
+                },
+                "Enchants": {
+                    "$ref": "#/definitions/949885868",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Cost",
+                "Enchant Name",
+                "Enchant Net Id",
+                "Enchants"
+            ]
+        },
+        "949885868": {
+            "title": "ItemEnchants",
+            "type": "object",
+            "properties": {
+                "ItemEnchants": {
+                    "type": "array",
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/2012564701"
+                        }
+                    },
+                    "x-ordinal-index": 1,
+                    "minItems": 3,
+                    "maxItems": 3,
+                    "x-runtime-constraint-description": "Verify amount of EnchantmentInstances being serialized in ItemEnchants"
+                },
+                "Slot": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "ItemEnchants",
+                "Slot"
+            ]
+        },
+        "2012564701": {
+            "title": "EnchantmentInstance",
+            "type": "object",
+            "properties": {
+                "Enchant Level": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0,
+                    "maximum": 255.0
+                },
+                "Enchant Type": {
+                    "title": "Enchant::Type",
+                    "type": "string",
+                    "enum": [
+                        "Protection",
+                        "FireProtection",
+                        "FeatherFalling",
+                        "BlastProtection",
+                        "ProjectileProtection",
+                        "Thorns",
+                        "Respiration",
+                        "DepthStrider",
+                        "AquaAffinity",
+                        "Sharpness",
+                        "Smite",
+                        "BaneOfArthropods",
+                        "Knockback",
+                        "FireAspect",
+                        "Looting",
+                        "Efficiency",
+                        "SilkTouch",
+                        "Unbreaking",
+                        "Fortune",
+                        "Power",
+                        "Punch",
+                        "Flame",
+                        "Infinity",
+                        "LuckOfTheSea",
+                        "Lure",
+                        "FrostWalker",
+                        "Mending",
+                        "CurseOfBinding",
+                        "CurseOfVanishing",
+                        "Impaling",
+                        "Riptide",
+                        "Loyalty",
+                        "Channeling",
+                        "Multishot",
+                        "Piercing",
+                        "QuickCharge",
+                        "SoulSpeed",
+                        "SwiftSneak",
+                        "WindBurst",
+                        "Density",
+                        "Breach",
+                        "Lunge",
+                        "NumEnchantments",
+                        "InvalidEnchantment"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Enchant Level",
+                "Enchant Type"
+            ]
+        }
+    },
+    "title": "PlayerEnchantOptionsPacket",
+    "description": "Sends the of new Enchanting options  from the server when a player right clicks the enchantment table.",
+    "type": "object",
+    "properties": {
+        "Options": {
+            "description": "The array of enchantment options available to the player",
+            "type": "array",
+            "items": {
+                "description": "A helper to group a potential enchantment by its name, cost, and resulting enchanted item -- effectively a mini-recipe.",
+                "$ref": "#/definitions/4161204450"
+            },
+            "x-ordinal-index": 0,
+            "maxItems": 3
+        }
+    },
+    "required": [
+        "Options"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 146,
+        "[cereal:packet_details]": ""
+    }
+}

@@ -1,54 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1403456780",
+    "$id": "1383826836",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "2462692219": {
-            "title": "BookEditAction::DeletePage",
-            "type": "object",
-            "properties": {
-                "Page Index": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "Page Index"
-            ]
-        },
-        "1666873252": {
-            "title": "BookEditAction::SwapPages",
-            "type": "object",
-            "properties": {
-                "Page Index": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                },
-                "Swap With Index": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 1
-                }
-            },
-            "required": [
-                "Page Index",
-                "Swap With Index"
-            ]
-        },
-        "3077279485": {
+        "183659258": {
             "title": "BookEditAction::AddPage",
             "type": "object",
             "properties": {
@@ -77,7 +34,33 @@
                 "Photo Name"
             ]
         },
-        "4171811454": {
+        "3592403695": {
+            "title": "BookEditAction::SwapPages",
+            "type": "object",
+            "properties": {
+                "Page Index": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Swap With Index": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Page Index",
+                "Swap With Index"
+            ]
+        },
+        "1682444869": {
             "title": "BookEditAction::ReplacePage",
             "type": "object",
             "properties": {
@@ -106,7 +89,24 @@
                 "Photo Name"
             ]
         },
-        "2642647073": {
+        "499230734": {
+            "title": "BookEditAction::DeletePage",
+            "type": "object",
+            "properties": {
+                "Page Index": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Page Index"
+            ]
+        },
+        "3729870984": {
             "title": "BookEditAction::Finalize",
             "type": "object",
             "properties": {
@@ -149,23 +149,23 @@
             "description": "Payload variant holding data specific to the type of Book Edit Operation.",
             "oneOf": [
                 {
-                    "$ref": "#/definitions/4171811454",
+                    "$ref": "#/definitions/1682444869",
                     "x-ordinal-index": 0
                 },
                 {
-                    "$ref": "#/definitions/3077279485",
+                    "$ref": "#/definitions/183659258",
                     "x-ordinal-index": 1
                 },
                 {
-                    "$ref": "#/definitions/2462692219",
+                    "$ref": "#/definitions/499230734",
                     "x-ordinal-index": 2
                 },
                 {
-                    "$ref": "#/definitions/1666873252",
+                    "$ref": "#/definitions/3592403695",
                     "x-ordinal-index": 3
                 },
                 {
-                    "$ref": "#/definitions/2642647073",
+                    "$ref": "#/definitions/3729870984",
                     "x-ordinal-index": 4
                 }
             ],

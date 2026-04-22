@@ -1,72 +1,54 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "775086109",
+    "$id": "1278005365",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "809664977": {
-            "title": "AnimatedImageData",
+        "234962571": {
+            "title": "mce::UUID",
             "type": "object",
             "properties": {
-                "AnimatedTextureType": {
-                    "title": "persona::AnimatedTextureType",
-                    "type": "string",
-                    "enum": [
-                        "Face",
-                        "Body32x32",
-                        "Body128x128"
-                    ],
-                    "x-underlying-type": "uint32",
-                    "x-serialization-options": [
-                        "Compression",
-                        "Enum-as-Value"
-                    ],
-                    "x-ordinal-index": 1
+                "Least Significant Bits": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
                 },
-                "AnimationExpression": {
-                    "title": "persona::AnimationExpression",
-                    "type": "string",
-                    "enum": [
-                        "Linear",
-                        "Blinking"
-                    ],
-                    "x-underlying-type": "uint32",
-                    "x-serialization-options": [
-                        "Compression",
-                        "Enum-as-Value"
-                    ],
-                    "x-ordinal-index": 3
-                },
-                "Frames": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 2
-                },
-                "SkinImage": {
-                    "$ref": "#/definitions/2534576878",
+                "Most Significant Bits": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Least Significant Bits",
+                "Most Significant Bits"
+            ]
+        },
+        "3702137727": {
+            "title": "Color",
+            "type": "object",
+            "properties": {
+                "Color": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
                     "x-ordinal-index": 0
                 }
             },
             "required": [
-                "AnimatedTextureType",
-                "AnimationExpression",
-                "Frames",
-                "SkinImage"
+                "Color"
             ]
         },
-        "3965240747": {
-            "title": "MinEngineVersion",
-            "type": "string"
-        },
-        "3902078879": {
+        "762283319": {
             "title": "SerializedSkin",
             "type": "object",
             "properties": {
                 "AnimatedImageData": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/809664977"
+                        "$ref": "#/definitions/58908041"
                     },
                     "x-ordinal-index": 4
                 },
@@ -92,7 +74,7 @@
                     "x-ordinal-index": 9
                 },
                 "CapeImageData": {
-                    "$ref": "#/definitions/2534576878",
+                    "$ref": "#/definitions/3521280293",
                     "x-ordinal-index": 5
                 },
                 "FullID": {
@@ -100,11 +82,11 @@
                     "x-ordinal-index": 10
                 },
                 "GeometryData": {
-                    "$ref": "#/definitions/315535208",
+                    "$ref": "#/definitions/1577557040",
                     "x-ordinal-index": 6
                 },
                 "GeometryDataMinEngineVersion": {
-                    "$ref": "#/definitions/3965240747",
+                    "$ref": "#/definitions/1964767347",
                     "x-ordinal-index": 7
                 },
                 "ID": {
@@ -112,7 +94,7 @@
                     "x-ordinal-index": 0
                 },
                 "ImageData": {
-                    "$ref": "#/definitions/2534576878",
+                    "$ref": "#/definitions/3521280293",
                     "x-ordinal-index": 3
                 },
                 "IsPersona": {
@@ -143,7 +125,7 @@
                 "PersonaPieces": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/1140301959"
+                        "$ref": "#/definitions/4045082847"
                     },
                     "x-ordinal-index": 13
                 },
@@ -187,7 +169,7 @@
                                 "x-underlying-type": "uint32"
                             },
                             "value": {
-                                "$ref": "#/definitions/1239139757"
+                                "$ref": "#/definitions/2407466245"
                             }
                         }
                     },
@@ -202,7 +184,7 @@
                     "x-ordinal-index": 2
                 },
                 "SkinColor": {
-                    "$ref": "#/definitions/1315424487",
+                    "$ref": "#/definitions/3702137727",
                     "x-ordinal-index": 12
                 },
                 "TrustedSkinFlag": {
@@ -241,7 +223,12 @@
                 "TrustedSkinFlag"
             ]
         },
-        "2534576878": {
+        "1577557040": {
+            "title": "Json::Value",
+            "type": "string",
+            "x-runtime-constraint-description": "Verify that the string can be parsed as valid JSON"
+        },
+        "3521280293": {
             "title": "SkinImage",
             "type": "object",
             "properties": {
@@ -277,14 +264,68 @@
                 "Width"
             ]
         },
-        "1239139757": {
+        "58908041": {
+            "title": "AnimatedImageData",
+            "type": "object",
+            "properties": {
+                "AnimatedTextureType": {
+                    "title": "persona::AnimatedTextureType",
+                    "type": "string",
+                    "enum": [
+                        "Face",
+                        "Body32x32",
+                        "Body128x128"
+                    ],
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 1
+                },
+                "AnimationExpression": {
+                    "title": "persona::AnimationExpression",
+                    "type": "string",
+                    "enum": [
+                        "Linear",
+                        "Blinking"
+                    ],
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 3
+                },
+                "Frames": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                },
+                "SkinImage": {
+                    "$ref": "#/definitions/3521280293",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "AnimatedTextureType",
+                "AnimationExpression",
+                "Frames",
+                "SkinImage"
+            ]
+        },
+        "1964767347": {
+            "title": "MinEngineVersion",
+            "type": "string"
+        },
+        "2407466245": {
             "title": "TintMapColor",
             "type": "object",
             "properties": {
                 "Colors": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/1315424487"
+                        "$ref": "#/definitions/3702137727"
                     },
                     "x-ordinal-index": 0,
                     "minItems": 4,
@@ -295,7 +336,7 @@
                 "Colors"
             ]
         },
-        "1140301959": {
+        "4045082847": {
             "title": "SerializedPersonaPieceHandle",
             "type": "object",
             "properties": {
@@ -305,7 +346,7 @@
                     "x-ordinal-index": 3
                 },
                 "PackId": {
-                    "$ref": "#/definitions/1616419299",
+                    "$ref": "#/definitions/234962571",
                     "x-ordinal-index": 2
                 },
                 "PieceId": {
@@ -362,47 +403,6 @@
                 "PieceType",
                 "ProductId"
             ]
-        },
-        "1315424487": {
-            "title": "Color",
-            "type": "object",
-            "properties": {
-                "Color": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "Color"
-            ]
-        },
-        "315535208": {
-            "title": "Json::Value",
-            "type": "string",
-            "x-runtime-constraint-description": "Verify that the string can be parsed as valid JSON"
-        },
-        "1616419299": {
-            "title": "mce::UUID",
-            "type": "object",
-            "properties": {
-                "Least Significant Bits": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-ordinal-index": 1,
-                    "minimum": 0.0
-                },
-                "Most Significant Bits": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
-                }
-            },
-            "required": [
-                "Least Significant Bits",
-                "Most Significant Bits"
-            ]
         }
     },
     "title": "PlayerSkinPacket",
@@ -421,12 +421,12 @@
         },
         "Serialized Skin": {
             "description": "The player's serialized skin",
-            "$ref": "#/definitions/3902078879",
+            "$ref": "#/definitions/762283319",
             "x-ordinal-index": 1
         },
         "UUID": {
             "description": "The player's UUID",
-            "$ref": "#/definitions/1616419299",
+            "$ref": "#/definitions/234962571",
             "x-ordinal-index": 0
         }
     },

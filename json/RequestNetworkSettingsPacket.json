@@ -1,9 +1,9 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "986000289",
+    "$id": "3809922937",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "title": "RequestNetworkSettingsPacket",
     "description": "Requests tunable options from host to client (compression threshold and algorithm).",
     "type": "object",
@@ -15,8 +15,8 @@
                 "Big Endian"
             ],
             "x-ordinal-index": 0,
-            "minimum": 944.0,
-            "maximum": 944.0
+            "minimum": 975.0,
+            "maximum": 975.0
         }
     },
     "required": [

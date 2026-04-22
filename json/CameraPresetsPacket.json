@@ -1,22 +1,18 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1161582602",
+    "$id": "1542182002",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "1492643634": {
-            "title": "struct SharedTypes::Reference<5>",
-            "type": "string"
-        },
-        "1531171666": {
+        "2537458058": {
             "title": "CameraPresets",
             "type": "object",
             "properties": {
                 "Presets": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/3379856411"
+                        "$ref": "#/definitions/2974466276"
                     },
                     "x-ordinal-index": 0
                 }
@@ -25,16 +21,16 @@
                 "Presets"
             ]
         },
-        "3573822430": {
-            "title": "struct SharedTypes::Identifier<7>",
+        "3905427926": {
+            "title": "SharedTypes::Reference<SharedTypes::AssetType::CameraPreset>",
             "type": "string"
         },
-        "3379856411": {
+        "2974466276": {
             "title": "CameraPresets",
             "type": "object",
             "properties": {
                 "Aim Assist": {
-                    "$ref": "#/definitions/950654229",
+                    "$ref": "#/definitions/2305420650",
                     "x-ordinal-index": 20
                 },
                 "Block Listening Radius": {
@@ -65,15 +61,15 @@
                 },
                 "Entity Offset": {
                     "description": "Changing the camera's pivot point from the center of the entity",
-                    "$ref": "#/definitions/4004946602",
+                    "$ref": "#/definitions/725374594",
                     "x-ordinal-index": 14
                 },
                 "Horizontal Rotation Limit": {
-                    "$ref": "#/definitions/4021724221",
+                    "$ref": "#/definitions/742152213",
                     "x-ordinal-index": 9
                 },
                 "Inherit From": {
-                    "$ref": "#/definitions/3640473056",
+                    "$ref": "#/definitions/3905427926",
                     "x-ordinal-index": 1
                 },
                 "Listener": {
@@ -90,7 +86,7 @@
                     "x-ordinal-index": 18
                 },
                 "Name": {
-                    "$ref": "#/definitions/3573822430",
+                    "$ref": "#/definitions/1649996674",
                     "x-ordinal-index": 0
                 },
                 "Player Effects": {
@@ -139,11 +135,11 @@
                     "x-ordinal-index": 8
                 },
                 "Vertical Rotation Limit": {
-                    "$ref": "#/definitions/4021724221",
+                    "$ref": "#/definitions/742152213",
                     "x-ordinal-index": 10
                 },
                 "View Offset": {
-                    "$ref": "#/definitions/4021724221",
+                    "$ref": "#/definitions/742152213",
                     "x-ordinal-index": 13
                 },
                 "Yaw Limit Max": {
@@ -182,7 +178,11 @@
                 "Yaw Limit Min"
             ]
         },
-        "950654229": {
+        "1649996674": {
+            "title": "SharedTypes::Identifier<SharedTypes::AssetType::CameraPreset>",
+            "type": "string"
+        },
+        "2305420650": {
             "title": "SharedTypes::Comprehensive::CameraAimAssistCommandDefinition",
             "type": "object",
             "properties": {
@@ -192,7 +192,7 @@
                     "x-ordinal-index": 3
                 },
                 "Preset Id": {
-                    "$ref": "#/definitions/1492643634",
+                    "$ref": "#/definitions/2897196339",
                     "x-ordinal-index": 0
                 },
                 "Target Mode": {
@@ -209,7 +209,7 @@
                     "x-ordinal-index": 1
                 },
                 "View Angle": {
-                    "$ref": "#/definitions/4021724221",
+                    "$ref": "#/definitions/742152213",
                     "x-ordinal-index": 2
                 }
             },
@@ -220,7 +220,7 @@
                 "View Angle"
             ]
         },
-        "4021724221": {
+        "742152213": {
             "title": "Vec2",
             "type": "object",
             "properties": {
@@ -240,7 +240,11 @@
                 "Y"
             ]
         },
-        "4004946602": {
+        "2897196339": {
+            "title": "SharedTypes::Reference<SharedTypes::AssetType::CameraAimAssist>",
+            "type": "string"
+        },
+        "725374594": {
             "title": "Vec3",
             "type": "object",
             "properties": {
@@ -265,10 +269,6 @@
                 "Y",
                 "Z"
             ]
-        },
-        "3640473056": {
-            "title": "struct SharedTypes::Reference<7>",
-            "type": "string"
         }
     },
     "title": "CameraPresetsPacket",
@@ -276,7 +276,7 @@
     "type": "object",
     "properties": {
         "Camera Presets": {
-            "$ref": "#/definitions/1531171666",
+            "$ref": "#/definitions/2537458058",
             "x-ordinal-index": 0
         }
     },

@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "323203397",
+    "$id": "3730355853",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "820712576": {
+        "1488572312": {
             "title": "BlockPos",
             "type": "object",
             "properties": {
@@ -40,7 +40,7 @@
                 "Z"
             ]
         },
-        "2872336518": {
+        "1586048219": {
             "title": "DimensionType",
             "type": "object",
             "properties": {
@@ -63,15 +63,15 @@
     "type": "object",
     "properties": {
         "Block Position": {
-            "$ref": "#/definitions/820712576",
+            "$ref": "#/definitions/1488572312",
             "x-ordinal-index": 1
         },
         "Dimension type": {
-            "$ref": "#/definitions/2872336518",
+            "$ref": "#/definitions/1586048219",
             "x-ordinal-index": 2
         },
         "Spawn Block Pos": {
-            "$ref": "#/definitions/820712576",
+            "$ref": "#/definitions/1488572312",
             "x-ordinal-index": 3
         },
         "Spawn Position Type": {

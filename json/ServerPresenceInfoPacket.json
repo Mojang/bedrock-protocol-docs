@@ -1,0 +1,47 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "1438987023",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
+    "definitions": {
+        "2502309189": {
+            "title": "presenceConfig",
+            "type": "object",
+            "properties": {
+                "experienceName": {
+                    "description": "The name of the experience.",
+                    "type": "string",
+                    "default": "",
+                    "x-ordinal-index": 0,
+                    "minLength": 1,
+                    "maxLength": 40
+                },
+                "worldName": {
+                    "description": "The name of the world.",
+                    "type": "string",
+                    "default": "",
+                    "x-ordinal-index": 1,
+                    "minLength": 1,
+                    "maxLength": 40
+                }
+            }
+        }
+    },
+    "title": "ServerPresenceInfoPacket",
+    "description": "Sent by the server to provide PresenceConfiguration to the client.",
+    "type": "object",
+    "properties": {
+        "presence_configuration": {
+            "$ref": "#/definitions/2502309189",
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "presence_configuration"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 347,
+        "[cereal:packet_details]": ""
+    }
+}

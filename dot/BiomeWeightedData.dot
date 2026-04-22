@@ -1,16 +1,16 @@
 digraph "BiomeWeightedData" {
 rankdir = LR
-263
-263 -> 264
-264 -> 265
-263 -> 266
-266 -> 267
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
 
-263 [label="BiomeWeightedData",comment="name: \"BiomeWeightedData\", typeName: \"\", id: 263, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-264 [label="biome",comment="name: \"biome\", typeName: \"short\", id: 264, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-265 [label="short",comment="name: \"short\", typeName: \"\", id: 265, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-266 [label="weight",comment="name: \"weight\", typeName: \"\", id: 266, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-267 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 267, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;265;267}
+0 [label="BiomeWeightedData",comment="name: \"BiomeWeightedData\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="biome identifier",comment="name: \"biome identifier\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="weight",comment="name: \"weight\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4}
 
 }

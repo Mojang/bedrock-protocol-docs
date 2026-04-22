@@ -16,7 +16,7 @@ rankdir = LR
 1 [label="Interacted Entity ID",comment="name: \"Interacted Entity ID\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 2 [label="varint64",comment="name: \"varint64\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 3 [label="Interaction Type",comment="name: \"Interaction Type\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-4 [label="enum enum MinecraftEventing::InteractionType",comment="name: \"enum enum MinecraftEventing::InteractionType\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+4 [label="enum MinecraftEventing::InteractionType",comment="name: \"enum MinecraftEventing::InteractionType\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 5 [label="Interaction Actor Type",comment="name: \"Interaction Actor Type\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 6 [label="varint",comment="name: \"varint\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 7 [label="Interaction Actor Variant",comment="name: \"Interaction Actor Variant\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];

@@ -616,8 +616,14 @@
 </tr><tr><td>AIM_ASSIST_PRIORITY_ACTOR_ID</td>
 <td>138</td>
 <td></td>
-</tr><tr><td>Count</td>
+</tr><tr><td>RESERVED_139</td>
 <td>139</td>
+<td></td>
+</tr><tr><td>NAMEPLATE_RENDER_DISTANCE_MAX</td>
+<td>140</td>
+<td></td>
+</tr><tr><td>Count</td>
+<td>141</td>
 <td></td>
 </tr></table></td>
 </tr><tr><td>ActorEvent</td>
@@ -800,6 +806,9 @@
 <td></td>
 </tr><tr><td>KINETIC_DAMAGE_DEALT</td>
 <td>80</td>
+<td></td>
+</tr><tr><td>HURT_WITHOUT_RECEIVING_DAMAGE</td>
+<td>81</td>
 <td></td>
 </tr></table></td>
 </tr><tr><td>ActorFlags</td>
@@ -1184,8 +1193,17 @@
 </tr><tr><td>ROTATION_LOCKED_TO_VEHICLE</td>
 <td>126</td>
 <td></td>
-</tr><tr><td>Count</td>
+</tr><tr><td>USES_LEGACY_FRICTION</td>
 <td>127</td>
+<td></td>
+</tr><tr><td>USES_UNIFORM_AIR_DRAG</td>
+<td>128</td>
+<td></td>
+</tr><tr><td>NAMEPLATE_DEPTH_TESTED</td>
+<td>129</td>
+<td></td>
+</tr><tr><td>Count</td>
+<td>130</td>
 <td></td>
 </tr></table></td>
 </tr><tr><td>ActorLinkType</td>
@@ -1700,6 +1718,9 @@
 </tr><tr><td>CamelHusk</td>
 <td>70552</td>
 <td></td>
+</tr><tr><td>SulfurCube</td>
+<td>2969</td>
+<td></td>
 </tr></table></td>
 </tr><tr><td>AgentActionType</td>
 <td><table><colgroup><col width="40%"><col width="10%"><col width="50%"></colgroup><tr><td>Attack</td>
@@ -1771,7 +1792,7 @@
 <td>Unused </td>
 </tr><tr><td>Swing</td>
 <td>1</td>
-<td>Server bound notification to swing the player's arm. Server is expected to rebroadcast to all that should see the arm move<br>See also PlayerAuthInputPacket::InputData::MissedSwing for a very similar action </td>
+<td>Server bound notification to swing the player's arm. Server is expected to rebroadcast to all that should see the arm move<br>See also PlayerAuthInputPacket::InputData::MissedSwing for a very similar action </td>
 </tr><tr><td>WakeUp</td>
 <td>3</td>
 <td>Client bound notification to stop sleeping in a bed </td>
@@ -1845,6 +1866,23 @@
 <td></td>
 </tr><tr><td>OPERAND_INVALID</td>
 <td>TOTAL_OPERANDS</td>
+<td></td>
+</tr></table></td>
+</tr><tr><td>BiomeTemperatureCategory</td>
+<td><table><colgroup><col width="40%"><col width="10%"><col width="50%"></colgroup><tr><td>Medium</td>
+<td>0</td>
+<td></td>
+</tr><tr><td>Warm</td>
+<td>1</td>
+<td></td>
+</tr><tr><td>Lukewarm</td>
+<td>2</td>
+<td></td>
+</tr><tr><td>Cold</td>
+<td>3</td>
+<td></td>
+</tr><tr><td>Frozen</td>
+<td>4</td>
 <td></td>
 </tr></table></td>
 </tr><tr><td>BookEditAction</td>
@@ -2521,23 +2559,26 @@
 </tr><tr><td>BlockStateArrayCont</td>
 <td>0x100055</td>
 <td></td>
-</tr><tr><td>Command</td>
+</tr><tr><td>ClockTimeMarkerName</td>
 <td>0x100056</td>
 <td></td>
-</tr><tr><td>SlashCommand</td>
+</tr><tr><td>Command</td>
 <td>0x100057</td>
 <td></td>
-</tr><tr><td>CodeBuilderArg</td>
+</tr><tr><td>SlashCommand</td>
 <td>0x100058</td>
 <td></td>
-</tr><tr><td>CodeBuilderArgs</td>
+</tr><tr><td>CodeBuilderArg</td>
 <td>0x100059</td>
 <td></td>
-</tr><tr><td>CodeBuilderSelectParam</td>
+</tr><tr><td>CodeBuilderArgs</td>
 <td>0x10005a</td>
 <td></td>
-</tr><tr><td>CodeBuilderSelector</td>
+</tr><tr><td>CodeBuilderSelectParam</td>
 <td>0x10005b</td>
+<td></td>
+</tr><tr><td>CodeBuilderSelector</td>
+<td>0x10005c</td>
 <td></td>
 </tr></table></td>
 </tr><tr><td>ComplexInventoryTransaction::Type</td>
@@ -2555,37 +2596,10 @@
 <td>Sent for a player right clicking on an entity or attacking them. See ItemUseInventoryTransaction::ActionType for which it is. </td>
 </tr><tr><td>ItemReleaseTransaction</td>
 <td>4</td>
-<td>Sent when releasing right click on a chargeable item like a bow or finishing charging like a crossbow. This is different than canceling item use early which would be in Player Auth Input.<br>See ItemReleaseInventoryTransaction::ActionType for which it is. </td>
+<td>Sent when releasing right click on a chargeable item like a bow or finishing charging like a crossbow. This is different than canceling item use early which would be in Player Auth Input.<br>See ItemReleaseInventoryTransaction::ActionType for which it is. </td>
 </tr></table></td>
 </tr><tr><td>Connection::DisconnectFailReason</td>
-<td><table><colgroup><col width="40%"><col width="10%"><col width="50%"></colgroup><tr><td>24</td>
-<td>26</td>
-<td></td>
-</tr><tr><td>36</td>
-<td>38</td>
-<td></td>
-</tr><tr><td>62</td>
-<td>64</td>
-<td></td>
-</tr><tr><td>67</td>
-<td>69</td>
-<td></td>
-</tr><tr><td>69</td>
-<td>71</td>
-<td></td>
-</tr><tr><td>87</td>
-<td>89</td>
-<td></td>
-</tr><tr><td>89</td>
-<td>91</td>
-<td></td>
-</tr><tr><td>96</td>
-<td>98</td>
-<td></td>
-</tr><tr><td>109</td>
-<td>111</td>
-<td></td>
-</tr><tr><td>Unknown</td>
+<td><table><colgroup><col width="40%"><col width="10%"><col width="50%"></colgroup><tr><td>Unknown</td>
 <td>0</td>
 <td></td>
 </tr><tr><td>CantConnectNoInternet</td>
@@ -2659,9 +2673,6 @@
 <td></td>
 </tr><tr><td>ClientSettingsIncompatibleWithServer</td>
 <td>24</td>
-<td></td>
-</tr><tr><td>deprecated</td>
-<td>110</td>
 <td></td>
 </tr><tr><td>ServerFull</td>
 <td>25</td>
@@ -2996,8 +3007,17 @@
 </tr><tr><td>DenyListed</td>
 <td>135</td>
 <td></td>
-</tr><tr><td>MAX_DISCONNECT_FAIL_REASON</td>
+</tr><tr><td>NonceMissing</td>
 <td>136</td>
+<td></td>
+</tr><tr><td>NonceNotFound</td>
+<td>137</td>
+<td></td>
+</tr><tr><td>NonceExpired</td>
+<td>138</td>
+<td></td>
+</tr><tr><td>NonceNotValid</td>
+<td>139</td>
 <td></td>
 </tr></table></td>
 </tr><tr><td>ContainerEnumName</td>
@@ -3375,12 +3395,6 @@
 </tr><tr><td>ShapedRecipe</td>
 <td>1</td>
 <td></td>
-</tr><tr><td>FurnaceRecipe</td>
-<td>2</td>
-<td></td>
-</tr><tr><td>FurnaceAuxRecipe</td>
-<td>3</td>
-<td></td>
 </tr><tr><td>MultiRecipe</td>
 <td>4</td>
 <td></td>
@@ -3580,10 +3594,10 @@
 <td>44</td>
 <td></td>
 </tr><tr><td>Count</td>
-<td>46</td>
+<td>47</td>
 <td></td>
 </tr><tr><td>Latest</td>
-<td>45</td>
+<td>46</td>
 <td></td>
 </tr></table></td>
 </tr><tr><td>DataDrivenScreenClosedReason</td>
@@ -4317,9 +4331,6 @@
 </tr><tr><td>EaseInOutElastic</td>
 <td>108</td>
 <td></td>
-</tr><tr><td>Count</td>
-<td>109</td>
-<td></td>
 </tr></table></td>
 </tr><tr><td>GameRule::Type</td>
 <td><table><colgroup><col width="40%"><col width="10%"><col width="50%"></colgroup><tr><td>Invalid</td>
@@ -4543,6 +4554,15 @@
 </tr><tr><td>AmbientIlluminance</td>
 <td>48</td>
 <td>Sent to set the lighting ambient illuminance value</td>
+</tr><tr><td>EmissiveDesaturation</td>
+<td>49</td>
+<td>Sent to set the lighting emissive desaturation value</td>
+</tr><tr><td>SkyIntensity</td>
+<td>50</td>
+<td>Sent to set the lighting sky intensity value</td>
+</tr><tr><td>OrbitalOffsetDegrees</td>
+<td>51</td>
+<td>Sent to set the lighting orbital offset degrees value</td>
 </tr></table></td>
 </tr><tr><td>HudElement</td>
 <td><table><colgroup><col width="40%"><col width="10%"><col width="50%"></colgroup><tr><td>PaperDoll</td>
@@ -6132,31 +6152,31 @@
 </tr><tr><td>Rendering</td>
 <td>59</td>
 <td></td>
-</tr><tr><td>Rendering_Library</td>
+</tr><tr><td>Rendering_RenderRegistry</td>
 <td>60</td>
 <td></td>
-</tr><tr><td>RequestLog</td>
+</tr><tr><td>Rendering_Library</td>
 <td>61</td>
 <td></td>
-</tr><tr><td>ResourcePacks</td>
+</tr><tr><td>RequestLog</td>
 <td>62</td>
 <td></td>
-</tr><tr><td>Sound</td>
+</tr><tr><td>ResourcePacks</td>
 <td>63</td>
 <td></td>
-</tr><tr><td>SubChunk_BiomeData</td>
+</tr><tr><td>Sound</td>
 <td>64</td>
 <td></td>
-</tr><tr><td>SubChunk_BlockData</td>
+</tr><tr><td>SubChunk_BiomeData</td>
 <td>65</td>
 <td></td>
-</tr><tr><td>SubChunk_LightData</td>
+</tr><tr><td>SubChunk_BlockData</td>
 <td>66</td>
 <td></td>
-</tr><tr><td>Textures</td>
+</tr><tr><td>SubChunk_LightData</td>
 <td>67</td>
 <td></td>
-</tr><tr><td>VR</td>
+</tr><tr><td>Textures</td>
 <td>68</td>
 <td></td>
 </tr><tr><td>WeatherRenderer</td>
@@ -7285,6 +7305,9 @@
 </tr><tr><td>PlayerLocation</td>
 <td>326</td>
 <td></td>
+</tr><tr><td>SyncWorldClocks</td>
+<td>344</td>
+<td></td>
 </tr></table></td>
 </tr><tr><td>Mirror</td>
 <td><table><colgroup><col width="40%"><col width="10%"><col width="50%"></colgroup><tr><td>None</td>
@@ -7927,8 +7950,11 @@
 </tr><tr><td>ResetMobGrowth</td>
 <td>100</td>
 <td></td>
-</tr><tr><td>_count</td>
+</tr><tr><td>SulfurCube</td>
 <td>101</td>
+<td></td>
+</tr><tr><td>_count</td>
+<td>102</td>
 <td></td>
 </tr></table></td>
 </tr><tr><td>PhotoType</td>
@@ -8004,37 +8030,37 @@
 <td>Sent in Player Action</td>
 </tr><tr><td>StartJump</td>
 <td>8</td>
-<td>Set on the tick that a player triggers a jump.<br>					Corresponds to Player Auth Input InputData::StartJumping bit 31</td>
+<td>Set on the tick that a player triggers a jump.<br>					Corresponds to Player Auth Input InputData::StartJumping bit 31</td>
 </tr><tr><td>StartSprinting</td>
 <td>9</td>
-<td>Set when the player wants to start sprinting, like double tapping forward.<br>					Server is expected to respond with SetActorDataPacket with ActorFlags::SPRINTING and an UpdateAttributesPacket to apply the sprint boost.<br>					Corresponds to Player Auth Input InputData::StartSprinting bit 25</td>
+<td>Set when the player wants to start sprinting, like double tapping forward.<br>					Server is expected to respond with SetActorDataPacket with ActorFlags::SPRINTING and an UpdateAttributesPacket to apply the sprint boost.<br>					Corresponds to Player Auth Input InputData::StartSprinting bit 25</td>
 </tr><tr><td>StopSprinting</td>
 <td>10</td>
-<td>Sent when the player wants to stop sprinting, like releasing the forward input while sprinting.<br>					Server is expected to respond with SetActorDataPacket with ActorFlags::SPRINTING and an UpdateAttributesPacket clearing the sprint speed boost.<br>					Corresponds to Player Auth Input InputData::StopSprinting bit 26</td>
+<td>Sent when the player wants to stop sprinting, like releasing the forward input while sprinting.<br>					Server is expected to respond with SetActorDataPacket with ActorFlags::SPRINTING and an UpdateAttributesPacket clearing the sprint speed boost.<br>					Corresponds to Player Auth Input InputData::StopSprinting bit 26</td>
 </tr><tr><td>StartSneaking</td>
 <td>11</td>
-<td>Sent when the player wants to start sneaking like pressing shift.<br>					Server is expected to respond with SetActorDataPacket with ActorFlags::SNEAKING true if accepted, false if rejected, and a bounding box update.<br>					Corresponds to Player Auth Input InputData::StartSneaking bit 27</td>
+<td>Sent when the player wants to start sneaking like pressing shift.<br>					Server is expected to respond with SetActorDataPacket with ActorFlags::SNEAKING true if accepted, false if rejected, and a bounding box update.<br>					Corresponds to Player Auth Input InputData::StartSneaking bit 27</td>
 </tr><tr><td>StopSneaking</td>
 <td>12</td>
-<td>Sent when the player wants to stop sneaking like releasing shift.<br>					Server is expected to respond with SetActorDataPacket with ActorFlags::SNEAKING false if accepted, true if rejected, and a bounding box update.<br>					Corresponds to Player Auth Input InputData::StopSneaking bit 28</td>
+<td>Sent when the player wants to stop sneaking like releasing shift.<br>					Server is expected to respond with SetActorDataPacket with ActorFlags::SNEAKING false if accepted, true if rejected, and a bounding box update.<br>					Corresponds to Player Auth Input InputData::StopSneaking bit 28</td>
 </tr><tr><td>CreativeDestroyBlock</td>
 <td>13</td>
-<td>Sent when trying to destroy a block in creative like left clicking on it. Expects server to destroy the block and optionally send new block or chunk information.<br>					Used to be a ChangeDimension action.<br>					Sent in Player Action.</td>
+<td>Sent when trying to destroy a block in creative like left clicking on it. Expects server to destroy the block and optionally send new block or chunk information.<br>					Used to be a ChangeDimension action.<br>					Sent in Player Action.</td>
 </tr><tr><td>ChangeDimensionAck</td>
 <td>14</td>
 <td>Sent in Player Action, this is the one case of the server sending an action to the client to start a dimension change.</td>
 </tr><tr><td>StartGliding</td>
 <td>15</td>
-<td>Sent when the player wants to start elytra gliding like pressing spacebar in air.<br>					Server is expected to respond with SetActorDataPacket with ActorFlags::GLIDING true if accepted or false if rejected, and a bounding box update.<br>					Corresponds to Player Auth Input InputData::StartGliding bit 32</td>
+<td>Sent when the player wants to start elytra gliding like pressing spacebar in air.<br>					Server is expected to respond with SetActorDataPacket with ActorFlags::GLIDING true if accepted or false if rejected, and a bounding box update.<br>					Corresponds to Player Auth Input InputData::StartGliding bit 32</td>
 </tr><tr><td>StopGliding</td>
 <td>16</td>
-<td>Sent when the player is elytra gliding but expects it to stop, like when touching the ground.<br>					Server is expected to respond with SetActorDataPacket with ActorFlags::GLIDING false if accepted or true if rejected, and a bounding box update.<br>					Corresponds to Player Auth Input InputData::StopGliding bit 33</td>
+<td>Sent when the player is elytra gliding but expects it to stop, like when touching the ground.<br>					Server is expected to respond with SetActorDataPacket with ActorFlags::GLIDING false if accepted or true if rejected, and a bounding box update.<br>					Corresponds to Player Auth Input InputData::StopGliding bit 33</td>
 </tr><tr><td>DenyDestroyBlock</td>
 <td>17</td>
-<td>Sent when the client thinks they aren't allowed to break a block at the location and want the deny particle effect.<br>					Sent in Player Action in EDU</td>
+<td>Sent when the client thinks they aren't allowed to break a block at the location and want the deny particle effect.<br>					Sent in Player Action in EDU</td>
 </tr><tr><td>CrackBlock</td>
 <td>18</td>
-<td>Client expects a LevelEventPacket with the appropriate crack event to be broadcast in response.<br>					Only sent if server auth block breaking is disabled in StartGamePacket.<br>					Sent in Player Auth Input Block Actions with position and facing.</td>
+<td>Client expects a LevelEventPacket with the appropriate crack event to be broadcast in response.<br>					Only sent if server auth block breaking is disabled in StartGamePacket.<br>					Sent in Player Auth Input Block Actions with position and facing.</td>
 </tr><tr><td>ChangeSkin</td>
 <td>19</td>
 <td></td>
@@ -8043,49 +8069,49 @@
 <td></td>
 </tr><tr><td>StartSwimming</td>
 <td>21</td>
-<td>Sent when the player wants to enter swimming mode like pressing control while moving forward in water.<br>					Server is expected to respond with SetActorDataPacket with ActorFlags::SWIMMING set to true if accepted or false if rejected, and a bounding box update.<br>					Corresponds to Player Auth Input InputData::StartSwimming bit 29</td>
+<td>Sent when the player wants to enter swimming mode like pressing control while moving forward in water.<br>					Server is expected to respond with SetActorDataPacket with ActorFlags::SWIMMING set to true if accepted or false if rejected, and a bounding box update.<br>					Corresponds to Player Auth Input InputData::StartSwimming bit 29</td>
 </tr><tr><td>StopSwimming</td>
 <td>22</td>
-<td>Sent when the player wants to exit swimming mode like when releasing the forward input while swimming.<br>					Server is expected to respond with SetActorDataPacket with ActorFlags::SWIMMMING set to false if accepted or true if rejected, and a bounding box update.<br>					Corresponds to Player Auth Input InputData::StopSwimming bit 30</td>
+<td>Sent when the player wants to exit swimming mode like when releasing the forward input while swimming.<br>					Server is expected to respond with SetActorDataPacket with ActorFlags::SWIMMMING set to false if accepted or true if rejected, and a bounding box update.<br>					Corresponds to Player Auth Input InputData::StopSwimming bit 30</td>
 </tr><tr><td>StartSpinAttack</td>
 <td>23</td>
-<td>Sent on the tick that the client predicts a riptide spin attack starting. It is accompanied by an InventoryTransactionPacket of type ComplexInventoryTransaction::Type::ItemUseTransaction.<br>					Server is expected to send a SetActorDataPacket with ActorFlags::DAMAGENEARBYMOBS set to true if accepted or false if rejected along with a bounding box update.<br>					Sent in Player Action but will soon turn into a Player Auth Input InputData bit</td>
+<td>Sent on the tick that the client predicts a riptide spin attack starting. It is accompanied by an InventoryTransactionPacket of type ComplexInventoryTransaction::Type::ItemUseTransaction.<br>					Server is expected to send a SetActorDataPacket with ActorFlags::DAMAGENEARBYMOBS set to true if accepted or false if rejected along with a bounding box update.<br>					Sent in Player Action but will soon turn into a Player Auth Input InputData bit</td>
 </tr><tr><td>StopSpinAttack</td>
 <td>24</td>
-<td>Sent when the client thinks a riptide spin attack has ended.<br>					Server is expected to send a SetActorDataPacket with ActorFlags::DAMAGENEARBYMOBS set to false if accepted or true if rejected along with a bounding box update.<br>					Sent in Player Action but will soon turn into a Player Auth Input InputData bit</td>
+<td>Sent when the client thinks a riptide spin attack has ended.<br>					Server is expected to send a SetActorDataPacket with ActorFlags::DAMAGENEARBYMOBS set to false if accepted or true if rejected along with a bounding box update.<br>					Sent in Player Action but will soon turn into a Player Auth Input InputData bit</td>
 </tr><tr><td>InteractWithBlock</td>
 <td>25</td>
 <td></td>
 </tr><tr><td>PredictDestroyBlock</td>
 <td>26</td>
-<td>Sent in Player Auth Input Block Actions with position and facing.<br>					Used for the client to inform the server that it predicted the player destroying a block.<br>					The server may respond with block, chunk, or item information if it disagrees, or send no response to imply agreement.<br>					Only used when server-auth block breaking toggle is on as specified in StartGamePacket</td>
+<td>Sent in Player Auth Input Block Actions with position and facing.<br>					Used for the client to inform the server that it predicted the player destroying a block.<br>					The server may respond with block, chunk, or item information if it disagrees, or send no response to imply agreement.<br>					Only used when server-auth block breaking toggle is on as specified in StartGamePacket</td>
 </tr><tr><td>ContinueDestroyBlock</td>
 <td>27</td>
-<td>Sent in Player Auth Input Block Actions with position and facing.<br>					Used to inform the server that the client's current block changed for block destruction.<br>					The server is expected to use this to progress the block destruction and await an upcoming PredictDestroyBlock action.<br>					They are also expected to broadcast LevelEventPackets for the block cracking of the block being destroyed.<br>					Only sent when server-auth block breaking toggle is on as specified in StartGamePacket</td>
+<td>Sent in Player Auth Input Block Actions with position and facing.<br>					Used to inform the server that the client's current block changed for block destruction.<br>					The server is expected to use this to progress the block destruction and await an upcoming PredictDestroyBlock action.<br>					They are also expected to broadcast LevelEventPackets for the block cracking of the block being destroyed.<br>					Only sent when server-auth block breaking toggle is on as specified in StartGamePacket</td>
 </tr><tr><td>StartItemUseOn</td>
 <td>28</td>
-<td>Sent upon starting right click and hold style item use.<br>					Sent in Player Action.<br>					Server can expect this to arrive with an InventoryTransactionPacket with ItemUseInventoryTransaction in it.</td>
+<td>Sent upon starting right click and hold style item use.<br>					Sent in Player Action.<br>					Server can expect this to arrive with an InventoryTransactionPacket with ItemUseInventoryTransaction in it.</td>
 </tr><tr><td>StopItemUseOn</td>
 <td>29</td>
-<td>Sent upon releasing right click and hold style item use. This is for canceling the action, not the same as firing a bow which would be InventoryTransactionPacket with ItemUseInventoryTransaction.<br>					Sent in Player Action</td>
+<td>Sent upon releasing right click and hold style item use. This is for canceling the action, not the same as firing a bow which would be InventoryTransactionPacket with ItemUseInventoryTransaction.<br>					Sent in Player Action</td>
 </tr><tr><td>HandledTeleport</td>
 <td>30</td>
-<td>Used to inform the server that we have received a MovePlayerPacket causing a teleport, and re-enable client auth movement.<br>					The server should ignore any client predicted positions from the moment a MovePlayerPacket was sent until receipt of this action.<br>					Corresponds to Player Auth Input InputData::HandledTeleport bit 37</td>
+<td>Used to inform the server that we have received a MovePlayerPacket causing a teleport, and re-enable client auth movement.<br>					The server should ignore any client predicted positions from the moment a MovePlayerPacket was sent until receipt of this action.<br>					Corresponds to Player Auth Input InputData::HandledTeleport bit 37</td>
 </tr><tr><td>MissedSwing</td>
 <td>31</td>
-<td>Sent when client wants to play the arm swing animation like for left click.<br>					Server is expected to broadcast a LevelSoundEventPacket with LevelSoundEvent::AttackNoDamage.<br>					Corresponds to Player Auth Input InputData::MissedSwing bit 39</td>
+<td>Sent when client wants to play the arm swing animation like for left click.<br>					Server is expected to broadcast a LevelSoundEventPacket with LevelSoundEvent::AttackNoDamage.<br>					Corresponds to Player Auth Input InputData::MissedSwing bit 39</td>
 </tr><tr><td>StartCrawling</td>
 <td>32</td>
-<td>Sent when the player is standing and thinks there is not enough space to stand.<br>					Server is expected to respond with a SetActorDataPacket containing a bounding box update.<br>					Server is expected to respond with SetActorDataPacket with ActorFlags::CRAWLING set to true if accepted, or false if rejected.<br>					Corresponds to Player Auth Input InputData::StartCrawling bit 40</td>
+<td>Sent when the player is standing and thinks there is not enough space to stand.<br>					Server is expected to respond with a SetActorDataPacket containing a bounding box update.<br>					Server is expected to respond with SetActorDataPacket with ActorFlags::CRAWLING set to true if accepted, or false if rejected.<br>					Corresponds to Player Auth Input InputData::StartCrawling bit 40</td>
 </tr><tr><td>StopCrawling</td>
 <td>33</td>
-<td>Sent when the player was crawling and thinks there is space to stand.<br>					Server is expected to respond with a SetActorDataPacket containing a bounding box update.<br>					Server is expected to respond with SetActorDataPacket with ActorFlags::CRAWLING set to false if accepted, or true if rejected.<br>					Corresponds to Player Auth Input InputData::StopCrawling bit 41</td>
+<td>Sent when the player was crawling and thinks there is space to stand.<br>					Server is expected to respond with a SetActorDataPacket containing a bounding box update.<br>					Server is expected to respond with SetActorDataPacket with ActorFlags::CRAWLING set to false if accepted, or true if rejected.<br>					Corresponds to Player Auth Input InputData::StopCrawling bit 41</td>
 </tr><tr><td>StartFlying</td>
 <td>34</td>
-<td>Sent when the player expects flight to be toggled on like double tap spacebar.<br>					Server is expected to respond with an UpdateAbilitiesPacket to accept or reject this.<br>					Corresponds to Player Auth Input InputData::StartFlying bit 42</td>
+<td>Sent when the player expects flight to be toggled on like double tap spacebar.<br>					Server is expected to respond with an UpdateAbilitiesPacket to accept or reject this.<br>					Corresponds to Player Auth Input InputData::StartFlying bit 42</td>
 </tr><tr><td>StopFlying</td>
 <td>35</td>
-<td>Sent when the player expects flight to be toggled off like double tap spacebar.<br>					Server is expected to respond with an UpdateAbilitiesPacket to accept or reject this.<br>					Corresponds to Player Auth Input InputData::StopFlying bit 43</td>
+<td>Sent when the player expects flight to be toggled off like double tap spacebar.<br>					Server is expected to respond with an UpdateAbilitiesPacket to accept or reject this.<br>					Corresponds to Player Auth Input InputData::StopFlying bit 43</td>
 </tr><tr><td>ClientAckServerData</td>
 <td>36</td>
 <td></td>
@@ -8174,31 +8200,31 @@
 <td>Always true when using touch input </td>
 </tr><tr><td>StartSprinting</td>
 <td>25</td>
-<td>Set when the player wants to start sprinting, like double tapping forward.<br>Server is expected to respond with SetActorDataPacket with ActorFlags::SPRINTING and an UpdateAttributesPacket to apply the sprint boost.</td>
+<td>Set when the player wants to start sprinting, like double tapping forward.<br>Server is expected to respond with SetActorDataPacket with ActorFlags::SPRINTING and an UpdateAttributesPacket to apply the sprint boost.</td>
 </tr><tr><td>StopSprinting</td>
 <td>26</td>
-<td>Sent when the player wants to stop sprinting, like releasing the forward input while sprinting.<br>Server is expected to respond with SetActorDataPacket with ActorFlags::SPRINTING and an UpdateAttributesPacket clearing the sprint speed boost. </td>
+<td>Sent when the player wants to stop sprinting, like releasing the forward input while sprinting.<br>Server is expected to respond with SetActorDataPacket with ActorFlags::SPRINTING and an UpdateAttributesPacket clearing the sprint speed boost. </td>
 </tr><tr><td>StartSneaking</td>
 <td>27</td>
-<td>Sent when the player wants to start sneaking like pressing shift.<br>Server is expected to respond with SetActorDataPacket with ActorFlags::SNEAKING true if accepted, false if rejected, and a bounding box update. </td>
+<td>Sent when the player wants to start sneaking like pressing shift.<br>Server is expected to respond with SetActorDataPacket with ActorFlags::SNEAKING true if accepted, false if rejected, and a bounding box update. </td>
 </tr><tr><td>StopSneaking</td>
 <td>28</td>
-<td>Sent when the player wants to stop sneaking like releasing shift.<br>Server is expected to respond with SetActorDataPacket with ActorFlags::SNEAKING false if accepted, true if rejected, and a bounding box update. </td>
+<td>Sent when the player wants to stop sneaking like releasing shift.<br>Server is expected to respond with SetActorDataPacket with ActorFlags::SNEAKING false if accepted, true if rejected, and a bounding box update. </td>
 </tr><tr><td>StartSwimming</td>
 <td>29</td>
-<td>Sent when the player wants to enter swimming mode like pressing control while moving forward in water.<br>Server is expected to respond with SetActorDataPacket with ActorFlags::SWIMMING set to true if accepted or false if rejected, and a bounding box update. </td>
+<td>Sent when the player wants to enter swimming mode like pressing control while moving forward in water.<br>Server is expected to respond with SetActorDataPacket with ActorFlags::SWIMMING set to true if accepted or false if rejected, and a bounding box update. </td>
 </tr><tr><td>StopSwimming</td>
 <td>30</td>
-<td>Sent when the player wants to exit swimming mode like when releasing the forward input while swimming.<br>Server is expected to respond with SetActorDataPacket with ActorFlags::SWIMMMING set to false if accepted or true if rejected, and a bounding box update. </td>
+<td>Sent when the player wants to exit swimming mode like when releasing the forward input while swimming.<br>Server is expected to respond with SetActorDataPacket with ActorFlags::SWIMMMING set to false if accepted or true if rejected, and a bounding box update. </td>
 </tr><tr><td>StartJumping</td>
 <td>31</td>
 <td>Set on the tick that the client triggers a non-vehicle jump </td>
 </tr><tr><td>StartGliding</td>
 <td>32</td>
-<td>Sent when the player wants to start elytra gliding like pressing spacebar in air.<br>Server is expected to respond with SetActorDataPacket with ActorFlags::GLIDING true if accepted or false if rejected, and a bounding box update. </td>
+<td>Sent when the player wants to start elytra gliding like pressing spacebar in air.<br>Server is expected to respond with SetActorDataPacket with ActorFlags::GLIDING true if accepted or false if rejected, and a bounding box update. </td>
 </tr><tr><td>StopGliding</td>
 <td>33</td>
-<td>Sent when the player is elytra gliding but expects it to stop, like when touching the ground.<br>Server is expected to respond with SetActorDataPacket with ActorFlags::GLIDING false if accepted or true if rejected, and a bounding box update. </td>
+<td>Sent when the player is elytra gliding but expects it to stop, like when touching the ground.<br>Server is expected to respond with SetActorDataPacket with ActorFlags::GLIDING false if accepted or true if rejected, and a bounding box update. </td>
 </tr><tr><td>PerformItemInteraction</td>
 <td>34</td>
 <td>Indicates that mItemUseTransaction will be written to the packet </td>
@@ -8210,46 +8236,46 @@
 <td>Indicates mItemStackRequest will be written to the packet </td>
 </tr><tr><td>HandledTeleport</td>
 <td>37</td>
-<td>Used to inform the server that we have received a MovePlayerPacket causing a teleport, and re-enable client auth movement.<br>The server should ignore any client predicted positions from the moment a MovePlayerPacket was sent until receipt of this action. </td>
+<td>Used to inform the server that we have received a MovePlayerPacket causing a teleport, and re-enable client auth movement.<br>The server should ignore any client predicted positions from the moment a MovePlayerPacket was sent until receipt of this action. </td>
 </tr><tr><td>Emoting</td>
 <td>38</td>
 <td>If the player is currently performing an emote, see EmotePacket </td>
 </tr><tr><td>MissedSwing</td>
 <td>39</td>
-<td>Sent when client wants to play the arm swing animation like for left click.<br>Server is expected to broadcast a LevelSoundEventPacket with LevelSoundEvent::AttackNoDamage. </td>
+<td>Sent when client wants to play the arm swing animation like for left click.<br>Server is expected to broadcast a LevelSoundEventPacket with LevelSoundEvent::AttackNoDamage. </td>
 </tr><tr><td>StartCrawling</td>
 <td>40</td>
-<td>Sent when the player is standing and thinks there is not enough space to stand.<br>Server is expected to respond with a SetActorDataPacket containing a bounding box update.<br>Server is expected to respond with SetActorDataPacket with ActorFlags::CRAWLING set to true if accepted, or false if rejected. </td>
+<td>Sent when the player is standing and thinks there is not enough space to stand.<br>Server is expected to respond with a SetActorDataPacket containing a bounding box update.<br>Server is expected to respond with SetActorDataPacket with ActorFlags::CRAWLING set to true if accepted, or false if rejected. </td>
 </tr><tr><td>StopCrawling</td>
 <td>41</td>
-<td>Sent when the player was crawling and thinks there is space to stand.<br>Server is expected to respond with a SetActorDataPacket containing a bounding box update.<br>Server is expected to respond with SetActorDataPacket with ActorFlags::CRAWLING set to false if accepted, or true if rejected. </td>
+<td>Sent when the player was crawling and thinks there is space to stand.<br>Server is expected to respond with a SetActorDataPacket containing a bounding box update.<br>Server is expected to respond with SetActorDataPacket with ActorFlags::CRAWLING set to false if accepted, or true if rejected. </td>
 </tr><tr><td>StartFlying</td>
 <td>42</td>
-<td>Sent when the player expects flight to be toggled on like double tap spacebar.<br>Server is expected to respond with an UpdateAbilitiesPacket to accept or reject this. </td>
+<td>Sent when the player expects flight to be toggled on like double tap spacebar.<br>Server is expected to respond with an UpdateAbilitiesPacket to accept or reject this. </td>
 </tr><tr><td>StopFlying</td>
 <td>43</td>
-<td>Sent when the player expects flight to be toggled off like double tap spacebar.<br>Server is expected to respond with an UpdateAbilitiesPacket to accept or reject this. </td>
+<td>Sent when the player expects flight to be toggled off like double tap spacebar.<br>Server is expected to respond with an UpdateAbilitiesPacket to accept or reject this. </td>
 </tr><tr><td>ClientAckServerData</td>
 <td>44</td>
 <td>Not sent when using server authoritative movement as specified in StartGamePacket </td>
 </tr><tr><td>IsInClientPredictedVehicle</td>
 <td>45</td>
-<td>Used when the client sends input while in control of a client predicted vehicle. Aka, Horse and Boat.<br>If set, Vehicle Rotation and Client Predicted Vehicle will be written </td>
+<td>Used when the client sends input while in control of a client predicted vehicle. Aka, Horse and Boat.<br>If set, Vehicle Rotation and Client Predicted Vehicle will be written </td>
 </tr><tr><td>PaddlingLeft</td>
 <td>46</td>
-<td>Player is in a boat and holding the paddle input.<br>Server is expected to respond with SetActorDataPacket updates of the boat's ROW_TIME_LEFT<br>See Player Auth Input for further details </td>
+<td>Player is in a boat and holding the paddle input.<br>Server is expected to respond with SetActorDataPacket updates of the boat's ROW_TIME_LEFT<br>See Player Auth Input for further details </td>
 </tr><tr><td>PaddlingRight</td>
 <td>47</td>
-<td>Player is in a boat and holding the paddle input.<br>Server is expected to respond with SetActorDataPacket updates of the boat's ROW_TIME_RIGHT<br>See Player Auth Input for further details </td>
+<td>Player is in a boat and holding the paddle input.<br>Server is expected to respond with SetActorDataPacket updates of the boat's ROW_TIME_RIGHT<br>See Player Auth Input for further details </td>
 </tr><tr><td>BlockBreakingDelayEnabled</td>
 <td>48</td>
 <td>For touch input modes in creative, true if block destruction in the current mode should happen with a delay, and false if it should happen instantly.</td>
 </tr><tr><td>HorizontalCollision</td>
 <td>49</td>
-<td>Set if the client predicted a horizontal collision. Used to factor in to client acceptance logic.<br>Can be used as a hint to the server or ignored based on desired strictness </td>
+<td>Set if the client predicted a horizontal collision. Used to factor in to client acceptance logic.<br>Can be used as a hint to the server or ignored based on desired strictness </td>
 </tr><tr><td>VerticalCollision</td>
 <td>50</td>
-<td>Set if the client predicted a vertical collision. Used to factor in to client acceptance logic.<br>Can be used as a hint to the server or ignored based on desired strictness.<br>Strongly correlates with the 'on ground' state of the player </td>
+<td>Set if the client predicted a vertical collision. Used to factor in to client acceptance logic.<br>Can be used as a hint to the server or ignored based on desired strictness.<br>Strongly correlates with the 'on ground' state of the player </td>
 </tr><tr><td>DownLeft</td>
 <td>51</td>
 <td>Local space diagonal down and left. Equivalent to move input (-1, -1) normalized. </td>
@@ -8258,7 +8284,7 @@
 <td>Local space diagonal down and right. Equivalent to move input (1, -1) normalized. </td>
 </tr><tr><td>StartUsingItem</td>
 <td>53</td>
-<td>Set on ticks when the client predicted the beginning of an item use animation like raising arm for trident or drinking potion.<br>On this same tick will be an InventoryTransactionPacket of type ComplexInventoryTransaction::Type::ItemUseTransaction.<br>Server is expected to respond with SetActorDataPacket containing ActorFlags::USINGITEM true if they agree, otherwise false.</td>
+<td>Set on ticks when the client predicted the beginning of an item use animation like raising arm for trident or drinking potion.<br>On this same tick will be an InventoryTransactionPacket of type ComplexInventoryTransaction::Type::ItemUseTransaction.<br>Server is expected to respond with SetActorDataPacket containing ActorFlags::USINGITEM true if they agree, otherwise false.</td>
 </tr><tr><td>IsCameraRelativeMovementEnabled_DEPRECATED</td>
 <td>54</td>
 <td>Unused </td>
@@ -8267,31 +8293,31 @@
 <td>Unused </td>
 </tr><tr><td>StartSpinAttack</td>
 <td>56</td>
-<td>Set on the tick that the client predicts a riptide spin attack starting, when PlayerActionType::StartSpinAttack is set in PlayerActionComponent.<br>and ActorFlags::DAMAGENEARBYMOBS set true in SetActorDataPacket </td>
+<td>Set on the tick that the client predicts a riptide spin attack starting, when PlayerActionType::StartSpinAttack is set in PlayerActionComponent.<br>and ActorFlags::DAMAGENEARBYMOBS set true in SetActorDataPacket </td>
 </tr><tr><td>StopSpinAttack</td>
 <td>57</td>
-<td>Set on the tick that client thinks a riptide spin attack has ended, when PlayerActionType::StopSpinAttack is set in PlayerActionComponent<br>and ActorFlags::DAMAGENEARBYMOBS set false in SetActorDataPacket </td>
+<td>Set on the tick that client thinks a riptide spin attack has ended, when PlayerActionType::StopSpinAttack is set in PlayerActionComponent<br>and ActorFlags::DAMAGENEARBYMOBS set false in SetActorDataPacket </td>
 </tr><tr><td>IsHotbarOnlyTouch</td>
 <td>58</td>
 <td>Indicates if touch is only allowed in the touch bar and not in gameplay. </td>
 </tr><tr><td>JumpReleasedRaw</td>
 <td>59</td>
-<td>This is whether or not the jump button was released since the last packet. <br>This will be sent even if input permissions are disabled.</td>
+<td>This is whether or not the jump button was released since the last packet. <br>This will be sent even if input permissions are disabled.</td>
 </tr><tr><td>JumpPressedRaw</td>
 <td>60</td>
-<td>This is whether or not the jump button was pressed since the last packet. <br>This will be sent even if input permissions are disabled.</td>
+<td>This is whether or not the jump button was pressed since the last packet. <br>This will be sent even if input permissions are disabled.</td>
 </tr><tr><td>JumpCurrentRaw</td>
 <td>61</td>
-<td>This is whether or not the jump button currently down. <br>This will be sent even if input permissions are disabled.</td>
+<td>This is whether or not the jump button currently down. <br>This will be sent even if input permissions are disabled.</td>
 </tr><tr><td>SneakReleasedRaw</td>
 <td>62</td>
-<td>This is whether or not the sneak button was released since the last packet. <br>This will be sent even if input permissions are disabled.</td>
+<td>This is whether or not the sneak button was released since the last packet. <br>This will be sent even if input permissions are disabled.</td>
 </tr><tr><td>SneakPressedRaw</td>
 <td>63</td>
-<td>This is whether or not the sneak button was pressed since the last packet. <br>This will be sent even if input permissions are disabled.</td>
+<td>This is whether or not the sneak button was pressed since the last packet. <br>This will be sent even if input permissions are disabled.</td>
 </tr><tr><td>SneakCurrentRaw</td>
 <td>64</td>
-<td>This is whether or not the sneak button currently down. <br>This will be sent even if input permissions are disabled.</td>
+<td>This is whether or not the sneak button currently down. <br>This will be sent even if input permissions are disabled.</td>
 </tr><tr><td>INPUT_NUM</td>
 <td>65</td>
 <td>Unused </td>
@@ -8499,6 +8525,29 @@
 </tr><tr><td>Arrow</td>
 <td>5</td>
 <td></td>
+</tr><tr><td>NumShapeTypes</td>
+<td>6</td>
+<td></td>
+</tr></table></td>
+</tr><tr><td>ScriptModuleMinecraft::ScriptPrimitiveShapeType</td>
+<td><table><colgroup><col width="40%"><col width="10%"><col width="50%"></colgroup><tr><td>Line</td>
+<td>0</td>
+<td></td>
+</tr><tr><td>Box</td>
+<td>1</td>
+<td></td>
+</tr><tr><td>Sphere</td>
+<td>2</td>
+<td></td>
+</tr><tr><td>Circle</td>
+<td>3</td>
+<td></td>
+</tr><tr><td>Text</td>
+<td>4</td>
+<td></td>
+</tr><tr><td>Arrow</td>
+<td>5</td>
+<td></td>
 </tr></table></td>
 </tr><tr><td>SerializedAbilitiesData::SerializedAbilitiesLayer</td>
 <td><table><colgroup><col width="40%"><col width="10%"><col width="50%"></colgroup><tr><td>CustomCache</td>
@@ -8526,10 +8575,10 @@
 <td></td>
 </tr><tr><td>ClientAuthoritativeV2</td>
 <td>1</td>
-<td>Referred to in the rest of the documentation as 'Client Authoritative'.<br>This mode is the current default with previews coming soon for migrating to server authoritative<br>The packets sent from client to server are largely the same as for server authoritative, see their documentation for details:<br>- PlayerAuthInputPacket (Primary motion and input data)<br>- InventoryTransactionPacket (Item use, tangentially movement related)<br><br>PlayerActionPacket is sent in some cases, and in others has become a bit inside of PlayerAuthInputPacket.<br><br>The client can be repositioned with:<br>- MovePlayerPacket<br>- SetActorMotionPacket<br></td>
+<td>Referred to in the rest of the documentation as 'Client Authoritative'.<br>This mode is the current default with previews coming soon for migrating to server authoritative<br>The packets sent from client to server are largely the same as for server authoritative, see their documentation for details:<br>- PlayerAuthInputPacket (Primary motion and input data)<br>- InventoryTransactionPacket (Item use, tangentially movement related)<br><br>PlayerActionPacket is sent in some cases, and in others has become a bit inside of PlayerAuthInputPacket.<br><br>The client can be repositioned with:<br>- MovePlayerPacket<br>- SetActorMotionPacket<br></td>
 </tr><tr><td>ServerAuthoritativeV3</td>
 <td>2</td>
-<td>Referred to in the rest of the documentation as 'Server Authoritative'<br>This mode is intended to become the new default after previews coming soon.<br>The packets from client to server are similar.<br>- PlayerAuthInputPacket (Primary motion and input data)<br>- InventoryTransactionPacket (Item use, tangentially movement related)<br><br>PlayerActionPacket is sent in some cases, and in others has become a bit inside of PlayerAuthInputPacket.<br><br>The client can be repositioned with:<br>- MovePlayerPacket<br>- CorrectPlayerMovePredictionPacket<br>- SetActorMotionPacket<br><br>Additionally, in this mode many client-bound packets have a 'Tick' value. These echo back the tick value that the client supplies in the PlayerAuthInputPacket.<br>For packets relating to a player or client predicted vehicle, the tick value should be that of the most recently processed PlayerAuthInputPacket from the player.<br>Specifying zero is also acceptable although may result in minor visual flickering as it may confuse client predicted actions.<br></td>
+<td>Referred to in the rest of the documentation as 'Server Authoritative'<br>This mode is intended to become the new default after previews coming soon.<br>The packets from client to server are similar.<br>- PlayerAuthInputPacket (Primary motion and input data)<br>- InventoryTransactionPacket (Item use, tangentially movement related)<br><br>PlayerActionPacket is sent in some cases, and in others has become a bit inside of PlayerAuthInputPacket.<br><br>The client can be repositioned with:<br>- MovePlayerPacket<br>- CorrectPlayerMovePredictionPacket<br>- SetActorMotionPacket<br><br>Additionally, in this mode many client-bound packets have a 'Tick' value. These echo back the tick value that the client supplies in the PlayerAuthInputPacket.<br>For packets relating to a player or client predicted vehicle, the tick value should be that of the most recently processed PlayerAuthInputPacket from the player.<br>Specifying zero is also acceptable although may result in minor visual flickering as it may confuse client predicted actions.<br></td>
 </tr></table></td>
 </tr><tr><td>ServerWaypointGroup::Action</td>
 <td><table><colgroup><col width="40%"><col width="10%"><col width="50%"></colgroup><tr><td>None</td>
@@ -10499,7 +10548,7 @@
 <td>578</td>
 <td></td>
 </tr><tr><td>Undefined</td>
-<td>599</td>
+<td>601</td>
 <td></td>
 </tr><tr><td>StoneSpearAttackHit</td>
 <td>579</td>
@@ -10560,6 +10609,29 @@
 <td></td>
 </tr><tr><td>ResetGrowth</td>
 <td>598</td>
+<td></td>
+</tr><tr><td>PushedByPlayer</td>
+<td>599</td>
+<td></td>
+</tr><tr><td>Bounce</td>
+<td>600</td>
+<td></td>
+</tr></table></td>
+</tr><tr><td>SharedTypes::VillageType</td>
+<td><table><colgroup><col width="40%"><col width="10%"><col width="50%"></colgroup><tr><td>Desert</td>
+<td>0</td>
+<td></td>
+</tr><tr><td>Ice</td>
+<td>1</td>
+<td></td>
+</tr><tr><td>Savanna</td>
+<td>2</td>
+<td></td>
+</tr><tr><td>Taiga</td>
+<td>3</td>
+<td></td>
+</tr><tr><td>Default</td>
+<td>4</td>
 <td></td>
 </tr></table></td>
 </tr><tr><td>SharedTypes::v1_21_10::CoordinateEvaluationOrder</td>
@@ -10942,8 +11014,11 @@
 </tr><tr><td>ServerForm</td>
 <td>14</td>
 <td></td>
-</tr><tr><td>COUNT</td>
+</tr><tr><td>DataDrivenUI</td>
 <td>15</td>
+<td></td>
+</tr><tr><td>COUNT</td>
+<td>16</td>
 <td></td>
 </tr></table></td>
 </tr><tr><td>TrustedSkinFlag</td>

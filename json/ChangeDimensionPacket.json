@@ -1,28 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1121437839",
+    "$id": "2782954439",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "2872336518": {
-            "title": "DimensionType",
-            "type": "object",
-            "properties": {
-                "value": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "value"
-            ]
-        },
-        "4004946602": {
+        "725374594": {
             "title": "Vec3",
             "type": "object",
             "properties": {
@@ -47,6 +30,23 @@
                 "Y",
                 "Z"
             ]
+        },
+        "1586048219": {
+            "title": "DimensionType",
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "value"
+            ]
         }
     },
     "title": "ChangeDimensionPacket",
@@ -55,7 +55,7 @@
     "properties": {
         "Dimension ID": {
             "description": "Currently supported: (0 -> Overworld, 1 -> Nether, 2 -> The End, 3 -> Undefined)",
-            "$ref": "#/definitions/2872336518",
+            "$ref": "#/definitions/1586048219",
             "x-ordinal-index": 0
         },
         "Loading Screen Id": {
@@ -66,7 +66,7 @@
             "minimum": 0.0
         },
         "Position": {
-            "$ref": "#/definitions/4004946602",
+            "$ref": "#/definitions/725374594",
             "x-ordinal-index": 1
         },
         "Respawn": {

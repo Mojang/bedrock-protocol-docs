@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "4150228171",
+    "$id": "138990835",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "4004946602": {
+        "725374594": {
             "title": "Vec3",
             "type": "object",
             "properties": {
@@ -101,7 +101,10 @@
                 "FlashColor",
                 "FlashIlluminance",
                 "AmbientColor",
-                "AmbientIlluminance"
+                "AmbientIlluminance",
+                "EmissiveDesaturation",
+                "SkyIntensity",
+                "OrbitalOffsetDegrees"
             ],
             "x-underlying-type": "uint8",
             "x-serialization-options": [
@@ -121,7 +124,7 @@
                         "x-underlying-type": "float"
                     },
                     "value": {
-                        "$ref": "#/definitions/4004946602"
+                        "$ref": "#/definitions/725374594"
                     }
                 }
             },
@@ -136,7 +139,7 @@
         },
         "Vec3 Value": {
             "description": "If set, contains a single Vec3 graphics parameter to be overriden",
-            "$ref": "#/definitions/4004946602",
+            "$ref": "#/definitions/725374594",
             "x-ordinal-index": 2
         }
     },

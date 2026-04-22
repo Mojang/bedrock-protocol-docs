@@ -1,0 +1,34 @@
+digraph "cerealizer<NetworkItemStackDescriptor>::SerializedData" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+0 -> 5
+5 -> 6
+0 -> 7
+7 -> 8
+8 -> 9
+0 -> 10
+10 -> 11
+0 -> 12
+12 -> 13
+
+0 [label="cerealizer<NetworkItemStackDescriptor>::SerializedData",comment="name: \"cerealizer<NetworkItemStackDescriptor>::SerializedData\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Id",comment="name: \"Id\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"Send fixed Id of 0 for invalid item\""];
+2 [label="short",comment="name: \"short\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"Send fixed Id of 0 for invalid item\""];
+3 [label="Stack size",comment="name: \"Stack size\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"The number of items in the stack. Must be within the item's allowed stack size range.\""];
+4 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"The number of items in the stack. Must be within the item's allowed stack size range.\""];
+5 [label="Aux value",comment="name: \"Aux value\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"Item auxiliary/metadata value. Used to distinguish item variants. Ignored for block items where aux is always 0.\""];
+6 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"Item auxiliary/metadata value. Used to distinguish item variants. Ignored for block items where aux is always 0.\""];
+7 [label="Net Id Variant",comment="name: \"Net Id Variant\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"Optional network ID variant used to track item stack identity across client and server.\""];
+8 [label="Item stack net ID variant",comment="name: \"Item stack net ID variant\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="",comment="name: \"\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+10 [label="Block Runtime Id",comment="name: \"Block Runtime Id\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"Runtime block state ID associated with this item when it represents a block. Used to identify the exact block state placed when the item is used.\""];
+11 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 512, notes: \"Runtime block state ID associated with this item when it represents a block. Used to identify the exact block state placed when the item is used.\""];
+12 [label="User Data Buffer",comment="name: \"User Data Buffer\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 0, notes: \"The @ItemInstanceUserData.html#ItemInstanceUserData@  binary blob encoded as a String, so it's unsigned varint length prefixed. Get all your nbt+property bytes, calculate the length, write that length, THEN write the data.\""];
+13 [label="string",comment="name: \"string\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 512, notes: \"The @ItemInstanceUserData.html#ItemInstanceUserData@  binary blob encoded as a String, so it's unsigned varint length prefixed. Get all your nbt+property bytes, calculate the length, write that length, THEN write the data.\""];
+{ rank = max;2;4;6;9;11;13}
+
+}

@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2713328744",
+    "$id": "1310695872",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "4021724221": {
+        "742152213": {
             "title": "Vec2",
             "type": "object",
             "properties": {
@@ -73,7 +73,7 @@
             "x-ordinal-index": 3
         },
         "View Angle": {
-            "$ref": "#/definitions/4021724221",
+            "$ref": "#/definitions/742152213",
             "x-ordinal-index": 1,
             "x-runtime-constraint-description": "Check that x is in [10, 90], and y is in [10, 90]"
         }

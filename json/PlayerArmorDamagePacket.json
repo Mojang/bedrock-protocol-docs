@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2749481094",
+    "$id": "4118832398",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "2724693065": {
+        "4165802368": {
             "title": "ArmorSlotAndDamagePair",
             "type": "object",
             "properties": {
@@ -45,7 +45,7 @@
         "Armor Slot and Damage Pairs": {
             "type": "array",
             "items": {
-                "$ref": "#/definitions/2724693065"
+                "$ref": "#/definitions/4165802368"
             },
             "x-ordinal-index": 0,
             "maxItems": 5

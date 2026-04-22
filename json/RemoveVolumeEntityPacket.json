@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2103671872",
+    "$id": "1014627368",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "2872336518": {
+        "1586048219": {
             "title": "DimensionType",
             "type": "object",
             "properties": {
@@ -22,7 +22,7 @@
                 "value"
             ]
         },
-        "3323842864": {
+        "3321325640": {
             "title": "EntityNetId",
             "type": "object",
             "properties": {
@@ -46,14 +46,14 @@
     "type": "object",
     "properties": {
         "Dimension Type": {
-            "$ref": "#/definitions/2872336518",
+            "$ref": "#/definitions/1586048219",
             "x-serialization-options": [
                 "Compression"
             ],
             "x-ordinal-index": 1
         },
         "Entity Network Id": {
-            "$ref": "#/definitions/3323842864",
+            "$ref": "#/definitions/3321325640",
             "x-serialization-options": [
                 "Compression"
             ],

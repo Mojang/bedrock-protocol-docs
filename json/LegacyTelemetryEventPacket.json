@@ -1,132 +1,31 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "905956163",
+    "$id": "1499388395",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "3489467127": {
-            "title": "Achievement",
+        "435349618": {
+            "title": "RaidUpdate",
             "type": "object",
             "properties": {
-                "Achievement ID": {
-                    "title": "enum MinecraftEventing::AchievementIds",
-                    "type": "string",
-                    "enum": [
-                        "ChestFullOfCobblestone",
-                        "DiamondForYou",
-                        "IronBelly",
-                        "IronMan",
-                        "OnARail",
-                        "Overkill",
-                        "ReturnToSender",
-                        "SniperDuel",
-                        "StayinFrosty",
-                        "TakeInventory",
-                        "MapRoom",
-                        "FreightStation",
-                        "SmeltEverything",
-                        "TasteOfYourOwnMedicine",
-                        "WhenPigsFly",
-                        "Inception",
-                        "ArtificialSelection",
-                        "FreeDiver",
-                        "SpawnTheWither",
-                        "Beaconator",
-                        "GreatView",
-                        "SuperSonic",
-                        "TheEndAgain",
-                        "TreasureHunter",
-                        "ShootingStar",
-                        "FashionShow",
-                        "SelfPublishedAuthor",
-                        "AlternativeFuel",
-                        "SleepWithTheFishes",
-                        "Castaway",
-                        "ImAMarineBiologist",
-                        "SailThe7Seas",
-                        "MeGold",
-                        "Ahoy",
-                        "Atlantis",
-                        "OnePickleTwoPickleSeaPickleFour",
-                        "DoaBarrelRoll",
-                        "Moskstraumen",
-                        "Echolocation",
-                        "WhereHaveYouBeen",
-                        "TopOfTheWorld",
-                        "FruitOnTheLoom",
-                        "SoundTheAlarm",
-                        "BuyLowSellHigh",
-                        "Disenchanted",
-                        "TimeForStew",
-                        "BeeOurGuest",
-                        "TotalBeeLocation",
-                        "StickySituation",
-                        "CoverMeInDebris",
-                        "FloatYourGoat",
-                        "Friend",
-                        "WaxOnWaxOff",
-                        "StriderRiddenInLavaInOverworld",
-                        "GoatHornAcquired",
-                        "JukeboxUsedInMeadows",
-                        "TradedAtWorldHeight",
-                        "SurvivedFallFromWorldHeight",
-                        "SneakCloseToSculkSensor",
-                        "ItSpreads",
-                        "BirthdaySong",
-                        "WithOurPowersCombined",
-                        "PlantingThePast",
-                        "CarefulRestoration",
-                        "Revaulting",
-                        "CraftersCraftingCrafters",
-                        "WhoNeedsRockets",
-                        "OverOverkill",
-                        "HeartTransplanter",
-                        "StayHydrated",
-                        "MobKabob",
-                        "AdventuringTime"
-                    ],
-                    "x-underlying-type": "uint8",
-                    "x-serialization-options": [
-                        "Compression",
-                        "Enum-as-Value"
-                    ],
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "Achievement ID"
-            ]
-        },
-        "2420194999": {
-            "title": "PlayerDied",
-            "type": "object",
-            "properties": {
-                "Damage Source": {
+                "Current Wave": {
                     "type": "integer",
                     "x-underlying-type": "int32",
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 2
+                    "x-ordinal-index": 0
                 },
-                "Died in Raid?": {
+                "Success": {
                     "type": "boolean",
                     "x-underlying-type": "boolean",
                     "x-serialization-options": [
                         "Compression"
                     ],
-                    "x-ordinal-index": 3
+                    "x-ordinal-index": 2
                 },
-                "Instigator Actor ID": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                },
-                "Instigator Mob Variant": {
+                "Total Waves": {
                     "type": "integer",
                     "x-underlying-type": "int32",
                     "x-serialization-options": [
@@ -136,93 +35,57 @@
                 }
             },
             "required": [
-                "Damage Source",
-                "Died in Raid?",
-                "Instigator Actor ID",
-                "Instigator Mob Variant"
+                "Current Wave",
+                "Success",
+                "Total Waves"
             ]
         },
-        "2066547760": {
-            "title": "Interaction",
+        "2033396339": {
+            "title": "CodeBuilderScoreboard",
             "type": "object",
             "properties": {
-                "Interacted Entity ID": {
-                    "type": "integer",
-                    "x-underlying-type": "int64",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                },
-                "Interaction Actor Color": {
-                    "type": "integer",
-                    "x-underlying-type": "uint8",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 4,
-                    "minimum": 0.0,
-                    "maximum": 255.0
-                },
-                "Interaction Actor Type": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 2
-                },
-                "Interaction Actor Variant": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 3
-                },
-                "Interaction Type": {
-                    "title": "enum MinecraftEventing::InteractionType",
+                "Objective Name": {
                     "type": "string",
-                    "enum": [
-                        "Breeding",
-                        "Taming",
-                        "Curing",
-                        "Crafted",
-                        "Shearing",
-                        "Milking",
-                        "Trading",
-                        "Feeding",
-                        "Igniting",
-                        "Coloring",
-                        "Naming",
-                        "Leashing",
-                        "Unleashing",
-                        "PetSleep",
-                        "Trusting",
-                        "Commanding"
-                    ],
-                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 0,
+                    "maxLength": 256
+                },
+                "Score": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
                     "x-serialization-options": [
-                        "Compression",
-                        "Enum-as-Value"
+                        "Compression"
                     ],
                     "x-ordinal-index": 1
                 }
             },
             "required": [
-                "Interacted Entity ID",
-                "Interaction Actor Color",
-                "Interaction Actor Type",
-                "Interaction Actor Variant",
-                "Interaction Type"
+                "Objective Name",
+                "Score"
             ]
         },
-        "1277110218": {
-            "title": "PortalCreated",
+        "386824325": {
+            "title": "SlashCommand",
             "type": "object",
             "properties": {
-                "Dimension ID": {
-                    "description": "Currently supported: (0 -> Overworld, 1 -> Nether, 2 -> The End, 3 -> Undefined)",
+                "Command Name": {
+                    "type": "string",
+                    "x-ordinal-index": 2,
+                    "maxLength": 1000
+                },
+                "Error Count": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1
+                },
+                "Error List": {
+                    "type": "string",
+                    "x-ordinal-index": 3,
+                    "maxLength": 2048
+                },
+                "Success Count": {
                     "type": "integer",
                     "x-underlying-type": "int32",
                     "x-serialization-options": [
@@ -232,46 +95,13 @@
                 }
             },
             "required": [
-                "Dimension ID"
+                "Command Name",
+                "Error Count",
+                "Error List",
+                "Success Count"
             ]
         },
-        "3298360571": {
-            "title": "CauldronUsed",
-            "type": "object",
-            "properties": {
-                "Contents Color": {
-                    "type": "integer",
-                    "x-underlying-type": "uint32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
-                },
-                "Contents Type": {
-                    "type": "integer",
-                    "x-underlying-type": "int16",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 1
-                },
-                "Fill Level": {
-                    "type": "integer",
-                    "x-underlying-type": "int16",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 2
-                }
-            },
-            "required": [
-                "Contents Color",
-                "Contents Type",
-                "Fill Level"
-            ]
-        },
-        "981162443": {
+        "2437972014": {
             "title": "MobKilled",
             "type": "object",
             "properties": {
@@ -451,7 +281,8 @@
                         "Nautilus",
                         "ZombieNautilus",
                         "Parched",
-                        "CamelHusk"
+                        "CamelHusk",
+                        "SulfurCube"
                     ],
                     "x-underlying-type": "int32",
                     "x-serialization-options": [
@@ -493,68 +324,86 @@
                 "Trader Name"
             ]
         },
-        "2395296471": {
-            "title": "PortalUsed",
+        "1004523446": {
+            "title": "Achievement",
             "type": "object",
             "properties": {
-                "Source Dimension ID": {
-                    "description": "Currently supported: (0 -> Overworld, 1 -> Nether, 2 -> The End, 3 -> Undefined)",
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                },
-                "Target Dimension ID": {
-                    "description": "Currently supported: (0 -> Overworld, 1 -> Nether, 2 -> The End, 3 -> Undefined)",
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 1
-                }
-            },
-            "required": [
-                "Source Dimension ID",
-                "Target Dimension ID"
-            ]
-        },
-        "4138569497": {
-            "title": "ComposterUsed",
-            "type": "object",
-            "properties": {
-                "Block Interaction Type": {
-                    "title": "enum MinecraftEventing::POIBlockInteractionType",
+                "Achievement ID": {
+                    "title": "MinecraftEventing::AchievementIds",
                     "type": "string",
                     "enum": [
-                        "None",
-                        "Extend",
-                        "Clone",
-                        "Lock",
-                        "Create",
-                        "CreateLocator",
-                        "Rename",
-                        "ItemPlaced",
-                        "ItemRemoved",
-                        "Cooking",
-                        "Dousing",
-                        "Lighting",
-                        "Haystack",
-                        "Filled",
-                        "Emptied",
-                        "AddDye",
-                        "DyeItem",
-                        "ClearItem",
-                        "EnchantArrow",
-                        "CompostItemPlaced",
-                        "RecoveredBonemeal",
-                        "BookPlaced",
-                        "BookOpened",
-                        "Disenchant",
-                        "Repair",
-                        "DisenchantAndRepair"
+                        "ChestFullOfCobblestone",
+                        "DiamondForYou",
+                        "IronBelly",
+                        "IronMan",
+                        "OnARail",
+                        "Overkill",
+                        "ReturnToSender",
+                        "SniperDuel",
+                        "StayinFrosty",
+                        "TakeInventory",
+                        "MapRoom",
+                        "FreightStation",
+                        "SmeltEverything",
+                        "TasteOfYourOwnMedicine",
+                        "WhenPigsFly",
+                        "Inception",
+                        "ArtificialSelection",
+                        "FreeDiver",
+                        "SpawnTheWither",
+                        "Beaconator",
+                        "GreatView",
+                        "SuperSonic",
+                        "TheEndAgain",
+                        "TreasureHunter",
+                        "ShootingStar",
+                        "FashionShow",
+                        "SelfPublishedAuthor",
+                        "AlternativeFuel",
+                        "SleepWithTheFishes",
+                        "Castaway",
+                        "ImAMarineBiologist",
+                        "SailThe7Seas",
+                        "MeGold",
+                        "Ahoy",
+                        "Atlantis",
+                        "OnePickleTwoPickleSeaPickleFour",
+                        "DoaBarrelRoll",
+                        "Moskstraumen",
+                        "Echolocation",
+                        "WhereHaveYouBeen",
+                        "TopOfTheWorld",
+                        "FruitOnTheLoom",
+                        "SoundTheAlarm",
+                        "BuyLowSellHigh",
+                        "Disenchanted",
+                        "TimeForStew",
+                        "BeeOurGuest",
+                        "TotalBeeLocation",
+                        "StickySituation",
+                        "CoverMeInDebris",
+                        "FloatYourGoat",
+                        "Friend",
+                        "WaxOnWaxOff",
+                        "StriderRiddenInLavaInOverworld",
+                        "GoatHornAcquired",
+                        "JukeboxUsedInMeadows",
+                        "TradedAtWorldHeight",
+                        "SurvivedFallFromWorldHeight",
+                        "SneakCloseToSculkSensor",
+                        "ItSpreads",
+                        "BirthdaySong",
+                        "WithOurPowersCombined",
+                        "PlantingThePast",
+                        "CarefulRestoration",
+                        "Revaulting",
+                        "CraftersCraftingCrafters",
+                        "WhoNeedsRockets",
+                        "OverOverkill",
+                        "HeartTransplanter",
+                        "StayHydrated",
+                        "MobKabob",
+                        "AdventuringTime"
                     ],
                     "x-underlying-type": "uint8",
                     "x-serialization-options": [
@@ -562,23 +411,13 @@
                         "Enum-as-Value"
                     ],
                     "x-ordinal-index": 0
-                },
-                "Item Id": {
-                    "description": "Id of the relevant item used in the interaction.",
-                    "type": "integer",
-                    "x-underlying-type": "int16",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 1
                 }
             },
             "required": [
-                "Block Interaction Type",
-                "Item Id"
+                "Achievement ID"
             ]
         },
-        "266193524": {
+        "2884077391": {
             "title": "BossKilled",
             "type": "object",
             "properties": {
@@ -613,29 +452,167 @@
                 "Party Size"
             ]
         },
-        "3747789182": {
-            "title": "SlashCommand",
+        "1990825057": {
+            "title": "Interaction",
             "type": "object",
             "properties": {
-                "Command Name": {
-                    "type": "string",
-                    "x-ordinal-index": 2,
-                    "maxLength": 1000
+                "Interacted Entity ID": {
+                    "type": "integer",
+                    "x-underlying-type": "int64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
                 },
-                "Error Count": {
+                "Interaction Actor Color": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 4,
+                    "minimum": 0.0,
+                    "maximum": 255.0
+                },
+                "Interaction Actor Type": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2
+                },
+                "Interaction Actor Variant": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 3
+                },
+                "Interaction Type": {
+                    "title": "MinecraftEventing::InteractionType",
+                    "type": "string",
+                    "enum": [
+                        "Breeding",
+                        "Taming",
+                        "Curing",
+                        "Crafted",
+                        "Shearing",
+                        "Milking",
+                        "Trading",
+                        "Feeding",
+                        "Igniting",
+                        "Coloring",
+                        "Naming",
+                        "Leashing",
+                        "Unleashing",
+                        "PetSleep",
+                        "Trusting",
+                        "Commanding"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Interacted Entity ID",
+                "Interaction Actor Color",
+                "Interaction Actor Type",
+                "Interaction Actor Variant",
+                "Interaction Type"
+            ]
+        },
+        "2926785728": {
+            "title": "PlayerDied",
+            "type": "object",
+            "properties": {
+                "Damage Source": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2
+                },
+                "Died in Raid?": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 3
+                },
+                "Instigator Actor ID": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Instigator Mob Variant": {
                     "type": "integer",
                     "x-underlying-type": "int32",
                     "x-serialization-options": [
                         "Compression"
                     ],
                     "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Damage Source",
+                "Died in Raid?",
+                "Instigator Actor ID",
+                "Instigator Mob Variant"
+            ]
+        },
+        "1435748060": {
+            "title": "CauldronUsed",
+            "type": "object",
+            "properties": {
+                "Contents Color": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
                 },
-                "Error List": {
-                    "type": "string",
-                    "x-ordinal-index": 3,
-                    "maxLength": 2048
+                "Contents Type": {
+                    "type": "integer",
+                    "x-underlying-type": "int16",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1
                 },
-                "Success Count": {
+                "Fill Level": {
+                    "type": "integer",
+                    "x-underlying-type": "int16",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "Contents Color",
+                "Contents Type",
+                "Fill Level"
+            ]
+        },
+        "752510359": {
+            "title": "PortalCreated",
+            "type": "object",
+            "properties": {
+                "Dimension ID": {
+                    "description": "Currently supported: (0 -> Overworld, 1 -> Nether, 2 -> The End, 3 -> Undefined)",
                     "type": "integer",
                     "x-underlying-type": "int32",
                     "x-serialization-options": [
@@ -645,13 +622,84 @@
                 }
             },
             "required": [
-                "Command Name",
-                "Error Count",
-                "Error List",
-                "Success Count"
+                "Dimension ID"
             ]
         },
-        "3020183005": {
+        "1786669297": {
+            "title": "CodeBuilderRuntimeAction",
+            "type": "object",
+            "properties": {
+                "CodeBuilder Runtime Action": {
+                    "type": "string",
+                    "x-ordinal-index": 0,
+                    "maxLength": 16
+                }
+            },
+            "required": [
+                "CodeBuilder Runtime Action"
+            ]
+        },
+        "1233972348": {
+            "title": "PortalUsed",
+            "type": "object",
+            "properties": {
+                "Source Dimension ID": {
+                    "description": "Currently supported: (0 -> Overworld, 1 -> Nether, 2 -> The End, 3 -> Undefined)",
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Target Dimension ID": {
+                    "description": "Currently supported: (0 -> Overworld, 1 -> Nether, 2 -> The End, 3 -> Undefined)",
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Source Dimension ID",
+                "Target Dimension ID"
+            ]
+        },
+        "1007338777": {
+            "title": "ItemUsed",
+            "type": "object",
+            "properties": {
+                "Count": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 3
+                },
+                "Item Aux": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 1
+                },
+                "Item Id": {
+                    "type": "integer",
+                    "x-underlying-type": "int16",
+                    "x-ordinal-index": 0
+                },
+                "Use Method": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "Count",
+                "Item Aux",
+                "Item Id",
+                "Use Method"
+            ]
+        },
+        "1659745360": {
             "title": "MobBorn",
             "type": "object",
             "properties": {
@@ -688,12 +736,12 @@
                 "Born Baby: Entity Variant"
             ]
         },
-        "500316135": {
+        "1225886590": {
             "title": "POICauldronUsed",
             "type": "object",
             "properties": {
                 "Block Interaction Type": {
-                    "title": "enum MinecraftEventing::POIBlockInteractionType",
+                    "title": "MinecraftEventing::POIBlockInteractionType",
                     "type": "string",
                     "enum": [
                         "None",
@@ -745,7 +793,64 @@
                 "Item Id"
             ]
         },
-        "2098318980": {
+        "897152032": {
+            "title": "ComposterUsed",
+            "type": "object",
+            "properties": {
+                "Block Interaction Type": {
+                    "title": "MinecraftEventing::POIBlockInteractionType",
+                    "type": "string",
+                    "enum": [
+                        "None",
+                        "Extend",
+                        "Clone",
+                        "Lock",
+                        "Create",
+                        "CreateLocator",
+                        "Rename",
+                        "ItemPlaced",
+                        "ItemRemoved",
+                        "Cooking",
+                        "Dousing",
+                        "Lighting",
+                        "Haystack",
+                        "Filled",
+                        "Emptied",
+                        "AddDye",
+                        "DyeItem",
+                        "ClearItem",
+                        "EnchantArrow",
+                        "CompostItemPlaced",
+                        "RecoveredBonemeal",
+                        "BookPlaced",
+                        "BookOpened",
+                        "Disenchant",
+                        "Repair",
+                        "DisenchantAndRepair"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Item Id": {
+                    "description": "Id of the relevant item used in the interaction.",
+                    "type": "integer",
+                    "x-underlying-type": "int16",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Block Interaction Type",
+                "Item Id"
+            ]
+        },
+        "869727547": {
             "title": "BellUsed",
             "type": "object",
             "properties": {
@@ -763,7 +868,7 @@
                 "Item Id"
             ]
         },
-        "1269040124": {
+        "200477697": {
             "title": "ActorDefinition",
             "type": "object",
             "properties": {
@@ -777,42 +882,7 @@
                 "Event Name"
             ]
         },
-        "131536137": {
-            "title": "RaidUpdate",
-            "type": "object",
-            "properties": {
-                "Current Wave": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                },
-                "Success": {
-                    "type": "boolean",
-                    "x-underlying-type": "boolean",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 2
-                },
-                "Total Waves": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 1
-                }
-            },
-            "required": [
-                "Current Wave",
-                "Success",
-                "Total Waves"
-            ]
-        },
-        "2923593111": {
+        "3337266860": {
             "title": "TargetBlockHit",
             "type": "object",
             "properties": {
@@ -829,7 +899,7 @@
                 "Redstone Level"
             ]
         },
-        "2488130011": {
+        "2374867056": {
             "title": "PiglinBarter",
             "type": "object",
             "properties": {
@@ -855,7 +925,7 @@
                 "Was Targeting Bartering Player"
             ]
         },
-        "3493966032": {
+        "221404615": {
             "title": "PlayerWaxedOrUnwaxedCopper",
             "type": "object",
             "properties": {
@@ -872,79 +942,10 @@
                 "Player Waxed or Unwaxed Copper Block ID"
             ]
         },
-        "3874194270": {
-            "title": "CodeBuilderRuntimeAction",
-            "type": "object",
-            "properties": {
-                "CodeBuilder Runtime Action": {
-                    "type": "string",
-                    "x-ordinal-index": 0,
-                    "maxLength": 16
-                }
-            },
-            "required": [
-                "CodeBuilder Runtime Action"
-            ]
-        },
-        "2938550282": {
-            "title": "CodeBuilderScoreboard",
-            "type": "object",
-            "properties": {
-                "Objective Name": {
-                    "type": "string",
-                    "x-ordinal-index": 0,
-                    "maxLength": 256
-                },
-                "Score": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 1
-                }
-            },
-            "required": [
-                "Objective Name",
-                "Score"
-            ]
-        },
-        "311923022": {
-            "title": "ItemUsed",
-            "type": "object",
-            "properties": {
-                "Count": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-ordinal-index": 3
-                },
-                "Item Aux": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-ordinal-index": 1
-                },
-                "Item Id": {
-                    "type": "integer",
-                    "x-underlying-type": "int16",
-                    "x-ordinal-index": 0
-                },
-                "Use Method": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-ordinal-index": 2
-                }
-            },
-            "required": [
-                "Count",
-                "Item Aux",
-                "Item Id",
-                "Use Method"
-            ]
-        },
-        "1830556041": {
+        "246638216": {
             "title": "Empty"
         },
-        "1221684255": {
+        "4257541248": {
             "title": "ActorUniqueID",
             "type": "object",
             "properties": {
@@ -970,91 +971,91 @@
             "description": "Actual event payload (variant) holding data specific to the type of event (achievement ID for an achievement event).",
             "oneOf": [
                 {
-                    "$ref": "#/definitions/3489467127",
+                    "$ref": "#/definitions/1004523446",
                     "x-ordinal-index": 0
                 },
                 {
-                    "$ref": "#/definitions/2066547760",
+                    "$ref": "#/definitions/1990825057",
                     "x-ordinal-index": 1
                 },
                 {
-                    "$ref": "#/definitions/1277110218",
+                    "$ref": "#/definitions/752510359",
                     "x-ordinal-index": 2
                 },
                 {
-                    "$ref": "#/definitions/2395296471",
+                    "$ref": "#/definitions/1233972348",
                     "x-ordinal-index": 3
                 },
                 {
-                    "$ref": "#/definitions/981162443",
+                    "$ref": "#/definitions/2437972014",
                     "x-ordinal-index": 4
                 },
                 {
-                    "$ref": "#/definitions/3298360571",
+                    "$ref": "#/definitions/1435748060",
                     "x-ordinal-index": 5
                 },
                 {
-                    "$ref": "#/definitions/2420194999",
+                    "$ref": "#/definitions/2926785728",
                     "x-ordinal-index": 6
                 },
                 {
-                    "$ref": "#/definitions/266193524",
+                    "$ref": "#/definitions/2884077391",
                     "x-ordinal-index": 7
                 },
                 {
-                    "$ref": "#/definitions/3747789182",
+                    "$ref": "#/definitions/386824325",
                     "x-ordinal-index": 8
                 },
                 {
-                    "$ref": "#/definitions/3020183005",
+                    "$ref": "#/definitions/1659745360",
                     "x-ordinal-index": 9
                 },
                 {
-                    "$ref": "#/definitions/500316135",
+                    "$ref": "#/definitions/1225886590",
                     "x-ordinal-index": 10
                 },
                 {
-                    "$ref": "#/definitions/4138569497",
+                    "$ref": "#/definitions/897152032",
                     "x-ordinal-index": 11
                 },
                 {
-                    "$ref": "#/definitions/2098318980",
+                    "$ref": "#/definitions/869727547",
                     "x-ordinal-index": 12
                 },
                 {
-                    "$ref": "#/definitions/1269040124",
+                    "$ref": "#/definitions/200477697",
                     "x-ordinal-index": 13
                 },
                 {
-                    "$ref": "#/definitions/131536137",
+                    "$ref": "#/definitions/435349618",
                     "x-ordinal-index": 14
                 },
                 {
-                    "$ref": "#/definitions/2923593111",
+                    "$ref": "#/definitions/3337266860",
                     "x-ordinal-index": 15
                 },
                 {
-                    "$ref": "#/definitions/2488130011",
+                    "$ref": "#/definitions/2374867056",
                     "x-ordinal-index": 16
                 },
                 {
-                    "$ref": "#/definitions/3493966032",
+                    "$ref": "#/definitions/221404615",
                     "x-ordinal-index": 17
                 },
                 {
-                    "$ref": "#/definitions/3874194270",
+                    "$ref": "#/definitions/1786669297",
                     "x-ordinal-index": 18
                 },
                 {
-                    "$ref": "#/definitions/2938550282",
+                    "$ref": "#/definitions/2033396339",
                     "x-ordinal-index": 19
                 },
                 {
-                    "$ref": "#/definitions/311923022",
+                    "$ref": "#/definitions/1007338777",
                     "x-ordinal-index": 20
                 },
                 {
-                    "$ref": "#/definitions/1830556041",
+                    "$ref": "#/definitions/246638216",
                     "x-ordinal-index": 21
                 }
             ],
@@ -1062,7 +1063,7 @@
             "x-ordinal-index": 3
         },
         "Event Type": {
-            "title": "enum LegacyTelemetryEventPacketPayload::Type",
+            "title": "LegacyTelemetryEventPacketPayload::Type",
             "type": "string",
             "enum": [
                 "Achievement",
@@ -1106,7 +1107,7 @@
             "x-ordinal-index": 1
         },
         "Target Actor ID": {
-            "$ref": "#/definitions/1221684255",
+            "$ref": "#/definitions/4257541248",
             "x-ordinal-index": 0
         },
         "Use Player ID": {

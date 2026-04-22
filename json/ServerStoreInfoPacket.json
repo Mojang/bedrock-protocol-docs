@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "1880765715",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
+    "definitions": {
+        "3908890004": {
+            "title": "clientStoreEntryPointConfig",
+            "type": "object",
+            "properties": {
+                "storeId": {
+                    "description": "The unique identifier for the store.",
+                    "type": "string",
+                    "x-ordinal-index": 0
+                },
+                "storeName": {
+                    "description": "The name of the store.",
+                    "type": "string",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "storeId",
+                "storeName"
+            ]
+        }
+    },
+    "title": "ServerStoreInfoPacket",
+    "description": "Sent by the server to provide ClientStoreEntryPointConfiguration to the client.",
+    "type": "object",
+    "properties": {
+        "client_store_entry_point_configuration": {
+            "$ref": "#/definitions/3908890004",
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "client_store_entry_point_configuration"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 346,
+        "[cereal:packet_details]": ""
+    }
+}

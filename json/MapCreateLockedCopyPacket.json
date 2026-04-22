@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2972498078",
+    "$id": "695778038",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "1221684255": {
+        "4257541248": {
             "title": "ActorUniqueID",
             "type": "object",
             "properties": {
@@ -29,12 +29,12 @@
     "properties": {
         "New Map Id": {
             "description": "Id that the new map should have.",
-            "$ref": "#/definitions/1221684255",
+            "$ref": "#/definitions/4257541248",
             "x-ordinal-index": 1
         },
         "Original Map Id": {
             "description": "Id of the map being locked.",
-            "$ref": "#/definitions/1221684255",
+            "$ref": "#/definitions/4257541248",
             "x-ordinal-index": 0
         }
     },

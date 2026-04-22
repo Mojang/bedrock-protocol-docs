@@ -1,12 +1,12 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1983475801",
+    "$id": "1621046817",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "2802412393": {
-            "title": "struct AdventureSettings",
+        "3514617014": {
+            "title": "AdventureSettings",
             "type": "object",
             "properties": {
                 "Auto Jump": {
@@ -49,7 +49,7 @@
     "type": "object",
     "properties": {
         "Adventure Settings": {
-            "$ref": "#/definitions/2802412393",
+            "$ref": "#/definitions/3514617014",
             "x-ordinal-index": 0
         }
     },

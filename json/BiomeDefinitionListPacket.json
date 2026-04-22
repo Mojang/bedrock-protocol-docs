@@ -1,0 +1,1080 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "857270194",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
+    "definitions": {
+        "2688390750": {
+            "title": "BiomeDefinitionData",
+            "type": "object",
+            "properties": {
+                "chunk gen data": {
+                    "description": "Only used with client-side chunk generation",
+                    "$ref": "#/definitions/3302773167",
+                    "x-ordinal-index": 9
+                },
+                "depth": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 4
+                },
+                "downfall": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                },
+                "foliage snow": {
+                    "description": "0-1 how frozen the leaves look",
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 3
+                },
+                "id": {
+                    "type": "integer",
+                    "x-underlying-type": "uint16",
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                },
+                "map water color ARGB": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 6
+                },
+                "rain": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 7
+                },
+                "scale": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 5
+                },
+                "tags": {
+                    "$ref": "#/definitions/860074838",
+                    "x-ordinal-index": 8
+                },
+                "temperature": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "chunk gen data",
+                "depth",
+                "downfall",
+                "foliage snow",
+                "id",
+                "map water color ARGB",
+                "rain",
+                "scale",
+                "tags",
+                "temperature"
+            ]
+        },
+        "3302773167": {
+            "title": "BiomeDefinitionChunkGenData",
+            "type": "object",
+            "properties": {
+                "Village Type": {
+                    "title": "VillageType",
+                    "type": "string",
+                    "enum": [
+                        "Desert",
+                        "Ice",
+                        "Savanna",
+                        "Taiga",
+                        "Default"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 8
+                },
+                "climate": {
+                    "$ref": "#/definitions/60380538",
+                    "x-ordinal-index": 0
+                },
+                "consolidated features": {
+                    "$ref": "#/definitions/525350443",
+                    "x-ordinal-index": 1
+                },
+                "legacy world gen rules": {
+                    "$ref": "#/definitions/3673035357",
+                    "x-ordinal-index": 6
+                },
+                "mountain params": {
+                    "$ref": "#/definitions/3178934970",
+                    "x-ordinal-index": 2
+                },
+                "multinoise gen rules": {
+                    "$ref": "#/definitions/1631355523",
+                    "x-ordinal-index": 5
+                },
+                "overworld gen rules": {
+                    "$ref": "#/definitions/3218221162",
+                    "x-ordinal-index": 4
+                },
+                "replacement biomes": {
+                    "$ref": "#/definitions/275213906",
+                    "x-ordinal-index": 7
+                },
+                "subsurface builder data": {
+                    "$ref": "#/definitions/2926870801",
+                    "x-ordinal-index": 10
+                },
+                "surface builder data": {
+                    "$ref": "#/definitions/2926870801",
+                    "x-ordinal-index": 9
+                },
+                "surface material adjustments": {
+                    "$ref": "#/definitions/223227592",
+                    "x-ordinal-index": 3
+                }
+            },
+            "required": [
+                "Village Type",
+                "climate",
+                "consolidated features",
+                "legacy world gen rules",
+                "mountain params",
+                "multinoise gen rules",
+                "overworld gen rules",
+                "replacement biomes",
+                "subsurface builder data",
+                "surface builder data",
+                "surface material adjustments"
+            ]
+        },
+        "60380538": {
+            "title": "BiomeClimateData",
+            "type": "object",
+            "properties": {
+                "downfall": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "snow accumulation max": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 3
+                },
+                "snow accumulation min": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                },
+                "temperature": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "downfall",
+                "snow accumulation max",
+                "snow accumulation min",
+                "temperature"
+            ]
+        },
+        "275213906": {
+            "title": "BiomeReplacementsData",
+            "type": "object",
+            "properties": {
+                "biome replacements": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/1353276709"
+                    },
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "biome replacements"
+            ]
+        },
+        "2926870801": {
+            "title": "BiomeSurfaceBuilderData",
+            "type": "object",
+            "properties": {
+                "capped surface": {
+                    "$ref": "#/definitions/3222821721",
+                    "x-ordinal-index": 6
+                },
+                "has default overworld surface": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 1
+                },
+                "has frozen ocean surface": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 3
+                },
+                "has swamp surface": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 2
+                },
+                "has the end surface": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 4
+                },
+                "mesa surface": {
+                    "$ref": "#/definitions/1255533616",
+                    "x-ordinal-index": 5
+                },
+                "noise gradient surface": {
+                    "$ref": "#/definitions/3017587726",
+                    "x-ordinal-index": 7
+                },
+                "surface materials": {
+                    "$ref": "#/definitions/121214459",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "capped surface",
+                "has default overworld surface",
+                "has frozen ocean surface",
+                "has swamp surface",
+                "has the end surface",
+                "mesa surface",
+                "noise gradient surface",
+                "surface materials"
+            ]
+        },
+        "1353276709": {
+            "title": "BiomeReplacementData",
+            "type": "object",
+            "properties": {
+                "amount": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 3
+                },
+                "dimension": {
+                    "type": "integer",
+                    "x-underlying-type": "uint16",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                },
+                "noise frequency scale": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 4
+                },
+                "replacement biome": {
+                    "type": "integer",
+                    "x-underlying-type": "uint16",
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                },
+                "replacement index": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 5,
+                    "minimum": 0.0
+                },
+                "target biomes": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "x-underlying-type": "uint16",
+                        "minimum": 0.0
+                    },
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "amount",
+                "dimension",
+                "noise frequency scale",
+                "replacement biome",
+                "replacement index",
+                "target biomes"
+            ]
+        },
+        "3178934970": {
+            "title": "BiomeMountainParamsData",
+            "type": "object",
+            "properties": {
+                "east slopes": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 4
+                },
+                "north slopes": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 1
+                },
+                "south slopes": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 2
+                },
+                "steep block": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                },
+                "top slide enabled": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 5
+                },
+                "west slopes": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 3
+                }
+            },
+            "required": [
+                "east slopes",
+                "north slopes",
+                "south slopes",
+                "steep block",
+                "top slide enabled",
+                "west slopes"
+            ]
+        },
+        "1036105726": {
+            "title": "BiomeWeightedData",
+            "type": "object",
+            "properties": {
+                "biome identifier": {
+                    "type": "integer",
+                    "x-underlying-type": "uint16",
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                },
+                "weight": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "biome identifier",
+                "weight"
+            ]
+        },
+        "2452417116": {
+            "title": "BiomeScatterParamData",
+            "type": "object",
+            "properties": {
+                "chance denominator": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 5
+                },
+                "chance numerator": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 4
+                },
+                "chance percent": {
+                    "type": "integer",
+                    "x-underlying-type": "uint16",
+                    "x-ordinal-index": 3,
+                    "minimum": 0.0
+                },
+                "chance percent type": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2
+                },
+                "coordinates": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/694596773"
+                    },
+                    "x-ordinal-index": 0
+                },
+                "eval order": {
+                    "title": "CoordinateEvaluationOrder",
+                    "type": "string",
+                    "enum": [
+                        "XYZ",
+                        "XZY",
+                        "YXZ",
+                        "YZX",
+                        "ZXY",
+                        "ZYX"
+                    ],
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 1
+                },
+                "iterations": {
+                    "type": "integer",
+                    "x-underlying-type": "uint16",
+                    "x-ordinal-index": 7,
+                    "minimum": 0.0
+                },
+                "iterations type": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 6
+                }
+            },
+            "required": [
+                "chance denominator",
+                "chance numerator",
+                "chance percent",
+                "chance percent type",
+                "coordinates",
+                "eval order",
+                "iterations",
+                "iterations type"
+            ]
+        },
+        "525350443": {
+            "title": "BiomeConsolidatedFeaturesData",
+            "type": "object",
+            "properties": {
+                "features": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/2026624178"
+                    },
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "features"
+            ]
+        },
+        "2026624178": {
+            "title": "BiomeConsolidatedFeatureData",
+            "type": "object",
+            "properties": {
+                "can use internal feature": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 4
+                },
+                "feature": {
+                    "type": "integer",
+                    "x-underlying-type": "uint16",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                },
+                "identifier": {
+                    "type": "integer",
+                    "x-underlying-type": "uint16",
+                    "x-ordinal-index": 2,
+                    "minimum": 0.0
+                },
+                "pass": {
+                    "type": "integer",
+                    "x-underlying-type": "uint16",
+                    "x-ordinal-index": 3,
+                    "minimum": 0.0
+                },
+                "scatter": {
+                    "$ref": "#/definitions/2452417116",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "can use internal feature",
+                "feature",
+                "identifier",
+                "pass",
+                "scatter"
+            ]
+        },
+        "694596773": {
+            "title": "BiomeCoordinateData",
+            "type": "object",
+            "properties": {
+                "distribution": {
+                    "title": "RandomDistributionType",
+                    "type": "string",
+                    "enum": [
+                        "SingleValued",
+                        "Uniform",
+                        "Gaussian",
+                        "InverseGaussian",
+                        "FixedGrid",
+                        "JitteredGrid",
+                        "Triangle"
+                    ],
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 6
+                },
+                "grid offset": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 4,
+                    "minimum": 0.0
+                },
+                "grid step size": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 5,
+                    "minimum": 0.0
+                },
+                "max value": {
+                    "type": "integer",
+                    "x-underlying-type": "uint16",
+                    "x-ordinal-index": 3,
+                    "minimum": 0.0
+                },
+                "max value type": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2
+                },
+                "min value": {
+                    "type": "integer",
+                    "x-underlying-type": "uint16",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                },
+                "min value type": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "distribution",
+                "grid offset",
+                "grid step size",
+                "max value",
+                "max value type",
+                "min value",
+                "min value type"
+            ]
+        },
+        "3673035357": {
+            "title": "BiomeLegacyWorldGenRulesData",
+            "type": "object",
+            "properties": {
+                "legacy pre hills edge": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/4082384156"
+                    },
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "legacy pre hills edge"
+            ]
+        },
+        "4082384156": {
+            "title": "BiomeConditionalTransformationData",
+            "type": "object",
+            "properties": {
+                "condition json": {
+                    "type": "integer",
+                    "x-underlying-type": "uint16",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                },
+                "min passing neighbors": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 2,
+                    "minimum": 0.0
+                },
+                "transforms into": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/1036105726"
+                    },
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "condition json",
+                "min passing neighbors",
+                "transforms into"
+            ]
+        },
+        "3218221162": {
+            "title": "BiomeOverworldGenRulesData",
+            "type": "object",
+            "properties": {
+                "climate": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/994396956"
+                    },
+                    "x-ordinal-index": 6
+                },
+                "hills transformations": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/1036105726"
+                    },
+                    "x-ordinal-index": 0
+                },
+                "mutate transformations": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/1036105726"
+                    },
+                    "x-ordinal-index": 1
+                },
+                "post shore edge": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/4082384156"
+                    },
+                    "x-ordinal-index": 5
+                },
+                "pre hills edge": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/4082384156"
+                    },
+                    "x-ordinal-index": 4
+                },
+                "river transformations": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/1036105726"
+                    },
+                    "x-ordinal-index": 2
+                },
+                "shore transformations": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/1036105726"
+                    },
+                    "x-ordinal-index": 3
+                }
+            },
+            "required": [
+                "climate",
+                "hills transformations",
+                "mutate transformations",
+                "post shore edge",
+                "pre hills edge",
+                "river transformations",
+                "shore transformations"
+            ]
+        },
+        "994396956": {
+            "title": "BiomeWeightedTemperatureData",
+            "type": "object",
+            "properties": {
+                "temperature": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "weight": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "temperature",
+                "weight"
+            ]
+        },
+        "1631355523": {
+            "title": "BiomeMultinoiseGenRulesData",
+            "type": "object",
+            "properties": {
+                "altitude": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                },
+                "humidity": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "temperature": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "weight": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 4
+                },
+                "weirdness": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 3
+                }
+            },
+            "required": [
+                "altitude",
+                "humidity",
+                "temperature",
+                "weight",
+                "weirdness"
+            ]
+        },
+        "3222821721": {
+            "title": "BiomeCappedSurfaceData",
+            "type": "object",
+            "properties": {
+                "beach block": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 4,
+                    "minimum": 0.0
+                },
+                "ceiling blocks": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "x-underlying-type": "uint32",
+                        "minimum": 0.0
+                    },
+                    "x-ordinal-index": 1
+                },
+                "floor blocks": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "x-underlying-type": "uint32",
+                        "minimum": 0.0
+                    },
+                    "x-ordinal-index": 0
+                },
+                "foundation block": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 3,
+                    "minimum": 0.0
+                },
+                "sea block": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 2,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "beach block",
+                "ceiling blocks",
+                "floor blocks",
+                "foundation block",
+                "sea block"
+            ]
+        },
+        "121214459": {
+            "title": "BiomeSurfaceMaterialData",
+            "type": "object",
+            "properties": {
+                "foundation block": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 3,
+                    "minimum": 0.0
+                },
+                "mid block": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                },
+                "sea block": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 4,
+                    "minimum": 0.0
+                },
+                "sea floor block": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 2,
+                    "minimum": 0.0
+                },
+                "sea floor depth": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 5
+                },
+                "top block": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "foundation block",
+                "mid block",
+                "sea block",
+                "sea floor block",
+                "sea floor depth",
+                "top block"
+            ]
+        },
+        "1299093042": {
+            "title": "BiomeStringList",
+            "type": "object",
+            "properties": {
+                "strings": {
+                    "description": "List of strings referenced wherever a string index is used under BiomeDefinitionData",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "strings"
+            ]
+        },
+        "1255533616": {
+            "title": "BiomeMesaSurfaceData",
+            "type": "object",
+            "properties": {
+                "bryce pillars": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 2
+                },
+                "clay material": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                },
+                "hard clay material": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                },
+                "has forest": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 3
+                }
+            },
+            "required": [
+                "bryce pillars",
+                "clay material",
+                "hard clay material",
+                "has forest"
+            ]
+        },
+        "3017587726": {
+            "title": "BiomeNoiseGradientSurfaceData",
+            "type": "object",
+            "properties": {
+                "amplitudes": {
+                    "type": "array",
+                    "items": {
+                        "type": "number",
+                        "x-underlying-type": "float"
+                    },
+                    "x-ordinal-index": 4
+                },
+                "first octave": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 3
+                },
+                "gradient blocks": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "x-underlying-type": "uint32",
+                        "minimum": 0.0
+                    },
+                    "x-ordinal-index": 1
+                },
+                "noise seed string": {
+                    "type": "string",
+                    "x-ordinal-index": 2
+                },
+                "non-replaceable blocks": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "x-underlying-type": "uint32",
+                        "minimum": 0.0
+                    },
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "amplitudes",
+                "first octave",
+                "gradient blocks",
+                "noise seed string",
+                "non-replaceable blocks"
+            ]
+        },
+        "223227592": {
+            "title": "BiomeSurfaceMaterialAdjustmentData",
+            "type": "object",
+            "properties": {
+                "adjustments": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/1798916597"
+                    },
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "adjustments"
+            ]
+        },
+        "1798916597": {
+            "title": "BiomeElementData",
+            "type": "object",
+            "properties": {
+                "adjusted materials": {
+                    "$ref": "#/definitions/121214459",
+                    "x-ordinal-index": 7
+                },
+                "height max": {
+                    "type": "integer",
+                    "x-underlying-type": "uint16",
+                    "x-ordinal-index": 6,
+                    "minimum": 0.0
+                },
+                "height max type": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 5
+                },
+                "height min": {
+                    "type": "integer",
+                    "x-underlying-type": "uint16",
+                    "x-ordinal-index": 4,
+                    "minimum": 0.0
+                },
+                "height min type": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 3
+                },
+                "noise freq scale": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "noise lower bound": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "noise upper bound": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "adjusted materials",
+                "height max",
+                "height max type",
+                "height min",
+                "height min type",
+                "noise freq scale",
+                "noise lower bound",
+                "noise upper bound"
+            ]
+        },
+        "860074838": {
+            "title": "BiomeTagsData",
+            "type": "object",
+            "properties": {
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "x-underlying-type": "uint16",
+                        "minimum": 0.0
+                    },
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "tags"
+            ]
+        }
+    },
+    "title": "BiomeDefinitionListPacket",
+    "description": "On world start, send clients the info for all available biomes.",
+    "type": "object",
+    "properties": {
+        "Map of Biome names to data": {
+            "type": "object",
+            "additionalProperties": {
+                "type": "object",
+                "properties": {
+                    "key": {
+                        "type": "integer",
+                        "x-underlying-type": "uint16",
+                        "minimum": 0.0
+                    },
+                    "value": {
+                        "$ref": "#/definitions/2688390750"
+                    }
+                }
+            },
+            "x-ordinal-index": 0
+        },
+        "String list": {
+            "$ref": "#/definitions/1299093042",
+            "x-ordinal-index": 1
+        }
+    },
+    "required": [
+        "Map of Biome names to data",
+        "String list"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 122,
+        "[cereal:packet_details]": "- mBiomeData: map of biome string indices to biome definition data.\n- mStringList: list of biome name strings."
+    }
+}

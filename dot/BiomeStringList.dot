@@ -1,20 +1,18 @@
 digraph "BiomeStringList" {
 rankdir = LR
-395
-395 -> 396
-396 -> 397
-397 -> 398
-396 -> 399
-399 -> 400
-400 -> 404
+0
+0 -> 1
+1 -> 2
+2 -> 3
+1 -> 4
+4 -> 5
 
-395 [label="BiomeStringList",comment="name: \"BiomeStringList\", typeName: \"\", id: 395, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-396 [label="string",comment="name: \"string\", typeName: \"\", id: 396, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-397 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 397, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-398 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 398, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-399 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 399, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-400 [label="all biome strings",comment="name: \"all biome strings\", typeName: \"std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >\", id: 400, branchId: 0, recurseId: -1, attributes: 256, notes: \"List of strings referenced wherever a string index is used under BiomeDefinitionData\""];
-404 [label="std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >",comment="name: \"std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >\", typeName: \"\", id: 404, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;398;404}
+0 [label="BiomeStringList",comment="name: \"BiomeStringList\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="strings",comment="name: \"strings\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"List of strings referenced wherever a string index is used under BiomeDefinitionData\""];
+2 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+5 [label="string",comment="name: \"string\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;5}
 
 }

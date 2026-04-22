@@ -1,21 +1,16 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2905948627",
+    "$id": "2427525531",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "315535208": {
+        "1577557040": {
             "title": "Json::Value",
             "type": "string",
             "x-runtime-constraint-description": "Verify that the string can be parsed as valid JSON"
         },
-        "2661281657": {
-            "title": "class MolangVariableMap",
-            "$ref": "#/definitions/315535208",
-            "x-runtime-constraint-description": "Ensures valid JSON that can be deserialized as MolangVariableMap"
-        },
-        "1221684255": {
+        "4257541248": {
             "title": "ActorUniqueID",
             "type": "object",
             "properties": {
@@ -32,7 +27,12 @@
                 "Actor Unique ID"
             ]
         },
-        "4004946602": {
+        "511743889": {
+            "title": "MolangVariableMap",
+            "$ref": "#/definitions/1577557040",
+            "x-runtime-constraint-description": "Ensures valid JSON that can be deserialized as MolangVariableMap"
+        },
+        "725374594": {
             "title": "Vec3",
             "type": "object",
             "properties": {
@@ -64,7 +64,7 @@
     "type": "object",
     "properties": {
         "Actor Id": {
-            "$ref": "#/definitions/1221684255",
+            "$ref": "#/definitions/4257541248",
             "x-ordinal-index": 1
         },
         "Dimension Id": {
@@ -80,11 +80,11 @@
             "x-ordinal-index": 3
         },
         "Molang Variables": {
-            "$ref": "#/definitions/2661281657",
+            "$ref": "#/definitions/511743889",
             "x-ordinal-index": 4
         },
         "Position": {
-            "$ref": "#/definitions/4004946602",
+            "$ref": "#/definitions/725374594",
             "x-ordinal-index": 2
         }
     },

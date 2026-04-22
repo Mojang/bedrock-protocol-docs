@@ -1,0 +1,30 @@
+digraph "VoxelShapes::SerializableCells" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+0 -> 5
+5 -> 6
+0 -> 7
+7 -> 8
+8 -> 9
+7 -> 10
+10 -> 11
+
+0 [label="VoxelShapes::SerializableCells",comment="name: \"VoxelShapes::SerializableCells\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="X Size",comment="name: \"X Size\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"Number of cells along the X axis\""];
+2 [label="unsigned byte",comment="name: \"unsigned byte\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"Number of cells along the X axis\""];
+3 [label="Y Size",comment="name: \"Y Size\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"Number of cells along the Y axis\""];
+4 [label="unsigned byte",comment="name: \"unsigned byte\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"Number of cells along the Y axis\""];
+5 [label="Z Size",comment="name: \"Z Size\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"Number of cells along the Z axis\""];
+6 [label="unsigned byte",comment="name: \"unsigned byte\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"Number of cells along the Z axis\""];
+7 [label="Storage",comment="name: \"Storage\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"Solid/empty state per cell\""];
+8 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+10 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+11 [label="unsigned byte",comment="name: \"unsigned byte\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;6;11}
+
+}

@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1200923524",
+    "$id": "4168558652",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "315535208": {
+        "1577557040": {
             "title": "Json::Value",
             "type": "string",
             "x-runtime-constraint-description": "Verify that the string can be parsed as valid JSON"
@@ -49,7 +49,7 @@
             "x-ordinal-index": 0
         },
         "Response": {
-            "$ref": "#/definitions/315535208",
+            "$ref": "#/definitions/1577557040",
             "x-ordinal-index": 2
         }
     },

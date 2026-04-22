@@ -1,0 +1,8 @@
+digraph "MolangVariableMap" {
+rankdir = LR
+0
+
+0 [label="MolangVariableMap",comment="name: \"MolangVariableMap\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+{ rank = max}
+
+}

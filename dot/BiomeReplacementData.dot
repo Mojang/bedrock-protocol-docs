@@ -1,40 +1,38 @@
 digraph "BiomeReplacementData" {
 rankdir = LR
-366
-366 -> 367
-367 -> 368
-366 -> 369
-369 -> 370
-366 -> 371
-371 -> 372
-372 -> 373
-371 -> 374
-374 -> 375
-375 -> 376
-366 -> 377
-377 -> 378
-366 -> 379
-379 -> 380
-366 -> 381
-381 -> 382
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+0 -> 5
+5 -> 6
+6 -> 7
+5 -> 8
+8 -> 9
+0 -> 10
+10 -> 11
+0 -> 12
+12 -> 13
+0 -> 14
+14 -> 15
 
-366 [label="BiomeReplacementData",comment="name: \"BiomeReplacementData\", typeName: \"\", id: 366, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-367 [label="biome",comment="name: \"biome\", typeName: \"short\", id: 367, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-368 [label="short",comment="name: \"short\", typeName: \"\", id: 368, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-369 [label="dimension",comment="name: \"dimension\", typeName: \"short\", id: 369, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-370 [label="short",comment="name: \"short\", typeName: \"\", id: 370, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-371 [label="string list",comment="name: \"string list\", typeName: \"\", id: 371, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-372 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 372, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-373 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 373, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-374 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 374, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-375 [label="target biome",comment="name: \"target biome\", typeName: \"short\", id: 375, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-376 [label="short",comment="name: \"short\", typeName: \"\", id: 376, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-377 [label="amount",comment="name: \"amount\", typeName: \"\", id: 377, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-378 [label="float",comment="name: \"float\", typeName: \"\", id: 378, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-379 [label="noise frequency scale",comment="name: \"noise frequency scale\", typeName: \"\", id: 379, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-380 [label="float",comment="name: \"float\", typeName: \"\", id: 380, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-381 [label="replacement index",comment="name: \"replacement index\", typeName: \"\", id: 381, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-382 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 382, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;368;370;373;376;378;380;382}
+0 [label="BiomeReplacementData",comment="name: \"BiomeReplacementData\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="replacement biome",comment="name: \"replacement biome\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="dimension",comment="name: \"dimension\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+5 [label="target biomes",comment="name: \"target biomes\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+6 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+9 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+10 [label="amount",comment="name: \"amount\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+11 [label="float",comment="name: \"float\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+12 [label="noise frequency scale",comment="name: \"noise frequency scale\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+13 [label="float",comment="name: \"float\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+14 [label="replacement index",comment="name: \"replacement index\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+15 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;9;11;13;15}
 
 }

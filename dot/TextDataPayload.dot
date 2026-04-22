@@ -1,0 +1,34 @@
+digraph "TextDataPayload" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+0 -> 5
+5 -> 6
+6 -> 7
+0 -> 8
+8 -> 9
+0 -> 10
+10 -> 11
+0 -> 12
+12 -> 13
+
+0 [label="TextDataPayload",comment="name: \"TextDataPayload\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Text",comment="name: \"Text\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"Text (string) of the debug text shape.\""];
+2 [label="string",comment="name: \"string\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"Text (string) of the debug text shape.\""];
+3 [label="UseRotation",comment="name: \"UseRotation\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"Whether to use specified rotation, otherwise faces camera.\""];
+4 [label="bool",comment="name: \"bool\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"Whether to use specified rotation, otherwise faces camera.\""];
+5 [label="BackgroundColor",comment="name: \"BackgroundColor\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"Color to draw background.\""];
+6 [label="Color",comment="name: \"Color\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="int",comment="name: \"int\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+8 [label="DepthTest",comment="name: \"DepthTest\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"Whether other objects block seeing the text (false=like nametags,true=like signs).\""];
+9 [label="bool",comment="name: \"bool\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"Whether other objects block seeing the text (false=like nametags,true=like signs).\""];
+10 [label="ShowBackface",comment="name: \"ShowBackface\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"Whether the backface of the background should be rendered.\""];
+11 [label="bool",comment="name: \"bool\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 512, notes: \"Whether the backface of the background should be rendered.\""];
+12 [label="ShowTextBackface",comment="name: \"ShowTextBackface\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 0, notes: \"Whether the backface of the text should be rendered.\""];
+13 [label="bool",comment="name: \"bool\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 512, notes: \"Whether the backface of the text should be rendered.\""];
+{ rank = max;2;4;7;9;11;13}
+
+}

@@ -1,0 +1,62 @@
+digraph "VoxelShapes::SerializableVoxelShape" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+2 -> 3
+1 -> 4
+4 -> 5
+1 -> 6
+6 -> 7
+1 -> 8
+8 -> 9
+9 -> 10
+8 -> 11
+11 -> 12
+0 -> 13
+13 -> 14
+14 -> 15
+13 -> 16
+16 -> 17
+0 -> 18
+18 -> 19
+19 -> 20
+18 -> 21
+21 -> 22
+0 -> 23
+23 -> 24
+24 -> 25
+23 -> 26
+26 -> 27
+
+0 [label="VoxelShapes::SerializableVoxelShape",comment="name: \"VoxelShapes::SerializableVoxelShape\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Cells",comment="name: \"Cells\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"Grid of cells representing solid and empty regions\""];
+2 [label="X Size",comment="name: \"X Size\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"Number of cells along the X axis\""];
+3 [label="unsigned byte",comment="name: \"unsigned byte\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"Number of cells along the X axis\""];
+4 [label="Y Size",comment="name: \"Y Size\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"Number of cells along the Y axis\""];
+5 [label="unsigned byte",comment="name: \"unsigned byte\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"Number of cells along the Y axis\""];
+6 [label="Z Size",comment="name: \"Z Size\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"Number of cells along the Z axis\""];
+7 [label="unsigned byte",comment="name: \"unsigned byte\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"Number of cells along the Z axis\""];
+8 [label="Storage",comment="name: \"Storage\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"Solid/empty state per cell\""];
+9 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+10 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+11 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+12 [label="unsigned byte",comment="name: \"unsigned byte\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+13 [label="X Coordinates",comment="name: \"X Coordinates\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"Cell boundaries along the X axis\""];
+14 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+15 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+16 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+17 [label="float",comment="name: \"float\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+18 [label="Y Coordinates",comment="name: \"Y Coordinates\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 0, notes: \"Cell boundaries along the Y axis\""];
+19 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+20 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+21 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+22 [label="float",comment="name: \"float\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+23 [label="Z Coordinates",comment="name: \"Z Coordinates\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 0, notes: \"Cell boundaries along the Z axis\""];
+24 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+25 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+26 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+27 [label="float",comment="name: \"float\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3;5;7;12;17;22;27}
+
+}

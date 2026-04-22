@@ -1,20 +1,40 @@
 digraph "BiomeLegacyWorldGenRulesData" {
 rankdir = LR
-346
-346 -> 347
-347 -> 348
-348 -> 349
-347 -> 350
-350 -> 351
-351 -> 352
+0
+0 -> 1
+1 -> 2
+2 -> 3
+1 -> 4
+4 -> 5
+5 -> 6
+6 -> 7
+5 -> 8
+8 -> 9
+9 -> 10
+8 -> 11
+11 -> 12
+4 -> 13
+13 -> 14
+4 -> 15
+15 -> 16
 
-346 [label="BiomeLegacyWorldGenRulesData",comment="name: \"BiomeLegacyWorldGenRulesData\", typeName: \"\", id: 346, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-347 [label="conditional transformation",comment="name: \"conditional transformation\", typeName: \"\", id: 347, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-348 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 348, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-349 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 349, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-350 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 350, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-351 [label="legacy pre hills",comment="name: \"legacy pre hills\", typeName: \"BiomeConditionalTransformationData\", id: 351, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-352 [label="BiomeConditionalTransformationData",comment="name: \"BiomeConditionalTransformationData\", typeName: \"\", id: 352, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;349;352}
+0 [label="BiomeLegacyWorldGenRulesData",comment="name: \"BiomeLegacyWorldGenRulesData\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="legacy pre hills edge",comment="name: \"legacy pre hills edge\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+5 [label="transforms into",comment="name: \"transforms into\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+6 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+9 [label="biome identifier",comment="name: \"biome identifier\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+10 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+11 [label="weight",comment="name: \"weight\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+12 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+13 [label="condition json",comment="name: \"condition json\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+14 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+15 [label="min passing neighbors",comment="name: \"min passing neighbors\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+16 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;10;12;14;16}
 
 }

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InventorySlotPacket (50)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        h4 {
+            color: #666;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        table {
+            background-color: white;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        th {
+            font-weight: bold;
+            text-align: left;
+            padding: 8px !important;
+        }
+        td {
+            padding: 8px !important;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #e8f4f8;
+        }
+        .description {
+            color: #555;
+            font-style: italic;
+            margin: 10px 0 20px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .packet-list {
+            columns: 3;
+            column-gap: 20px;
+        }
+        .packet-list li {
+            margin-bottom: 8px;
+            break-inside: avoid;
+        }
+        details {
+            margin: 10px 0;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            padding: 8px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            user-select: none;
+        }
+        summary:hover {
+            background-color: #e8e8e8;
+        }
+        details[open] summary {
+            background-color: #d4edff;
+            border-color: #3498db;
+            border-left: 4px solid #3498db;
+        }
+        @media (max-width: 900px) {
+            .packet-list {
+                columns: 2;
+            }
+        }
+        @media (max-width: 600px) {
+            .packet-list {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p><a href="index.html">← Back to Index</a></p>
+        <h1>InventorySlotPacket (50)</h1>
+<div class="description">Updates one slot in an inventory rather than the whole thing. So like animal inventory (horses, donkeys, etc) and chests. Hotbar, offhand, and some player inventory changes.</div>
+<div style="margin-left: 0px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Container Id (Required)</strong></td>
+<td>varuint8</td>
+<td>0</td>
+<td>The container ID</td>
+</tr>
+<tr>
+<td><strong>Slot (Required)</strong></td>
+<td>varuint32</td>
+<td>1</td>
+<td>The slot index in the container</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Full Container Name</strong></td>
+<td>FullContainerName</td>
+<td>2</td>
+<td>Optional reference to a specific container within a given screen container context</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>FullContainerName</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Container Name (Required)</strong></td>
+<td>uint8</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>AnvilInputContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>AnvilMaterialContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>AnvilResultPreviewContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>SmithingTableInputContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>SmithingTableMaterialContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><code>SmithingTableResultPreviewContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td><code>ArmorContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td><code>LevelEntityContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td><code>BeaconPaymentContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td><code>BrewingStandInputContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td><code>BrewingStandResultContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td><code>BrewingStandFuelContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td><code>CombinedHotbarAndInventoryContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">13</td>
+<td><code>CraftingInputContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td><code>CraftingOutputPreviewContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td><code>RecipeConstructionContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">16</td>
+<td><code>RecipeNatureContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">17</td>
+<td><code>RecipeItemsContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">18</td>
+<td><code>RecipeFoodContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">19</td>
+<td><code>RecipeBlocksContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">20</td>
+<td><code>RecipeFurnaceItemsContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">21</td>
+<td><code>RecipeSearchContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">22</td>
+<td><code>RecipeSearchBarContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">23</td>
+<td><code>RecipeEquipmentContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">24</td>
+<td><code>RecipeBookContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">25</td>
+<td><code>EnchantingInputContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">26</td>
+<td><code>EnchantingMaterialContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">27</td>
+<td><code>FurnaceFuelContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">28</td>
+<td><code>FurnaceIngredientContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">29</td>
+<td><code>FurnaceResultContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">30</td>
+<td><code>HorseEquipContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">31</td>
+<td><code>HotbarContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">32</td>
+<td><code>InventoryContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">33</td>
+<td><code>ShulkerBoxContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">34</td>
+<td><code>TradeIngredient1Container</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">35</td>
+<td><code>TradeIngredient2Container</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">36</td>
+<td><code>TradeResultPreviewContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">37</td>
+<td><code>OffhandContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">38</td>
+<td><code>CompoundCreatorInput</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">39</td>
+<td><code>CompoundCreatorOutputPreview</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">40</td>
+<td><code>ElementConstructorOutputPreview</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">41</td>
+<td><code>MaterialReducerInput</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">42</td>
+<td><code>MaterialReducerOutput</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">43</td>
+<td><code>LabTableInput</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">44</td>
+<td><code>LoomInputContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">45</td>
+<td><code>LoomDyeContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">46</td>
+<td><code>LoomMaterialContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">47</td>
+<td><code>LoomResultPreviewContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">48</td>
+<td><code>BlastFurnaceIngredientContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">49</td>
+<td><code>SmokerIngredientContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">50</td>
+<td><code>Trade2Ingredient1Container</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">51</td>
+<td><code>Trade2Ingredient2Container</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">52</td>
+<td><code>Trade2ResultPreviewContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">53</td>
+<td><code>GrindstoneInputContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">54</td>
+<td><code>GrindstoneAdditionalContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">55</td>
+<td><code>GrindstoneResultPreviewContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">56</td>
+<td><code>StonecutterInputContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">57</td>
+<td><code>StonecutterResultPreviewContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">58</td>
+<td><code>CartographyInputContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">59</td>
+<td><code>CartographyAdditionalContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">60</td>
+<td><code>CartographyResultPreviewContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">61</td>
+<td><code>BarrelContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">62</td>
+<td><code>CursorContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">63</td>
+<td><code>CreatedOutputContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">64</td>
+<td><code>SmithingTableTemplateContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">65</td>
+<td><code>CrafterLevelEntityContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">66</td>
+<td><code>DynamicContainer</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>Dynamic ID (Required)</strong></td>
+<td>uint32</td>
+<td>1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>Storage Item</strong></td>
+<td>NetworkItemStackDescriptor</td>
+<td>3</td>
+<td>Optional storage item to set the &#x27;Item&#x27; into. (e.g. bundle)</td>
+</tr>
+<tr>
+<td><strong>Item (Required)</strong></td>
+<td>NetworkItemStackDescriptor</td>
+<td>4</td>
+<td>The item stack for this inventory slot</td>
+</tr>
+</tbody>
+</table>
+</div>
+    </div>
+</body>
+</html>

@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "4285361124",
+    "$id": "3762146636",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "4004946602": {
+        "725374594": {
             "title": "Vec3",
             "type": "object",
             "properties": {
@@ -617,7 +617,9 @@
                 "DiamondSpearUse",
                 "NetheriteSpearUse",
                 "PauseGrowth",
-                "ResetGrowth"
+                "ResetGrowth",
+                "PushedByPlayer",
+                "Bounce"
             ],
             "x-underlying-type": "uint32",
             "x-serialization-options": [
@@ -625,6 +627,10 @@
                 "Enum-as-Value"
             ],
             "x-ordinal-index": 0
+        },
+        "Fire At Position": {
+            "$ref": "#/definitions/725374594",
+            "x-ordinal-index": 7
         },
         "Is Baby": {
             "type": "boolean",
@@ -637,7 +643,7 @@
             "x-ordinal-index": 5
         },
         "Position": {
-            "$ref": "#/definitions/4004946602",
+            "$ref": "#/definitions/725374594",
             "x-ordinal-index": 1
         }
     },
@@ -646,6 +652,7 @@
         "Actor Unique Id",
         "Data",
         "Event ID",
+        "Fire At Position",
         "Is Baby",
         "Is Global",
         "Position"

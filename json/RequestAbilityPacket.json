@@ -1,9 +1,9 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3547543896",
+    "$id": "3821917984",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "title": "RequestAbilityPacket",
     "description": "Sent from client to server. Used to request an ability change.",
     "type": "object",
@@ -27,7 +27,7 @@
             "x-ordinal-index": 3
         },
         "Value Type": {
-            "title": "enum RequestAbilityPacketPayload::Type",
+            "title": "RequestAbilityPacketPayload::Type",
             "type": "string",
             "enum": [
                 "Unset",

@@ -1,9 +1,9 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3646786948",
+    "$id": "3690157324",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "title": "StopSoundPacket",
     "description": "Allows you to stop a sound or all sounds on all clients, only used in a /command",
     "type": "object",

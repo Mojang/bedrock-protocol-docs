@@ -1,9 +1,9 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3558097506",
+    "$id": "2169348362",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "title": "SetCommandsEnabledPacket",
     "description": "This is used by the world settings screen, cheats, EDU builds for teachers, and various other places to enable cheats/commands",
     "type": "object",

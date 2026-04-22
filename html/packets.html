@@ -1,8 +1,4 @@
-<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><table><col width="5%"><col width="10%"><col width="20%"><col width="65%"><tr><th>Packet ID</th><th>Name</th><th>Purpose</th><th>Notes</th></tr><tr><td>5</td>
-<td><a href = "DisconnectPacket.html">DisconnectPacket</a></td>
-<td>Disconnect Player</td>
-<td>Sent from server. It is not fired if you are in a singleplayer game and you leave, but it is fired when there are split-screen clients.</td>
-</tr><tr><td>6</td>
+<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><table><col width="5%"><col width="10%"><col width="20%"><col width="65%"><tr><th>Packet ID</th><th>Name</th><th>Purpose</th><th>Notes</th></tr><tr><td>6</td>
 <td><a href = "ResourcePacksInfoPacket.html">ResourcePacksInfoPacket</a></td>
 <td>Resource Packs Info</td>
 <td></td>
@@ -42,10 +38,6 @@
 <td><a href = "InventoryTransactionPacket.html">InventoryTransactionPacket</a></td>
 <td>Inventory Transaction</td>
 <td>Sent for item interaction UI depending on if ItemStackNetManager is enabled as well as when the player uses items in gameplay.  See ComplexInventoryTransaction::Type for more details</td>
-</tr><tr><td>31</td>
-<td><a href = "MobEquipmentPacket.html">MobEquipmentPacket</a></td>
-<td>Mob Equipment</td>
-<td>A bunch of things use this both server to client and can still be sent from the client if LocalPlayer's inventory doesn't match the inventory sent (deprecated pattern).</td>
 </tr><tr><td>32</td>
 <td><a href = "MobArmorEquipmentPacket.html">MobArmorEquipmentPacket</a></td>
 <td>Mob Armor Equipment</td>
@@ -58,10 +50,6 @@
 <td><a href = "InventoryContentPacket.html">InventoryContentPacket</a></td>
 <td>Inventory Content</td>
 <td>This is used for updating an entire container. Example uses include: player respawned, replace items command, 3rd party content calls sendInventory(), block picking.</td>
-</tr><tr><td>50</td>
-<td><a href = "InventorySlotPacket.html">InventorySlotPacket</a></td>
-<td>Inventory Slot</td>
-<td>Updates one slot in an inventory rather than the whole thing. So like animal inventory (horses, donkeys, etc) and chests.</td>
 </tr><tr><td>52</td>
 <td><a href = "CraftingDataPacket.html">CraftingDataPacket</a></td>
 <td>Crafting Data</td>
@@ -110,18 +98,10 @@
 <td><a href = "SetScoreboardIdentityPacket.html">SetScoreboardIdentityPacket</a></td>
 <td>Set Scoreboard Identity</td>
 <td>Send an update packet for a player identity definition iff a tracked player has logged in with a different display name.</td>
-</tr><tr><td>122</td>
-<td><a href = "BiomeDefinitionListPacket.html">BiomeDefinitionListPacket</a></td>
-<td>Biome Definition List</td>
-<td>On world start, send clients the info for all available biomes.Sends the whole list of the biomes from server to the client at the start of the game from _sendLevelData()</td>
 </tr><tr><td>135</td>
 <td><a href = "ClientCacheBlobStatusPacket.html">ClientCacheBlobStatusPacket</a></td>
 <td>Client Cache Blob Status Packet</td>
 <td>Sent periodically by the client to update the server on which blob it has (ACK) and which blobs it is lacking (MISS).Indicates status of binary blob transfers from server. Used heavily when server is sending chunks. </td>
-</tr><tr><td>136</td>
-<td><a href = "ClientCacheMissResponsePacket.html">ClientCacheMissResponsePacket</a></td>
-<td>Client Cache Miss Response Packet</td>
-<td>Any missing blob should just be thrown into one of these packet ASAP and sent.Only active in a *real* client-server scenario. This packet is just a list of <blobId, blob> pairs sent from server to client.</td>
 </tr><tr><td>144</td>
 <td><a href = "PlayerAuthInputPacket.html">PlayerAuthInputPacket</a></td>
 <td>Player Auth Input</td>
@@ -130,10 +110,6 @@
 <td><a href = "CreativeContentPacket.html">CreativeContentPacket</a></td>
 <td>Sent once by the server on startup to tell clients all of the items that can show up in the creative menu and recipe book.</td>
 <td>     This packet contains two lists, one for all the groups and one for all the items.<br>     Groups can either have an icon with a name, or can be loose groups of items that don't have a name (anonymous groups).     All items need a group to represent them. Groups will show up in each category based on the order they are provided in the list.<br>     Items will show up in the order that they are represented in this packet. Each item needs to reference the index of a group from the list of groups.    </td>
-</tr><tr><td>146</td>
-<td><a href = "PlayerEnchantOptionsPacket.html">PlayerEnchantOptionsPacket</a></td>
-<td>PlayerEnchantOptionsPacket</td>
-<td>This packet is sent from the server whenever a player rerolls a new set of enchantment options from the enchantment table </td>
 </tr><tr><td>147</td>
 <td><a href = "ItemStackRequestPacket.html">ItemStackRequestPacket</a></td>
 <td>ItemStackRequestPacket</td>
@@ -166,10 +142,6 @@
 <td><a href = "TrimDataPacket.html">TrimDataPacket</a></td>
 <td>TrimDataPacket</td>
 <td>Sent from the server on level startup to send all trim patterns to the client.</td>
-</tr><tr><td>322</td>
-<td><a href = "ClientMovementPredictionSyncPacket.html">ClientMovementPredictionSyncPacket</a></td>
-<td>Sends client movement prediction information to the server</td>
-<td>Only used in Server-Authoritative Movement.<br>    Sent periodically if the client has received corrections from the server.<br>    Contains information about client-predictions that are relevant to movement.    </td>
 </tr><tr><td>325</td>
 <td><a href = "PlayerUpdateEntityOverridesPacket.html">PlayerUpdateEntityOverridesPacket</a></td>
 <td>Updates client entity property override data</td>

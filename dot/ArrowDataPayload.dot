@@ -1,0 +1,34 @@
+digraph "ArrowDataPayload" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+2 -> 3
+1 -> 4
+4 -> 5
+1 -> 6
+6 -> 7
+0 -> 8
+8 -> 9
+0 -> 10
+10 -> 11
+0 -> 12
+12 -> 13
+
+0 [label="ArrowDataPayload",comment="name: \"ArrowDataPayload\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Arrow End Location",comment="name: \"Arrow End Location\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"Vec3 end location of the debug arrow.\""];
+2 [label="X",comment="name: \"X\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="float",comment="name: \"float\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+4 [label="Y",comment="name: \"Y\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="float",comment="name: \"float\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+6 [label="Z",comment="name: \"Z\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="float",comment="name: \"float\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+8 [label="Arrow Head Length",comment="name: \"Arrow Head Length\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"Length of the head of the debug arrow.\""];
+9 [label="float",comment="name: \"float\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"Length of the head of the debug arrow.\""];
+10 [label="Arrow Head Radius",comment="name: \"Arrow Head Radius\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"Radius of the head of the debug arrow.\""];
+11 [label="float",comment="name: \"float\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 512, notes: \"Radius of the head of the debug arrow.\""];
+12 [label="Num Segments",comment="name: \"Num Segments\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 0, notes: \"Integer number of segments used for the debug arrow's head.\""];
+13 [label="unsigned byte",comment="name: \"unsigned byte\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 512, notes: \"Integer number of segments used for the debug arrow's head.\""];
+{ rank = max;3;5;7;9;11;13}
+
+}
