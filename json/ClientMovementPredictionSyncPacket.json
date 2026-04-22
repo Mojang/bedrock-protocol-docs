@@ -1,0 +1,114 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "241992553",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
+    "definitions": {
+        "2811602572": {
+            "title": "MovementAttributesComponent",
+            "type": "array",
+            "items": {
+                "type": "number",
+                "x-underlying-type": "float"
+            },
+            "minItems": 9,
+            "maxItems": 9
+        },
+        "1523407422": {
+            "title": "ActorDataBoundingBoxComponent",
+            "type": "object",
+            "properties": {
+                "Actor Data Bounding Box": {
+                    "type": "array",
+                    "items": {
+                        "type": "number",
+                        "x-underlying-type": "float"
+                    },
+                    "x-ordinal-index": 0,
+                    "minItems": 3,
+                    "maxItems": 3
+                }
+            },
+            "required": [
+                "Actor Data Bounding Box"
+            ]
+        },
+        "3329500915": {
+            "title": "ActorDataFlagComponent",
+            "type": "object",
+            "properties": {
+                "Actor Flag Bitset Data": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "x-underlying-type": "uint8",
+                        "minimum": 0.0,
+                        "maximum": 255.0
+                    },
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Actor Flag Bitset Data"
+            ]
+        },
+        "4257541248": {
+            "title": "ActorUniqueID",
+            "type": "object",
+            "properties": {
+                "Actor Unique ID": {
+                    "type": "integer",
+                    "x-underlying-type": "int64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Actor Unique ID"
+            ]
+        }
+    },
+    "title": "ClientMovementPredictionSyncPacket",
+    "description": "Sends client movement prediction information to the server",
+    "type": "object",
+    "properties": {
+        "Actor Bounding Box": {
+            "$ref": "#/definitions/1523407422",
+            "x-ordinal-index": 1
+        },
+        "Actor Data Flag": {
+            "$ref": "#/definitions/3329500915",
+            "x-ordinal-index": 0
+        },
+        "Actor Flying State": {
+            "type": "boolean",
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 4
+        },
+        "Actor Unique ID": {
+            "$ref": "#/definitions/4257541248",
+            "x-ordinal-index": 3
+        },
+        "Movement Attributes": {
+            "$ref": "#/definitions/2811602572",
+            "x-ordinal-index": 2
+        }
+    },
+    "required": [
+        "Actor Bounding Box",
+        "Actor Data Flag",
+        "Actor Flying State",
+        "Actor Unique ID",
+        "Movement Attributes"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 322,
+        "[cereal:packet_details]": "Only used in Server-Authoritative Movement. Sent periodically if the client has received corrections from the server. Contains information about client-predictions that are relevant to movement."
+    }
+}

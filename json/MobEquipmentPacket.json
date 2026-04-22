@@ -1,0 +1,229 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "3262896307",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
+    "definitions": {
+        "1750201151": {
+            "title": "ActorRuntimeID",
+            "type": "object",
+            "properties": {
+                "Actor Runtime ID": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Actor Runtime ID"
+            ]
+        },
+        "1987673147": {
+            "title": "NetworkItemStackDescriptor",
+            "$ref": "#/definitions/2803432075"
+        },
+        "4138486877": {
+            "title": "ItemStackNetIdVariant",
+            "type": "object",
+            "properties": {
+                "Item stack net ID variant": {
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/1433098745",
+                            "x-ordinal-index": 0
+                        },
+                        {
+                            "$ref": "#/definitions/3359047935",
+                            "x-ordinal-index": 1
+                        },
+                        {
+                            "$ref": "#/definitions/2707715806",
+                            "x-ordinal-index": 2
+                        }
+                    ],
+                    "x-control-value-type": "uint32",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Item stack net ID variant"
+            ]
+        },
+        "3359047935": {
+            "title": "ItemStackRequestId",
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "description": "Raw Id (32 bit signed)",
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "ID"
+            ]
+        },
+        "2803432075": {
+            "title": "cerealizer<NetworkItemStackDescriptor>::SerializedData",
+            "type": "object",
+            "properties": {
+                "Aux value": {
+                    "description": "Item auxiliary/metadata value. Used to distinguish item variants. Ignored for block items where aux is always 0.",
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2,
+                    "minimum": 0.0,
+                    "maximum": 32767.0
+                },
+                "Block Runtime Id": {
+                    "description": "Runtime block state ID associated with this item when it represents a block. Used to identify the exact block state placed when the item is used.",
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 4,
+                    "minimum": 0.0
+                },
+                "Id": {
+                    "description": "Send fixed Id of 0 for invalid item",
+                    "type": "integer",
+                    "x-underlying-type": "int16",
+                    "x-ordinal-index": 0
+                },
+                "Net Id Variant": {
+                    "description": "Optional network ID variant used to track item stack identity across client and server.",
+                    "$ref": "#/definitions/4138486877",
+                    "x-ordinal-index": 3
+                },
+                "Stack size": {
+                    "description": "The number of items in the stack. Must be within the item's allowed stack size range.",
+                    "type": "integer",
+                    "x-underlying-type": "uint16",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0,
+                    "maximum": 64.0
+                },
+                "User Data Buffer": {
+                    "description": "The @ItemInstanceUserData.html#ItemInstanceUserData@  binary blob encoded as a String, so it's unsigned varint length prefixed. Get all your nbt+property bytes, calculate the length, write that length, THEN write the data.",
+                    "type": "string",
+                    "x-ordinal-index": 5
+                }
+            },
+            "required": [
+                "Aux value",
+                "Block Runtime Id",
+                "Id",
+                "Stack size",
+                "User Data Buffer"
+            ]
+        },
+        "1433098745": {
+            "title": "ItemStackNetId",
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "description": "Raw Id (32 bit signed)",
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "ID"
+            ]
+        },
+        "2707715806": {
+            "title": "ItemStackLegacyRequestId",
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "description": "Raw Id (32 bit signed)",
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "ID"
+            ]
+        }
+    },
+    "title": "MobEquipmentPacket",
+    "description": "Mob Equipment. Changes to any mob's held/offhand item are fired from server to client with this packet. Clients also send this to the server when their held slot or its contents change.",
+    "type": "object",
+    "properties": {
+        "Container ID": {
+            "description": "Identifies which container the item belongs to, e.g. inventory or offhand.",
+            "type": "integer",
+            "x-underlying-type": "uint8",
+            "x-serialization-options": [
+                "Compression"
+            ],
+            "x-ordinal-index": 4,
+            "minimum": 0.0,
+            "maximum": 255.0
+        },
+        "Item": {
+            "description": "The item stack being equipped. Send an empty descriptor to indicate no item.",
+            "$ref": "#/definitions/1987673147",
+            "x-ordinal-index": 1
+        },
+        "Selected Slot": {
+            "description": "The hotbar slot that is currently selected by the player. Matches Slot for non-player mobs.",
+            "type": "integer",
+            "x-underlying-type": "uint8",
+            "x-serialization-options": [
+                "Compression"
+            ],
+            "x-ordinal-index": 3,
+            "minimum": 0.0,
+            "maximum": 255.0
+        },
+        "Slot": {
+            "description": "The inventory slot index the item occupies within the container.",
+            "type": "integer",
+            "x-underlying-type": "uint8",
+            "x-serialization-options": [
+                "Compression"
+            ],
+            "x-ordinal-index": 2,
+            "minimum": 0.0,
+            "maximum": 255.0
+        },
+        "Target Runtime ID": {
+            "description": "Runtime ID of the mob or player whose equipment is changing.",
+            "$ref": "#/definitions/1750201151",
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Container ID",
+        "Item",
+        "Selected Slot",
+        "Slot",
+        "Target Runtime ID"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 31,
+        "[cereal:packet_details]": ""
+    }
+}

@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2435373266",
+    "$id": "1857227786",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "1221684255": {
+        "4257541248": {
             "title": "ActorUniqueID",
             "type": "object",
             "properties": {
@@ -36,7 +36,7 @@
         },
         "Data": {
             "description": "NBT Data.",
-            "$ref": "#/definitions/4158325036",
+            "$ref": "#/definitions/3172631924",
             "x-ordinal-index": 9
         },
         "Display Name": {
@@ -44,11 +44,11 @@
             "x-ordinal-index": 6
         },
         "Entity Unique Id": {
-            "$ref": "#/definitions/1221684255",
+            "$ref": "#/definitions/4257541248",
             "x-ordinal-index": 4
         },
         "Last Trading Player": {
-            "$ref": "#/definitions/1221684255",
+            "$ref": "#/definitions/4257541248",
             "x-ordinal-index": 5
         },
         "Size": {

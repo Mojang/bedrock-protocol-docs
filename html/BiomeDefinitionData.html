@@ -1,4 +1,42 @@
 <!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/BiomeDefinitionData.svg" alt="BiomeDefinitionData">
-<br><table><col width="10%"><col width="90%"><tr><th>Field Name</th><th>Field Notes</th></tr><tr><td>chunk gen data</td>
+<br><table><col width="10%"><col width="10%"><col width="15%"><col width="80%"><tr><th>Field Name</th><th>Field Type</th><th>Field Constraints</th><th>Field Notes</th></tr><tr><td>id</td>
+<td>unsigned short</td>
+<td>&lt;div style="padding-left: 0px;"&gt;Minimum = 0&lt;/div&gt;</td>
+<td></td>
+</tr><tr><td>temperature</td>
+<td>float</td>
+<td></td>
+<td></td>
+</tr><tr><td>downfall</td>
+<td>float</td>
+<td></td>
+<td></td>
+</tr><tr><td>foliage snow</td>
+<td>float</td>
+<td></td>
+<td>0-1 how frozen the leaves look</td>
+</tr><tr><td>depth</td>
+<td>float</td>
+<td></td>
+<td></td>
+</tr><tr><td>scale</td>
+<td>float</td>
+<td></td>
+<td></td>
+</tr><tr><td>map water color ARGB</td>
+<td>int</td>
+<td></td>
+<td></td>
+</tr><tr><td>rain</td>
+<td>bool</td>
+<td></td>
+<td></td>
+</tr><tr><td>tags</td>
+<td>BiomeTagsData</td>
+<td></td>
+<td></td>
+</tr><tr><td>chunk gen data</td>
+<td>BiomeDefinitionChunkGenData</td>
+<td></td>
 <td>Only used with client-side chunk generation</td>
 </tr></table></body> </html>

@@ -1,0 +1,12 @@
+digraph "ItemStackRequestId" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+
+0 [label="ItemStackRequestId",comment="name: \"ItemStackRequestId\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="ID",comment="name: \"ID\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"Raw Id (32 bit signed)\""];
+2 [label="varint",comment="name: \"varint\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"Raw Id (32 bit signed)\""];
+{ rank = max;2}
+
+}

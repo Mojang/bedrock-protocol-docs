@@ -1,9 +1,9 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3253254338",
+    "$id": "549762202",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "title": "RequestPermissionsPacket",
     "description": "Sent from client to server. Used to request a new Permissions Levels.",
     "type": "object",

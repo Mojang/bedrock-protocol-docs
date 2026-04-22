@@ -1,0 +1,12 @@
+digraph "SphereDataPayload" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+
+0 [label="SphereDataPayload",comment="name: \"SphereDataPayload\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Num Segments",comment="name: \"Num Segments\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"Integer number of segments used for the debug circle or sphere.\""];
+2 [label="unsigned byte",comment="name: \"unsigned byte\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"Integer number of segments used for the debug circle or sphere.\""];
+{ rank = max;2}
+
+}

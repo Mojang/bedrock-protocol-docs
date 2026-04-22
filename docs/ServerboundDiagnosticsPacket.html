@@ -463,39 +463,39 @@
 </tr>
 <tr>
 <td style="text-align: center;">60</td>
-<td><code>Rendering_Library</code></td>
+<td><code>Rendering_RenderRegistry</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">61</td>
-<td><code>RequestLog</code></td>
+<td><code>Rendering_Library</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">62</td>
-<td><code>ResourcePacks</code></td>
+<td><code>RequestLog</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">63</td>
-<td><code>Sound</code></td>
+<td><code>ResourcePacks</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">64</td>
-<td><code>SubChunk_BiomeData</code></td>
+<td><code>Sound</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">65</td>
-<td><code>SubChunk_BlockData</code></td>
+<td><code>SubChunk_BiomeData</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">66</td>
-<td><code>SubChunk_LightData</code></td>
+<td><code>SubChunk_BlockData</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">67</td>
-<td><code>Textures</code></td>
+<td><code>SubChunk_LightData</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">68</td>
-<td><code>VR</code></td>
+<td><code>Textures</code></td>
 </tr>
 <tr>
 <td style="text-align: center;">69</td>
@@ -597,6 +597,100 @@
 <td><strong>Current Bytes (Required)</strong></td>
 <td>uint64</td>
 <td>1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Entity Diagnostics (Required)</strong></td>
+<td>array&lt;EntityDiagnosticTimingInfo&gt;</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>EntityDiagnosticTimingInfo (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Display Name (Required)</strong></td>
+<td>string</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Entity (Required)</strong></td>
+<td>string</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Time in NS (Required)</strong></td>
+<td>uint64</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Percent of Total (Required)</strong></td>
+<td>uint8</td>
+<td>3</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>System Diagnostics (Required)</strong></td>
+<td>array&lt;SystemDiagnosticTimingInfo&gt;</td>
+<td>11</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>SystemDiagnosticTimingInfo (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Display Name (Required)</strong></td>
+<td>string</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>System Index (Required)</strong></td>
+<td>uint64</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Time in NS (Required)</strong></td>
+<td>uint64</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Percent of Total (Required)</strong></td>
+<td>uint8</td>
+<td>3</td>
 <td></td>
 </tr>
 </tbody>

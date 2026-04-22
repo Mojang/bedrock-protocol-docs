@@ -119,7 +119,7 @@
     <div class="container">
         
         <h1>Game Protocol Documentation</h1>
-<p>Documentation for 181 protocol packets.</p>
+<p>Documentation for 190 protocol packets.</p>
 <h2>Packet List</h2>
 <ul class="packet-list">
 <li>
@@ -137,6 +137,10 @@
 <li>
 <a href="ClientToServerHandshakePacket.html"><strong>ClientToServerHandshakePacket (4)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Sets up encryption and authenticates in educational version once at level startup from client.</span>
+</li>
+<li>
+<a href="DisconnectPacket.html"><strong>DisconnectPacket (5)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from the server to a client to trigger a disconnection.</span>
 </li>
 <li>
 <a href="TextPacket.html"><strong>TextPacket (9)</strong></a>
@@ -185,6 +189,10 @@
 <li>
 <a href="MobEffectPacket.html"><strong>MobEffectPacket (28)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Mob Effect</span>
+</li>
+<li>
+<a href="MobEquipmentPacket.html"><strong>MobEquipmentPacket (31)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Mob Equipment. Changes to any mob&#x27;s held/offhand item are fired from server to client with this pack...</span>
 </li>
 <li>
 <a href="InteractPacket.html"><strong>InteractPacket (33)</strong></a>
@@ -242,6 +250,10 @@
 <li>
 <a href="PlayerHotbarPacket.html"><strong>PlayerHotbarPacket (48)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Sent from the server when the player uses pick block on actors or blocks, in addition to the player ...</span>
+</li>
+<li>
+<a href="InventorySlotPacket.html"><strong>InventorySlotPacket (50)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Updates one slot in an inventory rather than the whole thing. So like animal inventory (horses, donk...</span>
 </li>
 <li>
 <a href="ContainerSetDataPacket.html"><strong>ContainerSetDataPacket (51)</strong></a>
@@ -456,6 +468,10 @@
 <br><span style="color: #666; font-size: 0.9em;">Tells clients to update the chunk view for the local player.</span>
 </li>
 <li>
+<a href="BiomeDefinitionListPacket.html"><strong>BiomeDefinitionListPacket (122)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">On world start, send clients the info for all available biomes.</span>
+</li>
+<li>
 <a href="LevelSoundEventPacket.html"><strong>LevelSoundEventPacket (123)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Level Sound Event</span>
 </li>
@@ -488,6 +504,10 @@
 <br><span style="color: #666; font-size: 0.9em;">This is used in exporting from load, exporting from save, and querying saved structures from structu...</span>
 </li>
 <li>
+<a href="ClientCacheMissResponsePacket.html"><strong>ClientCacheMissResponsePacket (136)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Only active in a real client-server scenario. This packet is just a list of &lt;blobId, blob&gt; pairs sen...</span>
+</li>
+<li>
 <a href="EducationSettingsPacket.html"><strong>EducationSettingsPacket (137)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Transmits EducationLevelSettings to all clients.</span>
 </li>
@@ -514,6 +534,10 @@
 <li>
 <a href="NetworkSettingsPacket.html"><strong>NetworkSettingsPacket (143)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Sends tunable options from host to client (compression threshold and algorithm)</span>
+</li>
+<li>
+<a href="PlayerEnchantOptionsPacket.html"><strong>PlayerEnchantOptionsPacket (146)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sends the of new Enchanting options  from the server when a player right clicks the enchantment tabl...</span>
 </li>
 <li>
 <a href="PlayerArmorDamagePacket.html"><strong>PlayerArmorDamagePacket (149)</strong></a>
@@ -764,6 +788,10 @@
 <br><span style="color: #666; font-size: 0.9em;">Client-side activation of aim-assist</span>
 </li>
 <li>
+<a href="ClientMovementPredictionSyncPacket.html"><strong>ClientMovementPredictionSyncPacket (322)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sends client movement prediction information to the server</span>
+</li>
+<li>
 <a href="UpdateClientOptionsPacket.html"><strong>UpdateClientOptionsPacket (323)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Sync the player&#x27;s options (mostly settings) to the server.</span>
 </li>
@@ -776,8 +804,8 @@
 <br><span style="color: #666; font-size: 0.9em;">Set the control scheme that the player should use</span>
 </li>
 <li>
-<a href="DebugDrawerPacket.html"><strong>DebugDrawerPacket (328)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Send debug drawing shape info (from scripting) to the client for rendering</span>
+<a href="PrimitiveShapesPacket.html"><strong>PrimitiveShapesPacket (328)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Send primitive drawing shape info (from scripting) to the client for rendering</span>
 </li>
 <li>
 <a href="ServerboundPackSettingChangePacket.html"><strong>ServerboundPackSettingChangePacket (329)</strong></a>
@@ -846,6 +874,14 @@
 <li>
 <a href="ClientboundAttributeLayerSyncPacket.html"><strong>ClientboundAttributeLayerSyncPacket (345)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Syncs Attribute Layers to the Client (Currently disabled)</span>
+</li>
+<li>
+<a href="ServerStoreInfoPacket.html"><strong>ServerStoreInfoPacket (346)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent by the server to provide ClientStoreEntryPointConfiguration to the client.</span>
+</li>
+<li>
+<a href="ServerPresenceInfoPacket.html"><strong>ServerPresenceInfoPacket (347)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent by the server to provide PresenceConfiguration to the client.</span>
 </li>
 </ul>
     </div>

@@ -1,35 +1,43 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1898950292",
+    "$id": "1403414460",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "3541243607": {
-            "title": "ActorRuntimeID",
+        "725374594": {
+            "title": "Vec3",
             "type": "object",
             "properties": {
-                "Actor Runtime ID": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
+                "X": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "Z": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
                 }
             },
             "required": [
-                "Actor Runtime ID"
+                "X",
+                "Y",
+                "Z"
             ]
         },
-        "1756907636": {
-            "title": "class MoveActorAbsoluteData",
+        "617131148": {
+            "title": "MoveActorAbsoluteData",
             "type": "object",
             "properties": {
                 "ActorRuntimeID": {
                     "description": "The runtime id of the actor being moved",
-                    "$ref": "#/definitions/3541243607",
+                    "$ref": "#/definitions/1750201151",
                     "x-ordinal-index": 0
                 },
                 "Header": {
@@ -42,7 +50,7 @@
                 },
                 "Position": {
                     "description": "X/Y/Z coordinates of the position of the actor, each being a 4 byte float",
-                    "$ref": "#/definitions/4004946602",
+                    "$ref": "#/definitions/725374594",
                     "x-ordinal-index": 2
                 },
                 "Rotation X": {
@@ -79,30 +87,22 @@
                 "Rotation Y Head"
             ]
         },
-        "4004946602": {
-            "title": "Vec3",
+        "1750201151": {
+            "title": "ActorRuntimeID",
             "type": "object",
             "properties": {
-                "X": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 0
-                },
-                "Y": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 1
-                },
-                "Z": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 2
+                "Actor Runtime ID": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
                 }
             },
             "required": [
-                "X",
-                "Y",
-                "Z"
+                "Actor Runtime ID"
             ]
         }
     },
@@ -112,7 +112,7 @@
     "properties": {
         "Move Data": {
             "description": "This is client bound for normal actor motion updates.",
-            "$ref": "#/definitions/1756907636",
+            "$ref": "#/definitions/617131148",
             "x-ordinal-index": 0
         }
     },

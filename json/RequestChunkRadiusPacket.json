@@ -1,9 +1,9 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2056542729",
+    "$id": "1884367249",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "title": "RequestChunkRadiusPacket",
     "description": "The client can't just change the view radius without the server's approval, otherwise there could be holes on unrendered area.",
     "type": "object",

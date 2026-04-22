@@ -1,9 +1,9 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3224170366",
+    "$id": "709443446",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "title": "NpcDialoguePacket",
     "description": "Sent from the server to client when remote firing an NPC dialogue window for a client",
     "type": "object",

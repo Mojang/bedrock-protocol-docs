@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1030299093",
+    "$id": "2101353853",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "820712576": {
+        "1488572312": {
             "title": "BlockPos",
             "type": "object",
             "properties": {
@@ -40,12 +40,12 @@
                 "Z"
             ]
         },
-        "684344651": {
-            "title": "class StructureSettings",
+        "1348207667": {
+            "title": "StructureSettings",
             "type": "object",
             "properties": {
                 "Animation Mode": {
-                    "title": "enum AnimationMode",
+                    "title": "AnimationMode",
                     "type": "string",
                     "enum": [
                         "None",
@@ -76,11 +76,11 @@
                 },
                 "Last Edit Player": {
                     "description": "Player who last edited the structure block.",
-                    "$ref": "#/definitions/1221684255",
+                    "$ref": "#/definitions/4257541248",
                     "x-ordinal-index": 6
                 },
                 "Mirror": {
-                    "title": "enum Mirror",
+                    "title": "Mirror",
                     "type": "string",
                     "enum": [
                         "None",
@@ -114,7 +114,7 @@
                 },
                 "Rotation Pivot": {
                     "description": "Pivot used to rotate a structure around.",
-                    "$ref": "#/definitions/4004946602",
+                    "$ref": "#/definitions/725374594",
                     "x-ordinal-index": 13
                 },
                 "Should Allow Non Ticking Player and Ticking Area Chunks": {
@@ -133,7 +133,7 @@
                     "x-ordinal-index": 1
                 },
                 "Structure Offset": {
-                    "$ref": "#/definitions/820712576",
+                    "$ref": "#/definitions/1488572312",
                     "x-ordinal-index": 5
                 },
                 "Structure Palette Name": {
@@ -141,7 +141,7 @@
                     "x-ordinal-index": 0
                 },
                 "Structure Size": {
-                    "$ref": "#/definitions/820712576",
+                    "$ref": "#/definitions/1488572312",
                     "x-ordinal-index": 4
                 }
             },
@@ -162,7 +162,7 @@
                 "Structure Size"
             ]
         },
-        "1221684255": {
+        "4257541248": {
             "title": "ActorUniqueID",
             "type": "object",
             "properties": {
@@ -179,7 +179,7 @@
                 "Actor Unique ID"
             ]
         },
-        "4004946602": {
+        "725374594": {
             "title": "Vec3",
             "type": "object",
             "properties": {
@@ -211,7 +211,7 @@
     "type": "object",
     "properties": {
         "Requested Operation": {
-            "title": "enum StructureTemplateRequestOperation",
+            "title": "StructureTemplateRequestOperation",
             "type": "string",
             "enum": [
                 "None",
@@ -230,11 +230,11 @@
             "x-ordinal-index": 0
         },
         "Structure Position": {
-            "$ref": "#/definitions/820712576",
+            "$ref": "#/definitions/1488572312",
             "x-ordinal-index": 1
         },
         "Structure Settings": {
-            "$ref": "#/definitions/684344651",
+            "$ref": "#/definitions/1348207667",
             "x-ordinal-index": 2
         }
     },

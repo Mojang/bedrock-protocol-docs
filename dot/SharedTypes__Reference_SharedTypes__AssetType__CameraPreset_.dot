@@ -1,0 +1,8 @@
+digraph "SharedTypes::Reference<SharedTypes::AssetType::CameraPreset>" {
+rankdir = LR
+0
+
+0 [label="SharedTypes::Reference<SharedTypes::AssetType::CameraPreset>",comment="name: \"SharedTypes::Reference<SharedTypes::AssetType::CameraPreset>\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+{ rank = max}
+
+}

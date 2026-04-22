@@ -1,0 +1,12 @@
+digraph "WebSocketPacketData" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+
+0 [label="WebSocketPacketData",comment="name: \"WebSocketPacketData\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Websocket Server URI",comment="name: \"Websocket Server URI\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="string",comment="name: \"string\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2}
+
+}

@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1824368073",
+    "$id": "448164657",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "3560424247": {
+        "3439543590": {
             "title": "ItemData",
             "type": "object",
             "properties": {
@@ -15,7 +15,7 @@
                     "x-ordinal-index": 2
                 },
                 "Item Component Data": {
-                    "$ref": "#/definitions/4158325036",
+                    "$ref": "#/definitions/3172631924",
                     "x-ordinal-index": 4
                 },
                 "Item Id": {
@@ -25,7 +25,7 @@
                     "x-ordinal-index": 1
                 },
                 "Item Name": {
-                    "$ref": "#/definitions/2715320761",
+                    "$ref": "#/definitions/3381141713",
                     "x-ordinal-index": 0
                 },
                 "Item Version": {
@@ -52,7 +52,7 @@
                 "Item Version"
             ]
         },
-        "2715320761": {
+        "3381141713": {
             "title": "hashed_string",
             "type": "string"
         }
@@ -64,7 +64,7 @@
         "Item Data": {
             "type": "array",
             "items": {
-                "$ref": "#/definitions/3560424247"
+                "$ref": "#/definitions/3439543590"
             },
             "x-ordinal-index": 0,
             "x-runtime-constraint-description": "Verify that specified items exist"

@@ -1,13 +1,22 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2492467419",
+    "$id": "7583939",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "title": "UpdateClientOptionsPacket",
     "description": "Sync the player's options (mostly settings) to the server.",
     "type": "object",
     "properties": {
+        "Filter Profanity Change": {
+            "description": "New filter profanity value",
+            "type": "boolean",
+            "x-underlying-type": "boolean",
+            "x-serialization-options": [
+                "Enum-as-Value"
+            ],
+            "x-ordinal-index": 1
+        },
         "Graphics Mode Change": {
             "title": "GraphicsMode",
             "description": "New graphics mode value",
@@ -26,6 +35,7 @@
         }
     },
     "required": [
+        "Filter Profanity Change",
         "Graphics Mode Change"
     ],
     "$metaProperties": {

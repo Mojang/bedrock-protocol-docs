@@ -1,18 +1,18 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2148583626",
+    "$id": "1532435122",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "641620634": {
+        "1016356418": {
             "title": "GameRulesChangedPacketData",
             "type": "object",
             "properties": {
                 "Rules List": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/238291841"
+                        "$ref": "#/definitions/3399432121"
                     },
                     "x-ordinal-index": 0
                 }
@@ -21,7 +21,7 @@
                 "Rules List"
             ]
         },
-        "238291841": {
+        "3399432121": {
             "title": "GameRule",
             "type": "object",
             "properties": {
@@ -72,7 +72,7 @@
     "type": "object",
     "properties": {
         "Rule Data": {
-            "$ref": "#/definitions/641620634",
+            "$ref": "#/definitions/1016356418",
             "x-ordinal-index": 0
         }
     },

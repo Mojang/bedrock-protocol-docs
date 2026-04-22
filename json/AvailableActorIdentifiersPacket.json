@@ -1,16 +1,16 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2941616583",
+    "$id": "4259990879",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "title": "AvailableActorIdentifiersPacket",
     "description": "Sends the whole list of actor identifiers at game start from the server.",
     "type": "object",
     "properties": {
         "Identifier List": {
             "description": "CompoundTag containing a list of ActorInfo: \t\trid (RuntimeId - Int), \t\tid (string), \t\tbid (BaseId - string), \t\thasspawnegg (bool), \t\tsummonable (bool)",
-            "$ref": "#/definitions/4158325036",
+            "$ref": "#/definitions/3172631924",
             "x-ordinal-index": 0,
             "x-runtime-constraint-description": "Verify that the tag contains at least the \"idlist\" key"
         }

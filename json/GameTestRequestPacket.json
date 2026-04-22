@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3910318668",
+    "$id": "3555259220",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "820712576": {
+        "1488572312": {
             "title": "BlockPos",
             "type": "object",
             "properties": {
@@ -89,7 +89,7 @@
             "x-ordinal-index": 6
         },
         "TestPos": {
-            "$ref": "#/definitions/820712576",
+            "$ref": "#/definitions/1488572312",
             "x-ordinal-index": 4
         },
         "TestsPerRow": {

@@ -1,0 +1,1982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiomeDefinitionListPacket (122)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        h4 {
+            color: #666;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        table {
+            background-color: white;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        th {
+            font-weight: bold;
+            text-align: left;
+            padding: 8px !important;
+        }
+        td {
+            padding: 8px !important;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #e8f4f8;
+        }
+        .description {
+            color: #555;
+            font-style: italic;
+            margin: 10px 0 20px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .packet-list {
+            columns: 3;
+            column-gap: 20px;
+        }
+        .packet-list li {
+            margin-bottom: 8px;
+            break-inside: avoid;
+        }
+        details {
+            margin: 10px 0;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            padding: 8px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            user-select: none;
+        }
+        summary:hover {
+            background-color: #e8e8e8;
+        }
+        details[open] summary {
+            background-color: #d4edff;
+            border-color: #3498db;
+            border-left: 4px solid #3498db;
+        }
+        @media (max-width: 900px) {
+            .packet-list {
+                columns: 2;
+            }
+        }
+        @media (max-width: 600px) {
+            .packet-list {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p><a href="index.html">← Back to Index</a></p>
+        <h1>BiomeDefinitionListPacket (122)</h1>
+<div class="description">On world start, send clients the info for all available biomes.</div>
+<div class="description">- mBiomeData: map of biome string indices to biome definition data.
+- mStringList: list of biome name strings.</div>
+<div style="margin-left: 0px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Map of Biome names to data (Required)</strong></td>
+<td>object&lt;uint16, BiomeDefinitionData&gt;</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>Map Entry</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>key</strong></td>
+<td>uint16</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>value</strong></td>
+<td>BiomeDefinitionData</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeDefinitionData</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>id (Required)</strong></td>
+<td>uint16</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>temperature (Required)</strong></td>
+<td>float</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>downfall (Required)</strong></td>
+<td>float</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>foliage snow (Required)</strong></td>
+<td>float</td>
+<td>3</td>
+<td>0-1 how frozen the leaves look</td>
+</tr>
+<tr>
+<td><strong>depth (Required)</strong></td>
+<td>float</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>scale (Required)</strong></td>
+<td>float</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>map water color ARGB (Required)</strong></td>
+<td>int32</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>rain (Required)</strong></td>
+<td>boolean</td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>tags (Required)</strong></td>
+<td>BiomeTagsData</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeTagsData</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>tags (Required)</strong></td>
+<td>array&lt;uint16&gt;</td>
+<td>0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>chunk gen data (Required)</strong></td>
+<td>BiomeDefinitionChunkGenData</td>
+<td>9</td>
+<td>Only used with client-side chunk generation</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeDefinitionChunkGenData</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>climate (Required)</strong></td>
+<td>BiomeClimateData</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeClimateData</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>temperature (Required)</strong></td>
+<td>float</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>downfall (Required)</strong></td>
+<td>float</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>snow accumulation min (Required)</strong></td>
+<td>float</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>snow accumulation max (Required)</strong></td>
+<td>float</td>
+<td>3</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>consolidated features (Required)</strong></td>
+<td>BiomeConsolidatedFeaturesData</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeConsolidatedFeaturesData</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>features (Required)</strong></td>
+<td>array&lt;BiomeConsolidatedFeatureData&gt;</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeConsolidatedFeatureData (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>scatter (Required)</strong></td>
+<td>BiomeScatterParamData</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeScatterParamData</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>coordinates (Required)</strong></td>
+<td>array&lt;BiomeCoordinateData&gt;</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeCoordinateData (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>min value type (Required)</strong></td>
+<td>varint32</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>min value (Required)</strong></td>
+<td>uint16</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>max value type (Required)</strong></td>
+<td>varint32</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>max value (Required)</strong></td>
+<td>uint16</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>grid offset (Required)</strong></td>
+<td>uint32</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>grid step size (Required)</strong></td>
+<td>uint32</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>distribution (Required)</strong></td>
+<td>varint32</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>SingleValued</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>Uniform</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>Gaussian</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>InverseGaussian</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>FixedGrid</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><code>JitteredGrid</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td><code>Triangle</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>eval order (Required)</strong></td>
+<td>varint32</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>XYZ</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>XZY</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>YXZ</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>YZX</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>ZXY</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><code>ZYX</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>chance percent type (Required)</strong></td>
+<td>varint32</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>chance percent (Required)</strong></td>
+<td>uint16</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>chance numerator (Required)</strong></td>
+<td>int32</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>chance denominator (Required)</strong></td>
+<td>int32</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>iterations type (Required)</strong></td>
+<td>varint32</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>iterations (Required)</strong></td>
+<td>uint16</td>
+<td>7</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>feature (Required)</strong></td>
+<td>uint16</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>identifier (Required)</strong></td>
+<td>uint16</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>pass (Required)</strong></td>
+<td>uint16</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>can use internal feature (Required)</strong></td>
+<td>boolean</td>
+<td>4</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>mountain params (Required)</strong></td>
+<td>BiomeMountainParamsData</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeMountainParamsData</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>steep block (Required)</strong></td>
+<td>uint32</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>north slopes (Required)</strong></td>
+<td>boolean</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>south slopes (Required)</strong></td>
+<td>boolean</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>west slopes (Required)</strong></td>
+<td>boolean</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>east slopes (Required)</strong></td>
+<td>boolean</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>top slide enabled (Required)</strong></td>
+<td>boolean</td>
+<td>5</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>surface material adjustments (Required)</strong></td>
+<td>BiomeSurfaceMaterialAdjustmentData</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeSurfaceMaterialAdjustmentData</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>adjustments (Required)</strong></td>
+<td>array&lt;BiomeElementData&gt;</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeElementData (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>noise freq scale (Required)</strong></td>
+<td>float</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>noise lower bound (Required)</strong></td>
+<td>float</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>noise upper bound (Required)</strong></td>
+<td>float</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>height min type (Required)</strong></td>
+<td>varint32</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>height min (Required)</strong></td>
+<td>uint16</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>height max type (Required)</strong></td>
+<td>varint32</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>height max (Required)</strong></td>
+<td>uint16</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>adjusted materials (Required)</strong></td>
+<td>BiomeSurfaceMaterialData</td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeSurfaceMaterialData</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>top block (Required)</strong></td>
+<td>uint32</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>mid block (Required)</strong></td>
+<td>uint32</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>sea floor block (Required)</strong></td>
+<td>uint32</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>foundation block (Required)</strong></td>
+<td>uint32</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>sea block (Required)</strong></td>
+<td>uint32</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>sea floor depth (Required)</strong></td>
+<td>int32</td>
+<td>5</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>overworld gen rules (Required)</strong></td>
+<td>BiomeOverworldGenRulesData</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeOverworldGenRulesData</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>hills transformations (Required)</strong></td>
+<td>array&lt;BiomeWeightedData&gt;</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeWeightedData (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>biome identifier (Required)</strong></td>
+<td>uint16</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>weight (Required)</strong></td>
+<td>uint32</td>
+<td>1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>mutate transformations (Required)</strong></td>
+<td>array&lt;BiomeWeightedData&gt;</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeWeightedData (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>biome identifier (Required)</strong></td>
+<td>uint16</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>weight (Required)</strong></td>
+<td>uint32</td>
+<td>1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>river transformations (Required)</strong></td>
+<td>array&lt;BiomeWeightedData&gt;</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeWeightedData (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>biome identifier (Required)</strong></td>
+<td>uint16</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>weight (Required)</strong></td>
+<td>uint32</td>
+<td>1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>shore transformations (Required)</strong></td>
+<td>array&lt;BiomeWeightedData&gt;</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeWeightedData (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>biome identifier (Required)</strong></td>
+<td>uint16</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>weight (Required)</strong></td>
+<td>uint32</td>
+<td>1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>pre hills edge (Required)</strong></td>
+<td>array&lt;BiomeConditionalTransformationData&gt;</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeConditionalTransformationData (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>transforms into (Required)</strong></td>
+<td>array&lt;BiomeWeightedData&gt;</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeWeightedData (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>biome identifier (Required)</strong></td>
+<td>uint16</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>weight (Required)</strong></td>
+<td>uint32</td>
+<td>1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>condition json (Required)</strong></td>
+<td>uint16</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>min passing neighbors (Required)</strong></td>
+<td>uint32</td>
+<td>2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>post shore edge (Required)</strong></td>
+<td>array&lt;BiomeConditionalTransformationData&gt;</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeConditionalTransformationData (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>transforms into (Required)</strong></td>
+<td>array&lt;BiomeWeightedData&gt;</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeWeightedData (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>biome identifier (Required)</strong></td>
+<td>uint16</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>weight (Required)</strong></td>
+<td>uint32</td>
+<td>1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>condition json (Required)</strong></td>
+<td>uint16</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>min passing neighbors (Required)</strong></td>
+<td>uint32</td>
+<td>2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>climate (Required)</strong></td>
+<td>array&lt;BiomeWeightedTemperatureData&gt;</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeWeightedTemperatureData (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>temperature (Required)</strong></td>
+<td>varint32</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>weight (Required)</strong></td>
+<td>uint32</td>
+<td>1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>multinoise gen rules (Required)</strong></td>
+<td>BiomeMultinoiseGenRulesData</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeMultinoiseGenRulesData</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>temperature (Required)</strong></td>
+<td>float</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>humidity (Required)</strong></td>
+<td>float</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>altitude (Required)</strong></td>
+<td>float</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>weirdness (Required)</strong></td>
+<td>float</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>weight (Required)</strong></td>
+<td>float</td>
+<td>4</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>legacy world gen rules (Required)</strong></td>
+<td>BiomeLegacyWorldGenRulesData</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeLegacyWorldGenRulesData</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>legacy pre hills edge (Required)</strong></td>
+<td>array&lt;BiomeConditionalTransformationData&gt;</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeConditionalTransformationData (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>transforms into (Required)</strong></td>
+<td>array&lt;BiomeWeightedData&gt;</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeWeightedData (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>biome identifier (Required)</strong></td>
+<td>uint16</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>weight (Required)</strong></td>
+<td>uint32</td>
+<td>1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>condition json (Required)</strong></td>
+<td>uint16</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>min passing neighbors (Required)</strong></td>
+<td>uint32</td>
+<td>2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>replacement biomes (Required)</strong></td>
+<td>BiomeReplacementsData</td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeReplacementsData</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>biome replacements (Required)</strong></td>
+<td>array&lt;BiomeReplacementData&gt;</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeReplacementData (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>replacement biome (Required)</strong></td>
+<td>uint16</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>dimension (Required)</strong></td>
+<td>uint16</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>target biomes (Required)</strong></td>
+<td>array&lt;uint16&gt;</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>amount (Required)</strong></td>
+<td>float</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>noise frequency scale (Required)</strong></td>
+<td>float</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>replacement index (Required)</strong></td>
+<td>uint32</td>
+<td>5</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Village Type (Required)</strong></td>
+<td>uint8</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>Desert</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>Ice</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>Savanna</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>Taiga</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>Default</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>surface builder data (Required)</strong></td>
+<td>BiomeSurfaceBuilderData</td>
+<td>9</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeSurfaceBuilderData</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>surface materials (Required)</strong></td>
+<td>BiomeSurfaceMaterialData</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeSurfaceMaterialData</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>top block (Required)</strong></td>
+<td>uint32</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>mid block (Required)</strong></td>
+<td>uint32</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>sea floor block (Required)</strong></td>
+<td>uint32</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>foundation block (Required)</strong></td>
+<td>uint32</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>sea block (Required)</strong></td>
+<td>uint32</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>sea floor depth (Required)</strong></td>
+<td>int32</td>
+<td>5</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>has default overworld surface (Required)</strong></td>
+<td>boolean</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>has swamp surface (Required)</strong></td>
+<td>boolean</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>has frozen ocean surface (Required)</strong></td>
+<td>boolean</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>has the end surface (Required)</strong></td>
+<td>boolean</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>mesa surface (Required)</strong></td>
+<td>BiomeMesaSurfaceData</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeMesaSurfaceData</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>clay material (Required)</strong></td>
+<td>uint32</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>hard clay material (Required)</strong></td>
+<td>uint32</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>bryce pillars (Required)</strong></td>
+<td>boolean</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>has forest (Required)</strong></td>
+<td>boolean</td>
+<td>3</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>capped surface (Required)</strong></td>
+<td>BiomeCappedSurfaceData</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeCappedSurfaceData</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>floor blocks (Required)</strong></td>
+<td>array&lt;uint32&gt;</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ceiling blocks (Required)</strong></td>
+<td>array&lt;uint32&gt;</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>sea block (Required)</strong></td>
+<td>uint32</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>foundation block (Required)</strong></td>
+<td>uint32</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>beach block (Required)</strong></td>
+<td>uint32</td>
+<td>4</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>noise gradient surface (Required)</strong></td>
+<td>BiomeNoiseGradientSurfaceData</td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeNoiseGradientSurfaceData</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>non-replaceable blocks (Required)</strong></td>
+<td>array&lt;uint32&gt;</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>gradient blocks (Required)</strong></td>
+<td>array&lt;uint32&gt;</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>noise seed string (Required)</strong></td>
+<td>string</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>first octave (Required)</strong></td>
+<td>int32</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>amplitudes (Required)</strong></td>
+<td>array&lt;float&gt;</td>
+<td>4</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>subsurface builder data (Required)</strong></td>
+<td>BiomeSurfaceBuilderData</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeSurfaceBuilderData</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>surface materials (Required)</strong></td>
+<td>BiomeSurfaceMaterialData</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeSurfaceMaterialData</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>top block (Required)</strong></td>
+<td>uint32</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>mid block (Required)</strong></td>
+<td>uint32</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>sea floor block (Required)</strong></td>
+<td>uint32</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>foundation block (Required)</strong></td>
+<td>uint32</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>sea block (Required)</strong></td>
+<td>uint32</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>sea floor depth (Required)</strong></td>
+<td>int32</td>
+<td>5</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>has default overworld surface (Required)</strong></td>
+<td>boolean</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>has swamp surface (Required)</strong></td>
+<td>boolean</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>has frozen ocean surface (Required)</strong></td>
+<td>boolean</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>has the end surface (Required)</strong></td>
+<td>boolean</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>mesa surface (Required)</strong></td>
+<td>BiomeMesaSurfaceData</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeMesaSurfaceData</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>clay material (Required)</strong></td>
+<td>uint32</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>hard clay material (Required)</strong></td>
+<td>uint32</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>bryce pillars (Required)</strong></td>
+<td>boolean</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>has forest (Required)</strong></td>
+<td>boolean</td>
+<td>3</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>capped surface (Required)</strong></td>
+<td>BiomeCappedSurfaceData</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeCappedSurfaceData</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>floor blocks (Required)</strong></td>
+<td>array&lt;uint32&gt;</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ceiling blocks (Required)</strong></td>
+<td>array&lt;uint32&gt;</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>sea block (Required)</strong></td>
+<td>uint32</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>foundation block (Required)</strong></td>
+<td>uint32</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>beach block (Required)</strong></td>
+<td>uint32</td>
+<td>4</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>noise gradient surface (Required)</strong></td>
+<td>BiomeNoiseGradientSurfaceData</td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeNoiseGradientSurfaceData</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>non-replaceable blocks (Required)</strong></td>
+<td>array&lt;uint32&gt;</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>gradient blocks (Required)</strong></td>
+<td>array&lt;uint32&gt;</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>noise seed string (Required)</strong></td>
+<td>string</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>first octave (Required)</strong></td>
+<td>int32</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>amplitudes (Required)</strong></td>
+<td>array&lt;float&gt;</td>
+<td>4</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>String list (Required)</strong></td>
+<td>BiomeStringList</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BiomeStringList</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>strings (Required)</strong></td>
+<td>array&lt;string&gt;</td>
+<td>0</td>
+<td>List of strings referenced wherever a string index is used under BiomeDefinitionData</td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+    </div>
+</body>
+</html>

@@ -1,18 +1,18 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1340418840",
+    "$id": "3424454928",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "1785360263": {
+        "2490228788": {
             "title": "UpdateAttributeLayersData",
             "type": "object",
             "properties": {
                 "Attribute Layers": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/2940756330"
+                        "$ref": "#/definitions/3497970249"
                     },
                     "x-ordinal-index": 0,
                     "maxItems": 512
@@ -22,22 +22,99 @@
                 "Attribute Layers"
             ]
         },
-        "2374371116": {
+        "3145675001": {
+            "title": "ColorAttributeData",
+            "type": "object",
+            "properties": {
+                "operation": {
+                    "title": "ColorAttributeOperation",
+                    "type": "string",
+                    "default": "override",
+                    "enum": [
+                        "OVERRIDE",
+                        "ALPHA_BLEND",
+                        "ADD",
+                        "SUBTRACT",
+                        "MULTIPLY"
+                    ],
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 1
+                },
+                "value": {
+                    "$ref": "#/definitions/1909529170",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "value"
+            ]
+        },
+        "3497970249": {
+            "title": "AttributeLayerData",
+            "type": "object",
+            "properties": {
+                "Attributes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/2266740463"
+                    },
+                    "x-ordinal-index": 3,
+                    "maxItems": 1024
+                },
+                "Dimension": {
+                    "$ref": "#/definitions/1586048219",
+                    "x-ordinal-index": 1
+                },
+                "Name": {
+                    "type": "string",
+                    "x-ordinal-index": 0,
+                    "maxLength": 128
+                },
+                "Settings": {
+                    "$ref": "#/definitions/939393380",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "Attributes",
+                "Dimension",
+                "Name",
+                "Settings"
+            ]
+        },
+        "1586048219": {
+            "title": "DimensionType",
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "value"
+            ]
+        },
+        "2266740463": {
             "title": "EnvironmentAttributeData",
             "type": "object",
             "properties": {
                 "Attribute": {
                     "oneOf": [
                         {
-                            "$ref": "#/definitions/3678388341",
+                            "$ref": "#/definitions/582205676",
                             "x-ordinal-index": 0
                         },
                         {
-                            "$ref": "#/definitions/2141238885",
+                            "$ref": "#/definitions/249172890",
                             "x-ordinal-index": 1
                         },
                         {
-                            "$ref": "#/definitions/1504086022",
+                            "$ref": "#/definitions/3145675001",
                             "x-ordinal-index": 2
                         }
                     ],
@@ -98,15 +175,15 @@
                 "FromAttribute": {
                     "oneOf": [
                         {
-                            "$ref": "#/definitions/3678388341",
+                            "$ref": "#/definitions/582205676",
                             "x-ordinal-index": 0
                         },
                         {
-                            "$ref": "#/definitions/2141238885",
+                            "$ref": "#/definitions/249172890",
                             "x-ordinal-index": 1
                         },
                         {
-                            "$ref": "#/definitions/1504086022",
+                            "$ref": "#/definitions/3145675001",
                             "x-ordinal-index": 2
                         }
                     ],
@@ -116,15 +193,15 @@
                 "ToAttribute": {
                     "oneOf": [
                         {
-                            "$ref": "#/definitions/3678388341",
+                            "$ref": "#/definitions/582205676",
                             "x-ordinal-index": 0
                         },
                         {
-                            "$ref": "#/definitions/2141238885",
+                            "$ref": "#/definitions/249172890",
                             "x-ordinal-index": 1
                         },
                         {
-                            "$ref": "#/definitions/1504086022",
+                            "$ref": "#/definitions/3145675001",
                             "x-ordinal-index": 2
                         }
                     ],
@@ -146,134 +223,7 @@
                 "TotalTransitionTicks"
             ]
         },
-        "749623033": {
-            "title": "Color255RGBA",
-            "oneOf": [
-                {
-                    "type": "string",
-                    "pattern": "^#[a-fA-F0-9]{8}$"
-                },
-                {
-                    "type": "array",
-                    "items": {
-                        "type": "integer",
-                        "x-underlying-type": "int32"
-                    },
-                    "minItems": 4,
-                    "maxItems": 4
-                }
-            ]
-        },
-        "2872336518": {
-            "title": "DimensionType",
-            "type": "object",
-            "properties": {
-                "value": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "value"
-            ]
-        },
-        "2145410945": {
-            "title": "UpdateEnvironmentAttributesData",
-            "type": "object",
-            "properties": {
-                "Attribute Layer Dimension": {
-                    "$ref": "#/definitions/2872336518",
-                    "x-ordinal-index": 1
-                },
-                "Attribute Layer Name": {
-                    "type": "string",
-                    "x-ordinal-index": 0,
-                    "maxLength": 128
-                },
-                "Attributes": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/2374371116"
-                    },
-                    "x-ordinal-index": 2,
-                    "maxItems": 1024
-                }
-            },
-            "required": [
-                "Attribute Layer Dimension",
-                "Attribute Layer Name",
-                "Attributes"
-            ]
-        },
-        "2940756330": {
-            "title": "AttributeLayerData",
-            "type": "object",
-            "properties": {
-                "Attributes": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/2374371116"
-                    },
-                    "x-ordinal-index": 3,
-                    "maxItems": 1024
-                },
-                "Dimension": {
-                    "$ref": "#/definitions/2872336518",
-                    "x-ordinal-index": 1
-                },
-                "Name": {
-                    "type": "string",
-                    "x-ordinal-index": 0,
-                    "maxLength": 128
-                },
-                "Settings": {
-                    "$ref": "#/definitions/1095718751",
-                    "x-ordinal-index": 2
-                }
-            },
-            "required": [
-                "Attributes",
-                "Dimension",
-                "Name",
-                "Settings"
-            ]
-        },
-        "3678388341": {
-            "title": "BoolAttributeData",
-            "type": "object",
-            "properties": {
-                "operation": {
-                    "title": "BoolAttributeOperation",
-                    "type": "string",
-                    "default": "override",
-                    "enum": [
-                        "OVERRIDE",
-                        "ALPHA_BLEND",
-                        "AND",
-                        "NAND",
-                        "OR",
-                        "NOR",
-                        "XOR",
-                        "XNOR"
-                    ],
-                    "x-underlying-type": "int32",
-                    "x-ordinal-index": 1
-                },
-                "value": {
-                    "type": "boolean",
-                    "x-underlying-type": "boolean",
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "value"
-            ]
-        },
-        "2141238885": {
+        "249172890": {
             "title": "FloatAttributeData",
             "type": "object",
             "properties": {
@@ -313,26 +263,30 @@
                 "value"
             ]
         },
-        "1504086022": {
-            "title": "ColorAttributeData",
+        "582205676": {
+            "title": "BoolAttributeData",
             "type": "object",
             "properties": {
                 "operation": {
-                    "title": "ColorAttributeOperation",
+                    "title": "BoolAttributeOperation",
                     "type": "string",
                     "default": "override",
                     "enum": [
                         "OVERRIDE",
                         "ALPHA_BLEND",
-                        "ADD",
-                        "SUBTRACT",
-                        "MULTIPLY"
+                        "AND",
+                        "NAND",
+                        "OR",
+                        "NOR",
+                        "XOR",
+                        "XNOR"
                     ],
                     "x-underlying-type": "int32",
                     "x-ordinal-index": 1
                 },
                 "value": {
-                    "$ref": "#/definitions/749623033",
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
                     "x-ordinal-index": 0
                 }
             },
@@ -340,7 +294,25 @@
                 "value"
             ]
         },
-        "1095718751": {
+        "1909529170": {
+            "title": "Color255RGBA",
+            "oneOf": [
+                {
+                    "type": "string",
+                    "pattern": "^#[a-fA-F0-9]{8}$"
+                },
+                {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "x-underlying-type": "int32"
+                    },
+                    "minItems": 4,
+                    "maxItems": 4
+                }
+            ]
+        },
+        "939393380": {
             "title": "AttributeLayerSettings",
             "type": "object",
             "properties": {
@@ -360,18 +332,8 @@
                     "x-ordinal-index": 3
                 },
                 "Weight": {
-                    "oneOf": [
-                        {
-                            "type": "number",
-                            "x-underlying-type": "float",
-                            "x-ordinal-index": 0
-                        },
-                        {
-                            "type": "string",
-                            "x-ordinal-index": 1
-                        }
-                    ],
-                    "x-control-value-type": "uint32",
+                    "type": "number",
+                    "x-underlying-type": "float",
                     "x-ordinal-index": 1
                 }
             },
@@ -382,12 +344,12 @@
                 "Weight"
             ]
         },
-        "3217523179": {
+        "1662283962": {
             "title": "UpdateAttributeLayerSettingsData",
             "type": "object",
             "properties": {
                 "Attribute Layer Dimension": {
-                    "$ref": "#/definitions/2872336518",
+                    "$ref": "#/definitions/1586048219",
                     "x-ordinal-index": 1
                 },
                 "Attribute Layer Name": {
@@ -396,7 +358,7 @@
                     "maxLength": 128
                 },
                 "Attributes Layer Settings": {
-                    "$ref": "#/definitions/1095718751",
+                    "$ref": "#/definitions/939393380",
                     "x-ordinal-index": 2
                 }
             },
@@ -406,12 +368,40 @@
                 "Attributes Layer Settings"
             ]
         },
-        "3342178242": {
+        "1676992726": {
+            "title": "UpdateEnvironmentAttributesData",
+            "type": "object",
+            "properties": {
+                "Attribute Layer Dimension": {
+                    "$ref": "#/definitions/1586048219",
+                    "x-ordinal-index": 1
+                },
+                "Attribute Layer Name": {
+                    "type": "string",
+                    "x-ordinal-index": 0,
+                    "maxLength": 128
+                },
+                "Attributes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/2266740463"
+                    },
+                    "x-ordinal-index": 2,
+                    "maxItems": 1024
+                }
+            },
+            "required": [
+                "Attribute Layer Dimension",
+                "Attribute Layer Name",
+                "Attributes"
+            ]
+        },
+        "1142202365": {
             "title": "RemoveEnvironmentAttributesData",
             "type": "object",
             "properties": {
                 "Attribute Layer Dimension": {
-                    "$ref": "#/definitions/2872336518",
+                    "$ref": "#/definitions/1586048219",
                     "x-ordinal-index": 1
                 },
                 "Attribute Layer Name": {
@@ -443,19 +433,19 @@
         "Data": {
             "oneOf": [
                 {
-                    "$ref": "#/definitions/1785360263",
+                    "$ref": "#/definitions/2490228788",
                     "x-ordinal-index": 0
                 },
                 {
-                    "$ref": "#/definitions/3217523179",
+                    "$ref": "#/definitions/1662283962",
                     "x-ordinal-index": 1
                 },
                 {
-                    "$ref": "#/definitions/2145410945",
+                    "$ref": "#/definitions/1676992726",
                     "x-ordinal-index": 2
                 },
                 {
-                    "$ref": "#/definitions/3342178242",
+                    "$ref": "#/definitions/1142202365",
                     "x-ordinal-index": 3
                 }
             ],

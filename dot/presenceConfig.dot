@@ -1,0 +1,16 @@
+digraph "presenceConfig" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+
+0 [label="presenceConfig",comment="name: \"presenceConfig\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="experienceName",comment="name: \"experienceName\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"The name of the experience.\""];
+2 [label="string",comment="name: \"string\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"The name of the experience.\""];
+3 [label="worldName",comment="name: \"worldName\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"The name of the world.\""];
+4 [label="string",comment="name: \"string\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"The name of the world.\""];
+{ rank = max;2;4}
+
+}

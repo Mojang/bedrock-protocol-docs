@@ -7,6 +7,8 @@ rankdir = LR
 13 -> 14
 10 -> 15
 15 -> 16
+10 -> 17
+17 -> 18
 
 10 [label="DimensionDefinitionGroup::DimensionDefinition",comment="name: \"DimensionDefinitionGroup::DimensionDefinition\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 11 [label="Height Maximum",comment="name: \"Height Maximum\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -15,6 +17,8 @@ rankdir = LR
 14 [label="varint",comment="name: \"varint\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 15 [label="Generator Type",comment="name: \"Generator Type\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 16 [label="varint",comment="name: \"varint\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;12;14;16}
+17 [label="Dimension Type",comment="name: \"Dimension Type\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+18 [label="varint",comment="name: \"varint\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;12;14;16;18}
 
 }

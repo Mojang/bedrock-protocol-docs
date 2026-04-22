@@ -1,70 +1,28 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3967531941",
+    "$id": "3261122765",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "2599647528": {
-            "title": "AddTimeMarkerData",
+        "1039306879": {
+            "title": "SyncStateData",
             "type": "object",
             "properties": {
-                "ClockId": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
-                },
-                "TimeMarkers": {
+                "ClockData": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/245078115"
+                        "$ref": "#/definitions/2241687293"
                     },
-                    "x-ordinal-index": 1,
+                    "x-ordinal-index": 0,
                     "maxItems": 256
                 }
             },
             "required": [
-                "ClockId",
-                "TimeMarkers"
+                "ClockData"
             ]
         },
-        "1269160059": {
-            "title": "RemoveTimeMarkerData",
-            "type": "object",
-            "properties": {
-                "ClockId": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
-                },
-                "TimeMarkerIds": {
-                    "type": "array",
-                    "items": {
-                        "type": "integer",
-                        "x-underlying-type": "uint64",
-                        "minimum": 0.0
-                    },
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 1,
-                    "maxItems": 256
-                }
-            },
-            "required": [
-                "ClockId",
-                "TimeMarkerIds"
-            ]
-        },
-        "245078115": {
+        "3735022990": {
             "title": "TimeMarkerData",
             "type": "object",
             "properties": {
@@ -103,24 +61,39 @@
                 "Time"
             ]
         },
-        "677846036": {
-            "title": "SyncStateData",
+        "560997918": {
+            "title": "RemoveTimeMarkerData",
             "type": "object",
             "properties": {
-                "ClockData": {
+                "ClockId": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                },
+                "TimeMarkerIds": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/109381602"
+                        "type": "integer",
+                        "x-underlying-type": "uint64",
+                        "minimum": 0.0
                     },
-                    "x-ordinal-index": 0,
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1,
                     "maxItems": 256
                 }
             },
             "required": [
-                "ClockData"
+                "ClockId",
+                "TimeMarkerIds"
             ]
         },
-        "109381602": {
+        "2241687293": {
             "title": "SyncWorldClockStateData",
             "type": "object",
             "properties": {
@@ -153,24 +126,7 @@
                 "Time"
             ]
         },
-        "4012169973": {
-            "title": "InitializeRegistryData",
-            "type": "object",
-            "properties": {
-                "ClockData": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/2568868754"
-                    },
-                    "x-ordinal-index": 0,
-                    "maxItems": 256
-                }
-            },
-            "required": [
-                "ClockData"
-            ]
-        },
-        "2568868754": {
+        "4264535551": {
             "title": "WorldClockData",
             "type": "object",
             "properties": {
@@ -204,7 +160,7 @@
                 "TimeMarkers": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/245078115"
+                        "$ref": "#/definitions/3735022990"
                     },
                     "x-ordinal-index": 4,
                     "maxItems": 256
@@ -217,6 +173,50 @@
                 "Time",
                 "TimeMarkers"
             ]
+        },
+        "628781532": {
+            "title": "InitializeRegistryData",
+            "type": "object",
+            "properties": {
+                "ClockData": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/4264535551"
+                    },
+                    "x-ordinal-index": 0,
+                    "maxItems": 256
+                }
+            },
+            "required": [
+                "ClockData"
+            ]
+        },
+        "3214412791": {
+            "title": "AddTimeMarkerData",
+            "type": "object",
+            "properties": {
+                "ClockId": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                },
+                "TimeMarkers": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/3735022990"
+                    },
+                    "x-ordinal-index": 1,
+                    "maxItems": 256
+                }
+            },
+            "required": [
+                "ClockId",
+                "TimeMarkers"
+            ]
         }
     },
     "title": "SyncWorldClocksPacket",
@@ -227,19 +227,19 @@
             "description": "Variant data specific to what needs to be synced.",
             "oneOf": [
                 {
-                    "$ref": "#/definitions/677846036",
+                    "$ref": "#/definitions/1039306879",
                     "x-ordinal-index": 0
                 },
                 {
-                    "$ref": "#/definitions/4012169973",
+                    "$ref": "#/definitions/628781532",
                     "x-ordinal-index": 1
                 },
                 {
-                    "$ref": "#/definitions/2599647528",
+                    "$ref": "#/definitions/3214412791",
                     "x-ordinal-index": 2
                 },
                 {
-                    "$ref": "#/definitions/1269160059",
+                    "$ref": "#/definitions/560997918",
                     "x-ordinal-index": 3
                 }
             ],

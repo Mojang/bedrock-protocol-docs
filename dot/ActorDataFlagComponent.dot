@@ -1,12 +1,18 @@
 digraph "ActorDataFlagComponent" {
 rankdir = LR
-2
+0
+0 -> 1
+1 -> 2
 2 -> 3
-3 -> 7
+1 -> 4
+4 -> 5
 
-2 [label="ActorDataFlagComponent",comment="name: \"ActorDataFlagComponent\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-3 [label="Actor Flag Bitset Data",comment="name: \"Actor Flag Bitset Data\", typeName: \"std::bitset<127>\", id: 3, branchId: 0, recurseId: -1, attributes: 256, notes: \"Bitset where the bits are indexed by ActorFlags, see ActorFlagsBitset\""];
-7 [label="std::bitset<127>",comment="name: \"std::bitset<127>\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;7}
+0 [label="ActorDataFlagComponent",comment="name: \"ActorDataFlagComponent\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Actor Flag Bitset Data",comment="name: \"Actor Flag Bitset Data\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+5 [label="unsigned byte",comment="name: \"unsigned byte\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;5}
 
 }

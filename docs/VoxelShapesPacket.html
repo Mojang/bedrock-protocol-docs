@@ -119,8 +119,8 @@
     <div class="container">
         <p><a href="index.html">← Back to Index</a></p>
         <h1>VoxelShapesPacket (337)</h1>
-<div class="description">Syncs client with server voxel shape data on world join. This packet contains a copy of all behavior pack voxel shapes data.</div>
-<div class="description">Sends the serializable voxel shapes data to the client as it&#x27;s needed on both the client and server.</div>
+<div class="description">Syncs client with server voxel shape data on world join. This packet contains a copy of all behavior pack voxel shapes data and is used by StartGamePacket.</div>
+<div class="description">Sends the serializable voxel shapes data to the client as it&#x27;s needed on both the client and server. This packet should always be sent before StartGamePacket.</div>
 <div style="margin-left: 0px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
 <thead>
@@ -134,13 +134,13 @@
 <tbody>
 <tr>
 <td rowspan="2"><strong>Shapes (Required)</strong></td>
-<td>array&lt;struct VoxelShapes::SerializableVoxelShape&gt;</td>
+<td>array&lt;VoxelShapes::SerializableVoxelShape&gt;</td>
 <td>0</td>
 <td>Voxel shape structural data</td>
 </tr>
 <tr>
 <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
-<h3>struct VoxelShapes::SerializableVoxelShape (Array Item)</h3>
+<h3>VoxelShapes::SerializableVoxelShape (Array Item)</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
 <thead>
 <tr style="background-color: #f0f0f0;">
@@ -153,13 +153,13 @@
 <tbody>
 <tr>
 <td rowspan="2"><strong>Cells (Required)</strong></td>
-<td>struct VoxelShapes::SerializableCells</td>
+<td>VoxelShapes::SerializableCells</td>
 <td>0</td>
 <td>Grid of cells representing solid and empty regions</td>
 </tr>
 <tr>
 <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
-<h3>struct VoxelShapes::SerializableCells</h3>
+<h3>VoxelShapes::SerializableCells</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
 <thead>
 <tr style="background-color: #f0f0f0;">
@@ -222,7 +222,7 @@
 </tr>
 <tr>
 <td rowspan="2"><strong>Name Map (Required)</strong></td>
-<td>object&lt;hashed_string, class VoxelShapes::RegistryHandle&gt;</td>
+<td>object&lt;hashed_string, VoxelShapes::RegistryHandle&gt;</td>
 <td>1</td>
 <td>Voxel shape name-to-handle mappings</td>
 </tr>
@@ -247,13 +247,13 @@
 </tr>
 <tr>
 <td rowspan="2"><strong>value</strong></td>
-<td>class VoxelShapes::RegistryHandle</td>
+<td>VoxelShapes::RegistryHandle</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
-<h3>class VoxelShapes::RegistryHandle</h3>
+<h3>VoxelShapes::RegistryHandle</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
 <thead>
 <tr style="background-color: #f0f0f0;">

@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2203694174",
+    "$id": "1940684486",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "3541243607": {
+        "1750201151": {
             "title": "ActorRuntimeID",
             "type": "object",
             "properties": {
@@ -37,7 +37,7 @@
             "x-ordinal-index": 1
         },
         "Player Runtime ID": {
-            "$ref": "#/definitions/3541243607",
+            "$ref": "#/definitions/1750201151",
             "x-ordinal-index": 0
         }
     },

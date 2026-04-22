@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3166459952",
+    "$id": "2872748552",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "4004946602": {
+        "725374594": {
             "title": "Vec3",
             "type": "object",
             "properties": {
@@ -31,7 +31,7 @@
                 "Z"
             ]
         },
-        "1221684255": {
+        "4257541248": {
             "title": "ActorUniqueID",
             "type": "object",
             "properties": {
@@ -48,7 +48,7 @@
                 "Actor Unique ID"
             ]
         },
-        "3541243607": {
+        "1750201151": {
             "title": "ActorRuntimeID",
             "type": "object",
             "properties": {
@@ -84,15 +84,15 @@
             "x-ordinal-index": 4
         },
         "Position": {
-            "$ref": "#/definitions/4004946602",
+            "$ref": "#/definitions/725374594",
             "x-ordinal-index": 2
         },
         "Target Actor ID": {
-            "$ref": "#/definitions/1221684255",
+            "$ref": "#/definitions/4257541248",
             "x-ordinal-index": 0
         },
         "Target Runtime ID": {
-            "$ref": "#/definitions/3541243607",
+            "$ref": "#/definitions/1750201151",
             "x-ordinal-index": 1
         }
     },

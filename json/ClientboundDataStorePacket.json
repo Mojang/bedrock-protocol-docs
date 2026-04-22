@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1005145003",
+    "$id": "2044180563",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "3726916960": {
+        "2805024213": {
             "title": "Data Store Update",
             "type": "object",
             "properties": {
@@ -76,7 +76,7 @@
                 "Property Update Count"
             ]
         },
-        "1547361": {
+        "3615677060": {
             "title": "Data Store Change",
             "type": "object",
             "properties": {
@@ -113,7 +113,7 @@
                 "Update Count"
             ]
         },
-        "2666507395": {
+        "67991132": {
             "title": "Data Store Removal",
             "type": "object",
             "properties": {
@@ -139,15 +139,15 @@
             "items": {
                 "oneOf": [
                     {
-                        "$ref": "#/definitions/3726916960",
+                        "$ref": "#/definitions/2805024213",
                         "x-ordinal-index": 0
                     },
                     {
-                        "$ref": "#/definitions/1547361",
+                        "$ref": "#/definitions/3615677060",
                         "x-ordinal-index": 1
                     },
                     {
-                        "$ref": "#/definitions/2666507395",
+                        "$ref": "#/definitions/67991132",
                         "x-ordinal-index": 2
                     }
                 ],

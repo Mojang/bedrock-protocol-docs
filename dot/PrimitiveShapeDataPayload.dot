@@ -1,0 +1,78 @@
+digraph "PrimitiveShapeDataPayload" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+0 -> 5
+5 -> 6
+6 -> 7
+5 -> 8
+8 -> 9
+5 -> 10
+10 -> 11
+0 -> 12
+12 -> 13
+0 -> 14
+14 -> 15
+15 -> 16
+14 -> 17
+17 -> 18
+14 -> 19
+19 -> 20
+0 -> 21
+21 -> 22
+0 -> 23
+23 -> 24
+0 -> 25
+25 -> 26
+26 -> 27
+0 -> 28
+28 -> 29
+29 -> 30
+0 -> 31
+31 -> 32
+32 -> 33
+0 -> 34
+34 -> 35
+
+0 [label="PrimitiveShapeDataPayload",comment="name: \"PrimitiveShapeDataPayload\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="NetworkId",comment="name: \"NetworkId\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"uint64 network id used to identify the matching shape on the client as the server\""];
+2 [label="unsigned varint64",comment="name: \"unsigned varint64\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"uint64 network id used to identify the matching shape on the client as the server\""];
+3 [label="Shape Type",comment="name: \"Shape Type\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"Byte representing the type of debug shape (Line, Box, Sphere, Circle, Text).\""];
+4 [label="enum ScriptModuleMinecraft::ScriptPrimitiveShapeType",comment="name: \"enum ScriptModuleMinecraft::ScriptPrimitiveShapeType\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"Byte representing the type of debug shape (Line, Box, Sphere, Circle, Text).\""];
+5 [label="Location",comment="name: \"Location\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"Vec3 location of the debug shape in the world.\""];
+6 [label="X",comment="name: \"X\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="float",comment="name: \"float\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+8 [label="Y",comment="name: \"Y\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+9 [label="float",comment="name: \"float\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+10 [label="Z",comment="name: \"Z\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+11 [label="float",comment="name: \"float\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+12 [label="Scale",comment="name: \"Scale\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 0, notes: \"Float scale of the debug shape in the world.\""];
+13 [label="float",comment="name: \"float\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 512, notes: \"Float scale of the debug shape in the world.\""];
+14 [label="Rotation",comment="name: \"Rotation\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 0, notes: \"Vec3 (Euler angles in radians, PYR) rotation of the debug shape in the world.\""];
+15 [label="X",comment="name: \"X\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+16 [label="float",comment="name: \"float\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+17 [label="Y",comment="name: \"Y\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+18 [label="float",comment="name: \"float\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+19 [label="Z",comment="name: \"Z\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+20 [label="float",comment="name: \"float\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+21 [label="Total Time Left",comment="name: \"Total Time Left\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 0, notes: \"The total time left in seconds until this debug shape will be removed (0 meaning never).\""];
+22 [label="float",comment="name: \"float\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 512, notes: \"The total time left in seconds until this debug shape will be removed (0 meaning never).\""];
+23 [label="Maximum Render Distance",comment="name: \"Maximum Render Distance\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 0, notes: \"The maximum distacne away that this shape will render for each client.\""];
+24 [label="float",comment="name: \"float\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 512, notes: \"The maximum distacne away that this shape will render for each client.\""];
+25 [label="Color",comment="name: \"Color\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 0, notes: \"Color (ARGB Hex string) of the debug shape.\""];
+26 [label="Color",comment="name: \"Color\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+27 [label="int",comment="name: \"int\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+28 [label="Dimension ID",comment="name: \"Dimension ID\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 0, notes: \"Currently supported: (0 -> Overworld, 1 -> Nether, 2 -> The End, 3 -> Undefined)\""];
+29 [label="value",comment="name: \"value\", typeName: \"\", id: 29, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+30 [label="varint",comment="name: \"varint\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+31 [label="Attached To Entity ID",comment="name: \"Attached To Entity ID\", typeName: \"\", id: 31, branchId: 0, recurseId: -1, attributes: 0, notes: \"Runtime ID of the entity this shape is attached to.\""];
+32 [label="Actor Unique ID",comment="name: \"Actor Unique ID\", typeName: \"\", id: 32, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+33 [label="varint64",comment="name: \"varint64\", typeName: \"\", id: 33, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+34 [label="Extra Shape Data",comment="name: \"Extra Shape Data\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 0, notes: \"Extra payload (variant) holding data specific to the type of shape (such as text string for the text shape).\""];
+35 [label="",comment="name: \"\", typeName: \"\", id: 35, branchId: 0, recurseId: -1, attributes: 512, notes: \"Extra payload (variant) holding data specific to the type of shape (such as text string for the text shape).\""];
+{ rank = max;2;4;7;9;11;13;16;18;20;22;24;27;30;33;35}
+
+}

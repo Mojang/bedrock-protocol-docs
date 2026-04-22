@@ -1,48 +1,772 @@
 digraph "BiomeDefinitionData" {
 rankdir = LR
-11
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+0 -> 5
+5 -> 6
+0 -> 7
+7 -> 8
+0 -> 9
+9 -> 10
+0 -> 11
 11 -> 12
-12 -> 16
-11 -> 17
+0 -> 13
+13 -> 14
+0 -> 15
+15 -> 16
+0 -> 17
 17 -> 18
-11 -> 19
+18 -> 19
 19 -> 20
-11 -> 21
+18 -> 21
 21 -> 22
-11 -> 23
+0 -> 23
 23 -> 24
-11 -> 25
+24 -> 25
 25 -> 26
-11 -> 27
+24 -> 27
 27 -> 28
-11 -> 29
+24 -> 29
 29 -> 30
-11 -> 31
-31 -> 44
-11 -> 45
-45 -> 392
+24 -> 31
+31 -> 32
+23 -> 33
+33 -> 34
+34 -> 35
+35 -> 36
+34 -> 37
+37 -> 38
+38 -> 39
+39 -> 40
+40 -> 41
+39 -> 42
+42 -> 43
+43 -> 44
+42 -> 45
+45 -> 46
+42 -> 47
+47 -> 48
+42 -> 49
+49 -> 50
+42 -> 51
+51 -> 52
+42 -> 53
+53 -> 54
+42 -> 55
+55 -> 56
+38 -> 57
+57 -> 58
+38 -> 59
+59 -> 60
+38 -> 61
+61 -> 62
+38 -> 63
+63 -> 64
+38 -> 65
+65 -> 66
+38 -> 67
+67 -> 68
+38 -> 69
+69 -> 70
+37 -> 71
+71 -> 72
+37 -> 73
+73 -> 74
+37 -> 75
+75 -> 76
+37 -> 77
+77 -> 78
+23 -> 79
+79 -> 80
+80 -> 81
+79 -> 82
+82 -> 83
+79 -> 84
+84 -> 85
+79 -> 86
+86 -> 87
+79 -> 88
+88 -> 89
+79 -> 90
+90 -> 91
+23 -> 92
+92 -> 93
+93 -> 94
+94 -> 95
+93 -> 96
+96 -> 97
+97 -> 98
+96 -> 99
+99 -> 100
+96 -> 101
+101 -> 102
+96 -> 103
+103 -> 104
+96 -> 105
+105 -> 106
+96 -> 107
+107 -> 108
+96 -> 109
+109 -> 110
+96 -> 111
+111 -> 112
+112 -> 113
+111 -> 114
+114 -> 115
+111 -> 116
+116 -> 117
+111 -> 118
+118 -> 119
+111 -> 120
+120 -> 121
+111 -> 122
+122 -> 123
+23 -> 124
+124 -> 125
+125 -> 126
+126 -> 127
+125 -> 128
+128 -> 129
+129 -> 130
+128 -> 131
+131 -> 132
+124 -> 133
+133 -> 134
+134 -> 135
+133 -> 136
+136 -> 137
+137 -> 138
+136 -> 139
+139 -> 140
+124 -> 141
+141 -> 142
+142 -> 143
+141 -> 144
+144 -> 145
+145 -> 146
+144 -> 147
+147 -> 148
+124 -> 149
+149 -> 150
+150 -> 151
+149 -> 152
+152 -> 153
+153 -> 154
+152 -> 155
+155 -> 156
+124 -> 157
+157 -> 158
+158 -> 159
+157 -> 160
+160 -> 161
+161 -> 162
+162 -> 163
+161 -> 164
+164 -> 165
+165 -> 166
+164 -> 167
+167 -> 168
+160 -> 169
+169 -> 170
+160 -> 171
+171 -> 172
+124 -> 173
+173 -> 174
+174 -> 175
+173 -> 176
+176 -> 177
+177 -> 178
+178 -> 179
+177 -> 180
+180 -> 181
+181 -> 182
+180 -> 183
+183 -> 184
+176 -> 185
+185 -> 186
+176 -> 187
+187 -> 188
+124 -> 189
+189 -> 190
+190 -> 191
+189 -> 192
+192 -> 193
+193 -> 194
+192 -> 195
+195 -> 196
+23 -> 197
+197 -> 198
+198 -> 199
+197 -> 200
+200 -> 201
+197 -> 202
+202 -> 203
+197 -> 204
+204 -> 205
+197 -> 206
+206 -> 207
+23 -> 208
+208 -> 209
+209 -> 210
+210 -> 211
+209 -> 212
+212 -> 213
+213 -> 214
+214 -> 215
+213 -> 216
+216 -> 217
+217 -> 218
+216 -> 219
+219 -> 220
+212 -> 221
+221 -> 222
+212 -> 223
+223 -> 224
+23 -> 225
+225 -> 226
+226 -> 227
+227 -> 228
+226 -> 229
+229 -> 230
+230 -> 231
+229 -> 232
+232 -> 233
+229 -> 234
+234 -> 235
+235 -> 236
+234 -> 237
+237 -> 238
+229 -> 239
+239 -> 240
+229 -> 241
+241 -> 242
+229 -> 243
+243 -> 244
+23 -> 245
+245 -> 246
+23 -> 247
+247 -> 248
+248 -> 249
+249 -> 250
+248 -> 251
+251 -> 252
+248 -> 253
+253 -> 254
+248 -> 255
+255 -> 256
+248 -> 257
+257 -> 258
+248 -> 259
+259 -> 260
+247 -> 261
+261 -> 262
+247 -> 263
+263 -> 264
+247 -> 265
+265 -> 266
+247 -> 267
+267 -> 268
+247 -> 269
+269 -> 270
+270 -> 271
+269 -> 272
+272 -> 273
+269 -> 274
+274 -> 275
+269 -> 276
+276 -> 277
+247 -> 278
+278 -> 279
+279 -> 280
+280 -> 281
+279 -> 282
+282 -> 283
+278 -> 284
+284 -> 285
+285 -> 286
+284 -> 287
+287 -> 288
+278 -> 289
+289 -> 290
+278 -> 291
+291 -> 292
+278 -> 293
+293 -> 294
+247 -> 295
+295 -> 296
+296 -> 297
+297 -> 298
+296 -> 299
+299 -> 300
+295 -> 301
+301 -> 302
+302 -> 303
+301 -> 304
+304 -> 305
+295 -> 306
+306 -> 307
+295 -> 308
+308 -> 309
+295 -> 310
+310 -> 311
+311 -> 312
+310 -> 313
+313 -> 314
+23 -> 315
+315 -> 316
+316 -> 317
+317 -> 318
+316 -> 319
+319 -> 320
+316 -> 321
+321 -> 322
+316 -> 323
+323 -> 324
+316 -> 325
+325 -> 326
+316 -> 327
+327 -> 328
+315 -> 329
+329 -> 330
+315 -> 331
+331 -> 332
+315 -> 333
+333 -> 334
+315 -> 335
+335 -> 336
+315 -> 337
+337 -> 338
+338 -> 339
+337 -> 340
+340 -> 341
+337 -> 342
+342 -> 343
+337 -> 344
+344 -> 345
+315 -> 346
+346 -> 347
+347 -> 348
+348 -> 349
+347 -> 350
+350 -> 351
+346 -> 352
+352 -> 353
+353 -> 354
+352 -> 355
+355 -> 356
+346 -> 357
+357 -> 358
+346 -> 359
+359 -> 360
+346 -> 361
+361 -> 362
+315 -> 363
+363 -> 364
+364 -> 365
+365 -> 366
+364 -> 367
+367 -> 368
+363 -> 369
+369 -> 370
+370 -> 371
+369 -> 372
+372 -> 373
+363 -> 374
+374 -> 375
+363 -> 376
+376 -> 377
+363 -> 378
+378 -> 379
+379 -> 380
+378 -> 381
+381 -> 382
 
-11 [label="BiomeDefinitionData",comment="name: \"BiomeDefinitionData\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-12 [label="id",comment="name: \"id\", typeName: \"BiomeIdType\", id: 12, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-16 [label="BiomeIdType",comment="name: \"BiomeIdType\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-17 [label="temperature",comment="name: \"temperature\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-18 [label="float",comment="name: \"float\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-19 [label="downfall",comment="name: \"downfall\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-20 [label="float",comment="name: \"float\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-21 [label="foliage snow (0-1 how frozen the leaves look)",comment="name: \"foliage snow (0-1 how frozen the leaves look)\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-22 [label="float",comment="name: \"float\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-23 [label="depth",comment="name: \"depth\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-24 [label="float",comment="name: \"float\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-25 [label="scale",comment="name: \"scale\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+0 [label="BiomeDefinitionData",comment="name: \"BiomeDefinitionData\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="id",comment="name: \"id\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+3 [label="temperature",comment="name: \"temperature\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="float",comment="name: \"float\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+5 [label="downfall",comment="name: \"downfall\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+6 [label="float",comment="name: \"float\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+7 [label="foliage snow",comment="name: \"foliage snow\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"0-1 how frozen the leaves look\""];
+8 [label="float",comment="name: \"float\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"0-1 how frozen the leaves look\""];
+9 [label="depth",comment="name: \"depth\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+10 [label="float",comment="name: \"float\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+11 [label="scale",comment="name: \"scale\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+12 [label="float",comment="name: \"float\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+13 [label="map water color ARGB",comment="name: \"map water color ARGB\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+14 [label="int",comment="name: \"int\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+15 [label="rain",comment="name: \"rain\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+16 [label="bool",comment="name: \"bool\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+17 [label="tags",comment="name: \"tags\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+18 [label="tags",comment="name: \"tags\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+19 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+20 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+21 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+22 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+23 [label="chunk gen data",comment="name: \"chunk gen data\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 0, notes: \"Only used with client-side chunk generation\""];
+24 [label="climate",comment="name: \"climate\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+25 [label="temperature",comment="name: \"temperature\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 26 [label="float",comment="name: \"float\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-27 [label="map water color ARGB",comment="name: \"map water color ARGB\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-28 [label="int",comment="name: \"int\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-29 [label="rain",comment="name: \"rain\", typeName: \"\", id: 29, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-30 [label="bool",comment="name: \"bool\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-31 [label="tags",comment="name: \"tags\", typeName: \"std::optional<struct BiomeTagsData>\", id: 31, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-44 [label="std::optional<struct BiomeTagsData>",comment="name: \"std::optional<struct BiomeTagsData>\", typeName: \"\", id: 44, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-45 [label="chunk gen data",comment="name: \"chunk gen data\", typeName: \"std::optional<struct BiomeDefinitionChunkGenData>\", id: 45, branchId: 0, recurseId: -1, attributes: 256, notes: \"Only used with client-side chunk generation\""];
-392 [label="std::optional<struct BiomeDefinitionChunkGenData>",comment="name: \"std::optional<struct BiomeDefinitionChunkGenData>\", typeName: \"\", id: 392, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;16;18;20;22;24;26;28;30;44;392}
+27 [label="downfall",comment="name: \"downfall\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+28 [label="float",comment="name: \"float\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+29 [label="snow accumulation min",comment="name: \"snow accumulation min\", typeName: \"\", id: 29, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+30 [label="float",comment="name: \"float\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+31 [label="snow accumulation max",comment="name: \"snow accumulation max\", typeName: \"\", id: 31, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+32 [label="float",comment="name: \"float\", typeName: \"\", id: 32, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+33 [label="consolidated features",comment="name: \"consolidated features\", typeName: \"\", id: 33, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+34 [label="features",comment="name: \"features\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+35 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 35, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+36 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+37 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 37, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+38 [label="scatter",comment="name: \"scatter\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+39 [label="coordinates",comment="name: \"coordinates\", typeName: \"\", id: 39, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+40 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 40, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+41 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 41, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+42 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 42, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+43 [label="min value type",comment="name: \"min value type\", typeName: \"\", id: 43, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+44 [label="varint",comment="name: \"varint\", typeName: \"\", id: 44, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+45 [label="min value",comment="name: \"min value\", typeName: \"\", id: 45, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+46 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 46, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+47 [label="max value type",comment="name: \"max value type\", typeName: \"\", id: 47, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+48 [label="varint",comment="name: \"varint\", typeName: \"\", id: 48, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+49 [label="max value",comment="name: \"max value\", typeName: \"\", id: 49, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+50 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 50, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+51 [label="grid offset",comment="name: \"grid offset\", typeName: \"\", id: 51, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+52 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 52, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+53 [label="grid step size",comment="name: \"grid step size\", typeName: \"\", id: 53, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+54 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 54, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+55 [label="distribution",comment="name: \"distribution\", typeName: \"\", id: 55, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+56 [label="enum RandomDistributionType",comment="name: \"enum RandomDistributionType\", typeName: \"\", id: 56, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+57 [label="eval order",comment="name: \"eval order\", typeName: \"\", id: 57, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+58 [label="enum CoordinateEvaluationOrder",comment="name: \"enum CoordinateEvaluationOrder\", typeName: \"\", id: 58, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+59 [label="chance percent type",comment="name: \"chance percent type\", typeName: \"\", id: 59, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+60 [label="varint",comment="name: \"varint\", typeName: \"\", id: 60, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+61 [label="chance percent",comment="name: \"chance percent\", typeName: \"\", id: 61, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+62 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 62, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+63 [label="chance numerator",comment="name: \"chance numerator\", typeName: \"\", id: 63, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+64 [label="int",comment="name: \"int\", typeName: \"\", id: 64, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+65 [label="chance denominator",comment="name: \"chance denominator\", typeName: \"\", id: 65, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+66 [label="int",comment="name: \"int\", typeName: \"\", id: 66, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+67 [label="iterations type",comment="name: \"iterations type\", typeName: \"\", id: 67, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+68 [label="varint",comment="name: \"varint\", typeName: \"\", id: 68, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+69 [label="iterations",comment="name: \"iterations\", typeName: \"\", id: 69, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+70 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 70, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+71 [label="feature",comment="name: \"feature\", typeName: \"\", id: 71, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+72 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 72, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+73 [label="identifier",comment="name: \"identifier\", typeName: \"\", id: 73, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+74 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 74, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+75 [label="pass",comment="name: \"pass\", typeName: \"\", id: 75, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+76 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 76, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+77 [label="can use internal feature",comment="name: \"can use internal feature\", typeName: \"\", id: 77, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+78 [label="bool",comment="name: \"bool\", typeName: \"\", id: 78, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+79 [label="mountain params",comment="name: \"mountain params\", typeName: \"\", id: 79, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+80 [label="steep block",comment="name: \"steep block\", typeName: \"\", id: 80, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+81 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 81, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+82 [label="north slopes",comment="name: \"north slopes\", typeName: \"\", id: 82, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+83 [label="bool",comment="name: \"bool\", typeName: \"\", id: 83, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+84 [label="south slopes",comment="name: \"south slopes\", typeName: \"\", id: 84, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+85 [label="bool",comment="name: \"bool\", typeName: \"\", id: 85, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+86 [label="west slopes",comment="name: \"west slopes\", typeName: \"\", id: 86, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+87 [label="bool",comment="name: \"bool\", typeName: \"\", id: 87, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+88 [label="east slopes",comment="name: \"east slopes\", typeName: \"\", id: 88, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+89 [label="bool",comment="name: \"bool\", typeName: \"\", id: 89, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+90 [label="top slide enabled",comment="name: \"top slide enabled\", typeName: \"\", id: 90, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+91 [label="bool",comment="name: \"bool\", typeName: \"\", id: 91, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+92 [label="surface material adjustments",comment="name: \"surface material adjustments\", typeName: \"\", id: 92, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+93 [label="adjustments",comment="name: \"adjustments\", typeName: \"\", id: 93, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+94 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 94, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+95 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 95, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+96 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 96, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+97 [label="noise freq scale",comment="name: \"noise freq scale\", typeName: \"\", id: 97, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+98 [label="float",comment="name: \"float\", typeName: \"\", id: 98, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+99 [label="noise lower bound",comment="name: \"noise lower bound\", typeName: \"\", id: 99, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+100 [label="float",comment="name: \"float\", typeName: \"\", id: 100, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+101 [label="noise upper bound",comment="name: \"noise upper bound\", typeName: \"\", id: 101, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+102 [label="float",comment="name: \"float\", typeName: \"\", id: 102, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+103 [label="height min type",comment="name: \"height min type\", typeName: \"\", id: 103, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+104 [label="varint",comment="name: \"varint\", typeName: \"\", id: 104, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+105 [label="height min",comment="name: \"height min\", typeName: \"\", id: 105, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+106 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 106, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+107 [label="height max type",comment="name: \"height max type\", typeName: \"\", id: 107, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+108 [label="varint",comment="name: \"varint\", typeName: \"\", id: 108, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+109 [label="height max",comment="name: \"height max\", typeName: \"\", id: 109, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+110 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 110, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+111 [label="adjusted materials",comment="name: \"adjusted materials\", typeName: \"\", id: 111, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+112 [label="top block",comment="name: \"top block\", typeName: \"\", id: 112, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+113 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 113, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+114 [label="mid block",comment="name: \"mid block\", typeName: \"\", id: 114, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+115 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 115, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+116 [label="sea floor block",comment="name: \"sea floor block\", typeName: \"\", id: 116, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+117 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 117, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+118 [label="foundation block",comment="name: \"foundation block\", typeName: \"\", id: 118, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+119 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 119, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+120 [label="sea block",comment="name: \"sea block\", typeName: \"\", id: 120, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+121 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 121, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+122 [label="sea floor depth",comment="name: \"sea floor depth\", typeName: \"\", id: 122, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+123 [label="int",comment="name: \"int\", typeName: \"\", id: 123, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+124 [label="overworld gen rules",comment="name: \"overworld gen rules\", typeName: \"\", id: 124, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+125 [label="hills transformations",comment="name: \"hills transformations\", typeName: \"\", id: 125, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+126 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 126, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+127 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 127, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+128 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 128, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+129 [label="biome identifier",comment="name: \"biome identifier\", typeName: \"\", id: 129, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+130 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 130, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+131 [label="weight",comment="name: \"weight\", typeName: \"\", id: 131, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+132 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 132, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+133 [label="mutate transformations",comment="name: \"mutate transformations\", typeName: \"\", id: 133, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+134 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 134, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+135 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 135, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+136 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 136, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+137 [label="biome identifier",comment="name: \"biome identifier\", typeName: \"\", id: 137, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+138 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 138, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+139 [label="weight",comment="name: \"weight\", typeName: \"\", id: 139, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+140 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 140, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+141 [label="river transformations",comment="name: \"river transformations\", typeName: \"\", id: 141, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+142 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 142, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+143 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 143, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+144 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 144, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+145 [label="biome identifier",comment="name: \"biome identifier\", typeName: \"\", id: 145, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+146 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 146, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+147 [label="weight",comment="name: \"weight\", typeName: \"\", id: 147, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+148 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 148, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+149 [label="shore transformations",comment="name: \"shore transformations\", typeName: \"\", id: 149, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+150 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 150, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+151 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 151, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+152 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 152, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+153 [label="biome identifier",comment="name: \"biome identifier\", typeName: \"\", id: 153, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+154 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 154, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+155 [label="weight",comment="name: \"weight\", typeName: \"\", id: 155, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+156 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 156, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+157 [label="pre hills edge",comment="name: \"pre hills edge\", typeName: \"\", id: 157, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+158 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 158, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+159 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 159, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+160 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 160, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+161 [label="transforms into",comment="name: \"transforms into\", typeName: \"\", id: 161, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+162 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 162, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+163 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 163, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+164 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 164, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+165 [label="biome identifier",comment="name: \"biome identifier\", typeName: \"\", id: 165, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+166 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 166, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+167 [label="weight",comment="name: \"weight\", typeName: \"\", id: 167, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+168 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 168, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+169 [label="condition json",comment="name: \"condition json\", typeName: \"\", id: 169, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+170 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 170, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+171 [label="min passing neighbors",comment="name: \"min passing neighbors\", typeName: \"\", id: 171, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+172 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 172, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+173 [label="post shore edge",comment="name: \"post shore edge\", typeName: \"\", id: 173, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+174 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 174, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+175 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 175, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+176 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 176, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+177 [label="transforms into",comment="name: \"transforms into\", typeName: \"\", id: 177, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+178 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 178, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+179 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 179, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+180 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 180, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+181 [label="biome identifier",comment="name: \"biome identifier\", typeName: \"\", id: 181, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+182 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 182, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+183 [label="weight",comment="name: \"weight\", typeName: \"\", id: 183, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+184 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 184, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+185 [label="condition json",comment="name: \"condition json\", typeName: \"\", id: 185, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+186 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 186, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+187 [label="min passing neighbors",comment="name: \"min passing neighbors\", typeName: \"\", id: 187, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+188 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 188, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+189 [label="climate",comment="name: \"climate\", typeName: \"\", id: 189, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+190 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 190, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+191 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 191, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+192 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 192, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+193 [label="temperature",comment="name: \"temperature\", typeName: \"\", id: 193, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+194 [label="varint",comment="name: \"varint\", typeName: \"\", id: 194, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+195 [label="weight",comment="name: \"weight\", typeName: \"\", id: 195, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+196 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 196, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+197 [label="multinoise gen rules",comment="name: \"multinoise gen rules\", typeName: \"\", id: 197, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+198 [label="temperature",comment="name: \"temperature\", typeName: \"\", id: 198, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+199 [label="float",comment="name: \"float\", typeName: \"\", id: 199, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+200 [label="humidity",comment="name: \"humidity\", typeName: \"\", id: 200, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+201 [label="float",comment="name: \"float\", typeName: \"\", id: 201, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+202 [label="altitude",comment="name: \"altitude\", typeName: \"\", id: 202, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+203 [label="float",comment="name: \"float\", typeName: \"\", id: 203, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+204 [label="weirdness",comment="name: \"weirdness\", typeName: \"\", id: 204, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+205 [label="float",comment="name: \"float\", typeName: \"\", id: 205, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+206 [label="weight",comment="name: \"weight\", typeName: \"\", id: 206, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+207 [label="float",comment="name: \"float\", typeName: \"\", id: 207, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+208 [label="legacy world gen rules",comment="name: \"legacy world gen rules\", typeName: \"\", id: 208, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+209 [label="legacy pre hills edge",comment="name: \"legacy pre hills edge\", typeName: \"\", id: 209, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+210 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 210, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+211 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 211, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+212 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 212, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+213 [label="transforms into",comment="name: \"transforms into\", typeName: \"\", id: 213, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+214 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 214, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+215 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 215, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+216 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 216, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+217 [label="biome identifier",comment="name: \"biome identifier\", typeName: \"\", id: 217, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+218 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 218, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+219 [label="weight",comment="name: \"weight\", typeName: \"\", id: 219, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+220 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 220, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+221 [label="condition json",comment="name: \"condition json\", typeName: \"\", id: 221, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+222 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 222, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+223 [label="min passing neighbors",comment="name: \"min passing neighbors\", typeName: \"\", id: 223, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+224 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 224, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+225 [label="replacement biomes",comment="name: \"replacement biomes\", typeName: \"\", id: 225, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+226 [label="biome replacements",comment="name: \"biome replacements\", typeName: \"\", id: 226, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+227 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 227, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+228 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 228, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+229 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 229, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+230 [label="replacement biome",comment="name: \"replacement biome\", typeName: \"\", id: 230, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+231 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 231, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+232 [label="dimension",comment="name: \"dimension\", typeName: \"\", id: 232, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+233 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 233, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+234 [label="target biomes",comment="name: \"target biomes\", typeName: \"\", id: 234, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+235 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 235, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+236 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 236, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+237 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 237, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+238 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 238, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+239 [label="amount",comment="name: \"amount\", typeName: \"\", id: 239, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+240 [label="float",comment="name: \"float\", typeName: \"\", id: 240, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+241 [label="noise frequency scale",comment="name: \"noise frequency scale\", typeName: \"\", id: 241, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+242 [label="float",comment="name: \"float\", typeName: \"\", id: 242, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+243 [label="replacement index",comment="name: \"replacement index\", typeName: \"\", id: 243, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+244 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 244, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+245 [label="Village Type",comment="name: \"Village Type\", typeName: \"\", id: 245, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+246 [label="enum VillageType",comment="name: \"enum VillageType\", typeName: \"\", id: 246, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+247 [label="surface builder data",comment="name: \"surface builder data\", typeName: \"\", id: 247, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+248 [label="surface materials",comment="name: \"surface materials\", typeName: \"\", id: 248, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+249 [label="top block",comment="name: \"top block\", typeName: \"\", id: 249, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+250 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 250, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+251 [label="mid block",comment="name: \"mid block\", typeName: \"\", id: 251, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+252 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 252, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+253 [label="sea floor block",comment="name: \"sea floor block\", typeName: \"\", id: 253, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+254 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 254, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+255 [label="foundation block",comment="name: \"foundation block\", typeName: \"\", id: 255, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+256 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 256, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+257 [label="sea block",comment="name: \"sea block\", typeName: \"\", id: 257, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+258 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 258, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+259 [label="sea floor depth",comment="name: \"sea floor depth\", typeName: \"\", id: 259, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+260 [label="int",comment="name: \"int\", typeName: \"\", id: 260, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+261 [label="has default overworld surface",comment="name: \"has default overworld surface\", typeName: \"\", id: 261, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+262 [label="bool",comment="name: \"bool\", typeName: \"\", id: 262, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+263 [label="has swamp surface",comment="name: \"has swamp surface\", typeName: \"\", id: 263, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+264 [label="bool",comment="name: \"bool\", typeName: \"\", id: 264, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+265 [label="has frozen ocean surface",comment="name: \"has frozen ocean surface\", typeName: \"\", id: 265, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+266 [label="bool",comment="name: \"bool\", typeName: \"\", id: 266, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+267 [label="has the end surface",comment="name: \"has the end surface\", typeName: \"\", id: 267, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+268 [label="bool",comment="name: \"bool\", typeName: \"\", id: 268, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+269 [label="mesa surface",comment="name: \"mesa surface\", typeName: \"\", id: 269, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+270 [label="clay material",comment="name: \"clay material\", typeName: \"\", id: 270, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+271 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 271, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+272 [label="hard clay material",comment="name: \"hard clay material\", typeName: \"\", id: 272, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+273 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 273, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+274 [label="bryce pillars",comment="name: \"bryce pillars\", typeName: \"\", id: 274, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+275 [label="bool",comment="name: \"bool\", typeName: \"\", id: 275, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+276 [label="has forest",comment="name: \"has forest\", typeName: \"\", id: 276, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+277 [label="bool",comment="name: \"bool\", typeName: \"\", id: 277, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+278 [label="capped surface",comment="name: \"capped surface\", typeName: \"\", id: 278, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+279 [label="floor blocks",comment="name: \"floor blocks\", typeName: \"\", id: 279, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+280 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 280, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+281 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 281, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+282 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 282, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+283 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 283, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+284 [label="ceiling blocks",comment="name: \"ceiling blocks\", typeName: \"\", id: 284, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+285 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 285, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+286 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 286, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+287 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 287, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+288 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 288, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+289 [label="sea block",comment="name: \"sea block\", typeName: \"\", id: 289, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+290 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 290, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+291 [label="foundation block",comment="name: \"foundation block\", typeName: \"\", id: 291, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+292 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 292, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+293 [label="beach block",comment="name: \"beach block\", typeName: \"\", id: 293, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+294 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 294, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+295 [label="noise gradient surface",comment="name: \"noise gradient surface\", typeName: \"\", id: 295, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+296 [label="non-replaceable blocks",comment="name: \"non-replaceable blocks\", typeName: \"\", id: 296, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+297 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 297, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+298 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 298, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+299 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 299, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+300 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 300, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+301 [label="gradient blocks",comment="name: \"gradient blocks\", typeName: \"\", id: 301, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+302 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 302, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+303 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 303, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+304 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 304, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+305 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 305, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+306 [label="noise seed string",comment="name: \"noise seed string\", typeName: \"\", id: 306, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+307 [label="string",comment="name: \"string\", typeName: \"\", id: 307, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+308 [label="first octave",comment="name: \"first octave\", typeName: \"\", id: 308, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+309 [label="int",comment="name: \"int\", typeName: \"\", id: 309, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+310 [label="amplitudes",comment="name: \"amplitudes\", typeName: \"\", id: 310, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+311 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 311, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+312 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 312, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+313 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 313, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+314 [label="float",comment="name: \"float\", typeName: \"\", id: 314, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+315 [label="subsurface builder data",comment="name: \"subsurface builder data\", typeName: \"\", id: 315, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+316 [label="surface materials",comment="name: \"surface materials\", typeName: \"\", id: 316, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+317 [label="top block",comment="name: \"top block\", typeName: \"\", id: 317, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+318 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 318, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+319 [label="mid block",comment="name: \"mid block\", typeName: \"\", id: 319, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+320 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 320, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+321 [label="sea floor block",comment="name: \"sea floor block\", typeName: \"\", id: 321, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+322 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 322, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+323 [label="foundation block",comment="name: \"foundation block\", typeName: \"\", id: 323, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+324 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 324, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+325 [label="sea block",comment="name: \"sea block\", typeName: \"\", id: 325, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+326 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 326, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+327 [label="sea floor depth",comment="name: \"sea floor depth\", typeName: \"\", id: 327, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+328 [label="int",comment="name: \"int\", typeName: \"\", id: 328, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+329 [label="has default overworld surface",comment="name: \"has default overworld surface\", typeName: \"\", id: 329, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+330 [label="bool",comment="name: \"bool\", typeName: \"\", id: 330, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+331 [label="has swamp surface",comment="name: \"has swamp surface\", typeName: \"\", id: 331, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+332 [label="bool",comment="name: \"bool\", typeName: \"\", id: 332, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+333 [label="has frozen ocean surface",comment="name: \"has frozen ocean surface\", typeName: \"\", id: 333, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+334 [label="bool",comment="name: \"bool\", typeName: \"\", id: 334, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+335 [label="has the end surface",comment="name: \"has the end surface\", typeName: \"\", id: 335, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+336 [label="bool",comment="name: \"bool\", typeName: \"\", id: 336, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+337 [label="mesa surface",comment="name: \"mesa surface\", typeName: \"\", id: 337, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+338 [label="clay material",comment="name: \"clay material\", typeName: \"\", id: 338, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+339 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 339, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+340 [label="hard clay material",comment="name: \"hard clay material\", typeName: \"\", id: 340, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+341 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 341, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+342 [label="bryce pillars",comment="name: \"bryce pillars\", typeName: \"\", id: 342, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+343 [label="bool",comment="name: \"bool\", typeName: \"\", id: 343, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+344 [label="has forest",comment="name: \"has forest\", typeName: \"\", id: 344, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+345 [label="bool",comment="name: \"bool\", typeName: \"\", id: 345, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+346 [label="capped surface",comment="name: \"capped surface\", typeName: \"\", id: 346, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+347 [label="floor blocks",comment="name: \"floor blocks\", typeName: \"\", id: 347, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+348 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 348, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+349 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 349, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+350 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 350, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+351 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 351, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+352 [label="ceiling blocks",comment="name: \"ceiling blocks\", typeName: \"\", id: 352, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+353 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 353, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+354 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 354, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+355 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 355, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+356 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 356, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+357 [label="sea block",comment="name: \"sea block\", typeName: \"\", id: 357, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+358 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 358, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+359 [label="foundation block",comment="name: \"foundation block\", typeName: \"\", id: 359, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+360 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 360, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+361 [label="beach block",comment="name: \"beach block\", typeName: \"\", id: 361, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+362 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 362, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+363 [label="noise gradient surface",comment="name: \"noise gradient surface\", typeName: \"\", id: 363, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+364 [label="non-replaceable blocks",comment="name: \"non-replaceable blocks\", typeName: \"\", id: 364, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+365 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 365, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+366 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 366, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+367 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 367, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+368 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 368, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+369 [label="gradient blocks",comment="name: \"gradient blocks\", typeName: \"\", id: 369, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+370 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 370, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+371 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 371, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+372 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 372, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+373 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 373, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+374 [label="noise seed string",comment="name: \"noise seed string\", typeName: \"\", id: 374, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+375 [label="string",comment="name: \"string\", typeName: \"\", id: 375, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+376 [label="first octave",comment="name: \"first octave\", typeName: \"\", id: 376, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+377 [label="int",comment="name: \"int\", typeName: \"\", id: 377, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+378 [label="amplitudes",comment="name: \"amplitudes\", typeName: \"\", id: 378, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+379 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 379, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+380 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 380, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+381 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 381, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+382 [label="float",comment="name: \"float\", typeName: \"\", id: 382, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;6;8;10;12;14;16;22;26;28;30;32;44;46;48;50;52;54;56;58;60;62;64;66;68;70;72;74;76;78;81;83;85;87;89;91;98;100;102;104;106;108;110;113;115;117;119;121;123;130;132;138;140;146;148;154;156;166;168;170;172;182;184;186;188;194;196;199;201;203;205;207;218;220;222;224;231;233;238;240;242;244;246;250;252;254;256;258;260;262;264;266;268;271;273;275;277;283;288;290;292;294;300;305;307;309;314;318;320;322;324;326;328;330;332;334;336;339;341;343;345;351;356;358;360;362;368;373;375;377;382}
 
 }

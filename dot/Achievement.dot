@@ -6,7 +6,7 @@ rankdir = LR
 
 0 [label="Achievement",comment="name: \"Achievement\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Achievement ID",comment="name: \"Achievement ID\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-2 [label="enum enum MinecraftEventing::AchievementIds",comment="name: \"enum enum MinecraftEventing::AchievementIds\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+2 [label="enum MinecraftEventing::AchievementIds",comment="name: \"enum MinecraftEventing::AchievementIds\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 { rank = max;2}
 
 }

@@ -8,7 +8,7 @@ rankdir = LR
 
 0 [label="POICauldronUsed",comment="name: \"POICauldronUsed\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Block Interaction Type",comment="name: \"Block Interaction Type\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-2 [label="enum enum MinecraftEventing::POIBlockInteractionType",comment="name: \"enum enum MinecraftEventing::POIBlockInteractionType\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+2 [label="enum MinecraftEventing::POIBlockInteractionType",comment="name: \"enum MinecraftEventing::POIBlockInteractionType\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 3 [label="Item Id",comment="name: \"Item Id\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"Id of the relevant item used in the interaction.\""];
 4 [label="short",comment="name: \"short\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"Id of the relevant item used in the interaction.\""];
 { rank = max;2;4}

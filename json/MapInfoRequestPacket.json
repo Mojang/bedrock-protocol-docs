@@ -1,12 +1,12 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2014591518",
+    "$id": "501036390",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "2215273817": {
-            "title": "struct `anonymous-namespace'::MapInfoRequestPacketAnon::ClientPixelsProxy",
+        "1930608923": {
+            "title": "(anonymous namespace)::MapInfoRequestPacketAnon::ClientPixelsProxy",
             "type": "object",
             "properties": {
                 "index": {
@@ -27,7 +27,7 @@
                 "pixel"
             ]
         },
-        "1221684255": {
+        "4257541248": {
             "title": "ActorUniqueID",
             "type": "object",
             "properties": {
@@ -53,7 +53,7 @@
             "description": "These are sent from the client to tell the Server map about terrain pixels it doesn't know about",
             "type": "array",
             "items": {
-                "$ref": "#/definitions/2215273817"
+                "$ref": "#/definitions/1930608923"
             },
             "x-serialization-options": [
                 "No size compression"
@@ -62,7 +62,7 @@
             "maxItems": 16384
         },
         "Map Unique ID": {
-            "$ref": "#/definitions/1221684255",
+            "$ref": "#/definitions/4257541248",
             "x-ordinal-index": 0
         }
     },

@@ -1,28 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "586894191",
+    "$id": "3458900759",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "1221684255": {
-            "title": "ActorUniqueID",
-            "type": "object",
-            "properties": {
-                "Actor Unique ID": {
-                    "type": "integer",
-                    "x-underlying-type": "int64",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "Actor Unique ID"
-            ]
-        },
-        "1497397410": {
+        "1262916889": {
             "title": "PlayerInputTick",
             "type": "object",
             "properties": {
@@ -39,6 +22,23 @@
             },
             "required": [
                 "Input tick"
+            ]
+        },
+        "4257541248": {
+            "title": "ActorUniqueID",
+            "type": "object",
+            "properties": {
+                "Actor Unique ID": {
+                    "type": "integer",
+                    "x-underlying-type": "int64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Actor Unique ID"
             ]
         }
     },
@@ -66,12 +66,12 @@
             "x-ordinal-index": 0
         },
         "Target player": {
-            "$ref": "#/definitions/1221684255",
+            "$ref": "#/definitions/4257541248",
             "x-ordinal-index": 1
         },
         "Tick": {
             "description": "Most relevant to supply for transitioning into and out of spectator while in motion",
-            "$ref": "#/definitions/1497397410",
+            "$ref": "#/definitions/1262916889",
             "x-ordinal-index": 2
         }
     },

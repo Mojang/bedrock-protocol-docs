@@ -1,46 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2427712553",
+    "$id": "2648929569",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "2872336518": {
-            "title": "DimensionType",
-            "type": "object",
-            "properties": {
-                "value": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "value"
-            ]
-        },
-        "3323842864": {
-            "title": "EntityNetId",
-            "type": "object",
-            "properties": {
-                "Raw Id": {
-                    "type": "integer",
-                    "x-underlying-type": "uint32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
-                }
-            },
-            "required": [
-                "Raw Id"
-            ]
-        },
-        "820712576": {
+        "1488572312": {
             "title": "BlockPos",
             "type": "object",
             "properties": {
@@ -74,6 +39,41 @@
                 "Y",
                 "Z"
             ]
+        },
+        "1586048219": {
+            "title": "DimensionType",
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "value"
+            ]
+        },
+        "3321325640": {
+            "title": "EntityNetId",
+            "type": "object",
+            "properties": {
+                "Raw Id": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Raw Id"
+            ]
         }
     },
     "title": "AddVolumeEntityPacket",
@@ -81,11 +81,11 @@
     "type": "object",
     "properties": {
         "Components": {
-            "$ref": "#/definitions/4158325036",
+            "$ref": "#/definitions/3172631924",
             "x-ordinal-index": 1
         },
         "Dimension Type": {
-            "$ref": "#/definitions/2872336518",
+            "$ref": "#/definitions/1586048219",
             "x-ordinal-index": 6
         },
         "Engine Version": {
@@ -95,7 +95,7 @@
             "x-runtime-constraint-description": "Ensure it is a valid MinEngineVersion"
         },
         "Entity Network Id": {
-            "$ref": "#/definitions/3323842864",
+            "$ref": "#/definitions/3321325640",
             "x-ordinal-index": 0
         },
         "Instance Name": {
@@ -109,11 +109,11 @@
             "minLength": 1
         },
         "Max Bounds": {
-            "$ref": "#/definitions/820712576",
+            "$ref": "#/definitions/1488572312",
             "x-ordinal-index": 5
         },
         "Min Bounds": {
-            "$ref": "#/definitions/820712576",
+            "$ref": "#/definitions/1488572312",
             "x-ordinal-index": 4
         }
     },

@@ -1,12 +1,12 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "4218540248",
+    "$id": "2693616080",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "2142523653": {
-            "title": "struct ActorLink",
+        "3671831922": {
+            "title": "ActorLink",
             "type": "object",
             "properties": {
                 "Immediate": {
@@ -21,15 +21,15 @@
                     "x-ordinal-index": 4
                 },
                 "Target A": {
-                    "$ref": "#/definitions/1221684255",
+                    "$ref": "#/definitions/4257541248",
                     "x-ordinal-index": 0
                 },
                 "Target B": {
-                    "$ref": "#/definitions/1221684255",
+                    "$ref": "#/definitions/4257541248",
                     "x-ordinal-index": 1
                 },
                 "Type": {
-                    "title": "enum ActorLinkType",
+                    "title": "ActorLinkType",
                     "type": "string",
                     "enum": [
                         "None",
@@ -57,7 +57,7 @@
                 "Vehicle Angular Velocity"
             ]
         },
-        "1221684255": {
+        "4257541248": {
             "title": "ActorUniqueID",
             "type": "object",
             "properties": {
@@ -80,7 +80,7 @@
     "type": "object",
     "properties": {
         "Link": {
-            "$ref": "#/definitions/2142523653",
+            "$ref": "#/definitions/3671831922",
             "x-ordinal-index": 0
         }
     },

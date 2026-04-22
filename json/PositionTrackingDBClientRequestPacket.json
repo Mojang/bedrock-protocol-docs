@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "381612363",
+    "$id": "1177007155",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "2150080226": {
+        "767557450": {
             "title": "PositionTrackingId",
             "type": "object",
             "properties": {
@@ -28,7 +28,7 @@
     "type": "object",
     "properties": {
         "Action": {
-            "title": "enum PositionTrackingDBClientRequestPacketPayload::Action",
+            "title": "PositionTrackingDBClientRequestPacketPayload::Action",
             "type": "string",
             "enum": [
                 "Query"
@@ -40,7 +40,7 @@
             "x-ordinal-index": 0
         },
         "Id": {
-            "$ref": "#/definitions/2150080226",
+            "$ref": "#/definitions/767557450",
             "x-ordinal-index": 1
         }
     },

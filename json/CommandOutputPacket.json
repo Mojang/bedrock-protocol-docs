@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3179482359",
+    "$id": "520439455",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.10",
-    "x-protocol-version": 944,
+    "x-minecraft-version": "1.26.20",
+    "x-protocol-version": 975,
     "definitions": {
-        "320823778": {
+        "3627850842": {
             "title": "CommandOutputMessage",
             "type": "object",
             "properties": {
@@ -35,7 +35,7 @@
                 "Successful?"
             ]
         },
-        "435823779": {
+        "36326044": {
             "title": "CommandOriginData",
             "type": "object",
             "properties": {
@@ -68,7 +68,7 @@
                 },
                 "UUID": {
                     "description": "The unique UUID that represents an instantiation of a command. Each time a command is run it should be given a UUID to represent that instance.",
-                    "$ref": "#/definitions/1616419299",
+                    "$ref": "#/definitions/234962571",
                     "x-ordinal-index": 1
                 }
             },
@@ -77,7 +77,7 @@
                 "UUID"
             ]
         },
-        "1616419299": {
+        "234962571": {
             "title": "mce::UUID",
             "type": "object",
             "properties": {
@@ -99,7 +99,7 @@
                 "Most Significant Bits"
             ]
         },
-        "2700246651": {
+        "902783091": {
             "title": "CommandOutput",
             "type": "object",
             "properties": {
@@ -113,7 +113,7 @@
                     "type": "array",
                     "default": [],
                     "items": {
-                        "$ref": "#/definitions/320823778"
+                        "$ref": "#/definitions/3627850842"
                     },
                     "x-ordinal-index": 2
                 },
@@ -151,12 +151,12 @@
     "properties": {
         "Origin Data": {
             "description": "The origin of the command.",
-            "$ref": "#/definitions/435823779",
+            "$ref": "#/definitions/36326044",
             "x-ordinal-index": 0
         },
         "Output": {
             "description": "The output.",
-            "$ref": "#/definitions/2700246651",
+            "$ref": "#/definitions/902783091",
             "x-ordinal-index": 1
         }
     },

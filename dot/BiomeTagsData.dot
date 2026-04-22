@@ -1,20 +1,18 @@
 digraph "BiomeTagsData" {
 rankdir = LR
-36
-36 -> 37
-37 -> 38
-38 -> 39
-37 -> 40
-40 -> 41
-41 -> 42
+0
+0 -> 1
+1 -> 2
+2 -> 3
+1 -> 4
+4 -> 5
 
-36 [label="BiomeTagsData",comment="name: \"BiomeTagsData\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-37 [label="tag",comment="name: \"tag\", typeName: \"\", id: 37, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-38 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-39 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 39, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-40 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 40, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-41 [label="tags",comment="name: \"tags\", typeName: \"short\", id: 41, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-42 [label="short",comment="name: \"short\", typeName: \"\", id: 42, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;39;42}
+0 [label="BiomeTagsData",comment="name: \"BiomeTagsData\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="tags",comment="name: \"tags\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+5 [label="unsigned short",comment="name: \"unsigned short\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;5}
 
 }

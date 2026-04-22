@@ -1,0 +1,18 @@
+digraph "WaypointGroup::WaypointHandle" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+2 -> 3
+1 -> 4
+4 -> 5
+
+0 [label="WaypointGroup::WaypointHandle",comment="name: \"WaypointGroup::WaypointHandle\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="UUID",comment="name: \"UUID\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"mce::UUID used to lookup Waypoint in WaypointGroups.\""];
+2 [label="Most Significant Bits",comment="name: \"Most Significant Bits\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="unsigned int64",comment="name: \"unsigned int64\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+4 [label="Least Significant Bits",comment="name: \"Least Significant Bits\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="unsigned int64",comment="name: \"unsigned int64\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3;5}
+
+}

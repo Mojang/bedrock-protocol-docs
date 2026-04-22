@@ -1,0 +1,12 @@
+digraph "IntTag" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+
+0 [label="IntTag",comment="name: \"IntTag\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="data",comment="name: \"data\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="varint",comment="name: \"varint\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2}
+
+}
