@@ -1,0 +1,20 @@
+digraph "PackInstanceId" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+0 -> 5
+5 -> 6
+
+0 [label="PackInstanceId",comment="name: \"PackInstanceId\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Pack ID",comment="name: \"Pack ID\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"UUID of the pack\""];
+2 [label="string",comment="name: \"string\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"UUID of the pack\""];
+3 [label="Version",comment="name: \"Version\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"SemVer version of the pack\""];
+4 [label="string",comment="name: \"string\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"SemVer version of the pack\""];
+5 [label="Sub Pack Name",comment="name: \"Sub Pack Name\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+6 [label="string",comment="name: \"string\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;6}
+
+}

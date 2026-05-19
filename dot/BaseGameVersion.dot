@@ -1,12 +1,12 @@
 digraph "BaseGameVersion" {
 rankdir = LR
-14
-14 -> 15
-15 -> 16
+129
+129 -> 130
+130 -> 131
 
-14 [label="BaseGameVersion",comment="name: \"BaseGameVersion\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-15 [label="Base Game Version",comment="name: \"Base Game Version\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"Format: 0.0.0 (i.e. Major.Minor.Patch)\""];
-16 [label="string",comment="name: \"string\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;16}
+129 [label="BaseGameVersion",comment="name: \"BaseGameVersion\", typeName: \"\", id: 129, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+130 [label="Base Game Version",comment="name: \"Base Game Version\", typeName: \"\", id: 130, branchId: 0, recurseId: -1, attributes: 0, notes: \"Format: 0.0.0 (i.e. Major.Minor.Patch)\""];
+131 [label="string",comment="name: \"string\", typeName: \"\", id: 131, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;131}
 
 }

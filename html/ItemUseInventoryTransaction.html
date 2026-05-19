@@ -1,0 +1,50 @@
+<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/ItemUseInventoryTransaction.svg" alt="ItemUseInventoryTransaction">
+<br><table><col width="10%"><col width="10%"><col width="15%"><col width="80%"><tr><th>Field Name</th><th>Field Type</th><th>Field Constraints</th><th>Field Notes</th></tr><tr><td>Actions</td>
+<td>InventoryTransaction</td>
+<td></td>
+<td>Base inventory actions. Lists the inventory slot changes associated with this transaction.</td>
+</tr><tr><td>Action Type</td>
+<td>enum ItemUseActionType</td>
+<td></td>
+<td>The type of item use action performed.</td>
+</tr><tr><td>Trigger Type</td>
+<td>enum ItemUseTriggerType</td>
+<td></td>
+<td>PlayerInput if a direct result of the player's initial button input. SimulationTick if the player is holding down input from a previous tick.</td>
+</tr><tr><td>Position</td>
+<td>BlockPos</td>
+<td></td>
+<td>The position of the target block.</td>
+</tr><tr><td>Face</td>
+<td>unsigned byte</td>
+<td>&lt;div style="padding-left: 0px;"&gt;Minimum = 0&lt;br&gt;Maximum = 255&lt;/div&gt;</td>
+<td>The face of the target block that was clicked.</td>
+</tr><tr><td>Slot</td>
+<td>varint</td>
+<td></td>
+<td>The inventory slot of the item being used.</td>
+</tr><tr><td>Item</td>
+<td>NetworkItemStackDescriptor</td>
+<td></td>
+<td>The item stack descriptor of the item being used.</td>
+</tr><tr><td>From Position</td>
+<td>Vec3</td>
+<td></td>
+<td>The player's position when this transaction was sent.</td>
+</tr><tr><td>Click Position</td>
+<td>Vec3</td>
+<td></td>
+<td>The position within the target block face that was clicked.</td>
+</tr><tr><td>Target Block Id</td>
+<td>unsigned varint</td>
+<td>&lt;div style="padding-left: 0px;"&gt;Minimum = 0&lt;/div&gt;</td>
+<td>The runtime block state ID of the target block.</td>
+</tr><tr><td>Client Interact Prediction</td>
+<td>enum ItemUsePredictedResult</td>
+<td></td>
+<td>Whether the client predicted the interaction would succeed.</td>
+</tr><tr><td>Client Cooldown State</td>
+<td>enum ItemUseClientCooldownState</td>
+<td></td>
+<td>Whether the item is currently on cooldown on the client.</td>
+</tr></table></body> </html>

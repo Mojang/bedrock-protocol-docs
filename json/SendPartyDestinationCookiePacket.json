@@ -1,0 +1,42 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "3699646305",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.30",
+    "x-protocol-version": 1001,
+    "title": "SendPartyDestinationCookiePacket",
+    "description": "Sent by the server to a client with a party destination cookie.",
+    "type": "object",
+    "properties": {
+        "cookie": {
+            "type": "string",
+            "x-ordinal-index": 0,
+            "maxLength": 2048
+        },
+        "destination_name": {
+            "type": "string",
+            "x-ordinal-index": 2,
+            "maxLength": 64
+        },
+        "intent": {
+            "title": "PartyDestinationCookieIntent",
+            "type": "string",
+            "enum": [
+                "Notify",
+                "OptIn",
+                "OptOut"
+            ],
+            "x-underlying-type": "int8",
+            "x-ordinal-index": 1
+        }
+    },
+    "required": [
+        "cookie",
+        "destination_name",
+        "intent"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 349,
+        "[cereal:packet_details]": ""
+    }
+}

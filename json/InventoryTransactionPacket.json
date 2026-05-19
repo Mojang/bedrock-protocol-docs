@@ -1,0 +1,774 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "1897955869",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.30",
+    "x-protocol-version": 1001,
+    "definitions": {
+        "2707715806": {
+            "title": "ItemStackLegacyRequestId",
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "description": "Raw Id (32 bit signed)",
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "ID"
+            ]
+        },
+        "4138486877": {
+            "title": "ItemStackNetIdVariant",
+            "type": "object",
+            "properties": {
+                "Item stack net ID variant": {
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/1433098745",
+                            "x-ordinal-index": 0
+                        },
+                        {
+                            "$ref": "#/definitions/3359047935",
+                            "x-ordinal-index": 1
+                        },
+                        {
+                            "$ref": "#/definitions/2707715806",
+                            "x-ordinal-index": 2
+                        }
+                    ],
+                    "x-control-value-type": "uint32",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Item stack net ID variant"
+            ]
+        },
+        "3043188243": {
+            "title": "InventoryMismatchData",
+            "type": "object",
+            "properties": {
+                "Actions": {
+                    "description": "Base inventory actions. Lists the slot changes making up this server-to-client rejection transaction.",
+                    "$ref": "#/definitions/2259856673",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Actions"
+            ]
+        },
+        "2803432075": {
+            "title": "cerealizer<NetworkItemStackDescriptor>::SerializedData",
+            "type": "object",
+            "properties": {
+                "Aux value": {
+                    "description": "Item auxiliary/metadata value. Used to distinguish item variants. Ignored for block items where aux is always 0.",
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2,
+                    "minimum": 0.0,
+                    "maximum": 32767.0
+                },
+                "Block Runtime Id": {
+                    "description": "Runtime block state ID associated with this item when it represents a block. Used to identify the exact block state placed when the item is used.",
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 4,
+                    "minimum": 0.0
+                },
+                "Id": {
+                    "description": "Send fixed Id of 0 for invalid item",
+                    "type": "integer",
+                    "x-underlying-type": "int16",
+                    "x-ordinal-index": 0
+                },
+                "Net Id Variant": {
+                    "description": "Optional network ID variant used to track item stack identity across client and server.",
+                    "$ref": "#/definitions/4138486877",
+                    "x-ordinal-index": 3
+                },
+                "Stack size": {
+                    "description": "The number of items in the stack. Must be within the item's allowed stack size range.",
+                    "type": "integer",
+                    "x-underlying-type": "uint16",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0,
+                    "maximum": 64.0
+                },
+                "User Data Buffer": {
+                    "description": "The @ItemInstanceUserData.html#ItemInstanceUserData@  binary blob encoded as a String, so it's unsigned varint length prefixed. Get all your nbt+property bytes, calculate the length, write that length, THEN write the data.",
+                    "type": "string",
+                    "x-ordinal-index": 5
+                }
+            },
+            "required": [
+                "Aux value",
+                "Block Runtime Id",
+                "Id",
+                "Stack size",
+                "User Data Buffer"
+            ]
+        },
+        "3359047935": {
+            "title": "ItemStackRequestId",
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "description": "Raw Id (32 bit signed)",
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "ID"
+            ]
+        },
+        "4019127450": {
+            "title": "InventorySource",
+            "type": "object",
+            "properties": {
+                "Bit Flags": {
+                    "title": "InventorySourceFlags",
+                    "description": "Source flags. Present only for WorldInteraction source type.",
+                    "type": "string",
+                    "enum": [
+                        "No Flag",
+                        "World Interaction Random"
+                    ],
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 2
+                },
+                "Container ID": {
+                    "description": "Container window ID. Present only for ContainerInventory and NonImplementedFeatureTODO source types.",
+                    "type": "integer",
+                    "x-underlying-type": "int8",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1,
+                    "minimum": -128.0,
+                    "maximum": 127.0
+                },
+                "Source Type": {
+                    "title": "InventorySourceType",
+                    "description": "The inventory source type.",
+                    "type": "string",
+                    "enum": [
+                        "Container Inventory",
+                        "Global Inventory",
+                        "World Interaction",
+                        "Creative Inventory",
+                        "Non Implemented Feature TODO"
+                    ],
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Source Type"
+            ]
+        },
+        "2259856673": {
+            "title": "InventoryTransaction",
+            "type": "object",
+            "properties": {
+                "Actions": {
+                    "description": "List of inventory slot changes. Each action describes which container slot is changing and what the item descriptor transitions from and to.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/2619651141"
+                    },
+                    "x-ordinal-index": 0,
+                    "x-runtime-constraint-description": "Verify that the number of InventoryActions does not exceed 100"
+                }
+            },
+            "required": [
+                "Actions"
+            ]
+        },
+        "2619651141": {
+            "title": "InventoryAction",
+            "type": "object",
+            "properties": {
+                "From Item": {
+                    "description": "The item descriptor representing the state of the slot before this action.",
+                    "$ref": "#/definitions/1987673147",
+                    "x-ordinal-index": 2
+                },
+                "Slot": {
+                    "description": "The slot index within the source container.",
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                },
+                "Source": {
+                    "description": "The inventory source identifying which container this action targets.",
+                    "$ref": "#/definitions/4019127450",
+                    "x-ordinal-index": 0
+                },
+                "To Item": {
+                    "description": "The item descriptor representing the desired state of the slot after this action.",
+                    "$ref": "#/definitions/1987673147",
+                    "x-ordinal-index": 3
+                }
+            },
+            "required": [
+                "From Item",
+                "Slot",
+                "Source",
+                "To Item"
+            ]
+        },
+        "1987673147": {
+            "title": "NetworkItemStackDescriptor",
+            "$ref": "#/definitions/2803432075"
+        },
+        "1433098745": {
+            "title": "ItemStackNetId",
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "description": "Raw Id (32 bit signed)",
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "ID"
+            ]
+        },
+        "2022041250": {
+            "title": "LegacySetSlot",
+            "type": "object",
+            "properties": {
+                "Container Enum": {
+                    "title": "ContainerEnumName",
+                    "description": "The container enum name identifying which container slot set this belongs to.",
+                    "type": "string",
+                    "enum": [
+                        "AnvilInputContainer",
+                        "AnvilMaterialContainer",
+                        "AnvilResultPreviewContainer",
+                        "SmithingTableInputContainer",
+                        "SmithingTableMaterialContainer",
+                        "SmithingTableResultPreviewContainer",
+                        "ArmorContainer",
+                        "LevelEntityContainer",
+                        "BeaconPaymentContainer",
+                        "BrewingStandInputContainer",
+                        "BrewingStandResultContainer",
+                        "BrewingStandFuelContainer",
+                        "CombinedHotbarAndInventoryContainer",
+                        "CraftingInputContainer",
+                        "CraftingOutputPreviewContainer",
+                        "RecipeConstructionContainer",
+                        "RecipeNatureContainer",
+                        "RecipeItemsContainer",
+                        "RecipeFoodContainer",
+                        "RecipeBlocksContainer",
+                        "RecipeFurnaceItemsContainer",
+                        "RecipeSearchContainer",
+                        "RecipeSearchBarContainer",
+                        "RecipeEquipmentContainer",
+                        "RecipeBookContainer",
+                        "EnchantingInputContainer",
+                        "EnchantingMaterialContainer",
+                        "FurnaceFuelContainer",
+                        "FurnaceIngredientContainer",
+                        "FurnaceResultContainer",
+                        "HorseEquipContainer",
+                        "HotbarContainer",
+                        "InventoryContainer",
+                        "ShulkerBoxContainer",
+                        "TradeIngredient1Container",
+                        "TradeIngredient2Container",
+                        "TradeResultPreviewContainer",
+                        "OffhandContainer",
+                        "CompoundCreatorInput",
+                        "CompoundCreatorOutputPreview",
+                        "ElementConstructorOutputPreview",
+                        "MaterialReducerInput",
+                        "MaterialReducerOutput",
+                        "LabTableInput",
+                        "LoomInputContainer",
+                        "LoomDyeContainer",
+                        "LoomMaterialContainer",
+                        "LoomResultPreviewContainer",
+                        "BlastFurnaceIngredientContainer",
+                        "SmokerIngredientContainer",
+                        "Trade2Ingredient1Container",
+                        "Trade2Ingredient2Container",
+                        "Trade2ResultPreviewContainer",
+                        "GrindstoneInputContainer",
+                        "GrindstoneAdditionalContainer",
+                        "GrindstoneResultPreviewContainer",
+                        "StonecutterInputContainer",
+                        "StonecutterResultPreviewContainer",
+                        "CartographyInputContainer",
+                        "CartographyAdditionalContainer",
+                        "CartographyResultPreviewContainer",
+                        "BarrelContainer",
+                        "CursorContainer",
+                        "CreatedOutputContainer",
+                        "SmithingTableTemplateContainer",
+                        "CrafterLevelEntityContainer",
+                        "DynamicContainer"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Slots": {
+                    "description": "List of inventory slot indices within the given container.",
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "x-underlying-type": "uint8",
+                        "minimum": 0.0,
+                        "maximum": 255.0
+                    },
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Container Enum",
+                "Slots"
+            ]
+        },
+        "1628859409": {
+            "title": "ItemUseOnActorInventoryTransaction",
+            "type": "object",
+            "properties": {
+                "Action Type": {
+                    "title": "ItemUseOnActorActionType",
+                    "description": "Interact: right-click on actor. Attack: left-click or trident spin attack.",
+                    "type": "string",
+                    "enum": [
+                        "Interact",
+                        "Attack",
+                        "Item Interact"
+                    ],
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 2
+                },
+                "Actions": {
+                    "description": "Base inventory actions. Lists the inventory slot changes associated with this transaction.",
+                    "$ref": "#/definitions/2259856673",
+                    "x-ordinal-index": 0
+                },
+                "From Position": {
+                    "description": "The player's position when this transaction was sent.",
+                    "$ref": "#/definitions/725374594",
+                    "x-ordinal-index": 5
+                },
+                "Hit Position": {
+                    "description": "The position on the actor that was clicked.",
+                    "$ref": "#/definitions/725374594",
+                    "x-ordinal-index": 6
+                },
+                "Item": {
+                    "description": "The item stack descriptor of the item being used on the actor.",
+                    "$ref": "#/definitions/1987673147",
+                    "x-ordinal-index": 4
+                },
+                "Runtime Id": {
+                    "description": "The runtime ID of the actor being interacted with or attacked.",
+                    "$ref": "#/definitions/1750201151",
+                    "x-ordinal-index": 1
+                },
+                "Slot": {
+                    "description": "The inventory slot of the item being used on the actor.",
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 3
+                }
+            },
+            "required": [
+                "Action Type",
+                "Actions",
+                "From Position",
+                "Hit Position",
+                "Item",
+                "Runtime Id",
+                "Slot"
+            ]
+        },
+        "725374594": {
+            "title": "Vec3",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "Z": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "X",
+                "Y",
+                "Z"
+            ]
+        },
+        "1365757509": {
+            "title": "ItemUseInventoryTransaction",
+            "type": "object",
+            "properties": {
+                "Action Type": {
+                    "title": "ItemUseActionType",
+                    "description": "The type of item use action performed.",
+                    "type": "string",
+                    "enum": [
+                        "Place",
+                        "Use",
+                        "Destroy",
+                        "Use As Attack"
+                    ],
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 1
+                },
+                "Actions": {
+                    "description": "Base inventory actions. Lists the inventory slot changes associated with this transaction.",
+                    "$ref": "#/definitions/2259856673",
+                    "x-ordinal-index": 0
+                },
+                "Click Position": {
+                    "description": "The position within the target block face that was clicked.",
+                    "$ref": "#/definitions/725374594",
+                    "x-ordinal-index": 8
+                },
+                "Client Cooldown State": {
+                    "title": "ItemUseClientCooldownState",
+                    "description": "Whether the item is currently on cooldown on the client.",
+                    "type": "string",
+                    "enum": [
+                        "Off",
+                        "On"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 11
+                },
+                "Client Interact Prediction": {
+                    "title": "ItemUsePredictedResult",
+                    "description": "Whether the client predicted the interaction would succeed.",
+                    "type": "string",
+                    "enum": [
+                        "Failure",
+                        "Success"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 10
+                },
+                "Face": {
+                    "description": "The face of the target block that was clicked.",
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 4,
+                    "minimum": 0.0,
+                    "maximum": 255.0
+                },
+                "From Position": {
+                    "description": "The player's position when this transaction was sent.",
+                    "$ref": "#/definitions/725374594",
+                    "x-ordinal-index": 7
+                },
+                "Item": {
+                    "description": "The item stack descriptor of the item being used.",
+                    "$ref": "#/definitions/1987673147",
+                    "x-ordinal-index": 6
+                },
+                "Position": {
+                    "description": "The position of the target block.",
+                    "$ref": "#/definitions/1488572312",
+                    "x-ordinal-index": 3
+                },
+                "Slot": {
+                    "description": "The inventory slot of the item being used.",
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 5
+                },
+                "Target Block Id": {
+                    "description": "The runtime block state ID of the target block.",
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 9,
+                    "minimum": 0.0
+                },
+                "Trigger Type": {
+                    "title": "ItemUseTriggerType",
+                    "description": "PlayerInput if a direct result of the player's initial button input. SimulationTick if the player is holding down input from a previous tick.",
+                    "type": "string",
+                    "enum": [
+                        "Unknown",
+                        "Player Input",
+                        "Simulation Tick"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "Action Type",
+                "Actions",
+                "Click Position",
+                "Client Cooldown State",
+                "Client Interact Prediction",
+                "Face",
+                "From Position",
+                "Item",
+                "Position",
+                "Slot",
+                "Target Block Id",
+                "Trigger Type"
+            ]
+        },
+        "1750201151": {
+            "title": "ActorRuntimeID",
+            "type": "object",
+            "properties": {
+                "Actor Runtime ID": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Actor Runtime ID"
+            ]
+        },
+        "2201057966": {
+            "title": "NormalTransactionData",
+            "type": "object",
+            "properties": {
+                "Actions": {
+                    "description": "Base inventory actions. Lists the slot changes making up this Normal (container UI) transaction.",
+                    "$ref": "#/definitions/2259856673",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Actions"
+            ]
+        },
+        "1488572312": {
+            "title": "BlockPos",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1
+                },
+                "Z": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "X",
+                "Y",
+                "Z"
+            ]
+        },
+        "1949982159": {
+            "title": "ItemReleaseInventoryTransaction",
+            "type": "object",
+            "properties": {
+                "Action Type": {
+                    "title": "ItemReleaseActionType",
+                    "description": "Release: firing a bow or releasing a held item. Use: finishing charging a crossbow.",
+                    "type": "string",
+                    "enum": [
+                        "Release",
+                        "Use"
+                    ],
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 1
+                },
+                "Actions": {
+                    "description": "Base inventory actions. Lists the inventory slot changes associated with this transaction.",
+                    "$ref": "#/definitions/2259856673",
+                    "x-ordinal-index": 0
+                },
+                "From Position": {
+                    "description": "The player's position when this transaction was sent.",
+                    "$ref": "#/definitions/725374594",
+                    "x-ordinal-index": 4
+                },
+                "Item": {
+                    "description": "The item stack descriptor of the item being released.",
+                    "$ref": "#/definitions/1987673147",
+                    "x-ordinal-index": 3
+                },
+                "Slot": {
+                    "description": "The inventory slot of the item being released.",
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "Action Type",
+                "Actions",
+                "From Position",
+                "Item",
+                "Slot"
+            ]
+        }
+    },
+    "title": "InventoryTransactionPacket",
+    "description": "Inventory Transaction. Sent for item interaction UI depending on if ItemStackNetManager is enabled as well as when the player uses items in gameplay. See ComplexInventoryTransaction::Type for more details.",
+    "type": "object",
+    "properties": {
+        "Legacy Request ID": {
+            "description": "Used when ItemStackNetManager is enabled. Identifies a legacy client item request. Negative, even values are valid. Zero indicates no legacy request.",
+            "$ref": "#/definitions/2707715806",
+            "x-ordinal-index": 0
+        },
+        "Legacy Set Item Slots": {
+            "description": "Only present when Legacy Request ID is valid. Lists the open containers and their slot indices the client is requesting changes for.",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/2022041250"
+            },
+            "x-ordinal-index": 1
+        },
+        "Transaction": {
+            "description": "The inventory transaction. The variant index encodes ComplexInventoryTransaction::Type (0=Normal, 1=Mismatch, 2=ItemUse, 3=ItemUseOnActor, 4=ItemRelease), matching the legacy wire format discriminator.",
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/2201057966",
+                    "x-ordinal-index": 0
+                },
+                {
+                    "$ref": "#/definitions/3043188243",
+                    "x-ordinal-index": 1
+                },
+                {
+                    "$ref": "#/definitions/1365757509",
+                    "x-ordinal-index": 2
+                },
+                {
+                    "$ref": "#/definitions/1628859409",
+                    "x-ordinal-index": 3
+                },
+                {
+                    "$ref": "#/definitions/1949982159",
+                    "x-ordinal-index": 4
+                }
+            ],
+            "x-control-value-type": "uint32",
+            "x-ordinal-index": 2
+        }
+    },
+    "required": [
+        "Legacy Request ID",
+        "Transaction"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 30,
+        "[cereal:packet_details]": ""
+    }
+}

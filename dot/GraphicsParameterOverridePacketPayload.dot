@@ -18,6 +18,8 @@ rankdir = LR
 14 -> 15
 0 -> 16
 16 -> 17
+0 -> 18
+18 -> 19
 
 0 [label="GraphicsParameterOverridePacketPayload",comment="name: \"GraphicsParameterOverridePacketPayload\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="Parameter Keyframe Values",comment="name: \"Parameter Keyframe Values\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"Time of Day key to Graphics Parameter value, Depending on the parameters, either all three components are used as a color or just the x component is used as a float, int, or bool\""];
@@ -33,10 +35,12 @@ rankdir = LR
 11 [label="float",comment="name: \"float\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 12 [label="Biome Identifier",comment="name: \"Biome Identifier\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 0, notes: \"Determines which biome the override parameter is applied to\""];
 13 [label="string",comment="name: \"string\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 512, notes: \"Determines which biome the override parameter is applied to\""];
-14 [label="Identifier for Parameter",comment="name: \"Identifier for Parameter\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 0, notes: \"Identifier for the parameter that is having its value changed\""];
-15 [label="enum GraphicsOverrideParameterType",comment="name: \"enum GraphicsOverrideParameterType\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 512, notes: \"Identifier for the parameter that is having its value changed\""];
-16 [label="Reset Parameter",comment="name: \"Reset Parameter\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, the specified parameter will be reset. If false, the parameter will be set using the data fields.\""];
-17 [label="bool",comment="name: \"bool\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 512, notes: \"If true, the specified parameter will be reset. If false, the parameter will be set using the data fields.\""];
-{ rank = max;2;4;7;9;11;13;15;17}
+14 [label="Player Identifier",comment="name: \"Player Identifier\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 0, notes: \"Determines which player the override parameter is applied to\""];
+15 [label="string",comment="name: \"string\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 512, notes: \"Determines which player the override parameter is applied to\""];
+16 [label="Identifier for Parameter",comment="name: \"Identifier for Parameter\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 0, notes: \"Identifier for the parameter that is having its value changed\""];
+17 [label="enum GraphicsOverrideParameterType",comment="name: \"enum GraphicsOverrideParameterType\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 512, notes: \"Identifier for the parameter that is having its value changed\""];
+18 [label="Reset Parameter",comment="name: \"Reset Parameter\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 0, notes: \"If true, the specified parameter will be reset. If false, the parameter will be set using the data fields.\""];
+19 [label="bool",comment="name: \"bool\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 512, notes: \"If true, the specified parameter will be reset. If false, the parameter will be set using the data fields.\""];
+{ rank = max;2;4;7;9;11;13;15;17;19}
 
 }

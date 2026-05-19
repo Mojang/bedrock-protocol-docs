@@ -1643,28 +1643,121 @@
 <td></td>
 </tr>
 <tr>
-<td><strong>gradient blocks (Required)</strong></td>
-<td>array&lt;uint32&gt;</td>
+<td rowspan="2"><strong>gradient blocks (Required)</strong></td>
+<td>array&lt;SerializedNoiseBlockSpecifier&gt;</td>
 <td>1</td>
 <td></td>
 </tr>
 <tr>
-<td><strong>noise seed string (Required)</strong></td>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>SerializedNoiseBlockSpecifier (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>noise</strong></td>
 <td>string</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>threshold</strong></td>
+<td>float</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>range</strong></td>
+<td>FloatRange</td>
 <td>2</td>
 <td></td>
 </tr>
 <tr>
-<td><strong>first octave (Required)</strong></td>
-<td>int32</td>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>FloatRange</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>min</strong></td>
+<td>float</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>max</strong></td>
+<td>float</td>
+<td>1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>block</strong></td>
+<td>uint32</td>
 <td>3</td>
 <td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>noise (Required)</strong></td>
+<td>NoiseDescriptor</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>NoiseDescriptor</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name (Required)</strong></td>
+<td>string</td>
+<td>0</td>
+<td>The string used to initialize the noise. Has no impact on the qualitative aspects of the generated values.</td>
+</tr>
+<tr>
+<td><strong>first_octave (Required)</strong></td>
+<td>int32</td>
+<td>1</td>
+<td>Governs the general frequency characteristics of the generated noise. Lower value results in noise with lower frequency content.</td>
 </tr>
 <tr>
 <td><strong>amplitudes (Required)</strong></td>
 <td>array&lt;float&gt;</td>
-<td>4</td>
-<td></td>
+<td>2</td>
+<td>Governs the attenuation of the first n octaves in the generated noise.</td>
+</tr>
+</tbody>
+</table>
+</div></td>
 </tr>
 </tbody>
 </table>
@@ -1902,28 +1995,121 @@
 <td></td>
 </tr>
 <tr>
-<td><strong>gradient blocks (Required)</strong></td>
-<td>array&lt;uint32&gt;</td>
+<td rowspan="2"><strong>gradient blocks (Required)</strong></td>
+<td>array&lt;SerializedNoiseBlockSpecifier&gt;</td>
 <td>1</td>
 <td></td>
 </tr>
 <tr>
-<td><strong>noise seed string (Required)</strong></td>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>SerializedNoiseBlockSpecifier (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>noise</strong></td>
 <td>string</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>threshold</strong></td>
+<td>float</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>range</strong></td>
+<td>FloatRange</td>
 <td>2</td>
 <td></td>
 </tr>
 <tr>
-<td><strong>first octave (Required)</strong></td>
-<td>int32</td>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>FloatRange</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>min</strong></td>
+<td>float</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>max</strong></td>
+<td>float</td>
+<td>1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>block</strong></td>
+<td>uint32</td>
 <td>3</td>
 <td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>noise (Required)</strong></td>
+<td>NoiseDescriptor</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>NoiseDescriptor</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name (Required)</strong></td>
+<td>string</td>
+<td>0</td>
+<td>The string used to initialize the noise. Has no impact on the qualitative aspects of the generated values.</td>
+</tr>
+<tr>
+<td><strong>first_octave (Required)</strong></td>
+<td>int32</td>
+<td>1</td>
+<td>Governs the general frequency characteristics of the generated noise. Lower value results in noise with lower frequency content.</td>
 </tr>
 <tr>
 <td><strong>amplitudes (Required)</strong></td>
 <td>array&lt;float&gt;</td>
-<td>4</td>
-<td></td>
+<td>2</td>
+<td>Governs the attenuation of the first n octaves in the generated noise.</td>
+</tr>
+</tbody>
+</table>
+</div></td>
 </tr>
 </tbody>
 </table>

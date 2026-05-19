@@ -1,12 +1,12 @@
 digraph "NetworkPermissions" {
 rankdir = LR
-177
-177 -> 178
-178 -> 179
+201
+201 -> 202
+202 -> 203
 
-177 [label="NetworkPermissions",comment="name: \"NetworkPermissions\", typeName: \"\", id: 177, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-178 [label="serverAuthSoundEnabled",comment="name: \"serverAuthSoundEnabled\", typeName: \"\", id: 178, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-179 [label="bool",comment="name: \"bool\", typeName: \"\", id: 179, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;179}
+201 [label="NetworkPermissions",comment="name: \"NetworkPermissions\", typeName: \"\", id: 201, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+202 [label="serverAuthSoundEnabled",comment="name: \"serverAuthSoundEnabled\", typeName: \"\", id: 202, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+203 [label="bool",comment="name: \"bool\", typeName: \"\", id: 203, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;203}
 
 }

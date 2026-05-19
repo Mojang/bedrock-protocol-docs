@@ -20,29 +20,29 @@ rankdir = LR
 60 -> 61
 61 -> 62
 41 -> 63
-63 -> 64
-41 -> 65
-65 -> 66
-41 -> 67
-67 -> 68
-41 -> 69
-69 -> 70
-41 -> 71
-71 -> 72
-41 -> 73
-73 -> 74
-41 -> 75
-75 -> 76
-41 -> 77
-77 -> 78
-41 -> 79
-79 -> 80
-41 -> 81
-81 -> 82
-41 -> 83
-83 -> 84
-41 -> 85
-85 -> 86
+63 -> 99
+41 -> 100
+100 -> 101
+41 -> 102
+102 -> 103
+41 -> 104
+104 -> 105
+41 -> 106
+106 -> 107
+41 -> 108
+108 -> 109
+41 -> 110
+110 -> 111
+41 -> 112
+112 -> 113
+41 -> 114
+114 -> 115
+41 -> 116
+116 -> 117
+41 -> 118
+118 -> 119
+41 -> 120
+120 -> 121
 
 41 [label="PackedItemUseLegacyInventoryTransaction",comment="name: \"PackedItemUseLegacyInventoryTransaction\", typeName: \"\", id: 41, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 42 [label="ID",comment="name: \"ID\", typeName: \"TypedClientNetId<struct ItemStackLegacyRequestIdTag,int,0>\", id: 42, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
@@ -64,29 +64,29 @@ rankdir = LR
 61 [label="Slot",comment="name: \"Slot\", typeName: \"\", id: 61, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 62 [label="byte",comment="name: \"byte\", typeName: \"\", id: 62, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
 63 [label="mTransaction->mTransaction",comment="name: \"mTransaction->mTransaction\", typeName: \"InventoryTransaction\", id: 63, branchId: 0, recurseId: -1, attributes: 256, notes: \"Our ComplexInventoryTransaction contains an InventoryTransaction within it\""];
-64 [label="InventoryTransaction",comment="name: \"InventoryTransaction\", typeName: \"\", id: 64, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-65 [label="Action Type",comment="name: \"Action Type\", typeName: \"\", id: 65, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-66 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 66, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-67 [label="Trigger Type",comment="name: \"Trigger Type\", typeName: \"\", id: 67, branchId: 0, recurseId: -1, attributes: 0, notes: \"PlayerInput if it's a direct result from a player's initial button input,		SimulationTick if the player is holding down the input button started from a previous tick.\""];
-68 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 68, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-69 [label="Position",comment="name: \"Position\", typeName: \"BlockPos\", id: 69, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-70 [label="BlockPos",comment="name: \"BlockPos\", typeName: \"\", id: 70, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-71 [label="Face",comment="name: \"Face\", typeName: \"\", id: 71, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-72 [label="varint",comment="name: \"varint\", typeName: \"\", id: 72, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-73 [label="Slot",comment="name: \"Slot\", typeName: \"\", id: 73, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-74 [label="varint",comment="name: \"varint\", typeName: \"\", id: 74, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-75 [label="Item",comment="name: \"Item\", typeName: \"NetworkItemStackDescriptor\", id: 75, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-76 [label="NetworkItemStackDescriptor",comment="name: \"NetworkItemStackDescriptor\", typeName: \"\", id: 76, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-77 [label="From Position",comment="name: \"From Position\", typeName: \"Vec3\", id: 77, branchId: 0, recurseId: -1, attributes: 256, notes: \"Where the player thinks they are when sending this\""];
-78 [label="Vec3",comment="name: \"Vec3\", typeName: \"\", id: 78, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-79 [label="Click Position",comment="name: \"Click Position\", typeName: \"Vec3\", id: 79, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-80 [label="Vec3",comment="name: \"Vec3\", typeName: \"\", id: 80, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-81 [label="Target Block Id",comment="name: \"Target Block Id\", typeName: \"\", id: 81, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-82 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 82, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-83 [label="Client Interact Prediction",comment="name: \"Client Interact Prediction\", typeName: \"\", id: 83, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-84 [label="byte",comment="name: \"byte\", typeName: \"\", id: 84, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-85 [label="Client Cooldown State",comment="name: \"Client Cooldown State\", typeName: \"\", id: 85, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-86 [label="byte",comment="name: \"byte\", typeName: \"\", id: 86, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;46;49;53;56;59;62;64;66;68;70;72;74;76;78;80;82;84;86}
+99 [label="InventoryTransaction",comment="name: \"InventoryTransaction\", typeName: \"\", id: 99, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+100 [label="Action Type",comment="name: \"Action Type\", typeName: \"\", id: 100, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+101 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 101, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+102 [label="Trigger Type",comment="name: \"Trigger Type\", typeName: \"\", id: 102, branchId: 0, recurseId: -1, attributes: 0, notes: \"PlayerInput if it's a direct result from a player's initial button input,		SimulationTick if the player is holding down the input button started from a previous tick.\""];
+103 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 103, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+104 [label="Position",comment="name: \"Position\", typeName: \"BlockPos\", id: 104, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+105 [label="BlockPos",comment="name: \"BlockPos\", typeName: \"\", id: 105, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+106 [label="Face",comment="name: \"Face\", typeName: \"\", id: 106, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+107 [label="varint",comment="name: \"varint\", typeName: \"\", id: 107, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+108 [label="Slot",comment="name: \"Slot\", typeName: \"\", id: 108, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+109 [label="varint",comment="name: \"varint\", typeName: \"\", id: 109, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+110 [label="Item",comment="name: \"Item\", typeName: \"NetworkItemStackDescriptor\", id: 110, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+111 [label="NetworkItemStackDescriptor",comment="name: \"NetworkItemStackDescriptor\", typeName: \"\", id: 111, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+112 [label="From Position",comment="name: \"From Position\", typeName: \"Vec3\", id: 112, branchId: 0, recurseId: -1, attributes: 256, notes: \"Where the player thinks they are when sending this\""];
+113 [label="Vec3",comment="name: \"Vec3\", typeName: \"\", id: 113, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+114 [label="Click Position",comment="name: \"Click Position\", typeName: \"Vec3\", id: 114, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+115 [label="Vec3",comment="name: \"Vec3\", typeName: \"\", id: 115, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+116 [label="Target Block Id",comment="name: \"Target Block Id\", typeName: \"\", id: 116, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+117 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 117, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+118 [label="Client Interact Prediction",comment="name: \"Client Interact Prediction\", typeName: \"\", id: 118, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+119 [label="byte",comment="name: \"byte\", typeName: \"\", id: 119, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+120 [label="Client Cooldown State",comment="name: \"Client Cooldown State\", typeName: \"\", id: 120, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+121 [label="byte",comment="name: \"byte\", typeName: \"\", id: 121, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;46;49;53;56;59;62;99;101;103;105;107;109;111;113;115;117;119;121}
 
 }

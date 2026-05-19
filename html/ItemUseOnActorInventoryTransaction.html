@@ -1,0 +1,30 @@
+<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/ItemUseOnActorInventoryTransaction.svg" alt="ItemUseOnActorInventoryTransaction">
+<br><table><col width="10%"><col width="10%"><col width="15%"><col width="80%"><tr><th>Field Name</th><th>Field Type</th><th>Field Constraints</th><th>Field Notes</th></tr><tr><td>Actions</td>
+<td>InventoryTransaction</td>
+<td></td>
+<td>Base inventory actions. Lists the inventory slot changes associated with this transaction.</td>
+</tr><tr><td>Runtime Id</td>
+<td>ActorRuntimeID</td>
+<td></td>
+<td>The runtime ID of the actor being interacted with or attacked.</td>
+</tr><tr><td>Action Type</td>
+<td>enum ItemUseOnActorActionType</td>
+<td></td>
+<td>Interact: right-click on actor. Attack: left-click or trident spin attack.</td>
+</tr><tr><td>Slot</td>
+<td>varint</td>
+<td></td>
+<td>The inventory slot of the item being used on the actor.</td>
+</tr><tr><td>Item</td>
+<td>NetworkItemStackDescriptor</td>
+<td></td>
+<td>The item stack descriptor of the item being used on the actor.</td>
+</tr><tr><td>From Position</td>
+<td>Vec3</td>
+<td></td>
+<td>The player's position when this transaction was sent.</td>
+</tr><tr><td>Hit Position</td>
+<td>Vec3</td>
+<td></td>
+<td>The position on the actor that was clicked.</td>
+</tr></table></body> </html>

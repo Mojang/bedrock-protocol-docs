@@ -2,10 +2,6 @@
 <td><a href = "ResourcePacksInfoPacket.html">ResourcePacksInfoPacket</a></td>
 <td>Resource Packs Info</td>
 <td></td>
-</tr><tr><td>7</td>
-<td><a href = "ResourcePackStackPacket.html">ResourcePackStackPacket</a></td>
-<td>Resource Pack Stack</td>
-<td>This is sent to the client in response to a ResourcePackClientResponsePacket which is fired when MinecraftGame starts. </td>
 </tr><tr><td>8</td>
 <td><a href = "ResourcePackClientResponsePacket.html">ResourcePackClientResponsePacket</a></td>
 <td>Resource Pack Client Response</td>
@@ -30,26 +26,10 @@
 <td><a href = "MovePlayerPacket.html">MovePlayerPacket</a></td>
 <td>Move Player</td>
 <td>     For client authoritative and server authoritative movement modes, it is only intended as a client-bound packet.<br>     It forces the player to a specified position with slightly different behavior depending on the position mode.<br>     For similar packets that move the player, see also:<br>     - CorrectPlayerMovePredictionPacket (server authoritative)<br>     - SetActorMotionPacket<br>    </td>
-</tr><tr><td>29</td>
-<td><a href = "UpdateAttributesPacket.html">UpdateAttributesPacket</a></td>
-<td>Update Attributes</td>
-<td>    Occasionally updating player attributes (buffs/debuffs, health, etc)<br>    The following attributes are important to supply with valid PlayerInputTick values for player movement simulation:<br>    - movement_speed<br>    - underwater_movement_speed<br>    - lava_movement_speed<br>    - jump_strength<br>    - hunger<br>    </td>
-</tr><tr><td>30</td>
-<td><a href = "InventoryTransactionPacket.html">InventoryTransactionPacket</a></td>
-<td>Inventory Transaction</td>
-<td>Sent for item interaction UI depending on if ItemStackNetManager is enabled as well as when the player uses items in gameplay.  See ComplexInventoryTransaction::Type for more details</td>
-</tr><tr><td>32</td>
-<td><a href = "MobArmorEquipmentPacket.html">MobArmorEquipmentPacket</a></td>
-<td>Mob Armor Equipment</td>
-<td>This is related to MobEquipmentPackets, but armor specifically and passes ALL equipment changes at once instead of one slot at a time.</td>
 </tr><tr><td>39</td>
 <td><a href = "SetActorDataPacket.html">SetActorDataPacket</a></td>
 <td>Set Actor Data</td>
 <td>Regular Actor Data delta packets, sent from the level on tick, mob and actor during normal tick</td>
-</tr><tr><td>49</td>
-<td><a href = "InventoryContentPacket.html">InventoryContentPacket</a></td>
-<td>Inventory Content</td>
-<td>This is used for updating an entire container. Example uses include: player respawned, replace items command, 3rd party content calls sendInventory(), block picking.</td>
 </tr><tr><td>52</td>
 <td><a href = "CraftingDataPacket.html">CraftingDataPacket</a></td>
 <td>Crafting Data</td>
@@ -66,14 +46,6 @@
 <td><a href = "ClientboundMapItemDataPacket.html">ClientboundMapItemDataPacket</a></td>
 <td>ClientboundMapItemDataPacket</td>
 <td>This is sent either if the user is creating a new map, if a map that exists cannot be found, or if the user is creating a locked copy of a map.</td>
-</tr><tr><td>74</td>
-<td><a href = "BossEventPacket.html">BossEventPacket</a></td>
-<td>Boss Event</td>
-<td>Two-way packet.</td>
-</tr><tr><td>78</td>
-<td><a href = "CommandBlockUpdatePacket.html">CommandBlockUpdatePacket</a></td>
-<td>Command Block Update</td>
-<td>Sent when you close the command block screen on the client</td>
 </tr><tr><td>90</td>
 <td><a href = "StructureBlockUpdatePacket.html">StructureBlockUpdatePacket</a></td>
 <td>Structure Block Update</td>
@@ -98,10 +70,6 @@
 <td><a href = "SetScoreboardIdentityPacket.html">SetScoreboardIdentityPacket</a></td>
 <td>Set Scoreboard Identity</td>
 <td>Send an update packet for a player identity definition iff a tracked player has logged in with a different display name.</td>
-</tr><tr><td>135</td>
-<td><a href = "ClientCacheBlobStatusPacket.html">ClientCacheBlobStatusPacket</a></td>
-<td>Client Cache Blob Status Packet</td>
-<td>Sent periodically by the client to update the server on which blob it has (ACK) and which blobs it is lacking (MISS).Indicates status of binary blob transfers from server. Used heavily when server is sending chunks. </td>
 </tr><tr><td>144</td>
 <td><a href = "PlayerAuthInputPacket.html">PlayerAuthInputPacket</a></td>
 <td>Player Auth Input</td>
@@ -122,18 +90,10 @@
 <td><a href = "SubChunkPacket.html">SubChunkPacket</a></td>
 <td>SubChunkPacket</td>
 <td>Sent from server to client representing a batch of subchunk data and the required information to place the subchunk in the correct part of the world</td>
-</tr><tr><td>175</td>
-<td><a href = "SubChunkRequestPacket.html">SubChunkRequestPacket</a></td>
-<td>SubChunkRequestPacket</td>
-<td>Sent from the client to the server representing a batch of subchunks that the client requests from the server</td>
 </tr><tr><td>180</td>
 <td><a href = "DimensionDataPacket.html">DimensionDataPacket</a></td>
 <td>DimensionDataPacket</td>
 <td>brief packet containing data-driven dimension properties</td>
-</tr><tr><td>187</td>
-<td><a href = "UpdateAbilitiesPacket.html">UpdateAbilitiesPacket</a></td>
-<td>UpdateAbilitiesPacket</td>
-<td>Sent by the server to update the state of a player's Abilities.</td>
 </tr><tr><td>190</td>
 <td><a href = "EditorNetworkPacket.html">EditorNetworkPacket</a></td>
 <td>EditorNetworkPacket</td>

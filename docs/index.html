@@ -119,7 +119,7 @@
     <div class="container">
         
         <h1>Game Protocol Documentation</h1>
-<p>Documentation for 190 protocol packets.</p>
+<p>Documentation for 203 protocol packets.</p>
 <h2>Packet List</h2>
 <ul class="packet-list">
 <li>
@@ -141,6 +141,10 @@
 <li>
 <a href="DisconnectPacket.html"><strong>DisconnectPacket (5)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Sent from the server to a client to trigger a disconnection.</span>
+</li>
+<li>
+<a href="ResourcePackStackPacket.html"><strong>ResourcePackStackPacket (7)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Resource Pack Stack</span>
 </li>
 <li>
 <a href="TextPacket.html"><strong>TextPacket (9)</strong></a>
@@ -191,8 +195,20 @@
 <br><span style="color: #666; font-size: 0.9em;">Mob Effect</span>
 </li>
 <li>
+<a href="UpdateAttributesPacket.html"><strong>UpdateAttributesPacket (29)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Update Attributes</span>
+</li>
+<li>
+<a href="InventoryTransactionPacket.html"><strong>InventoryTransactionPacket (30)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Inventory Transaction. Sent for item interaction UI depending on if ItemStackNetManager is enabled a...</span>
+</li>
+<li>
 <a href="MobEquipmentPacket.html"><strong>MobEquipmentPacket (31)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Mob Equipment. Changes to any mob&#x27;s held/offhand item are fired from server to client with this pack...</span>
+</li>
+<li>
+<a href="MobArmorEquipmentPacket.html"><strong>MobArmorEquipmentPacket (32)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Mob Armor Equipment</span>
 </li>
 <li>
 <a href="InteractPacket.html"><strong>InteractPacket (33)</strong></a>
@@ -250,6 +266,10 @@
 <li>
 <a href="PlayerHotbarPacket.html"><strong>PlayerHotbarPacket (48)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Sent from the server when the player uses pick block on actors or blocks, in addition to the player ...</span>
+</li>
+<li>
+<a href="InventoryContentPacket.html"><strong>InventoryContentPacket (49)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">This is used for updating an entire container. Example uses include: player respawned, replace items...</span>
 </li>
 <li>
 <a href="InventorySlotPacket.html"><strong>InventorySlotPacket (50)</strong></a>
@@ -316,6 +336,10 @@
 <br><span style="color: #666; font-size: 0.9em;">Used only in EDU through the tripod camera item or the TakePictureCommand. Sends the camera actor id...</span>
 </li>
 <li>
+<a href="BossEventPacket.html"><strong>BossEventPacket (74)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent when a boss gets updated</span>
+</li>
+<li>
 <a href="ShowCreditsPacket.html"><strong>ShowCreditsPacket (75)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Starts on server when the credits screen should pop up.</span>
 </li>
@@ -326,6 +350,10 @@
 <li>
 <a href="CommandRequestPacket.html"><strong>CommandRequestPacket (77)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">&quot;slash&quot; command execution, client to server.</span>
+</li>
+<li>
+<a href="CommandBlockUpdatePacket.html"><strong>CommandBlockUpdatePacket (78)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Command Block Update</span>
 </li>
 <li>
 <a href="CommandOutputPacket.html"><strong>CommandOutputPacket (79)</strong></a>
@@ -504,6 +532,10 @@
 <br><span style="color: #666; font-size: 0.9em;">This is used in exporting from load, exporting from save, and querying saved structures from structu...</span>
 </li>
 <li>
+<a href="ClientCacheBlobStatusPacket.html"><strong>ClientCacheBlobStatusPacket (135)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Client Cache Blob Status Packet</span>
+</li>
+<li>
 <a href="ClientCacheMissResponsePacket.html"><strong>ClientCacheMissResponsePacket (136)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Only active in a real client-server scenario. This packet is just a list of &lt;blobId, blob&gt; pairs sen...</span>
 </li>
@@ -632,6 +664,10 @@
 <br><span style="color: #666; font-size: 0.9em;">Packet sent for every set of blocks changed in a sub chunk every tick.</span>
 </li>
 <li>
+<a href="SubChunkRequestPacket.html"><strong>SubChunkRequestPacket (175)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from the client to the server representing a batch of subchunks that the client requests from t...</span>
+</li>
+<li>
 <a href="PlayerStartItemCooldownPacket.html"><strong>PlayerStartItemCooldownPacket (176)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Player Start Item Cooldown</span>
 </li>
@@ -670,6 +706,10 @@
 <li>
 <a href="ToastRequestPacket.html"><strong>ToastRequestPacket (186)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Pushes a UI toast message to be displayed by the client</span>
+</li>
+<li>
+<a href="UpdateAbilitiesPacket.html"><strong>UpdateAbilitiesPacket (187)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent by the server to update the state of a player&#x27;s Abilities.</span>
 </li>
 <li>
 <a href="UpdateAdventureSettingsPacket.html"><strong>UpdateAdventureSettingsPacket (188)</strong></a>
@@ -882,6 +922,18 @@
 <li>
 <a href="ServerPresenceInfoPacket.html"><strong>ServerPresenceInfoPacket (347)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Sent by the server to provide PresenceConfiguration to the client.</span>
+</li>
+<li>
+<a href="ClientboundUpdateSoundDataPacket.html"><strong>ClientboundUpdateSoundDataPacket (348)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent to update sound data.</span>
+</li>
+<li>
+<a href="SendPartyDestinationCookiePacket.html"><strong>SendPartyDestinationCookiePacket (349)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent by the server to a client with a party destination cookie.</span>
+</li>
+<li>
+<a href="PartyDestinationCookieResponsePacket.html"><strong>PartyDestinationCookieResponsePacket (350)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent by the client to the server with a party destination cookie response.</span>
 </li>
 </ul>
     </div>

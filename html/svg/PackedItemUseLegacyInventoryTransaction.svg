@@ -57,146 +57,146 @@
 <path fill="none" stroke="black" d="M192.29,-389.37C224.88,-426.74 304.15,-512.17 387.44,-561 402.19,-569.65 419.04,-576.81 435.37,-582.59"/>
 <polygon fill="black" stroke="black" points="433.97,-585.81 444.57,-585.7 436.22,-579.18 433.97,-585.81"/>
 </g>
-<!-- 65 -->
-<!-- name: &quot;Action Type&quot;, typeName: &quot;&quot;, id: 65, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;&quot; -->
+<!-- 100 -->
+<!-- name: &quot;Action Type&quot;, typeName: &quot;&quot;, id: 100, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;&quot; -->
 <g id="node22" class="node">
-<title>65</title>
+<title>100</title>
 <ellipse fill="none" stroke="black" cx="1089.31" cy="-554" rx="56.47" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="1089.31" y="-548.95" font-family="Times New Roman,serif" font-size="14.00">Action Type</text>
 </g>
-<!-- 41&#45;&gt;65 -->
+<!-- 41&#45;&gt;100 -->
 <g id="edge21" class="edge">
-<title>41&#45;&gt;65</title>
+<title>41&#45;&gt;100</title>
 <path fill="none" stroke="black" d="M207.29,-389.12C247.25,-411.9 320.1,-450.41 387.44,-470 613.38,-535.72 894.66,-550.11 1021.17,-553.2"/>
 <polygon fill="black" stroke="black" points="1020.97,-556.69 1031.05,-553.42 1021.13,-549.7 1020.97,-556.69"/>
 </g>
-<!-- 67 -->
-<!-- name: &quot;Trigger Type&quot;, typeName: &quot;&quot;, id: 67, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;PlayerInput if it&#39;s a direct result from a player&#39;s initial button input,		SimulationTick if the player is holding down the input button started from a previous tick.&quot; -->
+<!-- 102 -->
+<!-- name: &quot;Trigger Type&quot;, typeName: &quot;&quot;, id: 102, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;PlayerInput if it&#39;s a direct result from a player&#39;s initial button input,		SimulationTick if the player is holding down the input button started from a previous tick.&quot; -->
 <g id="node24" class="node">
-<title>67</title>
+<title>102</title>
 <ellipse fill="none" stroke="black" cx="910.17" cy="-501" rx="59.03" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="910.17" y="-495.95" font-family="Times New Roman,serif" font-size="14.00">Trigger Type</text>
 </g>
-<!-- 41&#45;&gt;67 -->
+<!-- 41&#45;&gt;102 -->
 <g id="edge23" class="edge">
-<title>41&#45;&gt;67</title>
+<title>41&#45;&gt;102</title>
 <path fill="none" stroke="black" d="M225.48,-388.65C267.78,-403.34 330.95,-423.75 387.44,-436 547.9,-470.8 740.46,-488.78 840.78,-496.41"/>
 <polygon fill="black" stroke="black" points="840.51,-499.9 850.74,-497.15 841.03,-492.92 840.51,-499.9"/>
 </g>
-<!-- 69 -->
-<!-- name: &quot;Position&quot;, typeName: &quot;BlockPos&quot;, id: 69, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;&quot; -->
+<!-- 104 -->
+<!-- name: &quot;Position&quot;, typeName: &quot;BlockPos&quot;, id: 104, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;&quot; -->
 <g id="node26" class="node">
-<title>69</title>
+<title>104</title>
 <ellipse fill="none" stroke="black" cx="736.67" cy="-445" rx="41.12" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="736.67" y="-439.95" font-family="Times New Roman,serif" font-size="14.00">Position</text>
 </g>
-<!-- 41&#45;&gt;69 -->
+<!-- 41&#45;&gt;104 -->
 <g id="edge25" class="edge">
-<title>41&#45;&gt;69</title>
+<title>41&#45;&gt;104</title>
 <path fill="none" stroke="black" d="M261.1,-387.17C299.55,-394.19 345.7,-402.12 387.44,-408 492.73,-422.82 616.67,-434.66 684.65,-440.67"/>
 <polygon fill="black" stroke="black" points="684.09,-444.14 694.36,-441.53 684.71,-437.16 684.09,-444.14"/>
 </g>
-<!-- 71 -->
-<!-- name: &quot;Face&quot;, typeName: &quot;&quot;, id: 71, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;&quot; -->
+<!-- 106 -->
+<!-- name: &quot;Face&quot;, typeName: &quot;&quot;, id: 106, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;&quot; -->
 <g id="node28" class="node">
-<title>71</title>
+<title>106</title>
 <ellipse fill="none" stroke="black" cx="1637.07" cy="-395" rx="28.32" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="1637.07" y="-389.95" font-family="Times New Roman,serif" font-size="14.00">Face</text>
 </g>
-<!-- 41&#45;&gt;71 -->
+<!-- 41&#45;&gt;106 -->
 <g id="edge27" class="edge">
-<title>41&#45;&gt;71</title>
+<title>41&#45;&gt;106</title>
 <path fill="none" stroke="black" d="M326.7,-380.52C439.21,-386.85 597.03,-394 735.67,-394 735.67,-394 735.67,-394 1256.45,-394 1381.06,-394 1528.67,-394.55 1597.34,-394.83"/>
 <polygon fill="black" stroke="black" points="1596.92,-398.33 1606.93,-394.87 1596.95,-391.33 1596.92,-398.33"/>
 </g>
-<!-- 73 -->
-<!-- name: &quot;Slot&quot;, typeName: &quot;&quot;, id: 73, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;&quot; -->
+<!-- 108 -->
+<!-- name: &quot;Slot&quot;, typeName: &quot;&quot;, id: 108, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;&quot; -->
 <g id="node30" class="node">
-<title>73</title>
+<title>108</title>
 <ellipse fill="none" stroke="black" cx="1421.6" cy="-346" rx="27" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="1421.6" y="-340.95" font-family="Times New Roman,serif" font-size="14.00">Slot</text>
 </g>
-<!-- 41&#45;&gt;73 -->
+<!-- 41&#45;&gt;108 -->
 <g id="edge29" class="edge">
-<title>41&#45;&gt;73</title>
+<title>41&#45;&gt;108</title>
 <path fill="none" stroke="black" d="M333.58,-362.82C445.59,-357.67 599.86,-352 735.67,-352 735.67,-352 735.67,-352 1090.31,-352 1196.5,-352 1321.86,-348.86 1383.11,-347.12"/>
 <polygon fill="black" stroke="black" points="1383.08,-350.63 1392.97,-346.84 1382.87,-343.63 1383.08,-350.63"/>
 </g>
-<!-- 75 -->
-<!-- name: &quot;Item&quot;, typeName: &quot;NetworkItemStackDescriptor&quot;, id: 75, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;&quot; -->
+<!-- 110 -->
+<!-- name: &quot;Item&quot;, typeName: &quot;NetworkItemStackDescriptor&quot;, id: 110, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;&quot; -->
 <g id="node32" class="node">
-<title>75</title>
+<title>110</title>
 <ellipse fill="none" stroke="black" cx="1255.45" cy="-298" rx="28.32" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="1255.45" y="-292.95" font-family="Times New Roman,serif" font-size="14.00">Item</text>
 </g>
-<!-- 41&#45;&gt;75 -->
+<!-- 41&#45;&gt;110 -->
 <g id="edge31" class="edge">
-<title>41&#45;&gt;75</title>
+<title>41&#45;&gt;110</title>
 <path fill="none" stroke="black" d="M264.96,-355.11C374.84,-336.74 568.47,-309 735.67,-309 735.67,-309 735.67,-309 911.17,-309 1021.53,-309 1151.74,-303.25 1215.42,-300.07"/>
 <polygon fill="black" stroke="black" points="1215.56,-303.56 1225.36,-299.56 1215.2,-296.57 1215.56,-303.56"/>
 </g>
-<!-- 77 -->
-<!-- name: &quot;From Position&quot;, typeName: &quot;Vec3&quot;, id: 77, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;Where the player thinks they are when sending this&quot; -->
+<!-- 112 -->
+<!-- name: &quot;From Position&quot;, typeName: &quot;Vec3&quot;, id: 112, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;Where the player thinks they are when sending this&quot; -->
 <g id="node34" class="node">
-<title>77</title>
+<title>112</title>
 <ellipse fill="none" stroke="black" cx="1089.31" cy="-249" rx="64.15" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="1089.31" y="-243.95" font-family="Times New Roman,serif" font-size="14.00">From Position</text>
 </g>
-<!-- 41&#45;&gt;77 -->
+<!-- 41&#45;&gt;112 -->
 <g id="edge33" class="edge">
-<title>41&#45;&gt;77</title>
+<title>41&#45;&gt;112</title>
 <path fill="none" stroke="black" d="M215.76,-353.16C257.35,-335.06 325.58,-307.92 387.44,-295 611.94,-248.13 884.86,-245.3 1013.88,-247.1"/>
 <polygon fill="black" stroke="black" points="1013.6,-250.59 1023.65,-247.25 1013.71,-243.59 1013.6,-250.59"/>
 </g>
-<!-- 79 -->
-<!-- name: &quot;Click Position&quot;, typeName: &quot;Vec3&quot;, id: 79, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;&quot; -->
+<!-- 114 -->
+<!-- name: &quot;Click Position&quot;, typeName: &quot;Vec3&quot;, id: 114, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;&quot; -->
 <g id="node36" class="node">
-<title>79</title>
+<title>114</title>
 <ellipse fill="none" stroke="black" cx="910.17" cy="-192" rx="63.63" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="910.17" y="-186.95" font-family="Times New Roman,serif" font-size="14.00">Click Position</text>
 </g>
-<!-- 41&#45;&gt;79 -->
+<!-- 41&#45;&gt;114 -->
 <g id="edge35" class="edge">
-<title>41&#45;&gt;79</title>
+<title>41&#45;&gt;114</title>
 <path fill="none" stroke="black" d="M200.08,-352.83C237.35,-324.95 313.6,-272.28 387.44,-248 540.92,-197.54 732.15,-190.12 835.16,-190.32"/>
 <polygon fill="black" stroke="black" points="834.84,-193.82 844.85,-190.37 834.87,-186.82 834.84,-193.82"/>
 </g>
-<!-- 81 -->
-<!-- name: &quot;Target Block Id&quot;, typeName: &quot;&quot;, id: 81, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;&quot; -->
+<!-- 116 -->
+<!-- name: &quot;Target Block Id&quot;, typeName: &quot;&quot;, id: 116, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;&quot; -->
 <g id="node38" class="node">
-<title>81</title>
+<title>116</title>
 <ellipse fill="none" stroke="black" cx="736.67" cy="-156" rx="69.26" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="736.67" y="-150.95" font-family="Times New Roman,serif" font-size="14.00">Target Block Id</text>
 </g>
-<!-- 41&#45;&gt;81 -->
+<!-- 41&#45;&gt;116 -->
 <g id="edge37" class="edge">
-<title>41&#45;&gt;81</title>
+<title>41&#45;&gt;116</title>
 <path fill="none" stroke="black" d="M191.59,-352.74C223.16,-315.43 301.11,-230.88 387.44,-194 474.5,-156.81 584.45,-150.8 657.25,-151.8"/>
 <polygon fill="black" stroke="black" points="657.03,-155.3 667.1,-151.99 657.16,-148.3 657.03,-155.3"/>
 </g>
-<!-- 83 -->
-<!-- name: &quot;Client Interact Prediction&quot;, typeName: &quot;&quot;, id: 83, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;&quot; -->
+<!-- 118 -->
+<!-- name: &quot;Client Interact Prediction&quot;, typeName: &quot;&quot;, id: 118, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;&quot; -->
 <g id="node40" class="node">
-<title>83</title>
+<title>118</title>
 <ellipse fill="none" stroke="black" cx="1637.07" cy="-76" rx="104.58" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="1637.07" y="-70.95" font-family="Times New Roman,serif" font-size="14.00">Client Interact Prediction</text>
 </g>
-<!-- 41&#45;&gt;83 -->
+<!-- 41&#45;&gt;118 -->
 <g id="edge39" class="edge">
-<title>41&#45;&gt;83</title>
+<title>41&#45;&gt;118</title>
 <path fill="none" stroke="black" d="M188.08,-352.63C216.04,-309.17 292.81,-199.76 387.44,-148 525.64,-72.41 578.15,-82 735.67,-82 735.67,-82 735.67,-82 1256.45,-82 1345.64,-82 1446.6,-80.32 1521.97,-78.74"/>
 <polygon fill="black" stroke="black" points="1521.93,-82.25 1531.85,-78.53 1521.78,-75.25 1521.93,-82.25"/>
 </g>
-<!-- 85 -->
-<!-- name: &quot;Client Cooldown State&quot;, typeName: &quot;&quot;, id: 85, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;&quot; -->
+<!-- 120 -->
+<!-- name: &quot;Client Cooldown State&quot;, typeName: &quot;&quot;, id: 120, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;&quot; -->
 <g id="node42" class="node">
-<title>85</title>
+<title>120</title>
 <ellipse fill="none" stroke="black" cx="509.42" cy="-24" rx="95.37" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="509.42" y="-18.95" font-family="Times New Roman,serif" font-size="14.00">Client Cooldown State</text>
 </g>
-<!-- 41&#45;&gt;85 -->
+<!-- 41&#45;&gt;120 -->
 <g id="edge41" class="edge">
-<title>41&#45;&gt;85</title>
+<title>41&#45;&gt;120</title>
 <path fill="none" stroke="black" d="M184.52,-352.74C207.67,-300.67 281.07,-149.88 387.44,-68 401.96,-56.82 419.59,-48.29 436.85,-41.86"/>
 <polygon fill="black" stroke="black" points="437.8,-45.23 446.08,-38.62 435.49,-38.63 437.8,-45.23"/>
 </g>
@@ -408,159 +408,159 @@
 <path fill="none" stroke="black" d="M1664.3,-666C1731.27,-666 1908.8,-666 1986.6,-666"/>
 <polygon fill="black" stroke="black" points="1986.25,-669.5 1996.25,-666 1986.25,-662.5 1986.25,-669.5"/>
 </g>
-<!-- 64 -->
-<!-- name: &quot;InventoryTransaction&quot;, typeName: &quot;&quot;, id: 64, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
+<!-- 99 -->
+<!-- name: &quot;InventoryTransaction&quot;, typeName: &quot;&quot;, id: 99, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
 <g id="node21" class="node">
-<title>64</title>
+<title>99</title>
 <ellipse fill="none" stroke="black" cx="2025.03" cy="-612" rx="90.25" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="2025.03" y="-606.95" font-family="Times New Roman,serif" font-size="14.00">InventoryTransaction</text>
 </g>
-<!-- 63&#45;&gt;64 -->
+<!-- 63&#45;&gt;99 -->
 <g id="edge20" class="edge">
-<title>63&#45;&gt;64</title>
+<title>63&#45;&gt;99</title>
 <path fill="none" stroke="black" d="M628.18,-606.5C707.56,-609.16 814.65,-612 909.17,-612 909.17,-612 909.17,-612 1422.6,-612 1598.6,-612 1803.58,-612 1923.07,-612"/>
 <polygon fill="black" stroke="black" points="1922.85,-615.5 1932.85,-612 1922.85,-608.5 1922.85,-615.5"/>
 </g>
-<!-- 66 -->
-<!-- name: &quot;unsigned varint&quot;, typeName: &quot;&quot;, id: 66, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
+<!-- 101 -->
+<!-- name: &quot;unsigned varint&quot;, typeName: &quot;&quot;, id: 101, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
 <g id="node23" class="node">
-<title>66</title>
+<title>101</title>
 <ellipse fill="none" stroke="black" cx="2025.03" cy="-558" rx="68.24" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="2025.03" y="-552.95" font-family="Times New Roman,serif" font-size="14.00">unsigned varint</text>
 </g>
-<!-- 65&#45;&gt;66 -->
+<!-- 100&#45;&gt;101 -->
 <g id="edge22" class="edge">
-<title>65&#45;&gt;66</title>
+<title>100&#45;&gt;101</title>
 <path fill="none" stroke="black" d="M1146.27,-554.24C1305.35,-554.92 1760.58,-556.87 1945,-557.66"/>
 <polygon fill="black" stroke="black" points="1944.96,-561.16 1954.98,-557.7 1944.99,-554.16 1944.96,-561.16"/>
 </g>
-<!-- 68 -->
-<!-- name: &quot;unsigned varint&quot;, typeName: &quot;&quot;, id: 68, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
+<!-- 103 -->
+<!-- name: &quot;unsigned varint&quot;, typeName: &quot;&quot;, id: 103, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
 <g id="node25" class="node">
-<title>68</title>
+<title>103</title>
 <ellipse fill="none" stroke="black" cx="2025.03" cy="-504" rx="68.24" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="2025.03" y="-498.95" font-family="Times New Roman,serif" font-size="14.00">unsigned varint</text>
 </g>
-<!-- 67&#45;&gt;68 -->
+<!-- 102&#45;&gt;103 -->
 <g id="edge24" class="edge">
-<title>67&#45;&gt;68</title>
+<title>102&#45;&gt;103</title>
 <path fill="none" stroke="black" d="M969.48,-501.82C1037.78,-502.71 1154.33,-504 1254.45,-504 1254.45,-504 1254.45,-504 1422.6,-504 1609.86,-504 1829.91,-504 1944.91,-504"/>
 <polygon fill="black" stroke="black" points="1944.87,-507.5 1954.87,-504 1944.87,-500.5 1944.87,-507.5"/>
 </g>
-<!-- 70 -->
-<!-- name: &quot;BlockPos&quot;, typeName: &quot;&quot;, id: 70, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
+<!-- 105 -->
+<!-- name: &quot;BlockPos&quot;, typeName: &quot;&quot;, id: 105, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
 <g id="node27" class="node">
-<title>70</title>
+<title>105</title>
 <ellipse fill="none" stroke="black" cx="2025.03" cy="-450" rx="46.23" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="2025.03" y="-444.95" font-family="Times New Roman,serif" font-size="14.00">BlockPos</text>
 </g>
-<!-- 69&#45;&gt;70 -->
+<!-- 104&#45;&gt;105 -->
 <g id="edge26" class="edge">
-<title>69&#45;&gt;70</title>
+<title>104&#45;&gt;105</title>
 <path fill="none" stroke="black" d="M778.16,-445.95C843.44,-447.4 975.98,-450 1088.31,-450 1088.31,-450 1088.31,-450 1422.6,-450 1622.63,-450 1860.07,-450 1966.92,-450"/>
 <polygon fill="black" stroke="black" points="1966.87,-453.5 1976.87,-450 1966.87,-446.5 1966.87,-453.5"/>
 </g>
-<!-- 72 -->
-<!-- name: &quot;varint&quot;, typeName: &quot;&quot;, id: 72, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
+<!-- 107 -->
+<!-- name: &quot;varint&quot;, typeName: &quot;&quot;, id: 107, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
 <g id="node29" class="node">
-<title>72</title>
+<title>107</title>
 <ellipse fill="none" stroke="black" cx="2025.03" cy="-396" rx="32.41" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="2025.03" y="-390.95" font-family="Times New Roman,serif" font-size="14.00">varint</text>
 </g>
-<!-- 71&#45;&gt;72 -->
+<!-- 106&#45;&gt;107 -->
 <g id="edge28" class="edge">
-<title>71&#45;&gt;72</title>
+<title>106&#45;&gt;107</title>
 <path fill="none" stroke="black" d="M1665.83,-395.07C1732.39,-395.24 1901.43,-395.68 1981.17,-395.89"/>
 <polygon fill="black" stroke="black" points="1980.74,-399.39 1990.74,-395.91 1980.75,-392.39 1980.74,-399.39"/>
 </g>
-<!-- 74 -->
-<!-- name: &quot;varint&quot;, typeName: &quot;&quot;, id: 74, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
+<!-- 109 -->
+<!-- name: &quot;varint&quot;, typeName: &quot;&quot;, id: 109, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
 <g id="node31" class="node">
-<title>74</title>
+<title>109</title>
 <ellipse fill="none" stroke="black" cx="2025.03" cy="-342" rx="32.41" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="2025.03" y="-336.95" font-family="Times New Roman,serif" font-size="14.00">varint</text>
 </g>
-<!-- 73&#45;&gt;74 -->
+<!-- 108&#45;&gt;109 -->
 <g id="edge30" class="edge">
-<title>73&#45;&gt;74</title>
+<title>108&#45;&gt;109</title>
 <path fill="none" stroke="black" d="M1448.83,-345.83C1542.93,-345.2 1864.14,-343.06 1981.04,-342.29"/>
 <polygon fill="black" stroke="black" points="1980.85,-345.79 1990.83,-342.22 1980.81,-338.79 1980.85,-345.79"/>
 </g>
-<!-- 76 -->
-<!-- name: &quot;NetworkItemStackDescriptor&quot;, typeName: &quot;&quot;, id: 76, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
+<!-- 111 -->
+<!-- name: &quot;NetworkItemStackDescriptor&quot;, typeName: &quot;&quot;, id: 111, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
 <g id="node33" class="node">
-<title>76</title>
+<title>111</title>
 <ellipse fill="none" stroke="black" cx="2025.03" cy="-288" rx="119.93" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="2025.03" y="-282.95" font-family="Times New Roman,serif" font-size="14.00">NetworkItemStackDescriptor</text>
 </g>
-<!-- 75&#45;&gt;76 -->
+<!-- 110&#45;&gt;111 -->
 <g id="edge32" class="edge">
-<title>75&#45;&gt;76</title>
+<title>110&#45;&gt;111</title>
 <path fill="none" stroke="black" d="M1284.23,-297.64C1381.17,-296.38 1708.69,-292.11 1893.79,-289.7"/>
 <polygon fill="black" stroke="black" points="1893.76,-293.2 1903.72,-289.57 1893.67,-286.2 1893.76,-293.2"/>
 </g>
-<!-- 78 -->
-<!-- name: &quot;Vec3&quot;, typeName: &quot;&quot;, id: 78, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
+<!-- 113 -->
+<!-- name: &quot;Vec3&quot;, typeName: &quot;&quot;, id: 113, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
 <g id="node35" class="node">
-<title>78</title>
+<title>113</title>
 <ellipse fill="none" stroke="black" cx="2025.03" cy="-234" rx="29.34" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="2025.03" y="-228.95" font-family="Times New Roman,serif" font-size="14.00">Vec3</text>
 </g>
-<!-- 77&#45;&gt;78 -->
+<!-- 112&#45;&gt;113 -->
 <g id="edge34" class="edge">
-<title>77&#45;&gt;78</title>
+<title>112&#45;&gt;113</title>
 <path fill="none" stroke="black" d="M1153.75,-247.98C1332.61,-245.11 1837.39,-237 1983.77,-234.65"/>
 <polygon fill="black" stroke="black" points="1983.8,-238.15 1993.74,-234.49 1983.68,-231.15 1983.8,-238.15"/>
 </g>
-<!-- 80 -->
-<!-- name: &quot;Vec3&quot;, typeName: &quot;&quot;, id: 80, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
+<!-- 115 -->
+<!-- name: &quot;Vec3&quot;, typeName: &quot;&quot;, id: 115, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
 <g id="node37" class="node">
-<title>80</title>
+<title>115</title>
 <ellipse fill="none" stroke="black" cx="2025.03" cy="-180" rx="29.34" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="2025.03" y="-174.95" font-family="Times New Roman,serif" font-size="14.00">Vec3</text>
 </g>
-<!-- 79&#45;&gt;80 -->
+<!-- 114&#45;&gt;115 -->
 <g id="edge36" class="edge">
-<title>79&#45;&gt;80</title>
+<title>114&#45;&gt;115</title>
 <path fill="none" stroke="black" d="M973.17,-188.53C1041.9,-184.99 1156.06,-180 1254.45,-180 1254.45,-180 1254.45,-180 1422.6,-180 1634.09,-180 1887.42,-180 1983.98,-180"/>
 <polygon fill="black" stroke="black" points="1983.72,-183.5 1993.72,-180 1983.72,-176.5 1983.72,-183.5"/>
 </g>
-<!-- 82 -->
-<!-- name: &quot;unsigned varint&quot;, typeName: &quot;&quot;, id: 82, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
+<!-- 117 -->
+<!-- name: &quot;unsigned varint&quot;, typeName: &quot;&quot;, id: 117, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
 <g id="node39" class="node">
-<title>82</title>
+<title>117</title>
 <ellipse fill="none" stroke="black" cx="2025.03" cy="-126" rx="68.24" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="2025.03" y="-120.95" font-family="Times New Roman,serif" font-size="14.00">unsigned varint</text>
 </g>
-<!-- 81&#45;&gt;82 -->
+<!-- 116&#45;&gt;117 -->
 <g id="edge38" class="edge">
-<title>81&#45;&gt;82</title>
+<title>116&#45;&gt;117</title>
 <path fill="none" stroke="black" d="M798.66,-147.6C868.5,-138.73 986.43,-126 1088.31,-126 1088.31,-126 1088.31,-126 1422.6,-126 1609.86,-126 1829.91,-126 1944.91,-126"/>
 <polygon fill="black" stroke="black" points="1944.87,-129.5 1954.87,-126 1944.87,-122.5 1944.87,-129.5"/>
 </g>
-<!-- 84 -->
-<!-- name: &quot;byte&quot;, typeName: &quot;&quot;, id: 84, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
+<!-- 119 -->
+<!-- name: &quot;byte&quot;, typeName: &quot;&quot;, id: 119, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
 <g id="node41" class="node">
-<title>84</title>
+<title>119</title>
 <ellipse fill="none" stroke="black" cx="2025.03" cy="-72" rx="27" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="2025.03" y="-66.95" font-family="Times New Roman,serif" font-size="14.00">byte</text>
 </g>
-<!-- 83&#45;&gt;84 -->
+<!-- 118&#45;&gt;119 -->
 <g id="edge40" class="edge">
-<title>83&#45;&gt;84</title>
+<title>118&#45;&gt;119</title>
 <path fill="none" stroke="black" d="M1741.76,-74.93C1822.47,-74.09 1929.91,-72.98 1986.11,-72.39"/>
 <polygon fill="black" stroke="black" points="1986.14,-75.89 1996.11,-72.29 1986.07,-68.89 1986.14,-75.89"/>
 </g>
-<!-- 86 -->
-<!-- name: &quot;byte&quot;, typeName: &quot;&quot;, id: 86, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
+<!-- 121 -->
+<!-- name: &quot;byte&quot;, typeName: &quot;&quot;, id: 121, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
 <g id="node43" class="node">
-<title>86</title>
+<title>121</title>
 <ellipse fill="none" stroke="black" cx="2025.03" cy="-18" rx="27" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="2025.03" y="-12.95" font-family="Times New Roman,serif" font-size="14.00">byte</text>
 </g>
-<!-- 85&#45;&gt;86 -->
+<!-- 120&#45;&gt;121 -->
 <g id="edge42" class="edge">
-<title>85&#45;&gt;86</title>
+<title>120&#45;&gt;121</title>
 <path fill="none" stroke="black" d="M604.28,-21.79C685.08,-20.08 804.8,-18 909.17,-18 909.17,-18 909.17,-18 1422.6,-18 1635.88,-18 1891.71,-18 1986.4,-18"/>
 <polygon fill="black" stroke="black" points="1986.13,-21.5 1996.13,-18 1986.13,-14.5 1986.13,-21.5"/>
 </g>

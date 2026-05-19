@@ -1,20 +1,20 @@
 digraph "ItemStackRequestSlotInfo" {
 rankdir = LR
-106
-106 -> 107
-107 -> 108
-106 -> 109
-109 -> 110
-106 -> 111
-111 -> 112
+141
+141 -> 142
+142 -> 156
+141 -> 157
+157 -> 158
+141 -> 159
+159 -> 160
 
-106 [label="ItemStackRequestSlotInfo",comment="name: \"ItemStackRequestSlotInfo\", typeName: \"\", id: 106, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-107 [label="Full container name.",comment="name: \"Full container name.\", typeName: \"FullContainerName\", id: 107, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-108 [label="FullContainerName",comment="name: \"FullContainerName\", typeName: \"\", id: 108, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-109 [label="Slot",comment="name: \"Slot\", typeName: \"\", id: 109, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-110 [label="byte",comment="name: \"byte\", typeName: \"\", id: 110, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-111 [label="Net Id Variant",comment="name: \"Net Id Variant\", typeName: \"ItemStackNetIdVariant\", id: 111, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-112 [label="ItemStackNetIdVariant",comment="name: \"ItemStackNetIdVariant\", typeName: \"\", id: 112, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;108;110;112}
+141 [label="ItemStackRequestSlotInfo",comment="name: \"ItemStackRequestSlotInfo\", typeName: \"\", id: 141, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+142 [label="Full container name.",comment="name: \"Full container name.\", typeName: \"FullContainerName\", id: 142, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+156 [label="FullContainerName",comment="name: \"FullContainerName\", typeName: \"\", id: 156, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+157 [label="Slot",comment="name: \"Slot\", typeName: \"\", id: 157, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+158 [label="byte",comment="name: \"byte\", typeName: \"\", id: 158, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+159 [label="Net Id Variant",comment="name: \"Net Id Variant\", typeName: \"ItemStackNetIdVariant\", id: 159, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+160 [label="ItemStackNetIdVariant",comment="name: \"ItemStackNetIdVariant\", typeName: \"\", id: 160, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;156;158;160}
 
 }

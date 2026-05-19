@@ -2,9 +2,48 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "599317042",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.20",
-    "x-protocol-version": 975,
+    "x-minecraft-version": "1.26.30",
+    "x-protocol-version": 1001,
     "definitions": {
+        "3012619155": {
+            "title": "WhiskerScopeDataSummary",
+            "type": "object",
+            "properties": {
+                "Indentation": {
+                    "type": "string",
+                    "x-ordinal-index": 1
+                },
+                "Label": {
+                    "type": "string",
+                    "x-ordinal-index": 0
+                },
+                "TotalHighCostNS": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-ordinal-index": 2,
+                    "minimum": 0.0
+                },
+                "TotalLowCostNS": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-ordinal-index": 4,
+                    "minimum": 0.0
+                },
+                "TotalMidCostNS": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-ordinal-index": 3,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Indentation",
+                "Label",
+                "TotalHighCostNS",
+                "TotalLowCostNS",
+                "TotalMidCostNS"
+            ]
+        },
         "407141822": {
             "title": "EntityDiagnosticTimingInfo",
             "type": "object",
@@ -262,6 +301,13 @@
                 "$ref": "#/definitions/3819337508"
             },
             "x-ordinal-index": 11
+        },
+        "Whisker Scopes": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/3012619155"
+            },
+            "x-ordinal-index": 12
         }
     },
     "required": [
@@ -276,7 +322,8 @@
         "AvgUnaccountedTimePercent",
         "Entity Diagnostics",
         "Memory Category Values",
-        "System Diagnostics"
+        "System Diagnostics",
+        "Whisker Scopes"
     ],
     "$metaProperties": {
         "[cereal:packet]": 315,

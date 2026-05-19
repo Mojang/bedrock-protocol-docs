@@ -1,0 +1,36 @@
+digraph "CylinderDataPayload" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+2 -> 3
+1 -> 4
+4 -> 5
+0 -> 6
+6 -> 7
+7 -> 8
+6 -> 9
+9 -> 10
+0 -> 11
+11 -> 12
+0 -> 13
+13 -> 14
+
+0 [label="CylinderDataPayload",comment="name: \"CylinderDataPayload\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Radius X",comment="name: \"Radius X\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"Radius along the X axis of the debug cylinder.\""];
+2 [label="X",comment="name: \"X\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="float",comment="name: \"float\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+4 [label="Y",comment="name: \"Y\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="float",comment="name: \"float\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+6 [label="Radius Z",comment="name: \"Radius Z\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"Radius along the Z axis of the debug cylinder.\""];
+7 [label="X",comment="name: \"X\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="float",comment="name: \"float\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+9 [label="Y",comment="name: \"Y\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+10 [label="float",comment="name: \"float\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+11 [label="Height",comment="name: \"Height\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"Height of the debug cylinder.\""];
+12 [label="float",comment="name: \"float\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"Height of the debug cylinder.\""];
+13 [label="Num Segments",comment="name: \"Num Segments\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"Number of segments used for the debug cylinder.\""];
+14 [label="unsigned byte",comment="name: \"unsigned byte\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"Number of segments used for the debug cylinder.\""];
+{ rank = max;3;5;8;10;12;14}
+
+}

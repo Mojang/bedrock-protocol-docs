@@ -2,9 +2,45 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3861158264",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.20",
-    "x-protocol-version": 975,
+    "x-minecraft-version": "1.26.30",
+    "x-protocol-version": 1001,
     "definitions": {
+        "1823518887": {
+            "title": "CylinderDataPayload",
+            "type": "object",
+            "properties": {
+                "Height": {
+                    "description": "Height of the debug cylinder.",
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                },
+                "Num Segments": {
+                    "description": "Number of segments used for the debug cylinder.",
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 3,
+                    "minimum": 0.0,
+                    "maximum": 255.0
+                },
+                "Radius X": {
+                    "description": "Radius along the X axis of the debug cylinder.",
+                    "$ref": "#/definitions/742152213",
+                    "x-ordinal-index": 0
+                },
+                "Radius Z": {
+                    "description": "Radius along the Z axis of the debug cylinder.",
+                    "$ref": "#/definitions/742152213",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Height",
+                "Num Segments",
+                "Radius X",
+                "Radius Z"
+            ]
+        },
         "2635068427": {
             "title": "PrimitiveShapeDataPayload",
             "type": "object",
@@ -51,6 +87,22 @@
                         {
                             "$ref": "#/definitions/1119825038",
                             "x-ordinal-index": 5
+                        },
+                        {
+                            "$ref": "#/definitions/1823518887",
+                            "x-ordinal-index": 6
+                        },
+                        {
+                            "$ref": "#/definitions/3938376319",
+                            "x-ordinal-index": 7
+                        },
+                        {
+                            "$ref": "#/definitions/2449946036",
+                            "x-ordinal-index": 8
+                        },
+                        {
+                            "$ref": "#/definitions/229192384",
+                            "x-ordinal-index": 9
                         }
                     ],
                     "x-control-value-type": "uint32",
@@ -98,7 +150,11 @@
                         "Sphere",
                         "Circle",
                         "Text",
-                        "Arrow"
+                        "Arrow",
+                        "Cylinder",
+                        "Pyramid",
+                        "Ellipsoid",
+                        "Cone"
                     ],
                     "x-underlying-type": "uint8",
                     "x-serialization-options": [
@@ -140,7 +196,7 @@
             "type": "object",
             "properties": {
                 "Num Segments": {
-                    "description": "Integer number of segments used for the debug circle or sphere.",
+                    "description": "Number of segments used for the debug circle or sphere.",
                     "type": "integer",
                     "x-underlying-type": "uint8",
                     "x-ordinal-index": 0,
@@ -150,6 +206,65 @@
             },
             "required": [
                 "Num Segments"
+            ]
+        },
+        "4257541248": {
+            "title": "ActorUniqueID",
+            "type": "object",
+            "properties": {
+                "Actor Unique ID": {
+                    "type": "integer",
+                    "x-underlying-type": "int64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Actor Unique ID"
+            ]
+        },
+        "3938376319": {
+            "title": "PyramidDataPayload",
+            "type": "object",
+            "properties": {
+                "Depth": {
+                    "description": "Depth along the Z axis (defaults to width if unset).",
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "Height": {
+                    "description": "Height of the debug pyramid.",
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                },
+                "Width": {
+                    "description": "Width along the X axis of the debug pyramid base.",
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Height",
+                "Width"
+            ]
+        },
+        "3663142120": {
+            "title": "BoxDataPayload",
+            "type": "object",
+            "properties": {
+                "Box Bound": {
+                    "description": "Vec3 bound of the debug box shape.",
+                    "$ref": "#/definitions/725374594",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Box Bound"
             ]
         },
         "3614003324": {
@@ -187,63 +302,6 @@
                 "Arrow Head Length",
                 "Arrow Head Radius",
                 "Num Segments"
-            ]
-        },
-        "4257541248": {
-            "title": "ActorUniqueID",
-            "type": "object",
-            "properties": {
-                "Actor Unique ID": {
-                    "type": "integer",
-                    "x-underlying-type": "int64",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "Actor Unique ID"
-            ]
-        },
-        "3663142120": {
-            "title": "BoxDataPayload",
-            "type": "object",
-            "properties": {
-                "Box Bound": {
-                    "description": "Vec3 bound of the debug box shape.",
-                    "$ref": "#/definitions/725374594",
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "Box Bound"
-            ]
-        },
-        "725374594": {
-            "title": "Vec3",
-            "type": "object",
-            "properties": {
-                "X": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 0
-                },
-                "Y": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 1
-                },
-                "Z": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 2
-                }
-            },
-            "required": [
-                "X",
-                "Y",
-                "Z"
             ]
         },
         "3500005140": {
@@ -293,6 +351,32 @@
                 "Text"
             ]
         },
+        "725374594": {
+            "title": "Vec3",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "Z": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "X",
+                "Y",
+                "Z"
+            ]
+        },
         "3702137727": {
             "title": "Color",
             "type": "object",
@@ -319,6 +403,79 @@
             },
             "required": [
                 "Line End Location"
+            ]
+        },
+        "742152213": {
+            "title": "Vec2",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "X",
+                "Y"
+            ]
+        },
+        "2449946036": {
+            "title": "EllipsoidDataPayload",
+            "type": "object",
+            "properties": {
+                "Radii": {
+                    "description": "Radii (X, Y, Z) of the debug ellipsoid.",
+                    "$ref": "#/definitions/725374594",
+                    "x-ordinal-index": 0
+                },
+                "Segments Per Axis": {
+                    "description": "Number of segments per axis used for the debug ellipsoid.",
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0,
+                    "maximum": 255.0
+                }
+            },
+            "required": [
+                "Radii",
+                "Segments Per Axis"
+            ]
+        },
+        "229192384": {
+            "title": "ConeDataPayload",
+            "type": "object",
+            "properties": {
+                "Height": {
+                    "description": "Height of the debug cone.",
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "Num Segments": {
+                    "description": "Number of segments used for the debug cone.",
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 2,
+                    "minimum": 0.0,
+                    "maximum": 255.0
+                },
+                "Radii": {
+                    "description": "Radii along the X/Z axis of the debug cone base.",
+                    "$ref": "#/definitions/742152213",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Height",
+                "Num Segments",
+                "Radii"
             ]
         }
     },

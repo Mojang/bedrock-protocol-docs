@@ -1,2 +1,18 @@
 <!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/InventoryAction.svg" alt="InventoryAction">
-<br></body> </html>
+<br><table><col width="10%"><col width="10%"><col width="15%"><col width="80%"><tr><th>Field Name</th><th>Field Type</th><th>Field Constraints</th><th>Field Notes</th></tr><tr><td>Source</td>
+<td>InventorySource</td>
+<td></td>
+<td>The inventory source identifying which container this action targets.</td>
+</tr><tr><td>Slot</td>
+<td>unsigned varint</td>
+<td>&lt;div style="padding-left: 0px;"&gt;Minimum = 0&lt;/div&gt;</td>
+<td>The slot index within the source container.</td>
+</tr><tr><td>From Item</td>
+<td>NetworkItemStackDescriptor</td>
+<td></td>
+<td>The item descriptor representing the state of the slot before this action.</td>
+</tr><tr><td>To Item</td>
+<td>NetworkItemStackDescriptor</td>
+<td></td>
+<td>The item descriptor representing the desired state of the slot after this action.</td>
+</tr></table></body> </html>

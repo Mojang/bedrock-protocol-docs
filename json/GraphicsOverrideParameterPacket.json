@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "138990835",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.20",
-    "x-protocol-version": 975,
+    "x-minecraft-version": "1.26.30",
+    "x-protocol-version": 1001,
     "definitions": {
         "725374594": {
             "title": "Vec3",
@@ -110,7 +110,7 @@
             "x-serialization-options": [
                 "Enum-as-Value"
             ],
-            "x-ordinal-index": 4
+            "x-ordinal-index": 5
         },
         "Parameter Keyframe Values": {
             "description": "Time of Day key to Graphics Parameter value, Depending on the parameters, either all three components are used as a color or just the x component is used as a float, int, or bool",
@@ -131,11 +131,17 @@
             "x-ordinal-index": 0,
             "maxProperties": 255
         },
+        "Player Identifier": {
+            "description": "Determines which player the override parameter is applied to",
+            "type": "string",
+            "x-ordinal-index": 4,
+            "maxLength": 255
+        },
         "Reset Parameter": {
             "description": "If true, the specified parameter will be reset. If false, the parameter will be set using the data fields.",
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 5
+            "x-ordinal-index": 6
         },
         "Vec3 Value": {
             "description": "If set, contains a single Vec3 graphics parameter to be overriden",

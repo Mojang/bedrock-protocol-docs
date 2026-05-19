@@ -1,44 +1,20 @@
 digraph "InventorySource" {
 rankdir = LR
-30
-30 -> 31
-31 -> 32
-30 -> 33
-33 -> 34
-34 -> 35
-35 -> 36
-33 -> 37
-37 -> 38
-33 -> 39
-39 -> 40
-40 -> 41
-33 -> 42
-42 -> 43
-33 -> 44
-44 -> 45
-45 -> 46
-33 -> 47
-47 -> 48
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+0 -> 5
+5 -> 6
 
-30 [label="InventorySource",comment="name: \"InventorySource\", typeName: \"\", id: 30, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-31 [label="Source Type",comment="name: \"Source Type\", typeName: \"\", id: 31, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-32 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 32, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-33 [label="Dependency on 'Source Type'",shape=note,comment="name: \"Dependency on 'Source Type'\", typeName: \"\", id: 33, branchId: 0, recurseId: -1, attributes: 2, notes: \"\""];
-34 [label="ContainerInventory",shape=diamond,comment="name: \"ContainerInventory\", typeName: \"\", id: 34, branchId: 0, recurseId: -1, attributes: 4, notes: \"\""];
-35 [label="Container ID",comment="name: \"Container ID\", typeName: \"\", id: 35, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-36 [label="varint",comment="name: \"varint\", typeName: \"\", id: 36, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-37 [label="GlobalInventory",shape=diamond,comment="name: \"GlobalInventory\", typeName: \"\", id: 37, branchId: 1, recurseId: -1, attributes: 4, notes: \"\""];
-38 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 38, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-39 [label="WorldInteraction",shape=diamond,comment="name: \"WorldInteraction\", typeName: \"\", id: 39, branchId: 2, recurseId: -1, attributes: 4, notes: \"\""];
-40 [label="Bit Flags",comment="name: \"Bit Flags\", typeName: \"\", id: 40, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-41 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 41, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-42 [label="CreativeInventory",shape=diamond,comment="name: \"CreativeInventory\", typeName: \"\", id: 42, branchId: 3, recurseId: -1, attributes: 4, notes: \"\""];
-43 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 43, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-44 [label="NonImplementedFeatureTODO",shape=diamond,comment="name: \"NonImplementedFeatureTODO\", typeName: \"\", id: 44, branchId: 4, recurseId: -1, attributes: 4, notes: \"\""];
-45 [label="Container ID",comment="name: \"Container ID\", typeName: \"\", id: 45, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-46 [label="varint",comment="name: \"varint\", typeName: \"\", id: 46, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-47 [label="Default",shape=diamond,comment="name: \"Default\", typeName: \"\", id: 47, branchId: 5, recurseId: -1, attributes: 4, notes: \"\""];
-48 [label="[No Data]",comment="name: \"[No Data]\", typeName: \"\", id: 48, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;32;36;38;41;43;46;48}
+0 [label="InventorySource",comment="name: \"InventorySource\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Source Type",comment="name: \"Source Type\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"The inventory source type.\""];
+2 [label="enum InventorySourceType",comment="name: \"enum InventorySourceType\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"The inventory source type.\""];
+3 [label="Container ID",comment="name: \"Container ID\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"Container window ID. Present only for ContainerInventory and NonImplementedFeatureTODO source types.\""];
+4 [label="byte",comment="name: \"byte\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"Container window ID. Present only for ContainerInventory and NonImplementedFeatureTODO source types.\""];
+5 [label="Bit Flags",comment="name: \"Bit Flags\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"Source flags. Present only for WorldInteraction source type.\""];
+6 [label="enum InventorySourceFlags",comment="name: \"enum InventorySourceFlags\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 512, notes: \"Source flags. Present only for WorldInteraction source type.\""];
+{ rank = max;2;4;6}
 
 }

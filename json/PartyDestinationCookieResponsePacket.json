@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "4124351692",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.30",
+    "x-protocol-version": 1001,
+    "title": "PartyDestinationCookieResponsePacket",
+    "description": "Sent by the client to the server with a party destination cookie response.",
+    "type": "object",
+    "properties": {
+        "accepted": {
+            "type": "boolean",
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 1
+        },
+        "cookie": {
+            "type": "string",
+            "x-ordinal-index": 0,
+            "maxLength": 2048
+        }
+    },
+    "required": [
+        "accepted",
+        "cookie"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 350,
+        "[cereal:packet_details]": ""
+    }
+}

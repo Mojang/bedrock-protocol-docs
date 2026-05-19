@@ -9,88 +9,88 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 148)">
 <title>ItemStackRequestSlotInfo</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-148 662.53,-148 662.53,4 -4,4"/>
-<!-- 106 -->
-<!-- name: &quot;ItemStackRequestSlotInfo&quot;, typeName: &quot;&quot;, id: 106, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;&quot; -->
+<!-- 141 -->
+<!-- name: &quot;ItemStackRequestSlotInfo&quot;, typeName: &quot;&quot;, id: 141, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;&quot; -->
 <g id="node1" class="node">
-<title>106</title>
+<title>141</title>
 <ellipse fill="none" stroke="black" cx="108.67" cy="-72" rx="108.67" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="108.67" y="-66.95" font-family="Times New Roman,serif" font-size="14.00">ItemStackRequestSlotInfo</text>
 </g>
-<!-- 107 -->
-<!-- name: &quot;Full container name.&quot;, typeName: &quot;FullContainerName&quot;, id: 107, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;&quot; -->
+<!-- 142 -->
+<!-- name: &quot;Full container name.&quot;, typeName: &quot;FullContainerName&quot;, id: 142, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;&quot; -->
 <g id="node2" class="node">
-<title>107</title>
+<title>142</title>
 <ellipse fill="none" stroke="black" cx="341.55" cy="-126" rx="88.2" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="341.55" y="-120.95" font-family="Times New Roman,serif" font-size="14.00">Full container name.</text>
 </g>
-<!-- 106&#45;&gt;107 -->
+<!-- 141&#45;&gt;142 -->
 <g id="edge1" class="edge">
-<title>106&#45;&gt;107</title>
+<title>141&#45;&gt;142</title>
 <path fill="none" stroke="black" d="M173.37,-86.9C203.69,-93.99 240,-102.48 271.03,-109.74"/>
 <polygon fill="black" stroke="black" points="270.19,-113.14 280.72,-112.01 271.78,-106.32 270.19,-113.14"/>
 </g>
-<!-- 109 -->
-<!-- name: &quot;Slot&quot;, typeName: &quot;&quot;, id: 109, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;&quot; -->
+<!-- 157 -->
+<!-- name: &quot;Slot&quot;, typeName: &quot;&quot;, id: 157, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;&quot; -->
 <g id="node4" class="node">
-<title>109</title>
+<title>157</title>
 <ellipse fill="none" stroke="black" cx="341.55" cy="-72" rx="27" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="341.55" y="-66.95" font-family="Times New Roman,serif" font-size="14.00">Slot</text>
 </g>
-<!-- 106&#45;&gt;109 -->
+<!-- 141&#45;&gt;157 -->
 <g id="edge3" class="edge">
-<title>106&#45;&gt;109</title>
+<title>141&#45;&gt;157</title>
 <path fill="none" stroke="black" d="M217.68,-72C248.26,-72 279.54,-72 302.88,-72"/>
 <polygon fill="black" stroke="black" points="302.81,-75.5 312.81,-72 302.81,-68.5 302.81,-75.5"/>
 </g>
-<!-- 111 -->
-<!-- name: &quot;Net Id Variant&quot;, typeName: &quot;ItemStackNetIdVariant&quot;, id: 111, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;&quot; -->
+<!-- 159 -->
+<!-- name: &quot;Net Id Variant&quot;, typeName: &quot;ItemStackNetIdVariant&quot;, id: 159, branchId: 0, recurseId: &#45;1, attributes: 256, notes: &quot;&quot; -->
 <g id="node6" class="node">
-<title>111</title>
+<title>159</title>
 <ellipse fill="none" stroke="black" cx="341.55" cy="-18" rx="63.12" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="341.55" y="-12.95" font-family="Times New Roman,serif" font-size="14.00">Net Id Variant</text>
 </g>
-<!-- 106&#45;&gt;111 -->
+<!-- 141&#45;&gt;159 -->
 <g id="edge5" class="edge">
-<title>106&#45;&gt;111</title>
+<title>141&#45;&gt;159</title>
 <path fill="none" stroke="black" d="M173.37,-57.1C206.95,-49.25 247.89,-39.67 280.85,-31.96"/>
 <polygon fill="black" stroke="black" points="281.29,-35.46 290.23,-29.77 279.69,-28.64 281.29,-35.46"/>
 </g>
-<!-- 108 -->
-<!-- name: &quot;FullContainerName&quot;, typeName: &quot;&quot;, id: 108, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
+<!-- 156 -->
+<!-- name: &quot;FullContainerName&quot;, typeName: &quot;&quot;, id: 156, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
 <g id="node3" class="node">
-<title>108</title>
+<title>156</title>
 <ellipse fill="none" stroke="black" cx="562.14" cy="-126" rx="84.62" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="562.14" y="-120.95" font-family="Times New Roman,serif" font-size="14.00">FullContainerName</text>
 </g>
-<!-- 107&#45;&gt;108 -->
+<!-- 142&#45;&gt;156 -->
 <g id="edge2" class="edge">
-<title>107&#45;&gt;108</title>
+<title>142&#45;&gt;156</title>
 <path fill="none" stroke="black" d="M430.2,-126C441.9,-126 453.95,-126 465.77,-126"/>
 <polygon fill="black" stroke="black" points="465.51,-129.5 475.51,-126 465.51,-122.5 465.51,-129.5"/>
 </g>
-<!-- 110 -->
-<!-- name: &quot;byte&quot;, typeName: &quot;&quot;, id: 110, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
+<!-- 158 -->
+<!-- name: &quot;byte&quot;, typeName: &quot;&quot;, id: 158, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
 <g id="node5" class="node">
-<title>110</title>
+<title>158</title>
 <ellipse fill="none" stroke="black" cx="562.14" cy="-72" rx="27" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="562.14" y="-66.95" font-family="Times New Roman,serif" font-size="14.00">byte</text>
 </g>
-<!-- 109&#45;&gt;110 -->
+<!-- 157&#45;&gt;158 -->
 <g id="edge4" class="edge">
-<title>109&#45;&gt;110</title>
+<title>157&#45;&gt;158</title>
 <path fill="none" stroke="black" d="M368.92,-72C407.4,-72 479.17,-72 523.29,-72"/>
 <polygon fill="black" stroke="black" points="523.17,-75.5 533.17,-72 523.17,-68.5 523.17,-75.5"/>
 </g>
-<!-- 112 -->
-<!-- name: &quot;ItemStackNetIdVariant&quot;, typeName: &quot;&quot;, id: 112, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
+<!-- 160 -->
+<!-- name: &quot;ItemStackNetIdVariant&quot;, typeName: &quot;&quot;, id: 160, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;&quot; -->
 <g id="node7" class="node">
-<title>112</title>
+<title>160</title>
 <ellipse fill="none" stroke="black" cx="562.14" cy="-18" rx="96.39" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="562.14" y="-12.95" font-family="Times New Roman,serif" font-size="14.00">ItemStackNetIdVariant</text>
 </g>
-<!-- 111&#45;&gt;112 -->
+<!-- 159&#45;&gt;160 -->
 <g id="edge6" class="edge">
-<title>111&#45;&gt;112</title>
+<title>159&#45;&gt;160</title>
 <path fill="none" stroke="black" d="M404.9,-18C420.42,-18 437.51,-18 454.51,-18"/>
 <polygon fill="black" stroke="black" points="454.14,-21.5 464.14,-18 454.14,-14.5 454.14,-21.5"/>
 </g>
