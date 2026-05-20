@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InventoryTransactionPacket (30)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        h4 {
+            color: #666;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        table {
+            background-color: white;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        th {
+            font-weight: bold;
+            text-align: left;
+            padding: 8px !important;
+        }
+        td {
+            padding: 8px !important;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #e8f4f8;
+        }
+        .description {
+            color: #555;
+            font-style: italic;
+            margin: 10px 0 20px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .packet-list {
+            columns: 3;
+            column-gap: 20px;
+        }
+        .packet-list li {
+            margin-bottom: 8px;
+            break-inside: avoid;
+        }
+        details {
+            margin: 10px 0;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            padding: 8px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            user-select: none;
+        }
+        summary:hover {
+            background-color: #e8e8e8;
+        }
+        details[open] summary {
+            background-color: #d4edff;
+            border-color: #3498db;
+            border-left: 4px solid #3498db;
+        }
+        @media (max-width: 900px) {
+            .packet-list {
+                columns: 2;
+            }
+        }
+        @media (max-width: 600px) {
+            .packet-list {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p><a href="index.html">← Back to Index</a></p>
+        <h1>InventoryTransactionPacket (30)</h1>
+<div class="description">Inventory Transaction. Sent for item interaction UI depending on if ItemStackNetManager is enabled as well as when the player uses items in gameplay. See ComplexInventoryTransaction::Type for more details.</div>
+<div style="margin-left: 0px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Legacy Request ID (Required)</strong></td>
+<td>ItemStackLegacyRequestId</td>
+<td>0</td>
+<td>Used when ItemStackNetManager is enabled. Identifies a legacy client item request. Negative, even values are valid. Zero indicates no legacy request.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>ItemStackLegacyRequestId</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ID (Required)</strong></td>
+<td>varint32</td>
+<td>0</td>
+<td>Raw Id (32 bit signed)</td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Legacy Set Item Slots</strong></td>
+<td>array&lt;LegacySetSlot&gt;</td>
+<td>1</td>
+<td>Only present when Legacy Request ID is valid. Lists the open containers and their slot indices the client is requesting changes for.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>LegacySetSlot (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Container Enum (Required)</strong></td>
+<td>varuint8</td>
+<td>0</td>
+<td>The container enum name identifying which container slot set this belongs to.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>AnvilInputContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>AnvilMaterialContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>AnvilResultPreviewContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>SmithingTableInputContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>SmithingTableMaterialContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><code>SmithingTableResultPreviewContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td><code>ArmorContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td><code>LevelEntityContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td><code>BeaconPaymentContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td><code>BrewingStandInputContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td><code>BrewingStandResultContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td><code>BrewingStandFuelContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td><code>CombinedHotbarAndInventoryContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">13</td>
+<td><code>CraftingInputContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td><code>CraftingOutputPreviewContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td><code>RecipeConstructionContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">16</td>
+<td><code>RecipeNatureContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">17</td>
+<td><code>RecipeItemsContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">18</td>
+<td><code>RecipeFoodContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">19</td>
+<td><code>RecipeBlocksContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">20</td>
+<td><code>RecipeFurnaceItemsContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">21</td>
+<td><code>RecipeSearchContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">22</td>
+<td><code>RecipeSearchBarContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">23</td>
+<td><code>RecipeEquipmentContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">24</td>
+<td><code>RecipeBookContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">25</td>
+<td><code>EnchantingInputContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">26</td>
+<td><code>EnchantingMaterialContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">27</td>
+<td><code>FurnaceFuelContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">28</td>
+<td><code>FurnaceIngredientContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">29</td>
+<td><code>FurnaceResultContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">30</td>
+<td><code>HorseEquipContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">31</td>
+<td><code>HotbarContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">32</td>
+<td><code>InventoryContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">33</td>
+<td><code>ShulkerBoxContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">34</td>
+<td><code>TradeIngredient1Container</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">35</td>
+<td><code>TradeIngredient2Container</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">36</td>
+<td><code>TradeResultPreviewContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">37</td>
+<td><code>OffhandContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">38</td>
+<td><code>CompoundCreatorInput</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">39</td>
+<td><code>CompoundCreatorOutputPreview</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">40</td>
+<td><code>ElementConstructorOutputPreview</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">41</td>
+<td><code>MaterialReducerInput</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">42</td>
+<td><code>MaterialReducerOutput</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">43</td>
+<td><code>LabTableInput</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">44</td>
+<td><code>LoomInputContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">45</td>
+<td><code>LoomDyeContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">46</td>
+<td><code>LoomMaterialContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">47</td>
+<td><code>LoomResultPreviewContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">48</td>
+<td><code>BlastFurnaceIngredientContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">49</td>
+<td><code>SmokerIngredientContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">50</td>
+<td><code>Trade2Ingredient1Container</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">51</td>
+<td><code>Trade2Ingredient2Container</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">52</td>
+<td><code>Trade2ResultPreviewContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">53</td>
+<td><code>GrindstoneInputContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">54</td>
+<td><code>GrindstoneAdditionalContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">55</td>
+<td><code>GrindstoneResultPreviewContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">56</td>
+<td><code>StonecutterInputContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">57</td>
+<td><code>StonecutterResultPreviewContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">58</td>
+<td><code>CartographyInputContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">59</td>
+<td><code>CartographyAdditionalContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">60</td>
+<td><code>CartographyResultPreviewContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">61</td>
+<td><code>BarrelContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">62</td>
+<td><code>CursorContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">63</td>
+<td><code>CreatedOutputContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">64</td>
+<td><code>SmithingTableTemplateContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">65</td>
+<td><code>CrafterLevelEntityContainer</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">66</td>
+<td><code>DynamicContainer</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>Slots (Required)</strong></td>
+<td>array&lt;uint8&gt;</td>
+<td>1</td>
+<td>List of inventory slot indices within the given container.</td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Transaction (Required)</strong></td>
+<td>oneOf</td>
+<td>2</td>
+<td>The inventory transaction. The variant index encodes ComplexInventoryTransaction::Type (0=Normal, 1=Mismatch, 2=ItemUse, 3=ItemUseOnActor, 4=ItemRelease), matching the legacy wire format discriminator.</td>
+</tr>
+<tr>
+<td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
+<strong>oneOf&lt;NormalTransactionData, InventoryMismatchData, ItemUseInventoryTransaction, ItemUseOnActorInventoryTransaction, ItemReleaseInventoryTransaction&gt;:</strong>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th>Control Value [uint32]</th>
+<th>Type</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>NormalTransactionData</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>InventoryMismatchData</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>ItemUseInventoryTransaction</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>ItemUseOnActorInventoryTransaction</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>ItemReleaseInventoryTransaction</strong></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>NormalTransactionData (Variant 0)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Actions (Required)</strong></td>
+<td>InventoryTransaction</td>
+<td>0</td>
+<td>Base inventory actions. Lists the slot changes making up this Normal (container UI) transaction.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>InventoryTransaction</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Actions (Required)</strong></td>
+<td>array&lt;InventoryAction&gt;</td>
+<td>0</td>
+<td>List of inventory slot changes. Each action describes which container slot is changing and what the item descriptor transitions from and to.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>InventoryAction (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Source (Required)</strong></td>
+<td>InventorySource</td>
+<td>0</td>
+<td>The inventory source identifying which container this action targets.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>InventorySource</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Source Type (Required)</strong></td>
+<td>varuint32</td>
+<td>0</td>
+<td>The inventory source type.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>Container Inventory</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>Global Inventory</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>World Interaction</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>Creative Inventory</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>Non Implemented Feature TODO</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>Container ID</strong></td>
+<td>varint8</td>
+<td>1</td>
+<td>Container window ID. Present only for ContainerInventory and NonImplementedFeatureTODO source types.</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Bit Flags</strong></td>
+<td>varuint32</td>
+<td>2</td>
+<td>Source flags. Present only for WorldInteraction source type.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>No Flag</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>World Interaction Random</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>Slot (Required)</strong></td>
+<td>varuint32</td>
+<td>1</td>
+<td>The slot index within the source container.</td>
+</tr>
+<tr>
+<td><strong>From Item (Required)</strong></td>
+<td>NetworkItemStackDescriptor</td>
+<td>2</td>
+<td>The item descriptor representing the state of the slot before this action.</td>
+</tr>
+<tr>
+<td><strong>To Item (Required)</strong></td>
+<td>NetworkItemStackDescriptor</td>
+<td>3</td>
+<td>The item descriptor representing the desired state of the slot after this action.</td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>InventoryMismatchData (Variant 1)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Actions (Required)</strong></td>
+<td>InventoryTransaction</td>
+<td>0</td>
+<td>Base inventory actions. Lists the slot changes making up this server-to-client rejection transaction.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>InventoryTransaction</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Actions (Required)</strong></td>
+<td>array&lt;InventoryAction&gt;</td>
+<td>0</td>
+<td>List of inventory slot changes. Each action describes which container slot is changing and what the item descriptor transitions from and to.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>InventoryAction (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Source (Required)</strong></td>
+<td>InventorySource</td>
+<td>0</td>
+<td>The inventory source identifying which container this action targets.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>InventorySource</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Source Type (Required)</strong></td>
+<td>varuint32</td>
+<td>0</td>
+<td>The inventory source type.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>Container Inventory</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>Global Inventory</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>World Interaction</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>Creative Inventory</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>Non Implemented Feature TODO</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>Container ID</strong></td>
+<td>varint8</td>
+<td>1</td>
+<td>Container window ID. Present only for ContainerInventory and NonImplementedFeatureTODO source types.</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Bit Flags</strong></td>
+<td>varuint32</td>
+<td>2</td>
+<td>Source flags. Present only for WorldInteraction source type.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>No Flag</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>World Interaction Random</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>Slot (Required)</strong></td>
+<td>varuint32</td>
+<td>1</td>
+<td>The slot index within the source container.</td>
+</tr>
+<tr>
+<td><strong>From Item (Required)</strong></td>
+<td>NetworkItemStackDescriptor</td>
+<td>2</td>
+<td>The item descriptor representing the state of the slot before this action.</td>
+</tr>
+<tr>
+<td><strong>To Item (Required)</strong></td>
+<td>NetworkItemStackDescriptor</td>
+<td>3</td>
+<td>The item descriptor representing the desired state of the slot after this action.</td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>ItemUseInventoryTransaction (Variant 2)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Actions (Required)</strong></td>
+<td>InventoryTransaction</td>
+<td>0</td>
+<td>Base inventory actions. Lists the inventory slot changes associated with this transaction.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>InventoryTransaction</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Actions (Required)</strong></td>
+<td>array&lt;InventoryAction&gt;</td>
+<td>0</td>
+<td>List of inventory slot changes. Each action describes which container slot is changing and what the item descriptor transitions from and to.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>InventoryAction (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Source (Required)</strong></td>
+<td>InventorySource</td>
+<td>0</td>
+<td>The inventory source identifying which container this action targets.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>InventorySource</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Source Type (Required)</strong></td>
+<td>varuint32</td>
+<td>0</td>
+<td>The inventory source type.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>Container Inventory</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>Global Inventory</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>World Interaction</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>Creative Inventory</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>Non Implemented Feature TODO</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>Container ID</strong></td>
+<td>varint8</td>
+<td>1</td>
+<td>Container window ID. Present only for ContainerInventory and NonImplementedFeatureTODO source types.</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Bit Flags</strong></td>
+<td>varuint32</td>
+<td>2</td>
+<td>Source flags. Present only for WorldInteraction source type.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>No Flag</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>World Interaction Random</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>Slot (Required)</strong></td>
+<td>varuint32</td>
+<td>1</td>
+<td>The slot index within the source container.</td>
+</tr>
+<tr>
+<td><strong>From Item (Required)</strong></td>
+<td>NetworkItemStackDescriptor</td>
+<td>2</td>
+<td>The item descriptor representing the state of the slot before this action.</td>
+</tr>
+<tr>
+<td><strong>To Item (Required)</strong></td>
+<td>NetworkItemStackDescriptor</td>
+<td>3</td>
+<td>The item descriptor representing the desired state of the slot after this action.</td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Action Type (Required)</strong></td>
+<td>varint32</td>
+<td>1</td>
+<td>The type of item use action performed.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>Place</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>Use</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>Destroy</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>Use As Attack</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Trigger Type (Required)</strong></td>
+<td>varuint8</td>
+<td>2</td>
+<td>PlayerInput if a direct result of the player&#x27;s initial button input. SimulationTick if the player is holding down input from a previous tick.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>Unknown</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>Player Input</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>Simulation Tick</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Position (Required)</strong></td>
+<td>BlockPos</td>
+<td>3</td>
+<td>The position of the target block.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BlockPos</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>varint32</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>varint32</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Z (Required)</strong></td>
+<td>varint32</td>
+<td>2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>Face (Required)</strong></td>
+<td>varuint8</td>
+<td>4</td>
+<td>The face of the target block that was clicked.</td>
+</tr>
+<tr>
+<td><strong>Slot (Required)</strong></td>
+<td>varint32</td>
+<td>5</td>
+<td>The inventory slot of the item being used.</td>
+</tr>
+<tr>
+<td><strong>Item (Required)</strong></td>
+<td>NetworkItemStackDescriptor</td>
+<td>6</td>
+<td>The item stack descriptor of the item being used.</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>From Position (Required)</strong></td>
+<td>Vec3</td>
+<td>7</td>
+<td>The player&#x27;s position when this transaction was sent.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>Vec3</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>float</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>float</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Z (Required)</strong></td>
+<td>float</td>
+<td>2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Click Position (Required)</strong></td>
+<td>Vec3</td>
+<td>8</td>
+<td>The position within the target block face that was clicked.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>Vec3</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>float</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>float</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Z (Required)</strong></td>
+<td>float</td>
+<td>2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>Target Block Id (Required)</strong></td>
+<td>varuint32</td>
+<td>9</td>
+<td>The runtime block state ID of the target block.</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Client Interact Prediction (Required)</strong></td>
+<td>uint8</td>
+<td>10</td>
+<td>Whether the client predicted the interaction would succeed.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>Failure</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>Success</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Client Cooldown State (Required)</strong></td>
+<td>uint8</td>
+<td>11</td>
+<td>Whether the item is currently on cooldown on the client.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>Off</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>On</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>ItemUseOnActorInventoryTransaction (Variant 3)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Actions (Required)</strong></td>
+<td>InventoryTransaction</td>
+<td>0</td>
+<td>Base inventory actions. Lists the inventory slot changes associated with this transaction.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>InventoryTransaction</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Actions (Required)</strong></td>
+<td>array&lt;InventoryAction&gt;</td>
+<td>0</td>
+<td>List of inventory slot changes. Each action describes which container slot is changing and what the item descriptor transitions from and to.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>InventoryAction (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Source (Required)</strong></td>
+<td>InventorySource</td>
+<td>0</td>
+<td>The inventory source identifying which container this action targets.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>InventorySource</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Source Type (Required)</strong></td>
+<td>varuint32</td>
+<td>0</td>
+<td>The inventory source type.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>Container Inventory</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>Global Inventory</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>World Interaction</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>Creative Inventory</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>Non Implemented Feature TODO</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>Container ID</strong></td>
+<td>varint8</td>
+<td>1</td>
+<td>Container window ID. Present only for ContainerInventory and NonImplementedFeatureTODO source types.</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Bit Flags</strong></td>
+<td>varuint32</td>
+<td>2</td>
+<td>Source flags. Present only for WorldInteraction source type.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>No Flag</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>World Interaction Random</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>Slot (Required)</strong></td>
+<td>varuint32</td>
+<td>1</td>
+<td>The slot index within the source container.</td>
+</tr>
+<tr>
+<td><strong>From Item (Required)</strong></td>
+<td>NetworkItemStackDescriptor</td>
+<td>2</td>
+<td>The item descriptor representing the state of the slot before this action.</td>
+</tr>
+<tr>
+<td><strong>To Item (Required)</strong></td>
+<td>NetworkItemStackDescriptor</td>
+<td>3</td>
+<td>The item descriptor representing the desired state of the slot after this action.</td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Runtime Id (Required)</strong></td>
+<td>ActorRuntimeID</td>
+<td>1</td>
+<td>The runtime ID of the actor being interacted with or attacked.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>ActorRuntimeID</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Actor Runtime ID (Required)</strong></td>
+<td>varuint64</td>
+<td>0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Action Type (Required)</strong></td>
+<td>varint32</td>
+<td>2</td>
+<td>Interact: right-click on actor. Attack: left-click or trident spin attack.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>Interact</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>Attack</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>Item Interact</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>Slot (Required)</strong></td>
+<td>varint32</td>
+<td>3</td>
+<td>The inventory slot of the item being used on the actor.</td>
+</tr>
+<tr>
+<td><strong>Item (Required)</strong></td>
+<td>NetworkItemStackDescriptor</td>
+<td>4</td>
+<td>The item stack descriptor of the item being used on the actor.</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>From Position (Required)</strong></td>
+<td>Vec3</td>
+<td>5</td>
+<td>The player&#x27;s position when this transaction was sent.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>Vec3</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>float</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>float</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Z (Required)</strong></td>
+<td>float</td>
+<td>2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Hit Position (Required)</strong></td>
+<td>Vec3</td>
+<td>6</td>
+<td>The position on the actor that was clicked.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>Vec3</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>float</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>float</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Z (Required)</strong></td>
+<td>float</td>
+<td>2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details style="margin-left: 20px; margin-top: 10px;">
+<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>ItemReleaseInventoryTransaction (Variant 4)</strong></summary>
+<div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Actions (Required)</strong></td>
+<td>InventoryTransaction</td>
+<td>0</td>
+<td>Base inventory actions. Lists the inventory slot changes associated with this transaction.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>InventoryTransaction</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Actions (Required)</strong></td>
+<td>array&lt;InventoryAction&gt;</td>
+<td>0</td>
+<td>List of inventory slot changes. Each action describes which container slot is changing and what the item descriptor transitions from and to.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>InventoryAction (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Source (Required)</strong></td>
+<td>InventorySource</td>
+<td>0</td>
+<td>The inventory source identifying which container this action targets.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>InventorySource</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Source Type (Required)</strong></td>
+<td>varuint32</td>
+<td>0</td>
+<td>The inventory source type.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>Container Inventory</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>Global Inventory</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>World Interaction</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>Creative Inventory</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>Non Implemented Feature TODO</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>Container ID</strong></td>
+<td>varint8</td>
+<td>1</td>
+<td>Container window ID. Present only for ContainerInventory and NonImplementedFeatureTODO source types.</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Bit Flags</strong></td>
+<td>varuint32</td>
+<td>2</td>
+<td>Source flags. Present only for WorldInteraction source type.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>No Flag</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>World Interaction Random</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>Slot (Required)</strong></td>
+<td>varuint32</td>
+<td>1</td>
+<td>The slot index within the source container.</td>
+</tr>
+<tr>
+<td><strong>From Item (Required)</strong></td>
+<td>NetworkItemStackDescriptor</td>
+<td>2</td>
+<td>The item descriptor representing the state of the slot before this action.</td>
+</tr>
+<tr>
+<td><strong>To Item (Required)</strong></td>
+<td>NetworkItemStackDescriptor</td>
+<td>3</td>
+<td>The item descriptor representing the desired state of the slot after this action.</td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Action Type (Required)</strong></td>
+<td>varint32</td>
+<td>1</td>
+<td>Release: firing a bow or releasing a held item. Use: finishing charging a crossbow.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>Release</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>Use</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>Slot (Required)</strong></td>
+<td>varint32</td>
+<td>2</td>
+<td>The inventory slot of the item being released.</td>
+</tr>
+<tr>
+<td><strong>Item (Required)</strong></td>
+<td>NetworkItemStackDescriptor</td>
+<td>3</td>
+<td>The item stack descriptor of the item being released.</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>From Position (Required)</strong></td>
+<td>Vec3</td>
+<td>4</td>
+<td>The player&#x27;s position when this transaction was sent.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>Vec3</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>float</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>float</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Z (Required)</strong></td>
+<td>float</td>
+<td>2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+    </div>
+</body>
+</html>

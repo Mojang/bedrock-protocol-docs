@@ -1,0 +1,40 @@
+digraph "NormalTransactionData" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+2 -> 3
+3 -> 4
+2 -> 5
+5 -> 6
+6 -> 7
+7 -> 8
+6 -> 9
+9 -> 10
+6 -> 11
+11 -> 12
+5 -> 13
+13 -> 14
+5 -> 15
+5 -> 16
+
+0 [label="NormalTransactionData",comment="name: \"NormalTransactionData\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Actions",comment="name: \"Actions\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"Base inventory actions. Lists the slot changes making up this Normal (container UI) transaction.\""];
+2 [label="Actions",comment="name: \"Actions\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"List of inventory slot changes. Each action describes which container slot is changing and what the item descriptor transitions from and to.\""];
+3 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+6 [label="Source",comment="name: \"Source\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"The inventory source identifying which container this action targets.\""];
+7 [label="Source Type",comment="name: \"Source Type\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"The inventory source type.\""];
+8 [label="enum InventorySourceType",comment="name: \"enum InventorySourceType\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"The inventory source type.\""];
+9 [label="Container ID",comment="name: \"Container ID\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"Container window ID. Present only for ContainerInventory and NonImplementedFeatureTODO source types.\""];
+10 [label="byte",comment="name: \"byte\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"Container window ID. Present only for ContainerInventory and NonImplementedFeatureTODO source types.\""];
+11 [label="Bit Flags",comment="name: \"Bit Flags\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"Source flags. Present only for WorldInteraction source type.\""];
+12 [label="enum InventorySourceFlags",comment="name: \"enum InventorySourceFlags\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"Source flags. Present only for WorldInteraction source type.\""];
+13 [label="Slot",comment="name: \"Slot\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"The slot index within the source container.\""];
+14 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"The slot index within the source container.\""];
+15 [label="From Item",comment="name: \"From Item\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"The item descriptor representing the state of the slot before this action.\""];
+16 [label="To Item",comment="name: \"To Item\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 0, notes: \"The item descriptor representing the desired state of the slot after this action.\""];
+{ rank = max;8;10;12;14}
+
+}

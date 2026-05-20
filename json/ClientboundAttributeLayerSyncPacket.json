@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3424454928",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.20",
-    "x-protocol-version": 975,
+    "x-minecraft-version": "1.26.30",
+    "x-protocol-version": 1001,
     "definitions": {
         "2490228788": {
             "title": "UpdateAttributeLayersData",
@@ -58,21 +58,26 @@
                     "items": {
                         "$ref": "#/definitions/2266740463"
                     },
-                    "x-ordinal-index": 3,
+                    "x-ordinal-index": 4,
                     "maxItems": 1024
                 },
                 "Dimension": {
                     "$ref": "#/definitions/1586048219",
-                    "x-ordinal-index": 1
+                    "x-ordinal-index": 2
                 },
                 "Name": {
                     "type": "string",
                     "x-ordinal-index": 0,
                     "maxLength": 128
                 },
+                "NoiseName": {
+                    "type": "string",
+                    "x-ordinal-index": 1,
+                    "maxLength": 128
+                },
                 "Settings": {
                     "$ref": "#/definitions/939393380",
-                    "x-ordinal-index": 2
+                    "x-ordinal-index": 3
                 }
             },
             "required": [
@@ -190,6 +195,17 @@
                     "x-control-value-type": "uint32",
                     "x-ordinal-index": 1
                 },
+                "LocalTransitionTicks": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 7,
+                    "minimum": 0.0
+                },
+                "NoiseTransition": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 8
+                },
                 "ToAttribute": {
                     "oneOf": [
                         {
@@ -220,6 +236,8 @@
                 "AttributeName",
                 "CurrentTransitionTicks",
                 "Easing",
+                "LocalTransitionTicks",
+                "NoiseTransition",
                 "TotalTransitionTicks"
             ]
         },

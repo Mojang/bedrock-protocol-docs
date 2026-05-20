@@ -1,24 +1,30 @@
 digraph "InventoryAction" {
 rankdir = LR
-28
-28 -> 29
-29 -> 49
-28 -> 50
-50 -> 51
-28 -> 52
-52 -> 53
-28 -> 54
-54 -> 55
+0
+0 -> 1
+1 -> 2
+2 -> 3
+1 -> 4
+4 -> 5
+1 -> 6
+6 -> 7
+0 -> 8
+8 -> 9
+0 -> 10
+0 -> 11
 
-28 [label="InventoryAction",comment="name: \"InventoryAction\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-29 [label="Source",comment="name: \"Source\", typeName: \"InventorySource\", id: 29, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-49 [label="InventorySource",comment="name: \"InventorySource\", typeName: \"\", id: 49, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-50 [label="Slot",comment="name: \"Slot\", typeName: \"\", id: 50, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-51 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 51, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-52 [label="From Item Descriptor",comment="name: \"From Item Descriptor\", typeName: \"NetworkItemStackDescriptor\", id: 52, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-53 [label="NetworkItemStackDescriptor",comment="name: \"NetworkItemStackDescriptor\", typeName: \"\", id: 53, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-54 [label="To Item Descriptor",comment="name: \"To Item Descriptor\", typeName: \"NetworkItemStackDescriptor\", id: 54, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-55 [label="NetworkItemStackDescriptor",comment="name: \"NetworkItemStackDescriptor\", typeName: \"\", id: 55, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;49;51;53;55}
+0 [label="InventoryAction",comment="name: \"InventoryAction\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Source",comment="name: \"Source\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"The inventory source identifying which container this action targets.\""];
+2 [label="Source Type",comment="name: \"Source Type\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"The inventory source type.\""];
+3 [label="enum InventorySourceType",comment="name: \"enum InventorySourceType\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"The inventory source type.\""];
+4 [label="Container ID",comment="name: \"Container ID\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"Container window ID. Present only for ContainerInventory and NonImplementedFeatureTODO source types.\""];
+5 [label="byte",comment="name: \"byte\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"Container window ID. Present only for ContainerInventory and NonImplementedFeatureTODO source types.\""];
+6 [label="Bit Flags",comment="name: \"Bit Flags\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"Source flags. Present only for WorldInteraction source type.\""];
+7 [label="enum InventorySourceFlags",comment="name: \"enum InventorySourceFlags\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"Source flags. Present only for WorldInteraction source type.\""];
+8 [label="Slot",comment="name: \"Slot\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"The slot index within the source container.\""];
+9 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"The slot index within the source container.\""];
+10 [label="From Item",comment="name: \"From Item\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 0, notes: \"The item descriptor representing the state of the slot before this action.\""];
+11 [label="To Item",comment="name: \"To Item\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"The item descriptor representing the desired state of the slot after this action.\""];
+{ rank = max;3;5;7;9}
 
 }

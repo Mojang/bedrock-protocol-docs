@@ -1,0 +1,26 @@
+digraph "NoiseDescriptor" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+0 -> 5
+5 -> 6
+6 -> 7
+5 -> 8
+8 -> 9
+
+0 [label="NoiseDescriptor",comment="name: \"NoiseDescriptor\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="name",comment="name: \"name\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"The string used to initialize the noise. Has no impact on the qualitative aspects of the generated values.\""];
+2 [label="string",comment="name: \"string\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"The string used to initialize the noise. Has no impact on the qualitative aspects of the generated values.\""];
+3 [label="first_octave",comment="name: \"first_octave\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"Governs the general frequency characteristics of the generated noise. Lower value results in noise with lower frequency content.\""];
+4 [label="int",comment="name: \"int\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 512, notes: \"Governs the general frequency characteristics of the generated noise. Lower value results in noise with lower frequency content.\""];
+5 [label="amplitudes",comment="name: \"amplitudes\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"Governs the attenuation of the first n octaves in the generated noise.\""];
+6 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+7 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+8 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+9 [label="float",comment="name: \"float\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;4;9}
+
+}

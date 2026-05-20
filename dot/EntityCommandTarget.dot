@@ -1,0 +1,14 @@
+digraph "EntityCommandTarget" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+2 -> 3
+
+0 [label="EntityCommandTarget",comment="name: \"EntityCommandTarget\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Target Runtime ID",comment="name: \"Target Runtime ID\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+2 [label="Actor Runtime ID",comment="name: \"Actor Runtime ID\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="unsigned varint64",comment="name: \"unsigned varint64\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3}
+
+}

@@ -1,0 +1,114 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "1012857595",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.30",
+    "x-protocol-version": 1001,
+    "definitions": {
+        "2032546634": {
+            "title": "SubChunkPosOffset",
+            "type": "object",
+            "properties": {
+                "Subchunk Offset X": {
+                    "type": "integer",
+                    "x-underlying-type": "int8",
+                    "x-ordinal-index": 0,
+                    "minimum": -128.0,
+                    "maximum": 127.0
+                },
+                "Subchunk Offset Y": {
+                    "type": "integer",
+                    "x-underlying-type": "int8",
+                    "x-ordinal-index": 1,
+                    "minimum": -128.0,
+                    "maximum": 127.0
+                },
+                "Subchunk Offset Z": {
+                    "type": "integer",
+                    "x-underlying-type": "int8",
+                    "x-ordinal-index": 2,
+                    "minimum": -128.0,
+                    "maximum": 127.0
+                }
+            },
+            "required": [
+                "Subchunk Offset X",
+                "Subchunk Offset Y",
+                "Subchunk Offset Z"
+            ]
+        },
+        "2004529736": {
+            "title": "SubChunkPos",
+            "type": "object",
+            "properties": {
+                "Subchunk Position X": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 0
+                },
+                "Subchunk Position Y": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 1
+                },
+                "Subchunk Position Z": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "Subchunk Position X",
+                "Subchunk Position Y",
+                "Subchunk Position Z"
+            ]
+        },
+        "1586048219": {
+            "title": "DimensionType",
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "value"
+            ]
+        }
+    },
+    "title": "SubChunkRequestPacket",
+    "description": "Sent from the client to the server representing a batch of subchunks that the client requests from the server",
+    "type": "object",
+    "properties": {
+        "Center Pos": {
+            "$ref": "#/definitions/2004529736",
+            "x-ordinal-index": 2
+        },
+        "Dimension Type": {
+            "$ref": "#/definitions/1586048219",
+            "x-ordinal-index": 0
+        },
+        "SubChunk Position Offset List": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/2032546634"
+            },
+            "x-ordinal-index": 1,
+            "maxItems": 8192
+        }
+    },
+    "required": [
+        "Center Pos",
+        "Dimension Type",
+        "SubChunk Position Offset List"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 175,
+        "[cereal:packet_details]": ""
+    }
+}

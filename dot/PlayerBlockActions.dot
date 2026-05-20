@@ -1,20 +1,20 @@
 digraph "PlayerBlockActions" {
 rankdir = LR
-129
-129 -> 130
-130 -> 131
-131 -> 132
-130 -> 133
-133 -> 134
-134 -> 168
+177
+177 -> 178
+178 -> 179
+179 -> 180
+178 -> 181
+181 -> 182
+182 -> 216
 
-129 [label="PlayerBlockActions",comment="name: \"PlayerBlockActions\", typeName: \"\", id: 129, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-130 [label="Player Block Actions",comment="name: \"Player Block Actions\", typeName: \"\", id: 130, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
-131 [label="Size",comment="name: \"Size\", typeName: \"\", id: 131, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-132 [label="varint",comment="name: \"varint\", typeName: \"\", id: 132, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-133 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 133, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-134 [label="Player Block Action",comment="name: \"Player Block Action\", typeName: \"PlayerBlockActionData\", id: 134, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
-168 [label="PlayerBlockActionData",comment="name: \"PlayerBlockActionData\", typeName: \"\", id: 168, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;132;168}
+177 [label="PlayerBlockActions",comment="name: \"PlayerBlockActions\", typeName: \"\", id: 177, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+178 [label="Player Block Actions",comment="name: \"Player Block Actions\", typeName: \"\", id: 178, branchId: 0, recurseId: -1, attributes: 8, notes: \"\""];
+179 [label="Size",comment="name: \"Size\", typeName: \"\", id: 179, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+180 [label="varint",comment="name: \"varint\", typeName: \"\", id: 180, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+181 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 181, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+182 [label="Player Block Action",comment="name: \"Player Block Action\", typeName: \"PlayerBlockActionData\", id: 182, branchId: 0, recurseId: -1, attributes: 256, notes: \"\""];
+216 [label="PlayerBlockActionData",comment="name: \"PlayerBlockActionData\", typeName: \"\", id: 216, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;180;216}
 
 }

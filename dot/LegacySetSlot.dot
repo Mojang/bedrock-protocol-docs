@@ -1,0 +1,22 @@
+digraph "LegacySetSlot" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+0 -> 3
+3 -> 4
+4 -> 5
+3 -> 6
+6 -> 7
+
+0 [label="LegacySetSlot",comment="name: \"LegacySetSlot\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Container Enum",comment="name: \"Container Enum\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"The container enum name identifying which container slot set this belongs to.\""];
+2 [label="enum ContainerEnumName",comment="name: \"enum ContainerEnumName\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 512, notes: \"The container enum name identifying which container slot set this belongs to.\""];
+3 [label="Slots",comment="name: \"Slots\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"List of inventory slot indices within the given container.\""];
+4 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+6 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+7 [label="unsigned byte",comment="name: \"unsigned byte\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;2;7}
+
+}

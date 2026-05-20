@@ -1,0 +1,64 @@
+digraph "ItemReleaseInventoryTransaction" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+2 -> 3
+3 -> 4
+2 -> 5
+5 -> 6
+6 -> 7
+7 -> 8
+6 -> 9
+9 -> 10
+6 -> 11
+11 -> 12
+5 -> 13
+13 -> 14
+5 -> 15
+5 -> 16
+0 -> 17
+17 -> 18
+0 -> 19
+19 -> 20
+0 -> 21
+0 -> 22
+22 -> 23
+23 -> 24
+22 -> 25
+25 -> 26
+22 -> 27
+27 -> 28
+
+0 [label="ItemReleaseInventoryTransaction",comment="name: \"ItemReleaseInventoryTransaction\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Actions",comment="name: \"Actions\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"Base inventory actions. Lists the inventory slot changes associated with this transaction.\""];
+2 [label="Actions",comment="name: \"Actions\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"List of inventory slot changes. Each action describes which container slot is changing and what the item descriptor transitions from and to.\""];
+3 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+4 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+6 [label="Source",comment="name: \"Source\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"The inventory source identifying which container this action targets.\""];
+7 [label="Source Type",comment="name: \"Source Type\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 0, notes: \"The inventory source type.\""];
+8 [label="enum InventorySourceType",comment="name: \"enum InventorySourceType\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 512, notes: \"The inventory source type.\""];
+9 [label="Container ID",comment="name: \"Container ID\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 0, notes: \"Container window ID. Present only for ContainerInventory and NonImplementedFeatureTODO source types.\""];
+10 [label="byte",comment="name: \"byte\", typeName: \"\", id: 10, branchId: 0, recurseId: -1, attributes: 512, notes: \"Container window ID. Present only for ContainerInventory and NonImplementedFeatureTODO source types.\""];
+11 [label="Bit Flags",comment="name: \"Bit Flags\", typeName: \"\", id: 11, branchId: 0, recurseId: -1, attributes: 0, notes: \"Source flags. Present only for WorldInteraction source type.\""];
+12 [label="enum InventorySourceFlags",comment="name: \"enum InventorySourceFlags\", typeName: \"\", id: 12, branchId: 0, recurseId: -1, attributes: 512, notes: \"Source flags. Present only for WorldInteraction source type.\""];
+13 [label="Slot",comment="name: \"Slot\", typeName: \"\", id: 13, branchId: 0, recurseId: -1, attributes: 0, notes: \"The slot index within the source container.\""];
+14 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 14, branchId: 0, recurseId: -1, attributes: 512, notes: \"The slot index within the source container.\""];
+15 [label="From Item",comment="name: \"From Item\", typeName: \"\", id: 15, branchId: 0, recurseId: -1, attributes: 0, notes: \"The item descriptor representing the state of the slot before this action.\""];
+16 [label="To Item",comment="name: \"To Item\", typeName: \"\", id: 16, branchId: 0, recurseId: -1, attributes: 0, notes: \"The item descriptor representing the desired state of the slot after this action.\""];
+17 [label="Action Type",comment="name: \"Action Type\", typeName: \"\", id: 17, branchId: 0, recurseId: -1, attributes: 0, notes: \"Release: firing a bow or releasing a held item. Use: finishing charging a crossbow.\""];
+18 [label="enum ItemReleaseActionType",comment="name: \"enum ItemReleaseActionType\", typeName: \"\", id: 18, branchId: 0, recurseId: -1, attributes: 512, notes: \"Release: firing a bow or releasing a held item. Use: finishing charging a crossbow.\""];
+19 [label="Slot",comment="name: \"Slot\", typeName: \"\", id: 19, branchId: 0, recurseId: -1, attributes: 0, notes: \"The inventory slot of the item being released.\""];
+20 [label="varint",comment="name: \"varint\", typeName: \"\", id: 20, branchId: 0, recurseId: -1, attributes: 512, notes: \"The inventory slot of the item being released.\""];
+21 [label="Item",comment="name: \"Item\", typeName: \"\", id: 21, branchId: 0, recurseId: -1, attributes: 0, notes: \"The item stack descriptor of the item being released.\""];
+22 [label="From Position",comment="name: \"From Position\", typeName: \"\", id: 22, branchId: 0, recurseId: -1, attributes: 0, notes: \"The player's position when this transaction was sent.\""];
+23 [label="X",comment="name: \"X\", typeName: \"\", id: 23, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+24 [label="float",comment="name: \"float\", typeName: \"\", id: 24, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+25 [label="Y",comment="name: \"Y\", typeName: \"\", id: 25, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+26 [label="float",comment="name: \"float\", typeName: \"\", id: 26, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+27 [label="Z",comment="name: \"Z\", typeName: \"\", id: 27, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+28 [label="float",comment="name: \"float\", typeName: \"\", id: 28, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;8;10;12;14;18;20;24;26;28}
+
+}

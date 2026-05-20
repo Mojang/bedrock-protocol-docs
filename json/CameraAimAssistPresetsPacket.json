@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "992428452",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.20",
-    "x-protocol-version": 975,
+    "x-minecraft-version": "1.26.30",
+    "x-protocol-version": 1001,
     "definitions": {
         "2033610203": {
             "title": "Reference",
@@ -64,8 +64,8 @@
                     "description": "Optional. List of block/entity identifiers to exclude from aim assist targeting.",
                     "default": {
                         "blocks": [],
-                        "entities": [],
                         "block_tags": [],
+                        "entities": [],
                         "entity_type_families": []
                     },
                     "$ref": "#/definitions/193467851",

@@ -17,10 +17,10 @@
 <text xml:space="preserve" text-anchor="middle" x="70.8" y="-12.95" font-family="Times New Roman,serif" font-size="14.00">PlayerInputTick</text>
 </g>
 <!-- 1 -->
-<!-- name: &quot;Input tick&quot;, typeName: &quot;&quot;, id: 1, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;In server authoritative movement mode the client supplies this in PlayerAuthInputPacket.
-For any client&#45;bound packets containing a tick, the server should supply the tick value corresponding to the most recently processed PlayerAuthInputPacket.
-This allows the client to adjust any client predictions made while the packet was in flight.
-If the packet is being sent to the client but not relating to data of the player or a client&#45;predicted vehicle, it can be zero.
+<!-- name: &quot;Input tick&quot;, typeName: &quot;&quot;, id: 1, branchId: 0, recurseId: &#45;1, attributes: 0, notes: &quot;In server authoritative movement mode the client supplies this in PlayerAuthInputPacket.
+For any client&#45;bound packets containing a tick, the server should supply the tick value corresponding to the most recently processed PlayerAuthInputPacket.
+This allows the client to adjust any client predictions made while the packet was in flight.
+If the packet is being sent to the client but not relating to data of the player or a client&#45;predicted vehicle, it can be zero.
 It is also acceptable to specify zero for players, although this may lead to minor visual flickers and less smooth application of CorrectPlayerMovePredictionPacket.&quot; -->
 <g id="node2" class="node">
 <title>1</title>
@@ -34,10 +34,10 @@ It is also acceptable to specify zero for players, although this may lead to min
 <polygon fill="black" stroke="black" points="165.94,-21.5 175.94,-18 165.94,-14.5 165.94,-21.5"/>
 </g>
 <!-- 2 -->
-<!-- name: &quot;unsigned varint64&quot;, typeName: &quot;&quot;, id: 2, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;In server authoritative movement mode the client supplies this in PlayerAuthInputPacket.
-For any client&#45;bound packets containing a tick, the server should supply the tick value corresponding to the most recently processed PlayerAuthInputPacket.
-This allows the client to adjust any client predictions made while the packet was in flight.
-If the packet is being sent to the client but not relating to data of the player or a client&#45;predicted vehicle, it can be zero.
+<!-- name: &quot;unsigned varint64&quot;, typeName: &quot;&quot;, id: 2, branchId: 0, recurseId: &#45;1, attributes: 512, notes: &quot;In server authoritative movement mode the client supplies this in PlayerAuthInputPacket.
+For any client&#45;bound packets containing a tick, the server should supply the tick value corresponding to the most recently processed PlayerAuthInputPacket.
+This allows the client to adjust any client predictions made while the packet was in flight.
+If the packet is being sent to the client but not relating to data of the player or a client&#45;predicted vehicle, it can be zero.
 It is also acceptable to specify zero for players, although this may lead to minor visual flickers and less smooth application of CorrectPlayerMovePredictionPacket.&quot; -->
 <g id="node3" class="node">
 <title>2</title>

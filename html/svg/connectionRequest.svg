@@ -32,64 +32,64 @@ The last certificate in the chain will have a property &#39;extraData&#39; that 
 <polygon fill="black" stroke="black" points="208.52,-117.65 218.87,-115.38 209.37,-110.7 208.52,-117.65"/>
 </g>
 <!-- 7 -->
-<!-- name: &quot;Raw Token&quot;, typeName: &quot;&quot;, id: 7, branchId: 0, recurseId: &#45;1, attributes: 8, notes: &quot;Base64 encoded JSON Web Token that contains other relevant client properties.&quot;
-				&quot;Properties Include:
-				&#39;SelfSignedId&#39;
-				&#39;ServerAddress&#39; = (unresolved url if applicable)
-				&#39;ClientRandomId&#39;
-				&#39;SkinId&#39;
-				&#39;SkinData&#39;
-				&#39;SkinImageWidth&#39;
-				&#39;SkinImageHeight&#39;
-				&#39;CapeData&#39;
-				&#39;CapeImageWidth&#39;
-				&#39;CapeImageHeight&#39;
-				&#39;SkinResourcePatch&#39;
-				&#39;SkinGeometryData&#39;
-				&#39;SkinGeometryDataEngineVersion&#39;
-				&#39;SkinAnimationData&#39;
-				&#39;PlayFabId&#39;
-				&#39;AnimatedImageData = Array of:&#39;
-				&#39;&#45;&#45; Type&#39;
-				&#39;&#45;&#45; Image&#39;
-				&#39;&#45;&#45; ImageWidth&#39;
-				&#39;&#45;&#45; ImageHeight&#39;
-				&#39;&#45;&#45; Frames&#39;
-				&#39;&#45;&#45; AnimationExpression&#39;
-				&#39;ArmSize&#39;
-				&#39;SkinColor&#39;
-				&#39;PersonaPieces = Array of:&#39;
-				&#39;&#45;&#45; PackId&#39;
-				&#39;&#45;&#45; PieceId&#39;
-				&#39;&#45;&#45; IsDefault&#39;
-				&#39;&#45;&#45; PieceType&#39;
-				&#39;&#45;&#45; ProuctId&#39;
-				&#39;PieceTintColors = Array of:&#39;
-				&#39;&#45;&#45; PieceType&#39;
-				&#39;&#45;&#45; Colors = Array of color hexstrings&#39;
-				&#39;IsEduMode (if edu mode)&#39;
-				&#39;TenantId (if edu mode)&#39;
-				&#39;ADRole (if edu mode)&#39;
-				&#39;IsEditorMode&#39;
-				&#39;GameVersion&#39;
-				&#39;DeviceModel&#39;
-				&#39;DeviceOS&#39; = (see enumeration: BuildPlatform)
-				&#39;DefaultInputMode&#39; = (see enumeration: InputMode)
-				&#39;CurrentInputMode&#39; = (see enumeration: InputMode)
-				&#39;UIProfile&#39; = (see enumeration: UIProfile)
-				&#39;GuiScale&#39;
-				&#39;LanguageCode&#39;
-				&#39;PlatformUserId&#39;
-				&#39;ThirdPartyName&#39;
-				&#39;PlatformOnlineId&#39;
-				&#39;PlatformOfflineId&#39;
-				&#39;DeviceId&#39;
-				&#39;TrustedSkin&#39;
-				&#39;PremiumSkin&#39;
-				&#39;PersonaSkin&#39;
-				&#39;OverrideSkin&#39;
-				&#39;CapeOnClassicSkin&#39;
-				&#39;CapeId&#39;
+<!-- name: &quot;Raw Token&quot;, typeName: &quot;&quot;, id: 7, branchId: 0, recurseId: &#45;1, attributes: 8, notes: &quot;Base64 encoded JSON Web Token that contains other relevant client properties.&quot;
+				&quot;Properties Include:
+				&#39;SelfSignedId&#39;
+				&#39;ServerAddress&#39; = (unresolved url if applicable)
+				&#39;ClientRandomId&#39;
+				&#39;SkinId&#39;
+				&#39;SkinData&#39;
+				&#39;SkinImageWidth&#39;
+				&#39;SkinImageHeight&#39;
+				&#39;CapeData&#39;
+				&#39;CapeImageWidth&#39;
+				&#39;CapeImageHeight&#39;
+				&#39;SkinResourcePatch&#39;
+				&#39;SkinGeometryData&#39;
+				&#39;SkinGeometryDataEngineVersion&#39;
+				&#39;SkinAnimationData&#39;
+				&#39;PlayFabId&#39;
+				&#39;AnimatedImageData = Array of:&#39;
+				&#39;&#45;&#45; Type&#39;
+				&#39;&#45;&#45; Image&#39;
+				&#39;&#45;&#45; ImageWidth&#39;
+				&#39;&#45;&#45; ImageHeight&#39;
+				&#39;&#45;&#45; Frames&#39;
+				&#39;&#45;&#45; AnimationExpression&#39;
+				&#39;ArmSize&#39;
+				&#39;SkinColor&#39;
+				&#39;PersonaPieces = Array of:&#39;
+				&#39;&#45;&#45; PackId&#39;
+				&#39;&#45;&#45; PieceId&#39;
+				&#39;&#45;&#45; IsDefault&#39;
+				&#39;&#45;&#45; PieceType&#39;
+				&#39;&#45;&#45; ProuctId&#39;
+				&#39;PieceTintColors = Array of:&#39;
+				&#39;&#45;&#45; PieceType&#39;
+				&#39;&#45;&#45; Colors = Array of color hexstrings&#39;
+				&#39;IsEduMode (if edu mode)&#39;
+				&#39;TenantId (if edu mode)&#39;
+				&#39;ADRole (if edu mode)&#39;
+				&#39;IsEditorMode&#39;
+				&#39;GameVersion&#39;
+				&#39;DeviceModel&#39;
+				&#39;DeviceOS&#39; = (see enumeration: BuildPlatform)
+				&#39;DefaultInputMode&#39; = (see enumeration: InputMode)
+				&#39;CurrentInputMode&#39; = (see enumeration: InputMode)
+				&#39;UIProfile&#39; = (see enumeration: UIProfile)
+				&#39;GuiScale&#39;
+				&#39;LanguageCode&#39;
+				&#39;PlatformUserId&#39;
+				&#39;ThirdPartyName&#39;
+				&#39;PlatformOnlineId&#39;
+				&#39;PlatformOfflineId&#39;
+				&#39;DeviceId&#39;
+				&#39;TrustedSkin&#39;
+				&#39;PremiumSkin&#39;
+				&#39;PersonaSkin&#39;
+				&#39;OverrideSkin&#39;
+				&#39;CapeOnClassicSkin&#39;
+				&#39;CapeId&#39;
 				&#39;CompatibleWithClientSideChunkGen&#39;&quot; -->
 <g id="node8" class="node">
 <title>7</title>

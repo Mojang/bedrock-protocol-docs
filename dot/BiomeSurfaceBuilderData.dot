@@ -59,15 +59,26 @@ rankdir = LR
 55 -> 56
 54 -> 57
 57 -> 58
-48 -> 59
-59 -> 60
-48 -> 61
-61 -> 62
-48 -> 63
+58 -> 59
+57 -> 60
+60 -> 61
+57 -> 62
+62 -> 63
 63 -> 64
-64 -> 65
-63 -> 66
-66 -> 67
+62 -> 65
+65 -> 66
+57 -> 67
+67 -> 68
+48 -> 69
+69 -> 70
+70 -> 71
+69 -> 72
+72 -> 73
+69 -> 74
+74 -> 75
+75 -> 76
+74 -> 77
+77 -> 78
 
 0 [label="BiomeSurfaceBuilderData",comment="name: \"BiomeSurfaceBuilderData\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 1 [label="surface materials",comment="name: \"surface materials\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
@@ -127,16 +138,27 @@ rankdir = LR
 55 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 55, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 56 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 56, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
 57 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 57, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-58 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 58, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-59 [label="noise seed string",comment="name: \"noise seed string\", typeName: \"\", id: 59, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-60 [label="string",comment="name: \"string\", typeName: \"\", id: 60, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-61 [label="first octave",comment="name: \"first octave\", typeName: \"\", id: 61, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-62 [label="int",comment="name: \"int\", typeName: \"\", id: 62, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-63 [label="amplitudes",comment="name: \"amplitudes\", typeName: \"\", id: 63, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-64 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 64, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-65 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 65, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-66 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 66, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
-67 [label="float",comment="name: \"float\", typeName: \"\", id: 67, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
-{ rank = max;3;5;7;9;11;13;15;17;19;21;24;26;28;30;36;41;43;45;47;53;58;60;62;67}
+58 [label="noise",comment="name: \"noise\", typeName: \"\", id: 58, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+59 [label="string",comment="name: \"string\", typeName: \"\", id: 59, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+60 [label="threshold",comment="name: \"threshold\", typeName: \"\", id: 60, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+61 [label="float",comment="name: \"float\", typeName: \"\", id: 61, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+62 [label="range",comment="name: \"range\", typeName: \"\", id: 62, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+63 [label="min",comment="name: \"min\", typeName: \"\", id: 63, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+64 [label="float",comment="name: \"float\", typeName: \"\", id: 64, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+65 [label="max",comment="name: \"max\", typeName: \"\", id: 65, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+66 [label="float",comment="name: \"float\", typeName: \"\", id: 66, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+67 [label="block",comment="name: \"block\", typeName: \"\", id: 67, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+68 [label="unsigned int",comment="name: \"unsigned int\", typeName: \"\", id: 68, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+69 [label="noise",comment="name: \"noise\", typeName: \"\", id: 69, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+70 [label="name",comment="name: \"name\", typeName: \"\", id: 70, branchId: 0, recurseId: -1, attributes: 0, notes: \"The string used to initialize the noise. Has no impact on the qualitative aspects of the generated values.\""];
+71 [label="string",comment="name: \"string\", typeName: \"\", id: 71, branchId: 0, recurseId: -1, attributes: 512, notes: \"The string used to initialize the noise. Has no impact on the qualitative aspects of the generated values.\""];
+72 [label="first_octave",comment="name: \"first_octave\", typeName: \"\", id: 72, branchId: 0, recurseId: -1, attributes: 0, notes: \"Governs the general frequency characteristics of the generated noise. Lower value results in noise with lower frequency content.\""];
+73 [label="int",comment="name: \"int\", typeName: \"\", id: 73, branchId: 0, recurseId: -1, attributes: 512, notes: \"Governs the general frequency characteristics of the generated noise. Lower value results in noise with lower frequency content.\""];
+74 [label="amplitudes",comment="name: \"amplitudes\", typeName: \"\", id: 74, branchId: 0, recurseId: -1, attributes: 0, notes: \"Governs the attenuation of the first n octaves in the generated noise.\""];
+75 [label="List Size",comment="name: \"List Size\", typeName: \"\", id: 75, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+76 [label="unsigned varint",comment="name: \"unsigned varint\", typeName: \"\", id: 76, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+77 [label="example element",style=dotted,comment="name: \"example element\", typeName: \"\", id: 77, branchId: 0, recurseId: -1, attributes: 16, notes: \"\""];
+78 [label="float",comment="name: \"float\", typeName: \"\", id: 78, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+{ rank = max;3;5;7;9;11;13;15;17;19;21;24;26;28;30;36;41;43;45;47;53;59;61;64;66;68;71;73;78}
 
 }

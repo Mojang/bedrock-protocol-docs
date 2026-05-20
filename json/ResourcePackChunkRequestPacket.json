@@ -2,21 +2,22 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2359198066",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.20",
-    "x-protocol-version": 975,
+    "x-minecraft-version": "1.26.30",
+    "x-protocol-version": 1001,
     "title": "ResourcePackChunkRequestPacket",
     "description": "Resource Pack Chunk Request",
     "type": "object",
     "properties": {
         "Chunk": {
             "type": "integer",
-            "x-underlying-type": "uint32",
+            "x-underlying-type": "int32",
             "x-ordinal-index": 1,
             "minimum": 0.0
         },
         "Resource Name": {
             "type": "string",
-            "x-ordinal-index": 0
+            "x-ordinal-index": 0,
+            "pattern": "A string in the format of <uuid>_<semver>, where <uuid> is a valid UUID and <semver> is a valid semantic version"
         }
     },
     "required": [

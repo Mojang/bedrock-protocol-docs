@@ -1,0 +1,26 @@
+digraph "ConeDataPayload" {
+rankdir = LR
+0
+0 -> 1
+1 -> 2
+2 -> 3
+1 -> 4
+4 -> 5
+0 -> 6
+6 -> 7
+0 -> 8
+8 -> 9
+
+0 [label="ConeDataPayload",comment="name: \"ConeDataPayload\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+1 [label="Radii",comment="name: \"Radii\", typeName: \"\", id: 1, branchId: 0, recurseId: -1, attributes: 0, notes: \"Radii along the X/Z axis of the debug cone base.\""];
+2 [label="X",comment="name: \"X\", typeName: \"\", id: 2, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+3 [label="float",comment="name: \"float\", typeName: \"\", id: 3, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+4 [label="Y",comment="name: \"Y\", typeName: \"\", id: 4, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
+5 [label="float",comment="name: \"float\", typeName: \"\", id: 5, branchId: 0, recurseId: -1, attributes: 512, notes: \"\""];
+6 [label="Height",comment="name: \"Height\", typeName: \"\", id: 6, branchId: 0, recurseId: -1, attributes: 0, notes: \"Height of the debug cone.\""];
+7 [label="float",comment="name: \"float\", typeName: \"\", id: 7, branchId: 0, recurseId: -1, attributes: 512, notes: \"Height of the debug cone.\""];
+8 [label="Num Segments",comment="name: \"Num Segments\", typeName: \"\", id: 8, branchId: 0, recurseId: -1, attributes: 0, notes: \"Number of segments used for the debug cone.\""];
+9 [label="unsigned byte",comment="name: \"unsigned byte\", typeName: \"\", id: 9, branchId: 0, recurseId: -1, attributes: 512, notes: \"Number of segments used for the debug cone.\""];
+{ rank = max;3;5;7;9}
+
+}

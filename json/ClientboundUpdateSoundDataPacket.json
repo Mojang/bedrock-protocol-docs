@@ -1,0 +1,50 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "3637944334",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.30",
+    "x-protocol-version": 1001,
+    "definitions": {
+        "294292951": {
+            "title": "ServerSoundHandle",
+            "type": "object",
+            "properties": {
+                "Server Sound Handle": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Server Sound Handle"
+            ]
+        }
+    },
+    "title": "ClientboundUpdateSoundDataPacket",
+    "description": "Sent to update sound data.",
+    "type": "object",
+    "properties": {
+        "Server Sound Handle": {
+            "$ref": "#/definitions/294292951",
+            "x-ordinal-index": 0
+        },
+        "Sound Event": {
+            "title": "SoundDataEvent",
+            "type": "string",
+            "enum": [
+                "Stop"
+            ],
+            "x-underlying-type": "int32",
+            "x-ordinal-index": 1
+        }
+    },
+    "required": [
+        "Server Sound Handle",
+        "Sound Event"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 348,
+        "[cereal:packet_details]": ""
+    }
+}
