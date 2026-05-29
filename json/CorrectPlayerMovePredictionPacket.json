@@ -1,14 +1,124 @@
 {
-    "title": "CorrectPlayerMovePredictionPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/CorrectPlayerMovePredictionPacket.json",
+    "$id": "9599720",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Sent to a player when their simulation of movement mismatches enough from the server that it wants to correct the client.",
-    "$ref": "./CorrectPlayerMovePredictionPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 161,
-        "[cereal:packet_details]": "Used only in server authoritative movement mode, see ServerAuthMovementMode documentation.<br>\n\tSince it is sent to the specified client the target player is implied to be the receiver.<br>\n\tIt is an optional part of the server authoritative protocol. A server could choose to never send this or do all corrections\n\tthrough MovePlayerPacket, although doing so would likely provide less smooth results."
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "definitions": {
+        "742152213": {
+            "title": "Vec2",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "X",
+                "Y"
+            ]
+        },
+        "725374594": {
+            "title": "Vec3",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "Z": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "X",
+                "Y",
+                "Z"
+            ]
+        },
+        "1262916889": {
+            "title": "PlayerInputTick",
+            "type": "object",
+            "properties": {
+                "Input tick": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Input tick"
+            ]
+        }
+    },
+    "title": "CorrectPlayerMovePredictionPacket",
+    "type": "object",
+    "properties": {
+        "On Ground": {
+            "type": "boolean",
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 5
+        },
+        "Pos": {
+            "$ref": "#/definitions/725374594",
+            "x-ordinal-index": 1
+        },
+        "Pos Delta": {
+            "$ref": "#/definitions/725374594",
+            "x-ordinal-index": 2
+        },
+        "PredictionType": {
+            "title": "RewindType",
+            "type": "string",
+            "enum": [
+                "Player",
+                "Vehicle"
+            ],
+            "x-underlying-type": "uint8",
+            "x-serialization-options": [
+                "Enum-as-Value"
+            ],
+            "x-ordinal-index": 0
+        },
+        "Rotation": {
+            "$ref": "#/definitions/742152213",
+            "x-ordinal-index": 3
+        },
+        "Tick": {
+            "$ref": "#/definitions/1262916889",
+            "x-ordinal-index": 6
+        },
+        "VehicleAngularVelocity": {
+            "type": "number",
+            "x-underlying-type": "float",
+            "x-ordinal-index": 4
+        }
+    },
+    "required": [
+        "On Ground",
+        "Pos",
+        "Pos Delta",
+        "PredictionType",
+        "Rotation",
+        "Tick"
+    ]
 }

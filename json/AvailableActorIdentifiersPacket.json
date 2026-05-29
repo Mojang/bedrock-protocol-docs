@@ -1,14 +1,19 @@
 {
-    "title": "AvailableActorIdentifiersPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/AvailableActorIdentifiersPacket.json",
+    "$id": "4259990879",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Sends the whole list of actor identifiers at game start from the server.",
-    "$ref": "./AvailableActorIdentifiersPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 119,
-        "[cereal:packet_details]": ""
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "title": "AvailableActorIdentifiersPacket",
+    "type": "object",
+    "properties": {
+        "Identifier List": {
+            "$ref": "#/definitions/3172631924",
+            "x-ordinal-index": 0,
+            "x-runtime-constraint-description": "Verify that the tag contains at least the \"idlist\" key"
+        }
+    },
+    "required": [
+        "Identifier List"
+    ]
 }

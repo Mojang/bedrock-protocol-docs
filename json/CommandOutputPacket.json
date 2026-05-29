@@ -1,14 +1,153 @@
 {
-    "title": "CommandOutputPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/CommandOutputPacket.json",
+    "$id": "520439455",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "\"slash\" command execution output, server to client.",
-    "$ref": "./CommandOutputPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 79,
-        "[cereal:packet_details]": ""
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "definitions": {
+        "3627850842": {
+            "title": "CommandOutputMessage",
+            "type": "object",
+            "properties": {
+                "Message ID": {
+                    "type": "string",
+                    "x-ordinal-index": 0
+                },
+                "Parameters": {
+                    "type": "array",
+                    "default": [],
+                    "items": {
+                        "type": "string"
+                    },
+                    "x-ordinal-index": 2
+                },
+                "Successful?": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Message ID",
+                "Successful?"
+            ]
+        },
+        "36326044": {
+            "title": "CommandOriginData",
+            "type": "object",
+            "properties": {
+                "PlayerId": {
+                    "type": "integer",
+                    "default": 0,
+                    "x-underlying-type": "int64",
+                    "x-ordinal-index": 3
+                },
+                "RequestId": {
+                    "type": "string",
+                    "default": "",
+                    "x-ordinal-index": 2,
+                    "maxLength": 39
+                },
+                "Type": {
+                    "title": "CommandOriginType",
+                    "type": "string",
+                    "enum": [
+                        "Player",
+                        "DevConsole",
+                        "Test",
+                        "AutomationPlayer"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 0
+                },
+                "UUID": {
+                    "$ref": "#/definitions/234962571",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Type",
+                "UUID"
+            ]
+        },
+        "234962571": {
+            "title": "mce::UUID",
+            "type": "object",
+            "properties": {
+                "Least Significant Bits": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                },
+                "Most Significant Bits": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Least Significant Bits",
+                "Most Significant Bits"
+            ]
+        },
+        "902783091": {
+            "title": "CommandOutput",
+            "type": "object",
+            "properties": {
+                "Data Set": {
+                    "type": "string",
+                    "x-ordinal-index": 3
+                },
+                "Output Messages": {
+                    "type": "array",
+                    "default": [],
+                    "items": {
+                        "$ref": "#/definitions/3627850842"
+                    },
+                    "x-ordinal-index": 2
+                },
+                "Output Type": {
+                    "title": "CommandOutputType",
+                    "type": "string",
+                    "enum": [
+                        "None",
+                        "LastOutput",
+                        "Silent",
+                        "AllOutput",
+                        "DataSet"
+                    ],
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 0
+                },
+                "Success Count": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Output Type",
+                "Success Count"
+            ]
+        }
+    },
+    "title": "CommandOutputPacket",
+    "type": "object",
+    "properties": {
+        "Origin Data": {
+            "$ref": "#/definitions/36326044",
+            "x-ordinal-index": 0
+        },
+        "Output": {
+            "$ref": "#/definitions/902783091",
+            "x-ordinal-index": 1
+        }
+    },
+    "required": [
+        "Origin Data",
+        "Output"
+    ]
 }

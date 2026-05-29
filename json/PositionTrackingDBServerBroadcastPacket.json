@@ -1,14 +1,57 @@
 {
-    "title": "PositionTrackingDBServerBroadcastPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/PositionTrackingDBServerBroadcastPacket.json",
+    "$id": "402647077",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Server to client packet for server authoratative runtime database (with persistent LevelStorage backup) designed primarily to track lodestone stuff. See Position Tracking DB Notes.md in bedrock-docs.",
-    "$ref": "./PositionTrackingDBServerBroadcastPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 153,
-        "[cereal:packet_details]": ""
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "definitions": {
+        "767557450": {
+            "title": "PositionTrackingId",
+            "type": "object",
+            "properties": {
+                "Value": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Value"
+            ]
+        }
+    },
+    "title": "PositionTrackingDBServerBroadcastPacket",
+    "type": "object",
+    "properties": {
+        "Action": {
+            "title": "PositionTrackingDBServerBroadcastPacketPayload::Action",
+            "type": "string",
+            "enum": [
+                "Update",
+                "Destroy",
+                "NotFound"
+            ],
+            "x-underlying-type": "uint8",
+            "x-serialization-options": [
+                "Enum-as-Value"
+            ],
+            "x-ordinal-index": 0
+        },
+        "Id": {
+            "$ref": "#/definitions/767557450",
+            "x-ordinal-index": 1
+        },
+        "Position tracking data": {
+            "$ref": "#/definitions/3172631924",
+            "x-ordinal-index": 2
+        }
+    },
+    "required": [
+        "Action",
+        "Id",
+        "Position tracking data"
+    ]
 }

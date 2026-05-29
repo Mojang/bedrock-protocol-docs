@@ -1,14 +1,721 @@
 {
-    "title": "InventoryTransactionPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/InventoryTransactionPacket.json",
+    "$id": "1897955869",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Inventory Transaction. Sent for item interaction UI depending on if ItemStackNetManager is enabled as well as when the player uses items in gameplay. See ComplexInventoryTransaction::Type for more details.",
-    "$ref": "./InventoryTransactionPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 30,
-        "[cereal:packet_details]": ""
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "definitions": {
+        "2707715806": {
+            "title": "ItemStackLegacyRequestId",
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "ID"
+            ]
+        },
+        "4138486877": {
+            "title": "ItemStackNetIdVariant",
+            "type": "object",
+            "properties": {
+                "Item stack net ID variant": {
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/1433098745",
+                            "x-ordinal-index": 0
+                        },
+                        {
+                            "$ref": "#/definitions/3359047935",
+                            "x-ordinal-index": 1
+                        },
+                        {
+                            "$ref": "#/definitions/2707715806",
+                            "x-ordinal-index": 2
+                        }
+                    ],
+                    "x-control-value-type": "uint32",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Item stack net ID variant"
+            ]
+        },
+        "3043188243": {
+            "title": "InventoryMismatchData",
+            "type": "object",
+            "properties": {
+                "Actions": {
+                    "$ref": "#/definitions/2259856673",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Actions"
+            ]
+        },
+        "2803432075": {
+            "title": "cerealizer<NetworkItemStackDescriptor>::SerializedData",
+            "type": "object",
+            "properties": {
+                "Aux value": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2,
+                    "minimum": 0.0,
+                    "maximum": 32767.0
+                },
+                "Block Runtime Id": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 4,
+                    "minimum": 0.0
+                },
+                "Id": {
+                    "type": "integer",
+                    "x-underlying-type": "int16",
+                    "x-ordinal-index": 0
+                },
+                "Net Id Variant": {
+                    "$ref": "#/definitions/4138486877",
+                    "x-ordinal-index": 3
+                },
+                "Stack size": {
+                    "type": "integer",
+                    "x-underlying-type": "uint16",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0,
+                    "maximum": 64.0
+                },
+                "User Data Buffer": {
+                    "type": "string",
+                    "x-ordinal-index": 5
+                }
+            },
+            "required": [
+                "Aux value",
+                "Block Runtime Id",
+                "Id",
+                "Stack size",
+                "User Data Buffer"
+            ]
+        },
+        "3359047935": {
+            "title": "ItemStackRequestId",
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "ID"
+            ]
+        },
+        "4019127450": {
+            "title": "InventorySource",
+            "type": "object",
+            "properties": {
+                "Bit Flags": {
+                    "title": "InventorySourceFlags",
+                    "type": "string",
+                    "enum": [
+                        "No Flag",
+                        "World Interaction Random"
+                    ],
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 2
+                },
+                "Container ID": {
+                    "type": "integer",
+                    "x-underlying-type": "int8",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1,
+                    "minimum": -128.0,
+                    "maximum": 127.0
+                },
+                "Source Type": {
+                    "title": "InventorySourceType",
+                    "type": "string",
+                    "enum": [
+                        "Container Inventory",
+                        "Global Inventory",
+                        "World Interaction",
+                        "Creative Inventory",
+                        "Non Implemented Feature TODO"
+                    ],
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Source Type"
+            ]
+        },
+        "2259856673": {
+            "title": "InventoryTransaction",
+            "type": "object",
+            "properties": {
+                "Actions": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/2619651141"
+                    },
+                    "x-ordinal-index": 0,
+                    "x-runtime-constraint-description": "Verify that the number of InventoryActions does not exceed 100"
+                }
+            },
+            "required": [
+                "Actions"
+            ]
+        },
+        "2619651141": {
+            "title": "InventoryAction",
+            "type": "object",
+            "properties": {
+                "From Item": {
+                    "$ref": "#/definitions/1987673147",
+                    "x-ordinal-index": 2
+                },
+                "Slot": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                },
+                "Source": {
+                    "$ref": "#/definitions/4019127450",
+                    "x-ordinal-index": 0
+                },
+                "To Item": {
+                    "$ref": "#/definitions/1987673147",
+                    "x-ordinal-index": 3
+                }
+            },
+            "required": [
+                "From Item",
+                "Slot",
+                "Source",
+                "To Item"
+            ]
+        },
+        "1987673147": {
+            "title": "NetworkItemStackDescriptor",
+            "$ref": "#/definitions/2803432075"
+        },
+        "1433098745": {
+            "title": "ItemStackNetId",
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "ID"
+            ]
+        },
+        "2022041250": {
+            "title": "LegacySetSlot",
+            "type": "object",
+            "properties": {
+                "Container Enum": {
+                    "title": "ContainerEnumName",
+                    "type": "string",
+                    "enum": [
+                        "AnvilInputContainer",
+                        "AnvilMaterialContainer",
+                        "AnvilResultPreviewContainer",
+                        "SmithingTableInputContainer",
+                        "SmithingTableMaterialContainer",
+                        "SmithingTableResultPreviewContainer",
+                        "ArmorContainer",
+                        "LevelEntityContainer",
+                        "BeaconPaymentContainer",
+                        "BrewingStandInputContainer",
+                        "BrewingStandResultContainer",
+                        "BrewingStandFuelContainer",
+                        "CombinedHotbarAndInventoryContainer",
+                        "CraftingInputContainer",
+                        "CraftingOutputPreviewContainer",
+                        "RecipeConstructionContainer",
+                        "RecipeNatureContainer",
+                        "RecipeItemsContainer",
+                        "RecipeFoodContainer",
+                        "RecipeBlocksContainer",
+                        "RecipeFurnaceItemsContainer",
+                        "RecipeSearchContainer",
+                        "RecipeSearchBarContainer",
+                        "RecipeEquipmentContainer",
+                        "RecipeBookContainer",
+                        "EnchantingInputContainer",
+                        "EnchantingMaterialContainer",
+                        "FurnaceFuelContainer",
+                        "FurnaceIngredientContainer",
+                        "FurnaceResultContainer",
+                        "HorseEquipContainer",
+                        "HotbarContainer",
+                        "InventoryContainer",
+                        "ShulkerBoxContainer",
+                        "TradeIngredient1Container",
+                        "TradeIngredient2Container",
+                        "TradeResultPreviewContainer",
+                        "OffhandContainer",
+                        "CompoundCreatorInput",
+                        "CompoundCreatorOutputPreview",
+                        "ElementConstructorOutputPreview",
+                        "MaterialReducerInput",
+                        "MaterialReducerOutput",
+                        "LabTableInput",
+                        "LoomInputContainer",
+                        "LoomDyeContainer",
+                        "LoomMaterialContainer",
+                        "LoomResultPreviewContainer",
+                        "BlastFurnaceIngredientContainer",
+                        "SmokerIngredientContainer",
+                        "Trade2Ingredient1Container",
+                        "Trade2Ingredient2Container",
+                        "Trade2ResultPreviewContainer",
+                        "GrindstoneInputContainer",
+                        "GrindstoneAdditionalContainer",
+                        "GrindstoneResultPreviewContainer",
+                        "StonecutterInputContainer",
+                        "StonecutterResultPreviewContainer",
+                        "CartographyInputContainer",
+                        "CartographyAdditionalContainer",
+                        "CartographyResultPreviewContainer",
+                        "BarrelContainer",
+                        "CursorContainer",
+                        "CreatedOutputContainer",
+                        "SmithingTableTemplateContainer",
+                        "CrafterLevelEntityContainer",
+                        "DynamicContainer"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Slots": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "x-underlying-type": "uint8",
+                        "minimum": 0.0,
+                        "maximum": 255.0
+                    },
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Container Enum",
+                "Slots"
+            ]
+        },
+        "1628859409": {
+            "title": "ItemUseOnActorInventoryTransaction",
+            "type": "object",
+            "properties": {
+                "Action Type": {
+                    "title": "ItemUseOnActorActionType",
+                    "type": "string",
+                    "enum": [
+                        "Interact",
+                        "Attack",
+                        "Item Interact"
+                    ],
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 2
+                },
+                "Actions": {
+                    "$ref": "#/definitions/2259856673",
+                    "x-ordinal-index": 0
+                },
+                "From Position": {
+                    "$ref": "#/definitions/725374594",
+                    "x-ordinal-index": 5
+                },
+                "Hit Position": {
+                    "$ref": "#/definitions/725374594",
+                    "x-ordinal-index": 6
+                },
+                "Item": {
+                    "$ref": "#/definitions/1987673147",
+                    "x-ordinal-index": 4
+                },
+                "Runtime Id": {
+                    "$ref": "#/definitions/1750201151",
+                    "x-ordinal-index": 1
+                },
+                "Slot": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 3
+                }
+            },
+            "required": [
+                "Action Type",
+                "Actions",
+                "From Position",
+                "Hit Position",
+                "Item",
+                "Runtime Id",
+                "Slot"
+            ]
+        },
+        "725374594": {
+            "title": "Vec3",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "Z": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "X",
+                "Y",
+                "Z"
+            ]
+        },
+        "1365757509": {
+            "title": "ItemUseInventoryTransaction",
+            "type": "object",
+            "properties": {
+                "Action Type": {
+                    "title": "ItemUseActionType",
+                    "type": "string",
+                    "enum": [
+                        "Place",
+                        "Use",
+                        "Destroy",
+                        "Use As Attack"
+                    ],
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 1
+                },
+                "Actions": {
+                    "$ref": "#/definitions/2259856673",
+                    "x-ordinal-index": 0
+                },
+                "Click Position": {
+                    "$ref": "#/definitions/725374594",
+                    "x-ordinal-index": 8
+                },
+                "Client Cooldown State": {
+                    "title": "ItemUseClientCooldownState",
+                    "type": "string",
+                    "enum": [
+                        "Off",
+                        "On"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 11
+                },
+                "Client Interact Prediction": {
+                    "title": "ItemUsePredictedResult",
+                    "type": "string",
+                    "enum": [
+                        "Failure",
+                        "Success"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 10
+                },
+                "Face": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 4,
+                    "minimum": 0.0,
+                    "maximum": 255.0
+                },
+                "From Position": {
+                    "$ref": "#/definitions/725374594",
+                    "x-ordinal-index": 7
+                },
+                "Item": {
+                    "$ref": "#/definitions/1987673147",
+                    "x-ordinal-index": 6
+                },
+                "Position": {
+                    "$ref": "#/definitions/1488572312",
+                    "x-ordinal-index": 3
+                },
+                "Slot": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 5
+                },
+                "Target Block Id": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 9,
+                    "minimum": 0.0
+                },
+                "Trigger Type": {
+                    "title": "ItemUseTriggerType",
+                    "type": "string",
+                    "enum": [
+                        "Unknown",
+                        "Player Input",
+                        "Simulation Tick"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "Action Type",
+                "Actions",
+                "Click Position",
+                "Client Cooldown State",
+                "Client Interact Prediction",
+                "Face",
+                "From Position",
+                "Item",
+                "Position",
+                "Slot",
+                "Target Block Id",
+                "Trigger Type"
+            ]
+        },
+        "1750201151": {
+            "title": "ActorRuntimeID",
+            "type": "object",
+            "properties": {
+                "Actor Runtime ID": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Actor Runtime ID"
+            ]
+        },
+        "2201057966": {
+            "title": "NormalTransactionData",
+            "type": "object",
+            "properties": {
+                "Actions": {
+                    "$ref": "#/definitions/2259856673",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Actions"
+            ]
+        },
+        "1488572312": {
+            "title": "BlockPos",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1
+                },
+                "Z": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "X",
+                "Y",
+                "Z"
+            ]
+        },
+        "1949982159": {
+            "title": "ItemReleaseInventoryTransaction",
+            "type": "object",
+            "properties": {
+                "Action Type": {
+                    "title": "ItemReleaseActionType",
+                    "type": "string",
+                    "enum": [
+                        "Release",
+                        "Use"
+                    ],
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 1
+                },
+                "Actions": {
+                    "$ref": "#/definitions/2259856673",
+                    "x-ordinal-index": 0
+                },
+                "From Position": {
+                    "$ref": "#/definitions/725374594",
+                    "x-ordinal-index": 4
+                },
+                "Item": {
+                    "$ref": "#/definitions/1987673147",
+                    "x-ordinal-index": 3
+                },
+                "Slot": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "Action Type",
+                "Actions",
+                "From Position",
+                "Item",
+                "Slot"
+            ]
+        }
+    },
+    "title": "InventoryTransactionPacket",
+    "type": "object",
+    "properties": {
+        "Legacy Request ID": {
+            "$ref": "#/definitions/2707715806",
+            "x-ordinal-index": 0
+        },
+        "Legacy Set Item Slots": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/2022041250"
+            },
+            "x-ordinal-index": 1
+        },
+        "Transaction": {
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/2201057966",
+                    "x-ordinal-index": 0
+                },
+                {
+                    "$ref": "#/definitions/3043188243",
+                    "x-ordinal-index": 1
+                },
+                {
+                    "$ref": "#/definitions/1365757509",
+                    "x-ordinal-index": 2
+                },
+                {
+                    "$ref": "#/definitions/1628859409",
+                    "x-ordinal-index": 3
+                },
+                {
+                    "$ref": "#/definitions/1949982159",
+                    "x-ordinal-index": 4
+                }
+            ],
+            "x-control-value-type": "uint32",
+            "x-ordinal-index": 2
+        }
+    },
+    "required": [
+        "Legacy Request ID",
+        "Transaction"
+    ]
 }

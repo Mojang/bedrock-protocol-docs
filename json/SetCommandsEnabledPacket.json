@@ -1,14 +1,19 @@
 {
-    "title": "SetCommandsEnabledPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/SetCommandsEnabledPacket.json",
+    "$id": "2169348362",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "This is used by the world settings screen, cheats, EDU builds for teachers, and various other places to enable cheats/commands",
-    "$ref": "./SetCommandsEnabledPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 59,
-        "[cereal:packet_details]": "see SimpleEventPacket"
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "title": "SetCommandsEnabledPacket",
+    "type": "object",
+    "properties": {
+        "Commands Enabled": {
+            "type": "boolean",
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Commands Enabled"
+    ]
 }

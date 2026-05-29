@@ -1,14 +1,103 @@
 {
-    "title": "NetworkChunkPublisherUpdatePacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/NetworkChunkPublisherUpdatePacket.json",
+    "$id": "1126942887",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Tells clients to update the chunk view for the local player.",
-    "$ref": "./NetworkChunkPublisherUpdatePacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 121,
-        "[cereal:packet_details]": "Used (from the server) when a user's Chunk View moves, I.e. the area that determines what chunks exist. For ClientSideGeneration we also send the client a list of ChunkPos that the Server will fully build."
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "definitions": {
+        "3086762552": {
+            "title": "ChunkPos",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Z": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "X",
+                "Z"
+            ]
+        },
+        "1488572312": {
+            "title": "BlockPos",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1
+                },
+                "Z": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "X",
+                "Y",
+                "Z"
+            ]
+        }
+    },
+    "title": "NetworkChunkPublisherUpdatePacket",
+    "type": "object",
+    "properties": {
+        "New position for view": {
+            "$ref": "#/definitions/1488572312",
+            "x-ordinal-index": 0
+        },
+        "New radius for view": {
+            "type": "integer",
+            "x-underlying-type": "uint32",
+            "x-serialization-options": [
+                "Compression"
+            ],
+            "x-ordinal-index": 1,
+            "minimum": 0.0
+        },
+        "Server Built Chunks List": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/3086762552"
+            },
+            "x-serialization-options": [
+                "No size compression"
+            ],
+            "x-ordinal-index": 2,
+            "maxItems": 9216
+        }
+    },
+    "required": [
+        "New position for view",
+        "New radius for view",
+        "Server Built Chunks List"
+    ]
 }

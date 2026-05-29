@@ -1,14 +1,81 @@
 {
-    "title": "GameRulesChangedPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/GameRulesChangedPacket.json",
+    "$id": "1532435122",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Updates game rules.",
-    "$ref": "./GameRulesChangedPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 72,
-        "[cereal:packet_details]": "Informs client about any changes to the game rules."
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "definitions": {
+        "1016356418": {
+            "title": "GameRulesChangedPacketData",
+            "type": "object",
+            "properties": {
+                "Rules List": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/3399432121"
+                    },
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Rules List"
+            ]
+        },
+        "3399432121": {
+            "title": "GameRule",
+            "type": "object",
+            "properties": {
+                "Rule Can Be Modified": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 1
+                },
+                "Rule Name": {
+                    "type": "string",
+                    "x-ordinal-index": 0
+                },
+                "Rule Value": {
+                    "oneOf": [
+                        {
+                            "type": "null",
+                            "x-ordinal-index": 0
+                        },
+                        {
+                            "type": "boolean",
+                            "x-underlying-type": "boolean",
+                            "x-ordinal-index": 1
+                        },
+                        {
+                            "type": "integer",
+                            "x-underlying-type": "int32",
+                            "x-ordinal-index": 2
+                        },
+                        {
+                            "type": "number",
+                            "x-underlying-type": "float",
+                            "x-ordinal-index": 3
+                        }
+                    ],
+                    "x-control-value-type": "uint32",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "Rule Can Be Modified",
+                "Rule Name",
+                "Rule Value"
+            ]
+        }
+    },
+    "title": "GameRulesChangedPacket",
+    "type": "object",
+    "properties": {
+        "Rule Data": {
+            "$ref": "#/definitions/1016356418",
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Rule Data"
+    ]
 }

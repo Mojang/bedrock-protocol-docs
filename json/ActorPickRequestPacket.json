@@ -1,14 +1,33 @@
 {
-    "title": "ActorPickRequestPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/ActorPickRequestPacket.json",
+    "$id": "3528861580",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Player clicks on an actor in the world, eg a chicken.",
-    "$ref": "./ActorPickRequestPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 35,
-        "[cereal:packet_details]": ""
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "title": "ActorPickRequestPacket",
+    "type": "object",
+    "properties": {
+        "Actor ID": {
+            "type": "integer",
+            "x-underlying-type": "int64",
+            "x-ordinal-index": 0
+        },
+        "Max Slots": {
+            "type": "integer",
+            "x-underlying-type": "uint8",
+            "x-ordinal-index": 1,
+            "minimum": 0.0,
+            "maximum": 255.0
+        },
+        "With Data": {
+            "type": "boolean",
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 2
+        }
+    },
+    "required": [
+        "Actor ID",
+        "Max Slots",
+        "With Data"
+    ]
 }

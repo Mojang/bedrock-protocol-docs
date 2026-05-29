@@ -1,14 +1,18 @@
 {
-    "title": "ShowProfilePacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/ShowProfilePacket.json",
+    "$id": "2174215989",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Show Profile",
-    "$ref": "./ShowProfilePacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 104,
-        "[cereal:packet_details]": "The only use in vanilla is a test command called ProfileCommand. It makes the user's xbox profile popup."
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "title": "ShowProfilePacket",
+    "type": "object",
+    "properties": {
+        "Player XUID": {
+            "type": "string",
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Player XUID"
+    ]
 }

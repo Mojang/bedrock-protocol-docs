@@ -1,14 +1,8 @@
 {
-    "title": "ServerSettingsRequestPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/ServerSettingsRequestPacket.json",
+    "$id": "3444432464",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Sent during the initialization of world settings on the client.",
-    "$ref": "./ServerSettingsRequestPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 102,
-        "[cereal:packet_details]": "It is also an empty packet. There is no handler for this packet, should be removed."
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "title": "ServerSettingsRequestPacket"
 }

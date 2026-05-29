@@ -1,14 +1,114 @@
 {
-    "title": "MoveActorAbsolutePacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/MoveActorAbsolutePacket.json",
+    "$id": "1403414460",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "This is used primarily for motion updates of all actors from server to client.",
-    "$ref": "./MoveActorAbsolutePacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 18,
-        "[cereal:packet_details]": ""
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "definitions": {
+        "725374594": {
+            "title": "Vec3",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "Z": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "X",
+                "Y",
+                "Z"
+            ]
+        },
+        "617131148": {
+            "title": "MoveActorAbsoluteData",
+            "type": "object",
+            "properties": {
+                "ActorRuntimeID": {
+                    "$ref": "#/definitions/1750201151",
+                    "x-ordinal-index": 0
+                },
+                "Header": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0,
+                    "maximum": 255.0
+                },
+                "Position": {
+                    "$ref": "#/definitions/725374594",
+                    "x-ordinal-index": 2
+                },
+                "Rotation X": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 3,
+                    "minimum": 0.0,
+                    "maximum": 255.0
+                },
+                "Rotation Y": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 4,
+                    "minimum": 0.0,
+                    "maximum": 255.0
+                },
+                "Rotation Y Head": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 5,
+                    "minimum": 0.0,
+                    "maximum": 255.0
+                }
+            },
+            "required": [
+                "ActorRuntimeID",
+                "Header",
+                "Position",
+                "Rotation X",
+                "Rotation Y",
+                "Rotation Y Head"
+            ]
+        },
+        "1750201151": {
+            "title": "ActorRuntimeID",
+            "type": "object",
+            "properties": {
+                "Actor Runtime ID": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Actor Runtime ID"
+            ]
+        }
+    },
+    "title": "MoveActorAbsolutePacket",
+    "type": "object",
+    "properties": {
+        "Move Data": {
+            "$ref": "#/definitions/617131148",
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Move Data"
+    ]
 }

@@ -1,14 +1,25 @@
 {
-    "title": "CompletedUsingItemPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/CompletedUsingItemPacket.json",
+    "$id": "215726265",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Send server to client to complete the using item process. An example is when you finish drinking or eating.",
-    "$ref": "./CompletedUsingItemPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 142,
-        "[cereal:packet_details]": ""
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "title": "CompletedUsingItemPacket",
+    "type": "object",
+    "properties": {
+        "Item Id": {
+            "type": "integer",
+            "x-underlying-type": "int16",
+            "x-ordinal-index": 0
+        },
+        "Item Use Method": {
+            "type": "integer",
+            "x-underlying-type": "int32",
+            "x-ordinal-index": 1
+        }
+    },
+    "required": [
+        "Item Id",
+        "Item Use Method"
+    ]
 }

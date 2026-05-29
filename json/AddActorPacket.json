@@ -1,14 +1,734 @@
 {
-    "title": "AddActorPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/AddActorPacket.json",
+    "$id": "3545453929",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Add Actor",
-    "$ref": "./AddActorPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 13,
-        "[cereal:packet_details]": "Newly created entities on server use AddActorPacket to notify clients that they exist."
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "definitions": {
+        "3107192670": {
+            "title": "DataItemShortPayload",
+            "type": "object",
+            "properties": {
+                "Type": {
+                    "title": "DataItemType",
+                    "type": "string",
+                    "const": "short",
+                    "enum": [
+                        "Byte",
+                        "Short",
+                        "Int",
+                        "Float",
+                        "String",
+                        "CompoundTag",
+                        "Pos",
+                        "Int64",
+                        "Vec3"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 0
+                },
+                "Value": {
+                    "type": "integer",
+                    "x-underlying-type": "int16",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Type",
+                "Value"
+            ]
+        },
+        "1750201151": {
+            "title": "ActorRuntimeID",
+            "type": "object",
+            "properties": {
+                "Actor Runtime ID": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Actor Runtime ID"
+            ]
+        },
+        "89706814": {
+            "title": "DataItemEntry",
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                },
+                "Payload": {
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/966801178",
+                            "x-ordinal-index": 0
+                        },
+                        {
+                            "$ref": "#/definitions/3107192670",
+                            "x-ordinal-index": 1
+                        },
+                        {
+                            "$ref": "#/definitions/1545342807",
+                            "x-ordinal-index": 2
+                        },
+                        {
+                            "$ref": "#/definitions/150895866",
+                            "x-ordinal-index": 3
+                        },
+                        {
+                            "$ref": "#/definitions/896864679",
+                            "x-ordinal-index": 4
+                        },
+                        {
+                            "$ref": "#/definitions/1986541625",
+                            "x-ordinal-index": 5
+                        },
+                        {
+                            "$ref": "#/definitions/706840442",
+                            "x-ordinal-index": 6
+                        },
+                        {
+                            "$ref": "#/definitions/1095388181",
+                            "x-ordinal-index": 7
+                        },
+                        {
+                            "$ref": "#/definitions/2900673205",
+                            "x-ordinal-index": 8
+                        }
+                    ],
+                    "x-control-value-type": "uint32",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "ID",
+                "Payload"
+            ]
+        },
+        "706840442": {
+            "title": "DataItemPosPayload",
+            "type": "object",
+            "properties": {
+                "Type": {
+                    "title": "DataItemType",
+                    "type": "string",
+                    "const": "pos",
+                    "enum": [
+                        "Byte",
+                        "Short",
+                        "Int",
+                        "Float",
+                        "String",
+                        "CompoundTag",
+                        "Pos",
+                        "Int64",
+                        "Vec3"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 0
+                },
+                "Value": {
+                    "$ref": "#/definitions/1488572312",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Type",
+                "Value"
+            ]
+        },
+        "1518004497": {
+            "title": "SynchedActorDataList",
+            "type": "object",
+            "properties": {
+                "Data": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/89706814"
+                    },
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Data"
+            ]
+        },
+        "4257541248": {
+            "title": "ActorUniqueID",
+            "type": "object",
+            "properties": {
+                "Actor Unique ID": {
+                    "type": "integer",
+                    "x-underlying-type": "int64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Actor Unique ID"
+            ]
+        },
+        "966801178": {
+            "title": "DataItemBytePayload",
+            "type": "object",
+            "properties": {
+                "Type": {
+                    "title": "DataItemType",
+                    "type": "string",
+                    "const": "byte",
+                    "enum": [
+                        "Byte",
+                        "Short",
+                        "Int",
+                        "Float",
+                        "String",
+                        "CompoundTag",
+                        "Pos",
+                        "Int64",
+                        "Vec3"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 0
+                },
+                "Value": {
+                    "type": "integer",
+                    "x-underlying-type": "int8",
+                    "x-ordinal-index": 1,
+                    "minimum": -128.0,
+                    "maximum": 127.0
+                }
+            },
+            "required": [
+                "Type",
+                "Value"
+            ]
+        },
+        "1095388181": {
+            "title": "DataItemInt64Payload",
+            "type": "object",
+            "properties": {
+                "Type": {
+                    "title": "DataItemType",
+                    "type": "string",
+                    "const": "int64",
+                    "enum": [
+                        "Byte",
+                        "Short",
+                        "Int",
+                        "Float",
+                        "String",
+                        "CompoundTag",
+                        "Pos",
+                        "Int64",
+                        "Vec3"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 0
+                },
+                "Value": {
+                    "type": "integer",
+                    "x-underlying-type": "int64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Type",
+                "Value"
+            ]
+        },
+        "1545342807": {
+            "title": "DataItemIntPayload",
+            "type": "object",
+            "properties": {
+                "Type": {
+                    "title": "DataItemType",
+                    "type": "string",
+                    "const": "int",
+                    "enum": [
+                        "Byte",
+                        "Short",
+                        "Int",
+                        "Float",
+                        "String",
+                        "CompoundTag",
+                        "Pos",
+                        "Int64",
+                        "Vec3"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 0
+                },
+                "Value": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Type",
+                "Value"
+            ]
+        },
+        "1488572312": {
+            "title": "BlockPos",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1
+                },
+                "Z": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "X",
+                "Y",
+                "Z"
+            ]
+        },
+        "150895866": {
+            "title": "DataItemFloatPayload",
+            "type": "object",
+            "properties": {
+                "Type": {
+                    "title": "DataItemType",
+                    "type": "string",
+                    "const": "float",
+                    "enum": [
+                        "Byte",
+                        "Short",
+                        "Int",
+                        "Float",
+                        "String",
+                        "CompoundTag",
+                        "Pos",
+                        "Int64",
+                        "Vec3"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 0
+                },
+                "Value": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Type",
+                "Value"
+            ]
+        },
+        "896864679": {
+            "title": "DataItemStringPayload",
+            "type": "object",
+            "properties": {
+                "Type": {
+                    "title": "DataItemType",
+                    "type": "string",
+                    "const": "string",
+                    "enum": [
+                        "Byte",
+                        "Short",
+                        "Int",
+                        "Float",
+                        "String",
+                        "CompoundTag",
+                        "Pos",
+                        "Int64",
+                        "Vec3"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 0
+                },
+                "Value": {
+                    "type": "string",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Type",
+                "Value"
+            ]
+        },
+        "1986541625": {
+            "title": "DataItemCompoundTagPayload",
+            "type": "object",
+            "properties": {
+                "Type": {
+                    "title": "DataItemType",
+                    "type": "string",
+                    "const": "compoundtag",
+                    "enum": [
+                        "Byte",
+                        "Short",
+                        "Int",
+                        "Float",
+                        "String",
+                        "CompoundTag",
+                        "Pos",
+                        "Int64",
+                        "Vec3"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 0
+                },
+                "Value": {
+                    "$ref": "#/definitions/3172631924",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Type",
+                "Value"
+            ]
+        },
+        "2900673205": {
+            "title": "DataItemVec3Payload",
+            "type": "object",
+            "properties": {
+                "Type": {
+                    "title": "DataItemType",
+                    "type": "string",
+                    "const": "vec3",
+                    "enum": [
+                        "Byte",
+                        "Short",
+                        "Int",
+                        "Float",
+                        "String",
+                        "CompoundTag",
+                        "Pos",
+                        "Int64",
+                        "Vec3"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 0
+                },
+                "Value": {
+                    "$ref": "#/definitions/725374594",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Type",
+                "Value"
+            ]
+        },
+        "725374594": {
+            "title": "Vec3",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "Z": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "X",
+                "Y",
+                "Z"
+            ]
+        },
+        "3671831922": {
+            "title": "ActorLink",
+            "type": "object",
+            "properties": {
+                "Immediate": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 3
+                },
+                "Passenger Initiated": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 4
+                },
+                "Target A": {
+                    "$ref": "#/definitions/4257541248",
+                    "x-ordinal-index": 0
+                },
+                "Target B": {
+                    "$ref": "#/definitions/4257541248",
+                    "x-ordinal-index": 1
+                },
+                "Type": {
+                    "title": "ActorLinkType",
+                    "type": "string",
+                    "enum": [
+                        "None",
+                        "Riding",
+                        "Passenger"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 2
+                },
+                "Vehicle Angular Velocity": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 5
+                }
+            },
+            "required": [
+                "Immediate",
+                "Passenger Initiated",
+                "Target A",
+                "Target B",
+                "Type",
+                "Vehicle Angular Velocity"
+            ]
+        },
+        "216879537": {
+            "title": "SyncedAttribute",
+            "type": "object",
+            "properties": {
+                "Attribute Name": {
+                    "type": "string",
+                    "x-ordinal-index": 0
+                },
+                "Current Value": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                },
+                "Max Value": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 3
+                },
+                "Min Value": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Attribute Name",
+                "Current Value",
+                "Max Value",
+                "Min Value"
+            ]
+        },
+        "3377555627": {
+            "title": "PropertySyncData",
+            "type": "object",
+            "properties": {
+                "Float Entries List": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/2531606031"
+                    },
+                    "x-ordinal-index": 1
+                },
+                "Int Entries List": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/1728562690"
+                    },
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Float Entries List",
+                "Int Entries List"
+            ]
+        },
+        "742152213": {
+            "title": "Vec2",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "X",
+                "Y"
+            ]
+        },
+        "2531606031": {
+            "title": "PropertySyncData::PropertySyncFloatEntry",
+            "type": "object",
+            "properties": {
+                "Data": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "Property Index": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Data",
+                "Property Index"
+            ]
+        },
+        "1728562690": {
+            "title": "PropertySyncData::PropertySyncIntEntry",
+            "type": "object",
+            "properties": {
+                "Data": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1
+                },
+                "Property Index": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Data",
+                "Property Index"
+            ]
+        }
+    },
+    "title": "AddActorPacket",
+    "type": "object",
+    "properties": {
+        "Actor Data": {
+            "$ref": "#/definitions/1518004497",
+            "x-ordinal-index": 9
+        },
+        "Actor Links": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/3671831922"
+            },
+            "x-ordinal-index": 11
+        },
+        "Actor Type": {
+            "type": "string",
+            "x-ordinal-index": 2
+        },
+        "Attributes List": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/216879537"
+            },
+            "x-ordinal-index": 8
+        },
+        "Position": {
+            "$ref": "#/definitions/725374594",
+            "x-ordinal-index": 3
+        },
+        "Rotation": {
+            "$ref": "#/definitions/742152213",
+            "x-ordinal-index": 5
+        },
+        "Synched Properties": {
+            "$ref": "#/definitions/3377555627",
+            "x-ordinal-index": 10
+        },
+        "Target Actor ID": {
+            "$ref": "#/definitions/4257541248",
+            "x-ordinal-index": 0
+        },
+        "Target Runtime ID": {
+            "$ref": "#/definitions/1750201151",
+            "x-ordinal-index": 1
+        },
+        "Velocity": {
+            "$ref": "#/definitions/725374594",
+            "x-ordinal-index": 4
+        },
+        "Y Body Rotation": {
+            "type": "number",
+            "x-underlying-type": "float",
+            "x-ordinal-index": 7
+        },
+        "Y Head Rotation": {
+            "type": "number",
+            "x-underlying-type": "float",
+            "x-ordinal-index": 6
+        }
+    },
+    "required": [
+        "Actor Data",
+        "Actor Links",
+        "Actor Type",
+        "Attributes List",
+        "Position",
+        "Rotation",
+        "Synched Properties",
+        "Target Actor ID",
+        "Target Runtime ID",
+        "Velocity",
+        "Y Body Rotation",
+        "Y Head Rotation"
+    ]
 }

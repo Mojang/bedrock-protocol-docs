@@ -1,14 +1,26 @@
 {
-    "title": "ResourcePackChunkRequestPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/ResourcePackChunkRequestPacket.json",
+    "$id": "2359198066",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Resource Pack Chunk Request",
-    "$ref": "./ResourcePackChunkRequestPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 84,
-        "[cereal:packet_details]": ""
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "title": "ResourcePackChunkRequestPacket",
+    "type": "object",
+    "properties": {
+        "Chunk": {
+            "type": "integer",
+            "x-underlying-type": "int32",
+            "x-ordinal-index": 1,
+            "minimum": 0.0
+        },
+        "Resource Name": {
+            "type": "string",
+            "x-ordinal-index": 0,
+            "pattern": "A string in the format of <uuid>_<semver>, where <uuid> is a valid UUID and <semver> is a valid semantic version"
+        }
+    },
+    "required": [
+        "Chunk",
+        "Resource Name"
+    ]
 }

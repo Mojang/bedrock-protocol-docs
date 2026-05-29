@@ -1,14 +1,172 @@
 {
-    "title": "UpdateAttributesPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/UpdateAttributesPacket.json",
+    "$id": "4119188881",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Update Attributes",
-    "$ref": "./UpdateAttributesPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 29,
-        "[cereal:packet_details]": "Occasionally updating player attributes (buffs/debuffs, health, etc)"
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "definitions": {
+        "1750201151": {
+            "title": "ActorRuntimeID",
+            "type": "object",
+            "properties": {
+                "Actor Runtime ID": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Actor Runtime ID"
+            ]
+        },
+        "3780234551": {
+            "title": "AttributeData",
+            "type": "object",
+            "properties": {
+                "Current Value": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                },
+                "Default Max Value": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 4
+                },
+                "Default Min Value": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 3
+                },
+                "Default Value": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 5
+                },
+                "Max Value": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "Min Value": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "Modifiers": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/2093613046"
+                    },
+                    "x-ordinal-index": 7
+                },
+                "Name": {
+                    "$ref": "#/definitions/3381141713",
+                    "x-ordinal-index": 6
+                }
+            },
+            "required": [
+                "Current Value",
+                "Default Max Value",
+                "Default Min Value",
+                "Default Value",
+                "Max Value",
+                "Min Value",
+                "Modifiers",
+                "Name"
+            ]
+        },
+        "2093613046": {
+            "title": "AttributeModifier",
+            "type": "object",
+            "properties": {
+                "Amount": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                },
+                "Id": {
+                    "type": "string",
+                    "x-ordinal-index": 0
+                },
+                "Is Serializable?": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 5
+                },
+                "Name": {
+                    "type": "string",
+                    "x-ordinal-index": 1
+                },
+                "Operand": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 4
+                },
+                "Operation": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 3
+                }
+            },
+            "required": [
+                "Amount",
+                "Id",
+                "Is Serializable?",
+                "Name",
+                "Operand",
+                "Operation"
+            ]
+        },
+        "3381141713": {
+            "title": "hashed_string",
+            "type": "string"
+        },
+        "1262916889": {
+            "title": "PlayerInputTick",
+            "type": "object",
+            "properties": {
+                "Input tick": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Input tick"
+            ]
+        }
+    },
+    "title": "UpdateAttributesPacket",
+    "type": "object",
+    "properties": {
+        "Attribute List": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/3780234551"
+            },
+            "x-ordinal-index": 1
+        },
+        "Target Runtime ID": {
+            "$ref": "#/definitions/1750201151",
+            "x-ordinal-index": 0
+        },
+        "Tick": {
+            "$ref": "#/definitions/1262916889",
+            "x-ordinal-index": 2
+        }
+    },
+    "required": [
+        "Attribute List",
+        "Target Runtime ID",
+        "Tick"
+    ]
 }

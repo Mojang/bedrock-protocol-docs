@@ -1,14 +1,351 @@
 {
-    "title": "ClientboundUpdateSoundDataPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/ClientboundUpdateSoundDataPacket.json",
+    "$id": "3637944334",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Sent to update sound data.",
-    "$ref": "./ClientboundUpdateSoundDataPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 348,
-        "[cereal:packet_details]": ""
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "definitions": {
+        "3532082888": {
+            "title": "Stop"
+        },
+        "3672938211": {
+            "title": "Resume"
+        },
+        "1748474582": {
+            "title": "SetPitch",
+            "type": "object",
+            "properties": {
+                "Pitch": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Pitch"
+            ]
+        },
+        "2651292898": {
+            "title": "Pause"
+        },
+        "951219634": {
+            "title": "SetVolume",
+            "type": "object",
+            "properties": {
+                "Volume": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Volume"
+            ]
+        },
+        "2470795121": {
+            "title": "SeekTo",
+            "type": "object",
+            "properties": {
+                "Seconds": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Seconds"
+            ]
+        },
+        "294292951": {
+            "title": "ServerSoundHandle",
+            "type": "object",
+            "properties": {
+                "Server Sound Handle": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Server Sound Handle"
+            ]
+        },
+        "324165574": {
+            "title": "Fade",
+            "type": "object",
+            "properties": {
+                "Duration": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "Target Volume": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Duration",
+                "Target Volume"
+            ]
+        }
+    },
+    "title": "ClientboundUpdateSoundDataPacket",
+    "type": "object",
+    "properties": {
+        "Fade": {
+            "default": {},
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/3532082888",
+                    "x-ordinal-index": 0
+                },
+                {
+                    "$ref": "#/definitions/951219634",
+                    "x-ordinal-index": 1
+                },
+                {
+                    "$ref": "#/definitions/1748474582",
+                    "x-ordinal-index": 2
+                },
+                {
+                    "$ref": "#/definitions/324165574",
+                    "x-ordinal-index": 3
+                },
+                {
+                    "$ref": "#/definitions/2470795121",
+                    "x-ordinal-index": 4
+                },
+                {
+                    "$ref": "#/definitions/2651292898",
+                    "x-ordinal-index": 5
+                },
+                {
+                    "$ref": "#/definitions/3672938211",
+                    "x-ordinal-index": 6
+                }
+            ],
+            "x-control-value-type": "uint32",
+            "x-ordinal-index": 4
+        },
+        "Pause": {
+            "default": {},
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/3532082888",
+                    "x-ordinal-index": 0
+                },
+                {
+                    "$ref": "#/definitions/951219634",
+                    "x-ordinal-index": 1
+                },
+                {
+                    "$ref": "#/definitions/1748474582",
+                    "x-ordinal-index": 2
+                },
+                {
+                    "$ref": "#/definitions/324165574",
+                    "x-ordinal-index": 3
+                },
+                {
+                    "$ref": "#/definitions/2470795121",
+                    "x-ordinal-index": 4
+                },
+                {
+                    "$ref": "#/definitions/2651292898",
+                    "x-ordinal-index": 5
+                },
+                {
+                    "$ref": "#/definitions/3672938211",
+                    "x-ordinal-index": 6
+                }
+            ],
+            "x-control-value-type": "uint32",
+            "x-ordinal-index": 6
+        },
+        "Resume": {
+            "default": {},
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/3532082888",
+                    "x-ordinal-index": 0
+                },
+                {
+                    "$ref": "#/definitions/951219634",
+                    "x-ordinal-index": 1
+                },
+                {
+                    "$ref": "#/definitions/1748474582",
+                    "x-ordinal-index": 2
+                },
+                {
+                    "$ref": "#/definitions/324165574",
+                    "x-ordinal-index": 3
+                },
+                {
+                    "$ref": "#/definitions/2470795121",
+                    "x-ordinal-index": 4
+                },
+                {
+                    "$ref": "#/definitions/2651292898",
+                    "x-ordinal-index": 5
+                },
+                {
+                    "$ref": "#/definitions/3672938211",
+                    "x-ordinal-index": 6
+                }
+            ],
+            "x-control-value-type": "uint32",
+            "x-ordinal-index": 7
+        },
+        "SeekTo": {
+            "default": {},
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/3532082888",
+                    "x-ordinal-index": 0
+                },
+                {
+                    "$ref": "#/definitions/951219634",
+                    "x-ordinal-index": 1
+                },
+                {
+                    "$ref": "#/definitions/1748474582",
+                    "x-ordinal-index": 2
+                },
+                {
+                    "$ref": "#/definitions/324165574",
+                    "x-ordinal-index": 3
+                },
+                {
+                    "$ref": "#/definitions/2470795121",
+                    "x-ordinal-index": 4
+                },
+                {
+                    "$ref": "#/definitions/2651292898",
+                    "x-ordinal-index": 5
+                },
+                {
+                    "$ref": "#/definitions/3672938211",
+                    "x-ordinal-index": 6
+                }
+            ],
+            "x-control-value-type": "uint32",
+            "x-ordinal-index": 5
+        },
+        "Server Sound Handle": {
+            "$ref": "#/definitions/294292951",
+            "x-ordinal-index": 0
+        },
+        "SetPitch": {
+            "default": {},
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/3532082888",
+                    "x-ordinal-index": 0
+                },
+                {
+                    "$ref": "#/definitions/951219634",
+                    "x-ordinal-index": 1
+                },
+                {
+                    "$ref": "#/definitions/1748474582",
+                    "x-ordinal-index": 2
+                },
+                {
+                    "$ref": "#/definitions/324165574",
+                    "x-ordinal-index": 3
+                },
+                {
+                    "$ref": "#/definitions/2470795121",
+                    "x-ordinal-index": 4
+                },
+                {
+                    "$ref": "#/definitions/2651292898",
+                    "x-ordinal-index": 5
+                },
+                {
+                    "$ref": "#/definitions/3672938211",
+                    "x-ordinal-index": 6
+                }
+            ],
+            "x-control-value-type": "uint32",
+            "x-ordinal-index": 3
+        },
+        "SetVolume": {
+            "default": {},
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/3532082888",
+                    "x-ordinal-index": 0
+                },
+                {
+                    "$ref": "#/definitions/951219634",
+                    "x-ordinal-index": 1
+                },
+                {
+                    "$ref": "#/definitions/1748474582",
+                    "x-ordinal-index": 2
+                },
+                {
+                    "$ref": "#/definitions/324165574",
+                    "x-ordinal-index": 3
+                },
+                {
+                    "$ref": "#/definitions/2470795121",
+                    "x-ordinal-index": 4
+                },
+                {
+                    "$ref": "#/definitions/2651292898",
+                    "x-ordinal-index": 5
+                },
+                {
+                    "$ref": "#/definitions/3672938211",
+                    "x-ordinal-index": 6
+                }
+            ],
+            "x-control-value-type": "uint32",
+            "x-ordinal-index": 2
+        },
+        "Stop": {
+            "default": {},
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/3532082888",
+                    "x-ordinal-index": 0
+                },
+                {
+                    "$ref": "#/definitions/951219634",
+                    "x-ordinal-index": 1
+                },
+                {
+                    "$ref": "#/definitions/1748474582",
+                    "x-ordinal-index": 2
+                },
+                {
+                    "$ref": "#/definitions/324165574",
+                    "x-ordinal-index": 3
+                },
+                {
+                    "$ref": "#/definitions/2470795121",
+                    "x-ordinal-index": 4
+                },
+                {
+                    "$ref": "#/definitions/2651292898",
+                    "x-ordinal-index": 5
+                },
+                {
+                    "$ref": "#/definitions/3672938211",
+                    "x-ordinal-index": 6
+                }
+            ],
+            "x-control-value-type": "uint32",
+            "x-ordinal-index": 1
+        }
+    },
+    "required": [
+        "Server Sound Handle"
+    ]
 }

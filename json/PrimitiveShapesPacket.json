@@ -1,14 +1,461 @@
 {
-    "title": "PrimitiveShapesPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/PrimitiveShapesPacket.json",
+    "$id": "3861158264",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Send primitive drawing shape info (from scripting) to the client for rendering",
-    "$ref": "./PrimitiveShapesPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 328,
-        "[cereal:packet_details]": ""
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "definitions": {
+        "1823518887": {
+            "title": "CylinderDataPayload",
+            "type": "object",
+            "properties": {
+                "Height": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                },
+                "Num Segments": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 3,
+                    "minimum": 0.0,
+                    "maximum": 255.0
+                },
+                "Radius X": {
+                    "$ref": "#/definitions/742152213",
+                    "x-ordinal-index": 0
+                },
+                "Radius Z": {
+                    "$ref": "#/definitions/742152213",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Height",
+                "Num Segments",
+                "Radius X",
+                "Radius Z"
+            ]
+        },
+        "2635068427": {
+            "title": "PrimitiveShapeDataPayload",
+            "type": "object",
+            "properties": {
+                "Attached To Entity ID": {
+                    "$ref": "#/definitions/4257541248",
+                    "x-ordinal-index": 9
+                },
+                "Color": {
+                    "$ref": "#/definitions/3702137727",
+                    "x-ordinal-index": 7
+                },
+                "Dimension ID": {
+                    "$ref": "#/definitions/1586048219",
+                    "x-ordinal-index": 8
+                },
+                "Extra Shape Data": {
+                    "default": null,
+                    "oneOf": [
+                        {
+                            "type": "null",
+                            "x-ordinal-index": 0
+                        },
+                        {
+                            "$ref": "#/definitions/3614003324",
+                            "x-ordinal-index": 1
+                        },
+                        {
+                            "$ref": "#/definitions/3500005140",
+                            "x-ordinal-index": 2
+                        },
+                        {
+                            "$ref": "#/definitions/3663142120",
+                            "x-ordinal-index": 3
+                        },
+                        {
+                            "$ref": "#/definitions/1758265407",
+                            "x-ordinal-index": 4
+                        },
+                        {
+                            "$ref": "#/definitions/1119825038",
+                            "x-ordinal-index": 5
+                        },
+                        {
+                            "$ref": "#/definitions/1823518887",
+                            "x-ordinal-index": 6
+                        },
+                        {
+                            "$ref": "#/definitions/3938376319",
+                            "x-ordinal-index": 7
+                        },
+                        {
+                            "$ref": "#/definitions/2449946036",
+                            "x-ordinal-index": 8
+                        },
+                        {
+                            "$ref": "#/definitions/229192384",
+                            "x-ordinal-index": 9
+                        }
+                    ],
+                    "x-control-value-type": "uint32",
+                    "x-ordinal-index": 10
+                },
+                "Location": {
+                    "$ref": "#/definitions/725374594",
+                    "x-ordinal-index": 2
+                },
+                "Maximum Render Distance": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 6
+                },
+                "NetworkId": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                },
+                "Rotation": {
+                    "$ref": "#/definitions/725374594",
+                    "x-ordinal-index": 4
+                },
+                "Scale": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 3
+                },
+                "Shape Type": {
+                    "title": "ScriptModuleMinecraft::ScriptPrimitiveShapeType",
+                    "type": "string",
+                    "enum": [
+                        "Line",
+                        "Box",
+                        "Sphere",
+                        "Circle",
+                        "Text",
+                        "Arrow",
+                        "Cylinder",
+                        "Pyramid",
+                        "Ellipsoid",
+                        "Cone"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 1
+                },
+                "Total Time Left": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 5
+                }
+            },
+            "required": [
+                "Dimension ID",
+                "NetworkId"
+            ]
+        },
+        "1586048219": {
+            "title": "DimensionType",
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "value"
+            ]
+        },
+        "1119825038": {
+            "title": "SphereDataPayload",
+            "type": "object",
+            "properties": {
+                "Num Segments": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0,
+                    "maximum": 255.0
+                }
+            },
+            "required": [
+                "Num Segments"
+            ]
+        },
+        "4257541248": {
+            "title": "ActorUniqueID",
+            "type": "object",
+            "properties": {
+                "Actor Unique ID": {
+                    "type": "integer",
+                    "x-underlying-type": "int64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Actor Unique ID"
+            ]
+        },
+        "3938376319": {
+            "title": "PyramidDataPayload",
+            "type": "object",
+            "properties": {
+                "Depth": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "Height": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                },
+                "Width": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Height",
+                "Width"
+            ]
+        },
+        "3663142120": {
+            "title": "BoxDataPayload",
+            "type": "object",
+            "properties": {
+                "Box Bound": {
+                    "$ref": "#/definitions/725374594",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Box Bound"
+            ]
+        },
+        "3614003324": {
+            "title": "ArrowDataPayload",
+            "type": "object",
+            "properties": {
+                "Arrow End Location": {
+                    "$ref": "#/definitions/725374594",
+                    "x-ordinal-index": 0
+                },
+                "Arrow Head Length": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "Arrow Head Radius": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                },
+                "Num Segments": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 3,
+                    "minimum": 0.0,
+                    "maximum": 255.0
+                }
+            },
+            "required": [
+                "Arrow End Location",
+                "Arrow Head Length",
+                "Arrow Head Radius",
+                "Num Segments"
+            ]
+        },
+        "3500005140": {
+            "title": "TextDataPayload",
+            "type": "object",
+            "properties": {
+                "BackgroundColor": {
+                    "$ref": "#/definitions/3702137727",
+                    "x-ordinal-index": 2
+                },
+                "DepthTest": {
+                    "type": "boolean",
+                    "default": false,
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 3
+                },
+                "ShowBackface": {
+                    "type": "boolean",
+                    "default": false,
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 4
+                },
+                "ShowTextBackface": {
+                    "type": "boolean",
+                    "default": false,
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 5
+                },
+                "Text": {
+                    "type": "string",
+                    "x-ordinal-index": 0
+                },
+                "UseRotation": {
+                    "type": "boolean",
+                    "default": false,
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Text"
+            ]
+        },
+        "725374594": {
+            "title": "Vec3",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "Z": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "X",
+                "Y",
+                "Z"
+            ]
+        },
+        "3702137727": {
+            "title": "Color",
+            "type": "object",
+            "properties": {
+                "Color": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Color"
+            ]
+        },
+        "1758265407": {
+            "title": "LineDataPayload",
+            "type": "object",
+            "properties": {
+                "Line End Location": {
+                    "$ref": "#/definitions/725374594",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Line End Location"
+            ]
+        },
+        "742152213": {
+            "title": "Vec2",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "X",
+                "Y"
+            ]
+        },
+        "2449946036": {
+            "title": "EllipsoidDataPayload",
+            "type": "object",
+            "properties": {
+                "Radii": {
+                    "$ref": "#/definitions/725374594",
+                    "x-ordinal-index": 0
+                },
+                "Segments Per Axis": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0,
+                    "maximum": 255.0
+                }
+            },
+            "required": [
+                "Radii",
+                "Segments Per Axis"
+            ]
+        },
+        "229192384": {
+            "title": "ConeDataPayload",
+            "type": "object",
+            "properties": {
+                "Height": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "Num Segments": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 2,
+                    "minimum": 0.0,
+                    "maximum": 255.0
+                },
+                "Radii": {
+                    "$ref": "#/definitions/742152213",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Height",
+                "Num Segments",
+                "Radii"
+            ]
+        }
+    },
+    "title": "PrimitiveShapesPacket",
+    "type": "object",
+    "properties": {
+        "Array of primitive shapes (can be a mix of new, updated or removed)": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/2635068427"
+            },
+            "x-ordinal-index": 0,
+            "maxItems": 1048576
+        }
+    },
+    "required": [
+        "Array of primitive shapes (can be a mix of new, updated or removed)"
+    ]
 }

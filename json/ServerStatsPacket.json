@@ -1,14 +1,25 @@
 {
-    "title": "ServerStatsPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/ServerStatsPacket.json",
+    "$id": "3099012445",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Used to send performance and other valuable stats back to the client",
-    "$ref": "./ServerStatsPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 192,
-        "[cereal:packet_details]": "Sent from server."
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "title": "ServerStatsPacket",
+    "type": "object",
+    "properties": {
+        "NetworkTime": {
+            "type": "number",
+            "x-underlying-type": "float",
+            "x-ordinal-index": 1
+        },
+        "ServerTime": {
+            "type": "number",
+            "x-underlying-type": "float",
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "NetworkTime",
+        "ServerTime"
+    ]
 }

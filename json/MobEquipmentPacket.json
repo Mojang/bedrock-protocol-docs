@@ -1,14 +1,210 @@
 {
-    "title": "MobEquipmentPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/MobEquipmentPacket.json",
+    "$id": "3262896307",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Mob Equipment. Changes to any mob's held/offhand item are fired from server to client with this packet. Clients also send this to the server when their held slot or its contents change.",
-    "$ref": "./MobEquipmentPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 31,
-        "[cereal:packet_details]": ""
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "definitions": {
+        "1750201151": {
+            "title": "ActorRuntimeID",
+            "type": "object",
+            "properties": {
+                "Actor Runtime ID": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Actor Runtime ID"
+            ]
+        },
+        "1987673147": {
+            "title": "NetworkItemStackDescriptor",
+            "$ref": "#/definitions/2803432075"
+        },
+        "4138486877": {
+            "title": "ItemStackNetIdVariant",
+            "type": "object",
+            "properties": {
+                "Item stack net ID variant": {
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/1433098745",
+                            "x-ordinal-index": 0
+                        },
+                        {
+                            "$ref": "#/definitions/3359047935",
+                            "x-ordinal-index": 1
+                        },
+                        {
+                            "$ref": "#/definitions/2707715806",
+                            "x-ordinal-index": 2
+                        }
+                    ],
+                    "x-control-value-type": "uint32",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Item stack net ID variant"
+            ]
+        },
+        "3359047935": {
+            "title": "ItemStackRequestId",
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "ID"
+            ]
+        },
+        "2803432075": {
+            "title": "cerealizer<NetworkItemStackDescriptor>::SerializedData",
+            "type": "object",
+            "properties": {
+                "Aux value": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2,
+                    "minimum": 0.0,
+                    "maximum": 32767.0
+                },
+                "Block Runtime Id": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 4,
+                    "minimum": 0.0
+                },
+                "Id": {
+                    "type": "integer",
+                    "x-underlying-type": "int16",
+                    "x-ordinal-index": 0
+                },
+                "Net Id Variant": {
+                    "$ref": "#/definitions/4138486877",
+                    "x-ordinal-index": 3
+                },
+                "Stack size": {
+                    "type": "integer",
+                    "x-underlying-type": "uint16",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0,
+                    "maximum": 64.0
+                },
+                "User Data Buffer": {
+                    "type": "string",
+                    "x-ordinal-index": 5
+                }
+            },
+            "required": [
+                "Aux value",
+                "Block Runtime Id",
+                "Id",
+                "Stack size",
+                "User Data Buffer"
+            ]
+        },
+        "1433098745": {
+            "title": "ItemStackNetId",
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "ID"
+            ]
+        },
+        "2707715806": {
+            "title": "ItemStackLegacyRequestId",
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "ID"
+            ]
+        }
+    },
+    "title": "MobEquipmentPacket",
+    "type": "object",
+    "properties": {
+        "Container ID": {
+            "type": "integer",
+            "x-underlying-type": "uint8",
+            "x-serialization-options": [
+                "Compression"
+            ],
+            "x-ordinal-index": 4,
+            "minimum": 0.0,
+            "maximum": 255.0
+        },
+        "Item": {
+            "$ref": "#/definitions/1987673147",
+            "x-ordinal-index": 1
+        },
+        "Selected Slot": {
+            "type": "integer",
+            "x-underlying-type": "uint8",
+            "x-serialization-options": [
+                "Compression"
+            ],
+            "x-ordinal-index": 3,
+            "minimum": 0.0,
+            "maximum": 255.0
+        },
+        "Slot": {
+            "type": "integer",
+            "x-underlying-type": "uint8",
+            "x-serialization-options": [
+                "Compression"
+            ],
+            "x-ordinal-index": 2,
+            "minimum": 0.0,
+            "maximum": 255.0
+        },
+        "Target Runtime ID": {
+            "$ref": "#/definitions/1750201151",
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Container ID",
+        "Item",
+        "Selected Slot",
+        "Slot",
+        "Target Runtime ID"
+    ]
 }

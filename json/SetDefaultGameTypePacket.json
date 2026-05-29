@@ -1,14 +1,32 @@
 {
-    "title": "SetDefaultGameTypePacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/SetDefaultGameTypePacket.json",
+    "$id": "1129062358",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Same as SetPlayerGameTypePacket & UpdatePlayerGameTypePacket, the only difference is that this changes the default for all clients.",
-    "$ref": "./SetDefaultGameTypePacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 105,
-        "[cereal:packet_details]": ""
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "title": "SetDefaultGameTypePacket",
+    "type": "object",
+    "properties": {
+        "Default Game Type": {
+            "title": "GameType",
+            "type": "string",
+            "enum": [
+                "Survival",
+                "Creative",
+                "Adventure",
+                "Default",
+                "Spectator",
+                "WorldDefault"
+            ],
+            "x-underlying-type": "int32",
+            "x-serialization-options": [
+                "Compression",
+                "Enum-as-Value"
+            ],
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Default Game Type"
+    ]
 }

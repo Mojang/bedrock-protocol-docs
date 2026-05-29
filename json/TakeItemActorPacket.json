@@ -1,14 +1,43 @@
 {
-    "title": "TakeItemActorPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/TakeItemActorPacket.json",
+    "$id": "2294624498",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "A packet sent to the server when deal with picking up an item off the ground in the world.",
-    "$ref": "./TakeItemActorPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 17,
-        "[cereal:packet_details]": "From this the item and count is turned into an item and the transaction is handled afterwards."
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "definitions": {
+        "1750201151": {
+            "title": "ActorRuntimeID",
+            "type": "object",
+            "properties": {
+                "Actor Runtime ID": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Actor Runtime ID"
+            ]
+        }
+    },
+    "title": "TakeItemActorPacket",
+    "type": "object",
+    "properties": {
+        "Actor Runtime ID": {
+            "$ref": "#/definitions/1750201151",
+            "x-ordinal-index": 1
+        },
+        "Item Runtime ID": {
+            "$ref": "#/definitions/1750201151",
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Actor Runtime ID",
+        "Item Runtime ID"
+    ]
 }

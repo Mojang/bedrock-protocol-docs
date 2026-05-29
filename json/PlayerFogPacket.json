@@ -1,14 +1,21 @@
 {
-    "title": "PlayerFogPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/PlayerFogPacket.json",
+    "$id": "1771748760",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Player Fog Packet",
-    "$ref": "./PlayerFogPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 160,
-        "[cereal:packet_details]": "This is the packet that tracks the active fog stack from the server so the local players can apply different fog settings."
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "title": "PlayerFogPacket",
+    "type": "object",
+    "properties": {
+        "Fog Stack": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Fog Stack"
+    ]
 }

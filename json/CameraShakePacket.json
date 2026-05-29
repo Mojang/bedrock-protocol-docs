@@ -1,14 +1,53 @@
 {
-    "title": "CameraShakePacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/CameraShakePacket.json",
+    "$id": "1946768320",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Used to control trigger camera shake movements on the client's player camera",
-    "$ref": "./CameraShakePacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 159,
-        "[cereal:packet_details]": "It may be used to queue or stop a camera shake"
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "title": "CameraShakePacket",
+    "type": "object",
+    "properties": {
+        "Intensity": {
+            "type": "number",
+            "x-underlying-type": "float",
+            "x-ordinal-index": 0
+        },
+        "Seconds": {
+            "type": "number",
+            "x-underlying-type": "float",
+            "x-ordinal-index": 1
+        },
+        "Shake Action": {
+            "title": "CameraShakeAction",
+            "type": "string",
+            "enum": [
+                "Add",
+                "Stop"
+            ],
+            "x-underlying-type": "uint8",
+            "x-serialization-options": [
+                "Enum-as-Value"
+            ],
+            "x-ordinal-index": 3
+        },
+        "Shake Type": {
+            "title": "CameraShakeType",
+            "type": "string",
+            "enum": [
+                "Positional",
+                "Rotational"
+            ],
+            "x-underlying-type": "uint8",
+            "x-serialization-options": [
+                "Enum-as-Value"
+            ],
+            "x-ordinal-index": 2
+        }
+    },
+    "required": [
+        "Intensity",
+        "Seconds",
+        "Shake Action",
+        "Shake Type"
+    ]
 }

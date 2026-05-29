@@ -1,14 +1,30 @@
 {
-    "title": "StopSoundPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/StopSoundPacket.json",
+    "$id": "3690157324",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Allows you to stop a sound or all sounds on all clients, only used in a /command",
-    "$ref": "./StopSoundPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 87,
-        "[cereal:packet_details]": ""
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "title": "StopSoundPacket",
+    "type": "object",
+    "properties": {
+        "Sound Name": {
+            "type": "string",
+            "x-ordinal-index": 0
+        },
+        "Stop All Sounds?": {
+            "type": "boolean",
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 1
+        },
+        "Stop Music (Legacy)": {
+            "type": "boolean",
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 2
+        }
+    },
+    "required": [
+        "Sound Name",
+        "Stop All Sounds?",
+        "Stop Music (Legacy)"
+    ]
 }

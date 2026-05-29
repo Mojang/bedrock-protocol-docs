@@ -1,14 +1,8 @@
 {
-    "title": "ClientboundDataDrivenUIReloadPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/ClientboundDataDrivenUIReloadPacket.json",
+    "$id": "2529963111",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Allows the server to tell the client to reload the Data Driven UI.",
-    "$ref": "./Clientbound_Data_Driven_UI_Reload_Payload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 335,
-        "[cereal:packet_details]": ""
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "title": "ClientboundDataDrivenUIReloadPacket"
 }

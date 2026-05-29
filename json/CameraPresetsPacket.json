@@ -1,14 +1,284 @@
 {
-    "title": "CameraPresetsPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/CameraPresetsPacket.json",
+    "$id": "1542182002",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Used to sync CameraPresets data from server to clients.",
-    "$ref": "./CameraPresetsPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 198,
-        "[cereal:packet_details]": ""
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "definitions": {
+        "2537458058": {
+            "title": "CameraPresets",
+            "type": "object",
+            "properties": {
+                "Presets": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/2974466276"
+                    },
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Presets"
+            ]
+        },
+        "3905427926": {
+            "title": "SharedTypes::Reference<SharedTypes::AssetType::CameraPreset>",
+            "type": "string"
+        },
+        "2974466276": {
+            "title": "CameraPresets",
+            "type": "object",
+            "properties": {
+                "Aim Assist": {
+                    "$ref": "#/definitions/2305420650",
+                    "x-ordinal-index": 20
+                },
+                "Block Listening Radius": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 12
+                },
+                "Continue Targeting": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 11
+                },
+                "Control Scheme": {
+                    "title": "Control Scheme",
+                    "type": "string",
+                    "enum": [
+                        "locked_player_relative_strafe",
+                        "camera_relative",
+                        "camera_relative_strafe",
+                        "player_relative",
+                        "player_relative_strafe"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 21
+                },
+                "Entity Offset": {
+                    "$ref": "#/definitions/725374594",
+                    "x-ordinal-index": 14
+                },
+                "Horizontal Rotation Limit": {
+                    "$ref": "#/definitions/742152213",
+                    "x-ordinal-index": 9
+                },
+                "Inherit From": {
+                    "$ref": "#/definitions/3905427926",
+                    "x-ordinal-index": 1
+                },
+                "Listener": {
+                    "title": "SharedTypes::Comprehensive::CameraPreset::AudioListener",
+                    "type": "string",
+                    "enum": [
+                        "Camera",
+                        "Player"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 18
+                },
+                "Name": {
+                    "$ref": "#/definitions/1649996674",
+                    "x-ordinal-index": 0
+                },
+                "Player Effects": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 19
+                },
+                "Pos X": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                },
+                "Pos Y": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 3
+                },
+                "Pos Z": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 4
+                },
+                "Radius": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 15
+                },
+                "Rot X": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 5
+                },
+                "Rot Y": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 6
+                },
+                "Rotation Speed": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 7
+                },
+                "Snap to Target": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 8
+                },
+                "Vertical Rotation Limit": {
+                    "$ref": "#/definitions/742152213",
+                    "x-ordinal-index": 10
+                },
+                "View Offset": {
+                    "$ref": "#/definitions/742152213",
+                    "x-ordinal-index": 13
+                },
+                "Yaw Limit Max": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 17
+                },
+                "Yaw Limit Min": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 16
+                }
+            },
+            "required": [
+                "Aim Assist",
+                "Block Listening Radius",
+                "Continue Targeting",
+                "Control Scheme",
+                "Entity Offset",
+                "Horizontal Rotation Limit",
+                "Inherit From",
+                "Listener",
+                "Name",
+                "Player Effects",
+                "Pos X",
+                "Pos Y",
+                "Pos Z",
+                "Radius",
+                "Rot X",
+                "Rot Y",
+                "Rotation Speed",
+                "Snap to Target",
+                "Vertical Rotation Limit",
+                "View Offset",
+                "Yaw Limit Max",
+                "Yaw Limit Min"
+            ]
+        },
+        "1649996674": {
+            "title": "SharedTypes::Identifier<SharedTypes::AssetType::CameraPreset>",
+            "type": "string"
+        },
+        "2305420650": {
+            "title": "SharedTypes::Comprehensive::CameraAimAssistCommandDefinition",
+            "type": "object",
+            "properties": {
+                "Distance": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 3
+                },
+                "Preset Id": {
+                    "$ref": "#/definitions/2897196339",
+                    "x-ordinal-index": 0
+                },
+                "Target Mode": {
+                    "title": "Aim-Assist Target Mode",
+                    "type": "string",
+                    "enum": [
+                        "angle",
+                        "distance"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 1
+                },
+                "View Angle": {
+                    "$ref": "#/definitions/742152213",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "Distance",
+                "Preset Id",
+                "Target Mode",
+                "View Angle"
+            ]
+        },
+        "742152213": {
+            "title": "Vec2",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "X",
+                "Y"
+            ]
+        },
+        "2897196339": {
+            "title": "SharedTypes::Reference<SharedTypes::AssetType::CameraAimAssist>",
+            "type": "string"
+        },
+        "725374594": {
+            "title": "Vec3",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "Z": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "X",
+                "Y",
+                "Z"
+            ]
+        }
+    },
+    "title": "CameraPresetsPacket",
+    "type": "object",
+    "properties": {
+        "Camera Presets": {
+            "$ref": "#/definitions/2537458058",
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Camera Presets"
+    ]
 }

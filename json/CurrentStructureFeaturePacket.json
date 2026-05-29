@@ -1,14 +1,18 @@
 {
-    "title": "CurrentStructureFeaturePacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/CurrentStructureFeaturePacket.json",
+    "$id": "641404675",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Informs the client of which Structure Feature they are currently occupying.",
-    "$ref": "./CurrentStructureFeaturePacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 314,
-        "[cereal:packet_details]": "Sends the name of the Structure Feature the player is currently occupying to the client.\n\tIf the player is not in a structure, this packet contains an empty string."
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "title": "CurrentStructureFeaturePacket",
+    "type": "object",
+    "properties": {
+        "Current Structure Feature": {
+            "type": "string",
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Current Structure Feature"
+    ]
 }

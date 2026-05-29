@@ -1,14 +1,22 @@
 {
-    "title": "SetTimePacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/SetTimePacket.json",
+    "$id": "887891842",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Set Time",
-    "$ref": "./SetTimePacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 10,
-        "[cereal:packet_details]": "Every so often (and at login) the server sends the current time to the client, and additionally the client can set the server time through 2 commands: DayLockCommand and TimeCommand"
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "title": "SetTimePacket",
+    "type": "object",
+    "properties": {
+        "Time": {
+            "type": "integer",
+            "x-underlying-type": "int32",
+            "x-serialization-options": [
+                "Compression"
+            ],
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Time"
+    ]
 }

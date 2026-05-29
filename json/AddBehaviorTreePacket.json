@@ -1,14 +1,18 @@
 {
-    "title": "AddBehaviorTreePacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/AddBehaviorTreePacket.json",
+    "$id": "2810626274",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Add Behavior Tree",
-    "$ref": "./AddBehaviorTreePacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 89,
-        "[cereal:packet_details]": "For automation"
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "title": "AddBehaviorTreePacket",
+    "type": "object",
+    "properties": {
+        "Behavior Tree Structure (JSON)": {
+            "type": "string",
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Behavior Tree Structure (JSON)"
+    ]
 }

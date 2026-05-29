@@ -1,14 +1,168 @@
 {
-    "title": "TextPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/TextPacket.json",
+    "$id": "3859742646",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Represents a text message that needs to be displayed in-game",
-    "$ref": "./TextPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 9,
-        "[cereal:packet_details]": "Used for commands, messages, and other info printed to the screen. Most of which are server->client or server broadcasted to all clients, but some cases have a client to other client via the server"
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "definitions": {
+        "3960679329": {
+            "title": "MessageOnly",
+            "type": "object",
+            "properties": {
+                "Message": {
+                    "type": "string",
+                    "default": "",
+                    "x-ordinal-index": 1,
+                    "minLength": 1,
+                    "maxLength": 65536
+                },
+                "Message Type": {
+                    "title": "TextPacketType",
+                    "type": "string",
+                    "enum": [
+                        "raw",
+                        "tip",
+                        "systemMessage",
+                        "textObjectWhisper",
+                        "textObject",
+                        "textObjectAnnouncement"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Message Type"
+            ]
+        },
+        "850792331": {
+            "title": "AuthorAndMessage",
+            "type": "object",
+            "properties": {
+                "Message": {
+                    "type": "string",
+                    "default": "",
+                    "x-ordinal-index": 2,
+                    "minLength": 1,
+                    "maxLength": 65536
+                },
+                "Message Type": {
+                    "title": "TextPacketType",
+                    "type": "string",
+                    "enum": [
+                        "chat",
+                        "whisper",
+                        "announcement"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Player Name": {
+                    "type": "string",
+                    "default": "",
+                    "x-ordinal-index": 1,
+                    "maxLength": 256
+                }
+            },
+            "required": [
+                "Message Type"
+            ]
+        },
+        "4232358750": {
+            "title": "MessageAndParams",
+            "type": "object",
+            "properties": {
+                "Message": {
+                    "type": "string",
+                    "default": "",
+                    "x-ordinal-index": 1,
+                    "minLength": 1,
+                    "maxLength": 65536
+                },
+                "Message Type": {
+                    "title": "TextPacketType",
+                    "type": "string",
+                    "enum": [
+                        "translate",
+                        "popup",
+                        "jukeboxPopup"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Parameter List": {
+                    "type": "array",
+                    "default": [],
+                    "items": {
+                        "type": "string"
+                    },
+                    "x-ordinal-index": 2,
+                    "maxItems": 4
+                }
+            },
+            "required": [
+                "Message Type"
+            ]
+        }
+    },
+    "title": "TextPacket",
+    "type": "object",
+    "properties": {
+        "Body": {
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/3960679329",
+                    "x-ordinal-index": 0
+                },
+                {
+                    "$ref": "#/definitions/850792331",
+                    "x-ordinal-index": 1
+                },
+                {
+                    "$ref": "#/definitions/4232358750",
+                    "x-ordinal-index": 2
+                }
+            ],
+            "x-control-value-type": "uint32",
+            "x-ordinal-index": 1
+        },
+        "Filtered Message": {
+            "type": "string",
+            "x-ordinal-index": 4,
+            "maxLength": 65536
+        },
+        "Localize?": {
+            "type": "boolean",
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 0
+        },
+        "Platform Id": {
+            "type": "string",
+            "default": "",
+            "x-ordinal-index": 3,
+            "maxLength": 256
+        },
+        "Sender's XUID": {
+            "type": "string",
+            "default": "",
+            "x-ordinal-index": 2,
+            "maxLength": 64
+        }
+    },
+    "required": [
+        "Body",
+        "Localize?"
+    ]
 }

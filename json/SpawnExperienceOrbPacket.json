@@ -1,14 +1,55 @@
 {
-    "title": "SpawnExperienceOrbPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/SpawnExperienceOrbPacket.json",
+    "$id": "1869670813",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Spawn Experience Orb",
-    "$ref": "./SpawnExperienceOrbPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 66,
-        "[cereal:packet_details]": "Note: This can be seen as \"ContainerWantSetSlotPacket\" when sent from client to server. Currently, the client handles side-effects relating to it's own inventory, regardless of the success of the operation."
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "definitions": {
+        "725374594": {
+            "title": "Vec3",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "Z": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "X",
+                "Y",
+                "Z"
+            ]
+        }
+    },
+    "title": "SpawnExperienceOrbPacket",
+    "type": "object",
+    "properties": {
+        "Position": {
+            "$ref": "#/definitions/725374594",
+            "x-ordinal-index": 0
+        },
+        "XP Value": {
+            "type": "integer",
+            "x-underlying-type": "int32",
+            "x-serialization-options": [
+                "Compression"
+            ],
+            "x-ordinal-index": 1
+        }
+    },
+    "required": [
+        "Position",
+        "XP Value"
+    ]
 }

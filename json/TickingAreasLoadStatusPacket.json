@@ -1,14 +1,19 @@
 {
-    "title": "TickingAreasLoadStatusPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/TickingAreasLoadStatusPacket.json",
+    "$id": "3148944508",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Used to inform the client that the server is waiting for ticking areas to finish preloading.",
-    "$ref": "./TickingAreasLoadStatusPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 179,
-        "[cereal:packet_details]": ""
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "title": "TickingAreasLoadStatusPacket",
+    "type": "object",
+    "properties": {
+        "Waiting For Preload": {
+            "type": "boolean",
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Waiting For Preload"
+    ]
 }

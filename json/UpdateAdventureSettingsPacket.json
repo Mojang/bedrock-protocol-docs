@@ -1,14 +1,58 @@
 {
-    "title": "UpdateAdventureSettingsPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/UpdateAdventureSettingsPacket.json",
+    "$id": "1621046817",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "UpdateAdventureSettingsPacket",
-    "$ref": "./UpdateAdventureSettingsPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 188,
-        "[cereal:packet_details]": "Sent by the server to update the state of AdventureSettings. Replaces the AdventureSettingsPacket for updating AdventureSettings from server to client."
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "definitions": {
+        "3514617014": {
+            "title": "AdventureSettings",
+            "type": "object",
+            "properties": {
+                "Auto Jump": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 4
+                },
+                "Immutable World": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 2
+                },
+                "Show Name Tags": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 3
+                },
+                "no MvP": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 1
+                },
+                "no PvM": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Auto Jump",
+                "Immutable World",
+                "Show Name Tags",
+                "no MvP",
+                "no PvM"
+            ]
+        }
+    },
+    "title": "UpdateAdventureSettingsPacket",
+    "type": "object",
+    "properties": {
+        "Adventure Settings": {
+            "$ref": "#/definitions/3514617014",
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Adventure Settings"
+    ]
 }

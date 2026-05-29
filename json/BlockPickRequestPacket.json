@@ -1,14 +1,69 @@
 {
-    "title": "BlockPickRequestPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "/BlockPickRequestPacket.json",
+    "$id": "2064571028",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Player picks up a block in the world; client to server.",
-    "$ref": "./BlockPickRequestPacketPayload.json",
-    "$metaProperties": {
-        "[cereal:packet]": 34,
-        "[cereal:packet_details]": ""
-    }
+    "x-minecraft-version": "1.26.40-beta.20",
+    "x-protocol-version": 1011,
+    "definitions": {
+        "1488572312": {
+            "title": "BlockPos",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1
+                },
+                "Z": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "X",
+                "Y",
+                "Z"
+            ]
+        }
+    },
+    "title": "BlockPickRequestPacket",
+    "type": "object",
+    "properties": {
+        "Max Slots": {
+            "type": "integer",
+            "x-underlying-type": "uint8",
+            "x-ordinal-index": 2,
+            "minimum": 0.0,
+            "maximum": 255.0
+        },
+        "Position": {
+            "$ref": "#/definitions/1488572312",
+            "x-ordinal-index": 0
+        },
+        "With Data?": {
+            "type": "boolean",
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 1
+        }
+    },
+    "required": [
+        "Max Slots",
+        "Position",
+        "With Data?"
+    ]
 }
