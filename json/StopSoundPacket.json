@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3690157324",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.20",
-    "x-protocol-version": 1011,
+    "x-minecraft-version": "1.26.40-beta.23",
+    "x-protocol-version": 2138,
     "title": "StopSoundPacket",
     "type": "object",
     "properties": {

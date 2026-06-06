@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1310695872",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.20",
-    "x-protocol-version": 1011,
+    "x-minecraft-version": "1.26.40-beta.23",
+    "x-protocol-version": 2138,
     "definitions": {
         "742152213": {
             "title": "Vec2",
@@ -74,7 +74,7 @@
         "View Angle": {
             "$ref": "#/definitions/742152213",
             "x-ordinal-index": 1,
-            "x-runtime-constraint-description": "Check that x is in [10, 90], and y is in [10, 90]"
+            "x-runtime-constraint-description": "There are different constraints for different indexes, please refer to member help for more details"
         }
     },
     "required": [

@@ -1,0 +1,135 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "1247270804",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.23",
+    "x-protocol-version": 2138,
+    "definitions": {
+        "2517871436": {
+            "title": "Resource Pack Client Response - Cancel",
+            "type": "object",
+            "properties": {
+                "Response Type": {
+                    "title": "ResourcePackResponse",
+                    "type": "string",
+                    "const": "cancel",
+                    "enum": [
+                        "Cancel",
+                        "Downloading",
+                        "DownloadingFinished",
+                        "ResourcePackStackFinished"
+                    ],
+                    "x-underlying-type": "int8",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Response Type"
+            ]
+        },
+        "1757240626": {
+            "title": "Resource Pack Client Response - Downloading",
+            "type": "object",
+            "properties": {
+                "Downloading Packs": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "x-ordinal-index": 1,
+                    "maxProperties": 65535
+                },
+                "Response Type": {
+                    "title": "ResourcePackResponse",
+                    "type": "string",
+                    "const": "downloading",
+                    "enum": [
+                        "Cancel",
+                        "Downloading",
+                        "DownloadingFinished",
+                        "ResourcePackStackFinished"
+                    ],
+                    "x-underlying-type": "int8",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Downloading Packs",
+                "Response Type"
+            ]
+        },
+        "4252632452": {
+            "title": "Resource Pack Client Response - Downloading Finished",
+            "type": "object",
+            "properties": {
+                "Response Type": {
+                    "title": "ResourcePackResponse",
+                    "type": "string",
+                    "const": "downloadingfinished",
+                    "enum": [
+                        "Cancel",
+                        "Downloading",
+                        "DownloadingFinished",
+                        "ResourcePackStackFinished"
+                    ],
+                    "x-underlying-type": "int8",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Response Type"
+            ]
+        },
+        "1227612919": {
+            "title": "Resource Pack Client Response - Resource Pack Stack Finished",
+            "type": "object",
+            "properties": {
+                "Response Type": {
+                    "title": "ResourcePackResponse",
+                    "type": "string",
+                    "const": "resourcepackstackfinished",
+                    "enum": [
+                        "Cancel",
+                        "Downloading",
+                        "DownloadingFinished",
+                        "ResourcePackStackFinished"
+                    ],
+                    "x-underlying-type": "int8",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Response Type"
+            ]
+        }
+    },
+    "title": "ResourcePackClientResponsePacket",
+    "type": "object",
+    "properties": {
+        "Response": {
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/2517871436",
+                    "x-ordinal-index": 0
+                },
+                {
+                    "$ref": "#/definitions/1757240626",
+                    "x-ordinal-index": 1
+                },
+                {
+                    "$ref": "#/definitions/4252632452",
+                    "x-ordinal-index": 2
+                },
+                {
+                    "$ref": "#/definitions/1227612919",
+                    "x-ordinal-index": 3
+                }
+            ],
+            "x-control-value-type": "uint32",
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Response"
+    ]
+}
