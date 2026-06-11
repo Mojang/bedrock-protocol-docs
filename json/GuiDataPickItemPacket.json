@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1016196226",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
+    "x-minecraft-version": "1.26.40",
+    "x-protocol-version": 2143,
     "title": "GuiDataPickItemPacket",
     "description": "The server telling the client what item slot to hover over in the hotbar.",
     "type": "object",
@@ -26,9 +26,5 @@
         "Item Effect Name",
         "Item Name",
         "Slot"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 54,
-        "[cereal:packet_details]": "This is only used when players use pick block, a command is used, tests, and some 3rd party content."
-    }
+    ]
 }

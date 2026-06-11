@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1012857595",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
+    "x-minecraft-version": "1.26.40",
+    "x-protocol-version": 2143,
     "definitions": {
         "2032546634": {
             "title": "SubChunkPosOffset",
@@ -106,9 +106,5 @@
         "Center Pos",
         "Dimension Type",
         "SubChunk Position Offset List"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 175,
-        "[cereal:packet_details]": ""
-    }
+    ]
 }

@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "182997624",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
+    "x-minecraft-version": "1.26.40",
+    "x-protocol-version": 2143,
     "definitions": {
         "4257541248": {
             "title": "ActorUniqueID",
@@ -65,9 +65,5 @@
         "IntComponent Value",
         "Property Name",
         "StringComponent Value"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 182,
-        "[cereal:packet_details]": ""
-    }
+    ]
 }

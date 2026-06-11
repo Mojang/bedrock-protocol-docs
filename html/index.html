@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Protocol Documentation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        h4 {
+            color: #666;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        table {
+            background-color: white;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        th {
+            font-weight: bold;
+            text-align: left;
+            padding: 8px !important;
+        }
+        td {
+            padding: 8px !important;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #e8f4f8;
+        }
+        .description {
+            color: #555;
+            font-style: italic;
+            margin: 10px 0 20px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .packet-list {
+            columns: 3;
+            column-gap: 20px;
+        }
+        .packet-list li {
+            margin-bottom: 8px;
+            break-inside: avoid;
+        }
+        details {
+            margin: 10px 0;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            padding: 8px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            user-select: none;
+        }
+        summary:hover {
+            background-color: #e8e8e8;
+        }
+        details[open] summary {
+            background-color: #d4edff;
+            border-color: #3498db;
+            border-left: 4px solid #3498db;
+        }
+        @media (max-width: 900px) {
+            .packet-list {
+                columns: 2;
+            }
+        }
+        @media (max-width: 600px) {
+            .packet-list {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <h1>Game Protocol Documentation</h1>
+<p>Documentation for 214 protocol packets.</p>
+<h2>Packet List</h2>
+<ul class="packet-list">
+<li>
+<a href="ActorEventPacket.html"><strong>ActorEventPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">All kinds of actor state changes (see Actor::handleEntityEvent).</span>
+</li>
+<li>
+<a href="ActorPickRequestPacket.html"><strong>ActorPickRequestPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Player clicks on an actor in the world, eg a chicken.</span>
+</li>
+<li>
+<a href="AddActorPacket.html"><strong>AddActorPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Add Actor</span>
+</li>
+<li>
+<a href="AddBehaviorTreePacket.html"><strong>AddBehaviorTreePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Add Behavior Tree</span>
+</li>
+<li>
+<a href="AddItemActorPacket.html"><strong>AddItemActorPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">When an item actor is added to the world (punch a tree-&gt;tree block, for example)</span>
+</li>
+<li>
+<a href="AddPaintingPacket.html"><strong>AddPaintingPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sends the information for a new painting actor from server to client.</span>
+</li>
+<li>
+<a href="AddPlayerPacket.html"><strong>AddPlayerPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Add Player</span>
+</li>
+<li>
+<a href="AddVolumeEntityPacket.html"><strong>AddVolumeEntityPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sends a volume entity&#x27;s definition and components from server to client.</span>
+</li>
+<li>
+<a href="AgentActionEventPacket.html"><strong>AgentActionEventPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">packet containing data of Agent Action Type</span>
+</li>
+<li>
+<a href="AgentAnimationPacket.html"><strong>AgentAnimationPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Broadcasted to other players when an Agent performs an animation so it gets properly replicated.</span>
+</li>
+<li>
+<a href="AnimateEntityPacket.html"><strong>AnimateEntityPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">The AnimateEntityPacket is used to trigger a one - off animation on the client it is sent to.</span>
+</li>
+<li>
+<a href="AnimatePacket.html"><strong>AnimatePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Animate Actor</span>
+</li>
+<li>
+<a href="AnvilDamagePacket.html"><strong>AnvilDamagePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Requests an anvil to be damaged.</span>
+</li>
+<li>
+<a href="AutomationClientConnectPacket.html"><strong>AutomationClientConnectPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Initiates websocket connection</span>
+</li>
+<li>
+<a href="AvailableActorIdentifiersPacket.html"><strong>AvailableActorIdentifiersPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sends the whole list of actor identifiers at game start from the server.</span>
+</li>
+<li>
+<a href="AvailableCommandsPacket.html"><strong>AvailableCommandsPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Contains all the available commands.</span>
+</li>
+<li>
+<a href="AwardAchievementPacket.html"><strong>AwardAchievementPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Contains the ID of the achievement to award</span>
+</li>
+<li>
+<a href="BiomeDefinitionListPacket.html"><strong>BiomeDefinitionListPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">On world start, send clients the info for all available biomes.</span>
+</li>
+<li>
+<a href="BlockActorDataPacket.html"><strong>BlockActorDataPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sends the entire user data compound tag and the block position to the client.</span>
+</li>
+<li>
+<a href="BlockEventPacket.html"><strong>BlockEventPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Whenever a block event happens it is sent from the server to sync client and server, with arbitraril...</span>
+</li>
+<li>
+<a href="BlockPickRequestPacket.html"><strong>BlockPickRequestPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Player picks up a block in the world; client to server.</span>
+</li>
+<li>
+<a href="BookEditPacket.html"><strong>BookEditPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sends the updated state of the Book and Quill item from client to server during use.</span>
+</li>
+<li>
+<a href="BossEventPacket.html"><strong>BossEventPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent when a boss gets updated</span>
+</li>
+<li>
+<a href="CameraAimAssistActorPriorityPacket.html"><strong>CameraAimAssistActorPriorityPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Camera aim-assist actor priority data sent from the server to clients.</span>
+</li>
+<li>
+<a href="CameraAimAssistPacket.html"><strong>CameraAimAssistPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">CameraAimAssist</span>
+</li>
+<li>
+<a href="CameraAimAssistPresetsPacket.html"><strong>CameraAimAssistPresetsPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Camera aim-assist registry presets/categories data sent from the server to clients.</span>
+</li>
+<li>
+<a href="CameraInstructionPacket.html"><strong>CameraInstructionPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Used to send a CameraInstruction from the server to the specified clients.</span>
+</li>
+<li>
+<a href="CameraPacket.html"><strong>CameraPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Used only in EDU through the tripod camera item or the TakePictureCommand. Sends the camera actor id...</span>
+</li>
+<li>
+<a href="CameraPresetsPacket.html"><strong>CameraPresetsPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Used to sync CameraPresets data from server to clients.</span>
+</li>
+<li>
+<a href="CameraShakePacket.html"><strong>CameraShakePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Used to control trigger camera shake movements on the client&#x27;s player camera</span>
+</li>
+<li>
+<a href="CameraSplinePacket.html"><strong>CameraSplinePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Camera custom spline data sent from server to client.</span>
+</li>
+<li>
+<a href="ChangeDimensionPacket.html"><strong>ChangeDimensionPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">The server sends this packet from the level to kick off dimension changing process.</span>
+</li>
+<li>
+<a href="ChangeMobPropertyPacket.html"><strong>ChangeMobPropertyPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">packet containing data for changing mob property</span>
+</li>
+<li>
+<a href="ChunkRadiusUpdatedPacket.html"><strong>ChunkRadiusUpdatedPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent when the world is loading. We don&#x27;t know why it is sent four times. Defines the tick distance.</span>
+</li>
+<li>
+<a href="ClientboundAttributeLayerSyncPacket.html"><strong>ClientboundAttributeLayerSyncPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Syncs Attribute Layers to the Client (Currently disabled)</span>
+</li>
+<li>
+<a href="ClientboundCloseFormPacket.html"><strong>ClientboundCloseFormPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from the server to client to force close all server forms on the stack and return to the HUD sc...</span>
+</li>
+<li>
+<a href="ClientboundControlSchemeSetPacket.html"><strong>ClientboundControlSchemeSetPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Set the control scheme that the player should use</span>
+</li>
+<li>
+<a href="ClientboundDataDrivenUICloseScreenPacket.html"><strong>ClientboundDataDrivenUICloseScreenPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Allows the server to tell the client to close Data Driven UI screens.</span>
+</li>
+<li>
+<a href="ClientboundDataDrivenUIReloadPacket.html"><strong>ClientboundDataDrivenUIReloadPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Allows the server to tell the client to reload the Data Driven UI.</span>
+</li>
+<li>
+<a href="ClientboundDataDrivenUIShowScreenPacket.html"><strong>ClientboundDataDrivenUIShowScreenPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Allows the server to tell the client to show a Data Driven UI screen.</span>
+</li>
+<li>
+<a href="ClientboundDataStorePacket.html"><strong>ClientboundDataStorePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sends a list of data store properties from the server to the client.</span>
+</li>
+<li>
+<a href="ClientboundDebugRendererPacket.html"><strong>ClientboundDebugRendererPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Used to add/remove debug rendering objects.</span>
+</li>
+<li>
+<a href="ClientboundTextureShiftPacket.html"><strong>ClientboundTextureShiftPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sends a set of update properties for the texture shift system from the server to the client.</span>
+</li>
+<li>
+<a href="ClientboundUpdateSoundDataPacket.html"><strong>ClientboundUpdateSoundDataPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent to update sound data.</span>
+</li>
+<li>
+<a href="ClientCacheBlobStatusPacket.html"><strong>ClientCacheBlobStatusPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Client Cache Blob Status Packet</span>
+</li>
+<li>
+<a href="ClientCacheMissResponsePacket.html"><strong>ClientCacheMissResponsePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Only active in a real client-server scenario. This packet is just a list of &lt;blobId, blob&gt; pairs sen...</span>
+</li>
+<li>
+<a href="ClientCacheStatusPacket.html"><strong>ClientCacheStatusPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">It is sent by the Client once, at login, to communicate if it supports the cache or not.</span>
+</li>
+<li>
+<a href="ClientCameraAimAssistPacket.html"><strong>ClientCameraAimAssistPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Client-side activation of aim-assist</span>
+</li>
+<li>
+<a href="ClientMovementPredictionSyncPacket.html"><strong>ClientMovementPredictionSyncPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sends client movement prediction information to the server</span>
+</li>
+<li>
+<a href="ClientToServerHandshakePacket.html"><strong>ClientToServerHandshakePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sets up encryption and authenticates in educational version once at level startup from client.</span>
+</li>
+<li>
+<a href="CodeBuilderPacket.html"><strong>CodeBuilderPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Code Builder Packet</span>
+</li>
+<li>
+<a href="CodeBuilderSourcePacket.html"><strong>CodeBuilderSourcePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">This is EDU exclusive, used in getInterface() of WebviewSystem</span>
+</li>
+<li>
+<a href="CommandBlockUpdatePacket.html"><strong>CommandBlockUpdatePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Command Block Update</span>
+</li>
+<li>
+<a href="CommandOutputPacket.html"><strong>CommandOutputPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">&quot;slash&quot; command execution output, server to client.</span>
+</li>
+<li>
+<a href="CommandRequestPacket.html"><strong>CommandRequestPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">&quot;slash&quot; command execution, client to server.</span>
+</li>
+<li>
+<a href="CompletedUsingItemPacket.html"><strong>CompletedUsingItemPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Send server to client to complete the using item process. An example is when you finish drinking or ...</span>
+</li>
+<li>
+<a href="ContainerClosePacket.html"><strong>ContainerClosePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">After the game deletes the container manager on the client, the client sends this packet.
+	Then the ...</span>
+</li>
+<li>
+<a href="ContainerOpenPacket.html"><strong>ContainerOpenPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from the server so that the client knows to open the container screen and do the chest opening ...</span>
+</li>
+<li>
+<a href="ContainerRegistryCleanupPacket.html"><strong>ContainerRegistryCleanupPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">This is used to trigger a clientside cleanup of the dynamic container registry.</span>
+</li>
+<li>
+<a href="ContainerSetDataPacket.html"><strong>ContainerSetDataPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">This is sent from the server basically any time that the &quot;cooking&quot; state of the brewing stand or the...</span>
+</li>
+<li>
+<a href="CorrectPlayerMovePredictionPacket.html"><strong>CorrectPlayerMovePredictionPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent to a player when their simulation of movement mismatches enough from the server that it wants t...</span>
+</li>
+<li>
+<a href="CreatePhotoPacket.html"><strong>CreatePhotoPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Players now have the possibility to export photos from their portfolios into photo items in their in...</span>
+</li>
+<li>
+<a href="CreativeContentPacket.html"><strong>CreativeContentPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Creative Content</span>
+</li>
+<li>
+<a href="CurrentStructureFeaturePacket.html"><strong>CurrentStructureFeaturePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Informs the client of which Structure Feature they are currently occupying.</span>
+</li>
+<li>
+<a href="DeathInfoPacket.html"><strong>DeathInfoPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from the server to client when player dies (Level::onPlayerDeath).</span>
+</li>
+<li>
+<a href="DebugInfoPacket.html"><strong>DebugInfoPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">The system sends debug information via a generic network packet. This enables rendering of any serve...</span>
+</li>
+<li>
+<a href="DimensionDataPacket.html"><strong>DimensionDataPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Brief packet containing data-driven dimension properties</span>
+</li>
+<li>
+<a href="DisconnectPacket.html"><strong>DisconnectPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from the server to a client to trigger a disconnection.</span>
+</li>
+<li>
+<a href="EditorNetworkPacket.html"><strong>EditorNetworkPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">General use Editor specific packet - carries a payload of whatever serialized data that the individu...</span>
+</li>
+<li>
+<a href="EducationSettingsPacket.html"><strong>EducationSettingsPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Transmits EducationLevelSettings to all clients.</span>
+</li>
+<li>
+<a href="EduUriResourcePacket.html"><strong>EduUriResourcePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Transmits Edu Shared Uri Resource settings to all clients.</span>
+</li>
+<li>
+<a href="EmoteListPacket.html"><strong>EmoteListPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Allows clients to download emotes that other clients have equipped.</span>
+</li>
+<li>
+<a href="EmotePacket.html"><strong>EmotePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">A client sends this to the server to notify other clients about the emote.</span>
+</li>
+<li>
+<a href="FeatureRegistryPacket.html"><strong>FeatureRegistryPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">This is the packet that tracks the active feature registry data from the server so that client can p...</span>
+</li>
+<li>
+<a href="GameRulesChangedPacket.html"><strong>GameRulesChangedPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Updates game rules.</span>
+</li>
+<li>
+<a href="GameTestRequestPacket.html"><strong>GameTestRequestPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Internal Text Packet</span>
+</li>
+<li>
+<a href="GameTestResultsPacket.html"><strong>GameTestResultsPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Game Test Results Packet</span>
+</li>
+<li>
+<a href="GraphicsOverrideParameterPacket.html"><strong>GraphicsOverrideParameterPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from the server to the client when a server script changes the rendering settings</span>
+</li>
+<li>
+<a href="GuiDataPickItemPacket.html"><strong>GuiDataPickItemPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">The server telling the client what item slot to hover over in the hotbar.</span>
+</li>
+<li>
+<a href="HurtArmorPacket.html"><strong>HurtArmorPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Hurt Armor</span>
+</li>
+<li>
+<a href="InteractPacket.html"><strong>InteractPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Interact</span>
+</li>
+<li>
+<a href="InventoryContentPacket.html"><strong>InventoryContentPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">This is used for updating an entire container. Example uses include: player respawned, replace items...</span>
+</li>
+<li>
+<a href="InventorySlotPacket.html"><strong>InventorySlotPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Updates one slot in an inventory rather than the whole thing. So like animal inventory (horses, donk...</span>
+</li>
+<li>
+<a href="InventoryTransactionPacket.html"><strong>InventoryTransactionPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Inventory Transaction. Sent for item interaction UI depending on if ItemStackNetManager is enabled a...</span>
+</li>
+<li>
+<a href="ItemRegistryPacket.html"><strong>ItemRegistryPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Item data from the server. Contains component information.</span>
+</li>
+<li>
+<a href="ItemStackResponsePacket.html"><strong>ItemStackResponsePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Server auth inventory item transaction response, sent from the server.</span>
+</li>
+<li>
+<a href="JigsawStructureDataPacket.html"><strong>JigsawStructureDataPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Jigsaw Structure data used by client jigsaw structure worldgen. This packet contains a copy of the b...</span>
+</li>
+<li>
+<a href="LabTablePacket.html"><strong>LabTablePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">For the EDU Chemistry Lab Table block actor.</span>
+</li>
+<li>
+<a href="LecternUpdatePacket.html"><strong>LecternUpdatePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">This is used for the Lectern Block Actor.</span>
+</li>
+<li>
+<a href="LegacyTelemetryEventPacket.html"><strong>LegacyTelemetryEventPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sends telemetry events to the client so the client can then send that on to the eventing system</span>
+</li>
+<li>
+<a href="LessonProgressPacket.html"><strong>LessonProgressPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Lesson Progress</span>
+</li>
+<li>
+<a href="LevelEventGenericPacket.html"><strong>LevelEventGenericPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">LevelEventGenericPacket</span>
+</li>
+<li>
+<a href="LevelEventPacket.html"><strong>LevelEventPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Splash Potions, weather events, global pause, simlock commands, oh my!</span>
+</li>
+<li>
+<a href="LevelSoundEventPacket.html"><strong>LevelSoundEventPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Level Sound Event</span>
+</li>
+<li>
+<a href="LocatorBarPacket.html"><strong>LocatorBarPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Syncs LocatorBar changes on the server with the client.</span>
+</li>
+<li>
+<a href="LoginPacket.html"><strong>LoginPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent once from client to server at login. About 100k.</span>
+</li>
+<li>
+<a href="MapCreateLockedCopyPacket.html"><strong>MapCreateLockedCopyPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">This is fired when the user locks a map item utilizing the Cartography Table in game.</span>
+</li>
+<li>
+<a href="MapInfoRequestPacket.html"><strong>MapInfoRequestPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">In the case of the client being unable to find map data for a map item it sends a uuid for a map to ...</span>
+</li>
+<li>
+<a href="MobArmorEquipmentPacket.html"><strong>MobArmorEquipmentPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Mob Armor Equipment</span>
+</li>
+<li>
+<a href="MobEffectPacket.html"><strong>MobEffectPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Mob Effect</span>
+</li>
+<li>
+<a href="MobEquipmentPacket.html"><strong>MobEquipmentPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Mob Equipment. Changes to any mob&#x27;s held/offhand item are fired from server to client with this pack...</span>
+</li>
+<li>
+<a href="ModalFormRequestPacket.html"><strong>ModalFormRequestPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Modal Form Request</span>
+</li>
+<li>
+<a href="ModalFormResponsePacket.html"><strong>ModalFormResponsePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Fired in response to third party server request to show the custom UI screen.</span>
+</li>
+<li>
+<a href="MotionPredictionHintsPacket.html"><strong>MotionPredictionHintsPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">It is essentially a SetActionMotionPacket with a bool indicating if the actor was on the ground at t...</span>
+</li>
+<li>
+<a href="MoveActorAbsolutePacket.html"><strong>MoveActorAbsolutePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">This is used primarily for motion updates of all actors from server to client.</span>
+</li>
+<li>
+<a href="MovementEffectPacket.html"><strong>MovementEffectPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">These packets are sent to the client to update specific MovementEffects</span>
+</li>
+<li>
+<a href="MultiplayerSettingsPacket.html"><strong>MultiplayerSettingsPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Syncs multiplayer settings</span>
+</li>
+<li>
+<a href="NetworkChunkPublisherUpdatePacket.html"><strong>NetworkChunkPublisherUpdatePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Tells clients to update the chunk view for the local player.</span>
+</li>
+<li>
+<a href="NetworkSettingsPacket.html"><strong>NetworkSettingsPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sends tunable options from host to client (compression threshold and algorithm)</span>
+</li>
+<li>
+<a href="NetworkStackLatencyPacket.html"><strong>NetworkStackLatencyPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Ping Packet</span>
+</li>
+<li>
+<a href="NpcDialoguePacket.html"><strong>NpcDialoguePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from the server to client when remote firing an NPC dialogue window for a client</span>
+</li>
+<li>
+<a href="NpcRequestPacket.html"><strong>NpcRequestPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Used for a number of interactions with the NPC Component</span>
+</li>
+<li>
+<a href="OnScreenTextureAnimationPacket.html"><strong>OnScreenTextureAnimationPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">On-Screen Texture Animation</span>
+</li>
+<li>
+<a href="OpenSignPacket.html"><strong>OpenSignPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from the server so that the client knows to open the sign screen.</span>
+</li>
+<li>
+<a href="PacketViolationWarningPacket.html"><strong>PacketViolationWarningPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">This is sent when the client detects a malformed packet</span>
+</li>
+<li>
+<a href="PartyChangedPacket.html"><strong>PartyChangedPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent by the client to provide additional client metadata.</span>
+</li>
+<li>
+<a href="PartyDestinationCookieResponsePacket.html"><strong>PartyDestinationCookieResponsePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent by the client to the server with a party destination cookie response.</span>
+</li>
+<li>
+<a href="PhotoTransferPacket.html"><strong>PhotoTransferPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">There is a camera item in EDU and they can use it to take screenshots and add them to a scrapbook.</span>
+</li>
+<li>
+<a href="PlayerActionPacket.html"><strong>PlayerActionPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from the client whenever the player performs an action (dashing, un-dashing, use an item, mine/...</span>
+</li>
+<li>
+<a href="PlayerArmorDamagePacket.html"><strong>PlayerArmorDamagePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from server whenever the player&#x27;s armor takes damage.</span>
+</li>
+<li>
+<a href="PlayerEnchantOptionsPacket.html"><strong>PlayerEnchantOptionsPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sends the of new Enchanting options  from the server when a player right clicks the enchantment tabl...</span>
+</li>
+<li>
+<a href="PlayerFogPacket.html"><strong>PlayerFogPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Player Fog Packet</span>
+</li>
+<li>
+<a href="PlayerHotbarPacket.html"><strong>PlayerHotbarPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from the server when the player uses pick block on actors or blocks, in addition to the player ...</span>
+</li>
+<li>
+<a href="PlayerSkinPacket.html"><strong>PlayerSkinPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Used when the player changes their skin</span>
+</li>
+<li>
+<a href="PlayerStartItemCooldownPacket.html"><strong>PlayerStartItemCooldownPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Player Start Item Cooldown</span>
+</li>
+<li>
+<a href="PlayerToggleCrafterSlotRequestPacket.html"><strong>PlayerToggleCrafterSlotRequestPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">PlayerToggleCrafterSlotRequestPacket</span>
+</li>
+<li>
+<a href="PlayerVideoCapturePacket.html"><strong>PlayerVideoCapturePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Used by a test command to start/stop video capture</span>
+</li>
+<li>
+<a href="PlaySoundPacket.html"><strong>PlaySoundPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">This packet is only used via command or script event. This is for 3rd party content.</span>
+</li>
+<li>
+<a href="PlayStatusPacket.html"><strong>PlayStatusPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Describes the login status of the player</span>
+</li>
+<li>
+<a href="PositionTrackingDBClientRequestPacket.html"><strong>PositionTrackingDBClientRequestPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Position Tracking DB Client Request</span>
+</li>
+<li>
+<a href="PositionTrackingDBServerBroadcastPacket.html"><strong>PositionTrackingDBServerBroadcastPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Server to client packet for server authoratative runtime database (with persistent LevelStorage back...</span>
+</li>
+<li>
+<a href="PrimitiveShapesPacket.html"><strong>PrimitiveShapesPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Send primitive drawing shape info (from scripting) to the client for rendering</span>
+</li>
+<li>
+<a href="PurchaseReceiptPacket.html"><strong>PurchaseReceiptPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from client to server</span>
+</li>
+<li>
+<a href="RefreshEntitlementsPacket.html"><strong>RefreshEntitlementsPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Refresh Entitlements</span>
+</li>
+<li>
+<a href="RemoveActorPacket.html"><strong>RemoveActorPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Occasionally, during the server player tick some time is taken to remove nearby actors from the worl...</span>
+</li>
+<li>
+<a href="RemoveObjectivePacket.html"><strong>RemoveObjectivePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Using the scoreboard command, users can remove objectives that are tracked on the scoreboard.</span>
+</li>
+<li>
+<a href="RemoveVolumeEntityPacket.html"><strong>RemoveVolumeEntityPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sends a volume entity to be removed from server to client.</span>
+</li>
+<li>
+<a href="RequestAbilityPacket.html"><strong>RequestAbilityPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from client to server. Used to request an ability change.</span>
+</li>
+<li>
+<a href="RequestChunkRadiusPacket.html"><strong>RequestChunkRadiusPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">The client can&#x27;t just change the view radius without the server&#x27;s approval, otherwise there could be...</span>
+</li>
+<li>
+<a href="RequestNetworkSettingsPacket.html"><strong>RequestNetworkSettingsPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Requests tunable options from host to client (compression threshold and algorithm).</span>
+</li>
+<li>
+<a href="RequestPermissionsPacket.html"><strong>RequestPermissionsPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from client to server. Used to request a new Permissions Levels.</span>
+</li>
+<li>
+<a href="ResourcePackChunkDataPacket.html"><strong>ResourcePackChunkDataPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Resource Pack Chunk Data</span>
+</li>
+<li>
+<a href="ResourcePackChunkRequestPacket.html"><strong>ResourcePackChunkRequestPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Resource Pack Chunk Request</span>
+</li>
+<li>
+<a href="ResourcePackClientResponsePacket.html"><strong>ResourcePackClientResponsePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Resource Pack Client Response</span>
+</li>
+<li>
+<a href="ResourcePackDataInfoPacket.html"><strong>ResourcePackDataInfoPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Resource Pack Data Info</span>
+</li>
+<li>
+<a href="ResourcePacksReadyForValidationPacket.html"><strong>ResourcePacksReadyForValidationPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Used to inform the server that the client has finished loading all resource packs.</span>
+</li>
+<li>
+<a href="ResourcePackStackPacket.html"><strong>ResourcePackStackPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Resource Pack Stack</span>
+</li>
+<li>
+<a href="RespawnPacket.html"><strong>RespawnPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent as a handshake between the client and server to respawn the player.</span>
+</li>
+<li>
+<a href="ScriptMessagePacket.html"><strong>ScriptMessagePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Used to send custom messages between client and server.</span>
+</li>
+<li>
+<a href="SendPartyDestinationCookiePacket.html"><strong>SendPartyDestinationCookiePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent by the server to a client with a party destination cookie.</span>
+</li>
+<li>
+<a href="ServerboundDataDrivenScreenClosedPacket.html"><strong>ServerboundDataDrivenScreenClosedPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from the client to the server when a data driven screen is closed.</span>
+</li>
+<li>
+<a href="ServerboundDataStorePacket.html"><strong>ServerboundDataStorePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Applies a single update to the server data store from the client.</span>
+</li>
+<li>
+<a href="ServerboundDiagnosticsPacket.html"><strong>ServerboundDiagnosticsPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from the client to the server IF ProfilerLite is enabled AND the creator toggle for additional ...</span>
+</li>
+<li>
+<a href="ServerboundLoadingScreenPacket.html"><strong>ServerboundLoadingScreenPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from the client to the server to message to the server about the state of the loading screen.</span>
+</li>
+<li>
+<a href="ServerboundPackSettingChangePacket.html"><strong>ServerboundPackSettingChangePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from the client to the server when players change Pack Settings (pack UI).</span>
+</li>
+<li>
+<a href="ServerPlayerPostMovePositionPacket.html"><strong>ServerPlayerPostMovePositionPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Used to send a player&#x27;s server position to the respective client at the end of movement.</span>
+</li>
+<li>
+<a href="ServerPresenceInfoPacket.html"><strong>ServerPresenceInfoPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent by the server to provide PresenceConfiguration to the client.</span>
+</li>
+<li>
+<a href="ServerSettingsRequestPacket.html"><strong>ServerSettingsRequestPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent during the initialization of world settings on the client.</span>
+</li>
+<li>
+<a href="ServerSettingsResponsePacket.html"><strong>ServerSettingsResponsePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Server Settings Response</span>
+</li>
+<li>
+<a href="ServerStatsPacket.html"><strong>ServerStatsPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Used to send performance and other valuable stats back to the client</span>
+</li>
+<li>
+<a href="ServerStoreInfoPacket.html"><strong>ServerStoreInfoPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent by the server to provide ClientStoreEntryPointConfiguration to the client.</span>
+</li>
+<li>
+<a href="ServerToClientHandshakePacket.html"><strong>ServerToClientHandshakePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Server-&gt;Client Handshake</span>
+</li>
+<li>
+<a href="SetActorDataPacket.html"><strong>SetActorDataPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Regular Actor Data delta packets, sent from the level on tick, mob and actor during normal tick</span>
+</li>
+<li>
+<a href="SetActorLinkPacket.html"><strong>SetActorLinkPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent by both client and server, only received by LegacyClientHandler.</span>
+</li>
+<li>
+<a href="SetActorMotionPacket.html"><strong>SetActorMotionPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">This is used for the server to set the velocity of a client actor.</span>
+</li>
+<li>
+<a href="SetCommandsEnabledPacket.html"><strong>SetCommandsEnabledPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">This is used by the world settings screen, cheats, EDU builds for teachers, and various other places...</span>
+</li>
+<li>
+<a href="SetDefaultGameTypePacket.html"><strong>SetDefaultGameTypePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Same as SetPlayerGameTypePacket &amp; UpdatePlayerGameTypePacket, the only difference is that this chang...</span>
+</li>
+<li>
+<a href="SetDifficultyPacket.html"><strong>SetDifficultyPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Set Difficulty</span>
+</li>
+<li>
+<a href="SetDisplayObjectivePacket.html"><strong>SetDisplayObjectivePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from the server for 3rd party content to display current objectives and status</span>
+</li>
+<li>
+<a href="SetHealthPacket.html"><strong>SetHealthPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">This packet is sent to the client when the player is spawned in and when they respawn.</span>
+</li>
+<li>
+<a href="SetHudPacket.html"><strong>SetHudPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">This packet is only used via the set hud command. This is for 3rd party content.</span>
+</li>
+<li>
+<a href="SetLastHurtByPacket.html"><strong>SetLastHurtByPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Any time a player is hit, the id of the last mob that attacked them is sent to the client</span>
+</li>
+<li>
+<a href="SetLocalPlayerAsInitializedPacket.html"><strong>SetLocalPlayerAsInitializedPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Set Local Player As Initialized</span>
+</li>
+<li>
+<a href="SetPlayerGameTypePacket.html"><strong>SetPlayerGameTypePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Set Player Game Type</span>
+</li>
+<li>
+<a href="SetPlayerInventoryOptionsPacket.html"><strong>SetPlayerInventoryOptionsPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">SetPlayerInventoryOptionsPacket</span>
+</li>
+<li>
+<a href="SetSpawnPositionPacket.html"><strong>SetSpawnPositionPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">When a player logs in or the SetWorldSpawnCommand is used this is sent from the server to the client...</span>
+</li>
+<li>
+<a href="SetTimePacket.html"><strong>SetTimePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Set Time</span>
+</li>
+<li>
+<a href="SettingsCommandPacket.html"><strong>SettingsCommandPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Requests a setting to be changed through commands.</span>
+</li>
+<li>
+<a href="SetTitlePacket.html"><strong>SetTitlePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Used by 3rd party content for the purpose of showing ui banners</span>
+</li>
+<li>
+<a href="ShowCreditsPacket.html"><strong>ShowCreditsPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Starts on server when the credits screen should pop up.</span>
+</li>
+<li>
+<a href="ShowProfilePacket.html"><strong>ShowProfilePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Show Profile</span>
+</li>
+<li>
+<a href="ShowStoreOfferPacket.html"><strong>ShowStoreOfferPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Used for redirecting a user to the right offer.</span>
+</li>
+<li>
+<a href="SimpleEventPacket.html"><strong>SimpleEventPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">This packet is used for enabling/disabling commands and for unlocking world template settings (both ...</span>
+</li>
+<li>
+<a href="SimulationTypePacket.html"><strong>SimulationTypePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from the server to the client when setting the simulation type for toolbox mode. (Not yet supor...</span>
+</li>
+<li>
+<a href="SpawnExperienceOrbPacket.html"><strong>SpawnExperienceOrbPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Spawn Experience Orb</span>
+</li>
+<li>
+<a href="SpawnParticleEffectPacket.html"><strong>SpawnParticleEffectPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Tell client to spawn a particle effect.</span>
+</li>
+<li>
+<a href="StopSoundPacket.html"><strong>StopSoundPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Allows you to stop a sound or all sounds on all clients, only used in a /command</span>
+</li>
+<li>
+<a href="StructureBlockUpdatePacket.html"><strong>StructureBlockUpdatePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">After the client makes changes in the Structure Block Screen we tell the server to update based off ...</span>
+</li>
+<li>
+<a href="StructureTemplateDataRequestPacket.html"><strong>StructureTemplateDataRequestPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Used to request structure information from a server.</span>
+</li>
+<li>
+<a href="StructureTemplateDataResponsePacket.html"><strong>StructureTemplateDataResponsePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">This is used in exporting from load, exporting from save, and querying saved structures from structu...</span>
+</li>
+<li>
+<a href="SubChunkRequestPacket.html"><strong>SubChunkRequestPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from the client to the server representing a batch of subchunks that the client requests from t...</span>
+</li>
+<li>
+<a href="SubClientLoginPacket.html"><strong>SubClientLoginPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">This packet starts the login process of subclients (splitscreen)</span>
+</li>
+<li>
+<a href="SyncActorPropertyPacket.html"><strong>SyncActorPropertyPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Allows us to synchronize Actor properties across the network.</span>
+</li>
+<li>
+<a href="SyncWorldClocksPacket.html"><strong>SyncWorldClocksPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Initializes and syncs world clocks from the server to clients. (Currently disabled)</span>
+</li>
+<li>
+<a href="TakeItemActorPacket.html"><strong>TakeItemActorPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">A packet sent to the server when deal with picking up an item off the ground in the world.</span>
+</li>
+<li>
+<a href="TextPacket.html"><strong>TextPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Represents a text message that needs to be displayed in-game</span>
+</li>
+<li>
+<a href="TickingAreasLoadStatusPacket.html"><strong>TickingAreasLoadStatusPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Used to inform the client that the server is waiting for ticking areas to finish preloading.</span>
+</li>
+<li>
+<a href="ToastRequestPacket.html"><strong>ToastRequestPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Pushes a UI toast message to be displayed by the client</span>
+</li>
+<li>
+<a href="TransferPacket.html"><strong>TransferPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Used to kick off transferring the client between online games, or it can be used to cause players to...</span>
+</li>
+<li>
+<a href="TrimDataPacket.html"><strong>TrimDataPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from the server on level startup to send all trim patterns to the client.</span>
+</li>
+<li>
+<a href="UnlockedRecipesPacket.html"><strong>UnlockedRecipesPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from server to client, for all previously unlocked recipes on load and for any newly unlocked r...</span>
+</li>
+<li>
+<a href="UpdateAbilitiesPacket.html"><strong>UpdateAbilitiesPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent by the server to update the state of a player&#x27;s Abilities.</span>
+</li>
+<li>
+<a href="UpdateAdventureSettingsPacket.html"><strong>UpdateAdventureSettingsPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">UpdateAdventureSettingsPacket</span>
+</li>
+<li>
+<a href="UpdateAttributesPacket.html"><strong>UpdateAttributesPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Update Attributes</span>
+</li>
+<li>
+<a href="UpdateBlockPacket.html"><strong>UpdateBlockPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Occasional packets sent from server when blocks update or are ticked. (For example, when digging.)</span>
+</li>
+<li>
+<a href="UpdateBlockSyncedPacket.html"><strong>UpdateBlockSyncedPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Used to sync moving blocks with clients so they render correctly</span>
+</li>
+<li>
+<a href="UpdateClientInputLocksPacket.html"><strong>UpdateClientInputLocksPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">UpdateClientInputLocksPacket</span>
+</li>
+<li>
+<a href="UpdateClientOptionsPacket.html"><strong>UpdateClientOptionsPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sync the player&#x27;s options (mostly settings) to the server.</span>
+</li>
+<li>
+<a href="UpdateEquipPacket.html"><strong>UpdateEquipPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Seemingly only used for the Horse Inventory... More specifically when the player opens the horse inv...</span>
+</li>
+<li>
+<a href="UpdatePlayerGameTypePacket.html"><strong>UpdatePlayerGameTypePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">The server will send this back to all clients on receipt of the SetPlayerGameTypePacket so that cach...</span>
+</li>
+<li>
+<a href="UpdateSoftEnumPacket.html"><strong>UpdateSoftEnumPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">This is used for the scoreboard and tag systems (overwhelmingly used by 3rd party content)</span>
+</li>
+<li>
+<a href="UpdateSubChunkBlocksPacket.html"><strong>UpdateSubChunkBlocksPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Packet sent for every set of blocks changed in a sub chunk every tick.</span>
+</li>
+<li>
+<a href="UpdateTradePacket.html"><strong>UpdateTradePacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">This is used when the player trades with an npc. This sends all of the updated trade info in one big...</span>
+</li>
+<li>
+<a href="VoxelShapesPacket.html"><strong>VoxelShapesPacket</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Syncs client with server voxel shape data on world join. This packet contains a copy of all behavior...</span>
+</li>
+</ul>
+    </div>
+</body>
+</html>

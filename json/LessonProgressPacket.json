@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3925319122",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
+    "x-minecraft-version": "1.26.40",
+    "x-protocol-version": 2143,
     "title": "LessonProgressPacket",
     "description": "Lesson Progress",
     "type": "object",
@@ -33,9 +33,5 @@
         "Activity Id",
         "Lesson Action",
         "Score"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 183,
-        "[cereal:packet_details]": ""
-    }
+    ]
 }

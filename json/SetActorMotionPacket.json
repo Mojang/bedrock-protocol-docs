@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2243800338",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
+    "x-minecraft-version": "1.26.40",
+    "x-protocol-version": 2143,
     "definitions": {
         "725374594": {
             "title": "Vec3",
@@ -91,9 +91,5 @@
         "Motion",
         "Target Runtime ID",
         "Tick"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 40,
-        "[cereal:packet_details]": "\n\tIt is primarily relevant for client predicted entities like the player or a boat or horse they are in control of.\n\tFor most other actor types it does nothing.<br>\n\tThis is one of the packets that can directly affect player motion, for others, see:<br>\n\t- MovePlayerPacket<br>\n\t- CorrectPlayerMovePredictionPacket\n\t"
-    }
+    ]
 }

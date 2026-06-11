@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2064571028",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
+    "x-minecraft-version": "1.26.40",
+    "x-protocol-version": 2143,
     "definitions": {
         "1488572312": {
             "title": "BlockPos",
@@ -66,9 +66,5 @@
         "Max Slots",
         "Position",
         "With Data?"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 34,
-        "[cereal:packet_details]": ""
-    }
+    ]
 }

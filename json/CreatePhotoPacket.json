@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2147497783",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
+    "x-minecraft-version": "1.26.40",
+    "x-protocol-version": 2143,
     "title": "CreatePhotoPacket",
     "description": "Players now have the possibility to export photos from their portfolios into photo items in their inventory. EDU.",
     "type": "object",
@@ -27,9 +27,5 @@
         "Photo Item Name",
         "Photo Name",
         "Raw ID"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 171,
-        "[cereal:packet_details]": ""
-    }
+    ]
 }

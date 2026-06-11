@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "792295587",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
+    "x-minecraft-version": "1.26.40",
+    "x-protocol-version": 2143,
     "definitions": {
         "2845098638": {
             "title": "CameraSplineRotationKeyFrame",
@@ -153,7 +153,7 @@
                     "pattern": "^\\w+:\\w+$"
                 },
                 "progress_key_frames": {
-                    "description": "Key frames where each entry defines a progress alpha [0–1] and a time (in seconds) when the spline should reach that progress.",
+                    "description": "Key frames where each entry defines a progress alpha [0-1] and a time (in seconds) when the spline should reach that progress.",
                     "type": "array",
                     "items": {
                         "$ref": "#/definitions/2645622011"
@@ -246,9 +246,5 @@
     },
     "required": [
         "Camera Data Splines"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 338,
-        "[cereal:packet_details]": "\n\tSent by the server to clients for initializing custom spline data that can be played later through the camera command.\n\t"
-    }
+    ]
 }

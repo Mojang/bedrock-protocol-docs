@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3690157324",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
+    "x-minecraft-version": "1.26.40",
+    "x-protocol-version": 2143,
     "title": "StopSoundPacket",
     "description": "Allows you to stop a sound or all sounds on all clients, only used in a /command",
     "type": "object",
@@ -27,9 +27,5 @@
         "Sound Name",
         "Stop All Sounds?",
         "Stop Music (Legacy)"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 87,
-        "[cereal:packet_details]": ""
-    }
+    ]
 }
