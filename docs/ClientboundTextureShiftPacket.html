@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClientboundTextureShiftPacket (336)</title>
+    <title>ClientboundTextureShiftPacket</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -118,104 +118,105 @@
 <body>
     <div class="container">
         <p><a href="index.html">← Back to Index</a></p>
-        <h1>ClientboundTextureShiftPacket (336)</h1>
+        <h1>ClientboundTextureShiftPacket</h1>
 <div class="description">Sends a set of update properties for the texture shift system from the server to the client.</div>
 <div style="margin-left: 0px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td rowspan="2"><strong>Action ID (Required)</strong></td>
 <td>uint8</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
-<strong>Enum Values:</strong>
-<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
-<thead>
-<tr style="background-color: #e8e8e8;">
-<th style="width: 40px;">Index</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Invalid</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">0</td>
-<td><code>Invalid</code></td>
-</tr>
+            <td style="text-align: center;">1</td>
+            <td><code>Initialize</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">1</td>
-<td><code>Initialize</code></td>
-</tr>
+            <td style="text-align: center;">2</td>
+            <td><code>Start</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">2</td>
-<td><code>Start</code></td>
-</tr>
+            <td style="text-align: center;">3</td>
+            <td><code>SetEnabled</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">3</td>
-<td><code>SetEnabled</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td><code>Sync</code></td>
-</tr>
-</tbody>
-</table>
-</div></td>
-</tr>
+            <td style="text-align: center;">4</td>
+            <td><code>Sync</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
 <tr>
 <td><strong>Collection Name (Required)</strong></td>
 <td>string</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>From Step (Required)</strong></td>
 <td>string</td>
-<td>2</td>
-<td></td>
-</tr>
+                <td>2</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>To Step (Required)</strong></td>
 <td>string</td>
-<td>3</td>
-<td></td>
-</tr>
+                <td>3</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>All Steps (Required)</strong></td>
 <td>array&lt;string&gt;</td>
-<td>4</td>
-<td></td>
-</tr>
+                <td>4</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Current Length In Ticks (Required)</strong></td>
 <td>varuint64</td>
-<td>5</td>
-<td></td>
-</tr>
+                <td>5</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Total Length In Ticks (Required)</strong></td>
 <td>varuint64</td>
-<td>6</td>
-<td></td>
-</tr>
+                <td>6</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Enabled (Required)</strong></td>
 <td>boolean</td>
-<td>7</td>
-<td></td>
-</tr>
+                <td>7</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div>
     </div>
 </body>

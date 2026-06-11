@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1597064430",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "title": "TransferPacket",
     "description": "Used to kick off transferring the client between online games, or it can be used to cause players to quit the world and rejoin.",
@@ -28,9 +28,5 @@
         "Reload World",
         "Server Address",
         "Server Port"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 85,
-        "[cereal:packet_details]": ""
-    }
+    ]
 }

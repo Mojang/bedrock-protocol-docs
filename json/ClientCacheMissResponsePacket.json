@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2514197671",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "definitions": {
         "476119672": {
@@ -43,9 +43,5 @@
     },
     "required": [
         "Missing Blobs"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 136,
-        "[cereal:packet_details]": "Any missing blob should just be thrown into one of these packet ASAP and sent. This is actually how chunk data gets to the client the first time."
-    }
+    ]
 }

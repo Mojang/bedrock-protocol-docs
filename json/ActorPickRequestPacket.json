@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3528861580",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "title": "ActorPickRequestPacket",
     "description": "Player clicks on an actor in the world, eg a chicken.",
@@ -33,9 +33,5 @@
         "Actor ID",
         "Max Slots",
         "With Data"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 35,
-        "[cereal:packet_details]": ""
-    }
+    ]
 }

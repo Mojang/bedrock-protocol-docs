@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1126942887",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "definitions": {
         "3086762552": {
@@ -100,9 +100,5 @@
         "New position for view",
         "New radius for view",
         "Server Built Chunks List"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 121,
-        "[cereal:packet_details]": "Used (from the server) when a user's Chunk View moves, I.e. the area that determines what chunks exist. For ClientSideGeneration we also send the client a list of ChunkPos that the Server will fully build."
-    }
+    ]
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CameraPresetsPacket (198)</title>
+    <title>CameraPresetsPacket</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -118,472 +118,475 @@
 <body>
     <div class="container">
         <p><a href="index.html">← Back to Index</a></p>
-        <h1>CameraPresetsPacket (198)</h1>
+        <h1>CameraPresetsPacket</h1>
 <div class="description">Used to sync CameraPresets data from server to clients.</div>
 <div style="margin-left: 0px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td rowspan="2"><strong>Camera Presets (Required)</strong></td>
 <td>CameraPresets</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>CameraPresets</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td rowspan="2"><strong>Presets (Required)</strong></td>
 <td>array&lt;CameraPresets&gt;</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>CameraPresets (Array Item)</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>Name (Required)</strong></td>
 <td>SharedTypes::Identifier<SharedTypes::AssetType::CameraPreset></td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Inherit From (Required)</strong></td>
 <td>SharedTypes::Reference<SharedTypes::AssetType::CameraPreset></td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Pos X (Required)</strong></td>
 <td>float</td>
-<td>2</td>
-<td></td>
-</tr>
+                <td>2</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Pos Y (Required)</strong></td>
 <td>float</td>
-<td>3</td>
-<td></td>
-</tr>
+                <td>3</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Pos Z (Required)</strong></td>
 <td>float</td>
-<td>4</td>
-<td></td>
-</tr>
+                <td>4</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Rot X (Required)</strong></td>
 <td>float</td>
-<td>5</td>
-<td></td>
-</tr>
+                <td>5</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Rot Y (Required)</strong></td>
 <td>float</td>
-<td>6</td>
-<td></td>
-</tr>
+                <td>6</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Rotation Speed (Required)</strong></td>
 <td>float</td>
-<td>7</td>
-<td></td>
-</tr>
+                <td>7</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Snap to Target (Required)</strong></td>
 <td>boolean</td>
-<td>8</td>
-<td></td>
-</tr>
+                <td>8</td>
+                <td></td>
+            </tr>
 <tr>
 <td rowspan="2"><strong>Horizontal Rotation Limit (Required)</strong></td>
 <td>Vec2</td>
-<td>9</td>
-<td></td>
-</tr>
+                <td>9</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>Vec2</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>X (Required)</strong></td>
 <td>float</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Y (Required)</strong></td>
 <td>float</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
 <td rowspan="2"><strong>Vertical Rotation Limit (Required)</strong></td>
 <td>Vec2</td>
-<td>10</td>
-<td></td>
-</tr>
+                <td>10</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>Vec2</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>X (Required)</strong></td>
 <td>float</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Y (Required)</strong></td>
 <td>float</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
 <td><strong>Continue Targeting (Required)</strong></td>
 <td>boolean</td>
-<td>11</td>
-<td></td>
-</tr>
+                <td>11</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Block Listening Radius (Required)</strong></td>
 <td>float</td>
-<td>12</td>
-<td></td>
-</tr>
+                <td>12</td>
+                <td></td>
+            </tr>
 <tr>
 <td rowspan="2"><strong>View Offset (Required)</strong></td>
 <td>Vec2</td>
-<td>13</td>
-<td></td>
-</tr>
+                <td>13</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>Vec2</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>X (Required)</strong></td>
 <td>float</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Y (Required)</strong></td>
 <td>float</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
 <td rowspan="2"><strong>Entity Offset (Required)</strong></td>
 <td>Vec3</td>
-<td>14</td>
-<td>Changing the camera&#x27;s pivot point from the center of the entity</td>
-</tr>
+                <td>14</td>
+                <td>Changing the camera&#39;s pivot point from the center of the entity</td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>Vec3</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>X (Required)</strong></td>
 <td>float</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Y (Required)</strong></td>
 <td>float</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Z (Required)</strong></td>
 <td>float</td>
-<td>2</td>
-<td></td>
-</tr>
+                <td>2</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
 <td><strong>Radius (Required)</strong></td>
 <td>float</td>
-<td>15</td>
-<td></td>
-</tr>
+                <td>15</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Yaw Limit Min (Required)</strong></td>
 <td>float</td>
-<td>16</td>
-<td></td>
-</tr>
+                <td>16</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Yaw Limit Max (Required)</strong></td>
 <td>float</td>
-<td>17</td>
-<td></td>
-</tr>
+                <td>17</td>
+                <td></td>
+            </tr>
 <tr>
 <td rowspan="2"><strong>Listener (Required)</strong></td>
 <td>uint8</td>
-<td>18</td>
-<td></td>
-</tr>
+                <td>18</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
-<strong>Enum Values:</strong>
-<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
-<thead>
-<tr style="background-color: #e8e8e8;">
-<th style="width: 40px;">Index</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Camera</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">0</td>
-<td><code>Camera</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">1</td>
-<td><code>Player</code></td>
-</tr>
-</tbody>
-</table>
-</div></td>
-</tr>
+            <td style="text-align: center;">1</td>
+            <td><code>Player</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
 <tr>
 <td><strong>Player Effects (Required)</strong></td>
 <td>boolean</td>
-<td>19</td>
-<td></td>
-</tr>
+                <td>19</td>
+                <td></td>
+            </tr>
 <tr>
 <td rowspan="2"><strong>Aim Assist (Required)</strong></td>
 <td>SharedTypes::Comprehensive::CameraAimAssistCommandDefinition</td>
-<td>20</td>
-<td></td>
-</tr>
+                <td>20</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>SharedTypes::Comprehensive::CameraAimAssistCommandDefinition</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>Preset Id (Required)</strong></td>
 <td>SharedTypes::Reference<SharedTypes::AssetType::CameraAimAssist></td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td rowspan="2"><strong>Target Mode (Required)</strong></td>
 <td>uint8</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
-<strong>Enum Values:</strong>
-<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
-<thead>
-<tr style="background-color: #e8e8e8;">
-<th style="width: 40px;">Index</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>angle</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">0</td>
-<td><code>angle</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">1</td>
-<td><code>distance</code></td>
-</tr>
-</tbody>
-</table>
-</div></td>
-</tr>
+            <td style="text-align: center;">1</td>
+            <td><code>distance</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
 <tr>
 <td rowspan="2"><strong>View Angle (Required)</strong></td>
 <td>Vec2</td>
-<td>2</td>
-<td></td>
-</tr>
+                <td>2</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>Vec2</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>X (Required)</strong></td>
 <td>float</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Y (Required)</strong></td>
 <td>float</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
 <td><strong>Distance (Required)</strong></td>
 <td>float</td>
-<td>3</td>
-<td></td>
-</tr>
+                <td>3</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
 <td rowspan="2"><strong>Control Scheme (Required)</strong></td>
 <td>uint8</td>
-<td>21</td>
-<td></td>
-</tr>
+                <td>21</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
-<strong>Enum Values:</strong>
-<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
-<thead>
-<tr style="background-color: #e8e8e8;">
-<th style="width: 40px;">Index</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>locked_player_relative_strafe</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">0</td>
-<td><code>locked_player_relative_strafe</code></td>
-</tr>
+            <td style="text-align: center;">1</td>
+            <td><code>camera_relative</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">1</td>
-<td><code>camera_relative</code></td>
-</tr>
+            <td style="text-align: center;">2</td>
+            <td><code>camera_relative_strafe</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">2</td>
-<td><code>camera_relative_strafe</code></td>
-</tr>
+            <td style="text-align: center;">3</td>
+            <td><code>player_relative</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">3</td>
-<td><code>player_relative</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td><code>player_relative_strafe</code></td>
-</tr>
+            <td style="text-align: center;">4</td>
+            <td><code>player_relative_strafe</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 </tbody>
-</table>
-</div></td>
-</tr>
-</tbody>
-</table>
+    </table>
 </div>
     </div>
 </body>

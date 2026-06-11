@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3179084408",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "definitions": {
         "4257541248": {
@@ -64,9 +64,5 @@
         "Entity Unique Id",
         "Size",
         "Type"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 81,
-        "[cereal:packet_details]": ""
-    }
+    ]
 }

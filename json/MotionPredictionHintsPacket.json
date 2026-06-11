@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "4069499576",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "definitions": {
         "725374594": {
@@ -75,9 +75,5 @@
         "mMotion",
         "mOnGround",
         "mRuntimeId"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 157,
-        "[cereal:packet_details]": "This is from the server when spatial optimizations are enabled and the server does not send a spatial update."
-    }
+    ]
 }

@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1869670813",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "definitions": {
         "725374594": {
@@ -52,9 +52,5 @@
     "required": [
         "Position",
         "XP Value"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 66,
-        "[cereal:packet_details]": "Note: This can be seen as \"ContainerWantSetSlotPacket\" when sent from client to server. Currently, the client handles side-effects relating to it's own inventory, regardless of the success of the operation."
-    }
+    ]
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CorrectPlayerMovePredictionPacket (161)</title>
+    <title>CorrectPlayerMovePredictionPacket</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -118,216 +118,213 @@
 <body>
     <div class="container">
         <p><a href="index.html">← Back to Index</a></p>
-        <h1>CorrectPlayerMovePredictionPacket (161)</h1>
+        <h1>CorrectPlayerMovePredictionPacket</h1>
 <div class="description">Sent to a player when their simulation of movement mismatches enough from the server that it wants to correct the client.</div>
-<div class="description">Used only in server authoritative movement mode, see ServerAuthMovementMode documentation.&lt;br&gt;
-	Since it is sent to the specified client the target player is implied to be the receiver.&lt;br&gt;
-	It is an optional part of the server authoritative protocol. A server could choose to never send this or do all corrections
-	through MovePlayerPacket, although doing so would likely provide less smooth results.</div>
 <div style="margin-left: 0px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td rowspan="2"><strong>PredictionType (Required)</strong></td>
 <td>uint8</td>
-<td>0</td>
-<td>Vehicle or Player Prediction</td>
-</tr>
+                <td>0</td>
+                <td>Vehicle or Player Prediction</td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
-<strong>Enum Values:</strong>
-<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
-<thead>
-<tr style="background-color: #e8e8e8;">
-<th style="width: 40px;">Index</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Player</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">0</td>
-<td><code>Player</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">1</td>
-<td><code>Vehicle</code></td>
-</tr>
-</tbody>
-</table>
-</div></td>
-</tr>
+            <td style="text-align: center;">1</td>
+            <td><code>Vehicle</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
 <tr>
 <td rowspan="2"><strong>Pos (Required)</strong></td>
 <td>Vec3</td>
-<td>1</td>
-<td>Corrected position</td>
-</tr>
+                <td>1</td>
+                <td>Corrected position</td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>Vec3</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>X (Required)</strong></td>
 <td>float</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Y (Required)</strong></td>
 <td>float</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Z (Required)</strong></td>
 <td>float</td>
-<td>2</td>
-<td></td>
-</tr>
+                <td>2</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
 <td rowspan="2"><strong>Pos Delta (Required)</strong></td>
 <td>Vec3</td>
-<td>2</td>
-<td>Corrected velocity</td>
-</tr>
+                <td>2</td>
+                <td>Corrected velocity</td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>Vec3</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>X (Required)</strong></td>
 <td>float</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Y (Required)</strong></td>
 <td>float</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Z (Required)</strong></td>
 <td>float</td>
-<td>2</td>
-<td></td>
-</tr>
+                <td>2</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
 <td rowspan="2"><strong>Rotation (Required)</strong></td>
 <td>Vec2</td>
-<td>3</td>
-<td>Corrected rotation. Only sent when PredictionType is Vehicle</td>
-</tr>
+                <td>3</td>
+                <td>Corrected rotation. Only sent when PredictionType is Vehicle</td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>Vec2</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>X (Required)</strong></td>
 <td>float</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Y (Required)</strong></td>
 <td>float</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
 <td><strong>VehicleAngularVelocity</strong></td>
 <td>float</td>
-<td>4</td>
-<td>Angular Velocity for a vehicle. Only sent when PredictionType is Vehicle</td>
-</tr>
+                <td>4</td>
+                <td>Angular Velocity for a vehicle. Only sent when PredictionType is Vehicle</td>
+            </tr>
 <tr>
 <td><strong>On Ground (Required)</strong></td>
 <td>boolean</td>
-<td>5</td>
-<td>Is on ground</td>
-</tr>
+                <td>5</td>
+                <td>Is on ground</td>
+            </tr>
 <tr>
 <td rowspan="2"><strong>Tick (Required)</strong></td>
 <td>PlayerInputTick</td>
-<td>6</td>
-<td>Which frame we&#x27;re correcting; should match the tick in the Player Auth Input packet</td>
-</tr>
+                <td>6</td>
+                <td>Which frame we&#39;re correcting; should match the tick in the Player Auth Input packet</td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>PlayerInputTick</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>Input tick (Required)</strong></td>
 <td>varuint64</td>
-<td>0</td>
-<td>In server authoritative movement mode the client supplies this in PlayerAuthInputPacket.
+                <td>0</td>
+                <td>In server authoritative movement mode the client supplies this in PlayerAuthInputPacket.
 For any client-bound packets containing a tick, the server should supply the tick value corresponding to the most recently processed PlayerAuthInputPacket.
 This allows the client to adjust any client predictions made while the packet was in flight.
 If the packet is being sent to the client but not relating to data of the player or a client-predicted vehicle, it can be zero.
 It is also acceptable to specify zero for players, although this may lead to minor visual flickers and less smooth application of CorrectPlayerMovePredictionPacket.</td>
-</tr>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 </tbody>
-</table>
+    </table>
 </div>
     </div>
 </body>

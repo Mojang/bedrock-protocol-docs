@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2360312078",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "definitions": {
         "3029803649": {
@@ -168,9 +168,5 @@
         "Target",
         "Tick Delay",
         "Track Output"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 78,
-        "[cereal:packet_details]": "Sent when you close the command block screen on the client."
-    }
+    ]
 }

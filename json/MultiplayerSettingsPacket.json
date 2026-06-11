@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1900756958",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "title": "MultiplayerSettingsPacket",
     "description": "Syncs multiplayer settings",
@@ -26,9 +26,5 @@
     },
     "required": [
         "PacketType"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 139,
-        "[cereal:packet_details]": "\n\tThis is used by EDU for joining players and removing players from your session,\n\tthe settings (there is only one) is an enum for enabling/disabling/refreshing multiplayer join codes.\n\tStarts on the client, and a response to the client is issued from the server.\n\t"
-    }
+    ]
 }

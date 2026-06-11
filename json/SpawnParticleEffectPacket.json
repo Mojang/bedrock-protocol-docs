@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2427525531",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "definitions": {
         "1577557040": {
@@ -94,9 +94,5 @@
         "Effect Name",
         "Molang Variables",
         "Position"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 118,
-        "[cereal:packet_details]": "This is not used for much anymore, only the Particle command (spawn particle by name at a location) and for ScriptServerSpawnParticleAttachedToActor and ScriptServerSpawnParticleInWorldEvent."
-    }
+    ]
 }

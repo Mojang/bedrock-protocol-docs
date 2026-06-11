@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2702822239",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "title": "SetTitlePacket",
     "description": "Used by 3rd party content for the purpose of showing ui banners",
@@ -79,9 +79,5 @@
         "Title Text",
         "Title Type",
         "Xuid"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 88,
-        "[cereal:packet_details]": "There are 2 commands associated with it: title and titleraw.\n\tBoth of which have functionality to change fade in/out time for titles, sub titles, and action bar text.\n\ttitleraw is using json to format so it will be bigger (i don't have an example)"
-    }
+    ]
 }

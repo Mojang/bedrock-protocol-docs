@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClientMovementPredictionSyncPacket (322)</title>
+    <title>ClientMovementPredictionSyncPacket</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -118,121 +118,120 @@
 <body>
     <div class="container">
         <p><a href="index.html">← Back to Index</a></p>
-        <h1>ClientMovementPredictionSyncPacket (322)</h1>
+        <h1>ClientMovementPredictionSyncPacket</h1>
 <div class="description">Sends client movement prediction information to the server</div>
-<div class="description">Only used in Server-Authoritative Movement. Sent periodically if the client has received corrections from the server. Contains information about client-predictions that are relevant to movement.</div>
 <div style="margin-left: 0px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td rowspan="2"><strong>Actor Data Flag (Required)</strong></td>
 <td>ActorDataFlagComponent</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>ActorDataFlagComponent</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>Actor Flag Bitset Data (Required)</strong></td>
 <td>array&lt;uint8&gt;</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
 <td rowspan="2"><strong>Actor Bounding Box (Required)</strong></td>
 <td>ActorDataBoundingBoxComponent</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>ActorDataBoundingBoxComponent</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>Actor Data Bounding Box (Required)</strong></td>
 <td>array&lt;float&gt;</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
 <td><strong>Movement Attributes (Required)</strong></td>
 <td>MovementAttributesComponent</td>
-<td>2</td>
-<td></td>
-</tr>
+                <td>2</td>
+                <td></td>
+            </tr>
 <tr>
 <td rowspan="2"><strong>Actor Unique ID (Required)</strong></td>
 <td>ActorUniqueID</td>
-<td>3</td>
-<td></td>
-</tr>
+                <td>3</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>ActorUniqueID</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>Actor Unique ID (Required)</strong></td>
 <td>varint64</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
 <td><strong>Actor Flying State (Required)</strong></td>
 <td>boolean</td>
-<td>4</td>
-<td></td>
-</tr>
+                <td>4</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div>
     </div>
 </body>

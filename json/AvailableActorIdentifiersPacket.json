@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "4259990879",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "title": "AvailableActorIdentifiersPacket",
     "description": "Sends the whole list of actor identifiers at game start from the server.",
@@ -17,9 +17,5 @@
     },
     "required": [
         "Identifier List"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 119,
-        "[cereal:packet_details]": ""
-    }
+    ]
 }

@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "695778038",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "definitions": {
         "4257541248": {
@@ -41,9 +41,5 @@
     "required": [
         "New Map Id",
         "Original Map Id"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 131,
-        "[cereal:packet_details]": "\n\tIt sends the original map id and the new map id. \n\tOn the server it follows a similar process to creating a new map, sends the data and the map info to the client.\n\t"
-    }
+    ]
 }

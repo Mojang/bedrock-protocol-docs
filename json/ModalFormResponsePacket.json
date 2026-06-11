@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "476846867",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "definitions": {
         "1577557040": {
@@ -46,9 +46,5 @@
         "Form Cancel Reason",
         "Form ID",
         "JSON Response"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 101,
-        "[cereal:packet_details]": "see ModalFormRequestPacket"
-    }
+    ]
 }

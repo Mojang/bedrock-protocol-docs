@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2119915573",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "definitions": {
         "4207553912": {
@@ -114,9 +114,5 @@
     },
     "required": [
         "Removed Containers"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 317,
-        "[cereal:packet_details]": "\n\tWhenever the serverside ContainerRegistry does a clean, identifiers for the removed containers are gathered in a ContainerRegistryCleanUp\n\tpacket and sent to the client so that the clientside container registry can remove those same containers.\n\t"
-    }
+    ]
 }

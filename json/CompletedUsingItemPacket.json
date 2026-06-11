@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "215726265",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "title": "CompletedUsingItemPacket",
     "description": "Send server to client to complete the using item process. An example is when you finish drinking or eating.",
@@ -22,9 +22,5 @@
     "required": [
         "Item Id",
         "Item Use Method"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 142,
-        "[cereal:packet_details]": ""
-    }
+    ]
 }

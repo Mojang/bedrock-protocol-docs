@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2634246894",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "definitions": {
         "2688239457": {
@@ -363,9 +363,5 @@
         "Enum Values",
         "Post Fixes",
         "Soft Enums"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 76,
-        "[cereal:packet_details]": ""
-    }
+    ]
 }

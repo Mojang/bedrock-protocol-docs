@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3707032974",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "title": "PlayerStartItemCooldownPacket",
     "description": "Player Start Item Cooldown",
@@ -24,9 +24,5 @@
     "required": [
         "Duration Ticks",
         "Item Category"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 176,
-        "[cereal:packet_details]": "Packet sent by the player to start the cooldown on an item."
-    }
+    ]
 }

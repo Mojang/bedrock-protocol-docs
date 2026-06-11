@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3529372298",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "definitions": {
         "4257541248": {
@@ -34,9 +34,5 @@
     },
     "required": [
         "Target Actor ID"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 14,
-        "[cereal:packet_details]": "This is sent to the client to confirm which entity is being removed. This is done by sending an ActorUniqueID"
-    }
+    ]
 }

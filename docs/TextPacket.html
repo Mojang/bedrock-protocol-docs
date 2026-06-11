@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TextPacket (9)</title>
+    <title>TextPacket</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -118,275 +118,278 @@
 <body>
     <div class="container">
         <p><a href="index.html">← Back to Index</a></p>
-        <h1>TextPacket (9)</h1>
+        <h1>TextPacket</h1>
 <div class="description">Represents a text message that needs to be displayed in-game</div>
-<div class="description">Used for commands, messages, and other info printed to the screen. Most of which are server-&gt;client or server broadcasted to all clients, but some cases have a client to other client via the server</div>
 <div style="margin-left: 0px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>Localize? (Required)</strong></td>
 <td>boolean</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td rowspan="2"><strong>Body (Required)</strong></td>
 <td>oneOf</td>
-<td>1</td>
-<td>Message content (variant based on message type)</td>
-</tr>
+                <td>1</td>
+                <td>Message content (variant based on message type)</td>
+            </tr>
 <tr>
-<td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
-<strong>oneOf&lt;MessageOnly, AuthorAndMessage, MessageAndParams&gt;:</strong>
-<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
-<thead>
-<tr style="background-color: #e8e8e8;">
-<th>Control Value [uint32]</th>
-<th>Type</th>
-<th>Details</th>
-</tr>
-</thead>
-<tbody>
+                    <td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
+    <strong>oneOf&lt;MessageOnly, AuthorAndMessage, MessageAndParams&gt;:</strong>
+    <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th>Control Value [uint32]</th>
+                <th>Type</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td><strong>MessageOnly</strong></td>
+                <td>-</td>
+            </tr>
 <tr>
-<td>0</td>
-<td><strong>MessageOnly</strong></td>
-<td>-</td>
-</tr>
+                <td>1</td>
+                <td><strong>AuthorAndMessage</strong></td>
+                <td>-</td>
+            </tr>
 <tr>
-<td>1</td>
-<td><strong>AuthorAndMessage</strong></td>
-<td>-</td>
-</tr>
-<tr>
-<td>2</td>
-<td><strong>MessageAndParams</strong></td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
-<details style="margin-left: 20px; margin-top: 10px;">
-<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>MessageOnly (Variant 0)</strong></summary>
-<div style="margin-left: 40px; margin-top: 10px;">
+                <td>2</td>
+                <td><strong>MessageAndParams</strong></td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+    <details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>MessageOnly (Variant 0)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td rowspan="2"><strong>Message Type (Required)</strong></td>
 <td>varuint8</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
-<strong>Enum Values:</strong>
-<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
-<thead>
-<tr style="background-color: #e8e8e8;">
-<th style="width: 40px;">Index</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>raw</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">0</td>
-<td><code>raw</code></td>
-</tr>
+            <td style="text-align: center;">1</td>
+            <td><code>tip</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">1</td>
-<td><code>tip</code></td>
-</tr>
+            <td style="text-align: center;">2</td>
+            <td><code>systemMessage</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">2</td>
-<td><code>systemMessage</code></td>
-</tr>
+            <td style="text-align: center;">3</td>
+            <td><code>textObjectWhisper</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">3</td>
-<td><code>textObjectWhisper</code></td>
-</tr>
+            <td style="text-align: center;">4</td>
+            <td><code>textObject</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">4</td>
-<td><code>textObject</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
-<td><code>textObjectAnnouncement</code></td>
-</tr>
-</tbody>
-</table>
-</div></td>
-</tr>
+            <td style="text-align: center;">5</td>
+            <td><code>textObjectAnnouncement</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
 <tr>
 <td><strong>Message</strong></td>
 <td>string</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div>
-</details>
+                            </details>
 <details style="margin-left: 20px; margin-top: 10px;">
-<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>AuthorAndMessage (Variant 1)</strong></summary>
-<div style="margin-left: 40px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>AuthorAndMessage (Variant 1)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td rowspan="2"><strong>Message Type (Required)</strong></td>
 <td>varuint8</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
-<strong>Enum Values:</strong>
-<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
-<thead>
-<tr style="background-color: #e8e8e8;">
-<th style="width: 40px;">Index</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>chat</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">0</td>
-<td><code>chat</code></td>
-</tr>
+            <td style="text-align: center;">1</td>
+            <td><code>whisper</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">1</td>
-<td><code>whisper</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td><code>announcement</code></td>
-</tr>
-</tbody>
-</table>
-</div></td>
-</tr>
+            <td style="text-align: center;">2</td>
+            <td><code>announcement</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
 <tr>
 <td><strong>Player Name</strong></td>
 <td>string</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Message</strong></td>
 <td>string</td>
-<td>2</td>
-<td></td>
-</tr>
+                <td>2</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div>
-</details>
+                            </details>
 <details style="margin-left: 20px; margin-top: 10px;">
-<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>MessageAndParams (Variant 2)</strong></summary>
-<div style="margin-left: 40px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>MessageAndParams (Variant 2)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td rowspan="2"><strong>Message Type (Required)</strong></td>
 <td>varuint8</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
-<strong>Enum Values:</strong>
-<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
-<thead>
-<tr style="background-color: #e8e8e8;">
-<th style="width: 40px;">Index</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>translate</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">0</td>
-<td><code>translate</code></td>
-</tr>
+            <td style="text-align: center;">1</td>
+            <td><code>popup</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">1</td>
-<td><code>popup</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td><code>jukeboxPopup</code></td>
-</tr>
-</tbody>
-</table>
-</div></td>
-</tr>
+            <td style="text-align: center;">2</td>
+            <td><code>jukeboxPopup</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
 <tr>
 <td><strong>Message</strong></td>
 <td>string</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Parameter List</strong></td>
 <td>array&lt;string&gt;</td>
-<td>2</td>
-<td></td>
-</tr>
+                <td>2</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div>
-</details>
-</div></td>
-</tr>
+                            </details>
+</div>
+</td>
+                </tr>
 <tr>
-<td><strong>Sender&#x27;s XUID</strong></td>
+<td><strong>Sender&#39;s XUID</strong></td>
 <td>string</td>
-<td>2</td>
-<td>Xbox User ID of the message sender</td>
-</tr>
+                <td>2</td>
+                <td>Xbox User ID of the message sender</td>
+            </tr>
 <tr>
 <td><strong>Platform Id</strong></td>
 <td>string</td>
-<td>3</td>
-<td>Platform-specific user identifier</td>
-</tr>
+                <td>3</td>
+                <td>Platform-specific user identifier</td>
+            </tr>
 <tr>
 <td><strong>Filtered Message</strong></td>
 <td>string</td>
-<td>4</td>
-<td>Profanity-filtered version of the message (if applicable)</td>
-</tr>
+                <td>4</td>
+                <td>Profanity-filtered version of the message (if applicable)</td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div>
     </div>
 </body>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HurtArmorPacket (38)</title>
+    <title>HurtArmorPacket</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -118,40 +118,39 @@
 <body>
     <div class="container">
         <p><a href="index.html">← Back to Index</a></p>
-        <h1>HurtArmorPacket (38)</h1>
+        <h1>HurtArmorPacket</h1>
 <div class="description">Hurt Armor</div>
-<div class="description">Sends the damage taken after armor is taken into account. This looks like it is trying to be phased out, this is not sent while the ItemStackNetManagerServer is active. From the server.</div>
 <div style="margin-left: 0px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>Cause (Required)</strong></td>
 <td>varint32</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Damage (Required)</strong></td>
 <td>varint32</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Armor Slots (Required)</strong></td>
 <td>varuint64</td>
-<td>2</td>
-<td>Bitset</td>
-</tr>
+                <td>2</td>
+                <td>Bitset</td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div>
     </div>
 </body>

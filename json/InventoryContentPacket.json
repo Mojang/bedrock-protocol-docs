@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3495972176",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "definitions": {
         "4207553912": {
@@ -281,9 +281,5 @@
         "Full Container Name",
         "Slots",
         "Storage Item"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 49,
-        "[cereal:packet_details]": ""
-    }
+    ]
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SyncWorldClocksPacket (344)</title>
+    <title>SyncWorldClocksPacket</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -118,335 +118,332 @@
 <body>
     <div class="container">
         <p><a href="index.html">← Back to Index</a></p>
-        <h1>SyncWorldClocksPacket (344)</h1>
+        <h1>SyncWorldClocksPacket</h1>
 <div class="description">Initializes and syncs world clocks from the server to clients. (Currently disabled)</div>
-<div class="description">
-	Sent from the server when a client joins to initialize all world clocks for the client and periodically to all clients to keep them in sync.
-	It is also sent to all clients when a world clock&#x27;s paused state changes or when time markers are added or removed.
-	</div>
 <div style="margin-left: 0px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td rowspan="2"><strong>Data (Required)</strong></td>
 <td>oneOf</td>
-<td>0</td>
-<td>Variant data specific to what needs to be synced.</td>
-</tr>
+                <td>0</td>
+                <td>Variant data specific to what needs to be synced.</td>
+            </tr>
 <tr>
-<td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
-<strong>oneOf&lt;SyncStateData, InitializeRegistryData, AddTimeMarkerData, RemoveTimeMarkerData&gt;:</strong>
-<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
-<thead>
-<tr style="background-color: #e8e8e8;">
-<th>Control Value [uint32]</th>
-<th>Type</th>
-<th>Details</th>
-</tr>
-</thead>
-<tbody>
+                    <td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
+    <strong>oneOf&lt;SyncStateData, InitializeRegistryData, AddTimeMarkerData, RemoveTimeMarkerData&gt;:</strong>
+    <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th>Control Value [uint32]</th>
+                <th>Type</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td><strong>SyncStateData</strong></td>
+                <td>-</td>
+            </tr>
 <tr>
-<td>0</td>
-<td><strong>SyncStateData</strong></td>
-<td>-</td>
-</tr>
+                <td>1</td>
+                <td><strong>InitializeRegistryData</strong></td>
+                <td>-</td>
+            </tr>
 <tr>
-<td>1</td>
-<td><strong>InitializeRegistryData</strong></td>
-<td>-</td>
-</tr>
+                <td>2</td>
+                <td><strong>AddTimeMarkerData</strong></td>
+                <td>-</td>
+            </tr>
 <tr>
-<td>2</td>
-<td><strong>AddTimeMarkerData</strong></td>
-<td>-</td>
-</tr>
-<tr>
-<td>3</td>
-<td><strong>RemoveTimeMarkerData</strong></td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
-<details style="margin-left: 20px; margin-top: 10px;">
-<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>SyncStateData (Variant 0)</strong></summary>
-<div style="margin-left: 40px; margin-top: 10px;">
+                <td>3</td>
+                <td><strong>RemoveTimeMarkerData</strong></td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+    <details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>SyncStateData (Variant 0)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td rowspan="2"><strong>ClockData (Required)</strong></td>
 <td>array&lt;SyncWorldClockStateData&gt;</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>SyncWorldClockStateData (Array Item)</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>ClockId (Required)</strong></td>
 <td>varuint64</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Time (Required)</strong></td>
 <td>varint32</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>IsPaused (Required)</strong></td>
 <td>boolean</td>
-<td>2</td>
-<td></td>
-</tr>
+                <td>2</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 </tbody>
-</table>
+    </table>
 </div>
-</details>
+                            </details>
 <details style="margin-left: 20px; margin-top: 10px;">
-<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>InitializeRegistryData (Variant 1)</strong></summary>
-<div style="margin-left: 40px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>InitializeRegistryData (Variant 1)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td rowspan="2"><strong>ClockData (Required)</strong></td>
 <td>array&lt;WorldClockData&gt;</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>WorldClockData (Array Item)</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>Id (Required)</strong></td>
 <td>varuint64</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Name (Required)</strong></td>
 <td>string</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Time (Required)</strong></td>
 <td>varint32</td>
-<td>2</td>
-<td></td>
-</tr>
+                <td>2</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>IsPaused (Required)</strong></td>
 <td>boolean</td>
-<td>3</td>
-<td></td>
-</tr>
+                <td>3</td>
+                <td></td>
+            </tr>
 <tr>
 <td rowspan="2"><strong>TimeMarkers (Required)</strong></td>
 <td>array&lt;TimeMarkerData&gt;</td>
-<td>4</td>
-<td></td>
-</tr>
+                <td>4</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>TimeMarkerData (Array Item)</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>Id (Required)</strong></td>
 <td>varuint64</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Name (Required)</strong></td>
 <td>string</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Time (Required)</strong></td>
 <td>varint32</td>
-<td>2</td>
-<td></td>
-</tr>
+                <td>2</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Period (Required)</strong></td>
 <td>int32</td>
-<td>3</td>
-<td></td>
-</tr>
+                <td>3</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 </tbody>
-</table>
+    </table>
 </div>
-</details>
+                            </details>
 <details style="margin-left: 20px; margin-top: 10px;">
-<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>AddTimeMarkerData (Variant 2)</strong></summary>
-<div style="margin-left: 40px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>AddTimeMarkerData (Variant 2)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>ClockId (Required)</strong></td>
 <td>varuint64</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td rowspan="2"><strong>TimeMarkers (Required)</strong></td>
 <td>array&lt;TimeMarkerData&gt;</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>TimeMarkerData (Array Item)</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>Id (Required)</strong></td>
 <td>varuint64</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Name (Required)</strong></td>
 <td>string</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Time (Required)</strong></td>
 <td>varint32</td>
-<td>2</td>
-<td></td>
-</tr>
+                <td>2</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Period (Required)</strong></td>
 <td>int32</td>
-<td>3</td>
-<td></td>
-</tr>
+                <td>3</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 </tbody>
-</table>
+    </table>
 </div>
-</details>
+                            </details>
 <details style="margin-left: 20px; margin-top: 10px;">
-<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>RemoveTimeMarkerData (Variant 3)</strong></summary>
-<div style="margin-left: 40px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>RemoveTimeMarkerData (Variant 3)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>ClockId (Required)</strong></td>
 <td>varuint64</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>TimeMarkerIds (Required)</strong></td>
 <td>array&lt;uint64&gt;</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div>
-</details>
-</div></td>
-</tr>
+                            </details>
+</div>
+</td>
+                </tr>
 </tbody>
-</table>
+    </table>
 </div>
     </div>
 </body>

@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1368262939",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "definitions": {
         "3560714072": {
@@ -35,9 +35,5 @@
     },
     "required": [
         "Edu Shared URI Resource"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 170,
-        "[cereal:packet_details]": ""
-    }
+    ]
 }

@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "4124351692",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "title": "PartyDestinationCookieResponsePacket",
     "description": "Sent by the client to the server with a party destination cookie response.",
@@ -22,9 +22,5 @@
     "required": [
         "accepted",
         "cookie"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 350,
-        "[cereal:packet_details]": ""
-    }
+    ]
 }

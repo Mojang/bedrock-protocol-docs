@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3148944508",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "title": "TickingAreasLoadStatusPacket",
     "description": "Used to inform the client that the server is waiting for ticking areas to finish preloading.",
@@ -16,9 +16,5 @@
     },
     "required": [
         "Waiting For Preload"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 179,
-        "[cereal:packet_details]": ""
-    }
+    ]
 }

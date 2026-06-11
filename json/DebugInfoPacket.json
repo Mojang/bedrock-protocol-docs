@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "524105948",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "definitions": {
         "4257541248": {
@@ -39,9 +39,5 @@
     "required": [
         "Actor Id",
         "Data"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 155,
-        "[cereal:packet_details]": ""
-    }
+    ]
 }

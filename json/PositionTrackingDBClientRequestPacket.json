@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1177007155",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "definitions": {
         "767557450": {
@@ -47,9 +47,5 @@
     "required": [
         "Action",
         "Id"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 154,
-        "[cereal:packet_details]": "Client to server packet for server authoratative runtime database (with persistent LevelStorage backup) designed primarily to track lodestone stuff. See Position Tracking DB Notes.md in bedrock-docs. see PositionTrackingDBServerBroadcastPacket"
-    }
+    ]
 }

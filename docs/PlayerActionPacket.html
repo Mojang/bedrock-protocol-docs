@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlayerActionPacket (36)</title>
+    <title>PlayerActionPacket</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -118,298 +118,296 @@
 <body>
     <div class="container">
         <p><a href="index.html">← Back to Index</a></p>
-        <h1>PlayerActionPacket (36)</h1>
+        <h1>PlayerActionPacket</h1>
 <div class="description">Sent from the client whenever the player performs an action (dashing, un-dashing, use an item, mine/hit, use a block, etc).</div>
-<div class="description">The expected actions change depending on the ServerAuthMovementMode specified in the StartGamePacket.
-	See the PlayerActionType enum for details on which have differing behavior.
-	See also PlayerAuthInputPacket and InventoryTransactionPacket for similar types of player actions.</div>
 <div style="margin-left: 0px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td rowspan="2"><strong>Player Runtime ID (Required)</strong></td>
 <td>ActorRuntimeID</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>ActorRuntimeID</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>Actor Runtime ID (Required)</strong></td>
 <td>varuint64</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
 <td rowspan="2"><strong>Action (Required)</strong></td>
 <td>varint32</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
-<strong>Enum Values:</strong>
-<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
-<thead>
-<tr style="background-color: #e8e8e8;">
-<th style="width: 40px;">Index</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Unknown</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">0</td>
-<td><code>Unknown</code></td>
-</tr>
+            <td style="text-align: center;">1</td>
+            <td><code>StartDestroyBlock</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">1</td>
-<td><code>StartDestroyBlock</code></td>
-</tr>
+            <td style="text-align: center;">2</td>
+            <td><code>AbortDestroyBlock</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">2</td>
-<td><code>AbortDestroyBlock</code></td>
-</tr>
+            <td style="text-align: center;">3</td>
+            <td><code>StopDestroyBlock</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">3</td>
-<td><code>StopDestroyBlock</code></td>
-</tr>
+            <td style="text-align: center;">4</td>
+            <td><code>StartSleeping</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">4</td>
-<td><code>StartSleeping</code></td>
-</tr>
+            <td style="text-align: center;">5</td>
+            <td><code>StopSleeping</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">5</td>
-<td><code>StopSleeping</code></td>
-</tr>
+            <td style="text-align: center;">6</td>
+            <td><code>Respawn</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">6</td>
-<td><code>Respawn</code></td>
-</tr>
+            <td style="text-align: center;">7</td>
+            <td><code>StartJump</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">7</td>
-<td><code>StartJump</code></td>
-</tr>
+            <td style="text-align: center;">8</td>
+            <td><code>StartSprinting</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">8</td>
-<td><code>StartSprinting</code></td>
-</tr>
+            <td style="text-align: center;">9</td>
+            <td><code>StopSprinting</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">9</td>
-<td><code>StopSprinting</code></td>
-</tr>
+            <td style="text-align: center;">10</td>
+            <td><code>StartSneaking</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">10</td>
-<td><code>StartSneaking</code></td>
-</tr>
+            <td style="text-align: center;">11</td>
+            <td><code>StopSneaking</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">11</td>
-<td><code>StopSneaking</code></td>
-</tr>
+            <td style="text-align: center;">12</td>
+            <td><code>CreativeDestroyBlock</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">12</td>
-<td><code>CreativeDestroyBlock</code></td>
-</tr>
+            <td style="text-align: center;">13</td>
+            <td><code>ChangeDimensionAck</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">13</td>
-<td><code>ChangeDimensionAck</code></td>
-</tr>
+            <td style="text-align: center;">14</td>
+            <td><code>StartGliding</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">14</td>
-<td><code>StartGliding</code></td>
-</tr>
+            <td style="text-align: center;">15</td>
+            <td><code>StopGliding</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">15</td>
-<td><code>StopGliding</code></td>
-</tr>
+            <td style="text-align: center;">16</td>
+            <td><code>DenyDestroyBlock</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">16</td>
-<td><code>DenyDestroyBlock</code></td>
-</tr>
+            <td style="text-align: center;">17</td>
+            <td><code>CrackBlock</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">17</td>
-<td><code>CrackBlock</code></td>
-</tr>
+            <td style="text-align: center;">18</td>
+            <td><code>StartSwimming</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">18</td>
-<td><code>StartSwimming</code></td>
-</tr>
+            <td style="text-align: center;">19</td>
+            <td><code>StopSwimming</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">19</td>
-<td><code>StopSwimming</code></td>
-</tr>
+            <td style="text-align: center;">20</td>
+            <td><code>StartSpinAttack</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">20</td>
-<td><code>StartSpinAttack</code></td>
-</tr>
+            <td style="text-align: center;">21</td>
+            <td><code>StopSpinAttack</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">21</td>
-<td><code>StopSpinAttack</code></td>
-</tr>
+            <td style="text-align: center;">22</td>
+            <td><code>PredictDestroyBlock</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">22</td>
-<td><code>PredictDestroyBlock</code></td>
-</tr>
+            <td style="text-align: center;">23</td>
+            <td><code>ContinueDestroyBlock</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">23</td>
-<td><code>ContinueDestroyBlock</code></td>
-</tr>
+            <td style="text-align: center;">24</td>
+            <td><code>StartItemUseOn</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">24</td>
-<td><code>StartItemUseOn</code></td>
-</tr>
+            <td style="text-align: center;">25</td>
+            <td><code>StopItemUseOn</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">25</td>
-<td><code>StopItemUseOn</code></td>
-</tr>
+            <td style="text-align: center;">26</td>
+            <td><code>HandledTeleport</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">26</td>
-<td><code>HandledTeleport</code></td>
-</tr>
+            <td style="text-align: center;">27</td>
+            <td><code>MissedSwing</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">27</td>
-<td><code>MissedSwing</code></td>
-</tr>
+            <td style="text-align: center;">28</td>
+            <td><code>StartCrawling</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">28</td>
-<td><code>StartCrawling</code></td>
-</tr>
+            <td style="text-align: center;">29</td>
+            <td><code>StopCrawling</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">29</td>
-<td><code>StopCrawling</code></td>
-</tr>
+            <td style="text-align: center;">30</td>
+            <td><code>StartFlying</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">30</td>
-<td><code>StartFlying</code></td>
-</tr>
+            <td style="text-align: center;">31</td>
+            <td><code>StopFlying</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">31</td>
-<td><code>StopFlying</code></td>
-</tr>
+            <td style="text-align: center;">32</td>
+            <td><code>StartUsingItem</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">32</td>
-<td><code>StartUsingItem</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">33</td>
-<td><code>Count</code></td>
-</tr>
-</tbody>
-</table>
-</div></td>
-</tr>
+            <td style="text-align: center;">33</td>
+            <td><code>Count</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
 <tr>
 <td rowspan="2"><strong>Block Position (Required)</strong></td>
 <td>BlockPos</td>
-<td>2</td>
-<td></td>
-</tr>
+                <td>2</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>BlockPos</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>X (Required)</strong></td>
 <td>varint32</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Y (Required)</strong></td>
 <td>varint32</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Z (Required)</strong></td>
 <td>varint32</td>
-<td>2</td>
-<td></td>
-</tr>
+                <td>2</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
 <td rowspan="2"><strong>Result Pos (Required)</strong></td>
 <td>BlockPos</td>
-<td>3</td>
-<td></td>
-</tr>
+                <td>3</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>BlockPos</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>X (Required)</strong></td>
 <td>varint32</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Y (Required)</strong></td>
 <td>varint32</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Z (Required)</strong></td>
 <td>varint32</td>
-<td>2</td>
-<td></td>
-</tr>
+                <td>2</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
 <td><strong>Face (Required)</strong></td>
 <td>varint32</td>
-<td>4</td>
-<td></td>
-</tr>
+                <td>4</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div>
     </div>
 </body>

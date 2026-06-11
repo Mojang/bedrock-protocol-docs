@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "25585136",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "definitions": {
         "842071187": {
@@ -118,9 +118,5 @@
         "Include Editor Packs",
         "Texture Pack List",
         "Texture Pack Required"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 7,
-        "[cereal:packet_details]": "Sent to client in response to ResourcePackClientResponsePacket with info on current resource pack stack."
-    }
+    ]
 }

@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3262896307",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "definitions": {
         "1750201151": {
@@ -221,9 +221,5 @@
         "Selected Slot",
         "Slot",
         "Target Runtime ID"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 31,
-        "[cereal:packet_details]": ""
-    }
+    ]
 }

@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2870994288",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
+    "x-minecraft-version": "1.26.30-beta.0",
     "x-protocol-version": 1001,
     "definitions": {
         "1488572312": {
@@ -92,9 +92,5 @@
         "Position",
         "Reaction",
         "Type"
-    ],
-    "$metaProperties": {
-        "[cereal:packet]": 109,
-        "[cereal:packet_details]": "The packet can be fired from the client through the UI or from the server during updates."
-    }
+    ]
 }
