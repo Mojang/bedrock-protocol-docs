@@ -119,7 +119,7 @@
     <div class="container">
         
         <h1>Game Protocol Documentation</h1>
-<p>Documentation for 203 protocol packets.</p>
+<p>Documentation for 206 protocol packets.</p>
 <h2>Packet List</h2>
 <ul class="packet-list">
 <li>
@@ -412,6 +412,10 @@
 <br><span style="color: #666; font-size: 0.9em;">Used when the player changes their skin</span>
 </li>
 <li>
+<a href="SubClientLoginPacket.html"><strong>SubClientLoginPacket (94)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">This packet starts the login process of subclients (splitscreen)</span>
+</li>
+<li>
 <a href="AutomationClientConnectPacket.html"><strong>AutomationClientConnectPacket (95)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Initiates websocket connection</span>
 </li>
@@ -684,6 +688,10 @@
 <br><span style="color: #666; font-size: 0.9em;">Used to inform the client that the server is waiting for ticking areas to finish preloading.</span>
 </li>
 <li>
+<a href="DimensionDataPacket.html"><strong>DimensionDataPacket (180)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Brief packet containing data-driven dimension properties</span>
+</li>
+<li>
 <a href="AgentActionEventPacket.html"><strong>AgentActionEventPacket (181)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">packet containing data of Agent Action Type</span>
 </li>
@@ -758,6 +766,10 @@
 <li>
 <a href="CameraInstructionPacket.html"><strong>CameraInstructionPacket (300)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Used to send a CameraInstruction from the server to the specified clients.</span>
+</li>
+<li>
+<a href="TrimDataPacket.html"><strong>TrimDataPacket (302)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from the server on level startup to send all trim patterns to the client.</span>
 </li>
 <li>
 <a href="OpenSignPacket.html"><strong>OpenSignPacket (303)</strong></a>

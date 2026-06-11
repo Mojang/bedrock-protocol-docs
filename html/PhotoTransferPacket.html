@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhotoTransferPacket</title>
+    <title>PhotoTransferPacket (99)</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -118,8 +118,14 @@
 <body>
     <div class="container">
         <p><a href="index.html">← Back to Index</a></p>
-        <h1>PhotoTransferPacket</h1>
+        <h1>PhotoTransferPacket (99)</h1>
 <div class="description">There is a camera item in EDU and they can use it to take screenshots and add them to a scrapbook.</div>
+<div class="description">
+	When the player uses the camera item or adds a photo to the scrapbook it sends the photo to the server,
+	then the server sends a response back on whether that was successful or not.
+	Either uploads a photo to the server&#x27;s photoStorage or request one from it to be stored in client&#x27;s photoStorage.
+	If no mPhotoData is provided it is a request for the given filename.
+	</div>
 <div style="margin-left: 0px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
 <thead>

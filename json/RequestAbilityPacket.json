@@ -1,52 +1,14 @@
 {
+    "title": "RequestAbilityPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3821917984",
+    "$id": "/RequestAbilityPacket.json",
     "x-format-version": "MISSING VERSION",
     "x-minecraft-version": "1.26.40",
     "x-protocol-version": 2143,
-    "title": "RequestAbilityPacket",
     "description": "Sent from client to server. Used to request an ability change.",
-    "type": "object",
-    "properties": {
-        "Ability": {
-            "type": "integer",
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Compression"
-            ],
-            "x-ordinal-index": 0,
-            "minimum": 0.0,
-            "maximum": 19.0
-        },
-        "Bool": {
-            "type": "boolean",
-            "x-underlying-type": "boolean",
-            "x-ordinal-index": 2
-        },
-        "Float": {
-            "type": "number",
-            "x-underlying-type": "float",
-            "x-ordinal-index": 3
-        },
-        "Value Type": {
-            "title": "RequestAbilityPacketPayload::Type",
-            "type": "string",
-            "enum": [
-                "Unset",
-                "Bool",
-                "Float"
-            ],
-            "x-underlying-type": "uint8",
-            "x-serialization-options": [
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 1
-        }
-    },
-    "required": [
-        "Ability",
-        "Bool",
-        "Float",
-        "Value Type"
-    ]
+    "$ref": "./RequestAbilityPacketPayload.json",
+    "$metaProperties": {
+        "[cereal:packet]": 184,
+        "[cereal:packet_details]": "Once changed, the server will broadcast the updated state of abilities for that player. If the request is rejected, the caller will receive their reverted state of Abilities.  Can only be used to modify the calling player.  \t- mVariable: Info about this variable"
+    }
 }

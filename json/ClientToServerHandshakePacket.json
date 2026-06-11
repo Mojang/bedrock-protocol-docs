@@ -1,9 +1,14 @@
 {
+    "title": "ClientToServerHandshakePacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "832387757",
+    "$id": "/ClientToServerHandshakePacket.json",
     "x-format-version": "MISSING VERSION",
     "x-minecraft-version": "1.26.40",
     "x-protocol-version": 2143,
-    "title": "ClientToServerHandshakePacket",
-    "description": "Sets up encryption and authenticates in educational version once at level startup from client."
+    "description": "Sets up encryption and authenticates in educational version once at level startup from client.",
+    "$ref": "./ClientToServerHandshakePacketPayload.json",
+    "$metaProperties": {
+        "[cereal:packet]": 4,
+        "[cereal:packet_details]": ""
+    }
 }

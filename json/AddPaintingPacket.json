@@ -1,106 +1,14 @@
 {
+    "title": "AddPaintingPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2872748552",
+    "$id": "/AddPaintingPacket.json",
     "x-format-version": "MISSING VERSION",
     "x-minecraft-version": "1.26.40",
     "x-protocol-version": 2143,
-    "definitions": {
-        "725374594": {
-            "title": "Vec3",
-            "type": "object",
-            "properties": {
-                "X": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 0
-                },
-                "Y": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 1
-                },
-                "Z": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 2
-                }
-            },
-            "required": [
-                "X",
-                "Y",
-                "Z"
-            ]
-        },
-        "4257541248": {
-            "title": "ActorUniqueID",
-            "type": "object",
-            "properties": {
-                "Actor Unique ID": {
-                    "type": "integer",
-                    "x-underlying-type": "int64",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "Actor Unique ID"
-            ]
-        },
-        "1750201151": {
-            "title": "ActorRuntimeID",
-            "type": "object",
-            "properties": {
-                "Actor Runtime ID": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
-                }
-            },
-            "required": [
-                "Actor Runtime ID"
-            ]
-        }
-    },
-    "title": "AddPaintingPacket",
     "description": "Sends the information for a new painting actor from server to client.",
-    "type": "object",
-    "properties": {
-        "Direction": {
-            "type": "integer",
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Compression"
-            ],
-            "x-ordinal-index": 3
-        },
-        "Motif": {
-            "type": "string",
-            "x-ordinal-index": 4
-        },
-        "Position": {
-            "$ref": "#/definitions/725374594",
-            "x-ordinal-index": 2
-        },
-        "Target Actor ID": {
-            "$ref": "#/definitions/4257541248",
-            "x-ordinal-index": 0
-        },
-        "Target Runtime ID": {
-            "$ref": "#/definitions/1750201151",
-            "x-ordinal-index": 1
-        }
-    },
-    "required": [
-        "Direction",
-        "Motif",
-        "Position",
-        "Target Actor ID",
-        "Target Runtime ID"
-    ]
+    "$ref": "./AddPaintingPacketPayload.json",
+    "$metaProperties": {
+        "[cereal:packet]": 22,
+        "[cereal:packet_details]": ""
+    }
 }

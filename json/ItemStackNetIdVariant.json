@@ -1,0 +1,29 @@
+{
+    "title": "ItemStackNetIdVariant",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ItemStackNetIdVariant.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40",
+    "x-protocol-version": 2143,
+    "type": "object",
+    "properties": {
+        "Item stack net ID variant": {
+            "oneOf": [
+                {
+                    "$ref": "./ItemStackNetId.json"
+                },
+                {
+                    "$ref": "./ItemStackRequestId.json"
+                },
+                {
+                    "$ref": "./ItemStackLegacyRequestId.json"
+                }
+            ],
+            "x-control-value-type": "uint32",
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Item stack net ID variant"
+    ]
+}

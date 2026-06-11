@@ -1,127 +1,14 @@
 {
+    "title": "EducationSettingsPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2478805696",
+    "$id": "/EducationSettingsPacket.json",
     "x-format-version": "MISSING VERSION",
     "x-minecraft-version": "1.26.40",
     "x-protocol-version": 2143,
-    "definitions": {
-        "3482207152": {
-            "title": "EducationLevelSettings",
-            "type": "object",
-            "properties": {
-                "(Deprecated) Always False": {
-                    "type": "boolean",
-                    "x-underlying-type": "boolean",
-                    "x-ordinal-index": 8
-                },
-                "Agent Capabilities": {
-                    "$ref": "#/definitions/1249440280",
-                    "x-ordinal-index": 6
-                },
-                "Can resize Code Builder": {
-                    "type": "boolean",
-                    "x-underlying-type": "boolean",
-                    "x-ordinal-index": 2
-                },
-                "Code Builder Default URI": {
-                    "type": "string",
-                    "x-ordinal-index": 0
-                },
-                "Code Builder Title": {
-                    "type": "string",
-                    "x-ordinal-index": 1
-                },
-                "Disable legacy title bar": {
-                    "type": "boolean",
-                    "x-underlying-type": "boolean",
-                    "x-ordinal-index": 3
-                },
-                "External Link Settings": {
-                    "$ref": "#/definitions/2293549063",
-                    "x-ordinal-index": 9
-                },
-                "Local Settings": {
-                    "$ref": "#/definitions/888440699",
-                    "x-ordinal-index": 7
-                },
-                "Post Process Filter": {
-                    "type": "string",
-                    "x-ordinal-index": 4
-                },
-                "Screenshot Border Resource Path": {
-                    "type": "string",
-                    "x-ordinal-index": 5
-                }
-            },
-            "required": [
-                "(Deprecated) Always False",
-                "Agent Capabilities",
-                "Can resize Code Builder",
-                "Code Builder Default URI",
-                "Code Builder Title",
-                "Disable legacy title bar",
-                "External Link Settings",
-                "Local Settings",
-                "Post Process Filter",
-                "Screenshot Border Resource Path"
-            ]
-        },
-        "888440699": {
-            "title": "EducationLocalLevelSettings",
-            "type": "object",
-            "properties": {
-                "Code Builder Override Uri": {
-                    "type": "string",
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "Code Builder Override Uri"
-            ]
-        },
-        "1249440280": {
-            "title": "AgentCapabilities",
-            "type": "object",
-            "properties": {
-                "Can Modify Blocks": {
-                    "type": "boolean",
-                    "x-underlying-type": "boolean",
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "Can Modify Blocks"
-            ]
-        },
-        "2293549063": {
-            "title": "ExternalLinkSettings",
-            "type": "object",
-            "properties": {
-                "Display Name": {
-                    "type": "string",
-                    "x-ordinal-index": 1
-                },
-                "URL": {
-                    "type": "string",
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "Display Name",
-                "URL"
-            ]
-        }
-    },
-    "title": "EducationSettingsPacket",
     "description": "Transmits EducationLevelSettings to all clients.",
-    "type": "object",
-    "properties": {
-        "Education Level Settings": {
-            "$ref": "#/definitions/3482207152",
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "Education Level Settings"
-    ]
+    "$ref": "./EducationSettingsPacketPayload.json",
+    "$metaProperties": {
+        "[cereal:packet]": 137,
+        "[cereal:packet_details]": "Currently transmits EducationLevelSettings to all clients when the game is starting."
+    }
 }

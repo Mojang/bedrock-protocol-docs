@@ -1,0 +1,26 @@
+<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/CameraSplineDefinition.svg" alt="CameraSplineDefinition">
+<br><table><col width="10%"><col width="10%"><col width="15%"><col width="80%"><tr><th>Field Name</th><th>Field Type</th><th>Field Constraints</th><th>Field Notes</th></tr><tr><td>name</td>
+<td>string</td>
+<td>&lt;div style="padding-left: 0px;"&gt;Pattern = ^\w+:\w+$&lt;/div&gt;</td>
+<td>The identifier for this spline, in "namespace:name" format.</td>
+</tr><tr><td>total_time</td>
+<td>float</td>
+<td>&lt;div style="padding-left: 0px;"&gt;Minimum = 0&lt;/div&gt;</td>
+<td>The total time, in seconds, to play back the spline.</td>
+</tr><tr><td>spline_type</td>
+<td>string</td>
+<td>&lt;div style="padding-left: 0px;"&gt;Pattern = ^(?:catmullrom|linear)$&lt;/div&gt;</td>
+<td>The spline interpolation type: "catmullrom" or "linear". Defaults to "catmullrom".</td>
+</tr><tr><td>control_points</td>
+<td>vector&lt;CameraSplineControlPoint&gt;</td>
+<td></td>
+<td>Array of control point positions, each as [x, y, z] in world space.</td>
+</tr><tr><td>progress_key_frames</td>
+<td>vector&lt;CameraSplineProgressKeyFrame&gt;</td>
+<td></td>
+<td>Key frames where each entry defines a progress alpha [0–1] and a time (in seconds) when the spline should reach that progress.</td>
+</tr><tr><td>rotation_key_frames</td>
+<td>vector&lt;CameraSplineRotationKeyFrame&gt;</td>
+<td></td>
+<td>Array of rotation key frames, each with a rotation value and the time (in seconds) when it should be applied.</td>
+</tr></table></body> </html>

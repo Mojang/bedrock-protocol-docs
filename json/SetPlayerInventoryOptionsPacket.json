@@ -1,106 +1,14 @@
 {
+    "title": "SetPlayerInventoryOptionsPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "699900528",
+    "$id": "/SetPlayerInventoryOptionsPacket.json",
     "x-format-version": "MISSING VERSION",
     "x-minecraft-version": "1.26.40",
     "x-protocol-version": 2143,
-    "definitions": {
-        "2795875739": {
-            "title": "InventoryOptions",
-            "type": "object",
-            "properties": {
-                "Filtering": {
-                    "type": "boolean",
-                    "x-underlying-type": "boolean",
-                    "x-ordinal-index": 2
-                },
-                "Layout Craft": {
-                    "title": "InventoryLayout",
-                    "type": "string",
-                    "enum": [
-                        "None",
-                        "InventoryOnly",
-                        "Default",
-                        "RecipeBookOnly"
-                    ],
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression",
-                        "Enum-as-Value"
-                    ],
-                    "x-ordinal-index": 4
-                },
-                "Layout Inv": {
-                    "title": "InventoryLayout",
-                    "type": "string",
-                    "enum": [
-                        "None",
-                        "InventoryOnly",
-                        "Default",
-                        "RecipeBookOnly"
-                    ],
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression",
-                        "Enum-as-Value"
-                    ],
-                    "x-ordinal-index": 3
-                },
-                "Left Inventory Tab": {
-                    "title": "InventoryLeftTabIndex",
-                    "type": "string",
-                    "enum": [
-                        "None",
-                        "RecipeConstruction",
-                        "RecipeEquipment",
-                        "RecipeItems",
-                        "RecipeNature",
-                        "RecipeSearch",
-                        "Survival"
-                    ],
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression",
-                        "Enum-as-Value"
-                    ],
-                    "x-ordinal-index": 0
-                },
-                "Right Inventory Tab": {
-                    "title": "InventoryRightTabIndex",
-                    "type": "string",
-                    "enum": [
-                        "None",
-                        "FullScreen",
-                        "Crafting",
-                        "Armor"
-                    ],
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression",
-                        "Enum-as-Value"
-                    ],
-                    "x-ordinal-index": 1
-                }
-            },
-            "required": [
-                "Filtering",
-                "Layout Craft",
-                "Layout Inv",
-                "Left Inventory Tab",
-                "Right Inventory Tab"
-            ]
-        }
-    },
-    "title": "SetPlayerInventoryOptionsPacket",
     "description": "SetPlayerInventoryOptionsPacket",
-    "type": "object",
-    "properties": {
-        "Inventory Options": {
-            "$ref": "#/definitions/2795875739",
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "Inventory Options"
-    ]
+    "$ref": "./SetPlayerInventoryOptionsPacketPayload.json",
+    "$metaProperties": {
+        "[cereal:packet]": 307,
+        "[cereal:packet_details]": ""
+    }
 }

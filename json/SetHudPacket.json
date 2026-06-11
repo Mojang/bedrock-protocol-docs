@@ -1,58 +1,14 @@
 {
+    "title": "SetHudPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3437014688",
+    "$id": "/SetHudPacket.json",
     "x-format-version": "MISSING VERSION",
     "x-minecraft-version": "1.26.40",
     "x-protocol-version": 2143,
-    "title": "SetHudPacket",
     "description": "This packet is only used via the set hud command. This is for 3rd party content.",
-    "type": "object",
-    "properties": {
-        "Hud Element": {
-            "type": "array",
-            "items": {
-                "title": "HudElement",
-                "type": "string",
-                "enum": [
-                    "PaperDoll",
-                    "Armor",
-                    "ToolTips",
-                    "TouchControls",
-                    "Crosshair",
-                    "HotBar",
-                    "Health",
-                    "ProgressBar",
-                    "Hunger",
-                    "AirBubbles",
-                    "HorseHealth",
-                    "StatusEffects",
-                    "ItemText"
-                ],
-                "x-underlying-type": "int32"
-            },
-            "x-serialization-options": [
-                "Compression",
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 0
-        },
-        "Hud Visible": {
-            "title": "HudVisibility",
-            "type": "string",
-            "enum": [
-                "Hide",
-                "Reset"
-            ],
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Compression",
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 1
-        }
-    },
-    "required": [
-        "Hud Element",
-        "Hud Visible"
-    ]
+    "$ref": "./SetHudPacketPayload.json",
+    "$metaProperties": {
+        "[cereal:packet]": 308,
+        "[cereal:packet_details]": "This packet will toggle the HUD visibility."
+    }
 }

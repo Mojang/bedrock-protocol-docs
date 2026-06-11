@@ -1,50 +1,14 @@
 {
+    "title": "ModalFormResponsePacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "476846867",
+    "$id": "/ModalFormResponsePacket.json",
     "x-format-version": "MISSING VERSION",
     "x-minecraft-version": "1.26.40",
     "x-protocol-version": 2143,
-    "definitions": {
-        "1577557040": {
-            "title": "Json::Value",
-            "type": "string",
-            "x-runtime-constraint-description": "Verify that the string can be parsed as valid JSON"
-        }
-    },
-    "title": "ModalFormResponsePacket",
     "description": "Fired in response to third party server request to show the custom UI screen.",
-    "type": "object",
-    "properties": {
-        "Form Cancel Reason": {
-            "title": "ModalFormCancelReason",
-            "type": "string",
-            "enum": [
-                "UserClosed",
-                "UserBusy"
-            ],
-            "x-underlying-type": "uint8",
-            "x-serialization-options": [
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 2
-        },
-        "Form ID": {
-            "type": "integer",
-            "x-underlying-type": "uint32",
-            "x-serialization-options": [
-                "Compression"
-            ],
-            "x-ordinal-index": 0,
-            "minimum": 0.0
-        },
-        "JSON Response": {
-            "$ref": "#/definitions/1577557040",
-            "x-ordinal-index": 1
-        }
-    },
-    "required": [
-        "Form Cancel Reason",
-        "Form ID",
-        "JSON Response"
-    ]
+    "$ref": "./ModalFormResponsePacketPayload.json",
+    "$metaProperties": {
+        "[cereal:packet]": 101,
+        "[cereal:packet_details]": "see ModalFormRequestPacket"
+    }
 }

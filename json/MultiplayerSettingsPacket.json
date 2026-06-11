@@ -1,30 +1,14 @@
 {
+    "title": "MultiplayerSettingsPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1900756958",
+    "$id": "/MultiplayerSettingsPacket.json",
     "x-format-version": "MISSING VERSION",
     "x-minecraft-version": "1.26.40",
     "x-protocol-version": 2143,
-    "title": "MultiplayerSettingsPacket",
     "description": "Syncs multiplayer settings",
-    "type": "object",
-    "properties": {
-        "PacketType": {
-            "title": "MultiplayerSettingsPacketType",
-            "type": "string",
-            "enum": [
-                "EnableMultiplayer",
-                "DisableMultiplayer",
-                "RefreshJoincode"
-            ],
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Compression",
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "PacketType"
-    ]
+    "$ref": "./MultiplayerSettingsPacketPayload.json",
+    "$metaProperties": {
+        "[cereal:packet]": 139,
+        "[cereal:packet_details]": "\n\tThis is used by EDU for joining players and removing players from your session,\n\tthe settings (there is only one) is an enum for enabling/disabling/refreshing multiplayer join codes.\n\tStarts on the client, and a response to the client is issued from the server.\n\t"
+    }
 }

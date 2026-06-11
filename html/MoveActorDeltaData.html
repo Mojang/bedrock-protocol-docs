@@ -1,0 +1,18 @@
+<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/MoveActorDeltaData.svg" alt="MoveActorDeltaData">
+<br><table><col width="10%"><col width="90%"><tr><th>Field Name</th><th>Field Notes</th></tr><tr><td>ActorRuntimeID</td>
+<td>The runtime id of the actor being moved</td>
+</tr><tr><td>Header</td>
+<td>Header containing 9 1-bit booleans describing the rest of the packet. Information provided in supplemental documentation.</td>
+</tr><tr><td>New position X</td>
+<td>If position X bit is true, then this will contain the actor's X coordinate</td>
+</tr><tr><td>New position Y</td>
+<td>If position Y bit is true, then this will contain the actor's Y coordinate</td>
+</tr><tr><td>New position Z</td>
+<td>If position Z bit is true, then this will contain the actor's Z coordinate</td>
+</tr><tr><td>Rotation X</td>
+<td>If rotation X bit is true, then this will contain the X rotation of the actor</td>
+</tr><tr><td>Rotation Y</td>
+<td>If rotation Y bit is true, then this will contain the Y rotation of the actor</td>
+</tr><tr><td>Rotation Y Head</td>
+<td>If rotation Y Head bit is true, then this will contain a head rotation of the actor if and only if it's a Mob type</td>
+</tr></table></body> </html>

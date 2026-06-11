@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CorrectPlayerMovePredictionPacket</title>
+    <title>CorrectPlayerMovePredictionPacket (161)</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -118,8 +118,12 @@
 <body>
     <div class="container">
         <p><a href="index.html">← Back to Index</a></p>
-        <h1>CorrectPlayerMovePredictionPacket</h1>
+        <h1>CorrectPlayerMovePredictionPacket (161)</h1>
 <div class="description">Sent to a player when their simulation of movement mismatches enough from the server that it wants to correct the client.</div>
+<div class="description">Used only in server authoritative movement mode, see ServerAuthMovementMode documentation.&lt;br&gt;
+	Since it is sent to the specified client the target player is implied to be the receiver.&lt;br&gt;
+	It is an optional part of the server authoritative protocol. A server could choose to never send this or do all corrections
+	through MovePlayerPacket, although doing so would likely provide less smooth results.</div>
 <div style="margin-left: 0px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
 <thead>

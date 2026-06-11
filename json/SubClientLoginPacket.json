@@ -1,20 +1,14 @@
 {
+    "title": "SubClientLoginPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2567360791",
+    "$id": "/SubClientLoginPacket.json",
     "x-format-version": "MISSING VERSION",
     "x-minecraft-version": "1.26.40",
     "x-protocol-version": 2143,
-    "title": "SubClientLoginPacket",
     "description": "This packet starts the login process of subclients (splitscreen)",
-    "type": "object",
-    "properties": {
-        "Sub Client Connection Request": {
-            "description": "see @subClientConnectionRequest.html#diagram@",
-            "type": "string",
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "Sub Client Connection Request"
-    ]
+    "$ref": "./SubClientLoginPacketPayload.json",
+    "$metaProperties": {
+        "[cereal:packet]": 94,
+        "[cereal:packet_details]": ""
+    }
 }

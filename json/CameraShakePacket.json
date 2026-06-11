@@ -1,58 +1,14 @@
 {
+    "title": "CameraShakePacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1946768320",
+    "$id": "/CameraShakePacket.json",
     "x-format-version": "MISSING VERSION",
     "x-minecraft-version": "1.26.40",
     "x-protocol-version": 2143,
-    "title": "CameraShakePacket",
     "description": "Used to control trigger camera shake movements on the client's player camera",
-    "type": "object",
-    "properties": {
-        "Intensity": {
-            "description": "Camera shake intensity",
-            "type": "number",
-            "x-underlying-type": "float",
-            "x-ordinal-index": 0
-        },
-        "Seconds": {
-            "description": "Camera shake duration in seconds",
-            "type": "number",
-            "x-underlying-type": "float",
-            "x-ordinal-index": 1
-        },
-        "Shake Action": {
-            "title": "CameraShakeAction",
-            "description": "The action to perform to camera shake",
-            "type": "string",
-            "enum": [
-                "Add",
-                "Stop"
-            ],
-            "x-underlying-type": "uint8",
-            "x-serialization-options": [
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 3
-        },
-        "Shake Type": {
-            "title": "CameraShakeType",
-            "description": "The type of calculation used for determining camera shake",
-            "type": "string",
-            "enum": [
-                "Positional",
-                "Rotational"
-            ],
-            "x-underlying-type": "uint8",
-            "x-serialization-options": [
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 2
-        }
-    },
-    "required": [
-        "Intensity",
-        "Seconds",
-        "Shake Action",
-        "Shake Type"
-    ]
+    "$ref": "./CameraShakePacketPayload.json",
+    "$metaProperties": {
+        "[cereal:packet]": 159,
+        "[cereal:packet_details]": "It may be used to queue or stop a camera shake"
+    }
 }

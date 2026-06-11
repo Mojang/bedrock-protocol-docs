@@ -1,28 +1,14 @@
 {
+    "title": "PlayerStartItemCooldownPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3707032974",
+    "$id": "/PlayerStartItemCooldownPacket.json",
     "x-format-version": "MISSING VERSION",
     "x-minecraft-version": "1.26.40",
     "x-protocol-version": 2143,
-    "title": "PlayerStartItemCooldownPacket",
     "description": "Player Start Item Cooldown",
-    "type": "object",
-    "properties": {
-        "Duration Ticks": {
-            "type": "integer",
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Compression"
-            ],
-            "x-ordinal-index": 1
-        },
-        "Item Category": {
-            "type": "string",
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "Duration Ticks",
-        "Item Category"
-    ]
+    "$ref": "./PlayerStartItemCooldownPacketPayload.json",
+    "$metaProperties": {
+        "[cereal:packet]": 176,
+        "[cereal:packet_details]": "Packet sent by the player to start the cooldown on an item."
+    }
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MobEffectPacket</title>
+    <title>MobEffectPacket (28)</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -118,8 +118,17 @@
 <body>
     <div class="container">
         <p><a href="index.html">← Back to Index</a></p>
-        <h1>MobEffectPacket</h1>
+        <h1>MobEffectPacket (28)</h1>
 <div class="description">Mob Effect</div>
+<div class="description">At the start of the game the server sends any mob effects with _sendAdditionalLevelData() if the joining player saved out with them,
+and then anytime a mob effect is added, removed, or updated this packet is sent.&lt;br&gt;
+It is important for player movement simulation to ensure that the following effects are sent for the player or any client predicted vehicle they are in control of:&lt;br&gt;
+- levitation&lt;br&gt;
+- slow_falling&lt;br&gt;
+- jump&lt;br&gt;
+- movement_speed&lt;br&gt;
+- movement_slowdown&lt;br&gt;
+- weaving</div>
 <div style="margin-left: 0px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
 <thead>

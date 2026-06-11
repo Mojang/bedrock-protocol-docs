@@ -1,126 +1,14 @@
 {
+    "title": "DimensionDataPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "935550343",
+    "$id": "/DimensionDataPacket.json",
     "x-format-version": "MISSING VERSION",
     "x-minecraft-version": "1.26.40",
     "x-protocol-version": 2143,
-    "definitions": {
-        "532863306": {
-            "title": "DimensionDefinition",
-            "type": "object",
-            "properties": {
-                "Dimension Type": {
-                    "description": "Dimension runtime ID.",
-                    "$ref": "#/definitions/1586048219",
-                    "x-ordinal-index": 3
-                },
-                "Generator Type": {
-                    "title": "GeneratorType",
-                    "type": "string",
-                    "enum": [
-                        "Legacy",
-                        "Overworld",
-                        "Flat",
-                        "Nether",
-                        "TheEnd",
-                        "Void",
-                        "Undefined"
-                    ],
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression",
-                        "Enum-as-Value"
-                    ],
-                    "x-ordinal-index": 2
-                },
-                "Height Maximum": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                },
-                "Height Minimum": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 1
-                },
-                "Pack Id": {
-                    "description": "UUID of the pack that registered this dimension.",
-                    "$ref": "#/definitions/234962571",
-                    "x-ordinal-index": 4
-                }
-            },
-            "required": [
-                "Dimension Type",
-                "Generator Type",
-                "Height Maximum",
-                "Height Minimum",
-                "Pack Id"
-            ]
-        },
-        "1586048219": {
-            "title": "DimensionType",
-            "type": "object",
-            "properties": {
-                "value": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "value"
-            ]
-        },
-        "234962571": {
-            "title": "mce::UUID",
-            "type": "object",
-            "properties": {
-                "Least Significant Bits": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-ordinal-index": 1,
-                    "minimum": 0.0
-                },
-                "Most Significant Bits": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
-                }
-            },
-            "required": [
-                "Least Significant Bits",
-                "Most Significant Bits"
-            ]
-        }
-    },
-    "title": "DimensionDataPacket",
     "description": "Brief packet containing data-driven dimension properties",
-    "type": "object",
-    "properties": {
-        "Definitions": {
-            "description": "Map of dimension identifier to dimension definition.",
-            "type": "object",
-            "propertyNames": {
-                "type": "string",
-                "maxLength": 256
-            },
-            "additionalProperties": {
-                "$ref": "#/definitions/532863306"
-            },
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "Definitions"
-    ]
+    "$ref": "./DimensionDataPacketPayload.json",
+    "$metaProperties": {
+        "[cereal:packet]": 180,
+        "[cereal:packet_details]": "Contains dimension definition data including height bounds and generator type for each dimension."
+    }
 }

@@ -11,6 +11,7 @@ Features:
 - Sorts fields by ordinal index
 - Creates nested tables for complex types
 - Generates separate HTML files per packet
+- Supports granular JSON Schema files where $refs point to other files
 
 Usage:
     python generate_html_table.py [input_path] [output_path]
@@ -34,24 +35,31 @@ class PacketDocGenerator:
         self.output_dir = output_dir
         self.output_dir.mkdir(exist_ok=True)
         self.source_dir = source_dir
-        self.enum_cache = {}
-        self._load_enums()
-    
-    def _load_enums(self):
-        """Load all enum definitions from enum_*.json files."""
-        enum_files = self.source_dir.glob("enum_*.json")
-        for enum_file in enum_files:
-            try:
-                with open(enum_file, 'r', encoding='utf-8') as f:
-                    data = json.load(f)
-                    title = data.get('title', '')
-                    if title and 'enum' in data:
-                        self.enum_cache[title] = data['enum']
-            except Exception as e:
-                print(f"Warning: Could not load enum from {enum_file}: {e}")
-    
-    @staticmethod
-    def get_underlying_type(field_data: Dict[str, Any], definitions: Dict[str, Any]) -> str:
+        self._schema_cache: Dict[str, Dict] = {}
+
+    def _resolve_ref(self, ref: str, base_path: Path) -> Dict[str, Any]:
+        """
+        Resolve a $ref URI to a schema dict by loading the referenced file.
+
+        Resolves the relative path against base_path and returns the loaded
+        schema (cached). Returns an empty dict and prints a warning on failure.
+        """
+        resolved_path = (base_path / ref).resolve()
+        cache_key = str(resolved_path)
+
+        if cache_key in self._schema_cache:
+            return self._schema_cache[cache_key]
+
+        try:
+            with open(resolved_path, 'r', encoding='utf-8') as f:
+                schema = json.load(f)
+            self._schema_cache[cache_key] = schema
+            return schema
+        except Exception as e:
+            print(f"Warning: Could not resolve $ref '{ref}' from '{base_path}': {e}")
+            return {}
+
+    def get_underlying_type(self, field_data: Dict[str, Any], base_path: Path) -> str:
         """
         Extract the underlying type from field data.
         
@@ -88,13 +96,9 @@ class PacketDocGenerator:
         if field_data.get('type') == 'array':
             items = field_data.get('items', {})
             if '$ref' in items:
-                ref_id = items['$ref'].split('/')[-1]
-                if (definitions and ref_id in definitions):
-                    ref_schema = definitions[ref_id]
-                    ref_title = ref_schema.get('title', ref_id)
-                    return  f"array&lt;{ref_title}&gt;"
-
-                return f"array&lt;{ref_id}&gt;"
+                ref_schema = self._resolve_ref(items['$ref'], base_path)
+                ref_title = ref_schema.get('title', Path(items['$ref']).stem)
+                return f"array&lt;{ref_title}&gt;"
             elif 'x-underlying-type' in items:
                 return f"array&lt;{items['x-underlying-type']}&gt;"
             else:
@@ -107,12 +111,8 @@ class PacketDocGenerator:
         
         # Check for $ref
         if '$ref' in field_data:
-            ref_id = field_data['$ref'].split('/')[-1]
-            # Try to resolve the ref to get the title
-            if definitions and ref_id in definitions:
-                ref_schema = definitions[ref_id]
-                return ref_schema.get('title', ref_id)
-            return ref_id
+            ref_schema = self._resolve_ref(field_data['$ref'], base_path)
+            return ref_schema.get('title', Path(field_data['$ref']).stem)
         
         # Check for enum
         if 'enum' in field_data:
@@ -126,12 +126,12 @@ class PacketDocGenerator:
                 key_type = 'string'
                 value_type = 'object'
                 if 'key' in props:
-                    key_type = PacketDocGenerator.get_underlying_type(props['key'], definitions)
+                    key_type = self.get_underlying_type(props['key'], base_path)
                 if 'value' in props:
-                    value_type = PacketDocGenerator.get_underlying_type(props['value'], definitions)
+                    value_type = self.get_underlying_type(props['value'], base_path)
                 return f"object&lt;{key_type}, {value_type}&gt;"
             else:
-                value_type = PacketDocGenerator.get_underlying_type(additional_props, definitions)
+                value_type = self.get_underlying_type(additional_props, base_path)
                 return f"object&lt;string, {value_type}&gt;"
         
         # Fallback to basic type
@@ -173,7 +173,7 @@ class PacketDocGenerator:
         
         return '\n'.join(html)
     
-    def generate_oneof_table(self, field_data: Dict[str, Any], indent_level: int, definitions: Dict[str, Any]) -> str:
+    def generate_oneof_table(self, field_data: Dict[str, Any], indent_level: int, base_path: Path) -> str:
         """Generate a table displaying oneOf union types with expanded definitions."""
         if 'oneOf' not in field_data:
             return ""
@@ -186,7 +186,7 @@ class PacketDocGenerator:
         expanded_definitions_html = []
         
         for idx, one_of_item in enumerate(field_data['oneOf'], 0):
-            underlying_type = self.get_underlying_type(one_of_item, definitions)
+            underlying_type = self.get_underlying_type(one_of_item, base_path)
             oneof_type += underlying_type + ', '
             
             # Get any additional details
@@ -208,17 +208,17 @@ class PacketDocGenerator:
             
             # Try to expand the definition if it's a $ref
             if '$ref' in one_of_item:
-                ref_id = one_of_item['$ref'].split('/')[-1]
-                if ref_id in definitions:
-                    ref_schema = definitions[ref_id]
-                    ref_title = ref_schema.get('title', ref_id)
-                    
+                ref_schema = self._resolve_ref(one_of_item['$ref'], base_path)
+                if ref_schema:
+                    ref_title = ref_schema.get('title', Path(one_of_item['$ref']).stem)
+                    ref_base_path = (base_path / one_of_item['$ref']).resolve().parent
+
                     # Skip if title ends with "Payload"
                     if not ref_title.endswith('Payload'):
                         nested_html = self.generate_nested_table(
-                            ref_schema, 
-                            definitions, 
-                            "", 
+                            ref_schema,
+                            ref_base_path,
+                            "",
                             indent_level + 2  # Extra indent for oneOf variants
                         )
                         if nested_html:
@@ -258,8 +258,8 @@ class PacketDocGenerator:
         
         return '\n'.join(html)
     
-    def generate_nested_table(self, schema: Dict[str, Any], definitions: Dict[str, Any], 
-                             title: str, indent_level: int = 0) -> str:
+    def generate_nested_table(self, schema: Dict[str, Any], base_path: Path,
+                              title: str, indent_level: int = 0) -> str:
         """
         Generate an HTML table for a schema object.
         
@@ -299,7 +299,7 @@ class PacketDocGenerator:
         html.append('<tbody>')
         
         for field_name, field_data in sorted_properties:
-            underlying_type = self.get_underlying_type(field_data, definitions)
+            underlying_type = self.get_underlying_type(field_data, base_path)
             ordinal = self.get_ordinal_index(field_data)
             description = escape(field_data.get('description', ''))
             is_required = field_name in required
@@ -318,39 +318,40 @@ class PacketDocGenerator:
             
             # Check for oneOf first
             if 'oneOf' in field_data:
-                oneof_html = self.generate_oneof_table(field_data, 0, definitions)
+                oneof_html = self.generate_oneof_table(field_data, 0, base_path)
             # Check for inline enum (defined in the field itself)
             elif 'enum' in field_data:
                 enum_values = field_data['enum']
                 enum_html = self.generate_enum_table(enum_values, 0)
-            # Check for enum reference in title (external enum file)
-            elif field_data.get('title', '') in self.enum_cache:
-                enum_title = field_data['title']
-                enum_values = self.enum_cache[enum_title]
-                enum_html = self.generate_enum_table(enum_values, 0)
-            # Check if this field references another definition (nested table)
+            # Check if this field references another schema file
             elif '$ref' in field_data:
-                ref_id = field_data['$ref'].split('/')[-1]
-                if ref_id in definitions:
-                    ref_schema = definitions[ref_id]
-                    underlying_type = ref_title = ref_schema.get('title', ref_id)
-                    
-                    # Skip if title ends with "Payload"
-                    if not ref_title.endswith('Payload'):
-                        nested_html = self.generate_nested_table(
-                            ref_schema, 
-                            definitions, 
-                            ref_title, 
-                            1  # Nested indent
-                        )
+                ref_schema = self._resolve_ref(field_data['$ref'], base_path)
+
+                if ref_schema:
+                    # Enum check: embed enum table if the referenced schema is an enum
+                    if 'enum' in ref_schema:
+                        enum_html = self.generate_enum_table(ref_schema['enum'], 0)
+                    else:
+                        ref_title = ref_schema.get('title', Path(field_data['$ref']).stem)
+                        underlying_type = ref_title
+                        ref_base_path = (base_path / field_data['$ref']).resolve().parent
+
+                        # Skip if title ends with "Payload"
+                        if not ref_title.endswith('Payload'):
+                            nested_html = self.generate_nested_table(
+                                ref_schema,
+                                ref_base_path,
+                                ref_title,
+                                1  # Nested indent
+                            )
             # Check if this is an array with object items
             elif field_data.get('type') == 'array':
                 items = field_data.get('items', {})
                 if '$ref' in items:
-                    ref_id = items['$ref'].split('/')[-1]
-                    if ref_id in definitions:
-                        ref_schema = definitions[ref_id]
-                        ref_title = ref_schema.get('title', ref_id)
+                    ref_schema = self._resolve_ref(items['$ref'], base_path)
+                    if ref_schema:
+                        ref_title = ref_schema.get('title', Path(items['$ref']).stem)
+                        ref_base_path = (base_path / items['$ref']).resolve().parent
 
                         if 'x-serialization-options' in field_data:
                             ref_title += f" ({field_data['x-serialization-options']})"
@@ -358,9 +359,9 @@ class PacketDocGenerator:
                         # Skip if title ends with "Payload"
                         if not ref_title.endswith('Payload'):
                             nested_html = self.generate_nested_table(
-                                ref_schema, 
-                                definitions, 
-                                f"{ref_title} (Array Item)", 
+                                ref_schema,
+                                ref_base_path,
+                                f"{ref_title} (Array Item)",
                                 1  # Nested indent
                             )
             # Check if this is an object with additionalProperties (map type)
@@ -370,7 +371,7 @@ class PacketDocGenerator:
                     # Build a nested table showing key and value structure
                     nested_html = self.generate_nested_table(
                         additional_props,
-                        definitions,
+                        base_path,
                         "Map Entry",
                         1  # Nested indent
                     )
@@ -562,9 +563,15 @@ class PacketDocGenerator:
             title = data.get('title', filepath.stem)
             description = data.get('description', '')
             extra_details = ''
-            definitions = data.get('definitions', {})
+            base_path = filepath.parent
             meta_properties = data.get('$metaProperties', {})
             
+            # Check whether _this_ schema is a $ref, and if so, resolve it and use the referenced schema instead
+            if '$ref' in data:
+                ref_schema = self._resolve_ref(data['$ref'], base_path)
+                if ref_schema:
+                    data = ref_schema  # Use the referenced schema for table generation
+
             # Skip files ending with Payload
             if title.endswith('Payload'):
                 return "", "", ""
@@ -591,32 +598,27 @@ class PacketDocGenerator:
             
             # Check if main object has a single mPayload property that references a Payload definition
             properties = data.get('properties', {})
-            if (data.get('type') == 'object' and 
-                len(properties) == 1 and 
-                'mPayload' in properties and 
-                '$ref' in properties['mPayload']):
-                
-                # Get the payload definition
-                ref_id = properties['mPayload']['$ref'].split('/')[-1]
-                if ref_id in definitions:
-                    payload_schema = definitions[ref_id]
-                    payload_title = payload_schema.get('title', '')
-                    
-                    # If the payload ends with "Payload", expand it directly
-                    if payload_title.endswith('Payload'):
-                        table_html = self.generate_nested_table(payload_schema, definitions, "", 0)
-                        html_parts.append(table_html)
-                    else:
-                        # Process normally
-                        table_html = self.generate_nested_table(data, definitions, "", 0)
-                        html_parts.append(table_html)
+
+            # If the packet has a single mPayload $ref, expand the payload directly
+            if (data.get('type') == 'object' and
+                    len(properties) == 1 and
+                    'mPayload' in properties and
+                    '$ref' in properties['mPayload']):
+
+                payload_ref = properties['mPayload']['$ref']
+                payload_schema = self._resolve_ref(payload_ref, base_path)
+                payload_title = payload_schema.get('title', '')
+                payload_base_path = (base_path / payload_ref).resolve().parent
+
+                if payload_title.endswith('Payload'):
+                    # Expand the payload directly
+                    table_html = self.generate_nested_table(payload_schema, payload_base_path, "", 0)
                 else:
-                    # Process normally if ref not found
-                    table_html = self.generate_nested_table(data, definitions, "", 0)
-                    html_parts.append(table_html)
+                    table_html = self.generate_nested_table(data, base_path, "", 0)
+                html_parts.append(table_html)
+
             elif data.get('type') == 'object' and 'properties' in data:
-                # Process main properties normally
-                table_html = self.generate_nested_table(data, definitions, "", 0)
+                table_html = self.generate_nested_table(data, base_path, "", 0)
                 html_parts.append(table_html)
             
             return title, description, '\n'.join(html_parts), packet_id
@@ -730,12 +732,7 @@ def main():
     # Generate documentation
     generator = PacketDocGenerator(output_path, input_path)
 
-    # Get all JSON files except those starting with "enum_"
-    json_files = sorted([
-        f for f in input_path.glob("*.json") 
-        if not f.name.startswith("enum_")
-    ])
-
+    json_files = sorted(input_path.glob("*Packet.json"))
     if not json_files:
         print(f"Warning: No JSON files found in {input_path}")
         sys.exit(1)

@@ -1,0 +1,37 @@
+{
+    "title": "SubChunkPosOffset",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/SubChunkPosOffset.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40",
+    "x-protocol-version": 2143,
+    "type": "object",
+    "properties": {
+        "Subchunk Offset X": {
+            "type": "integer",
+            "x-underlying-type": "int8",
+            "x-ordinal-index": 0,
+            "minimum": -128.0,
+            "maximum": 127.0
+        },
+        "Subchunk Offset Y": {
+            "type": "integer",
+            "x-underlying-type": "int8",
+            "x-ordinal-index": 1,
+            "minimum": -128.0,
+            "maximum": 127.0
+        },
+        "Subchunk Offset Z": {
+            "type": "integer",
+            "x-underlying-type": "int8",
+            "x-ordinal-index": 2,
+            "minimum": -128.0,
+            "maximum": 127.0
+        }
+    },
+    "required": [
+        "Subchunk Offset X",
+        "Subchunk Offset Y",
+        "Subchunk Offset Z"
+    ]
+}

@@ -1,9 +1,14 @@
 {
+    "title": "RefreshEntitlementsPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2489616968",
+    "$id": "/RefreshEntitlementsPacket.json",
     "x-format-version": "MISSING VERSION",
     "x-minecraft-version": "1.26.40",
     "x-protocol-version": 2143,
-    "title": "RefreshEntitlementsPacket",
-    "description": "Refresh Entitlements"
+    "description": "Refresh Entitlements",
+    "$ref": "./RefreshEntitlementsPacketPayload.json",
+    "$metaProperties": {
+        "[cereal:packet]": 305,
+        "[cereal:packet_details]": ""
+    }
 }

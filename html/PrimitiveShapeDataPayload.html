@@ -1,0 +1,46 @@
+<!DOCTYPE html> <html> <head><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100% ;}.tab { margin-left: 40px; }td, th{text-align: left;padding: 8px;}tr:nth-child(even) {background-color: #dddddd;}div#expand{display:block;}</style> </head> <body><img src="svg/PrimitiveShapeDataPayload.svg" alt="PrimitiveShapeDataPayload">
+<br><table><col width="10%"><col width="10%"><col width="15%"><col width="80%"><tr><th>Field Name</th><th>Field Type</th><th>Field Constraints</th><th>Field Notes</th></tr><tr><td>NetworkId</td>
+<td>unsigned varint64</td>
+<td>&lt;div style="padding-left: 0px;"&gt;Minimum = 0&lt;/div&gt;</td>
+<td>uint64 network id used to identify the matching shape on the client as the server</td>
+</tr><tr><td>Shape Type</td>
+<td>enum ScriptModuleMinecraft::ScriptPrimitiveShapeType</td>
+<td></td>
+<td>Byte representing the type of debug shape (Line, Box, Sphere, Circle, Text).</td>
+</tr><tr><td>Location</td>
+<td>Vec3</td>
+<td></td>
+<td>Vec3 location of the debug shape in the world.</td>
+</tr><tr><td>Scale</td>
+<td>float</td>
+<td></td>
+<td>Float scale of the debug shape in the world.</td>
+</tr><tr><td>Rotation</td>
+<td>Vec3</td>
+<td></td>
+<td>Vec3 (Euler angles in radians, PYR) rotation of the debug shape in the world.</td>
+</tr><tr><td>Total Time Left</td>
+<td>float</td>
+<td></td>
+<td>The total time left in seconds until this debug shape will be removed (0 meaning never).</td>
+</tr><tr><td>Maximum Render Distance</td>
+<td>float</td>
+<td></td>
+<td>The maximum distacne away that this shape will render for each client.</td>
+</tr><tr><td>Color</td>
+<td>Color</td>
+<td></td>
+<td>Color (ARGB Hex string) of the debug shape.</td>
+</tr><tr><td>Dimension ID</td>
+<td>DimensionType</td>
+<td></td>
+<td>Currently supported: (0 -&gt; Overworld, 1 -&gt; Nether, 2 -&gt; The End, 3 -&gt; Undefined)</td>
+</tr><tr><td>Attached To Entity ID</td>
+<td>ActorUniqueID</td>
+<td></td>
+<td>Runtime ID of the entity this shape is attached to.</td>
+</tr><tr><td>Extra Shape Data</td>
+<td></td>
+<td></td>
+<td>Extra payload (variant) holding data specific to the type of shape (such as text string for the text shape).</td>
+</tr></table></body> </html>
