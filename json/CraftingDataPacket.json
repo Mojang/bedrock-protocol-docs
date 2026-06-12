@@ -1,0 +1,674 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "2033218355",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.26",
+    "x-protocol-version": 2144,
+    "definitions": {
+        "1429287564": {
+            "title": "Item Descriptor",
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                }
+            ]
+        },
+        "1164730002": {
+            "title": "RecipeIngredient",
+            "type": "object",
+            "properties": {
+                "Aux Value": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0,
+                    "maximum": 32767.0
+                },
+                "Descriptor": {
+                    "$ref": "#/definitions/3180147083",
+                    "x-ordinal-index": 0
+                },
+                "Stack Size": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2,
+                    "minimum": 0.0,
+                    "maximum": 64.0
+                }
+            },
+            "required": [
+                "Aux Value",
+                "Descriptor",
+                "Stack Size"
+            ]
+        },
+        "643238825": {
+            "title": "ShapelessRecipePayload",
+            "type": "object",
+            "properties": {
+                "Ingredients": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/1164730002"
+                    },
+                    "x-ordinal-index": 1,
+                    "maxItems": 128
+                },
+                "Net Id": {
+                    "$ref": "#/definitions/605048677",
+                    "x-ordinal-index": 7
+                },
+                "Priority": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 5
+                },
+                "Recipe Id": {
+                    "type": "string",
+                    "x-ordinal-index": 0
+                },
+                "Results": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/4281128370"
+                    },
+                    "x-ordinal-index": 2
+                },
+                "Tag": {
+                    "type": "string",
+                    "x-ordinal-index": 4
+                },
+                "UUID": {
+                    "$ref": "#/definitions/234962571",
+                    "x-ordinal-index": 3
+                },
+                "Unlocking Requirement": {
+                    "$ref": "#/definitions/4059742394",
+                    "x-ordinal-index": 6
+                }
+            },
+            "required": [
+                "Ingredients",
+                "Net Id",
+                "Priority",
+                "Recipe Id",
+                "Results",
+                "Tag",
+                "UUID"
+            ]
+        },
+        "605048677": {
+            "title": "RecipeNetId",
+            "type": "object",
+            "properties": {
+                "Raw Id": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Raw Id"
+            ]
+        },
+        "4281128370": {
+            "title": "NetworkItemInstanceDescriptorData",
+            "type": "object",
+            "properties": {
+                "Aux value": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2,
+                    "minimum": 0.0,
+                    "maximum": 32767.0
+                },
+                "Block Runtime Id": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 3
+                },
+                "Id": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": -32768.0,
+                    "maximum": 32767.0
+                },
+                "Stack size": {
+                    "type": "integer",
+                    "x-underlying-type": "uint16",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0,
+                    "maximum": 64.0
+                },
+                "User Data Buffer": {
+                    "type": "string",
+                    "x-ordinal-index": 4
+                }
+            },
+            "required": [
+                "Aux value",
+                "Block Runtime Id",
+                "Id",
+                "Stack size",
+                "User Data Buffer"
+            ]
+        },
+        "4059742394": {
+            "title": "RecipeUnlockingRequirement",
+            "type": "object",
+            "properties": {
+                "Unlocking Context": {
+                    "title": "RecipeUnlockingContext",
+                    "type": "string",
+                    "enum": [
+                        "None",
+                        "AlwaysUnlocked",
+                        "PlayerInWater",
+                        "PlayerHasManyItems"
+                    ],
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression",
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Unlocking Ingredients": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/1164730002"
+                    },
+                    "x-ordinal-index": 1,
+                    "maxItems": 128
+                }
+            },
+            "required": [
+                "Unlocking Context"
+            ]
+        },
+        "2535987765": {
+            "title": "MaterialReducerEntryOutput",
+            "type": "object",
+            "properties": {
+                "Item Count": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1
+                },
+                "Item Id": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Item Count",
+                "Item Id"
+            ]
+        },
+        "3180147083": {
+            "title": "item_descriptor",
+            "$ref": "#/definitions/1429287564"
+        },
+        "234962571": {
+            "title": "mce::UUID",
+            "type": "object",
+            "properties": {
+                "Least Significant Bits": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                },
+                "Most Significant Bits": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Least Significant Bits",
+                "Most Significant Bits"
+            ]
+        },
+        "2454332806": {
+            "title": "ContainerMixDataEntry",
+            "type": "object",
+            "properties": {
+                "From Item Id": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Reagent Item Id": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1
+                },
+                "To Item Id": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "From Item Id",
+                "Reagent Item Id",
+                "To Item Id"
+            ]
+        },
+        "22132088": {
+            "title": "SmithingTransformRecipePayload",
+            "type": "object",
+            "properties": {
+                "Addition Ingredient": {
+                    "$ref": "#/definitions/1164730002",
+                    "x-ordinal-index": 3
+                },
+                "Base Ingredient": {
+                    "$ref": "#/definitions/1164730002",
+                    "x-ordinal-index": 2
+                },
+                "Net Id": {
+                    "$ref": "#/definitions/605048677",
+                    "x-ordinal-index": 6
+                },
+                "Recipe Id": {
+                    "type": "string",
+                    "x-ordinal-index": 0
+                },
+                "Result": {
+                    "$ref": "#/definitions/4281128370",
+                    "x-ordinal-index": 4
+                },
+                "Tag": {
+                    "type": "string",
+                    "x-ordinal-index": 5
+                },
+                "Template Ingredient": {
+                    "$ref": "#/definitions/1164730002",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Addition Ingredient",
+                "Base Ingredient",
+                "Net Id",
+                "Recipe Id",
+                "Result",
+                "Tag",
+                "Template Ingredient"
+            ]
+        },
+        "1174207688": {
+            "title": "SmithingTrimRecipePayload",
+            "type": "object",
+            "properties": {
+                "Addition Ingredient": {
+                    "$ref": "#/definitions/1164730002",
+                    "x-ordinal-index": 3
+                },
+                "Base Ingredient": {
+                    "$ref": "#/definitions/1164730002",
+                    "x-ordinal-index": 2
+                },
+                "Net Id": {
+                    "$ref": "#/definitions/605048677",
+                    "x-ordinal-index": 5
+                },
+                "Recipe Id": {
+                    "type": "string",
+                    "x-ordinal-index": 0
+                },
+                "Tag": {
+                    "type": "string",
+                    "x-ordinal-index": 4
+                },
+                "Template Ingredient": {
+                    "$ref": "#/definitions/1164730002",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Addition Ingredient",
+                "Base Ingredient",
+                "Net Id",
+                "Recipe Id",
+                "Tag",
+                "Template Ingredient"
+            ]
+        },
+        "2139238466": {
+            "title": "ShapedRecipePayload",
+            "type": "object",
+            "properties": {
+                "Assume Symmetry": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 8
+                },
+                "Height": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2
+                },
+                "Ingredients": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/1164730002"
+                    },
+                    "x-ordinal-index": 3,
+                    "maxItems": 128
+                },
+                "Net Id": {
+                    "$ref": "#/definitions/605048677",
+                    "x-ordinal-index": 10
+                },
+                "Priority": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 7
+                },
+                "Recipe Id": {
+                    "type": "string",
+                    "x-ordinal-index": 0
+                },
+                "Results": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/4281128370"
+                    },
+                    "x-ordinal-index": 4
+                },
+                "Tag": {
+                    "type": "string",
+                    "x-ordinal-index": 6
+                },
+                "UUID": {
+                    "$ref": "#/definitions/234962571",
+                    "x-ordinal-index": 5
+                },
+                "Unlocking Requirement": {
+                    "$ref": "#/definitions/4059742394",
+                    "x-ordinal-index": 9
+                },
+                "Width": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Assume Symmetry",
+                "Height",
+                "Ingredients",
+                "Net Id",
+                "Priority",
+                "Recipe Id",
+                "Results",
+                "Tag",
+                "UUID",
+                "Width"
+            ]
+        },
+        "1750953424": {
+            "title": "MaterialReducerDataEntry",
+            "type": "object",
+            "properties": {
+                "From Item Key": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Item Ids and Counts": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/2535987765"
+                    },
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "From Item Key",
+                "Item Ids and Counts"
+            ]
+        },
+        "3094719102": {
+            "title": "MultiRecipePayload",
+            "type": "object",
+            "properties": {
+                "Multi-Recipe UUID": {
+                    "$ref": "#/definitions/234962571",
+                    "x-ordinal-index": 0
+                },
+                "Net Id": {
+                    "$ref": "#/definitions/605048677",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Multi-Recipe UUID",
+                "Net Id"
+            ]
+        },
+        "3787820656": {
+            "title": "PotionMixDataEntry",
+            "type": "object",
+            "properties": {
+                "From Item Aux": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1
+                },
+                "From Potion Id": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Reagent Item Aux": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 3
+                },
+                "Reagent Item Id": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2
+                },
+                "To Item Aux": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 5
+                },
+                "To Potion Id": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 4
+                }
+            },
+            "required": [
+                "From Item Aux",
+                "From Potion Id",
+                "Reagent Item Aux",
+                "Reagent Item Id",
+                "To Item Aux",
+                "To Potion Id"
+            ]
+        }
+    },
+    "title": "CraftingDataPacket",
+    "type": "object",
+    "properties": {
+        "Clear Recipes": {
+            "type": "boolean",
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 11
+        },
+        "Container Mixes": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/2454332806"
+            },
+            "x-ordinal-index": 9
+        },
+        "Material Reducers": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/1750953424"
+            },
+            "x-ordinal-index": 10
+        },
+        "Multi Recipes": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/3094719102"
+            },
+            "x-ordinal-index": 2
+        },
+        "Potion Mixes": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/3787820656"
+            },
+            "x-ordinal-index": 8
+        },
+        "Shaped Chemistry Recipes": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/2139238466"
+            },
+            "x-ordinal-index": 5
+        },
+        "Shaped Recipes": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/2139238466"
+            },
+            "x-ordinal-index": 0
+        },
+        "Shapeless Chemistry Recipes": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/643238825"
+            },
+            "x-ordinal-index": 4
+        },
+        "Shapeless Recipes": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/643238825"
+            },
+            "x-ordinal-index": 1
+        },
+        "Smithing Transform Recipes": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/22132088"
+            },
+            "x-ordinal-index": 6
+        },
+        "Smithing Trim Recipes": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/1174207688"
+            },
+            "x-ordinal-index": 7
+        },
+        "User Data Shapeless Recipes": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/643238825"
+            },
+            "x-ordinal-index": 3
+        }
+    },
+    "required": [
+        "Clear Recipes",
+        "Container Mixes",
+        "Material Reducers",
+        "Multi Recipes",
+        "Potion Mixes",
+        "Shaped Chemistry Recipes",
+        "Shaped Recipes",
+        "Shapeless Chemistry Recipes",
+        "Shapeless Recipes",
+        "Smithing Transform Recipes",
+        "Smithing Trim Recipes",
+        "User Data Shapeless Recipes"
+    ]
+}

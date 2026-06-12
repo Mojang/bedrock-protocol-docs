@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3821917984",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.24",
-    "x-protocol-version": 2138,
+    "x-minecraft-version": "1.26.40-beta.26",
+    "x-protocol-version": 2144,
     "title": "RequestAbilityPacket",
     "type": "object",
     "properties": {
@@ -13,7 +13,9 @@
             "x-serialization-options": [
                 "Compression"
             ],
-            "x-ordinal-index": 0
+            "x-ordinal-index": 0,
+            "minimum": 0.0,
+            "maximum": 19.0
         },
         "Bool": {
             "type": "boolean",

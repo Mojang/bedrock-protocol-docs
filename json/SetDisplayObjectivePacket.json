@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "366755398",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.24",
-    "x-protocol-version": 2138,
+    "x-minecraft-version": "1.26.40-beta.26",
+    "x-protocol-version": 2144,
     "title": "SetDisplayObjectivePacket",
     "type": "object",
     "properties": {

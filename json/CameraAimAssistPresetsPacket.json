@@ -2,11 +2,11 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "992428452",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.24",
-    "x-protocol-version": 2138,
+    "x-minecraft-version": "1.26.40-beta.26",
+    "x-protocol-version": 2144,
     "definitions": {
         "2033610203": {
-            "title": "Reference",
+            "title": "Reference 1",
             "type": "string"
         },
         "193467851": {
@@ -103,15 +103,15 @@
             ]
         },
         "1550212535": {
-            "title": "Reference",
+            "title": "Reference 10",
             "type": "string"
         },
         "453697823": {
-            "title": "Identifier",
+            "title": "Identifier 5",
             "type": "string"
         },
         "1330773719": {
-            "title": "Reference",
+            "title": "Reference 6",
             "type": "string"
         },
         "3012995618": {
@@ -133,11 +133,11 @@
             ]
         },
         "3152646801": {
-            "title": "Reference",
+            "title": "Reference 0",
             "type": "string"
         },
         "84316499": {
-            "title": "Identifier",
+            "title": "Identifier 6",
             "type": "string"
         },
         "1414832143": {

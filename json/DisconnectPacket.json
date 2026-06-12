@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1727225415",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.24",
-    "x-protocol-version": 2138,
+    "x-minecraft-version": "1.26.40-beta.26",
+    "x-protocol-version": 2144,
     "definitions": {
         "866683631": {
             "title": "DisconnectPacketMessages",
@@ -188,7 +188,8 @@
                 "HostDisconnected",
                 "EditorJoinIntentPolicyFailure",
                 "NetherNetIdentityNotAllowed",
-                "InvalidName"
+                "InvalidName",
+                "ExpiredToken"
             ],
             "x-underlying-type": "int32",
             "x-serialization-options": [
