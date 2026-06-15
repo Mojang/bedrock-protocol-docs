@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1218939656",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30-beta.0",
-    "x-protocol-version": 1001,
+    "x-minecraft-version": "1.26.40-beta.0",
+    "x-protocol-version": 2147,
     "title": "RemoveObjectivePacket",
     "description": "Using the scoreboard command, users can remove objectives that are tracked on the scoreboard.",
     "type": "object",
@@ -15,5 +15,9 @@
     },
     "required": [
         "Objective Name"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 106,
+        "[cereal:packet_details]": "This is just the name of the objective."
+    }
 }

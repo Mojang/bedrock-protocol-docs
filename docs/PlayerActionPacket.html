@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlayerActionPacket</title>
+    <title>PlayerActionPacket (36)</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -118,8 +118,11 @@
 <body>
     <div class="container">
         <p><a href="index.html">← Back to Index</a></p>
-        <h1>PlayerActionPacket</h1>
+        <h1>PlayerActionPacket (36)</h1>
 <div class="description">Sent from the client whenever the player performs an action (dashing, un-dashing, use an item, mine/hit, use a block, etc).</div>
+<div class="description">The expected actions change depending on the ServerAuthMovementMode specified in the StartGamePacket.
+	See the PlayerActionType enum for details on which have differing behavior.
+	See also PlayerAuthInputPacket and InventoryTransactionPacket for similar types of player actions.</div>
 <div style="margin-left: 0px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
         <thead>
@@ -311,6 +314,10 @@
             </tr>
 <tr>
             <td style="text-align: center;">33</td>
+            <td><code>InternalUpdate</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">34</td>
             <td><code>Count</code></td>
             </tr>
         </tbody>

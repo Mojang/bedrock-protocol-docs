@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1621046817",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30-beta.0",
-    "x-protocol-version": 1001,
+    "x-minecraft-version": "1.26.40-beta.0",
+    "x-protocol-version": 2147,
     "definitions": {
         "3514617014": {
             "title": "AdventureSettings",
@@ -55,5 +55,9 @@
     },
     "required": [
         "Adventure Settings"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 188,
+        "[cereal:packet_details]": "Sent by the server to update the state of AdventureSettings. Replaces the AdventureSettingsPacket for updating AdventureSettings from server to client."
+    }
 }

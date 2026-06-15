@@ -1,0 +1,185 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "2225790313",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.0",
+    "x-protocol-version": 2147,
+    "definitions": {
+        "4068247745": {
+            "title": "CreativeItemEntryPayload",
+            "type": "object",
+            "properties": {
+                "Creative Net Id": {
+                    "$ref": "#/definitions/2270413125",
+                    "x-ordinal-index": 0
+                },
+                "Group Index": {
+                    "description": "Zero-based index into the Groups list above, identifying which group this item belongs to. The reserved sentinel value 0xFFFFFFFF (uint32 max, CreativeItemRegistry::INVALID_INDEX) indicates the item has no group and should appear ungrouped in the creative inventory.",
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2,
+                    "minimum": 0.0
+                },
+                "Item Instance": {
+                    "$ref": "#/definitions/1635311692",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Creative Net Id",
+                "Group Index",
+                "Item Instance"
+            ]
+        },
+        "2270413125": {
+            "title": "CreativeItemNetId",
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "description": "Creative Item Net Id (32 bit signed)",
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "ID"
+            ]
+        },
+        "1635311692": {
+            "title": "NetworkItemInstanceDescriptor",
+            "$ref": "#/definitions/4281128370"
+        },
+        "4281128370": {
+            "title": "NetworkItemInstanceDescriptorData",
+            "type": "object",
+            "properties": {
+                "Aux value": {
+                    "description": "Item auxiliary/metadata value. Ignored for block items where aux is always 0.",
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2,
+                    "minimum": 0.0,
+                    "maximum": 32767.0
+                },
+                "Block Runtime Id": {
+                    "description": "Runtime block state ID associated with this item when it represents a block.",
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 3
+                },
+                "Id": {
+                    "description": "Item id (network varint). Send fixed Id of 0 for invalid item.",
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": -32768.0,
+                    "maximum": 32767.0
+                },
+                "Stack size": {
+                    "description": "The number of items in the stack.",
+                    "type": "integer",
+                    "x-underlying-type": "uint16",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0,
+                    "maximum": 64.0
+                },
+                "User Data Buffer": {
+                    "description": "The item user data binary blob encoded as a String.",
+                    "type": "string",
+                    "x-ordinal-index": 4
+                }
+            },
+            "required": [
+                "Aux value",
+                "Block Runtime Id",
+                "Id",
+                "Stack size",
+                "User Data Buffer"
+            ]
+        },
+        "2410564703": {
+            "title": "CreativeGroupInfoPayload",
+            "type": "object",
+            "properties": {
+                "Creative Category": {
+                    "title": "CreativeItemCategory",
+                    "description": "Creative Category that the group belongs to. Valid values are 1 through 5.",
+                    "type": "string",
+                    "enum": [
+                        "Construction",
+                        "Nature",
+                        "Equipment",
+                        "Items",
+                        "ItemCommandOnly"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Group Icon Item": {
+                    "description": "Leave empty if there is no name for this group.",
+                    "$ref": "#/definitions/1635311692",
+                    "x-ordinal-index": 2
+                },
+                "Name": {
+                    "description": "Localized name. Leave empty for an anonymous group (group that doesn't collapse).",
+                    "type": "string",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Creative Category",
+                "Group Icon Item",
+                "Name"
+            ]
+        }
+    },
+    "title": "CreativeContentPacket",
+    "description": "Creative Content",
+    "type": "object",
+    "properties": {
+        "Entries": {
+            "description": "Collection of all creative item entries.",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/4068247745"
+            },
+            "x-ordinal-index": 1
+        },
+        "Groups": {
+            "description": "Collection of all groups with and without names. Groups with names show up in the Creative Inventory/Recipe Book with a collapsible icon.",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/2410564703"
+            },
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Entries",
+        "Groups"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 145,
+        "[cereal:packet_details]": "Sent once by the server on startup to tell clients all of the items that can show up in the creative menu and recipe book."
+    }
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SetPlayerGameTypePacket</title>
+    <title>SetPlayerGameTypePacket (62)</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -118,8 +118,9 @@
 <body>
     <div class="container">
         <p><a href="index.html">← Back to Index</a></p>
-        <h1>SetPlayerGameTypePacket</h1>
+        <h1>SetPlayerGameTypePacket (62)</h1>
 <div class="description">Set Player Game Type</div>
+<div class="description">The client handles the change of the UI element (the gametype dropdown, although this can be avoided by changing via command or on the server), then the client sends a packet to the server, then the server changes the player&#39;s gametype and sends a packet back (UpdatePlayerGameTypePacket) to make sure it matches on the client.</div>
 <div style="margin-left: 0px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
         <thead>

@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1423027338",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30-beta.0",
-    "x-protocol-version": 1001,
+    "x-minecraft-version": "1.26.40-beta.0",
+    "x-protocol-version": 2147,
     "title": "LoginPacket",
     "description": "Sent once from client to server at login. About 100k.",
     "type": "object",
@@ -26,5 +26,9 @@
     "required": [
         "Client Network Version",
         "Connection Request"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 1,
+        "[cereal:packet_details]": ""
+    }
 }

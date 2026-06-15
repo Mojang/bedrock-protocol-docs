@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1779298456",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30-beta.0",
-    "x-protocol-version": 1001,
+    "x-minecraft-version": "1.26.40-beta.0",
+    "x-protocol-version": 2147,
     "definitions": {
         "1488572312": {
             "title": "BlockPos",
@@ -90,5 +90,9 @@
         "Container Type",
         "Position",
         "Target Actor ID"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 46,
+        "[cereal:packet_details]": ""
+    }
 }

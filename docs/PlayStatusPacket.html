@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlayStatusPacket</title>
+    <title>PlayStatusPacket (2)</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -118,8 +118,13 @@
 <body>
     <div class="container">
         <p><a href="index.html">← Back to Index</a></p>
-        <h1>PlayStatusPacket</h1>
+        <h1>PlayStatusPacket (2)</h1>
 <div class="description">Describes the login status of the player</div>
+<div class="description">
+	Used after the Server handles a Login or (Sub)Client Authentication Packet
+	If everything is good, then it sends this packet to the client to finish the handshake.
+	If everything is not good, it terminates the connection.
+	</div>
 <div style="margin-left: 0px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
         <thead>

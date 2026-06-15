@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "699900528",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30-beta.0",
-    "x-protocol-version": 1001,
+    "x-minecraft-version": "1.26.40-beta.0",
+    "x-protocol-version": 2147,
     "definitions": {
         "2795875739": {
             "title": "InventoryOptions",
@@ -102,5 +102,9 @@
     },
     "required": [
         "Inventory Options"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 307,
+        "[cereal:packet_details]": ""
+    }
 }

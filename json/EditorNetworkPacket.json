@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3699044150",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30-beta.0",
-    "x-protocol-version": 1001,
+    "x-minecraft-version": "1.26.40-beta.0",
+    "x-protocol-version": 2147,
     "title": "EditorNetworkPacket",
     "description": "General use Editor specific packet - carries a payload of whatever serialized data that the individual IEditorNetworkPayload generates.",
     "type": "object",
@@ -26,5 +26,9 @@
         "Raw Variant Data",
         "Raw Variant Name",
         "Route To Manager"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 190,
+        "[cereal:packet_details]": ""
+    }
 }

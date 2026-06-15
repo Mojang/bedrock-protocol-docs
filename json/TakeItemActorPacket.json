@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2294624498",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30-beta.0",
-    "x-protocol-version": 1001,
+    "x-minecraft-version": "1.26.40-beta.0",
+    "x-protocol-version": 2147,
     "definitions": {
         "1750201151": {
             "title": "ActorRuntimeID",
@@ -40,5 +40,9 @@
     "required": [
         "Actor Runtime ID",
         "Item Runtime ID"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 17,
+        "[cereal:packet_details]": "From this the item and count is turned into an item and the transaction is handled afterwards."
+    }
 }

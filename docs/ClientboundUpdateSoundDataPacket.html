@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClientboundUpdateSoundDataPacket</title>
+    <title>ClientboundUpdateSoundDataPacket (348)</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -118,7 +118,7 @@
 <body>
     <div class="container">
         <p><a href="index.html">← Back to Index</a></p>
-        <h1>ClientboundUpdateSoundDataPacket</h1>
+        <h1>ClientboundUpdateSoundDataPacket (348)</h1>
 <div class="description">Sent to update sound data.</div>
 <div style="margin-left: 0px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
@@ -161,28 +161,1094 @@
 </div></td>
                 </tr>
 <tr>
-<td rowspan="2"><strong>Sound Event (Required)</strong></td>
-<td>string</td>
+<td rowspan="2"><strong>Stop</strong></td>
+<td>oneOf</td>
                 <td>1</td>
                 <td></td>
             </tr>
 <tr>
-                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
-    <strong>Enum Values:</strong>
-    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+                    <td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
+    <strong>oneOf&lt;Stop, SetVolume, SetPitch, Fade, SeekTo, Pause, Resume&gt;:</strong>
+    <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
         <thead>
             <tr style="background-color: #e8e8e8;">
-                <th style="width: 40px;">Index</th>
-                <th>Value</th>
+                <th>Control Value [uint32]</th>
+                <th>Type</th>
+                <th>Details</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-            <td style="text-align: center;">0</td>
-            <td><code>Stop</code></td>
+                <td>0</td>
+                <td><strong>Stop</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>1</td>
+                <td><strong>SetVolume</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>2</td>
+                <td><strong>SetPitch</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>3</td>
+                <td><strong>Fade</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>4</td>
+                <td><strong>SeekTo</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>5</td>
+                <td><strong>Pause</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>6</td>
+                <td><strong>Resume</strong></td>
+                <td>-</td>
             </tr>
         </tbody>
     </table>
+    <details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>SetVolume (Variant 1)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Volume (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+<details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>SetPitch (Variant 2)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Pitch (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+<details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>Fade (Variant 3)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Duration (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Target Volume (Required)</strong></td>
+<td>float</td>
+                <td>1</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+<details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>SeekTo (Variant 4)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Seconds (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+</div>
+</td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>SetVolume</strong></td>
+<td>oneOf</td>
+                <td>2</td>
+                <td></td>
+            </tr>
+<tr>
+                    <td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
+    <strong>oneOf&lt;Stop, SetVolume, SetPitch, Fade, SeekTo, Pause, Resume&gt;:</strong>
+    <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th>Control Value [uint32]</th>
+                <th>Type</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td><strong>Stop</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>1</td>
+                <td><strong>SetVolume</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>2</td>
+                <td><strong>SetPitch</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>3</td>
+                <td><strong>Fade</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>4</td>
+                <td><strong>SeekTo</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>5</td>
+                <td><strong>Pause</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>6</td>
+                <td><strong>Resume</strong></td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+    <details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>SetVolume (Variant 1)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Volume (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+<details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>SetPitch (Variant 2)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Pitch (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+<details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>Fade (Variant 3)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Duration (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Target Volume (Required)</strong></td>
+<td>float</td>
+                <td>1</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+<details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>SeekTo (Variant 4)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Seconds (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+</div>
+</td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>SetPitch</strong></td>
+<td>oneOf</td>
+                <td>3</td>
+                <td></td>
+            </tr>
+<tr>
+                    <td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
+    <strong>oneOf&lt;Stop, SetVolume, SetPitch, Fade, SeekTo, Pause, Resume&gt;:</strong>
+    <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th>Control Value [uint32]</th>
+                <th>Type</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td><strong>Stop</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>1</td>
+                <td><strong>SetVolume</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>2</td>
+                <td><strong>SetPitch</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>3</td>
+                <td><strong>Fade</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>4</td>
+                <td><strong>SeekTo</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>5</td>
+                <td><strong>Pause</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>6</td>
+                <td><strong>Resume</strong></td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+    <details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>SetVolume (Variant 1)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Volume (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+<details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>SetPitch (Variant 2)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Pitch (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+<details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>Fade (Variant 3)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Duration (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Target Volume (Required)</strong></td>
+<td>float</td>
+                <td>1</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+<details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>SeekTo (Variant 4)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Seconds (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+</div>
+</td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Fade</strong></td>
+<td>oneOf</td>
+                <td>4</td>
+                <td></td>
+            </tr>
+<tr>
+                    <td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
+    <strong>oneOf&lt;Stop, SetVolume, SetPitch, Fade, SeekTo, Pause, Resume&gt;:</strong>
+    <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th>Control Value [uint32]</th>
+                <th>Type</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td><strong>Stop</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>1</td>
+                <td><strong>SetVolume</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>2</td>
+                <td><strong>SetPitch</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>3</td>
+                <td><strong>Fade</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>4</td>
+                <td><strong>SeekTo</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>5</td>
+                <td><strong>Pause</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>6</td>
+                <td><strong>Resume</strong></td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+    <details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>SetVolume (Variant 1)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Volume (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+<details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>SetPitch (Variant 2)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Pitch (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+<details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>Fade (Variant 3)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Duration (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Target Volume (Required)</strong></td>
+<td>float</td>
+                <td>1</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+<details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>SeekTo (Variant 4)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Seconds (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+</div>
+</td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>SeekTo</strong></td>
+<td>oneOf</td>
+                <td>5</td>
+                <td></td>
+            </tr>
+<tr>
+                    <td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
+    <strong>oneOf&lt;Stop, SetVolume, SetPitch, Fade, SeekTo, Pause, Resume&gt;:</strong>
+    <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th>Control Value [uint32]</th>
+                <th>Type</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td><strong>Stop</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>1</td>
+                <td><strong>SetVolume</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>2</td>
+                <td><strong>SetPitch</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>3</td>
+                <td><strong>Fade</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>4</td>
+                <td><strong>SeekTo</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>5</td>
+                <td><strong>Pause</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>6</td>
+                <td><strong>Resume</strong></td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+    <details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>SetVolume (Variant 1)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Volume (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+<details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>SetPitch (Variant 2)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Pitch (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+<details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>Fade (Variant 3)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Duration (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Target Volume (Required)</strong></td>
+<td>float</td>
+                <td>1</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+<details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>SeekTo (Variant 4)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Seconds (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+</div>
+</td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Pause</strong></td>
+<td>oneOf</td>
+                <td>6</td>
+                <td></td>
+            </tr>
+<tr>
+                    <td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
+    <strong>oneOf&lt;Stop, SetVolume, SetPitch, Fade, SeekTo, Pause, Resume&gt;:</strong>
+    <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th>Control Value [uint32]</th>
+                <th>Type</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td><strong>Stop</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>1</td>
+                <td><strong>SetVolume</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>2</td>
+                <td><strong>SetPitch</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>3</td>
+                <td><strong>Fade</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>4</td>
+                <td><strong>SeekTo</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>5</td>
+                <td><strong>Pause</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>6</td>
+                <td><strong>Resume</strong></td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+    <details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>SetVolume (Variant 1)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Volume (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+<details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>SetPitch (Variant 2)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Pitch (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+<details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>Fade (Variant 3)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Duration (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Target Volume (Required)</strong></td>
+<td>float</td>
+                <td>1</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+<details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>SeekTo (Variant 4)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Seconds (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+</div>
+</td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Resume</strong></td>
+<td>oneOf</td>
+                <td>7</td>
+                <td></td>
+            </tr>
+<tr>
+                    <td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
+    <strong>oneOf&lt;Stop, SetVolume, SetPitch, Fade, SeekTo, Pause, Resume&gt;:</strong>
+    <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th>Control Value [uint32]</th>
+                <th>Type</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td><strong>Stop</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>1</td>
+                <td><strong>SetVolume</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>2</td>
+                <td><strong>SetPitch</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>3</td>
+                <td><strong>Fade</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>4</td>
+                <td><strong>SeekTo</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>5</td>
+                <td><strong>Pause</strong></td>
+                <td>-</td>
+            </tr>
+<tr>
+                <td>6</td>
+                <td><strong>Resume</strong></td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+    <details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>SetVolume (Variant 1)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Volume (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+<details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>SetPitch (Variant 2)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Pitch (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+<details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>Fade (Variant 3)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Duration (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Target Volume (Required)</strong></td>
+<td>float</td>
+                <td>1</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
+<details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>SeekTo (Variant 4)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Seconds (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+                            </details>
 </div>
 </td>
                 </tr>

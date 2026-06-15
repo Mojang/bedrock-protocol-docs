@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClientCacheMissResponsePacket</title>
+    <title>ClientCacheMissResponsePacket (136)</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -118,8 +118,9 @@
 <body>
     <div class="container">
         <p><a href="index.html">← Back to Index</a></p>
-        <h1>ClientCacheMissResponsePacket</h1>
+        <h1>ClientCacheMissResponsePacket (136)</h1>
 <div class="description">Only active in a real client-server scenario. This packet is just a list of &lt;blobId, blob&gt; pairs sent from server to client.</div>
+<div class="description">Any missing blob should just be thrown into one of these packet ASAP and sent. This is actually how chunk data gets to the client the first time.</div>
 <div style="margin-left: 0px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
         <thead>

@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1755312866",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30-beta.0",
-    "x-protocol-version": 1001,
+    "x-minecraft-version": "1.26.40-beta.0",
+    "x-protocol-version": 2147,
     "definitions": {
         "1488572312": {
             "title": "BlockPos",
@@ -100,6 +100,7 @@
                 "StartFlying",
                 "StopFlying",
                 "StartUsingItem",
+                "InternalUpdate",
                 "Count"
             ],
             "x-underlying-type": "int32",
@@ -136,5 +137,9 @@
         "Face",
         "Player Runtime ID",
         "Result Pos"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 36,
+        "[cereal:packet_details]": "The expected actions change depending on the ServerAuthMovementMode specified in the StartGamePacket.\n\tSee the PlayerActionType enum for details on which have differing behavior.\n\tSee also PlayerAuthInputPacket and InventoryTransactionPacket for similar types of player actions."
+    }
 }

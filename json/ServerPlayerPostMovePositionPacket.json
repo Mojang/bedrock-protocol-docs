@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "186567147",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30-beta.0",
-    "x-protocol-version": 1001,
+    "x-minecraft-version": "1.26.40-beta.0",
+    "x-protocol-version": 2147,
     "definitions": {
         "725374594": {
             "title": "Vec3",
@@ -43,5 +43,9 @@
     },
     "required": [
         "Pos"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 16,
+        "[cereal:packet_details]": "Is currently only used for debug draw. Packets will not be sent if debug draw is not available."
+    }
 }

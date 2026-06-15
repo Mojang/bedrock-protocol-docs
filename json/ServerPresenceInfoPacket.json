@@ -2,33 +2,18 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1438987023",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30-beta.0",
-    "x-protocol-version": 1001,
+    "x-minecraft-version": "1.26.40-beta.0",
+    "x-protocol-version": 2147,
     "definitions": {
         "2502309189": {
             "title": "presenceConfig",
             "type": "object",
             "properties": {
-                "experienceName": {
-                    "description": "Name of the experience.",
+                "richPresenceId": {
+                    "description": "Rich presence ID to override client-driven rich presence.",
                     "type": "string",
                     "x-ordinal-index": 0,
-                    "minLength": 1,
-                    "maxLength": 40
-                },
-                "richPresenceId": {
-                    "description": "Optional rich presence ID to override client-driven rich presence.",
-                    "type": "string",
-                    "default": "",
-                    "x-ordinal-index": 2,
-                    "maxLength": 40
-                },
-                "worldName": {
-                    "description": "Name of the world.",
-                    "type": "string",
-                    "x-ordinal-index": 1,
-                    "minLength": 1,
-                    "maxLength": 40
+                    "maxLength": 50
                 }
             }
         }
@@ -44,5 +29,9 @@
     },
     "required": [
         "presence_configuration"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 347,
+        "[cereal:packet_details]": ""
+    }
 }

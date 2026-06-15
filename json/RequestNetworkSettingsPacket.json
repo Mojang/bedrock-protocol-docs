@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3809922937",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30-beta.0",
-    "x-protocol-version": 1001,
+    "x-minecraft-version": "1.26.40-beta.0",
+    "x-protocol-version": 2147,
     "title": "RequestNetworkSettingsPacket",
     "description": "Requests tunable options from host to client (compression threshold and algorithm).",
     "type": "object",
@@ -15,11 +15,15 @@
                 "Big Endian"
             ],
             "x-ordinal-index": 0,
-            "minimum": 1001.0,
-            "maximum": 1001.0
+            "minimum": 2147.0,
+            "maximum": 2147.0
         }
     },
     "required": [
         "ClientNetworkVersion"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 193,
+        "[cereal:packet_details]": "This is the initial packet sent from the client to initiate a connection.  NOTE: this packet should not contain anything other than the client version, don't add new data here."
+    }
 }

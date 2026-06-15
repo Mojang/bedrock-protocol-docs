@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1713219518",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30-beta.0",
-    "x-protocol-version": 1001,
+    "x-minecraft-version": "1.26.40-beta.0",
+    "x-protocol-version": 2147,
     "definitions": {
         "725374594": {
             "title": "Vec3",
@@ -147,5 +147,9 @@
         "Data",
         "Event ID",
         "Target Runtime ID"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 27,
+        "[cereal:packet_details]": "Ranges from a crossbow being ready to fire to taming animals..., some of which may be obsolete (frex, ADD_PLAYER_LEVELS)"
+    }
 }
