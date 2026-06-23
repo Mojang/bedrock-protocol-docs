@@ -123,139 +123,141 @@
 <div class="description">Internal</div>
 <div style="margin-left: 0px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td rowspan="2"><strong>Start Video Capture</strong></td>
 <td>oneOf</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
-<strong>oneOf&lt;Start Video Capture, Stop Video Capture&gt;:</strong>
-<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
-<thead>
-<tr style="background-color: #e8e8e8;">
-<th>Control Value [uint32]</th>
-<th>Type</th>
-<th>Details</th>
-</tr>
-</thead>
-<tbody>
+                    <td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
+    <strong>oneOf&lt;Start Video Capture, Stop Video Capture&gt;:</strong>
+    <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th>Control Value [uint32]</th>
+                <th>Type</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td><strong>Start Video Capture</strong></td>
+                <td>-</td>
+            </tr>
 <tr>
-<td>0</td>
-<td><strong>Start Video Capture</strong></td>
-<td>-</td>
-</tr>
-<tr>
-<td>1</td>
-<td><strong>Stop Video Capture</strong></td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
-<details style="margin-left: 20px; margin-top: 10px;">
-<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>Start Video Capture (Variant 0)</strong></summary>
-<div style="margin-left: 40px; margin-top: 10px;">
+                <td>1</td>
+                <td><strong>Stop Video Capture</strong></td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+    <details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>Start Video Capture (Variant 0)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>FrameRate (Required)</strong></td>
 <td>uint32</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>FilePrefix (Required)</strong></td>
 <td>string</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div>
-</details>
-</div></td>
-</tr>
+                            </details>
+</div>
+</td>
+                </tr>
 <tr>
 <td rowspan="2"><strong>Stop Video Capture</strong></td>
 <td>oneOf</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
-<strong>oneOf&lt;Start Video Capture, Stop Video Capture&gt;:</strong>
-<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
-<thead>
-<tr style="background-color: #e8e8e8;">
-<th>Control Value [uint32]</th>
-<th>Type</th>
-<th>Details</th>
-</tr>
-</thead>
-<tbody>
+                    <td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
+    <strong>oneOf&lt;Start Video Capture, Stop Video Capture&gt;:</strong>
+    <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th>Control Value [uint32]</th>
+                <th>Type</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td><strong>Start Video Capture</strong></td>
+                <td>-</td>
+            </tr>
 <tr>
-<td>0</td>
-<td><strong>Start Video Capture</strong></td>
-<td>-</td>
-</tr>
-<tr>
-<td>1</td>
-<td><strong>Stop Video Capture</strong></td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
-<details style="margin-left: 20px; margin-top: 10px;">
-<summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>Start Video Capture (Variant 0)</strong></summary>
-<div style="margin-left: 40px; margin-top: 10px;">
+                <td>1</td>
+                <td><strong>Stop Video Capture</strong></td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+    <details style="margin-left: 20px; margin-top: 10px;">
+                                <summary style="cursor: pointer; font-weight: bold; padding: 5px; background-color: #f0f0f0; border: 1px solid #ddd;"><strong>Start Video Capture (Variant 0)</strong></summary>
+                                <div style="margin-left: 40px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>FrameRate (Required)</strong></td>
 <td>uint32</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>FilePrefix (Required)</strong></td>
 <td>string</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div>
-</details>
-</div></td>
-</tr>
+                            </details>
+</div>
+</td>
+                </tr>
 </tbody>
-</table>
+    </table>
 </div>
     </div>
 </body>

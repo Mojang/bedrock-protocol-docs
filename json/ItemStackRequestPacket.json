@@ -1,0 +1,1550 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "3358996343",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
+    "definitions": {
+        "360739048": {
+            "title": "ItemStackRequest",
+            "type": "object",
+            "properties": {
+                "Actions": {
+                    "description": "Action list. Each entry starts with an ItemStackRequestActionType byte followed by that action's payload.",
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/3743755242",
+                                "x-ordinal-index": 0
+                            },
+                            {
+                                "$ref": "#/definitions/1173064368",
+                                "x-ordinal-index": 1
+                            },
+                            {
+                                "$ref": "#/definitions/1208936966",
+                                "x-ordinal-index": 2
+                            },
+                            {
+                                "$ref": "#/definitions/3754637840",
+                                "x-ordinal-index": 3
+                            },
+                            {
+                                "$ref": "#/definitions/2212974937",
+                                "x-ordinal-index": 4
+                            },
+                            {
+                                "$ref": "#/definitions/2167757025",
+                                "x-ordinal-index": 5
+                            },
+                            {
+                                "$ref": "#/definitions/4025344129",
+                                "x-ordinal-index": 6
+                            },
+                            {
+                                "$ref": "#/definitions/2072900945",
+                                "x-ordinal-index": 7
+                            },
+                            {
+                                "$ref": "#/definitions/3079104785",
+                                "x-ordinal-index": 8
+                            },
+                            {
+                                "$ref": "#/definitions/1325954731",
+                                "x-ordinal-index": 9
+                            },
+                            {
+                                "$ref": "#/definitions/2973213083",
+                                "x-ordinal-index": 10
+                            },
+                            {
+                                "$ref": "#/definitions/979397168",
+                                "x-ordinal-index": 11
+                            },
+                            {
+                                "$ref": "#/definitions/2093134708",
+                                "x-ordinal-index": 12
+                            },
+                            {
+                                "$ref": "#/definitions/77724495",
+                                "x-ordinal-index": 13
+                            },
+                            {
+                                "$ref": "#/definitions/2074064188",
+                                "x-ordinal-index": 14
+                            },
+                            {
+                                "$ref": "#/definitions/860881220",
+                                "x-ordinal-index": 15
+                            },
+                            {
+                                "$ref": "#/definitions/3204867092",
+                                "x-ordinal-index": 16
+                            },
+                            {
+                                "$ref": "#/definitions/2180465789",
+                                "x-ordinal-index": 17
+                            }
+                        ],
+                        "x-control-value-type": "uint32"
+                    },
+                    "x-ordinal-index": 1,
+                    "minItems": 1,
+                    "maxItems": 100
+                },
+                "Client Request Id": {
+                    "$ref": "#/definitions/3359047935",
+                    "x-ordinal-index": 0,
+                    "x-runtime-constraint-description": "Verify the request id is a valid negative odd client request id"
+                },
+                "Strings To Filter": {
+                    "description": "Array of strings to submit to profanity filtering service",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "maxLength": 1000
+                    },
+                    "x-ordinal-index": 2
+                },
+                "StringsToFilterOrigin": {
+                    "title": "TextProcessingEventOrigin",
+                    "type": "string",
+                    "enum": [
+                        "unknown",
+                        "ServerChatPublic",
+                        "ServerChatWhisper",
+                        "SignText",
+                        "AnvilText",
+                        "BookAndQuillText",
+                        "CommandBlockText",
+                        "BlockActorDataText",
+                        "JoinEventText",
+                        "LeaveEventText",
+                        "SlashCommandChat",
+                        "CartographyText",
+                        "KickCommand",
+                        "TitleCommand",
+                        "SummonCommand",
+                        "ServerForm",
+                        "DataDrivenUI"
+                    ],
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 3
+                }
+            },
+            "required": [
+                "Actions",
+                "Client Request Id",
+                "Strings To Filter",
+                "StringsToFilterOrigin"
+            ]
+        },
+        "1208936966": {
+            "title": "ItemStackRequestSwapAction",
+            "type": "object",
+            "properties": {
+                "Action type": {
+                    "title": "ItemStackRequestActionType",
+                    "type": "string",
+                    "const": "swap",
+                    "enum": [
+                        "Take",
+                        "Place",
+                        "Swap",
+                        "Drop",
+                        "Destroy",
+                        "Consume",
+                        "Create",
+                        "ScreenLabTableCombine",
+                        "ScreenBeaconPayment",
+                        "ScreenHUDMineBlock",
+                        "CraftRecipe",
+                        "CraftRecipeAuto",
+                        "CraftCreative",
+                        "CraftRecipeOptional",
+                        "CraftRepairAndDisenchant",
+                        "CraftLoom",
+                        "CraftNonImplemented",
+                        "CraftResults"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Destination": {
+                    "$ref": "#/definitions/2863540307",
+                    "x-ordinal-index": 2
+                },
+                "Source": {
+                    "$ref": "#/definitions/2863540307",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Action type",
+                "Destination",
+                "Source"
+            ]
+        },
+        "3743755242": {
+            "title": "ItemStackRequestTakeAction",
+            "type": "object",
+            "properties": {
+                "Action type": {
+                    "title": "ItemStackRequestActionType",
+                    "type": "string",
+                    "const": "take",
+                    "enum": [
+                        "Take",
+                        "Place",
+                        "Swap",
+                        "Drop",
+                        "Destroy",
+                        "Consume",
+                        "Create",
+                        "ScreenLabTableCombine",
+                        "ScreenBeaconPayment",
+                        "ScreenHUDMineBlock",
+                        "CraftRecipe",
+                        "CraftRecipeAuto",
+                        "CraftCreative",
+                        "CraftRecipeOptional",
+                        "CraftRepairAndDisenchant",
+                        "CraftLoom",
+                        "CraftNonImplemented",
+                        "CraftResults"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Amount": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 1,
+                    "minimum": 1.0,
+                    "maximum": 64.0
+                },
+                "Destination": {
+                    "$ref": "#/definitions/2863540307",
+                    "x-ordinal-index": 3
+                },
+                "Source": {
+                    "$ref": "#/definitions/2863540307",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "Action type",
+                "Amount",
+                "Destination",
+                "Source"
+            ]
+        },
+        "4207553912": {
+            "title": "FullContainerName",
+            "type": "object",
+            "properties": {
+                "Container Name": {
+                    "title": "ContainerEnumName",
+                    "type": "string",
+                    "enum": [
+                        "AnvilInputContainer",
+                        "AnvilMaterialContainer",
+                        "AnvilResultPreviewContainer",
+                        "SmithingTableInputContainer",
+                        "SmithingTableMaterialContainer",
+                        "SmithingTableResultPreviewContainer",
+                        "ArmorContainer",
+                        "LevelEntityContainer",
+                        "BeaconPaymentContainer",
+                        "BrewingStandInputContainer",
+                        "BrewingStandResultContainer",
+                        "BrewingStandFuelContainer",
+                        "CombinedHotbarAndInventoryContainer",
+                        "CraftingInputContainer",
+                        "CraftingOutputPreviewContainer",
+                        "RecipeConstructionContainer",
+                        "RecipeNatureContainer",
+                        "RecipeItemsContainer",
+                        "RecipeFoodContainer",
+                        "RecipeBlocksContainer",
+                        "RecipeFurnaceItemsContainer",
+                        "RecipeSearchContainer",
+                        "RecipeSearchBarContainer",
+                        "RecipeEquipmentContainer",
+                        "RecipeBookContainer",
+                        "EnchantingInputContainer",
+                        "EnchantingMaterialContainer",
+                        "FurnaceFuelContainer",
+                        "FurnaceIngredientContainer",
+                        "FurnaceResultContainer",
+                        "HorseEquipContainer",
+                        "HotbarContainer",
+                        "InventoryContainer",
+                        "ShulkerBoxContainer",
+                        "TradeIngredient1Container",
+                        "TradeIngredient2Container",
+                        "TradeResultPreviewContainer",
+                        "OffhandContainer",
+                        "CompoundCreatorInput",
+                        "CompoundCreatorOutputPreview",
+                        "ElementConstructorOutputPreview",
+                        "MaterialReducerInput",
+                        "MaterialReducerOutput",
+                        "LabTableInput",
+                        "LoomInputContainer",
+                        "LoomDyeContainer",
+                        "LoomMaterialContainer",
+                        "LoomResultPreviewContainer",
+                        "BlastFurnaceIngredientContainer",
+                        "SmokerIngredientContainer",
+                        "Trade2Ingredient1Container",
+                        "Trade2Ingredient2Container",
+                        "Trade2ResultPreviewContainer",
+                        "GrindstoneInputContainer",
+                        "GrindstoneAdditionalContainer",
+                        "GrindstoneResultPreviewContainer",
+                        "StonecutterInputContainer",
+                        "StonecutterResultPreviewContainer",
+                        "CartographyInputContainer",
+                        "CartographyAdditionalContainer",
+                        "CartographyResultPreviewContainer",
+                        "BarrelContainer",
+                        "CursorContainer",
+                        "CreatedOutputContainer",
+                        "SmithingTableTemplateContainer",
+                        "CrafterLevelEntityContainer",
+                        "DynamicContainer"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Dynamic ID": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Container Name",
+                "Dynamic ID"
+            ]
+        },
+        "2212974937": {
+            "title": "ItemStackRequestDestroyAction",
+            "type": "object",
+            "properties": {
+                "Action type": {
+                    "title": "ItemStackRequestActionType",
+                    "type": "string",
+                    "const": "destroy",
+                    "enum": [
+                        "Take",
+                        "Place",
+                        "Swap",
+                        "Drop",
+                        "Destroy",
+                        "Consume",
+                        "Create",
+                        "ScreenLabTableCombine",
+                        "ScreenBeaconPayment",
+                        "ScreenHUDMineBlock",
+                        "CraftRecipe",
+                        "CraftRecipeAuto",
+                        "CraftCreative",
+                        "CraftRecipeOptional",
+                        "CraftRepairAndDisenchant",
+                        "CraftLoom",
+                        "CraftNonImplemented",
+                        "CraftResults"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Amount": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 1,
+                    "minimum": 1.0,
+                    "maximum": 64.0
+                },
+                "Source": {
+                    "$ref": "#/definitions/2863540307",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "Action type",
+                "Amount",
+                "Source"
+            ]
+        },
+        "2863540307": {
+            "title": "ItemStackRequestSlotInfo",
+            "type": "object",
+            "properties": {
+                "Full container name.": {
+                    "$ref": "#/definitions/4207553912",
+                    "x-ordinal-index": 0
+                },
+                "Net Id Variant": {
+                    "description": "Item stack net id variant identifying the slot's current contents. The cereal variant index discriminates between server net id, client request id, and legacy client request id.",
+                    "$ref": "#/definitions/4138486877",
+                    "x-ordinal-index": 2
+                },
+                "Slot": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0,
+                    "maximum": 255.0
+                }
+            },
+            "required": [
+                "Full container name.",
+                "Net Id Variant",
+                "Slot"
+            ]
+        },
+        "2167757025": {
+            "title": "ItemStackRequestConsumeAction",
+            "type": "object",
+            "properties": {
+                "Action type": {
+                    "title": "ItemStackRequestActionType",
+                    "type": "string",
+                    "const": "consume",
+                    "enum": [
+                        "Take",
+                        "Place",
+                        "Swap",
+                        "Drop",
+                        "Destroy",
+                        "Consume",
+                        "Create",
+                        "ScreenLabTableCombine",
+                        "ScreenBeaconPayment",
+                        "ScreenHUDMineBlock",
+                        "CraftRecipe",
+                        "CraftRecipeAuto",
+                        "CraftCreative",
+                        "CraftRecipeOptional",
+                        "CraftRepairAndDisenchant",
+                        "CraftLoom",
+                        "CraftNonImplemented",
+                        "CraftResults"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Amount": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 1,
+                    "minimum": 1.0,
+                    "maximum": 64.0
+                },
+                "Source": {
+                    "$ref": "#/definitions/2863540307",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "Action type",
+                "Amount",
+                "Source"
+            ]
+        },
+        "4138486877": {
+            "title": "ItemStackNetIdVariant",
+            "type": "integer",
+            "x-underlying-type": "int32"
+        },
+        "1173064368": {
+            "title": "ItemStackRequestPlaceAction",
+            "type": "object",
+            "properties": {
+                "Action type": {
+                    "title": "ItemStackRequestActionType",
+                    "type": "string",
+                    "const": "place",
+                    "enum": [
+                        "Take",
+                        "Place",
+                        "Swap",
+                        "Drop",
+                        "Destroy",
+                        "Consume",
+                        "Create",
+                        "ScreenLabTableCombine",
+                        "ScreenBeaconPayment",
+                        "ScreenHUDMineBlock",
+                        "CraftRecipe",
+                        "CraftRecipeAuto",
+                        "CraftCreative",
+                        "CraftRecipeOptional",
+                        "CraftRepairAndDisenchant",
+                        "CraftLoom",
+                        "CraftNonImplemented",
+                        "CraftResults"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Amount": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 1,
+                    "minimum": 1.0,
+                    "maximum": 64.0
+                },
+                "Destination": {
+                    "$ref": "#/definitions/2863540307",
+                    "x-ordinal-index": 3
+                },
+                "Source": {
+                    "$ref": "#/definitions/2863540307",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "Action type",
+                "Amount",
+                "Destination",
+                "Source"
+            ]
+        },
+        "3754637840": {
+            "title": "ItemStackRequestDropAction",
+            "type": "object",
+            "properties": {
+                "Action type": {
+                    "title": "ItemStackRequestActionType",
+                    "type": "string",
+                    "const": "drop",
+                    "enum": [
+                        "Take",
+                        "Place",
+                        "Swap",
+                        "Drop",
+                        "Destroy",
+                        "Consume",
+                        "Create",
+                        "ScreenLabTableCombine",
+                        "ScreenBeaconPayment",
+                        "ScreenHUDMineBlock",
+                        "CraftRecipe",
+                        "CraftRecipeAuto",
+                        "CraftCreative",
+                        "CraftRecipeOptional",
+                        "CraftRepairAndDisenchant",
+                        "CraftLoom",
+                        "CraftNonImplemented",
+                        "CraftResults"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Amount": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 1,
+                    "minimum": 1.0,
+                    "maximum": 64.0
+                },
+                "Randomly": {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 3
+                },
+                "Source": {
+                    "$ref": "#/definitions/2863540307",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "Action type",
+                "Amount",
+                "Randomly",
+                "Source"
+            ]
+        },
+        "4025344129": {
+            "title": "ItemStackRequestCreateAction",
+            "type": "object",
+            "properties": {
+                "Action type": {
+                    "title": "ItemStackRequestActionType",
+                    "type": "string",
+                    "const": "create",
+                    "enum": [
+                        "Take",
+                        "Place",
+                        "Swap",
+                        "Drop",
+                        "Destroy",
+                        "Consume",
+                        "Create",
+                        "ScreenLabTableCombine",
+                        "ScreenBeaconPayment",
+                        "ScreenHUDMineBlock",
+                        "CraftRecipe",
+                        "CraftRecipeAuto",
+                        "CraftCreative",
+                        "CraftRecipeOptional",
+                        "CraftRepairAndDisenchant",
+                        "CraftLoom",
+                        "CraftNonImplemented",
+                        "CraftResults"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Results Index": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0,
+                    "maximum": 255.0
+                }
+            },
+            "required": [
+                "Action type",
+                "Results Index"
+            ]
+        },
+        "2072900945": {
+            "title": "ItemStackRequestLabTableCombineAction",
+            "type": "object",
+            "properties": {
+                "Action type": {
+                    "title": "ItemStackRequestActionType",
+                    "description": "Dataless action; only the action type byte is serialized.",
+                    "type": "string",
+                    "const": "screenlabtablecombine",
+                    "enum": [
+                        "Take",
+                        "Place",
+                        "Swap",
+                        "Drop",
+                        "Destroy",
+                        "Consume",
+                        "Create",
+                        "ScreenLabTableCombine",
+                        "ScreenBeaconPayment",
+                        "ScreenHUDMineBlock",
+                        "CraftRecipe",
+                        "CraftRecipeAuto",
+                        "CraftCreative",
+                        "CraftRecipeOptional",
+                        "CraftRepairAndDisenchant",
+                        "CraftLoom",
+                        "CraftNonImplemented",
+                        "CraftResults"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Action type"
+            ]
+        },
+        "3079104785": {
+            "title": "ItemStackRequestBeaconPaymentAction",
+            "type": "object",
+            "properties": {
+                "Action type": {
+                    "title": "ItemStackRequestActionType",
+                    "type": "string",
+                    "const": "screenbeaconpayment",
+                    "enum": [
+                        "Take",
+                        "Place",
+                        "Swap",
+                        "Drop",
+                        "Destroy",
+                        "Consume",
+                        "Create",
+                        "ScreenLabTableCombine",
+                        "ScreenBeaconPayment",
+                        "ScreenHUDMineBlock",
+                        "CraftRecipe",
+                        "CraftRecipeAuto",
+                        "CraftCreative",
+                        "CraftRecipeOptional",
+                        "CraftRepairAndDisenchant",
+                        "CraftLoom",
+                        "CraftNonImplemented",
+                        "CraftResults"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Primary Effect Id": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0,
+                    "maximum": 37.0
+                },
+                "Secondary Effect Id": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2,
+                    "minimum": 0.0,
+                    "maximum": 37.0
+                }
+            },
+            "required": [
+                "Action type",
+                "Primary Effect Id",
+                "Secondary Effect Id"
+            ]
+        },
+        "1325954731": {
+            "title": "ItemStackRequestMineBlockAction",
+            "type": "object",
+            "properties": {
+                "Action type": {
+                    "title": "ItemStackRequestActionType",
+                    "type": "string",
+                    "const": "screenhudmineblock",
+                    "enum": [
+                        "Take",
+                        "Place",
+                        "Swap",
+                        "Drop",
+                        "Destroy",
+                        "Consume",
+                        "Create",
+                        "ScreenLabTableCombine",
+                        "ScreenBeaconPayment",
+                        "ScreenHUDMineBlock",
+                        "CraftRecipe",
+                        "CraftRecipeAuto",
+                        "CraftCreative",
+                        "CraftRecipeOptional",
+                        "CraftRepairAndDisenchant",
+                        "CraftLoom",
+                        "CraftNonImplemented",
+                        "CraftResults"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Net Id Variant": {
+                    "$ref": "#/definitions/4138486877",
+                    "x-ordinal-index": 3
+                },
+                "Predicted Durability": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2
+                },
+                "Slot": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Action type",
+                "Net Id Variant",
+                "Predicted Durability",
+                "Slot"
+            ]
+        },
+        "941591021": {
+            "title": "ItemTagDescriptor",
+            "type": "object",
+            "properties": {
+                "Descriptor Type": {
+                    "title": "ItemDescriptorType",
+                    "type": "string",
+                    "const": "itemtag",
+                    "enum": [
+                        "Empty",
+                        "ItemName",
+                        "Molang",
+                        "ItemTag"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Item Tag": {
+                    "type": "string",
+                    "x-ordinal-index": 1,
+                    "minLength": 1
+                }
+            },
+            "required": [
+                "Descriptor Type",
+                "Item Tag"
+            ]
+        },
+        "2074064188": {
+            "title": "ItemStackRequestCraftRepairAndDisenchantAction",
+            "type": "object",
+            "properties": {
+                "Action type": {
+                    "title": "ItemStackRequestActionType",
+                    "type": "string",
+                    "const": "craftrepairanddisenchant",
+                    "enum": [
+                        "Take",
+                        "Place",
+                        "Swap",
+                        "Drop",
+                        "Destroy",
+                        "Consume",
+                        "Create",
+                        "ScreenLabTableCombine",
+                        "ScreenBeaconPayment",
+                        "ScreenHUDMineBlock",
+                        "CraftRecipe",
+                        "CraftRecipeAuto",
+                        "CraftCreative",
+                        "CraftRecipeOptional",
+                        "CraftRepairAndDisenchant",
+                        "CraftLoom",
+                        "CraftNonImplemented",
+                        "CraftResults"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Number of requested crafts": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 2,
+                    "minimum": 1.0,
+                    "maximum": 255.0
+                },
+                "Recipe Net Id": {
+                    "$ref": "#/definitions/4138486877",
+                    "x-ordinal-index": 1
+                },
+                "Repair Cost": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 3,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Action type",
+                "Number of requested crafts",
+                "Recipe Net Id",
+                "Repair Cost"
+            ]
+        },
+        "2973213083": {
+            "title": "ItemStackRequestCraftRecipeAction",
+            "type": "object",
+            "properties": {
+                "Action type": {
+                    "title": "ItemStackRequestActionType",
+                    "type": "string",
+                    "const": "craftrecipe",
+                    "enum": [
+                        "Take",
+                        "Place",
+                        "Swap",
+                        "Drop",
+                        "Destroy",
+                        "Consume",
+                        "Create",
+                        "ScreenLabTableCombine",
+                        "ScreenBeaconPayment",
+                        "ScreenHUDMineBlock",
+                        "CraftRecipe",
+                        "CraftRecipeAuto",
+                        "CraftCreative",
+                        "CraftRecipeOptional",
+                        "CraftRepairAndDisenchant",
+                        "CraftLoom",
+                        "CraftNonImplemented",
+                        "CraftResults"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Number of requested crafts": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 2,
+                    "minimum": 1.0,
+                    "maximum": 255.0
+                },
+                "Recipe Net Id": {
+                    "$ref": "#/definitions/605048677",
+                    "x-ordinal-index": 1,
+                    "x-runtime-constraint-description": "Verify the recipe net id is non-zero"
+                }
+            },
+            "required": [
+                "Action type",
+                "Number of requested crafts",
+                "Recipe Net Id"
+            ]
+        },
+        "979397168": {
+            "title": "ItemStackRequestCraftRecipeAutoAction",
+            "type": "object",
+            "properties": {
+                "Action type": {
+                    "title": "ItemStackRequestActionType",
+                    "type": "string",
+                    "const": "craftrecipeauto",
+                    "enum": [
+                        "Take",
+                        "Place",
+                        "Swap",
+                        "Drop",
+                        "Destroy",
+                        "Consume",
+                        "Create",
+                        "ScreenLabTableCombine",
+                        "ScreenBeaconPayment",
+                        "ScreenHUDMineBlock",
+                        "CraftRecipe",
+                        "CraftRecipeAuto",
+                        "CraftCreative",
+                        "CraftRecipeOptional",
+                        "CraftRepairAndDisenchant",
+                        "CraftLoom",
+                        "CraftNonImplemented",
+                        "CraftResults"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Ingredients": {
+                    "description": "Recipe ingredient entries.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/3425070390"
+                    },
+                    "x-ordinal-index": 3
+                },
+                "Number of requested crafts": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 2,
+                    "minimum": 1.0,
+                    "maximum": 255.0
+                },
+                "Recipe Net Id": {
+                    "$ref": "#/definitions/605048677",
+                    "x-ordinal-index": 1,
+                    "x-runtime-constraint-description": "Verify the recipe net id is non-zero"
+                }
+            },
+            "required": [
+                "Action type",
+                "Ingredients",
+                "Number of requested crafts",
+                "Recipe Net Id"
+            ]
+        },
+        "605048677": {
+            "title": "RecipeNetId",
+            "type": "object",
+            "properties": {
+                "Raw Id": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Raw Id"
+            ]
+        },
+        "3425070390": {
+            "title": "RecipeIngredient",
+            "type": "object",
+            "properties": {
+                "Item Descriptor": {
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/1817403646",
+                            "x-ordinal-index": 0
+                        },
+                        {
+                            "$ref": "#/definitions/1816415582",
+                            "x-ordinal-index": 1
+                        },
+                        {
+                            "$ref": "#/definitions/3622296441",
+                            "x-ordinal-index": 2
+                        },
+                        {
+                            "$ref": "#/definitions/941591021",
+                            "x-ordinal-index": 3
+                        }
+                    ],
+                    "x-control-value-type": "uint32",
+                    "x-ordinal-index": 0
+                },
+                "StackSize": {
+                    "type": "integer",
+                    "x-underlying-type": "uint16",
+                    "x-ordinal-index": 1,
+                    "minimum": 1.0,
+                    "maximum": 65535.0
+                }
+            },
+            "required": [
+                "Item Descriptor",
+                "StackSize"
+            ]
+        },
+        "1817403646": {
+            "title": "EmptyItemDescriptor",
+            "type": "object",
+            "properties": {
+                "Descriptor Type": {
+                    "title": "ItemDescriptorType",
+                    "description": "Empty item descriptor.",
+                    "type": "string",
+                    "const": "empty",
+                    "enum": [
+                        "Empty",
+                        "ItemName",
+                        "Molang",
+                        "ItemTag"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Descriptor Type"
+            ]
+        },
+        "1816415582": {
+            "title": "ItemNameDescriptor",
+            "type": "object",
+            "properties": {
+                "Aux Value": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2,
+                    "minimum": 0.0,
+                    "maximum": 32767.0
+                },
+                "Descriptor Type": {
+                    "title": "ItemDescriptorType",
+                    "type": "string",
+                    "const": "itemname",
+                    "enum": [
+                        "Empty",
+                        "ItemName",
+                        "Molang",
+                        "ItemTag"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Full Name": {
+                    "type": "string",
+                    "x-ordinal-index": 1,
+                    "minLength": 1
+                }
+            },
+            "required": [
+                "Aux Value",
+                "Descriptor Type",
+                "Full Name"
+            ]
+        },
+        "3622296441": {
+            "title": "MolangItemDescriptor",
+            "type": "object",
+            "properties": {
+                "Descriptor Type": {
+                    "title": "ItemDescriptorType",
+                    "type": "string",
+                    "const": "molang",
+                    "enum": [
+                        "Empty",
+                        "ItemName",
+                        "Molang",
+                        "ItemTag"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Molang Version": {
+                    "title": "MolangVersion",
+                    "type": "string",
+                    "enum": [
+                        "Invalid",
+                        "BeforeVersioning",
+                        "Initial",
+                        "FixedItemRemainingUseDurationQuery",
+                        "ExpressionErrorMessages",
+                        "UnexpectedOperatorErrors",
+                        "ConditionalOperatorAssociativity",
+                        "ComparisonAndLogicalOperatorPrecedence",
+                        "DivideByNegativeValue",
+                        "FixedCapeFlapAmountQuery",
+                        "QueryBlockPropertyRenamedToState",
+                        "DeprecateOldBlockQueryNames",
+                        "DeprecatedSnifferAndCamelQueries",
+                        "LeafSupportingInFirstSolidBlockBelow",
+                        "NumValidVersions",
+                        "Latest",
+                        "HardcodedMolang"
+                    ],
+                    "x-underlying-type": "int16",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 2
+                },
+                "Tag Expression": {
+                    "type": "string",
+                    "x-ordinal-index": 1,
+                    "minLength": 1
+                }
+            },
+            "required": [
+                "Descriptor Type",
+                "Molang Version",
+                "Tag Expression"
+            ]
+        },
+        "2093134708": {
+            "title": "ItemStackRequestCraftCreativeAction",
+            "type": "object",
+            "properties": {
+                "Action type": {
+                    "title": "ItemStackRequestActionType",
+                    "type": "string",
+                    "const": "craftcreative",
+                    "enum": [
+                        "Take",
+                        "Place",
+                        "Swap",
+                        "Drop",
+                        "Destroy",
+                        "Consume",
+                        "Create",
+                        "ScreenLabTableCombine",
+                        "ScreenBeaconPayment",
+                        "ScreenHUDMineBlock",
+                        "CraftRecipe",
+                        "CraftRecipeAuto",
+                        "CraftCreative",
+                        "CraftRecipeOptional",
+                        "CraftRepairAndDisenchant",
+                        "CraftLoom",
+                        "CraftNonImplemented",
+                        "CraftResults"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Creative Item Net Id": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 1,
+                    "minimum": 1.0
+                },
+                "Number of requested crafts": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 2,
+                    "minimum": 1.0,
+                    "maximum": 255.0
+                }
+            },
+            "required": [
+                "Action type",
+                "Creative Item Net Id",
+                "Number of requested crafts"
+            ]
+        },
+        "860881220": {
+            "title": "ItemStackRequestCraftLoomAction",
+            "type": "object",
+            "properties": {
+                "Action type": {
+                    "title": "ItemStackRequestActionType",
+                    "type": "string",
+                    "const": "craftloom",
+                    "enum": [
+                        "Take",
+                        "Place",
+                        "Swap",
+                        "Drop",
+                        "Destroy",
+                        "Consume",
+                        "Create",
+                        "ScreenLabTableCombine",
+                        "ScreenBeaconPayment",
+                        "ScreenHUDMineBlock",
+                        "CraftRecipe",
+                        "CraftRecipeAuto",
+                        "CraftCreative",
+                        "CraftRecipeOptional",
+                        "CraftRepairAndDisenchant",
+                        "CraftLoom",
+                        "CraftNonImplemented",
+                        "CraftResults"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Num Crafts": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 2,
+                    "minimum": 1.0,
+                    "maximum": 255.0
+                },
+                "Pattern Name Id": {
+                    "type": "string",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Action type",
+                "Num Crafts",
+                "Pattern Name Id"
+            ]
+        },
+        "77724495": {
+            "title": "ItemStackRequestCraftRecipeOptionalAction",
+            "type": "object",
+            "properties": {
+                "Action type": {
+                    "title": "ItemStackRequestActionType",
+                    "type": "string",
+                    "const": "craftrecipeoptional",
+                    "enum": [
+                        "Take",
+                        "Place",
+                        "Swap",
+                        "Drop",
+                        "Destroy",
+                        "Consume",
+                        "Create",
+                        "ScreenLabTableCombine",
+                        "ScreenBeaconPayment",
+                        "ScreenHUDMineBlock",
+                        "CraftRecipe",
+                        "CraftRecipeAuto",
+                        "CraftCreative",
+                        "CraftRecipeOptional",
+                        "CraftRepairAndDisenchant",
+                        "CraftLoom",
+                        "CraftNonImplemented",
+                        "CraftResults"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Filtered String Index": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 2
+                },
+                "Recipe Net Id": {
+                    "$ref": "#/definitions/605048677",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Action type",
+                "Filtered String Index",
+                "Recipe Net Id"
+            ]
+        },
+        "3204867092": {
+            "title": "ItemStackRequestCraftNonImplementedDeprecatedAction",
+            "type": "object",
+            "properties": {
+                "Action type": {
+                    "title": "ItemStackRequestActionType",
+                    "description": "Deprecated dataless action; only the action type byte is serialized.",
+                    "type": "string",
+                    "const": "craftnonimplemented",
+                    "enum": [
+                        "Take",
+                        "Place",
+                        "Swap",
+                        "Drop",
+                        "Destroy",
+                        "Consume",
+                        "Create",
+                        "ScreenLabTableCombine",
+                        "ScreenBeaconPayment",
+                        "ScreenHUDMineBlock",
+                        "CraftRecipe",
+                        "CraftRecipeAuto",
+                        "CraftCreative",
+                        "CraftRecipeOptional",
+                        "CraftRepairAndDisenchant",
+                        "CraftLoom",
+                        "CraftNonImplemented",
+                        "CraftResults"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Action type"
+            ]
+        },
+        "2180465789": {
+            "title": "ItemStackRequestCraftResultsDeprecatedAction",
+            "type": "object",
+            "properties": {
+                "Action type": {
+                    "title": "ItemStackRequestActionType",
+                    "type": "string",
+                    "const": "craftresults",
+                    "enum": [
+                        "Take",
+                        "Place",
+                        "Swap",
+                        "Drop",
+                        "Destroy",
+                        "Consume",
+                        "Create",
+                        "ScreenLabTableCombine",
+                        "ScreenBeaconPayment",
+                        "ScreenHUDMineBlock",
+                        "CraftRecipe",
+                        "CraftRecipeAuto",
+                        "CraftCreative",
+                        "CraftRecipeOptional",
+                        "CraftRepairAndDisenchant",
+                        "CraftLoom",
+                        "CraftNonImplemented",
+                        "CraftResults"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-serialization-options": [
+                        "Enum-as-Value"
+                    ],
+                    "x-ordinal-index": 0
+                },
+                "Craft Results": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/4130469014",
+                        "x-runtime-constraint-description": "Verify the craft result descriptor resolves to a non-empty item"
+                    },
+                    "x-ordinal-index": 1,
+                    "minItems": 1
+                },
+                "Num Crafts": {
+                    "type": "integer",
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 2,
+                    "minimum": 1.0,
+                    "maximum": 255.0
+                }
+            },
+            "required": [
+                "Action type",
+                "Craft Results",
+                "Num Crafts"
+            ]
+        },
+        "4130469014": {
+            "title": "ItemStackRequestNetworkItemInstanceDescriptor",
+            "type": "object",
+            "properties": {
+                "Block Runtime Id": {
+                    "type": "integer",
+                    "x-underlying-type": "uint32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 2,
+                    "minimum": 0.0
+                },
+                "Item Descriptor": {
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/1817403646",
+                            "x-ordinal-index": 0
+                        },
+                        {
+                            "$ref": "#/definitions/1816415582",
+                            "x-ordinal-index": 1
+                        },
+                        {
+                            "$ref": "#/definitions/3622296441",
+                            "x-ordinal-index": 2
+                        },
+                        {
+                            "$ref": "#/definitions/941591021",
+                            "x-ordinal-index": 3
+                        }
+                    ],
+                    "x-control-value-type": "uint32",
+                    "x-ordinal-index": 0
+                },
+                "Stack size": {
+                    "type": "integer",
+                    "x-underlying-type": "uint16",
+                    "x-ordinal-index": 1,
+                    "minimum": 1.0,
+                    "maximum": 64.0
+                },
+                "User Data Buffer": {
+                    "description": "The @ItemInstanceUserData.html#ItemInstanceUserData@ binary blob encoded as a String, so it's unsigned varint length prefixed. Get all your nbt+property bytes, calculate the length, write that length, THEN write the data.",
+                    "type": "string",
+                    "x-ordinal-index": 3
+                }
+            },
+            "required": [
+                "Block Runtime Id",
+                "Item Descriptor",
+                "Stack size",
+                "User Data Buffer"
+            ]
+        },
+        "3359047935": {
+            "title": "ItemStackRequestId",
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "description": "Raw Id (32 bit signed)",
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "ID"
+            ]
+        }
+    },
+    "title": "ItemStackRequestPacket",
+    "description": "The new server auth inventory item transaction request. This is done in batches of items.",
+    "type": "object",
+    "properties": {
+        "Requests": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/360739048"
+            },
+            "x-ordinal-index": 0,
+            "maxItems": 100
+        }
+    },
+    "required": [
+        "Requests"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 147,
+        "[cereal:packet_details]": ""
+    }
+}

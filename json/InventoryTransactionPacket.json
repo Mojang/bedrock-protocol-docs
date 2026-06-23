@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1897955869",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "2707715806": {
             "title": "ItemStackLegacyRequestId",
@@ -21,47 +21,6 @@
             },
             "required": [
                 "ID"
-            ]
-        },
-        "4138486877": {
-            "title": "ItemStackNetIdVariant",
-            "type": "object",
-            "properties": {
-                "Item stack net ID variant": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/definitions/1433098745",
-                            "x-ordinal-index": 0
-                        },
-                        {
-                            "$ref": "#/definitions/3359047935",
-                            "x-ordinal-index": 1
-                        },
-                        {
-                            "$ref": "#/definitions/2707715806",
-                            "x-ordinal-index": 2
-                        }
-                    ],
-                    "x-control-value-type": "uint32",
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "Item stack net ID variant"
-            ]
-        },
-        "3043188243": {
-            "title": "InventoryMismatchData",
-            "type": "object",
-            "properties": {
-                "Actions": {
-                    "description": "Base inventory actions. Lists the slot changes making up this server-to-client rejection transaction.",
-                    "$ref": "#/definitions/2259856673",
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "Actions"
             ]
         },
         "2803432075": {
@@ -98,6 +57,9 @@
                 "Net Id Variant": {
                     "description": "Optional network ID variant used to track item stack identity across client and server.",
                     "$ref": "#/definitions/4138486877",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
                     "x-ordinal-index": 3
                 },
                 "Stack size": {
@@ -122,23 +84,24 @@
                 "User Data Buffer"
             ]
         },
-        "3359047935": {
-            "title": "ItemStackRequestId",
+        "3043188243": {
+            "title": "InventoryMismatchData",
             "type": "object",
             "properties": {
-                "ID": {
-                    "description": "Raw Id (32 bit signed)",
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
+                "Actions": {
+                    "description": "Base inventory actions. Lists the slot changes making up this server-to-client rejection transaction.",
+                    "$ref": "#/definitions/2259856673",
                     "x-ordinal-index": 0
                 }
             },
             "required": [
-                "ID"
+                "Actions"
             ]
+        },
+        "4138486877": {
+            "title": "ItemStackNetIdVariant",
+            "type": "integer",
+            "x-underlying-type": "int32"
         },
         "4019127450": {
             "title": "InventorySource",
@@ -251,24 +214,6 @@
         "1987673147": {
             "title": "NetworkItemStackDescriptor",
             "$ref": "#/definitions/2803432075"
-        },
-        "1433098745": {
-            "title": "ItemStackNetId",
-            "type": "object",
-            "properties": {
-                "ID": {
-                    "description": "Raw Id (32 bit signed)",
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "ID"
-            ]
         },
         "2022041250": {
             "title": "LegacySetSlot",

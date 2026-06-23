@@ -123,29 +123,29 @@
 <div class="description">Sent from the server at the end of the login packet</div>
 <div style="margin-left: 0px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>Handshake WebToken (Required)</strong></td>
-<td>string</td>
-<td>0</td>
-<td>Base64 encoded JSON Web Token that contains the other relevant client properties.
+<td>WebToken</td>
+                <td>0</td>
+                <td>Base64 encoded JSON Web Token that contains the other relevant client properties.
 
 Properties Include:
 
-&#x27;salt&#x27; = (for use in encryption)
+&#39;salt&#39; = (for use in encryption)
 
-The public key used to compute the shared secret for encryption is embedded in the header of the token. It&#x27;s the signer public key (json value of &#x27;x5u&#x27;)</td>
-</tr>
+The public key used to compute the shared secret for encryption is embedded in the header of the token. It&#39;s the signer public key (json value of &#39;x5u&#39;)</td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div>
     </div>
 </body>

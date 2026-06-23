@@ -119,91 +119,93 @@
     <div class="container">
         <p><a href="index.html">← Back to Index</a></p>
         <h1>CameraShakePacket (159)</h1>
-<div class="description">Used to control trigger camera shake movements on the client&#x27;s player camera</div>
+<div class="description">Used to control trigger camera shake movements on the client&#39;s player camera</div>
 <div class="description">It may be used to queue or stop a camera shake</div>
 <div style="margin-left: 0px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>Intensity (Required)</strong></td>
 <td>float</td>
-<td>0</td>
-<td>Camera shake intensity</td>
-</tr>
+                <td>0</td>
+                <td>Camera shake intensity</td>
+            </tr>
 <tr>
 <td><strong>Seconds (Required)</strong></td>
 <td>float</td>
-<td>1</td>
-<td>Camera shake duration in seconds</td>
-</tr>
+                <td>1</td>
+                <td>Camera shake duration in seconds</td>
+            </tr>
 <tr>
 <td rowspan="2"><strong>Shake Type (Required)</strong></td>
 <td>uint8</td>
-<td>2</td>
-<td>The type of calculation used for determining camera shake</td>
-</tr>
+                <td>2</td>
+                <td>The type of calculation used for determining camera shake</td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
-<strong>Enum Values:</strong>
-<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
-<thead>
-<tr style="background-color: #e8e8e8;">
-<th style="width: 40px;">Index</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Positional</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">0</td>
-<td><code>Positional</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">1</td>
-<td><code>Rotational</code></td>
-</tr>
-</tbody>
-</table>
-</div></td>
-</tr>
+            <td style="text-align: center;">1</td>
+            <td><code>Rotational</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
 <tr>
 <td rowspan="2"><strong>Shake Action (Required)</strong></td>
 <td>uint8</td>
-<td>3</td>
-<td>The action to perform to camera shake</td>
-</tr>
+                <td>3</td>
+                <td>The action to perform to camera shake</td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
-<strong>Enum Values:</strong>
-<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
-<thead>
-<tr style="background-color: #e8e8e8;">
-<th style="width: 40px;">Index</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Add</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">0</td>
-<td><code>Add</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">1</td>
-<td><code>Stop</code></td>
-</tr>
+            <td style="text-align: center;">1</td>
+            <td><code>Stop</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
 </tbody>
-</table>
-</div></td>
-</tr>
-</tbody>
-</table>
+    </table>
 </div>
     </div>
 </body>

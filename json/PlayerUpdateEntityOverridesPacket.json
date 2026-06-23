@@ -1,0 +1,181 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "420517003",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
+    "definitions": {
+        "531232588": {
+            "title": "IntOverride",
+            "type": "object",
+            "properties": {
+                "Type": {
+                    "title": "UpdateType",
+                    "type": "string",
+                    "const": "setintoverride",
+                    "enum": [
+                        "ClearOverrides",
+                        "RemoveOverride",
+                        "SetIntOverride",
+                        "SetFloatOverride"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 0
+                },
+                "Value": {
+                    "description": "The integer value to set as the property override.",
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Type",
+                "Value"
+            ]
+        },
+        "175413052": {
+            "title": "ClearOverride",
+            "type": "object",
+            "properties": {
+                "Type": {
+                    "title": "UpdateType",
+                    "type": "string",
+                    "const": "clearoverrides",
+                    "enum": [
+                        "ClearOverrides",
+                        "RemoveOverride",
+                        "SetIntOverride",
+                        "SetFloatOverride"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Type"
+            ]
+        },
+        "4257541248": {
+            "title": "ActorUniqueID",
+            "type": "object",
+            "properties": {
+                "Actor Unique ID": {
+                    "type": "integer",
+                    "x-underlying-type": "int64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Actor Unique ID"
+            ]
+        },
+        "1121502031": {
+            "title": "FloatOverride",
+            "type": "object",
+            "properties": {
+                "Type": {
+                    "title": "UpdateType",
+                    "type": "string",
+                    "const": "setfloatoverride",
+                    "enum": [
+                        "ClearOverrides",
+                        "RemoveOverride",
+                        "SetIntOverride",
+                        "SetFloatOverride"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 0
+                },
+                "Value": {
+                    "description": "The finite float value to set as the property override.",
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1,
+                    "x-runtime-constraint-description": "Must be a finite (non-NaN, non-infinite) floating-point value"
+                }
+            },
+            "required": [
+                "Type",
+                "Value"
+            ]
+        },
+        "3127006119": {
+            "title": "RemoveOverride",
+            "type": "object",
+            "properties": {
+                "Type": {
+                    "title": "UpdateType",
+                    "type": "string",
+                    "const": "removeoverride",
+                    "enum": [
+                        "ClearOverrides",
+                        "RemoveOverride",
+                        "SetIntOverride",
+                        "SetFloatOverride"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Type"
+            ]
+        }
+    },
+    "title": "PlayerUpdateEntityOverridesPacket",
+    "description": "Player Update Entity Overrides",
+    "type": "object",
+    "properties": {
+        "Property Index": {
+            "description": "Index of the entity property the override applies to.",
+            "type": "integer",
+            "x-underlying-type": "uint32",
+            "x-serialization-options": [
+                "Compression"
+            ],
+            "x-ordinal-index": 1,
+            "minimum": 0.0
+        },
+        "Target ID": {
+            "description": "Unique ID of the entity whose property overrides are being updated.",
+            "$ref": "#/definitions/4257541248",
+            "x-ordinal-index": 0
+        },
+        "Update": {
+            "description": "The override operation: clear all, remove one, or set an int/float override.",
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/175413052",
+                    "x-ordinal-index": 0
+                },
+                {
+                    "$ref": "#/definitions/3127006119",
+                    "x-ordinal-index": 1
+                },
+                {
+                    "$ref": "#/definitions/531232588",
+                    "x-ordinal-index": 2
+                },
+                {
+                    "$ref": "#/definitions/1121502031",
+                    "x-ordinal-index": 3
+                }
+            ],
+            "x-control-value-type": "uint32",
+            "x-ordinal-index": 2
+        }
+    },
+    "required": [
+        "Property Index",
+        "Target ID",
+        "Update"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 325,
+        "[cereal:packet_details]": "Updates client entity property override data. Sets/removes an override for the indicated property for a specific entity on a client or clears all overrides for that entity."
+    }
+}

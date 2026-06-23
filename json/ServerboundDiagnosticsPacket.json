@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "599317042",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "3012619155": {
             "title": "WhiskerScopeDataSummary",
@@ -92,6 +92,7 @@
                         "ActorRendering",
                         "BlockTickingQueues",
                         "Biome_Storage",
+                        "Blobs",
                         "Cereal",
                         "CircuitSystem",
                         "Client",
@@ -139,14 +140,28 @@
                         "Material_VariationManager",
                         "Molang",
                         "OreUI",
-                        "Persona",
+                        "Persona_Pieces",
+                        "Persona_Animations",
+                        "Persona_Textures",
+                        "Persona_Characters",
+                        "Persona_SkinPacks",
+                        "Persona_Repo",
                         "Player",
                         "RenderChunk",
                         "RenderChunk_IndexBuffer",
                         "RenderChunk_VertexBuffer",
                         "Rendering",
-                        "Rendering_RenderRegistry",
+                        "Rendering_BgfxInit",
+                        "Rendering_BgfxStartFrame",
+                        "Rendering_BlockTessellator",
+                        "Rendering_EndFrame",
+                        "Rendering_GraphicsTasksInit",
                         "Rendering_Library",
+                        "Rendering_PolygonOperatorPool",
+                        "Rendering_PBRTextureData",
+                        "Rendering_RenderRegistry",
+                        "Rendering_Setup",
+                        "Rendering_Vertices",
                         "RequestLog",
                         "ResourcePacks",
                         "Sound",
@@ -158,6 +173,7 @@
                         "World_Generator",
                         "Tasks",
                         "Test",
+                        "Test_LoadTestTags",
                         "Scripting",
                         "Scripting_Runtime",
                         "Scripting_Context",
@@ -176,7 +192,9 @@
                         "Gameface_Dump",
                         "Gameface_Media",
                         "Gameface_JSON",
-                        "Gameface_ScriptEngine"
+                        "Gameface_ScriptEngine",
+                        "Gameface_Script",
+                        "Gameface_Layout"
                     ],
                     "x-underlying-type": "uint8",
                     "x-serialization-options": [
@@ -194,6 +212,26 @@
             "required": [
                 "Category",
                 "Current Bytes"
+            ]
+        },
+        "2558386505": {
+            "title": "SystemCategory",
+            "type": "object",
+            "properties": {
+                "Category Name": {
+                    "type": "string",
+                    "x-ordinal-index": 0
+                },
+                "System Index": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Category Name",
+                "System Index"
             ]
         },
         "3819337508": {
@@ -295,6 +333,13 @@
             },
             "x-ordinal-index": 9
         },
+        "System Categories": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/2558386505"
+            },
+            "x-ordinal-index": 12
+        },
         "System Diagnostics": {
             "type": "array",
             "items": {
@@ -307,7 +352,7 @@
             "items": {
                 "$ref": "#/definitions/3012619155"
             },
-            "x-ordinal-index": 12
+            "x-ordinal-index": 13
         }
     },
     "required": [
@@ -322,6 +367,7 @@
         "AvgUnaccountedTimePercent",
         "Entity Diagnostics",
         "Memory Category Values",
+        "System Categories",
         "System Diagnostics",
         "Whisker Scopes"
     ],

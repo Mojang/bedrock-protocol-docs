@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayerAuthInputPacket (144)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        h4 {
+            color: #666;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        table {
+            background-color: white;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        th {
+            font-weight: bold;
+            text-align: left;
+            padding: 8px !important;
+        }
+        td {
+            padding: 8px !important;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #e8f4f8;
+        }
+        .description {
+            color: #555;
+            font-style: italic;
+            margin: 10px 0 20px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .packet-list {
+            columns: 3;
+            column-gap: 20px;
+        }
+        .packet-list li {
+            margin-bottom: 8px;
+            break-inside: avoid;
+        }
+        details {
+            margin: 10px 0;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            padding: 8px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            user-select: none;
+        }
+        summary:hover {
+            background-color: #e8e8e8;
+        }
+        details[open] summary {
+            background-color: #d4edff;
+            border-color: #3498db;
+            border-left: 4px solid #3498db;
+        }
+        @media (max-width: 900px) {
+            .packet-list {
+                columns: 2;
+            }
+        }
+        @media (max-width: 600px) {
+            .packet-list {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p><a href="index.html">← Back to Index</a></p>
+        <h1>PlayerAuthInputPacket (144)</h1>
+<div class="description">Player Auth Input</div>
+<div class="description">These are for Server Authoritative Movement to sync all player input with the server.</div>
+<div style="margin-left: 0px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td rowspan="2"><strong>Player Rotation (Required)</strong></td>
+<td>Vec2</td>
+                <td>0</td>
+                <td>Orientation of the player at the start of the tick.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>Vec2</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>float</td>
+                <td>1</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Position (Required)</strong></td>
+<td>Vec3</td>
+                <td>1</td>
+                <td>Client predicted position at the end of the tick.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>Vec3</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>float</td>
+                <td>1</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Z (Required)</strong></td>
+<td>float</td>
+                <td>2</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Move Vector (Required)</strong></td>
+<td>Vec2</td>
+                <td>2</td>
+                <td>The desired local space move direction of the player.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>Vec2</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>float</td>
+                <td>1</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+<tr>
+<td><strong>Player Head Rotation (Required)</strong></td>
+<td>float</td>
+                <td>3</td>
+                <td>Effectively the same as the Y component of Player Rotation.</td>
+            </tr>
+<tr>
+<td><strong>Input Data (Required)</strong></td>
+<td>array&lt;int32&gt;</td>
+                <td>4</td>
+                <td>Bitset of per-tick input flags (jumping, sneaking, gliding, collisions, etc.). Each flag gates additional optional fields below.</td>
+            </tr>
+<tr>
+<td rowspan="2"><strong>Input Mode (Required)</strong></td>
+<td>varuint32</td>
+                <td>5</td>
+                <td>The input device the player is using (mouse/keyboard, touch, gamepad, motion controller).</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Undefined</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">1</td>
+            <td><code>Mouse</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">2</td>
+            <td><code>Touch</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">3</td>
+            <td><code>GamePad</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">4</td>
+            <td><code>Count</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Play Mode (Required)</strong></td>
+<td>varuint32</td>
+                <td>6</td>
+                <td>The play mode (normal or one of the reality/VR modes).</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Normal</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">1</td>
+            <td><code>Teaser</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">2</td>
+            <td><code>Screen</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">3</td>
+            <td><code>ExitLevel</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">4</td>
+            <td><code>NumModes</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>New Interaction Model (Required)</strong></td>
+<td>varint32</td>
+                <td>7</td>
+                <td>The interaction model in use (classic, touch, or crosshair).</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Touch</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">1</td>
+            <td><code>Crosshair</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">2</td>
+            <td><code>Classic</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">3</td>
+            <td><code>Count</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Interact Rotation (Required)</strong></td>
+<td>Vec2</td>
+                <td>8</td>
+                <td>The rotation the player is looking for interactions.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>Vec2</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>float</td>
+                <td>1</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Client Tick (Required)</strong></td>
+<td>PlayerInputTick</td>
+                <td>9</td>
+                <td>Which simulation frame client is on.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>PlayerInputTick</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Input tick (Required)</strong></td>
+<td>varuint64</td>
+                <td>0</td>
+                <td>In server authoritative movement mode the client supplies this in PlayerAuthInputPacket.
+For any client-bound packets containing a tick, the server should supply the tick value corresponding to the most recently processed PlayerAuthInputPacket.
+This allows the client to adjust any client predictions made while the packet was in flight.
+If the packet is being sent to the client but not relating to data of the player or a client-predicted vehicle, it can be zero.
+It is also acceptable to specify zero for players, although this may lead to minor visual flickers and less smooth application of CorrectPlayerMovePredictionPacket.</td>
+            </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Pos Delta (Required)</strong></td>
+<td>Vec3</td>
+                <td>10</td>
+                <td>Client predicted velocity at the end of the tick.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>Vec3</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>float</td>
+                <td>1</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Z (Required)</strong></td>
+<td>float</td>
+                <td>2</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Item Use Transaction</strong></td>
+<td>PackedItemUseLegacyInventoryTransaction</td>
+                <td>11</td>
+                <td>Item use transaction for this tick. Present only when the Input Data flags indicate a transaction occurred.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>PackedItemUseLegacyInventoryTransaction</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td rowspan="2"><strong>Legacy Request ID (Required)</strong></td>
+<td>ItemStackLegacyRequestId</td>
+                <td>0</td>
+                <td>The legacy item stack request id associated with this item interaction. Zero means no legacy request.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>ItemStackLegacyRequestId</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>ID (Required)</strong></td>
+<td>varint32</td>
+                <td>0</td>
+                <td>Raw Id (32 bit signed)</td>
+            </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Legacy Set Item Slots</strong></td>
+<td>array&lt;LegacySetSlot&gt;</td>
+                <td>1</td>
+                <td>Only present when Legacy Request ID is valid. Lists container slots involved in the interaction.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>LegacySetSlot (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td rowspan="2"><strong>Container Enum (Required)</strong></td>
+<td>varuint8</td>
+                <td>0</td>
+                <td>The container enum name identifying which container slot set this belongs to.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>AnvilInputContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">1</td>
+            <td><code>AnvilMaterialContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">2</td>
+            <td><code>AnvilResultPreviewContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">3</td>
+            <td><code>SmithingTableInputContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">4</td>
+            <td><code>SmithingTableMaterialContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">5</td>
+            <td><code>SmithingTableResultPreviewContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">6</td>
+            <td><code>ArmorContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">7</td>
+            <td><code>LevelEntityContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">8</td>
+            <td><code>BeaconPaymentContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">9</td>
+            <td><code>BrewingStandInputContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">10</td>
+            <td><code>BrewingStandResultContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">11</td>
+            <td><code>BrewingStandFuelContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">12</td>
+            <td><code>CombinedHotbarAndInventoryContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">13</td>
+            <td><code>CraftingInputContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">14</td>
+            <td><code>CraftingOutputPreviewContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">15</td>
+            <td><code>RecipeConstructionContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">16</td>
+            <td><code>RecipeNatureContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">17</td>
+            <td><code>RecipeItemsContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">18</td>
+            <td><code>RecipeFoodContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">19</td>
+            <td><code>RecipeBlocksContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">20</td>
+            <td><code>RecipeFurnaceItemsContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">21</td>
+            <td><code>RecipeSearchContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">22</td>
+            <td><code>RecipeSearchBarContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">23</td>
+            <td><code>RecipeEquipmentContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">24</td>
+            <td><code>RecipeBookContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">25</td>
+            <td><code>EnchantingInputContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">26</td>
+            <td><code>EnchantingMaterialContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">27</td>
+            <td><code>FurnaceFuelContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">28</td>
+            <td><code>FurnaceIngredientContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">29</td>
+            <td><code>FurnaceResultContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">30</td>
+            <td><code>HorseEquipContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">31</td>
+            <td><code>HotbarContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">32</td>
+            <td><code>InventoryContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">33</td>
+            <td><code>ShulkerBoxContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">34</td>
+            <td><code>TradeIngredient1Container</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">35</td>
+            <td><code>TradeIngredient2Container</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">36</td>
+            <td><code>TradeResultPreviewContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">37</td>
+            <td><code>OffhandContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">38</td>
+            <td><code>CompoundCreatorInput</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">39</td>
+            <td><code>CompoundCreatorOutputPreview</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">40</td>
+            <td><code>ElementConstructorOutputPreview</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">41</td>
+            <td><code>MaterialReducerInput</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">42</td>
+            <td><code>MaterialReducerOutput</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">43</td>
+            <td><code>LabTableInput</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">44</td>
+            <td><code>LoomInputContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">45</td>
+            <td><code>LoomDyeContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">46</td>
+            <td><code>LoomMaterialContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">47</td>
+            <td><code>LoomResultPreviewContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">48</td>
+            <td><code>BlastFurnaceIngredientContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">49</td>
+            <td><code>SmokerIngredientContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">50</td>
+            <td><code>Trade2Ingredient1Container</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">51</td>
+            <td><code>Trade2Ingredient2Container</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">52</td>
+            <td><code>Trade2ResultPreviewContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">53</td>
+            <td><code>GrindstoneInputContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">54</td>
+            <td><code>GrindstoneAdditionalContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">55</td>
+            <td><code>GrindstoneResultPreviewContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">56</td>
+            <td><code>StonecutterInputContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">57</td>
+            <td><code>StonecutterResultPreviewContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">58</td>
+            <td><code>CartographyInputContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">59</td>
+            <td><code>CartographyAdditionalContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">60</td>
+            <td><code>CartographyResultPreviewContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">61</td>
+            <td><code>BarrelContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">62</td>
+            <td><code>CursorContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">63</td>
+            <td><code>CreatedOutputContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">64</td>
+            <td><code>SmithingTableTemplateContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">65</td>
+            <td><code>CrafterLevelEntityContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">66</td>
+            <td><code>DynamicContainer</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
+<tr>
+<td><strong>Slots (Required)</strong></td>
+<td>array&lt;uint8&gt;</td>
+                <td>1</td>
+                <td>List of inventory slot indices within the given container.</td>
+            </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Item Use Transaction (Required)</strong></td>
+<td>ItemUseInventoryTransaction</td>
+                <td>2</td>
+                <td>The reflected item use transaction performed on this auth-input tick.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>ItemUseInventoryTransaction</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td rowspan="2"><strong>Actions (Required)</strong></td>
+<td>InventoryTransaction</td>
+                <td>0</td>
+                <td>Base inventory actions. Lists the inventory slot changes associated with this transaction.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>InventoryTransaction</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td rowspan="2"><strong>Actions (Required)</strong></td>
+<td>array&lt;InventoryAction&gt;</td>
+                <td>0</td>
+                <td>List of inventory slot changes. Each action describes which container slot is changing and what the item descriptor transitions from and to.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>InventoryAction (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td rowspan="2"><strong>Source (Required)</strong></td>
+<td>InventorySource</td>
+                <td>0</td>
+                <td>The inventory source identifying which container this action targets.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>InventorySource</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td rowspan="2"><strong>Source Type (Required)</strong></td>
+<td>varuint32</td>
+                <td>0</td>
+                <td>The inventory source type.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Container Inventory</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">1</td>
+            <td><code>Global Inventory</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">2</td>
+            <td><code>World Interaction</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">3</td>
+            <td><code>Creative Inventory</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">4</td>
+            <td><code>Non Implemented Feature TODO</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
+<tr>
+<td><strong>Container ID</strong></td>
+<td>varint8</td>
+                <td>1</td>
+                <td>Container window ID. Present only for ContainerInventory and NonImplementedFeatureTODO source types.</td>
+            </tr>
+<tr>
+<td rowspan="2"><strong>Bit Flags</strong></td>
+<td>varuint32</td>
+                <td>2</td>
+                <td>Source flags. Present only for WorldInteraction source type.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>No Flag</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">1</td>
+            <td><code>World Interaction Random</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+<tr>
+<td><strong>Slot (Required)</strong></td>
+<td>varuint32</td>
+                <td>1</td>
+                <td>The slot index within the source container.</td>
+            </tr>
+<tr>
+<td><strong>From Item (Required)</strong></td>
+<td>NetworkItemStackDescriptor</td>
+                <td>2</td>
+                <td>The item descriptor representing the state of the slot before this action.</td>
+            </tr>
+<tr>
+<td><strong>To Item (Required)</strong></td>
+<td>NetworkItemStackDescriptor</td>
+                <td>3</td>
+                <td>The item descriptor representing the desired state of the slot after this action.</td>
+            </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Action Type (Required)</strong></td>
+<td>varint32</td>
+                <td>1</td>
+                <td>The type of item use action performed.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Place</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">1</td>
+            <td><code>Use</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">2</td>
+            <td><code>Destroy</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">3</td>
+            <td><code>Use As Attack</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Trigger Type (Required)</strong></td>
+<td>varuint8</td>
+                <td>2</td>
+                <td>PlayerInput if a direct result of the player&#39;s initial button input. SimulationTick if the player is holding down input from a previous tick.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Unknown</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">1</td>
+            <td><code>Player Input</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">2</td>
+            <td><code>Simulation Tick</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Position (Required)</strong></td>
+<td>BlockPos</td>
+                <td>3</td>
+                <td>The position of the target block.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BlockPos</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>varint32</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>varint32</td>
+                <td>1</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Z (Required)</strong></td>
+<td>varint32</td>
+                <td>2</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+<tr>
+<td><strong>Face (Required)</strong></td>
+<td>varuint8</td>
+                <td>4</td>
+                <td>The face of the target block that was clicked.</td>
+            </tr>
+<tr>
+<td><strong>Slot (Required)</strong></td>
+<td>varint32</td>
+                <td>5</td>
+                <td>The inventory slot of the item being used.</td>
+            </tr>
+<tr>
+<td><strong>Item (Required)</strong></td>
+<td>NetworkItemStackDescriptor</td>
+                <td>6</td>
+                <td>The item stack descriptor of the item being used.</td>
+            </tr>
+<tr>
+<td rowspan="2"><strong>From Position (Required)</strong></td>
+<td>Vec3</td>
+                <td>7</td>
+                <td>The player&#39;s position when this transaction was sent.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>Vec3</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>float</td>
+                <td>1</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Z (Required)</strong></td>
+<td>float</td>
+                <td>2</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Click Position (Required)</strong></td>
+<td>Vec3</td>
+                <td>8</td>
+                <td>The position within the target block face that was clicked.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>Vec3</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>float</td>
+                <td>1</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Z (Required)</strong></td>
+<td>float</td>
+                <td>2</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+<tr>
+<td><strong>Target Block Id (Required)</strong></td>
+<td>varuint32</td>
+                <td>9</td>
+                <td>The runtime block state ID of the target block.</td>
+            </tr>
+<tr>
+<td rowspan="2"><strong>Client Interact Prediction (Required)</strong></td>
+<td>uint8</td>
+                <td>10</td>
+                <td>Whether the client predicted the interaction would succeed.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Failure</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">1</td>
+            <td><code>Success</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Client Cooldown State (Required)</strong></td>
+<td>uint8</td>
+                <td>11</td>
+                <td>Whether the item is currently on cooldown on the client.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Off</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">1</td>
+            <td><code>On</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Item Stack Request</strong></td>
+<td>ItemStackRequest</td>
+                <td>12</td>
+                <td>Item stack request for this tick. Present only when the Input Data flags indicate a request occurred.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>ItemStackRequest</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td rowspan="2"><strong>Client Request Id (Required)</strong></td>
+<td>ItemStackRequestId</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>ItemStackRequestId</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>ID (Required)</strong></td>
+<td>varint32</td>
+                <td>0</td>
+                <td>Raw Id (32 bit signed)</td>
+            </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+<tr>
+<td><strong>Actions (Required)</strong></td>
+<td>array&lt;unknown&gt;</td>
+                <td>1</td>
+                <td>Action list. Each entry starts with an ItemStackRequestActionType byte followed by that action&#39;s payload.</td>
+            </tr>
+<tr>
+<td><strong>Strings To Filter (Required)</strong></td>
+<td>array&lt;string&gt;</td>
+                <td>2</td>
+                <td>Array of strings to submit to profanity filtering service</td>
+            </tr>
+<tr>
+<td rowspan="2"><strong>StringsToFilterOrigin (Required)</strong></td>
+<td>int32</td>
+                <td>3</td>
+                <td></td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>unknown</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">1</td>
+            <td><code>ServerChatPublic</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">2</td>
+            <td><code>ServerChatWhisper</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">3</td>
+            <td><code>SignText</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">4</td>
+            <td><code>AnvilText</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">5</td>
+            <td><code>BookAndQuillText</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">6</td>
+            <td><code>CommandBlockText</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">7</td>
+            <td><code>BlockActorDataText</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">8</td>
+            <td><code>JoinEventText</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">9</td>
+            <td><code>LeaveEventText</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">10</td>
+            <td><code>SlashCommandChat</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">11</td>
+            <td><code>CartographyText</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">12</td>
+            <td><code>KickCommand</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">13</td>
+            <td><code>TitleCommand</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">14</td>
+            <td><code>SummonCommand</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">15</td>
+            <td><code>ServerForm</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">16</td>
+            <td><code>DataDrivenUI</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Player Block Actions</strong></td>
+<td>array&lt;PlayerBlockActionData&gt;</td>
+                <td>13</td>
+                <td>Block actions performed this tick. Present only when the Input Data flags indicate block actions occurred.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>PlayerBlockActionData (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td rowspan="2"><strong>Player Action Type (Required)</strong></td>
+<td>varint32</td>
+                <td>0</td>
+                <td>The server-authoritative block action type.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Unknown</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">1</td>
+            <td><code>StartDestroyBlock</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">2</td>
+            <td><code>AbortDestroyBlock</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">3</td>
+            <td><code>StopDestroyBlock</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">4</td>
+            <td><code>StartSleeping</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">5</td>
+            <td><code>StopSleeping</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">6</td>
+            <td><code>Respawn</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">7</td>
+            <td><code>StartJump</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">8</td>
+            <td><code>StartSprinting</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">9</td>
+            <td><code>StopSprinting</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">10</td>
+            <td><code>StartSneaking</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">11</td>
+            <td><code>StopSneaking</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">12</td>
+            <td><code>CreativeDestroyBlock</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">13</td>
+            <td><code>ChangeDimensionAck</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">14</td>
+            <td><code>StartGliding</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">15</td>
+            <td><code>StopGliding</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">16</td>
+            <td><code>DenyDestroyBlock</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">17</td>
+            <td><code>CrackBlock</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">18</td>
+            <td><code>StartSwimming</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">19</td>
+            <td><code>StopSwimming</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">20</td>
+            <td><code>StartSpinAttack</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">21</td>
+            <td><code>StopSpinAttack</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">22</td>
+            <td><code>PredictDestroyBlock</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">23</td>
+            <td><code>ContinueDestroyBlock</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">24</td>
+            <td><code>StartItemUseOn</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">25</td>
+            <td><code>StopItemUseOn</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">26</td>
+            <td><code>HandledTeleport</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">27</td>
+            <td><code>MissedSwing</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">28</td>
+            <td><code>StartCrawling</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">29</td>
+            <td><code>StopCrawling</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">30</td>
+            <td><code>StartFlying</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">31</td>
+            <td><code>StopFlying</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">32</td>
+            <td><code>StartUsingItem</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">33</td>
+            <td><code>InternalUpdate</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">34</td>
+            <td><code>Count</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Position (Required)</strong></td>
+<td>BlockPos</td>
+                <td>1</td>
+                <td>The block position for the action. StopDestroyBlock serializes the default value.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BlockPos</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>varint32</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>varint32</td>
+                <td>1</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Z (Required)</strong></td>
+<td>varint32</td>
+                <td>2</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+<tr>
+<td><strong>Facing (Required)</strong></td>
+<td>varint32</td>
+                <td>2</td>
+                <td>Facing, or action-specific integer data for AbortDestroyBlock.</td>
+            </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Vehicle Rotation</strong></td>
+<td>Vec2</td>
+                <td>14</td>
+                <td>Rotation of the vehicle the player is in. Present only when the Input Data flags indicate the player is in a vehicle.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>Vec2</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>float</td>
+                <td>1</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Client Predicted Vehicle</strong></td>
+<td>ActorUniqueID</td>
+                <td>15</td>
+                <td>The client-predicted vehicle the player is riding. Present only when the Input Data flags indicate the player is in a vehicle.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>ActorUniqueID</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Actor Unique ID (Required)</strong></td>
+<td>varint64</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Analog Move Vector (Required)</strong></td>
+<td>Vec2</td>
+                <td>16</td>
+                <td>Same idea as move vector.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>Vec2</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>float</td>
+                <td>1</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Camera Orientation (Required)</strong></td>
+<td>Vec3</td>
+                <td>17</td>
+                <td>The world space unit vector for the camera forward direction.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>Vec3</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>float</td>
+                <td>1</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Z (Required)</strong></td>
+<td>float</td>
+                <td>2</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Raw Move Vector (Required)</strong></td>
+<td>Vec2</td>
+                <td>18</td>
+                <td>Same as move vector but not affected by input permissions.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>Vec2</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>float</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>float</td>
+                <td>1</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div></td>
+                </tr>
+</tbody>
+    </table>
+</div>
+    </div>
+</body>
+</html>

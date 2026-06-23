@@ -122,107 +122,109 @@
 <div class="description">Applies a single update to the server data store from the client.</div>
 <div style="margin-left: 0px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td rowspan="2"><strong>Update (Required)</strong></td>
 <td>Data Store Update</td>
-<td>0</td>
-<td>The update data</td>
-</tr>
+                <td>0</td>
+                <td>The update data</td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>Data Store Update</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>Data Store Name (Required)</strong></td>
 <td>string</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Property (Required)</strong></td>
 <td>string</td>
-<td>1</td>
-<td>The name of the property in the data store that has changed</td>
-</tr>
+                <td>1</td>
+                <td>The name of the property in the data store that has changed</td>
+            </tr>
 <tr>
 <td><strong>Path (Required)</strong></td>
 <td>string</td>
-<td>2</td>
-<td>The path through the property that needs updating</td>
-</tr>
+                <td>2</td>
+                <td>The path through the property that needs updating</td>
+            </tr>
 <tr>
 <td rowspan="2"><strong>Data (Required)</strong></td>
 <td>oneOf</td>
-<td>3</td>
-<td>The value that is updating</td>
-</tr>
+                <td>3</td>
+                <td>The value that is updating</td>
+            </tr>
 <tr>
-<td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
-<strong>oneOf&lt;double, boolean, string&gt;:</strong>
-<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
-<thead>
-<tr style="background-color: #e8e8e8;">
-<th>Control Value [uint32]</th>
-<th>Type</th>
-<th>Details</th>
-</tr>
-</thead>
-<tbody>
+                    <td colspan="3" style="padding: 0;"><div style="margin-left: 20px; margin-top: 0px; margin-bottom: 0px;">
+    <strong>oneOf&lt;double, boolean, string&gt;:</strong>
+    <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 5px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th>Control Value [uint32]</th>
+                <th>Type</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td><strong>double</strong></td>
+                <td>Underlying: double</td>
+            </tr>
 <tr>
-<td>0</td>
-<td><strong>double</strong></td>
-<td>Underlying: double</td>
-</tr>
+                <td>1</td>
+                <td><strong>boolean</strong></td>
+                <td>Underlying: boolean</td>
+            </tr>
 <tr>
-<td>1</td>
-<td><strong>boolean</strong></td>
-<td>Underlying: boolean</td>
-</tr>
-<tr>
-<td>2</td>
-<td><strong>string</strong></td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
-</div></td>
-</tr>
+                <td>2</td>
+                <td><strong>string</strong></td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
+</td>
+                </tr>
 <tr>
 <td><strong>Property Update Count (Required)</strong></td>
 <td>uint32</td>
-<td>4</td>
-<td>The number of times this property has updated. Does not increment unless the entire property updates</td>
-</tr>
+                <td>4</td>
+                <td>The number of times this property has updated. Does not increment unless the entire property updates</td>
+            </tr>
 <tr>
 <td><strong>Path Update Count (Required)</strong></td>
 <td>uint32</td>
-<td>5</td>
-<td>The number of times this path has updated. Resets if the entire property has changed.</td>
-</tr>
+                <td>5</td>
+                <td>The number of times this path has updated. Resets if the entire property has changed.</td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 </tbody>
-</table>
+    </table>
 </div>
     </div>
 </body>

@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3448472794",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "294292951": {
             "title": "ServerSoundHandle",
@@ -60,6 +60,14 @@
     "description": "This packet is only used via command or script event. This is for 3rd party content.",
     "type": "object",
     "properties": {
+        "Loop Count": {
+            "type": "integer",
+            "x-underlying-type": "int32",
+            "x-serialization-options": [
+                "Compression"
+            ],
+            "x-ordinal-index": 4
+        },
         "Name": {
             "type": "string",
             "x-ordinal-index": 0
@@ -75,7 +83,7 @@
         },
         "Server Sound Handle": {
             "$ref": "#/definitions/294292951",
-            "x-ordinal-index": 4
+            "x-ordinal-index": 5
         },
         "Volume": {
             "type": "number",
@@ -84,6 +92,7 @@
         }
     },
     "required": [
+        "Loop Count",
         "Name",
         "Pitch",
         "Position",

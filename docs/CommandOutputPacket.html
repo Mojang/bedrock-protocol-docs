@@ -122,241 +122,243 @@
 <div class="description">&quot;slash&quot; command execution output, server to client.</div>
 <div style="margin-left: 0px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td rowspan="2"><strong>Origin Data (Required)</strong></td>
 <td>CommandOriginData</td>
-<td>0</td>
-<td>The origin of the command.</td>
-</tr>
+                <td>0</td>
+                <td>The origin of the command.</td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>CommandOriginData</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td rowspan="2"><strong>Type (Required)</strong></td>
 <td>string</td>
-<td>0</td>
-<td>The command origin type.</td>
-</tr>
+                <td>0</td>
+                <td>The command origin type.</td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
-<strong>Enum Values:</strong>
-<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
-<thead>
-<tr style="background-color: #e8e8e8;">
-<th style="width: 40px;">Index</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Player</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">0</td>
-<td><code>Player</code></td>
-</tr>
+            <td style="text-align: center;">1</td>
+            <td><code>DevConsole</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">1</td>
-<td><code>DevConsole</code></td>
-</tr>
+            <td style="text-align: center;">2</td>
+            <td><code>Test</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">2</td>
-<td><code>Test</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">3</td>
-<td><code>AutomationPlayer</code></td>
-</tr>
-</tbody>
-</table>
-</div></td>
-</tr>
+            <td style="text-align: center;">3</td>
+            <td><code>AutomationPlayer</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
 <tr>
 <td rowspan="2"><strong>UUID (Required)</strong></td>
 <td>mce::UUID</td>
-<td>1</td>
-<td>The unique UUID that represents an instantiation of a command. Each time a command is run it should be given a UUID to represent that instance.</td>
-</tr>
+                <td>1</td>
+                <td>The unique UUID that represents an instantiation of a command. Each time a command is run it should be given a UUID to represent that instance.</td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>mce::UUID</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>Most Significant Bits (Required)</strong></td>
 <td>uint64</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Least Significant Bits (Required)</strong></td>
 <td>uint64</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
 <td><strong>RequestId</strong></td>
 <td>string</td>
-<td>2</td>
-<td>The request Id.</td>
-</tr>
+                <td>2</td>
+                <td>The request Id.</td>
+            </tr>
 <tr>
 <td><strong>PlayerId</strong></td>
 <td>int64</td>
-<td>3</td>
-<td>The player Id.</td>
-</tr>
+                <td>3</td>
+                <td>The player Id.</td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
 <td rowspan="2"><strong>Output (Required)</strong></td>
 <td>CommandOutput</td>
-<td>1</td>
-<td>The output.</td>
-</tr>
+                <td>1</td>
+                <td>The output.</td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>CommandOutput</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td rowspan="2"><strong>Output Type (Required)</strong></td>
 <td>string</td>
-<td>0</td>
-<td>The command output type.</td>
-</tr>
+                <td>0</td>
+                <td>The command output type.</td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
-<strong>Enum Values:</strong>
-<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
-<thead>
-<tr style="background-color: #e8e8e8;">
-<th style="width: 40px;">Index</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>None</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">0</td>
-<td><code>None</code></td>
-</tr>
+            <td style="text-align: center;">1</td>
+            <td><code>LastOutput</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">1</td>
-<td><code>LastOutput</code></td>
-</tr>
+            <td style="text-align: center;">2</td>
+            <td><code>Silent</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">2</td>
-<td><code>Silent</code></td>
-</tr>
+            <td style="text-align: center;">3</td>
+            <td><code>AllOutput</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">3</td>
-<td><code>AllOutput</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td><code>DataSet</code></td>
-</tr>
-</tbody>
-</table>
-</div></td>
-</tr>
+            <td style="text-align: center;">4</td>
+            <td><code>DataSet</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
 <tr>
 <td><strong>Success Count (Required)</strong></td>
 <td>uint32</td>
-<td>1</td>
-<td>The success count.</td>
-</tr>
+                <td>1</td>
+                <td>The success count.</td>
+            </tr>
 <tr>
 <td rowspan="2"><strong>Output Messages</strong></td>
 <td>array&lt;CommandOutputMessage&gt;</td>
-<td>2</td>
-<td>The messages.</td>
-</tr>
+                <td>2</td>
+                <td>The messages.</td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>CommandOutputMessage (Array Item)</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>Message ID (Required)</strong></td>
 <td>string</td>
-<td>0</td>
-<td>The unique identifier for the message.</td>
-</tr>
+                <td>0</td>
+                <td>The unique identifier for the message.</td>
+            </tr>
 <tr>
 <td><strong>Successful? (Required)</strong></td>
 <td>boolean</td>
-<td>1</td>
-<td>The command output type.</td>
-</tr>
+                <td>1</td>
+                <td>The command output type.</td>
+            </tr>
 <tr>
 <td><strong>Parameters</strong></td>
 <td>array&lt;string&gt;</td>
-<td>2</td>
-<td>The parameters for the message.</td>
-</tr>
+                <td>2</td>
+                <td>The parameters for the message.</td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
 <td><strong>Data Set</strong></td>
 <td>string</td>
-<td>3</td>
-<td>The data set.</td>
-</tr>
+                <td>3</td>
+                <td>The data set.</td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 </tbody>
-</table>
+    </table>
 </div>
     </div>
 </body>

@@ -1,0 +1,191 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "319284821",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
+    "definitions": {
+        "725374594": {
+            "title": "Vec3",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                },
+                "Z": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 2
+                }
+            },
+            "required": [
+                "X",
+                "Y",
+                "Z"
+            ]
+        },
+        "1750201151": {
+            "title": "ActorRuntimeID",
+            "type": "object",
+            "properties": {
+                "Actor Runtime ID": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Actor Runtime ID"
+            ]
+        },
+        "742152213": {
+            "title": "Vec2",
+            "type": "object",
+            "properties": {
+                "X": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 0
+                },
+                "Y": {
+                    "type": "number",
+                    "x-underlying-type": "float",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "X",
+                "Y"
+            ]
+        },
+        "1262916889": {
+            "title": "PlayerInputTick",
+            "type": "object",
+            "properties": {
+                "Input tick": {
+                    "description": "In server authoritative movement mode the client supplies this in PlayerAuthInputPacket.\nFor any client-bound packets containing a tick, the server should supply the tick value corresponding to the most recently processed PlayerAuthInputPacket.\nThis allows the client to adjust any client predictions made while the packet was in flight.\nIf the packet is being sent to the client but not relating to data of the player or a client-predicted vehicle, it can be zero.\nIt is also acceptable to specify zero for players, although this may lead to minor visual flickers and less smooth application of CorrectPlayerMovePredictionPacket.",
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Input tick"
+            ]
+        },
+        "4227570450": {
+            "title": "MovePlayerTeleportData",
+            "type": "object",
+            "properties": {
+                "Source Actor Type": {
+                    "description": "The actor type that caused the teleport.",
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 1
+                },
+                "Teleportation Cause": {
+                    "description": "Why the player was teleported.",
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Source Actor Type",
+                "Teleportation Cause"
+            ]
+        }
+    },
+    "title": "MovePlayerPacket",
+    "description": "For client authoritative and server authoritative movement modes, it is only intended as a client-bound packet. It forces the player to a specified position with slightly different behavior depending on the position mode.",
+    "type": "object",
+    "properties": {
+        "On Ground": {
+            "description": "For client bound packets this should have little meaning as it will be reset by the client every frame. For server bound it is true if the player is currently touching the ground. The server authoritative near-equivalent of this is PlayerAuthInputPacket::InputData::VerticalCollision",
+            "type": "boolean",
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 5
+        },
+        "Player Runtime ID": {
+            "description": "If server-bound, this is always the id of the sending player. If client-bound, the target player.",
+            "$ref": "#/definitions/1750201151",
+            "x-ordinal-index": 0
+        },
+        "Position": {
+            "description": "The predicted world space position of the player after movement simulation this tick. The server authoritative equivalent of this is PlayerAuthInputPacket::mPos",
+            "$ref": "#/definitions/725374594",
+            "x-ordinal-index": 1
+        },
+        "Position Mode": {
+            "title": "PositionMode",
+            "description": "Determines how the client will behave when receiving this, see the enum for details. When sent to the server this is always 'Normal' except when in a vehicle then it's 'OnlyHeadRot'.",
+            "type": "string",
+            "enum": [
+                "Normal",
+                "Respawn",
+                "Teleport",
+                "OnlyHeadRot"
+            ],
+            "x-underlying-type": "uint8",
+            "x-serialization-options": [
+                "Enum-as-Value"
+            ],
+            "x-ordinal-index": 4
+        },
+        "Riding Runtime ID": {
+            "description": "If client bound this has no meaning. If server bound it is the vehicle the client is riding as specified by the last SetActorLinkPacket from the server. The server authoritative near-equivalent is PlayerAuthInputPacket::mClientPredictedVehicle",
+            "$ref": "#/definitions/1750201151",
+            "x-ordinal-index": 6
+        },
+        "Rotation": {
+            "description": "Rotation in degrees of the direction they should look, separate from their body orientation. The server authoritative equivalent of this is PlayerAuthInputPacket::mRot",
+            "$ref": "#/definitions/742152213",
+            "x-ordinal-index": 2
+        },
+        "Teleport Data": {
+            "description": "Teleportation details. Present only when Position Mode is Teleport.",
+            "$ref": "#/definitions/4227570450",
+            "x-ordinal-index": 7
+        },
+        "Tick": {
+            "description": "The client tick this movement corresponds to.",
+            "$ref": "#/definitions/1262916889",
+            "x-ordinal-index": 8
+        },
+        "Y-Head Rotation": {
+            "description": "Rotation in degrees of the head. Almost always matches Y rotation. The server authoritative equivalent of this is PlayerAuthInputPacket::mYHeadRot",
+            "type": "number",
+            "x-underlying-type": "float",
+            "x-ordinal-index": 3
+        }
+    },
+    "required": [
+        "On Ground",
+        "Player Runtime ID",
+        "Position",
+        "Position Mode",
+        "Riding Runtime ID",
+        "Rotation",
+        "Tick",
+        "Y-Head Rotation"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 19,
+        "[cereal:packet_details]": ""
+    }
+}

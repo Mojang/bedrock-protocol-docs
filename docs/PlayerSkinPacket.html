@@ -123,879 +123,686 @@
 <div class="description">Sent from the client to server, then processed and broadcasted to all clients. This is used by third-party(3P) servers to send custom geometry.</div>
 <div style="margin-left: 0px; margin-top: 10px;">
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td rowspan="2"><strong>UUID (Required)</strong></td>
 <td>mce::UUID</td>
-<td>0</td>
-<td>The player&#x27;s UUID</td>
-</tr>
+                <td>0</td>
+                <td>The player&#39;s UUID</td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>mce::UUID</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>Most Significant Bits (Required)</strong></td>
 <td>uint64</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Least Significant Bits (Required)</strong></td>
 <td>uint64</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
 <td rowspan="2"><strong>Serialized Skin (Required)</strong></td>
 <td>SerializedSkin</td>
-<td>1</td>
-<td>The player&#x27;s serialized skin</td>
-</tr>
+                <td>1</td>
+                <td>The player&#39;s serialized skin</td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>SerializedSkin</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>ID (Required)</strong></td>
 <td>string</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>PlayFabID (Required)</strong></td>
 <td>string</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>ResourcePatch (Required)</strong></td>
 <td>string</td>
-<td>2</td>
-<td></td>
-</tr>
+                <td>2</td>
+                <td></td>
+            </tr>
 <tr>
 <td rowspan="2"><strong>ImageData (Required)</strong></td>
 <td>SkinImage</td>
-<td>3</td>
-<td></td>
-</tr>
+                <td>3</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>SkinImage</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>Width (Required)</strong></td>
 <td>uint32</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Height (Required)</strong></td>
 <td>uint32</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>ImageBytes (Required)</strong></td>
 <td>array&lt;uint8&gt;</td>
-<td>2</td>
-<td></td>
-</tr>
+                <td>2</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
 <td rowspan="2"><strong>AnimatedImageData (Required)</strong></td>
 <td>array&lt;AnimatedImageData&gt;</td>
-<td>4</td>
-<td></td>
-</tr>
+                <td>4</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>AnimatedImageData (Array Item)</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td rowspan="2"><strong>SkinImage (Required)</strong></td>
 <td>SkinImage</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>SkinImage</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>Width (Required)</strong></td>
 <td>uint32</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Height (Required)</strong></td>
 <td>uint32</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>ImageBytes (Required)</strong></td>
 <td>array&lt;uint8&gt;</td>
-<td>2</td>
-<td></td>
-</tr>
+                <td>2</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
 <td rowspan="2"><strong>AnimatedTextureType (Required)</strong></td>
 <td>varuint32</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
-<strong>Enum Values:</strong>
-<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
-<thead>
-<tr style="background-color: #e8e8e8;">
-<th style="width: 40px;">Index</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Face</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">0</td>
-<td><code>Face</code></td>
-</tr>
+            <td style="text-align: center;">1</td>
+            <td><code>Body32x32</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">1</td>
-<td><code>Body32x32</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td><code>Body128x128</code></td>
-</tr>
-</tbody>
-</table>
-</div></td>
-</tr>
+            <td style="text-align: center;">2</td>
+            <td><code>Body128x128</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
 <tr>
 <td><strong>Frames (Required)</strong></td>
 <td>float</td>
-<td>2</td>
-<td></td>
-</tr>
+                <td>2</td>
+                <td></td>
+            </tr>
 <tr>
 <td rowspan="2"><strong>AnimationExpression (Required)</strong></td>
 <td>varuint32</td>
-<td>3</td>
-<td></td>
-</tr>
+                <td>3</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
-<strong>Enum Values:</strong>
-<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
-<thead>
-<tr style="background-color: #e8e8e8;">
-<th style="width: 40px;">Index</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Linear</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">0</td>
-<td><code>Linear</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">1</td>
-<td><code>Blinking</code></td>
-</tr>
+            <td style="text-align: center;">1</td>
+            <td><code>Blinking</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
-</tbody>
-</table>
-</div></td>
-</tr>
+                </tr>
 <tr>
 <td rowspan="2"><strong>CapeImageData (Required)</strong></td>
 <td>SkinImage</td>
-<td>5</td>
-<td></td>
-</tr>
+                <td>5</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>SkinImage</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>Width (Required)</strong></td>
 <td>uint32</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Height (Required)</strong></td>
 <td>uint32</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>ImageBytes (Required)</strong></td>
 <td>array&lt;uint8&gt;</td>
-<td>2</td>
-<td></td>
-</tr>
+                <td>2</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
 <td><strong>GeometryData (Required)</strong></td>
 <td>Json::Value</td>
-<td>6</td>
-<td></td>
-</tr>
+                <td>6</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>GeometryDataMinEngineVersion (Required)</strong></td>
 <td>MinEngineVersion</td>
-<td>7</td>
-<td></td>
-</tr>
+                <td>7</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>AnimationData (Required)</strong></td>
 <td>string</td>
-<td>8</td>
-<td></td>
-</tr>
+                <td>8</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>CapeID (Required)</strong></td>
 <td>string</td>
-<td>9</td>
-<td></td>
-</tr>
+                <td>9</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>FullID (Required)</strong></td>
 <td>string</td>
-<td>10</td>
-<td></td>
-</tr>
+                <td>10</td>
+                <td></td>
+            </tr>
 <tr>
 <td rowspan="2"><strong>ArmSize (Required)</strong></td>
 <td>uint8</td>
-<td>11</td>
-<td></td>
-</tr>
+                <td>11</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
-<strong>Enum Values:</strong>
-<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
-<thead>
-<tr style="background-color: #e8e8e8;">
-<th style="width: 40px;">Index</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Slim</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">0</td>
-<td><code>Slim</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">1</td>
-<td><code>Wide</code></td>
-</tr>
-</tbody>
-</table>
-</div></td>
-</tr>
+            <td style="text-align: center;">1</td>
+            <td><code>Wide</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
 <tr>
 <td rowspan="2"><strong>SkinColor (Required)</strong></td>
 <td>Color</td>
-<td>12</td>
-<td></td>
-</tr>
+                <td>12</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>Color</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>Color (Required)</strong></td>
 <td>int32</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
 <td rowspan="2"><strong>PersonaPieces (Required)</strong></td>
 <td>array&lt;SerializedPersonaPieceHandle&gt;</td>
-<td>13</td>
-<td></td>
-</tr>
+                <td>13</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>SerializedPersonaPieceHandle (Array Item)</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>PieceId (Required)</strong></td>
 <td>string</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td rowspan="2"><strong>PieceType (Required)</strong></td>
 <td>uint32</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
-<strong>Enum Values:</strong>
-<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
-<thead>
-<tr style="background-color: #e8e8e8;">
-<th style="width: 40px;">Index</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Skeleton</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">0</td>
-<td><code>Skeleton</code></td>
-</tr>
+            <td style="text-align: center;">1</td>
+            <td><code>Body</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">1</td>
-<td><code>Body</code></td>
-</tr>
+            <td style="text-align: center;">2</td>
+            <td><code>Skin</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">2</td>
-<td><code>Skin</code></td>
-</tr>
+            <td style="text-align: center;">3</td>
+            <td><code>Bottom</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">3</td>
-<td><code>Bottom</code></td>
-</tr>
+            <td style="text-align: center;">4</td>
+            <td><code>Feet</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">4</td>
-<td><code>Feet</code></td>
-</tr>
+            <td style="text-align: center;">5</td>
+            <td><code>Dress</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">5</td>
-<td><code>Dress</code></td>
-</tr>
+            <td style="text-align: center;">6</td>
+            <td><code>Top</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">6</td>
-<td><code>Top</code></td>
-</tr>
+            <td style="text-align: center;">7</td>
+            <td><code>High_Pants</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">7</td>
-<td><code>High_Pants</code></td>
-</tr>
+            <td style="text-align: center;">8</td>
+            <td><code>Hands</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">8</td>
-<td><code>Hands</code></td>
-</tr>
+            <td style="text-align: center;">9</td>
+            <td><code>Outerwear</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">9</td>
-<td><code>Outerwear</code></td>
-</tr>
+            <td style="text-align: center;">10</td>
+            <td><code>FacialHair</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">10</td>
-<td><code>FacialHair</code></td>
-</tr>
+            <td style="text-align: center;">11</td>
+            <td><code>Mouth</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">11</td>
-<td><code>Mouth</code></td>
-</tr>
+            <td style="text-align: center;">12</td>
+            <td><code>Eyes</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">12</td>
-<td><code>Eyes</code></td>
-</tr>
+            <td style="text-align: center;">13</td>
+            <td><code>Hair</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">13</td>
-<td><code>Hair</code></td>
-</tr>
+            <td style="text-align: center;">14</td>
+            <td><code>Hood</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">14</td>
-<td><code>Hood</code></td>
-</tr>
+            <td style="text-align: center;">15</td>
+            <td><code>Back</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">15</td>
-<td><code>Back</code></td>
-</tr>
+            <td style="text-align: center;">16</td>
+            <td><code>FaceAccessory</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">16</td>
-<td><code>FaceAccessory</code></td>
-</tr>
+            <td style="text-align: center;">17</td>
+            <td><code>Head</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">17</td>
-<td><code>Head</code></td>
-</tr>
+            <td style="text-align: center;">18</td>
+            <td><code>Legs</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">18</td>
-<td><code>Legs</code></td>
-</tr>
+            <td style="text-align: center;">19</td>
+            <td><code>LeftLeg</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">19</td>
-<td><code>LeftLeg</code></td>
-</tr>
+            <td style="text-align: center;">20</td>
+            <td><code>RightLeg</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">20</td>
-<td><code>RightLeg</code></td>
-</tr>
+            <td style="text-align: center;">21</td>
+            <td><code>Arms</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">21</td>
-<td><code>Arms</code></td>
-</tr>
+            <td style="text-align: center;">22</td>
+            <td><code>LeftArm</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">22</td>
-<td><code>LeftArm</code></td>
-</tr>
+            <td style="text-align: center;">23</td>
+            <td><code>RightArm</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">23</td>
-<td><code>RightArm</code></td>
-</tr>
+            <td style="text-align: center;">24</td>
+            <td><code>Capes</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">24</td>
-<td><code>Capes</code></td>
-</tr>
+            <td style="text-align: center;">25</td>
+            <td><code>ClassicSkin</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">25</td>
-<td><code>ClassicSkin</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">26</td>
-<td><code>Emote</code></td>
-</tr>
-</tbody>
-</table>
-</div></td>
-</tr>
+            <td style="text-align: center;">26</td>
+            <td><code>Emote</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
 <tr>
 <td rowspan="2"><strong>PackId (Required)</strong></td>
 <td>mce::UUID</td>
-<td>2</td>
-<td></td>
-</tr>
+                <td>2</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
 <h3>mce::UUID</h3>
 <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
 <tr>
 <td><strong>Most Significant Bits (Required)</strong></td>
 <td>uint64</td>
-<td>0</td>
-<td></td>
-</tr>
+                <td>0</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>Least Significant Bits (Required)</strong></td>
 <td>uint64</td>
-<td>1</td>
-<td></td>
-</tr>
+                <td>1</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
 <td><strong>IsDefaultPiece (Required)</strong></td>
 <td>boolean</td>
-<td>3</td>
-<td></td>
-</tr>
+                <td>3</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>ProductId (Required)</strong></td>
 <td>string</td>
-<td>4</td>
-<td></td>
-</tr>
+                <td>4</td>
+                <td></td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
+                </tr>
 <tr>
-<td rowspan="2"><strong>PieceTintColors (Required)</strong></td>
-<td>object&lt;string, TintMapColor&gt;</td>
-<td>14</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
-<h3>Map Entry</h3>
-<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td rowspan="2"><strong>key</strong></td>
-<td>string</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
-<strong>Enum Values:</strong>
-<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
-<thead>
-<tr style="background-color: #e8e8e8;">
-<th style="width: 40px;">Index</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">0</td>
-<td><code>Skeleton</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">1</td>
-<td><code>Body</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td><code>Skin</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">3</td>
-<td><code>Bottom</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td><code>Feet</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
-<td><code>Dress</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">6</td>
-<td><code>Top</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">7</td>
-<td><code>High_Pants</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">8</td>
-<td><code>Hands</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">9</td>
-<td><code>Outerwear</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">10</td>
-<td><code>FacialHair</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">11</td>
-<td><code>Mouth</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">12</td>
-<td><code>Eyes</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">13</td>
-<td><code>Hair</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">14</td>
-<td><code>Hood</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">15</td>
-<td><code>Back</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">16</td>
-<td><code>FaceAccessory</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">17</td>
-<td><code>Head</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">18</td>
-<td><code>Legs</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">19</td>
-<td><code>LeftLeg</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">20</td>
-<td><code>RightLeg</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">21</td>
-<td><code>Arms</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">22</td>
-<td><code>LeftArm</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">23</td>
-<td><code>RightArm</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">24</td>
-<td><code>Capes</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">25</td>
-<td><code>ClassicSkin</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">26</td>
-<td><code>Emote</code></td>
-</tr>
-</tbody>
-</table>
-</div></td>
-</tr>
-<tr>
-<td rowspan="2"><strong>value</strong></td>
-<td>TintMapColor</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
-<h3>TintMapColor</h3>
-<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td rowspan="2"><strong>Colors (Required)</strong></td>
-<td>array&lt;Color&gt;</td>
-<td>0</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
-<h3>Color (Array Item)</h3>
-<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Color (Required)</strong></td>
-<td>int32</td>
-<td>0</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div></td>
-</tr>
-</tbody>
-</table>
-</div></td>
-</tr>
-</tbody>
-</table>
-</div></td>
-</tr>
+<td><strong>PieceTintColors (Required)</strong></td>
+<td>object</td>
+                <td>14</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>IsPremium (Required)</strong></td>
 <td>boolean</td>
-<td>15</td>
-<td></td>
-</tr>
+                <td>15</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>IsPersona (Required)</strong></td>
 <td>boolean</td>
-<td>16</td>
-<td></td>
-</tr>
+                <td>16</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>IsPersonaCapeOnClassicSkin (Required)</strong></td>
 <td>boolean</td>
-<td>17</td>
-<td></td>
-</tr>
+                <td>17</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>IsPrimaryUser (Required)</strong></td>
 <td>boolean</td>
-<td>18</td>
-<td></td>
-</tr>
+                <td>18</td>
+                <td></td>
+            </tr>
 <tr>
 <td><strong>OverridesPlayerAppearance (Required)</strong></td>
 <td>boolean</td>
-<td>19</td>
-<td></td>
-</tr>
+                <td>19</td>
+                <td></td>
+            </tr>
 <tr>
 <td rowspan="2"><strong>TrustedSkinFlag (Required)</strong></td>
 <td>string</td>
-<td>20</td>
-<td></td>
-</tr>
+                <td>20</td>
+                <td></td>
+            </tr>
 <tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
-<strong>Enum Values:</strong>
-<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
-<thead>
-<tr style="background-color: #e8e8e8;">
-<th style="width: 40px;">Index</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Unset</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">0</td>
-<td><code>Unset</code></td>
-</tr>
+            <td style="text-align: center;">1</td>
+            <td><code>False</code></td>
+            </tr>
 <tr>
-<td style="text-align: center;">1</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td><code>True</code></td>
-</tr>
+            <td style="text-align: center;">2</td>
+            <td><code>True</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
 </tbody>
-</table>
+    </table>
 </div></td>
-</tr>
-</tbody>
-</table>
-</div></td>
-</tr>
+                </tr>
 <tr>
 <td><strong>Localized New Skin Name (Required)</strong></td>
 <td>string</td>
-<td>2</td>
-<td>The player&#x27;s localized new skin name</td>
-</tr>
+                <td>2</td>
+                <td>The player&#39;s localized new skin name</td>
+            </tr>
 <tr>
 <td><strong>Localized Old Skin Name (Required)</strong></td>
 <td>string</td>
-<td>3</td>
-<td>The player&#x27;s localized old skin name</td>
-</tr>
+                <td>3</td>
+                <td>The player&#39;s localized old skin name</td>
+            </tr>
 </tbody>
-</table>
+    </table>
 </div>
     </div>
 </body>
