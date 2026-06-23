@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1805153483",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "title": "HurtArmorPacket",
     "type": "object",
     "properties": {
@@ -37,5 +37,9 @@
         "Armor Slots",
         "Cause",
         "Damage"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 38,
+        "[cereal:packet_details]": "Sends the damage taken after armor is taken into account. This looks like it is trying to be phased out, this is not sent while the ItemStackNetManagerServer is active. From the server."
+    }
 }

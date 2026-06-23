@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2044180563",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "2805024213": {
             "title": "Data Store Update",
@@ -150,5 +150,9 @@
     },
     "required": [
         "Updates"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 330,
+        "[cereal:packet_details]": ""
+    }
 }

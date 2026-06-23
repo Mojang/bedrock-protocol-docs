@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3512805391",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "1750201151": {
             "title": "ActorRuntimeID",
@@ -67,5 +67,9 @@
         "Flags",
         "PlatformId",
         "Xuid"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 138,
+        "[cereal:packet_details]": "Sent in both directions; by client to request that an emote is played and then from the server to the clients to indicate which player needs to now emote."
+    }
 }

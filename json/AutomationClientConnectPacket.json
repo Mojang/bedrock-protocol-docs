@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3291659001",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "3435210896": {
             "title": "WebSocketPacketData",
@@ -29,5 +29,9 @@
     },
     "required": [
         "Web Socket Data"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 95,
+        "[cereal:packet_details]": "Only used though command to connect to server URLs. This is primarily used by EDU for connecting to their companion apps and other external applications through web sockets. Some mods/3rd party packs use it as well."
+    }
 }

@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3777316223",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "1488572312": {
             "title": "BlockPos",
@@ -101,5 +101,9 @@
         "Flags",
         "Layer",
         "Unique Actor Id"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 110,
+        "[cereal:packet_details]": "Variation of UpdateBlockSyncedPacket that includes information to sync entities with renderchunk generation. Occasionally when blocks change a sync message is sent and during the change on the dimension, this packet is sent to the client to alert the update flags and sync info at a specific position."
+    }
 }

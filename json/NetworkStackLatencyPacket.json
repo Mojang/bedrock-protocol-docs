@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2402213355",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "title": "NetworkStackLatencyPacket",
     "type": "object",
     "properties": {
@@ -22,5 +22,9 @@
     "required": [
         "Creation Time",
         "Is From Server"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 115,
+        "[cereal:packet_details]": "DEPRECATED. Was for testing/debug/telemetry: Used to provide ping time to in game debug graph, also for realms telemetry of actual in game latency.  Sent from both client & server."
+    }
 }

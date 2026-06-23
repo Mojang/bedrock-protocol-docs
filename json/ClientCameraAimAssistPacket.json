@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2262784813",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "title": "ClientCameraAimAssistPacket",
     "type": "object",
     "properties": {
@@ -34,5 +34,9 @@
     "required": [
         "Action",
         "Camera Preset Id"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 321,
+        "[cereal:packet_details]": "\n\tSent by clients to the server for activating/deactivating aim-assist.\n\tActivation uses the CameraPreset Id for server-side lookup and uses its aim_assist field\n\tfor aim-assist activation settings.\n\t"
+    }
 }

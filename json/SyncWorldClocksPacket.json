@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3261122765",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "1039306879": {
             "title": "SyncStateData",
@@ -247,5 +247,9 @@
     },
     "required": [
         "Data"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 344,
+        "[cereal:packet_details]": "\n\tSent from the server when a client joins to initialize all world clocks for the client and periodically to all clients to keep them in sync.\n\tIt is also sent to all clients when a world clock's paused state changes or when time markers are added or removed.\n\t"
+    }
 }

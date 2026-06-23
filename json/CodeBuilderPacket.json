@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "80900639",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "title": "CodeBuilderPacket",
     "type": "object",
     "properties": {
@@ -20,5 +20,9 @@
     "required": [
         "Should open code builder",
         "URL"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 150,
+        "[cereal:packet_details]": "This is EDU exclusively.It is sent once from _sendLevelData() in the start of a game from the server,\n\tand once per CodeBuilderCommand"
+    }
 }

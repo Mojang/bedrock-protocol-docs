@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3545453929",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "3107192670": {
             "title": "DataItemShortPayload",
@@ -757,5 +757,9 @@
         "Velocity",
         "Y Body Rotation",
         "Y Head Rotation"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 13,
+        "[cereal:packet_details]": "Newly created entities on server use AddActorPacket to notify clients that they exist."
+    }
 }

@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1438987023",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "2502309189": {
             "title": "presenceConfig",
@@ -27,5 +27,9 @@
     },
     "required": [
         "presence_configuration"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 347,
+        "[cereal:packet_details]": ""
+    }
 }

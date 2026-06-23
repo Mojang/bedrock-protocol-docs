@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3485129552",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "title": "SetPlayerGameTypePacket",
     "type": "object",
     "properties": {
@@ -29,5 +29,9 @@
     },
     "required": [
         "Player Game Type"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 62,
+        "[cereal:packet_details]": "The client handles the change of the UI element (the gametype dropdown, although this can be avoided by changing via command or on the server), then the client sends a packet to the server, then the server changes the player's gametype and sends a packet back (UpdatePlayerGameTypePacket) to make sure it matches on the client."
+    }
 }

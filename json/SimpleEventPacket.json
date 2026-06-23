@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1228646201",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "title": "SimpleEventPacket",
     "type": "object",
     "properties": {
@@ -25,5 +25,9 @@
     },
     "required": [
         "Type"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 64,
+        "[cereal:packet_details]": "This is fired from the client to the server and a SetCommandsEnabledPacket is sent back when enabling commands."
+    }
 }

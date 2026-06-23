@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "713124654",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "title": "CodeBuilderSourcePacket",
     "type": "object",
     "properties": {
@@ -58,5 +58,9 @@
         "Category",
         "CodeStatus",
         "Operation"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 178,
+        "[cereal:packet_details]": ""
+    }
 }

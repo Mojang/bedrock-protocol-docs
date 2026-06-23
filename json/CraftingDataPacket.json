@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2033218355",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "1429287564": {
             "title": "Item Descriptor",
@@ -670,5 +670,9 @@
         "Smithing Transform Recipes",
         "Smithing Trim Recipes",
         "User Data Shapeless Recipes"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 52,
+        "[cereal:packet_details]": "Sent from the server on level startup to send all recipes to the client."
+    }
 }

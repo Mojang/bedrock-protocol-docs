@@ -1,0 +1,258 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "3150819707",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
+    "definitions": {
+        "4257541248": {
+            "title": "ActorUniqueID",
+            "type": "object",
+            "properties": {
+                "Actor Unique ID": {
+                    "type": "integer",
+                    "x-underlying-type": "int64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Actor Unique ID"
+            ]
+        },
+        "2411457482": {
+            "title": "ChangePlayerScore",
+            "type": "object",
+            "properties": {
+                "Action": {
+                    "title": "ScorePacketEntryAction",
+                    "type": "string",
+                    "const": "changeplayer",
+                    "enum": [
+                        "Remove",
+                        "ChangePlayer",
+                        "ChangeEntity",
+                        "ChangeFakePlayer"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 0
+                },
+                "Objective Name": {
+                    "type": "string",
+                    "x-ordinal-index": 2,
+                    "minLength": 1
+                },
+                "Player Unique Id": {
+                    "$ref": "#/definitions/871861599",
+                    "x-ordinal-index": 4
+                },
+                "Score Value": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 3
+                },
+                "Scoreboard Id": {
+                    "$ref": "#/definitions/2792584566",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Action",
+                "Objective Name",
+                "Player Unique Id",
+                "Score Value",
+                "Scoreboard Id"
+            ]
+        },
+        "2792584566": {
+            "title": "ScoreboardId",
+            "type": "object",
+            "properties": {
+                "Scoreboard Id": {
+                    "type": "integer",
+                    "x-underlying-type": "int64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Scoreboard Id"
+            ]
+        },
+        "871861599": {
+            "title": "PlayerScoreboardId",
+            "type": "object",
+            "properties": {
+                "Player Unique Id": {
+                    "type": "integer",
+                    "x-underlying-type": "int64",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
+                    "x-ordinal-index": 0
+                }
+            },
+            "required": [
+                "Player Unique Id"
+            ]
+        },
+        "465809293": {
+            "title": "RemoveScore",
+            "type": "object",
+            "properties": {
+                "Action": {
+                    "title": "ScorePacketEntryAction",
+                    "type": "string",
+                    "const": "remove",
+                    "enum": [
+                        "Remove",
+                        "ChangePlayer",
+                        "ChangeEntity",
+                        "ChangeFakePlayer"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 0
+                },
+                "Objective Name": {
+                    "type": "string",
+                    "x-ordinal-index": 2,
+                    "minLength": 1
+                },
+                "Scoreboard Id": {
+                    "$ref": "#/definitions/2792584566",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Action",
+                "Scoreboard Id"
+            ]
+        },
+        "2523550472": {
+            "title": "ChangeEntityScore",
+            "type": "object",
+            "properties": {
+                "Action": {
+                    "title": "ScorePacketEntryAction",
+                    "type": "string",
+                    "const": "changeentity",
+                    "enum": [
+                        "Remove",
+                        "ChangePlayer",
+                        "ChangeEntity",
+                        "ChangeFakePlayer"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 0
+                },
+                "Actor Id": {
+                    "$ref": "#/definitions/4257541248",
+                    "x-ordinal-index": 4
+                },
+                "Objective Name": {
+                    "type": "string",
+                    "x-ordinal-index": 2,
+                    "minLength": 1
+                },
+                "Score Value": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 3
+                },
+                "Scoreboard Id": {
+                    "$ref": "#/definitions/2792584566",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Action",
+                "Actor Id",
+                "Objective Name",
+                "Score Value",
+                "Scoreboard Id"
+            ]
+        },
+        "2996459289": {
+            "title": "ChangeFakePlayerScore",
+            "type": "object",
+            "properties": {
+                "Action": {
+                    "title": "ScorePacketEntryAction",
+                    "type": "string",
+                    "const": "changefakeplayer",
+                    "enum": [
+                        "Remove",
+                        "ChangePlayer",
+                        "ChangeEntity",
+                        "ChangeFakePlayer"
+                    ],
+                    "x-underlying-type": "uint8",
+                    "x-ordinal-index": 0
+                },
+                "Fake Player Name": {
+                    "type": "string",
+                    "x-ordinal-index": 4,
+                    "minLength": 1
+                },
+                "Objective Name": {
+                    "type": "string",
+                    "x-ordinal-index": 2,
+                    "minLength": 1
+                },
+                "Score Value": {
+                    "type": "integer",
+                    "x-underlying-type": "int32",
+                    "x-ordinal-index": 3
+                },
+                "Scoreboard Id": {
+                    "$ref": "#/definitions/2792584566",
+                    "x-ordinal-index": 1
+                }
+            },
+            "required": [
+                "Action",
+                "Fake Player Name",
+                "Objective Name",
+                "Score Value",
+                "Scoreboard Id"
+            ]
+        }
+    },
+    "title": "SetScorePacket",
+    "type": "object",
+    "properties": {
+        "Score Info": {
+            "type": "array",
+            "items": {
+                "oneOf": [
+                    {
+                        "$ref": "#/definitions/465809293",
+                        "x-ordinal-index": 0
+                    },
+                    {
+                        "$ref": "#/definitions/2411457482",
+                        "x-ordinal-index": 1
+                    },
+                    {
+                        "$ref": "#/definitions/2523550472",
+                        "x-ordinal-index": 2
+                    },
+                    {
+                        "$ref": "#/definitions/2996459289",
+                        "x-ordinal-index": 3
+                    }
+                ],
+                "x-control-value-type": "uint32"
+            },
+            "x-ordinal-index": 0
+        }
+    },
+    "$metaProperties": {
+        "[cereal:packet]": 108,
+        "[cereal:packet_details]": "Sets the scoreboard which is used for 3rd party content."
+    }
+}

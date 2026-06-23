@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2536962746",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "title": "PlayerToggleCrafterSlotRequestPacket",
     "type": "object",
     "properties": {
@@ -41,5 +41,9 @@
         "Pos Y",
         "Pos Z",
         "Slot Index"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 306,
+        "[cereal:packet_details]": ""
+    }
 }

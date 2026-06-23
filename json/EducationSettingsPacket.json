@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2478805696",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "3482207152": {
             "title": "EducationLevelSettings",
@@ -122,5 +122,9 @@
     },
     "required": [
         "Education Level Settings"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 137,
+        "[cereal:packet_details]": "Currently transmits EducationLevelSettings to all clients when the game is starting."
+    }
 }

@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1884367249",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "title": "RequestChunkRadiusPacket",
     "type": "object",
     "properties": {
@@ -26,5 +26,9 @@
     "required": [
         "Chunk Radius",
         "Max ChunkRadius"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 69,
+        "[cereal:packet_details]": "This packet is to make sure that the server expands/shrinks first. Additionally for ClientSide Chunk Generation we can send a byte, based on client's hardware capabilities what is the max chunk radius client can handle."
+    }
 }

@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "520439455",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "3627850842": {
             "title": "CommandOutputMessage",
@@ -149,5 +149,9 @@
     "required": [
         "Origin Data",
         "Output"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 79,
+        "[cereal:packet_details]": ""
+    }
 }

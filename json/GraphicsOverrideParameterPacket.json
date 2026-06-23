@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "138990835",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "725374594": {
             "title": "Vec3",
@@ -147,5 +147,9 @@
         "Parameter Keyframe Values",
         "Reset Parameter",
         "Vec3 Value"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 331,
+        "[cereal:packet_details]": ""
+    }
 }

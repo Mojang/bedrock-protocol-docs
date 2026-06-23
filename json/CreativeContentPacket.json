@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2225790313",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "4068247745": {
             "title": "CreativeItemEntryPayload",
@@ -164,5 +164,9 @@
     "required": [
         "Entries",
         "Groups"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 145,
+        "[cereal:packet_details]": "Sent once by the server on startup to tell clients all of the items that can show up in the creative menu and recipe book."
+    }
 }

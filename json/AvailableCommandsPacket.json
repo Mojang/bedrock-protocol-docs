@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2634246894",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "2688239457": {
             "title": "AvailableCommandsPacketParamData",
@@ -330,5 +330,9 @@
         "Enum Values",
         "Post Fixes",
         "Soft Enums"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 76,
+        "[cereal:packet_details]": ""
+    }
 }

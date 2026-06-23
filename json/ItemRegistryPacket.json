@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "448164657",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "3439543590": {
             "title": "ItemData",
@@ -70,5 +70,9 @@
     },
     "required": [
         "Item Data"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 162,
+        "[cereal:packet_details]": "This packet needs to be sent immediately after the StartGamePacket for primary clients."
+    }
 }

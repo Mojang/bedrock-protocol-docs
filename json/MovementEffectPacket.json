@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1072911125",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "1750201151": {
             "title": "ActorRuntimeID",
@@ -82,5 +82,9 @@
         "Effect ID",
         "Target Runtime ID",
         "Tick"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 318,
+        "[cereal:packet_details]": "\n\tThese MovementEffects can be client-predicted.\n\tEx: Fireworks Rockets used while gliding send this packet to the client so they know the exact duration of the GLIDE_BOOST MovementEffect.\n\t"
+    }
 }

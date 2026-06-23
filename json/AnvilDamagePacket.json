@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "190779528",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "1488572312": {
             "title": "BlockPos",
@@ -46,18 +46,14 @@
     "properties": {
         "Block Position": {
             "$ref": "#/definitions/1488572312",
-            "x-ordinal-index": 1
-        },
-        "Damage Amount": {
-            "type": "integer",
-            "x-underlying-type": "uint8",
-            "x-ordinal-index": 0,
-            "minimum": 0.0,
-            "maximum": 255.0
+            "x-ordinal-index": 0
         }
     },
     "required": [
-        "Block Position",
-        "Damage Amount"
-    ]
+        "Block Position"
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 141,
+        "[cereal:packet_details]": "\n\tOnly used when Item Stack Net Manager is disabled on the server.\n\tSends the position of the anvil that is requesting to be damaged from the client.\n\t"
+    }
 }

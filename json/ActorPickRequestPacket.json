@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3528861580",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "title": "ActorPickRequestPacket",
     "type": "object",
     "properties": {
@@ -29,5 +29,9 @@
         "Actor ID",
         "Max Slots",
         "With Data"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 35,
+        "[cereal:packet_details]": ""
+    }
 }

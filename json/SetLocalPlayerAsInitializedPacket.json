@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3349343927",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "1750201151": {
             "title": "ActorRuntimeID",
@@ -34,5 +34,9 @@
     },
     "required": [
         "Player ID"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 113,
+        "[cereal:packet_details]": "Client tells the server that the client is ready to roll."
+    }
 }

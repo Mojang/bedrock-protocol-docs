@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "710176371",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "title": "UpdateClientInputLocksPacket",
     "type": "object",
     "properties": {
@@ -19,5 +19,9 @@
     },
     "required": [
         "Input Lock ComponentData"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 196,
+        "[cereal:packet_details]": "Used to update the players input permissions. Sends the full permission set and the server position of the player at the time the permission was modified."
+    }
 }

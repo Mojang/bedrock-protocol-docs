@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2945054981",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "title": "ModalFormRequestPacket",
     "type": "object",
     "properties": {
@@ -24,5 +24,9 @@
     "required": [
         "Form ID",
         "Form UI JSON"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 100,
+        "[cereal:packet_details]": "Not sent from vanilla. The feature is meant for third-party servers to be able to drive dynamic ui forms. The request comes with some JSON that describes a custom UI screen thirdparty uses.Server->client."
+    }
 }

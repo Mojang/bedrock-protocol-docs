@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3182473269",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "2531606031": {
             "title": "PropertySyncData::PropertySyncFloatEntry",
@@ -118,23 +118,6 @@
         "1987673147": {
             "title": "NetworkItemStackDescriptor",
             "$ref": "#/definitions/2803432075"
-        },
-        "1433098745": {
-            "title": "ItemStackNetId",
-            "type": "object",
-            "properties": {
-                "ID": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "ID"
-            ]
         },
         "3377555627": {
             "title": "PropertySyncData",
@@ -351,47 +334,8 @@
         },
         "4138486877": {
             "title": "ItemStackNetIdVariant",
-            "type": "object",
-            "properties": {
-                "Item stack net ID variant": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/definitions/1433098745",
-                            "x-ordinal-index": 0
-                        },
-                        {
-                            "$ref": "#/definitions/3359047935",
-                            "x-ordinal-index": 1
-                        },
-                        {
-                            "$ref": "#/definitions/2707715806",
-                            "x-ordinal-index": 2
-                        }
-                    ],
-                    "x-control-value-type": "uint32",
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "Item stack net ID variant"
-            ]
-        },
-        "3359047935": {
-            "title": "ItemStackRequestId",
-            "type": "object",
-            "properties": {
-                "ID": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "ID"
-            ]
+            "type": "integer",
+            "x-underlying-type": "int32"
         },
         "2803432075": {
             "title": "cerealizer<NetworkItemStackDescriptor>::SerializedData",
@@ -423,6 +367,9 @@
                 },
                 "Net Id Variant": {
                     "$ref": "#/definitions/4138486877",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
                     "x-ordinal-index": 3
                 },
                 "Stack size": {
@@ -479,45 +426,6 @@
             "required": [
                 "Type",
                 "Value"
-            ]
-        },
-        "2707715806": {
-            "title": "ItemStackLegacyRequestId",
-            "type": "object",
-            "properties": {
-                "ID": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "ID"
-            ]
-        },
-        "234962571": {
-            "title": "mce::UUID",
-            "type": "object",
-            "properties": {
-                "Least Significant Bits": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-ordinal-index": 1,
-                    "minimum": 0.0
-                },
-                "Most Significant Bits": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
-                }
-            },
-            "required": [
-                "Least Significant Bits",
-                "Most Significant Bits"
             ]
         },
         "1750201151": {
@@ -910,6 +818,28 @@
                 "X",
                 "Y"
             ]
+        },
+        "234962571": {
+            "title": "mce::UUID",
+            "type": "object",
+            "properties": {
+                "Least Significant Bits": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-ordinal-index": 1,
+                    "minimum": 0.0
+                },
+                "Most Significant Bits": {
+                    "type": "integer",
+                    "x-underlying-type": "uint64",
+                    "x-ordinal-index": 0,
+                    "minimum": 0.0
+                }
+            },
+            "required": [
+                "Least Significant Bits",
+                "Most Significant Bits"
+            ]
         }
     },
     "title": "AddPlayerPacket",
@@ -1034,5 +964,9 @@
         "UUID",
         "Velocity",
         "Y-Head Rotation"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 12,
+        "[cereal:packet_details]": "A new player joins the game; the server sends this packet to the other players."
+    }
 }

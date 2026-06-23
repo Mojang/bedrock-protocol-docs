@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3779843341",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "1750201151": {
             "title": "ActorRuntimeID",
@@ -71,5 +71,9 @@
         "NPC Runtime ID",
         "Request Type",
         "Scene Name"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 98,
+        "[cereal:packet_details]": "A request is made from the client during an interaction with an NPC then the request is processed by the server. \n\tActor MUST have the NPCComponent to be handled. \n\tWe currently only use this for EDU, but the goal was to expose the NPC Component to creators."
+    }
 }

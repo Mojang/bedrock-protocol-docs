@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3637944334",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "3532082888": {
             "title": "Stop"
@@ -347,5 +347,9 @@
     },
     "required": [
         "Server Sound Handle"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 348,
+        "[cereal:packet_details]": ""
+    }
 }

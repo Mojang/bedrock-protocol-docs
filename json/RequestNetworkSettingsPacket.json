@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3809922937",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "title": "RequestNetworkSettingsPacket",
     "type": "object",
     "properties": {
@@ -14,11 +14,15 @@
                 "Big Endian"
             ],
             "x-ordinal-index": 0,
-            "minimum": 2144.0,
-            "maximum": 2144.0
+            "minimum": 2164.0,
+            "maximum": 2164.0
         }
     },
     "required": [
         "ClientNetworkVersion"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 193,
+        "[cereal:packet_details]": "This is the initial packet sent from the client to initiate a connection.  NOTE: this packet should not contain anything other than the client version, don't add new data here."
+    }
 }

@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3552391344",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "title": "PhotoTransferPacket",
     "type": "object",
     "properties": {
@@ -67,5 +67,9 @@
         "Photo Name",
         "Source Type",
         "Type"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 99,
+        "[cereal:packet_details]": "\n\tWhen the player uses the camera item or adds a photo to the scrapbook it sends the photo to the server,\n\tthen the server sends a response back on whether that was successful or not.\n\tEither uploads a photo to the server's photoStorage or request one from it to be stored in client's photoStorage.\n\tIf no mPhotoData is provided it is a request for the given filename.\n\t"
+    }
 }

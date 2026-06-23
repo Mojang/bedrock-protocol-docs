@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3038410824",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "1750201151": {
             "title": "ActorRuntimeID",
@@ -74,5 +74,9 @@
         "Action",
         "Data",
         "Target Actor Runtime ID"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 44,
+        "[cereal:packet_details]": "Combination of server bound and client bound packets to trigger animations."
+    }
 }

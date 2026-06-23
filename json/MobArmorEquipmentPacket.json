@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "760016956",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "1750201151": {
             "title": "ActorRuntimeID",
@@ -29,47 +29,8 @@
         },
         "4138486877": {
             "title": "ItemStackNetIdVariant",
-            "type": "object",
-            "properties": {
-                "Item stack net ID variant": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/definitions/1433098745",
-                            "x-ordinal-index": 0
-                        },
-                        {
-                            "$ref": "#/definitions/3359047935",
-                            "x-ordinal-index": 1
-                        },
-                        {
-                            "$ref": "#/definitions/2707715806",
-                            "x-ordinal-index": 2
-                        }
-                    ],
-                    "x-control-value-type": "uint32",
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "Item stack net ID variant"
-            ]
-        },
-        "3359047935": {
-            "title": "ItemStackRequestId",
-            "type": "object",
-            "properties": {
-                "ID": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "ID"
-            ]
+            "type": "integer",
+            "x-underlying-type": "int32"
         },
         "2803432075": {
             "title": "cerealizer<NetworkItemStackDescriptor>::SerializedData",
@@ -101,6 +62,9 @@
                 },
                 "Net Id Variant": {
                     "$ref": "#/definitions/4138486877",
+                    "x-serialization-options": [
+                        "Compression"
+                    ],
                     "x-ordinal-index": 3
                 },
                 "Stack size": {
@@ -121,40 +85,6 @@
                 "Id",
                 "Stack size",
                 "User Data Buffer"
-            ]
-        },
-        "1433098745": {
-            "title": "ItemStackNetId",
-            "type": "object",
-            "properties": {
-                "ID": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "ID"
-            ]
-        },
-        "2707715806": {
-            "title": "ItemStackLegacyRequestId",
-            "type": "object",
-            "properties": {
-                "ID": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "ID"
             ]
         }
     },
@@ -193,5 +123,9 @@
         "Legs",
         "Target Runtime ID",
         "Torso"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 32,
+        "[cereal:packet_details]": "This is related to MobEquipmentPackets, but armor specifically and passes ALL equipment changes at once instead of one slot at a time."
+    }
 }

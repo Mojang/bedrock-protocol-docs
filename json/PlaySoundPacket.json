@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3448472794",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "294292951": {
             "title": "ServerSoundHandle",
@@ -96,5 +96,9 @@
         "Pitch",
         "Position",
         "Volume"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 86,
+        "[cereal:packet_details]": ""
+    }
 }

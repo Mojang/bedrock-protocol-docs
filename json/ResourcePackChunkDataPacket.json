@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1976183881",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "title": "ResourcePackChunkDataPacket",
     "type": "object",
     "properties": {
@@ -33,5 +33,9 @@
         "Chunk Data",
         "Chunk ID",
         "Resource Name"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 83,
+        "[cereal:packet_details]": "(only one marked for uncompressed) realms resource pack download"
+    }
 }

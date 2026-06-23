@@ -2,7 +2,11 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3444432464",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
-    "title": "ServerSettingsRequestPacket"
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
+    "title": "ServerSettingsRequestPacket",
+    "$metaProperties": {
+        "[cereal:packet]": 102,
+        "[cereal:packet_details]": "It is also an empty packet. There is no handler for this packet, should be removed."
+    }
 }

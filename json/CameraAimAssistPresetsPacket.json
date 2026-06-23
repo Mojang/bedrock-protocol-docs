@@ -2,11 +2,11 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "992428452",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "2033610203": {
-            "title": "Reference 1",
+            "title": "Entity Reference",
             "type": "string"
         },
         "193467851": {
@@ -103,15 +103,15 @@
             ]
         },
         "1550212535": {
-            "title": "Reference 10",
+            "title": "Item Reference",
             "type": "string"
         },
         "453697823": {
-            "title": "Identifier 5",
+            "title": "CameraAimAssist Identifier",
             "type": "string"
         },
         "1330773719": {
-            "title": "Reference 6",
+            "title": "CameraAimAssistCategory Reference",
             "type": "string"
         },
         "3012995618": {
@@ -133,11 +133,11 @@
             ]
         },
         "3152646801": {
-            "title": "Reference 0",
+            "title": "Block Reference",
             "type": "string"
         },
         "84316499": {
-            "title": "Identifier 6",
+            "title": "CameraAimAssistCategory Identifier",
             "type": "string"
         },
         "1414832143": {
@@ -256,5 +256,9 @@
         "Camera Aim-Assist Categories",
         "Camera Aim-Assist Presets",
         "Operation"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 320,
+        "[cereal:packet_details]": "\n\tSent by the server to clients for initializing and updating the client aim-assist registry.\n\tAddToExisting operations are sent by the server when new presets/categories are added to the registry through creator facing APIs.\n\t"
+    }
 }

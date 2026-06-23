@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1940684486",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "1750201151": {
             "title": "ActorRuntimeID",
@@ -43,5 +43,9 @@
     "required": [
         "Credits State",
         "Player Runtime ID"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 75,
+        "[cereal:packet_details]": "That packet is sent to the client.  When the credits have concluded, a packet is sent back to the server to let it know to reinstate the player watching the credits."
+    }
 }

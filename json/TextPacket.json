@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3859742646",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "3960679329": {
             "title": "MessageOnly",
@@ -164,5 +164,9 @@
     "required": [
         "Body",
         "Localize?"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 9,
+        "[cereal:packet_details]": "Used for commands, messages, and other info printed to the screen. Most of which are server->client or server broadcasted to all clients, but some cases have a client to other client via the server"
+    }
 }

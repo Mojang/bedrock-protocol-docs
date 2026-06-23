@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "4069499576",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "725374594": {
             "title": "Vec3",
@@ -71,5 +71,9 @@
         "mMotion",
         "mOnGround",
         "mRuntimeId"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 157,
+        "[cereal:packet_details]": "This is from the server when spatial optimizations are enabled and the server does not send a spatial update."
+    }
 }

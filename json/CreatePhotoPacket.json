@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "2147497783",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "title": "CreatePhotoPacket",
     "type": "object",
     "properties": {
@@ -26,5 +26,9 @@
         "Photo Item Name",
         "Photo Name",
         "Raw ID"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 171,
+        "[cereal:packet_details]": ""
+    }
 }

@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1946768320",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "title": "CameraShakePacket",
     "type": "object",
     "properties": {
@@ -49,5 +49,9 @@
         "Seconds",
         "Shake Action",
         "Shake Type"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 159,
+        "[cereal:packet_details]": "It may be used to queue or stop a camera shake"
+    }
 }

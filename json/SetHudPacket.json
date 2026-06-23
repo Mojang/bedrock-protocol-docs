@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3437014688",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "title": "SetHudPacket",
     "type": "object",
     "properties": {
@@ -53,5 +53,9 @@
     "required": [
         "Hud Element",
         "Hud Visible"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 308,
+        "[cereal:packet_details]": "This packet will toggle the HUD visibility."
+    }
 }

@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "1632095085",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "definitions": {
         "1488572312": {
             "title": "BlockPos",
@@ -67,5 +67,9 @@
         "New page to show",
         "Position of Lectern to update",
         "Total Pages"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 125,
+        "[cereal:packet_details]": "It is a request from the client to either turn the page in the lectern or drop the book."
+    }
 }

@@ -2,8 +2,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "3686546608",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.26",
-    "x-protocol-version": 2144,
+    "x-minecraft-version": "1.26.40-beta.29",
+    "x-protocol-version": 2164,
     "title": "NetworkSettingsPacket",
     "type": "object",
     "properties": {
@@ -51,5 +51,9 @@
         "Client Throttle Threshold",
         "Compression Threshold",
         "CompressionAlgorithm"
-    ]
+    ],
+    "$metaProperties": {
+        "[cereal:packet]": 143,
+        "[cereal:packet_details]": ""
+    }
 }
