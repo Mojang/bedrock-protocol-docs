@@ -1,33 +1,11 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1438987023",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.29",
-    "x-protocol-version": 2164,
-    "definitions": {
-        "2502309189": {
-            "title": "presenceConfig",
-            "type": "object",
-            "properties": {
-                "richPresenceId": {
-                    "type": "string",
-                    "x-ordinal-index": 0,
-                    "maxLength": 50
-                }
-            }
-        }
-    },
     "title": "ServerPresenceInfoPacket",
-    "type": "object",
-    "properties": {
-        "presence_configuration": {
-            "$ref": "#/definitions/2502309189",
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "presence_configuration"
-    ],
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ServerPresenceInfoPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "$ref": "./ServerPresenceInfoPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 347,
         "[cereal:packet_details]": ""

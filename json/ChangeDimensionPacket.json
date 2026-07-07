@@ -1,83 +1,11 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2782954439",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.29",
-    "x-protocol-version": 2164,
-    "definitions": {
-        "725374594": {
-            "title": "Vec3",
-            "type": "object",
-            "properties": {
-                "X": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 0
-                },
-                "Y": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 1
-                },
-                "Z": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 2
-                }
-            },
-            "required": [
-                "X",
-                "Y",
-                "Z"
-            ]
-        },
-        "1586048219": {
-            "title": "DimensionType",
-            "type": "object",
-            "properties": {
-                "value": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "value"
-            ]
-        }
-    },
     "title": "ChangeDimensionPacket",
-    "type": "object",
-    "properties": {
-        "Dimension ID": {
-            "$ref": "#/definitions/1586048219",
-            "x-ordinal-index": 0
-        },
-        "Loading Screen Id": {
-            "type": "integer",
-            "x-underlying-type": "uint32",
-            "x-ordinal-index": 3,
-            "minimum": 0.0
-        },
-        "Position": {
-            "$ref": "#/definitions/725374594",
-            "x-ordinal-index": 1
-        },
-        "Respawn": {
-            "type": "boolean",
-            "x-underlying-type": "boolean",
-            "x-ordinal-index": 2
-        }
-    },
-    "required": [
-        "Dimension ID",
-        "Loading Screen Id",
-        "Position",
-        "Respawn"
-    ],
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ChangeDimensionPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "$ref": "./ChangeDimensionPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 61,
         "[cereal:packet_details]": ""

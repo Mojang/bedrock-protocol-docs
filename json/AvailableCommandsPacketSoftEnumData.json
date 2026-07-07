@@ -1,0 +1,27 @@
+{
+    "title": "AvailableCommandsPacketSoftEnumData",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/AvailableCommandsPacketSoftEnumData.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "Enum Name": {
+            "type": "string",
+            "x-ordinal-index": 0,
+            "maxLength": 512
+        },
+        "Enum Options": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "x-ordinal-index": 1
+        }
+    },
+    "required": [
+        "Enum Name",
+        "Enum Options"
+    ]
+}

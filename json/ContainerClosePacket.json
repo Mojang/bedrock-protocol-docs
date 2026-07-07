@@ -1,43 +1,11 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "376802036",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.29",
-    "x-protocol-version": 2164,
     "title": "ContainerClosePacket",
-    "type": "object",
-    "properties": {
-        "Container Id": {
-            "type": "integer",
-            "x-underlying-type": "uint8",
-            "x-serialization-options": [
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 0,
-            "minimum": 0.0,
-            "maximum": 255.0
-        },
-        "Container Type": {
-            "type": "integer",
-            "x-underlying-type": "uint8",
-            "x-serialization-options": [
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 1,
-            "minimum": 0.0,
-            "maximum": 255.0
-        },
-        "Server Initiated Close": {
-            "type": "boolean",
-            "x-underlying-type": "boolean",
-            "x-ordinal-index": 2
-        }
-    },
-    "required": [
-        "Container Id",
-        "Container Type",
-        "Server Initiated Close"
-    ],
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ContainerClosePacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "$ref": "./ContainerClosePacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 47,
         "[cereal:packet_details]": ""

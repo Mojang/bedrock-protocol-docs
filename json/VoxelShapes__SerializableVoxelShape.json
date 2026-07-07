@@ -1,0 +1,51 @@
+{
+    "title": "VoxelShapes::SerializableVoxelShape",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/VoxelShapes__SerializableVoxelShape.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "Cells": {
+            "$ref": "./VoxelShapes__SerializableCells.json",
+            "x-ordinal-index": 0
+        },
+        "X Coordinates": {
+            "type": "array",
+            "items": {
+                "type": "number",
+                "x-underlying-type": "float"
+            },
+            "x-ordinal-index": 1,
+            "minItems": 1,
+            "maxItems": 128
+        },
+        "Y Coordinates": {
+            "type": "array",
+            "items": {
+                "type": "number",
+                "x-underlying-type": "float"
+            },
+            "x-ordinal-index": 2,
+            "minItems": 1,
+            "maxItems": 128
+        },
+        "Z Coordinates": {
+            "type": "array",
+            "items": {
+                "type": "number",
+                "x-underlying-type": "float"
+            },
+            "x-ordinal-index": 3,
+            "minItems": 1,
+            "maxItems": 128
+        }
+    },
+    "required": [
+        "Cells",
+        "X Coordinates",
+        "Y Coordinates",
+        "Z Coordinates"
+    ]
+}

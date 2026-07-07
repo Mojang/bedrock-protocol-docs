@@ -1,0 +1,18 @@
+{
+    "title": "CurrentStructureFeaturePacketPayload",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/CurrentStructureFeaturePacketPayload.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "Current Structure Feature": {
+            "type": "string",
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Current Structure Feature"
+    ]
+}

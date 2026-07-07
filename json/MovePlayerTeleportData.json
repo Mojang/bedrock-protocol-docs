@@ -1,0 +1,25 @@
+{
+    "title": "MovePlayerTeleportData",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/MovePlayerTeleportData.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "Source Actor Type": {
+            "type": "integer",
+            "x-underlying-type": "int32",
+            "x-ordinal-index": 1
+        },
+        "Teleportation Cause": {
+            "type": "integer",
+            "x-underlying-type": "int32",
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Source Actor Type",
+        "Teleportation Cause"
+    ]
+}

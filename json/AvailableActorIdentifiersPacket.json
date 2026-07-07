@@ -1,21 +1,11 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "4259990879",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.29",
-    "x-protocol-version": 2164,
     "title": "AvailableActorIdentifiersPacket",
-    "type": "object",
-    "properties": {
-        "Identifier List": {
-            "$ref": "#/definitions/3172631924",
-            "x-ordinal-index": 0,
-            "x-runtime-constraint-description": "Verify that the tag contains at least the \"idlist\" key"
-        }
-    },
-    "required": [
-        "Identifier List"
-    ],
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/AvailableActorIdentifiersPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "$ref": "./AvailableActorIdentifiersPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 119,
         "[cereal:packet_details]": ""

@@ -1,0 +1,33 @@
+{
+    "title": "PlayerSkinPacketPayload",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/PlayerSkinPacketPayload.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "Localized New Skin Name": {
+            "type": "string",
+            "x-ordinal-index": 2
+        },
+        "Localized Old Skin Name": {
+            "type": "string",
+            "x-ordinal-index": 3
+        },
+        "Serialized Skin": {
+            "$ref": "./SerializedSkin.json",
+            "x-ordinal-index": 1
+        },
+        "UUID": {
+            "$ref": "./mce__UUID.json",
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Localized New Skin Name",
+        "Localized Old Skin Name",
+        "Serialized Skin",
+        "UUID"
+    ]
+}

@@ -1,0 +1,49 @@
+{
+    "title": "VoxelShapes::SerializableCells",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/VoxelShapes__SerializableCells.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "Storage": {
+            "type": "array",
+            "items": {
+                "type": "integer",
+                "x-underlying-type": "uint8",
+                "minimum": 0.0,
+                "maximum": 255.0
+            },
+            "x-ordinal-index": 3,
+            "maxItems": 256048
+        },
+        "X Size": {
+            "type": "integer",
+            "x-underlying-type": "uint8",
+            "x-ordinal-index": 0,
+            "minimum": 0.0,
+            "maximum": 127.0
+        },
+        "Y Size": {
+            "type": "integer",
+            "x-underlying-type": "uint8",
+            "x-ordinal-index": 1,
+            "minimum": 0.0,
+            "maximum": 127.0
+        },
+        "Z Size": {
+            "type": "integer",
+            "x-underlying-type": "uint8",
+            "x-ordinal-index": 2,
+            "minimum": 0.0,
+            "maximum": 127.0
+        }
+    },
+    "required": [
+        "Storage",
+        "X Size",
+        "Y Size",
+        "Z Size"
+    ]
+}

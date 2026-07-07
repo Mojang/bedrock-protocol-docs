@@ -1,0 +1,64 @@
+{
+    "title": "AvailableCommandsPacketCommandData",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/AvailableCommandsPacketCommandData.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "Alias Enum": {
+            "type": "integer",
+            "x-underlying-type": "int32",
+            "x-ordinal-index": 4
+        },
+        "CommandData Chained Subcommand Indexes": {
+            "type": "array",
+            "items": {
+                "type": "integer",
+                "x-underlying-type": "uint32",
+                "minimum": 0.0
+            },
+            "x-ordinal-index": 5,
+            "maxItems": 250
+        },
+        "Description": {
+            "type": "string",
+            "x-ordinal-index": 1,
+            "maxLength": 1000
+        },
+        "Flags": {
+            "type": "integer",
+            "x-underlying-type": "uint16",
+            "x-ordinal-index": 2,
+            "minimum": 0.0
+        },
+        "Name": {
+            "type": "string",
+            "x-ordinal-index": 0,
+            "maxLength": 512
+        },
+        "Overloads": {
+            "type": "array",
+            "items": {
+                "$ref": "./AvailableCommandsPacketOverloadData.json"
+            },
+            "x-ordinal-index": 6,
+            "maxItems": 250
+        },
+        "Permission Level": {
+            "$ref": "./CommandPermissionLevel.json",
+            "x-underlying-type": "uint8",
+            "x-ordinal-index": 3
+        }
+    },
+    "required": [
+        "Alias Enum",
+        "CommandData Chained Subcommand Indexes",
+        "Description",
+        "Flags",
+        "Name",
+        "Overloads",
+        "Permission Level"
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "title": "CreativeGroupInfoPayload",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/CreativeGroupInfoPayload.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "Creative Category": {
+            "type": "string",
+            "enum": [
+                "Construction",
+                "Nature",
+                "Equipment",
+                "Items",
+                "ItemCommandOnly"
+            ],
+            "x-underlying-type": "uint8",
+            "x-serialization-options": [
+                "Enum-as-Value"
+            ],
+            "x-ordinal-index": 0
+        },
+        "Group Icon Item": {
+            "$ref": "./NetworkItemInstanceDescriptor.json",
+            "x-ordinal-index": 2
+        },
+        "Name": {
+            "type": "string",
+            "x-ordinal-index": 1
+        }
+    },
+    "required": [
+        "Creative Category",
+        "Group Icon Item",
+        "Name"
+    ]
+}

@@ -1,0 +1,107 @@
+{
+    "title": "CraftingDataPacketPayload",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/CraftingDataPacketPayload.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "Clear Recipes": {
+            "type": "boolean",
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 11
+        },
+        "Container Mixes": {
+            "type": "array",
+            "items": {
+                "$ref": "./ContainerMixDataEntry.json"
+            },
+            "x-ordinal-index": 9
+        },
+        "Material Reducers": {
+            "type": "array",
+            "items": {
+                "$ref": "./MaterialReducerDataEntry.json"
+            },
+            "x-ordinal-index": 10
+        },
+        "Multi Recipes": {
+            "type": "array",
+            "items": {
+                "$ref": "./MultiRecipePayload.json"
+            },
+            "x-ordinal-index": 2
+        },
+        "Potion Mixes": {
+            "type": "array",
+            "items": {
+                "$ref": "./PotionMixDataEntry.json"
+            },
+            "x-ordinal-index": 8
+        },
+        "Shaped Chemistry Recipes": {
+            "type": "array",
+            "items": {
+                "$ref": "./ShapedRecipePayload.json"
+            },
+            "x-ordinal-index": 5
+        },
+        "Shaped Recipes": {
+            "type": "array",
+            "items": {
+                "$ref": "./ShapedRecipePayload.json"
+            },
+            "x-ordinal-index": 0
+        },
+        "Shapeless Chemistry Recipes": {
+            "type": "array",
+            "items": {
+                "$ref": "./ShapelessRecipePayload.json"
+            },
+            "x-ordinal-index": 4
+        },
+        "Shapeless Recipes": {
+            "type": "array",
+            "items": {
+                "$ref": "./ShapelessRecipePayload.json"
+            },
+            "x-ordinal-index": 1
+        },
+        "Smithing Transform Recipes": {
+            "type": "array",
+            "items": {
+                "$ref": "./SmithingTransformRecipePayload.json"
+            },
+            "x-ordinal-index": 6
+        },
+        "Smithing Trim Recipes": {
+            "type": "array",
+            "items": {
+                "$ref": "./SmithingTrimRecipePayload.json"
+            },
+            "x-ordinal-index": 7
+        },
+        "User Data Shapeless Recipes": {
+            "type": "array",
+            "items": {
+                "$ref": "./ShapelessRecipePayload.json"
+            },
+            "x-ordinal-index": 3
+        }
+    },
+    "required": [
+        "Clear Recipes",
+        "Container Mixes",
+        "Material Reducers",
+        "Multi Recipes",
+        "Potion Mixes",
+        "Shaped Chemistry Recipes",
+        "Shaped Recipes",
+        "Shapeless Chemistry Recipes",
+        "Shapeless Recipes",
+        "Smithing Transform Recipes",
+        "Smithing Trim Recipes",
+        "User Data Shapeless Recipes"
+    ]
+}

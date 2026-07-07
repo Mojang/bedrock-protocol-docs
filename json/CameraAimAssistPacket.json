@@ -1,90 +1,11 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1310695872",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.29",
-    "x-protocol-version": 2164,
-    "definitions": {
-        "742152213": {
-            "title": "Vec2",
-            "type": "object",
-            "properties": {
-                "X": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 0
-                },
-                "Y": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 1
-                }
-            },
-            "required": [
-                "X",
-                "Y"
-            ]
-        }
-    },
     "title": "CameraAimAssistPacket",
-    "type": "object",
-    "properties": {
-        "Action": {
-            "title": "CameraAimAssistPacketPayload Action",
-            "type": "string",
-            "enum": [
-                "Set",
-                "Clear"
-            ],
-            "x-underlying-type": "uint8",
-            "x-serialization-options": [
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 4
-        },
-        "Distance": {
-            "type": "number",
-            "x-underlying-type": "float",
-            "x-ordinal-index": 2,
-            "minimum": 1.0,
-            "maximum": 16.0
-        },
-        "Preset Id": {
-            "type": "string",
-            "x-ordinal-index": 0
-        },
-        "Show Debug Render": {
-            "type": "boolean",
-            "x-underlying-type": "boolean",
-            "x-ordinal-index": 5
-        },
-        "Target Mode": {
-            "title": "CameraAimAssistPacketPayload TargetMode",
-            "type": "string",
-            "enum": [
-                "Angle",
-                "Distance"
-            ],
-            "x-underlying-type": "uint8",
-            "x-serialization-options": [
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 3
-        },
-        "View Angle": {
-            "$ref": "#/definitions/742152213",
-            "x-ordinal-index": 1,
-            "x-runtime-constraint-description": "There are different constraints for different indexes, please refer to member help for more details"
-        }
-    },
-    "required": [
-        "Action",
-        "Distance",
-        "Preset Id",
-        "Show Debug Render",
-        "Target Mode",
-        "View Angle"
-    ],
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/CameraAimAssistPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "$ref": "./CameraAimAssistPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 316,
         "[cereal:packet_details]": ""

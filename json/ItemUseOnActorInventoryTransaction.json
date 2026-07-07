@@ -1,0 +1,57 @@
+{
+    "title": "ItemUseOnActorInventoryTransaction",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ItemUseOnActorInventoryTransaction.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "Action Type": {
+            "$ref": "./ItemUseOnActorActionType.json",
+            "x-underlying-type": "int32",
+            "x-serialization-options": [
+                "Compression",
+                "Enum-as-Value"
+            ],
+            "x-ordinal-index": 2
+        },
+        "Actions": {
+            "$ref": "./InventoryTransaction.json",
+            "x-ordinal-index": 0
+        },
+        "From Position": {
+            "$ref": "./Vec3.json",
+            "x-ordinal-index": 5
+        },
+        "Hit Position": {
+            "$ref": "./Vec3.json",
+            "x-ordinal-index": 6
+        },
+        "Item": {
+            "$ref": "./NetworkItemStackDescriptor.json",
+            "x-ordinal-index": 4
+        },
+        "Runtime Id": {
+            "$ref": "./ActorRuntimeID.json",
+            "x-ordinal-index": 1
+        },
+        "Slot": {
+            "type": "integer",
+            "x-underlying-type": "int32",
+            "x-serialization-options": [
+                "Compression"
+            ],
+            "x-ordinal-index": 3
+        }
+    },
+    "required": [
+        "Action Type",
+        "Actions",
+        "From Position",
+        "Hit Position",
+        "Item",
+        "Runtime Id",
+        "Slot"
+    ]
+}

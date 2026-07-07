@@ -1,0 +1,66 @@
+{
+    "title": "gatheringsConfig",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/gatheringsConfig.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "creatorId": {
+            "type": "string",
+            "x-ordinal-index": 4,
+            "minLength": 1,
+            "maxLength": 60
+        },
+        "experienceId": {
+            "$ref": "./mce__UUID.json",
+            "x-ordinal-index": 0,
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+        },
+        "experienceName": {
+            "type": "string",
+            "x-ordinal-index": 1,
+            "minLength": 1,
+            "maxLength": 29
+        },
+        "scenarioId": {
+            "type": "string",
+            "x-ordinal-index": 6,
+            "minLength": 1,
+            "maxLength": 100
+        },
+        "serverId": {
+            "type": "string",
+            "x-ordinal-index": 7,
+            "minLength": 1,
+            "maxLength": 100
+        },
+        "targetId": {
+            "$ref": "./mce__UUID.json",
+            "x-ordinal-index": 5,
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+        },
+        "worldId": {
+            "$ref": "./mce__UUID.json",
+            "x-ordinal-index": 2,
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+        },
+        "worldName": {
+            "type": "string",
+            "x-ordinal-index": 3,
+            "minLength": 1,
+            "maxLength": 29
+        }
+    },
+    "required": [
+        "creatorId",
+        "experienceId",
+        "experienceName",
+        "scenarioId",
+        "serverId",
+        "targetId",
+        "worldId",
+        "worldName"
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "title": "PackedItemUseLegacyInventoryTransaction",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/PackedItemUseLegacyInventoryTransaction.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "Item Use Transaction": {
+            "$ref": "./ItemUseInventoryTransaction.json",
+            "x-ordinal-index": 2
+        },
+        "Legacy Request ID": {
+            "$ref": "./ItemStackLegacyRequestId.json",
+            "x-ordinal-index": 0
+        },
+        "Legacy Set Item Slots": {
+            "type": "array",
+            "items": {
+                "$ref": "./LegacySetSlot.json"
+            },
+            "x-ordinal-index": 1
+        }
+    },
+    "required": [
+        "Item Use Transaction",
+        "Legacy Request ID"
+    ]
+}

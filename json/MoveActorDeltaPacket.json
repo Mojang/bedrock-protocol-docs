@@ -1,113 +1,11 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1563798389",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.29",
-    "x-protocol-version": 2164,
-    "definitions": {
-        "2162070041": {
-            "title": "MoveActorDeltaData",
-            "type": "object",
-            "properties": {
-                "Actor Runtime ID": {
-                    "$ref": "#/definitions/1750201151",
-                    "x-ordinal-index": 0
-                },
-                "Force Completion": {
-                    "type": "boolean",
-                    "x-underlying-type": "boolean",
-                    "x-ordinal-index": 10
-                },
-                "Force Move": {
-                    "type": "boolean",
-                    "x-underlying-type": "boolean",
-                    "x-ordinal-index": 8
-                },
-                "Force Move Local Entity": {
-                    "type": "boolean",
-                    "x-underlying-type": "boolean",
-                    "x-ordinal-index": 9
-                },
-                "Is On Ground": {
-                    "type": "boolean",
-                    "x-underlying-type": "boolean",
-                    "x-ordinal-index": 7
-                },
-                "New Position X": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 1
-                },
-                "New Position Y": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 2
-                },
-                "New Position Z": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 3
-                },
-                "Rotation X": {
-                    "type": "integer",
-                    "x-underlying-type": "int8",
-                    "x-ordinal-index": 4,
-                    "minimum": -128.0,
-                    "maximum": 127.0
-                },
-                "Rotation Y": {
-                    "type": "integer",
-                    "x-underlying-type": "int8",
-                    "x-ordinal-index": 5,
-                    "minimum": -128.0,
-                    "maximum": 127.0
-                },
-                "Rotation Y Head": {
-                    "type": "integer",
-                    "x-underlying-type": "int8",
-                    "x-ordinal-index": 6,
-                    "minimum": -128.0,
-                    "maximum": 127.0
-                }
-            },
-            "required": [
-                "Actor Runtime ID",
-                "Force Completion",
-                "Force Move",
-                "Force Move Local Entity",
-                "Is On Ground"
-            ]
-        },
-        "1750201151": {
-            "title": "ActorRuntimeID",
-            "type": "object",
-            "properties": {
-                "Actor Runtime ID": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
-                }
-            },
-            "required": [
-                "Actor Runtime ID"
-            ]
-        }
-    },
     "title": "MoveActorDeltaPacket",
-    "type": "object",
-    "properties": {
-        "Move Data": {
-            "$ref": "#/definitions/2162070041",
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "Move Data"
-    ],
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/MoveActorDeltaPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "$ref": "./MoveActorDeltaPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 111,
         "[cereal:packet_details]": "Each position, rotation and head-rotation component is sent as an independent optional, accompanied by flags indicating whether the actor is on the ground and whether this is a teleport."

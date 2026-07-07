@@ -1,0 +1,23 @@
+{
+    "title": "MultiRecipePayload",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/MultiRecipePayload.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "Multi-Recipe UUID": {
+            "$ref": "./mce__UUID.json",
+            "x-ordinal-index": 0
+        },
+        "Net Id": {
+            "$ref": "./RecipeNetId.json",
+            "x-ordinal-index": 1
+        }
+    },
+    "required": [
+        "Multi-Recipe UUID",
+        "Net Id"
+    ]
+}

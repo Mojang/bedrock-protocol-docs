@@ -1,38 +1,11 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1970607585",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.29",
-    "x-protocol-version": 2164,
     "title": "PlayStatusPacket",
-    "type": "object",
-    "properties": {
-        "Status": {
-            "title": "PlayStatus",
-            "type": "string",
-            "enum": [
-                "LoginSuccess",
-                "LoginFailed_ClientOld",
-                "LoginFailed_ServerOld",
-                "PlayerSpawn",
-                "LoginFailed_InvalidTenant",
-                "LoginFailed_EditionMismatchEduToVanilla",
-                "LoginFailed_EditionMismatchVanillaToEdu",
-                "LoginFailed_ServerFullSubClient",
-                "LoginFailed_EditorMismatchEditorToVanilla",
-                "LoginFailed_EditorMismatchVanillaToEditor"
-            ],
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Big Endian",
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "Status"
-    ],
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/PlayStatusPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "$ref": "./PlayStatusPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 2,
         "[cereal:packet_details]": "\n\tUsed after the Server handles a Login or (Sub)Client Authentication Packet\n\tIf everything is good, then it sends this packet to the client to finish the handshake.\n\tIf everything is not good, it terminates the connection.\n\t"

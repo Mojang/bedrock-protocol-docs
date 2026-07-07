@@ -1,0 +1,85 @@
+{
+    "title": "CameraAimAssistCategoryPriorities",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/CameraAimAssistCategoryPriorities.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "block_default": {
+            "type": "integer",
+            "x-underlying-type": "int32",
+            "x-ordinal-index": 5,
+            "minimum": 0.0,
+            "maximum": 100.0
+        },
+        "block_tags": {
+            "type": "object",
+            "additionalProperties": {
+                "type": "integer",
+                "x-underlying-type": "int32",
+                "minimum": 0.0,
+                "maximum": 100.0
+            },
+            "default": {},
+            "x-ordinal-index": 2
+        },
+        "blocks": {
+            "type": "object",
+            "additionalProperties": {
+                "type": "object",
+                "properties": {
+                    "key": {
+                        "$ref": "./Block_Reference.json"
+                    },
+                    "value": {
+                        "type": "integer",
+                        "x-underlying-type": "int32"
+                    }
+                },
+                "minimum": 0.0,
+                "maximum": 100.0
+            },
+            "default": [],
+            "x-ordinal-index": 1
+        },
+        "entities": {
+            "type": "object",
+            "additionalProperties": {
+                "type": "object",
+                "properties": {
+                    "key": {
+                        "$ref": "./Entity_Reference.json"
+                    },
+                    "value": {
+                        "type": "integer",
+                        "x-underlying-type": "int32"
+                    }
+                },
+                "minimum": 0.0,
+                "maximum": 100.0
+            },
+            "default": [],
+            "x-ordinal-index": 0
+        },
+        "entity_default": {
+            "type": "integer",
+            "x-underlying-type": "int32",
+            "x-ordinal-index": 4,
+            "minimum": 0.0,
+            "maximum": 100.0
+        },
+        "entity_type_families": {
+            "type": "object",
+            "additionalProperties": {
+                "type": "integer",
+                "x-underlying-type": "int32",
+                "minimum": 0.0,
+                "maximum": 100.0
+            },
+            "default": {},
+            "x-ordinal-index": 3
+        }
+    }
+}

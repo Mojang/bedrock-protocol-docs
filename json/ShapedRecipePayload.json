@@ -1,0 +1,87 @@
+{
+    "title": "ShapedRecipePayload",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ShapedRecipePayload.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "Assume Symmetry": {
+            "type": "boolean",
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 8
+        },
+        "Height": {
+            "type": "integer",
+            "x-underlying-type": "int32",
+            "x-serialization-options": [
+                "Compression"
+            ],
+            "x-ordinal-index": 2
+        },
+        "Ingredients": {
+            "type": "array",
+            "items": {
+                "$ref": "./RecipeIngredient.json"
+            },
+            "x-ordinal-index": 3,
+            "maxItems": 128
+        },
+        "Net Id": {
+            "$ref": "./RecipeNetId.json",
+            "x-ordinal-index": 10
+        },
+        "Priority": {
+            "type": "integer",
+            "x-underlying-type": "int32",
+            "x-serialization-options": [
+                "Compression"
+            ],
+            "x-ordinal-index": 7
+        },
+        "Recipe Id": {
+            "type": "string",
+            "x-ordinal-index": 0
+        },
+        "Results": {
+            "type": "array",
+            "items": {
+                "$ref": "./NetworkItemInstanceDescriptorData.json"
+            },
+            "x-ordinal-index": 4
+        },
+        "Tag": {
+            "type": "string",
+            "x-ordinal-index": 6
+        },
+        "UUID": {
+            "$ref": "./mce__UUID.json",
+            "x-ordinal-index": 5
+        },
+        "Unlocking Requirement": {
+            "$ref": "./RecipeUnlockingRequirement.json",
+            "x-ordinal-index": 9
+        },
+        "Width": {
+            "type": "integer",
+            "x-underlying-type": "int32",
+            "x-serialization-options": [
+                "Compression"
+            ],
+            "x-ordinal-index": 1
+        }
+    },
+    "required": [
+        "Assume Symmetry",
+        "Height",
+        "Ingredients",
+        "Net Id",
+        "Priority",
+        "Recipe Id",
+        "Results",
+        "Tag",
+        "UUID",
+        "Width"
+    ]
+}

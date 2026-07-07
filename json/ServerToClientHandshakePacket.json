@@ -1,32 +1,11 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "845899285",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.29",
-    "x-protocol-version": 2164,
-    "definitions": {
-        "2710976883": {
-            "title": "WebToken",
-            "type": "string",
-            "maxLength": 16384
-        },
-        "922768870": {
-            "title": "WebToken",
-            "$ref": "#/definitions/2710976883",
-            "x-runtime-constraint-description": "Verify the input is a valid JWT."
-        }
-    },
     "title": "ServerToClientHandshakePacket",
-    "type": "object",
-    "properties": {
-        "Handshake WebToken": {
-            "$ref": "#/definitions/922768870",
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "Handshake WebToken"
-    ],
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ServerToClientHandshakePacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "$ref": "./ServerToClientHandshakePacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 3,
         "[cereal:packet_details]": "Sent from the server at the end of the login packet"

@@ -1,0 +1,57 @@
+{
+    "title": "ItemStackResponseSlotInfo",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ItemStackResponseSlotInfo.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "Amount": {
+            "type": "integer",
+            "x-underlying-type": "uint8",
+            "x-ordinal-index": 2,
+            "minimum": 0.0,
+            "maximum": 255.0
+        },
+        "Custom Name": {
+            "$ref": "./Bedrock__Safety__RedactableString.json",
+            "x-ordinal-index": 4
+        },
+        "Durability Correction": {
+            "type": "integer",
+            "x-underlying-type": "int32",
+            "x-serialization-options": [
+                "Compression"
+            ],
+            "x-ordinal-index": 5,
+            "minimum": -32768.0,
+            "maximum": 32767.0
+        },
+        "Item Stack Net Id": {
+            "$ref": "./ItemStackNetId.json",
+            "x-ordinal-index": 3
+        },
+        "Requested Slot": {
+            "type": "integer",
+            "x-underlying-type": "uint8",
+            "x-ordinal-index": 0,
+            "minimum": 0.0,
+            "maximum": 255.0
+        },
+        "Slot": {
+            "type": "integer",
+            "x-underlying-type": "uint8",
+            "x-ordinal-index": 1,
+            "minimum": 0.0,
+            "maximum": 255.0
+        }
+    },
+    "required": [
+        "Amount",
+        "Custom Name",
+        "Durability Correction",
+        "Requested Slot",
+        "Slot"
+    ]
+}

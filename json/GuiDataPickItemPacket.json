@@ -1,31 +1,11 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1016196226",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.29",
-    "x-protocol-version": 2164,
     "title": "GuiDataPickItemPacket",
-    "type": "object",
-    "properties": {
-        "Item Effect Name": {
-            "type": "string",
-            "x-ordinal-index": 1
-        },
-        "Item Name": {
-            "type": "string",
-            "x-ordinal-index": 0
-        },
-        "Slot": {
-            "type": "integer",
-            "x-underlying-type": "int32",
-            "x-ordinal-index": 2
-        }
-    },
-    "required": [
-        "Item Effect Name",
-        "Item Name",
-        "Slot"
-    ],
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/GuiDataPickItemPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "$ref": "./GuiDataPickItemPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 54,
         "[cereal:packet_details]": "This is only used when players use pick block, a command is used, tests, and some 3rd party content."

@@ -1,57 +1,11 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3686546608",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.29",
-    "x-protocol-version": 2164,
     "title": "NetworkSettingsPacket",
-    "type": "object",
-    "properties": {
-        "Client Throttle Enabled": {
-            "type": "boolean",
-            "x-underlying-type": "boolean",
-            "x-ordinal-index": 2
-        },
-        "Client Throttle Scalar": {
-            "type": "number",
-            "x-underlying-type": "float",
-            "x-ordinal-index": 4
-        },
-        "Client Throttle Threshold": {
-            "type": "integer",
-            "x-underlying-type": "uint8",
-            "x-ordinal-index": 3,
-            "minimum": 0.0,
-            "maximum": 255.0
-        },
-        "Compression Threshold": {
-            "type": "integer",
-            "x-underlying-type": "uint16",
-            "x-ordinal-index": 0,
-            "minimum": 0.0
-        },
-        "CompressionAlgorithm": {
-            "title": "PacketCompressionAlgorithm",
-            "type": "string",
-            "enum": [
-                "ZLib",
-                "Snappy",
-                "None"
-            ],
-            "x-underlying-type": "uint16",
-            "x-serialization-options": [
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 1
-        }
-    },
-    "required": [
-        "Client Throttle Enabled",
-        "Client Throttle Scalar",
-        "Client Throttle Threshold",
-        "Compression Threshold",
-        "CompressionAlgorithm"
-    ],
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/NetworkSettingsPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "$ref": "./NetworkSettingsPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 143,
         "[cereal:packet_details]": ""

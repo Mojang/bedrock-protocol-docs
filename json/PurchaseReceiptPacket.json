@@ -1,24 +1,11 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "235906930",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.29",
-    "x-protocol-version": 2164,
     "title": "PurchaseReceiptPacket",
-    "type": "object",
-    "properties": {
-        "PurchaseReceipts": {
-            "type": "array",
-            "items": {
-                "type": "string"
-            },
-            "x-ordinal-index": 0,
-            "maxItems": 10000
-        }
-    },
-    "required": [
-        "PurchaseReceipts"
-    ],
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/PurchaseReceiptPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "$ref": "./PurchaseReceiptPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 92,
         "[cereal:packet_details]": "Sent from the client after we make a purchase in the store OR if we login and our entitlements are verified.\nIt sends a vector of purchase receipts(string).There is a handler and a multiple senders."

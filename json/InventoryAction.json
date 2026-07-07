@@ -1,0 +1,38 @@
+{
+    "title": "InventoryAction",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/InventoryAction.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "From Item": {
+            "$ref": "./NetworkItemStackDescriptor.json",
+            "x-ordinal-index": 2
+        },
+        "Slot": {
+            "type": "integer",
+            "x-underlying-type": "uint32",
+            "x-serialization-options": [
+                "Compression"
+            ],
+            "x-ordinal-index": 1,
+            "minimum": 0.0
+        },
+        "Source": {
+            "$ref": "./InventorySource.json",
+            "x-ordinal-index": 0
+        },
+        "To Item": {
+            "$ref": "./NetworkItemStackDescriptor.json",
+            "x-ordinal-index": 3
+        }
+    },
+    "required": [
+        "From Item",
+        "Slot",
+        "Source",
+        "To Item"
+    ]
+}

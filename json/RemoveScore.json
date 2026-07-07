@@ -1,0 +1,30 @@
+{
+    "title": "RemoveScore",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/RemoveScore.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "Action": {
+            "const": "remove",
+            "$ref": "./ScorePacketEntryAction.json",
+            "x-underlying-type": "uint8",
+            "x-ordinal-index": 0
+        },
+        "Objective Name": {
+            "type": "string",
+            "x-ordinal-index": 2,
+            "minLength": 1
+        },
+        "Scoreboard Id": {
+            "$ref": "./ScoreboardId.json",
+            "x-ordinal-index": 1
+        }
+    },
+    "required": [
+        "Action",
+        "Scoreboard Id"
+    ]
+}

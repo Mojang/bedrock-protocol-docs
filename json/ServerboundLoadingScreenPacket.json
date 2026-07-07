@@ -1,37 +1,11 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1445344754",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.29",
-    "x-protocol-version": 2164,
     "title": "ServerboundLoadingScreenPacket",
-    "type": "object",
-    "properties": {
-        "Loading Screen Id": {
-            "type": "integer",
-            "x-underlying-type": "uint32",
-            "x-ordinal-index": 1,
-            "minimum": 0.0
-        },
-        "Loading Screen Packet Type": {
-            "title": "ServerboundLoadingScreenPacketType",
-            "type": "string",
-            "enum": [
-                "StartLoadingScreen",
-                "EndLoadingScreen"
-            ],
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Compression",
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "Loading Screen Id",
-        "Loading Screen Packet Type"
-    ],
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ServerboundLoadingScreenPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "$ref": "./ServerboundLoadingScreenPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 312,
         "[cereal:packet_details]": "In order for the client to send a packet with StartLoadingScreen, the server needs to anticipate that this packet is coming.\nIf the server doesn't expect that we are about to start a loading screen, the server will disconnect the client.\nEndLoadingScreen is sent by the client when the loading screen closes.\nThe Loading Screen Id field will be empty if the loading screen is triggered by the initial loading into of a world.\nThe Loading Screen Id field will have a value if sent by the server. This currently happens as part of ChangeDimensionPacket if the player is alive."

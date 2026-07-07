@@ -1,0 +1,87 @@
+{
+    "title": "PlayerListAddEntry",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/PlayerListAddEntry.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "Action": {
+            "type": "string",
+            "enum": [
+                "Add"
+            ],
+            "x-underlying-type": "uint8",
+            "x-serialization-options": [
+                "Enum-as-Value"
+            ],
+            "x-ordinal-index": 0
+        },
+        "Actor Unique ID": {
+            "$ref": "./ActorUniqueID.json",
+            "x-ordinal-index": 2
+        },
+        "Build Platform": {
+            "$ref": "./BuildPlatform.json",
+            "x-underlying-type": "int32",
+            "x-serialization-options": [
+                "Enum-as-Value"
+            ],
+            "x-ordinal-index": 6
+        },
+        "Is Host": {
+            "type": "boolean",
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 9
+        },
+        "Is SubClient": {
+            "type": "boolean",
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 10
+        },
+        "Is Teacher": {
+            "type": "boolean",
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 8
+        },
+        "Platform Online ID": {
+            "type": "string",
+            "x-ordinal-index": 5
+        },
+        "Player Color": {
+            "$ref": "./Color.json",
+            "x-ordinal-index": 11
+        },
+        "Player Name": {
+            "type": "string",
+            "x-ordinal-index": 3
+        },
+        "Serialized Skin": {
+            "$ref": "./SerializedSkin.json",
+            "x-ordinal-index": 7
+        },
+        "UUID": {
+            "$ref": "./mce__UUID.json",
+            "x-ordinal-index": 1
+        },
+        "XBL XUID": {
+            "type": "string",
+            "x-ordinal-index": 4
+        }
+    },
+    "required": [
+        "Action",
+        "Actor Unique ID",
+        "Build Platform",
+        "Is Host",
+        "Is SubClient",
+        "Is Teacher",
+        "Platform Online ID",
+        "Player Color",
+        "Player Name",
+        "Serialized Skin",
+        "UUID",
+        "XBL XUID"
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "title": "SmithingTransformRecipePayload",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/SmithingTransformRecipePayload.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "Addition Ingredient": {
+            "$ref": "./RecipeIngredient.json",
+            "x-ordinal-index": 3
+        },
+        "Base Ingredient": {
+            "$ref": "./RecipeIngredient.json",
+            "x-ordinal-index": 2
+        },
+        "Net Id": {
+            "$ref": "./RecipeNetId.json",
+            "x-ordinal-index": 6
+        },
+        "Recipe Id": {
+            "type": "string",
+            "x-ordinal-index": 0
+        },
+        "Result": {
+            "$ref": "./NetworkItemInstanceDescriptorData.json",
+            "x-ordinal-index": 4
+        },
+        "Tag": {
+            "type": "string",
+            "x-ordinal-index": 5
+        },
+        "Template Ingredient": {
+            "$ref": "./RecipeIngredient.json",
+            "x-ordinal-index": 1
+        }
+    },
+    "required": [
+        "Addition Ingredient",
+        "Base Ingredient",
+        "Net Id",
+        "Recipe Id",
+        "Result",
+        "Tag",
+        "Template Ingredient"
+    ]
+}

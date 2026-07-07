@@ -1,61 +1,11 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1857468824",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.29",
-    "x-protocol-version": 2164,
     "title": "PacketViolationWarningPacket",
-    "type": "object",
-    "properties": {
-        "Violation Context": {
-            "type": "string",
-            "x-ordinal-index": 3
-        },
-        "Violation PacketId": {
-            "type": "integer",
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Compression"
-            ],
-            "x-ordinal-index": 2
-        },
-        "Violation Severity": {
-            "title": "PacketViolationSeverity",
-            "type": "string",
-            "enum": [
-                "Unknown",
-                "Warning",
-                "FinalWarning",
-                "TerminatingConnection"
-            ],
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Compression",
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 1
-        },
-        "Violation Type": {
-            "title": "PacketViolationType",
-            "type": "string",
-            "enum": [
-                "Unknown",
-                "PacketMalformed"
-            ],
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Compression",
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "Violation Context",
-        "Violation PacketId",
-        "Violation Severity",
-        "Violation Type"
-    ],
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/PacketViolationWarningPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "$ref": "./PacketViolationWarningPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 156,
         "[cereal:packet_details]": ""

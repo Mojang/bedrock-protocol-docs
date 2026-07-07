@@ -1,0 +1,23 @@
+{
+    "title": "clientStoreEntryPointConfig",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/clientStoreEntryPointConfig.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "storeId": {
+            "type": "string",
+            "x-ordinal-index": 0
+        },
+        "storeName": {
+            "type": "string",
+            "x-ordinal-index": 1
+        }
+    },
+    "required": [
+        "storeId",
+        "storeName"
+    ]
+}

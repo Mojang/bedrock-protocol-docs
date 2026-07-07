@@ -1,19 +1,11 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1807837830",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.29",
-    "x-protocol-version": 2164,
     "title": "ClientboundDataDrivenUICloseScreenPacket",
-    "type": "object",
-    "properties": {
-        "FormId": {
-            "type": "integer",
-            "x-underlying-type": "uint32",
-            "x-ordinal-index": 0,
-            "minimum": 0.0
-        }
-    },
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ClientboundDataDrivenUICloseScreenPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "$ref": "./Clientbound_Data_Driven_UI_Close_Screen_Payload.json",
     "$metaProperties": {
         "[cereal:packet]": 334,
         "[cereal:packet_details]": ""

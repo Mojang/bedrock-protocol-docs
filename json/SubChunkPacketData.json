@@ -1,0 +1,50 @@
+{
+    "title": "SubChunkPacketData",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/SubChunkPacketData.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "Blob Id": {
+            "type": "integer",
+            "x-underlying-type": "uint64",
+            "x-ordinal-index": 4,
+            "minimum": 0.0
+        },
+        "Height Map Data": {
+            "$ref": "./SubChunkHeightmapData.json",
+            "x-ordinal-index": 3
+        },
+        "Serialized Sub Chunk": {
+            "type": "string",
+            "x-ordinal-index": 2
+        },
+        "SubChunk Pos Offset": {
+            "$ref": "./SubChunkPosOffset.json",
+            "x-ordinal-index": 0
+        },
+        "SubChunk Request Result": {
+            "type": "string",
+            "enum": [
+                "Success",
+                "LevelChunkDoesntExist",
+                "WrongDimension",
+                "PlayerDoesntExist",
+                "IndexOutOfBounds",
+                "SuccessAllAir"
+            ],
+            "x-underlying-type": "uint8",
+            "x-serialization-options": [
+                "Enum-as-Value"
+            ],
+            "x-ordinal-index": 1
+        }
+    },
+    "required": [
+        "Height Map Data",
+        "SubChunk Pos Offset",
+        "SubChunk Request Result"
+    ]
+}

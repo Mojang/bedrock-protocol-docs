@@ -1,0 +1,63 @@
+{
+    "title": "PackInfoData",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/PackInfoData.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "CDN URL": {
+            "type": "string",
+            "x-ordinal-index": 8
+        },
+        "Content Identity": {
+            "$ref": "./ContentIdentity.json",
+            "x-ordinal-index": 4
+        },
+        "Content Key": {
+            "type": "string",
+            "x-ordinal-index": 2
+        },
+        "Has Scripts": {
+            "type": "boolean",
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 5
+        },
+        "Is Addon Pack": {
+            "type": "boolean",
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 6
+        },
+        "Is Ray Tracing Capable": {
+            "type": "boolean",
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 7
+        },
+        "Pack Id Version": {
+            "$ref": "./PackIdVersion.json",
+            "x-ordinal-index": 0
+        },
+        "Pack Size": {
+            "type": "integer",
+            "x-underlying-type": "uint64",
+            "x-ordinal-index": 1,
+            "minimum": 0.0
+        },
+        "Subpack Name": {
+            "type": "string",
+            "x-ordinal-index": 3
+        }
+    },
+    "required": [
+        "CDN URL",
+        "Content Identity",
+        "Content Key",
+        "Has Scripts",
+        "Is Addon Pack",
+        "Is Ray Tracing Capable",
+        "Pack Id Version",
+        "Pack Size",
+        "Subpack Name"
+    ]
+}

@@ -1,25 +1,11 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "701232205",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.29",
-    "x-protocol-version": 2164,
     "title": "ToastRequestPacket",
-    "type": "object",
-    "properties": {
-        "Content": {
-            "type": "string",
-            "x-ordinal-index": 1
-        },
-        "Title": {
-            "type": "string",
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "Content",
-        "Title"
-    ],
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ToastRequestPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "$ref": "./ToastRequestPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 186,
         "[cereal:packet_details]": ""

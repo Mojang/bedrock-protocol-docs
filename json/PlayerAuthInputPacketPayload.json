@@ -1,0 +1,133 @@
+{
+    "title": "PlayerAuthInputPacketPayload",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/PlayerAuthInputPacketPayload.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "Analog Move Vector": {
+            "$ref": "./Vec2.json",
+            "x-ordinal-index": 16
+        },
+        "Camera Orientation": {
+            "$ref": "./Vec3.json",
+            "x-ordinal-index": 17
+        },
+        "Client Predicted Vehicle": {
+            "$ref": "./ActorUniqueID.json",
+            "x-ordinal-index": 15
+        },
+        "Client Tick": {
+            "$ref": "./PlayerInputTick.json",
+            "x-ordinal-index": 9
+        },
+        "Input Data": {
+            "type": "array",
+            "items": {
+                "$ref": "./PlayerAuthInputData.json",
+                "x-underlying-type": "int32"
+            },
+            "x-serialization-options": [
+                "Compression",
+                "Enum-as-Value"
+            ],
+            "x-ordinal-index": 4,
+            "x-runtime-constraint-description": "Verify input data entries are known, unique, and not deprecated"
+        },
+        "Input Mode": {
+            "$ref": "./InputMode.json",
+            "x-underlying-type": "uint32",
+            "x-serialization-options": [
+                "Compression",
+                "Enum-as-Value"
+            ],
+            "x-ordinal-index": 5
+        },
+        "Interact Rotation": {
+            "$ref": "./Vec2.json",
+            "x-ordinal-index": 8
+        },
+        "Item Stack Request": {
+            "$ref": "./ItemStackRequest.json",
+            "x-ordinal-index": 12
+        },
+        "Item Use Transaction": {
+            "$ref": "./PackedItemUseLegacyInventoryTransaction.json",
+            "x-ordinal-index": 11
+        },
+        "Move Vector": {
+            "$ref": "./Vec2.json",
+            "x-ordinal-index": 2
+        },
+        "New Interaction Model": {
+            "$ref": "./NewInteractionModel.json",
+            "x-underlying-type": "int32",
+            "x-serialization-options": [
+                "Compression",
+                "Enum-as-Value"
+            ],
+            "x-ordinal-index": 7
+        },
+        "Play Mode": {
+            "$ref": "./ClientPlayMode.json",
+            "x-underlying-type": "uint32",
+            "x-serialization-options": [
+                "Compression",
+                "Enum-as-Value"
+            ],
+            "x-ordinal-index": 6
+        },
+        "Player Block Actions": {
+            "type": "array",
+            "items": {
+                "$ref": "./PlayerBlockActionData.json",
+                "x-runtime-constraint-description": "Verify block actions are one of StartDestroyBlock, AbortDestroyBlock, StopDestroyBlock, CrackBlock, PredictDestroyBlock, or ContinueDestroyBlock"
+            },
+            "x-ordinal-index": 13,
+            "maxItems": 100
+        },
+        "Player Head Rotation": {
+            "type": "number",
+            "x-underlying-type": "float",
+            "x-ordinal-index": 3
+        },
+        "Player Rotation": {
+            "$ref": "./Vec2.json",
+            "x-ordinal-index": 0
+        },
+        "Pos Delta": {
+            "$ref": "./Vec3.json",
+            "x-ordinal-index": 10
+        },
+        "Position": {
+            "$ref": "./Vec3.json",
+            "x-ordinal-index": 1
+        },
+        "Raw Move Vector": {
+            "$ref": "./Vec2.json",
+            "x-ordinal-index": 18
+        },
+        "Vehicle Rotation": {
+            "$ref": "./Vec2.json",
+            "x-ordinal-index": 14
+        }
+    },
+    "required": [
+        "Analog Move Vector",
+        "Camera Orientation",
+        "Client Tick",
+        "Input Data",
+        "Input Mode",
+        "Interact Rotation",
+        "Move Vector",
+        "New Interaction Model",
+        "Play Mode",
+        "Player Head Rotation",
+        "Player Rotation",
+        "Pos Delta",
+        "Position",
+        "Raw Move Vector"
+    ]
+}

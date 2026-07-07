@@ -1,40 +1,11 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1880765715",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.29",
-    "x-protocol-version": 2164,
-    "definitions": {
-        "3908890004": {
-            "title": "clientStoreEntryPointConfig",
-            "type": "object",
-            "properties": {
-                "storeId": {
-                    "type": "string",
-                    "x-ordinal-index": 0
-                },
-                "storeName": {
-                    "type": "string",
-                    "x-ordinal-index": 1
-                }
-            },
-            "required": [
-                "storeId",
-                "storeName"
-            ]
-        }
-    },
     "title": "ServerStoreInfoPacket",
-    "type": "object",
-    "properties": {
-        "client_store_entry_point_configuration": {
-            "$ref": "#/definitions/3908890004",
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "client_store_entry_point_configuration"
-    ],
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ServerStoreInfoPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "$ref": "./ServerStoreInfoPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 346,
         "[cereal:packet_details]": ""

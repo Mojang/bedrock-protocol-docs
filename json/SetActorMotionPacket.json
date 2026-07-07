@@ -1,94 +1,11 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2243800338",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.29",
-    "x-protocol-version": 2164,
-    "definitions": {
-        "725374594": {
-            "title": "Vec3",
-            "type": "object",
-            "properties": {
-                "X": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 0
-                },
-                "Y": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 1
-                },
-                "Z": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 2
-                }
-            },
-            "required": [
-                "X",
-                "Y",
-                "Z"
-            ]
-        },
-        "1750201151": {
-            "title": "ActorRuntimeID",
-            "type": "object",
-            "properties": {
-                "Actor Runtime ID": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
-                }
-            },
-            "required": [
-                "Actor Runtime ID"
-            ]
-        },
-        "1262916889": {
-            "title": "PlayerInputTick",
-            "type": "object",
-            "properties": {
-                "Input tick": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
-                }
-            },
-            "required": [
-                "Input tick"
-            ]
-        }
-    },
     "title": "SetActorMotionPacket",
-    "type": "object",
-    "properties": {
-        "Motion": {
-            "$ref": "#/definitions/725374594",
-            "x-ordinal-index": 1
-        },
-        "Target Runtime ID": {
-            "$ref": "#/definitions/1750201151",
-            "x-ordinal-index": 0
-        },
-        "Tick": {
-            "$ref": "#/definitions/1262916889",
-            "x-ordinal-index": 2
-        }
-    },
-    "required": [
-        "Motion",
-        "Target Runtime ID",
-        "Tick"
-    ],
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/SetActorMotionPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "$ref": "./SetActorMotionPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 40,
         "[cereal:packet_details]": "\n\tIt is primarily relevant for client predicted entities like the player or a boat or horse they are in control of.\n\tFor most other actor types it does nothing.<br>\n\tThis is one of the packets that can directly affect player motion, for others, see:<br>\n\t- MovePlayerPacket<br>\n\t- CorrectPlayerMovePredictionPacket\n\t"

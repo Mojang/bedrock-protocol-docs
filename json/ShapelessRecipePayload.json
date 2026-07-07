@@ -1,0 +1,63 @@
+{
+    "title": "ShapelessRecipePayload",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ShapelessRecipePayload.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
+    "type": "object",
+    "properties": {
+        "Ingredients": {
+            "type": "array",
+            "items": {
+                "$ref": "./RecipeIngredient.json"
+            },
+            "x-ordinal-index": 1,
+            "maxItems": 128
+        },
+        "Net Id": {
+            "$ref": "./RecipeNetId.json",
+            "x-ordinal-index": 7
+        },
+        "Priority": {
+            "type": "integer",
+            "x-underlying-type": "int32",
+            "x-serialization-options": [
+                "Compression"
+            ],
+            "x-ordinal-index": 5
+        },
+        "Recipe Id": {
+            "type": "string",
+            "x-ordinal-index": 0
+        },
+        "Results": {
+            "type": "array",
+            "items": {
+                "$ref": "./NetworkItemInstanceDescriptorData.json"
+            },
+            "x-ordinal-index": 2
+        },
+        "Tag": {
+            "type": "string",
+            "x-ordinal-index": 4
+        },
+        "UUID": {
+            "$ref": "./mce__UUID.json",
+            "x-ordinal-index": 3
+        },
+        "Unlocking Requirement": {
+            "$ref": "./RecipeUnlockingRequirement.json",
+            "x-ordinal-index": 6
+        }
+    },
+    "required": [
+        "Ingredients",
+        "Net Id",
+        "Priority",
+        "Recipe Id",
+        "Results",
+        "Tag",
+        "UUID"
+    ]
+}
