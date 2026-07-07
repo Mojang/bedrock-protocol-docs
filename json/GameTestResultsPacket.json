@@ -1,32 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "634041447",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
     "title": "GameTestResultsPacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/GameTestResultsPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
     "description": "Game Test Results Packet",
-    "type": "object",
-    "properties": {
-        "Error": {
-            "type": "string",
-            "x-ordinal-index": 1
-        },
-        "Succeeded": {
-            "type": "boolean",
-            "x-underlying-type": "boolean",
-            "x-ordinal-index": 0
-        },
-        "TestName": {
-            "type": "string",
-            "x-ordinal-index": 2
-        }
-    },
-    "required": [
-        "Error",
-        "Succeeded",
-        "TestName"
-    ],
+    "$ref": "./GameTestResultsPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 195,
         "[cereal:packet_details]": "Internal Text Packet"

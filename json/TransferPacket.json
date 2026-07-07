@@ -1,34 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1597064430",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
     "title": "TransferPacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/TransferPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
     "description": "Used to kick off transferring the client between online games, or it can be used to cause players to quit the world and rejoin.",
-    "type": "object",
-    "properties": {
-        "Reload World": {
-            "type": "boolean",
-            "x-underlying-type": "boolean",
-            "x-ordinal-index": 2
-        },
-        "Server Address": {
-            "type": "string",
-            "x-ordinal-index": 0
-        },
-        "Server Port": {
-            "type": "integer",
-            "x-underlying-type": "uint16",
-            "x-ordinal-index": 1,
-            "minimum": 0.0
-        }
-    },
-    "required": [
-        "Reload World",
-        "Server Address",
-        "Server Port"
-    ],
+    "$ref": "./TransferPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 85,
         "[cereal:packet_details]": ""

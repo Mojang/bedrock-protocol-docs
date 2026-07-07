@@ -1,91 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1072911125",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
-    "definitions": {
-        "1750201151": {
-            "title": "ActorRuntimeID",
-            "type": "object",
-            "properties": {
-                "Actor Runtime ID": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
-                }
-            },
-            "required": [
-                "Actor Runtime ID"
-            ]
-        },
-        "1262916889": {
-            "title": "PlayerInputTick",
-            "type": "object",
-            "properties": {
-                "Input tick": {
-                    "description": "In server authoritative movement mode the client supplies this in PlayerAuthInputPacket.\nFor any client-bound packets containing a tick, the server should supply the tick value corresponding to the most recently processed PlayerAuthInputPacket.\nThis allows the client to adjust any client predictions made while the packet was in flight.\nIf the packet is being sent to the client but not relating to data of the player or a client-predicted vehicle, it can be zero.\nIt is also acceptable to specify zero for players, although this may lead to minor visual flickers and less smooth application of CorrectPlayerMovePredictionPacket.",
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
-                }
-            },
-            "required": [
-                "Input tick"
-            ]
-        }
-    },
     "title": "MovementEffectPacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/MovementEffectPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
     "description": "These packets are sent to the client to update specific MovementEffects",
-    "type": "object",
-    "properties": {
-        "Effect Duration": {
-            "type": "integer",
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Compression"
-            ],
-            "x-ordinal-index": 2
-        },
-        "Effect ID": {
-            "title": "MovementEffectType",
-            "type": "string",
-            "enum": [
-                "GLIDE_BOOST",
-                "DOLPHIN_BOOST",
-                "GEYSER_BOOST"
-            ],
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Compression",
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 1
-        },
-        "Target Runtime ID": {
-            "$ref": "#/definitions/1750201151",
-            "x-ordinal-index": 0
-        },
-        "Tick": {
-            "description": "If this packet is referring to the player or a client predicted vehicle they are in control of, this should be the most recently processed PlayerInputTick from their PlayerAuthInputPacket. Otherwise zero.",
-            "$ref": "#/definitions/1262916889",
-            "x-ordinal-index": 3
-        }
-    },
-    "required": [
-        "Effect Duration",
-        "Effect ID",
-        "Target Runtime ID",
-        "Tick"
-    ],
+    "$ref": "./MovementEffectPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 318,
         "[cereal:packet_details]": "\n\tThese MovementEffects can be client-predicted.\n\tEx: Fireworks Rockets used while gliding send this packet to the client so they know the exact duration of the GLIDE_BOOST MovementEffect.\n\t"

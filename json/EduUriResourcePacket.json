@@ -1,41 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1368262939",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
-    "definitions": {
-        "3560714072": {
-            "title": "EduSharedUriResource",
-            "type": "object",
-            "properties": {
-                "Button Name": {
-                    "type": "string",
-                    "x-ordinal-index": 0
-                },
-                "Link Uri": {
-                    "type": "string",
-                    "x-ordinal-index": 1
-                }
-            },
-            "required": [
-                "Button Name",
-                "Link Uri"
-            ]
-        }
-    },
     "title": "EduUriResourcePacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/EduUriResourcePacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
     "description": "Transmits Edu Shared Uri Resource settings to all clients.",
-    "type": "object",
-    "properties": {
-        "Edu Shared URI Resource": {
-            "$ref": "#/definitions/3560714072",
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "Edu Shared URI Resource"
-    ],
+    "$ref": "./EduUriResourcePacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 170,
         "[cereal:packet_details]": ""

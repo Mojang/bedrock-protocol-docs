@@ -1,59 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "4118832398",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
-    "definitions": {
-        "4165802368": {
-            "title": "ArmorSlotAndDamagePair",
-            "type": "object",
-            "properties": {
-                "Armor Slot": {
-                    "title": "SharedTypes::Legacy::ArmorSlot",
-                    "type": "string",
-                    "enum": [
-                        "Head",
-                        "Torso",
-                        "Legs",
-                        "Feet",
-                        "Body"
-                    ],
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression",
-                        "Enum-as-Value"
-                    ],
-                    "x-ordinal-index": 0
-                },
-                "Damage": {
-                    "type": "integer",
-                    "x-underlying-type": "int16",
-                    "x-ordinal-index": 1
-                }
-            },
-            "required": [
-                "Armor Slot",
-                "Damage"
-            ]
-        }
-    },
     "title": "PlayerArmorDamagePacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/PlayerArmorDamagePacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
     "description": "Sent from server whenever the player's armor takes damage.",
-    "type": "object",
-    "properties": {
-        "Armor Slot and Damage Pairs": {
-            "type": "array",
-            "items": {
-                "$ref": "#/definitions/4165802368"
-            },
-            "x-ordinal-index": 0,
-            "maxItems": 5
-        }
-    },
-    "required": [
-        "Armor Slot and Damage Pairs"
-    ],
+    "$ref": "./PlayerArmorDamagePacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 149,
         "[cereal:packet_details]": ""

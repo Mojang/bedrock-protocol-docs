@@ -1,25 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1280399745",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
     "title": "SetHealthPacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/SetHealthPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
     "description": "This packet is sent to the client when the player is spawned in and when they respawn.",
-    "type": "object",
-    "properties": {
-        "Health": {
-            "type": "integer",
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Compression"
-            ],
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "Health"
-    ],
+    "$ref": "./SetHealthPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 42,
         "[cereal:packet_details]": ""

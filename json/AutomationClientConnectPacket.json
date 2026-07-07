@@ -1,36 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3291659001",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
-    "definitions": {
-        "3435210896": {
-            "title": "WebSocketPacketData",
-            "type": "object",
-            "properties": {
-                "Websocket Server URI": {
-                    "type": "string",
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "Websocket Server URI"
-            ]
-        }
-    },
     "title": "AutomationClientConnectPacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/AutomationClientConnectPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
     "description": "Initiates websocket connection",
-    "type": "object",
-    "properties": {
-        "Web Socket Data": {
-            "$ref": "#/definitions/3435210896",
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "Web Socket Data"
-    ],
+    "$ref": "./AutomationClientConnectPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 95,
         "[cereal:packet_details]": "Only used though command to connect to server URLs. This is primarily used by EDU for connecting to their companion apps and other external applications through web sockets. Some mods/3rd party packs use it as well."

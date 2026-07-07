@@ -1,39 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3925319122",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
     "title": "LessonProgressPacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/LessonProgressPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
     "description": "Lesson Progress",
-    "type": "object",
-    "properties": {
-        "Activity Id": {
-            "type": "string",
-            "x-ordinal-index": 2
-        },
-        "Lesson Action": {
-            "type": "integer",
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Compression"
-            ],
-            "x-ordinal-index": 0
-        },
-        "Score": {
-            "type": "integer",
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Compression"
-            ],
-            "x-ordinal-index": 1
-        }
-    },
-    "required": [
-        "Activity Id",
-        "Lesson Action",
-        "Score"
-    ],
+    "$ref": "./LessonProgressPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 183,
         "[cereal:packet_details]": ""

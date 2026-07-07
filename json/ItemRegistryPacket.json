@@ -1,78 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "448164657",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
-    "definitions": {
-        "3439543590": {
-            "title": "ItemData",
-            "type": "object",
-            "properties": {
-                "Is Component Based": {
-                    "type": "boolean",
-                    "x-underlying-type": "boolean",
-                    "x-ordinal-index": 2
-                },
-                "Item Component Data": {
-                    "$ref": "#/definitions/3172631924",
-                    "x-ordinal-index": 4
-                },
-                "Item Id": {
-                    "description": "Block id's < 256 (can be negative); Item id's >= 257",
-                    "type": "integer",
-                    "x-underlying-type": "int16",
-                    "x-ordinal-index": 1
-                },
-                "Item Name": {
-                    "$ref": "#/definitions/3381141713",
-                    "x-ordinal-index": 0
-                },
-                "Item Version": {
-                    "title": "ItemVersion",
-                    "type": "string",
-                    "enum": [
-                        "Legacy",
-                        "DataDriven",
-                        "None"
-                    ],
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression",
-                        "Enum-as-Value"
-                    ],
-                    "x-ordinal-index": 3
-                }
-            },
-            "required": [
-                "Is Component Based",
-                "Item Component Data",
-                "Item Id",
-                "Item Name",
-                "Item Version"
-            ]
-        },
-        "3381141713": {
-            "title": "hashed_string",
-            "type": "string"
-        }
-    },
     "title": "ItemRegistryPacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ItemRegistryPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
     "description": "Item data from the server. Contains component information.",
-    "type": "object",
-    "properties": {
-        "Item Data": {
-            "type": "array",
-            "items": {
-                "$ref": "#/definitions/3439543590"
-            },
-            "x-ordinal-index": 0,
-            "x-runtime-constraint-description": "Verify that specified items exist"
-        }
-    },
-    "required": [
-        "Item Data"
-    ],
+    "$ref": "./ItemRegistryPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 162,
         "[cereal:packet_details]": "This packet needs to be sent immediately after the StartGamePacket for primary clients."

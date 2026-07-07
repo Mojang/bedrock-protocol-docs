@@ -1,74 +1,14 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3552391344",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
     "title": "PhotoTransferPacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/PhotoTransferPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
     "description": "There is a camera item in EDU and they can use it to take screenshots and add them to a scrapbook.",
-    "type": "object",
-    "properties": {
-        "Book ID": {
-            "type": "string",
-            "x-ordinal-index": 2
-        },
-        "New Photo Name": {
-            "type": "string",
-            "x-ordinal-index": 6
-        },
-        "Owner ID": {
-            "type": "integer",
-            "x-underlying-type": "int64",
-            "x-ordinal-index": 5
-        },
-        "Photo Data": {
-            "type": "string",
-            "x-ordinal-index": 1
-        },
-        "Photo Name": {
-            "type": "string",
-            "x-ordinal-index": 0
-        },
-        "Source Type": {
-            "title": "PhotoType",
-            "type": "string",
-            "enum": [
-                "Portfolio",
-                "PhotoItem",
-                "Book"
-            ],
-            "x-underlying-type": "uint8",
-            "x-serialization-options": [
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 4
-        },
-        "Type": {
-            "title": "PhotoType",
-            "type": "string",
-            "enum": [
-                "Portfolio",
-                "PhotoItem",
-                "Book"
-            ],
-            "x-underlying-type": "uint8",
-            "x-serialization-options": [
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 3
-        }
-    },
-    "required": [
-        "Book ID",
-        "New Photo Name",
-        "Owner ID",
-        "Photo Data",
-        "Photo Name",
-        "Source Type",
-        "Type"
-    ],
+    "$ref": "./PhotoTransferPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 99,
-        "[cereal:packet_details]": "\n\tWhen the player uses the camera item or adds a photo to the scrapbook it sends the photo to the server, \n\tthen the server sends a response back on whether that was successful or not. \n\tEither uploads a photo to the server's photoStorage or request one from it to be stored in client's photoStorage.\n\tIf no mPhotoData is provided it is a request for the given filename.\n\t"
+        "[cereal:packet_details]": "\n\tWhen the player uses the camera item or adds a photo to the scrapbook it sends the photo to the server,\n\tthen the server sends a response back on whether that was successful or not.\n\tEither uploads a photo to the server's photoStorage or request one from it to be stored in client's photoStorage.\n\tIf no mPhotoData is provided it is a request for the given filename.\n\t"
     }
 }

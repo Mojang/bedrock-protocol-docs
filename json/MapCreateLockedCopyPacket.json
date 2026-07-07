@@ -1,47 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "695778038",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
-    "definitions": {
-        "4257541248": {
-            "title": "ActorUniqueID",
-            "type": "object",
-            "properties": {
-                "Actor Unique ID": {
-                    "type": "integer",
-                    "x-underlying-type": "int64",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "Actor Unique ID"
-            ]
-        }
-    },
     "title": "MapCreateLockedCopyPacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/MapCreateLockedCopyPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
     "description": "This is fired when the user locks a map item utilizing the Cartography Table in game.",
-    "type": "object",
-    "properties": {
-        "New Map Id": {
-            "description": "Id that the new map should have.",
-            "$ref": "#/definitions/4257541248",
-            "x-ordinal-index": 1
-        },
-        "Original Map Id": {
-            "description": "Id of the map being locked.",
-            "$ref": "#/definitions/4257541248",
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "New Map Id",
-        "Original Map Id"
-    ],
+    "$ref": "./MapCreateLockedCopyPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 131,
         "[cereal:packet_details]": "\n\tIt sends the original map id and the new map id. \n\tOn the server it follows a similar process to creating a new map, sends the data and the map info to the client.\n\t"
