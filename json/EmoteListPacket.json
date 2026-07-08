@@ -1,71 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2865735047",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
-    "definitions": {
-        "1750201151": {
-            "title": "ActorRuntimeID",
-            "type": "object",
-            "properties": {
-                "Actor Runtime ID": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
-                }
-            },
-            "required": [
-                "Actor Runtime ID"
-            ]
-        },
-        "234962571": {
-            "title": "mce::UUID",
-            "type": "object",
-            "properties": {
-                "Least Significant Bits": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-ordinal-index": 1,
-                    "minimum": 0.0
-                },
-                "Most Significant Bits": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
-                }
-            },
-            "required": [
-                "Least Significant Bits",
-                "Most Significant Bits"
-            ]
-        }
-    },
     "title": "EmoteListPacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/EmoteListPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.50",
+    "x-protocol-version": 2169,
     "description": "Allows clients to download emotes that other clients have equipped.",
-    "type": "object",
-    "properties": {
-        "Emote piece ids": {
-            "type": "array",
-            "items": {
-                "$ref": "#/definitions/234962571"
-            },
-            "x-ordinal-index": 1
-        },
-        "Runtime id": {
-            "$ref": "#/definitions/1750201151",
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "Emote piece ids",
-        "Runtime id"
-    ],
+    "$ref": "./EmoteListPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 152,
         "[cereal:packet_details]": ""

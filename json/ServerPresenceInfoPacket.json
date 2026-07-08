@@ -1,50 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1438987023",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
-    "definitions": {
-        "2502309189": {
-            "title": "presenceConfig",
-            "type": "object",
-            "properties": {
-                "experienceName": {
-                    "description": "Name of the experience.",
-                    "type": "string",
-                    "x-ordinal-index": 0,
-                    "minLength": 1,
-                    "maxLength": 40
-                },
-                "richPresenceId": {
-                    "description": "Optional rich presence ID to override client-driven rich presence.",
-                    "type": "string",
-                    "default": "",
-                    "x-ordinal-index": 2,
-                    "maxLength": 40
-                },
-                "worldName": {
-                    "description": "Name of the world.",
-                    "type": "string",
-                    "x-ordinal-index": 1,
-                    "minLength": 1,
-                    "maxLength": 40
-                }
-            }
-        }
-    },
     "title": "ServerPresenceInfoPacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ServerPresenceInfoPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.50",
+    "x-protocol-version": 2169,
     "description": "Sent by the server to provide PresenceConfiguration to the client.",
-    "type": "object",
-    "properties": {
-        "presence_configuration": {
-            "$ref": "#/definitions/2502309189",
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "presence_configuration"
-    ],
+    "$ref": "./ServerPresenceInfoPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 347,
         "[cereal:packet_details]": ""

@@ -119,7 +119,7 @@
     <div class="container">
         
         <h1>Game Protocol Documentation</h1>
-<p>Documentation for 203 protocol packets.</p>
+<p>Documentation for 229 protocol packets.</p>
 <h2>Packet List</h2>
 <ul class="packet-list">
 <li>
@@ -143,8 +143,16 @@
 <br><span style="color: #666; font-size: 0.9em;">Sent from the server to a client to trigger a disconnection.</span>
 </li>
 <li>
+<a href="ResourcePacksInfoPacket.html"><strong>ResourcePacksInfoPacket (6)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Resource Packs Info</span>
+</li>
+<li>
 <a href="ResourcePackStackPacket.html"><strong>ResourcePackStackPacket (7)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Resource Pack Stack</span>
+</li>
+<li>
+<a href="ResourcePackClientResponsePacket.html"><strong>ResourcePackClientResponsePacket (8)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Resource Pack Client Response</span>
 </li>
 <li>
 <a href="TextPacket.html"><strong>TextPacket (9)</strong></a>
@@ -155,8 +163,24 @@
 <br><span style="color: #666; font-size: 0.9em;">Set Time</span>
 </li>
 <li>
+<a href="StartGamePacket.html"><strong>StartGamePacket (11)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from the server to client when the game is starting (or client joins), gives ids and current ti...</span>
+</li>
+<li>
+<a href="AddPlayerPacket.html"><strong>AddPlayerPacket (12)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Add Player</span>
+</li>
+<li>
+<a href="AddActorPacket.html"><strong>AddActorPacket (13)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Add Actor</span>
+</li>
+<li>
 <a href="RemoveActorPacket.html"><strong>RemoveActorPacket (14)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Occasionally, during the server player tick some time is taken to remove nearby actors from the worl...</span>
+</li>
+<li>
+<a href="AddItemActorPacket.html"><strong>AddItemActorPacket (15)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">When an item actor is added to the world (punch a tree-&gt;tree block, for example)</span>
 </li>
 <li>
 <a href="ServerPlayerPostMovePositionPacket.html"><strong>ServerPlayerPostMovePositionPacket (16)</strong></a>
@@ -169,6 +193,10 @@
 <li>
 <a href="MoveActorAbsolutePacket.html"><strong>MoveActorAbsolutePacket (18)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">This is used primarily for motion updates of all actors from server to client.</span>
+</li>
+<li>
+<a href="MovePlayerPacket.html"><strong>MovePlayerPacket (19)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">For client authoritative and server authoritative movement modes, it is only intended as a client-bo...</span>
 </li>
 <li>
 <a href="UpdateBlockPacket.html"><strong>UpdateBlockPacket (21)</strong></a>
@@ -231,6 +259,10 @@
 <br><span style="color: #666; font-size: 0.9em;">Hurt Armor</span>
 </li>
 <li>
+<a href="SetActorDataPacket.html"><strong>SetActorDataPacket (39)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Regular Actor Data delta packets, sent from the level on tick, mob and actor during normal tick</span>
+</li>
+<li>
 <a href="SetActorMotionPacket.html"><strong>SetActorMotionPacket (40)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">This is used for the server to set the velocity of a client actor.</span>
 </li>
@@ -280,12 +312,20 @@
 <br><span style="color: #666; font-size: 0.9em;">This is sent from the server basically any time that the &quot;cooking&quot; state of the brewing stand or the...</span>
 </li>
 <li>
+<a href="CraftingDataPacket.html"><strong>CraftingDataPacket (52)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Crafting Data</span>
+</li>
+<li>
 <a href="GuiDataPickItemPacket.html"><strong>GuiDataPickItemPacket (54)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">The server telling the client what item slot to hover over in the hotbar.</span>
 </li>
 <li>
 <a href="BlockActorDataPacket.html"><strong>BlockActorDataPacket (56)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Sends the entire user data compound tag and the block position to the client.</span>
+</li>
+<li>
+<a href="LevelChunkPacket.html"><strong>LevelChunkPacket (58)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Level Chunk Packet</span>
 </li>
 <li>
 <a href="SetCommandsEnabledPacket.html"><strong>SetCommandsEnabledPacket (59)</strong></a>
@@ -304,6 +344,10 @@
 <br><span style="color: #666; font-size: 0.9em;">Set Player Game Type</span>
 </li>
 <li>
+<a href="PlayerListPacket.html"><strong>PlayerListPacket (63)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Player List</span>
+</li>
+<li>
 <a href="SimpleEventPacket.html"><strong>SimpleEventPacket (64)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">This packet is used for enabling/disabling commands and for unlocking world template settings (both ...</span>
 </li>
@@ -314,6 +358,10 @@
 <li>
 <a href="SpawnExperienceOrbPacket.html"><strong>SpawnExperienceOrbPacket (66)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Spawn Experience Orb</span>
+</li>
+<li>
+<a href="ClientboundMapItemDataPacket.html"><strong>ClientboundMapItemDataPacket (67)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Map item data including pixels, decorations, and creation info</span>
 </li>
 <li>
 <a href="MapInfoRequestPacket.html"><strong>MapInfoRequestPacket (68)</strong></a>
@@ -400,6 +448,10 @@
 <br><span style="color: #666; font-size: 0.9em;">Add Behavior Tree</span>
 </li>
 <li>
+<a href="StructureBlockUpdatePacket.html"><strong>StructureBlockUpdatePacket (90)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">After the client makes changes in the Structure Block Screen we tell the server to update based off ...</span>
+</li>
+<li>
 <a href="ShowStoreOfferPacket.html"><strong>ShowStoreOfferPacket (91)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Used for redirecting a user to the right offer.</span>
 </li>
@@ -410,6 +462,10 @@
 <li>
 <a href="PlayerSkinPacket.html"><strong>PlayerSkinPacket (93)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Used when the player changes their skin</span>
+</li>
+<li>
+<a href="SubClientLoginPacket.html"><strong>SubClientLoginPacket (94)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">This packet starts the login process of subclients (splitscreen)</span>
 </li>
 <li>
 <a href="AutomationClientConnectPacket.html"><strong>AutomationClientConnectPacket (95)</strong></a>
@@ -464,12 +520,24 @@
 <br><span style="color: #666; font-size: 0.9em;">Sent from the server for 3rd party content to display current objectives and status</span>
 </li>
 <li>
+<a href="SetScorePacket.html"><strong>SetScorePacket (108)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Set Score</span>
+</li>
+<li>
 <a href="LabTablePacket.html"><strong>LabTablePacket (109)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">For the EDU Chemistry Lab Table block actor.</span>
 </li>
 <li>
 <a href="UpdateBlockSyncedPacket.html"><strong>UpdateBlockSyncedPacket (110)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Used to sync moving blocks with clients so they render correctly</span>
+</li>
+<li>
+<a href="MoveActorDeltaPacket.html"><strong>MoveActorDeltaPacket (111)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">This packet is all the deltas of actors position, rotation, and head rotation. This is used for all ...</span>
+</li>
+<li>
+<a href="SetScoreboardIdentityPacket.html"><strong>SetScoreboardIdentityPacket (112)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Set Scoreboard Identity</span>
 </li>
 <li>
 <a href="SetLocalPlayerAsInitializedPacket.html"><strong>SetLocalPlayerAsInitializedPacket (113)</strong></a>
@@ -568,8 +636,24 @@
 <br><span style="color: #666; font-size: 0.9em;">Sends tunable options from host to client (compression threshold and algorithm)</span>
 </li>
 <li>
+<a href="PlayerAuthInputPacket.html"><strong>PlayerAuthInputPacket (144)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Player Auth Input</span>
+</li>
+<li>
+<a href="CreativeContentPacket.html"><strong>CreativeContentPacket (145)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Creative Content</span>
+</li>
+<li>
 <a href="PlayerEnchantOptionsPacket.html"><strong>PlayerEnchantOptionsPacket (146)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Sends the of new Enchanting options  from the server when a player right clicks the enchantment tabl...</span>
+</li>
+<li>
+<a href="ItemStackRequestPacket.html"><strong>ItemStackRequestPacket (147)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">The new server auth inventory item transaction request. This is done in batches of items.</span>
+</li>
+<li>
+<a href="ItemStackResponsePacket.html"><strong>ItemStackResponsePacket (148)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Server auth inventory item transaction response, sent from the server.</span>
 </li>
 <li>
 <a href="PlayerArmorDamagePacket.html"><strong>PlayerArmorDamagePacket (149)</strong></a>
@@ -664,6 +748,10 @@
 <br><span style="color: #666; font-size: 0.9em;">Packet sent for every set of blocks changed in a sub chunk every tick.</span>
 </li>
 <li>
+<a href="SubChunkPacket.html"><strong>SubChunkPacket (174)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from server to client representing a batch of subchunk data.</span>
+</li>
+<li>
 <a href="SubChunkRequestPacket.html"><strong>SubChunkRequestPacket (175)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Sent from the client to the server representing a batch of subchunks that the client requests from t...</span>
 </li>
@@ -682,6 +770,10 @@
 <li>
 <a href="TickingAreasLoadStatusPacket.html"><strong>TickingAreasLoadStatusPacket (179)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Used to inform the client that the server is waiting for ticking areas to finish preloading.</span>
+</li>
+<li>
+<a href="DimensionDataPacket.html"><strong>DimensionDataPacket (180)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Brief packet containing data-driven dimension properties</span>
 </li>
 <li>
 <a href="AgentActionEventPacket.html"><strong>AgentActionEventPacket (181)</strong></a>
@@ -758,6 +850,10 @@
 <li>
 <a href="CameraInstructionPacket.html"><strong>CameraInstructionPacket (300)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Used to send a CameraInstruction from the server to the specified clients.</span>
+</li>
+<li>
+<a href="TrimDataPacket.html"><strong>TrimDataPacket (302)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Sent from the server on level startup to send all trim patterns to the client.</span>
 </li>
 <li>
 <a href="OpenSignPacket.html"><strong>OpenSignPacket (303)</strong></a>
@@ -838,6 +934,14 @@
 <li>
 <a href="PlayerVideoCapturePacket.html"><strong>PlayerVideoCapturePacket (324)</strong></a>
 <br><span style="color: #666; font-size: 0.9em;">Used by a test command to start/stop video capture</span>
+</li>
+<li>
+<a href="PlayerUpdateEntityOverridesPacket.html"><strong>PlayerUpdateEntityOverridesPacket (325)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Player Update Entity Overrides</span>
+</li>
+<li>
+<a href="PlayerLocationPacket.html"><strong>PlayerLocationPacket (326)</strong></a>
+<br><span style="color: #666; font-size: 0.9em;">Updates the client with the position of a player outside simulation distance, or hides a player.</span>
 </li>
 <li>
 <a href="ClientboundControlSchemeSetPacket.html"><strong>ClientboundControlSchemeSetPacket (327)</strong></a>

@@ -1,31 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2745532188",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
     "title": "ServerSettingsResponsePacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ServerSettingsResponsePacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.50",
+    "x-protocol-version": 2169,
     "description": "Server Settings Response",
-    "type": "object",
-    "properties": {
-        "Form ID": {
-            "type": "integer",
-            "x-underlying-type": "uint32",
-            "x-serialization-options": [
-                "Compression"
-            ],
-            "x-ordinal-index": 0,
-            "minimum": 0.0
-        },
-        "Form UI JSON": {
-            "type": "string",
-            "x-ordinal-index": 1
-        }
-    },
-    "required": [
-        "Form ID",
-        "Form UI JSON"
-    ],
+    "$ref": "./ServerSettingsResponsePacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 103,
         "[cereal:packet_details]": ""

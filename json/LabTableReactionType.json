@@ -1,0 +1,25 @@
+{
+    "title": "LabTableReactionType",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/LabTableReactionType.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.50",
+    "x-protocol-version": 2169,
+    "type": "string",
+    "enum": [
+        "None",
+        "IceBomb",
+        "Bleach",
+        "ElephantToothpaste",
+        "Fertilizer",
+        "HeatBlock",
+        "MagnesiumSalts",
+        "MiscFire",
+        "MiscExplosion",
+        "MiscLava",
+        "MiscMystical",
+        "MiscSmoke",
+        "MiscLargeSmoke"
+    ],
+    "x-underlying-type": "uint8"
+}

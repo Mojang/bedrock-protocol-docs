@@ -1,43 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1691923844",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
     "title": "PlayerHotbarPacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/PlayerHotbarPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.50",
+    "x-protocol-version": 2169,
     "description": "Sent from the server when the player uses pick block on actors or blocks, in addition to the player uses the clear, give, or replace item command or if the serverplayer uses _sendAdditionalLevelData(). ",
-    "type": "object",
-    "properties": {
-        "Container ID": {
-            "type": "integer",
-            "x-underlying-type": "uint8",
-            "x-serialization-options": [
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 1,
-            "minimum": 0.0,
-            "maximum": 255.0
-        },
-        "Selected Slot": {
-            "type": "integer",
-            "x-underlying-type": "uint32",
-            "x-serialization-options": [
-                "Compression"
-            ],
-            "x-ordinal-index": 0,
-            "minimum": 0.0
-        },
-        "Should select slot?": {
-            "type": "boolean",
-            "x-underlying-type": "boolean",
-            "x-ordinal-index": 2
-        }
-    },
-    "required": [
-        "Container ID",
-        "Selected Slot",
-        "Should select slot?"
-    ],
+    "$ref": "./PlayerHotbarPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 48,
         "[cereal:packet_details]": ""

@@ -1,40 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "549762202",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
     "title": "RequestPermissionsPacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/RequestPermissionsPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.50",
+    "x-protocol-version": 2169,
     "description": "Sent from client to server. Used to request a new Permissions Levels.",
-    "type": "object",
-    "properties": {
-        "Custom Permission Flags": {
-            "type": "integer",
-            "x-underlying-type": "uint16",
-            "x-ordinal-index": 2,
-            "minimum": 0.0
-        },
-        "Player Permission Level": {
-            "type": "integer",
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Compression",
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 1
-        },
-        "Target Player Id's Raw ID": {
-            "description": "mTargetPlayerId is a ActorUniqueID",
-            "type": "integer",
-            "x-underlying-type": "int64",
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "Custom Permission Flags",
-        "Player Permission Level",
-        "Target Player Id's Raw ID"
-    ],
+    "$ref": "./RequestPermissionsPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 185,
         "[cereal:packet_details]": "Can only be used by Operators or Hosts."

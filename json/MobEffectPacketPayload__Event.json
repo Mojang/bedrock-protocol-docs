@@ -1,0 +1,16 @@
+{
+    "title": "MobEffectPacketPayload::Event",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/MobEffectPacketPayload__Event.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.50",
+    "x-protocol-version": 2169,
+    "type": "string",
+    "enum": [
+        "Invalid",
+        "Add",
+        "Update",
+        "Remove"
+    ],
+    "x-underlying-type": "uint8"
+}

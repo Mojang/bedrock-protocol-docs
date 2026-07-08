@@ -1,42 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3827578744",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
     "title": "ContainerSetDataPacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ContainerSetDataPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.50",
+    "x-protocol-version": 2169,
     "description": "This is sent from the server basically any time that the \"cooking\" state of the brewing stand or the furnace changes (i.e. the loading bar)",
-    "type": "object",
-    "properties": {
-        "Container ID": {
-            "type": "integer",
-            "x-underlying-type": "uint8",
-            "x-ordinal-index": 0,
-            "minimum": 0.0,
-            "maximum": 255.0
-        },
-        "ID": {
-            "type": "integer",
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Compression"
-            ],
-            "x-ordinal-index": 1
-        },
-        "Value": {
-            "type": "integer",
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Compression"
-            ],
-            "x-ordinal-index": 2
-        }
-    },
-    "required": [
-        "Container ID",
-        "ID",
-        "Value"
-    ],
+    "$ref": "./ContainerSetDataPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 51,
         "[cereal:packet_details]": ""
