@@ -1,49 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "186567147",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
-    "definitions": {
-        "725374594": {
-            "title": "Vec3",
-            "type": "object",
-            "properties": {
-                "X": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 0
-                },
-                "Y": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 1
-                },
-                "Z": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 2
-                }
-            },
-            "required": [
-                "X",
-                "Y",
-                "Z"
-            ]
-        }
-    },
     "title": "ServerPlayerPostMovePositionPacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ServerPlayerPostMovePositionPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.50",
+    "x-protocol-version": 2169,
     "description": "Used to send a player's server position to the respective client at the end of movement.",
-    "type": "object",
-    "properties": {
-        "Pos": {
-            "$ref": "#/definitions/725374594",
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "Pos"
-    ],
+    "$ref": "./ServerPlayerPostMovePositionPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 16,
         "[cereal:packet_details]": "Is currently only used for debug draw. Packets will not be sent if debug draw is not available."

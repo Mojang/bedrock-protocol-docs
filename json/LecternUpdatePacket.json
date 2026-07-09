@@ -1,74 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "1632095085",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
-    "definitions": {
-        "1488572312": {
-            "title": "BlockPos",
-            "type": "object",
-            "properties": {
-                "X": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                },
-                "Y": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 1
-                },
-                "Z": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 2
-                }
-            },
-            "required": [
-                "X",
-                "Y",
-                "Z"
-            ]
-        }
-    },
     "title": "LecternUpdatePacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/LecternUpdatePacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.50",
+    "x-protocol-version": 2169,
     "description": "This is used for the Lectern Block Actor.",
-    "type": "object",
-    "properties": {
-        "New page to show": {
-            "type": "integer",
-            "x-underlying-type": "uint8",
-            "x-ordinal-index": 0,
-            "minimum": 0.0,
-            "maximum": 255.0
-        },
-        "Position of Lectern to update": {
-            "$ref": "#/definitions/1488572312",
-            "x-ordinal-index": 2
-        },
-        "Total Pages": {
-            "type": "integer",
-            "x-underlying-type": "uint8",
-            "x-ordinal-index": 1,
-            "minimum": 0.0,
-            "maximum": 255.0
-        }
-    },
-    "required": [
-        "New page to show",
-        "Position of Lectern to update",
-        "Total Pages"
-    ],
+    "$ref": "./LecternUpdatePacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 125,
         "[cereal:packet_details]": "It is a request from the client to either turn the page in the lectern or drop the book."

@@ -1,55 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3753587228",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
-    "definitions": {
-        "1750201151": {
-            "title": "ActorRuntimeID",
-            "type": "object",
-            "properties": {
-                "Actor Runtime ID": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
-                }
-            },
-            "required": [
-                "Actor Runtime ID"
-            ]
-        }
-    },
     "title": "AgentAnimationPacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/AgentAnimationPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.50",
+    "x-protocol-version": 2169,
     "description": "Broadcasted to other players when an Agent performs an animation so it gets properly replicated.",
-    "type": "object",
-    "properties": {
-        "Agent Animation": {
-            "title": "Agent Animation",
-            "type": "string",
-            "enum": [
-                "ArmSwing",
-                "Shrug"
-            ],
-            "x-underlying-type": "uint8",
-            "x-serialization-options": [
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 0
-        },
-        "Runtime Id": {
-            "$ref": "#/definitions/1750201151",
-            "x-ordinal-index": 1
-        }
-    },
-    "required": [
-        "Agent Animation",
-        "Runtime Id"
-    ],
+    "$ref": "./AgentAnimationPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 304,
         "[cereal:packet_details]": ""

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClientboundMapItemDataPacket (67)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        h4 {
+            color: #666;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        table {
+            background-color: white;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        th {
+            font-weight: bold;
+            text-align: left;
+            padding: 8px !important;
+        }
+        td {
+            padding: 8px !important;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #e8f4f8;
+        }
+        .description {
+            color: #555;
+            font-style: italic;
+            margin: 10px 0 20px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .packet-list {
+            columns: 3;
+            column-gap: 20px;
+        }
+        .packet-list li {
+            margin-bottom: 8px;
+            break-inside: avoid;
+        }
+        details {
+            margin: 10px 0;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            padding: 8px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            user-select: none;
+        }
+        summary:hover {
+            background-color: #e8e8e8;
+        }
+        details[open] summary {
+            background-color: #d4edff;
+            border-color: #3498db;
+            border-left: 4px solid #3498db;
+        }
+        @media (max-width: 900px) {
+            .packet-list {
+                columns: 2;
+            }
+        }
+        @media (max-width: 600px) {
+            .packet-list {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p><a href="index.html">← Back to Index</a></p>
+        <h1>ClientboundMapItemDataPacket (67)</h1>
+<div class="description">Map item data including pixels, decorations, and creation info</div>
+<div style="margin-left: 0px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Map ID (Required)</strong></td>
+<td>ActorUniqueID</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>ActorUniqueID</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Actor Unique ID (Required)</strong></td>
+<td>varint64</td>
+<td>0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>Dimension (Required)</strong></td>
+<td>uint8</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Is Locked (Required)</strong></td>
+<td>boolean</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Map Origin (Required)</strong></td>
+<td>BlockPos</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BlockPos</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>varint32</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>varint32</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Z (Required)</strong></td>
+<td>varint32</td>
+<td>2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Creation Map IDs</strong></td>
+<td>array&lt;ActorUniqueID&gt;</td>
+<td>4</td>
+<td>Map IDs for newly created maps. Present only for Creation updates.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>ActorUniqueID (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Actor Unique ID (Required)</strong></td>
+<td>varint64</td>
+<td>0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>Scale</strong></td>
+<td>int8</td>
+<td>5</td>
+<td>Map scale. Present whenever any of Creation, DecorationUpdate or TextureUpdate is set.</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Tracked Actor IDs</strong></td>
+<td>array&lt;MapItemTrackedActor UniqueId&gt;</td>
+<td>6</td>
+<td>Unique IDs of tracked actors paired with the Decorations list. Present only for DecorationUpdate.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>MapItemTrackedActor UniqueId (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Type (Required)</strong></td>
+<td>int32</td>
+<td>0</td>
+<td>Discriminator for the optional Entity ID / Block Position payload.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>Entity</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>BlockEntity</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>Other</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Entity ID</strong></td>
+<td>ActorUniqueID</td>
+<td>1</td>
+<td>Tracked entity&#x27;s unique ID. Present only when Type is Entity.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>ActorUniqueID</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Actor Unique ID (Required)</strong></td>
+<td>varint64</td>
+<td>0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Block Position</strong></td>
+<td>BlockPos</td>
+<td>2</td>
+<td>Tracked block entity position. Present only when Type is BlockEntity.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>BlockPos</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>varint32</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>varint32</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Z (Required)</strong></td>
+<td>varint32</td>
+<td>2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Decorations</strong></td>
+<td>array&lt;MapDecoration&gt;</td>
+<td>7</td>
+<td>Map decorations paired with Tracked Actor IDs. Present only for DecorationUpdate.</td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>MapDecoration (Array Item)</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Image Type (Required)</strong></td>
+<td>int8</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+<strong>Enum Values:</strong>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+<thead>
+<tr style="background-color: #e8e8e8;">
+<th style="width: 40px;">Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td><code>MarkerWhite</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td><code>MarkerGreen</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><code>MarkerRed</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><code>MarkerBlue</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><code>XWhite</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><code>TriangleRed</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td><code>SquareWhite</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td><code>MarkerSign</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td><code>MarkerPink</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td><code>MarkerOrange</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td><code>MarkerYellow</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td><code>MarkerTeal</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td><code>TriangleGreen</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">13</td>
+<td><code>SmallSquareWhite</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td><code>Mansion</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td><code>Monument</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">16</td>
+<td><code>NoDraw</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">17</td>
+<td><code>VillageDesert</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">18</td>
+<td><code>VillagePlains</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">19</td>
+<td><code>VillageSavanna</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">20</td>
+<td><code>VillageSnowy</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">21</td>
+<td><code>VillageTaiga</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">22</td>
+<td><code>JungleTemple</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">23</td>
+<td><code>WitchHut</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">24</td>
+<td><code>TrialChambers</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">25</td>
+<td><code>Count</code></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>Rotation (Required)</strong></td>
+<td>uint8</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>X (Required)</strong></td>
+<td>uint8</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Y (Required)</strong></td>
+<td>uint8</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Label (Required)</strong></td>
+<td>string</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Color (Required)</strong></td>
+<td>Color</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
+<h3>Color</h3>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th>Field Name</th>
+<th>Type</th>
+<th>Field Index</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Color (Required)</strong></td>
+<td>int32</td>
+<td>0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><strong>Width</strong></td>
+<td>varint32</td>
+<td>8</td>
+<td>Width of the updated pixel region. Present only for TextureUpdate.</td>
+</tr>
+<tr>
+<td><strong>Height</strong></td>
+<td>varint32</td>
+<td>9</td>
+<td>Height of the updated pixel region. Present only for TextureUpdate.</td>
+</tr>
+<tr>
+<td><strong>Start X</strong></td>
+<td>varint32</td>
+<td>10</td>
+<td>X-coordinate of the updated pixel region. Present only for TextureUpdate.</td>
+</tr>
+<tr>
+<td><strong>Start Y</strong></td>
+<td>varint32</td>
+<td>11</td>
+<td>Y-coordinate of the updated pixel region. Present only for TextureUpdate.</td>
+</tr>
+<tr>
+<td><strong>Pixels</strong></td>
+<td>array&lt;uint32&gt;</td>
+<td>12</td>
+<td>ARGB pixel data for the updated region. Present only for TextureUpdate.</td>
+</tr>
+</tbody>
+</table>
+</div>
+    </div>
+</body>
+</html>

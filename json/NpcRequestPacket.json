@@ -1,78 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3779843341",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
-    "definitions": {
-        "1750201151": {
-            "title": "ActorRuntimeID",
-            "type": "object",
-            "properties": {
-                "Actor Runtime ID": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
-                }
-            },
-            "required": [
-                "Actor Runtime ID"
-            ]
-        }
-    },
     "title": "NpcRequestPacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/NpcRequestPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.50",
+    "x-protocol-version": 2169,
     "description": "Used for a number of interactions with the NPC Component",
-    "type": "object",
-    "properties": {
-        "Action Index": {
-            "type": "integer",
-            "x-underlying-type": "uint8",
-            "x-ordinal-index": 3,
-            "minimum": 0.0,
-            "maximum": 255.0
-        },
-        "Actions": {
-            "type": "string",
-            "x-ordinal-index": 2
-        },
-        "NPC Runtime ID": {
-            "$ref": "#/definitions/1750201151",
-            "x-ordinal-index": 0
-        },
-        "Request Type": {
-            "title": "NpcRequestPacketPayload RequestType",
-            "type": "string",
-            "enum": [
-                "SetActions",
-                "ExecuteAction",
-                "ExecuteClosingCommands",
-                "SetName",
-                "SetSkin",
-                "SetInteractText",
-                "ExecuteOpeningCommands"
-            ],
-            "x-underlying-type": "uint8",
-            "x-serialization-options": [
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 1
-        },
-        "Scene Name": {
-            "type": "string",
-            "x-ordinal-index": 4
-        }
-    },
-    "required": [
-        "Action Index",
-        "Actions",
-        "NPC Runtime ID",
-        "Request Type",
-        "Scene Name"
-    ],
+    "$ref": "./NpcRequestPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 98,
         "[cereal:packet_details]": "A request is made from the client during an interaction with an NPC then the request is processed by the server. \n\tActor MUST have the NPCComponent to be handled. \n\tWe currently only use this for EDU, but the goal was to expose the NPC Component to creators."

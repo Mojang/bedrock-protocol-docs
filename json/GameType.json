@@ -1,0 +1,19 @@
+{
+    "title": "GameType",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/GameType.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.50",
+    "x-protocol-version": 2169,
+    "type": "string",
+    "enum": [
+        "Undefined",
+        "Survival",
+        "Creative",
+        "Adventure",
+        "Default",
+        "Spectator",
+        "WorldDefault"
+    ],
+    "x-underlying-type": "int32"
+}

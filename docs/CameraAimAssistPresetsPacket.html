@@ -156,7 +156,7 @@
 <tbody>
 <tr>
 <td><strong>name (Required)</strong></td>
-<td>Identifier</td>
+<td>CameraAimAssistCategory Identifier</td>
 <td>0</td>
 <td>Name of the Aim-Assist Category used during lookup.</td>
 </tr>
@@ -181,7 +181,7 @@
 <tbody>
 <tr>
 <td rowspan="2"><strong>entities</strong></td>
-<td>object&lt;Reference, int32&gt;</td>
+<td>object&lt;Entity Reference, int32&gt;</td>
 <td>0</td>
 <td>Optional. Map of Entity identifiers to Aim-Assist targeting priority. Larger numbers have greater priority.</td>
 </tr>
@@ -200,7 +200,7 @@
 <tbody>
 <tr>
 <td><strong>key</strong></td>
-<td>Reference</td>
+<td>Entity Reference</td>
 <td></td>
 <td></td>
 </tr>
@@ -216,7 +216,7 @@
 </tr>
 <tr>
 <td rowspan="2"><strong>blocks</strong></td>
-<td>object&lt;Reference, int32&gt;</td>
+<td>object&lt;Block Reference, int32&gt;</td>
 <td>1</td>
 <td>Optional. Map of Block identifiers to Aim-Assist targeting priority. Larger numbers have greater priority.</td>
 </tr>
@@ -235,7 +235,7 @@
 <tbody>
 <tr>
 <td><strong>key</strong></td>
-<td>Reference</td>
+<td>Block Reference</td>
 <td></td>
 <td></td>
 </tr>
@@ -302,7 +302,7 @@
 <tbody>
 <tr>
 <td><strong>identifier (Required)</strong></td>
-<td>Identifier</td>
+<td>CameraAimAssist Identifier</td>
 <td>0</td>
 <td>Namespaced identifier for Camera Aim-Assist preset. Namespace and name must be separated by a &#x27;:&#x27;.</td>
 </tr>
@@ -327,13 +327,13 @@
 <tbody>
 <tr>
 <td><strong>blocks</strong></td>
-<td>array&lt;Reference&gt;</td>
+<td>array&lt;Block Reference&gt;</td>
 <td>0</td>
 <td>Optional. List of block identifiers to exclude from aim assist targeting.</td>
 </tr>
 <tr>
 <td><strong>entities</strong></td>
-<td>array&lt;Reference&gt;</td>
+<td>array&lt;Entity Reference&gt;</td>
 <td>1</td>
 <td>Optional. List of entity identifiers to exclude from aim assist targeting.</td>
 </tr>
@@ -355,13 +355,13 @@
 </tr>
 <tr>
 <td><strong>liquid_targeting_list</strong></td>
-<td>array&lt;Reference&gt;</td>
+<td>array&lt;Item Reference&gt;</td>
 <td>2</td>
 <td>Optional. List of item identifiers that will target liquid blocks with aim-assist when being held.</td>
 </tr>
 <tr>
 <td rowspan="2"><strong>item_settings</strong></td>
-<td>object&lt;Reference, Reference&gt;</td>
+<td>object&lt;Item Reference, CameraAimAssistCategory Reference&gt;</td>
 <td>3</td>
 <td>Optional. Map of Item identifiers to Aim-Assist Category names found in the specified &#x27;categories&#x27;.</td>
 </tr>
@@ -380,13 +380,13 @@
 <tbody>
 <tr>
 <td><strong>key</strong></td>
-<td>Reference</td>
+<td>Item Reference</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td><strong>value</strong></td>
-<td>Reference</td>
+<td>CameraAimAssistCategory Reference</td>
 <td></td>
 <td></td>
 </tr>
@@ -396,13 +396,13 @@
 </tr>
 <tr>
 <td><strong>default_item_settings</strong></td>
-<td>Reference</td>
+<td>CameraAimAssistCategory Reference</td>
 <td>4</td>
 <td>Optional. Default Aim-Assist Category used for Items not found in &#x27;item_settings&#x27;.</td>
 </tr>
 <tr>
 <td><strong>hand_settings</strong></td>
-<td>Reference</td>
+<td>CameraAimAssistCategory Reference</td>
 <td>5</td>
 <td>Optional. Aim-assist Category used for an empty hand.</td>
 </tr>

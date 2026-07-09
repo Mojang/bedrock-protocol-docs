@@ -121,9 +121,9 @@
         <h1>MapInfoRequestPacket (68)</h1>
 <div class="description">In the case of the client being unable to find map data for a map item it sends a uuid for a map to the server.</div>
 <div class="description">
-	If the server finds the map, it sends the data back. If it can&#x27;t find the map, it creates it and sends the map and data back. 
-	(the map creation data packet and the map data packet are separate packets). 
-	The response from the server potentially has to load from disk, just an fyi. 
+	If the server finds the map, it sends the data back. If it can&#x27;t find the map, it creates it and sends the map and data back.
+	(the map creation data packet and the map data packet are separate packets).
+	The response from the server potentially has to load from disk, just an fyi.
 	This packet is fired via map item tick, if the map data we have is invalid, or if the map is placed in an item frame.
 
 	For Client Side Generation when we re-sample pixels from the Client&#x27;s ChunkSource we need to inform the Server&#x27;s map about

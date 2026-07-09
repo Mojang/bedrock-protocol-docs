@@ -1,111 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3506039834",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
-    "definitions": {
-        "4151649465": {
-            "title": "DebugMarkerData",
-            "type": "object",
-            "properties": {
-                "Color": {
-                    "description": "Color of the debug cube to show",
-                    "$ref": "#/definitions/3702137727",
-                    "x-ordinal-index": 2
-                },
-                "Position": {
-                    "description": "Position for where the debug cube should show up",
-                    "$ref": "#/definitions/725374594",
-                    "x-ordinal-index": 1
-                },
-                "Text": {
-                    "description": "String for what text to show at the location",
-                    "type": "string",
-                    "x-ordinal-index": 0,
-                    "maxLength": 4096
-                },
-                "duration": {
-                    "description": "Duration (milliseconds) of the debug cube to show",
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-ordinal-index": 3,
-                    "minimum": 0.0
-                }
-            },
-            "required": [
-                "Color",
-                "Position",
-                "Text",
-                "duration"
-            ]
-        },
-        "3702137727": {
-            "title": "Color",
-            "type": "object",
-            "properties": {
-                "Color": {
-                    "type": "integer",
-                    "x-underlying-type": "int32",
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "Color"
-            ]
-        },
-        "725374594": {
-            "title": "Vec3",
-            "type": "object",
-            "properties": {
-                "X": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 0
-                },
-                "Y": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 1
-                },
-                "Z": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 2
-                }
-            },
-            "required": [
-                "X",
-                "Y",
-                "Z"
-            ]
-        }
-    },
     "title": "ClientboundDebugRendererPacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ClientboundDebugRendererPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.50",
+    "x-protocol-version": 2169,
     "description": "Used to add/remove debug rendering objects.",
-    "type": "object",
-    "properties": {
-        "DebugMarkerData": {
-            "description": "If the action type is AddDebugMarkerCube, the marker data for the cube.",
-            "$ref": "#/definitions/4151649465",
-            "x-ordinal-index": 1
-        },
-        "Type": {
-            "title": "PayloadType",
-            "description": "The type of action (Invalid=0, ClearDebugMarkers=1, AddDebugMarkerCube=2).",
-            "type": "string",
-            "enum": [
-                "Invalid",
-                "ClearDebugMarkers",
-                "AddDebugMarkerCube"
-            ],
-            "x-underlying-type": "uint8",
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "Type"
-    ],
+    "$ref": "./DebugRendererData.json",
     "$metaProperties": {
         "[cereal:packet]": 164,
         "[cereal:packet_details]": ""

@@ -1,8 +1,0 @@
-digraph "MovementAttributesComponent" {
-rankdir = LR
-0
-
-0 [label="MovementAttributesComponent",comment="name: \"MovementAttributesComponent\", typeName: \"\", id: 0, branchId: 0, recurseId: -1, attributes: 0, notes: \"\""];
-{ rank = max}
-
-}

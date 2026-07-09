@@ -1,75 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3637319069",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
-    "definitions": {
-        "234962571": {
-            "title": "mce::UUID",
-            "type": "object",
-            "properties": {
-                "Least Significant Bits": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-ordinal-index": 1,
-                    "minimum": 0.0
-                },
-                "Most Significant Bits": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
-                }
-            },
-            "required": [
-                "Least Significant Bits",
-                "Most Significant Bits"
-            ]
-        }
-    },
     "title": "ServerboundPackSettingChangePacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ServerboundPackSettingChangePacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.50",
+    "x-protocol-version": 2169,
     "description": "Sent from the client to the server when players change Pack Settings (pack UI).",
-    "type": "object",
-    "properties": {
-        "PackId": {
-            "description": "The UUID of the pack whose setting is being changed.",
-            "$ref": "#/definitions/234962571",
-            "x-ordinal-index": 0
-        },
-        "PackSettingName": {
-            "description": "The name of the setting being changed.",
-            "type": "string",
-            "x-ordinal-index": 1,
-            "maxLength": 128
-        },
-        "PackSettingValue": {
-            "description": "The value of the setting being changed.",
-            "oneOf": [
-                {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 0
-                },
-                {
-                    "type": "boolean",
-                    "x-underlying-type": "boolean",
-                    "x-ordinal-index": 1
-                },
-                {
-                    "type": "string",
-                    "x-ordinal-index": 2
-                }
-            ],
-            "x-control-value-type": "uint32",
-            "x-ordinal-index": 2
-        }
-    },
-    "required": [
-        "PackId",
-        "PackSettingName",
-        "PackSettingValue"
-    ],
+    "$ref": "./ServerboundPackSettingChangePacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 329,
         "[cereal:packet_details]": ""

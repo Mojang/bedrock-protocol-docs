@@ -1,92 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2693616080",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
-    "definitions": {
-        "3671831922": {
-            "title": "ActorLink",
-            "type": "object",
-            "properties": {
-                "Immediate": {
-                    "type": "boolean",
-                    "x-underlying-type": "boolean",
-                    "x-ordinal-index": 3
-                },
-                "Passenger Initiated": {
-                    "description": "Whether the link was changed by the passenger",
-                    "type": "boolean",
-                    "x-underlying-type": "boolean",
-                    "x-ordinal-index": 4
-                },
-                "Target A": {
-                    "$ref": "#/definitions/4257541248",
-                    "x-ordinal-index": 0
-                },
-                "Target B": {
-                    "$ref": "#/definitions/4257541248",
-                    "x-ordinal-index": 1
-                },
-                "Type": {
-                    "title": "ActorLinkType",
-                    "type": "string",
-                    "enum": [
-                        "None",
-                        "Riding",
-                        "Passenger"
-                    ],
-                    "x-underlying-type": "uint8",
-                    "x-serialization-options": [
-                        "Enum-as-Value"
-                    ],
-                    "x-ordinal-index": 2
-                },
-                "Vehicle Angular Velocity": {
-                    "type": "number",
-                    "x-underlying-type": "float",
-                    "x-ordinal-index": 5
-                }
-            },
-            "required": [
-                "Immediate",
-                "Passenger Initiated",
-                "Target A",
-                "Target B",
-                "Type",
-                "Vehicle Angular Velocity"
-            ]
-        },
-        "4257541248": {
-            "title": "ActorUniqueID",
-            "type": "object",
-            "properties": {
-                "Actor Unique ID": {
-                    "type": "integer",
-                    "x-underlying-type": "int64",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "Actor Unique ID"
-            ]
-        }
-    },
     "title": "SetActorLinkPacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/SetActorLinkPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.50",
+    "x-protocol-version": 2169,
     "description": "Sent by both client and server, only received by LegacyClientHandler.",
-    "type": "object",
-    "properties": {
-        "Link": {
-            "$ref": "#/definitions/3671831922",
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "Link"
-    ],
+    "$ref": "./SetActorLinkPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 41,
         "[cereal:packet_details]": "Sent when the player starts riding something. Two are sent at a time for some reason."

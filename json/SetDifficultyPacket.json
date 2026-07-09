@@ -1,26 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3742585818",
-    "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.30",
-    "x-protocol-version": 1001,
     "title": "SetDifficultyPacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/SetDifficultyPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.50",
+    "x-protocol-version": 2169,
     "description": "Set Difficulty",
-    "type": "object",
-    "properties": {
-        "Difficulty": {
-            "type": "integer",
-            "x-underlying-type": "uint32",
-            "x-serialization-options": [
-                "Compression"
-            ],
-            "x-ordinal-index": 0,
-            "minimum": 0.0
-        }
-    },
-    "required": [
-        "Difficulty"
-    ],
+    "$ref": "./SetDifficultyPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 60,
         "[cereal:packet_details]": "Used for when a client changes difficulty through the menu or when the server changes the difficulty."

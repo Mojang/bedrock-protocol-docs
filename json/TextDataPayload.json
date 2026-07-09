@@ -1,0 +1,59 @@
+{
+    "title": "TextDataPayload",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/TextDataPayload.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.50",
+    "x-protocol-version": 2169,
+    "type": "object",
+    "properties": {
+        "BackgroundColor": {
+            "description": "Color to draw background.",
+            "$ref": "./Color.json",
+            "x-ordinal-index": 2
+        },
+        "DepthTest": {
+            "description": "Whether other objects block seeing the text (false=like nametags,true=like signs).",
+            "type": "boolean",
+            "default": false,
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 4
+        },
+        "LineGapHeight": {
+            "description": "Line gap height for multiline text rendering.",
+            "type": "number",
+            "default": 0.0,
+            "x-underlying-type": "float",
+            "x-ordinal-index": 3
+        },
+        "ShowBackface": {
+            "description": "Whether the backface of the background should be rendered.",
+            "type": "boolean",
+            "default": false,
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 5
+        },
+        "ShowTextBackface": {
+            "description": "Whether the backface of the text should be rendered.",
+            "type": "boolean",
+            "default": false,
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 6
+        },
+        "Text": {
+            "description": "Text (string) of the debug text shape.",
+            "type": "string",
+            "x-ordinal-index": 0
+        },
+        "UseRotation": {
+            "description": "Whether to use specified rotation, otherwise faces camera.",
+            "type": "boolean",
+            "default": false,
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 1
+        }
+    },
+    "required": [
+        "Text"
+    ]
+}
