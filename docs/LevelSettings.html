@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LevelSettings</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        h4 {
+            color: #666;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        table {
+            background-color: white;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        th {
+            font-weight: bold;
+            text-align: left;
+            padding: 8px !important;
+        }
+        td {
+            padding: 8px !important;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #e8f4f8;
+        }
+        .description {
+            color: #555;
+            font-style: italic;
+            margin: 10px 0 20px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .packet-list {
+            columns: 3;
+            column-gap: 20px;
+        }
+        .packet-list li {
+            margin-bottom: 8px;
+            break-inside: avoid;
+        }
+        details {
+            margin: 10px 0;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            padding: 8px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            user-select: none;
+        }
+        summary:hover {
+            background-color: #e8e8e8;
+        }
+        details[open] summary {
+            background-color: #d4edff;
+            border-color: #3498db;
+            border-left: 4px solid #3498db;
+        }
+        @media (max-width: 900px) {
+            .packet-list {
+                columns: 2;
+            }
+        }
+        @media (max-width: 600px) {
+            .packet-list {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p><a href="index.html">← Back to Index</a></p>
+        <h1>LevelSettings</h1>
+<div style="margin-left: 0px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td><strong>Seed (Required)</strong></td>
+<td>uint64</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Spawn Settings (Required)</strong></td>
+<td>SpawnSettings.json</td>
+                <td>1</td>
+                <td></td>
+            </tr>
+<tr>
+<td rowspan="2"><strong>Generator Type (Required)</strong></td>
+<td>varint32</td>
+                <td>2</td>
+                <td></td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Legacy</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">1</td>
+            <td><code>Overworld</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">2</td>
+            <td><code>Flat</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">3</td>
+            <td><code>Nether</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">4</td>
+            <td><code>TheEnd</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">5</td>
+            <td><code>Void</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">6</td>
+            <td><code>Undefined</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Game Type (Required)</strong></td>
+<td>varint32</td>
+                <td>3</td>
+                <td></td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Undefined</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">1</td>
+            <td><code>Survival</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">2</td>
+            <td><code>Creative</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">3</td>
+            <td><code>Adventure</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">4</td>
+            <td><code>Default</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">5</td>
+            <td><code>Spectator</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">6</td>
+            <td><code>WorldDefault</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
+<tr>
+<td><strong>Is Hardcore (Required)</strong></td>
+<td>boolean</td>
+                <td>4</td>
+                <td></td>
+            </tr>
+<tr>
+<td rowspan="2"><strong>Game Difficulty (Required)</strong></td>
+<td>varint32</td>
+                <td>5</td>
+                <td></td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Peaceful</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">1</td>
+            <td><code>Easy</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">2</td>
+            <td><code>Normal</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">3</td>
+            <td><code>Hard</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">4</td>
+            <td><code>Count</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">5</td>
+            <td><code>Unknown</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
+<tr>
+<td><strong>Default Spawn Block Position (Required)</strong></td>
+<td>BlockPos.json</td>
+                <td>6</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Achievements Disabled (Required)</strong></td>
+<td>boolean</td>
+                <td>7</td>
+                <td></td>
+            </tr>
+<tr>
+<td rowspan="2"><strong>Editor World Type (Required)</strong></td>
+<td>varint32</td>
+                <td>8</td>
+                <td></td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>NonEditor</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">1</td>
+            <td><code>EditorProject</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">2</td>
+            <td><code>EditorTestLevel</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">3</td>
+            <td><code>EditorRealmsUpload</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
+<tr>
+<td><strong>Is Created In Editor (Required)</strong></td>
+<td>boolean</td>
+                <td>9</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Is Exported From Editor (Required)</strong></td>
+<td>boolean</td>
+                <td>10</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Day Cycle Stop Time (Required)</strong></td>
+<td>varint32</td>
+                <td>11</td>
+                <td></td>
+            </tr>
+<tr>
+<td rowspan="2"><strong>Education Edition Offer (Required)</strong></td>
+<td>varuint32</td>
+                <td>12</td>
+                <td></td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>None</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">1</td>
+            <td><code>RestOfWorld</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">2</td>
+            <td><code>China_Deprecated</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
+<tr>
+<td><strong>Education Features Enabled (Required)</strong></td>
+<td>boolean</td>
+                <td>13</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Education Product ID (Required)</strong></td>
+<td>string</td>
+                <td>14</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Rain Level (Required)</strong></td>
+<td>float</td>
+                <td>15</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Lightning Level (Required)</strong></td>
+<td>float</td>
+                <td>16</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Has Confirmed Platform Locked Content (Required)</strong></td>
+<td>boolean</td>
+                <td>17</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Multiplayer Game Intent (Required)</strong></td>
+<td>boolean</td>
+                <td>18</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>LAN Broadcast Intent (Required)</strong></td>
+<td>boolean</td>
+                <td>19</td>
+                <td></td>
+            </tr>
+<tr>
+<td rowspan="2"><strong>Xbox Live Broadcast Setting (Required)</strong></td>
+<td>varint32</td>
+                <td>20</td>
+                <td></td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>NoMultiPlay</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">1</td>
+            <td><code>InviteOnly</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">2</td>
+            <td><code>FriendsOnly</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">3</td>
+            <td><code>FriendsOfFriends</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">4</td>
+            <td><code>Public</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
+<tr>
+<td rowspan="2"><strong>Platform Broadcast Setting (Required)</strong></td>
+<td>varint32</td>
+                <td>21</td>
+                <td></td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>NoMultiPlay</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">1</td>
+            <td><code>InviteOnly</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">2</td>
+            <td><code>FriendsOnly</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">3</td>
+            <td><code>FriendsOfFriends</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">4</td>
+            <td><code>Public</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
+<tr>
+<td><strong>Commands Enabled (Required)</strong></td>
+<td>boolean</td>
+                <td>22</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Texture Packs Required (Required)</strong></td>
+<td>boolean</td>
+                <td>23</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Rule Data (Required)</strong></td>
+<td>GameRulesChangedPacketData.json</td>
+                <td>24</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Experiments (Required)</strong></td>
+<td>Experiments.json</td>
+                <td>25</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Has Bonus Chest Enabled (Required)</strong></td>
+<td>boolean</td>
+                <td>26</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Start With Map Enabled (Required)</strong></td>
+<td>boolean</td>
+                <td>27</td>
+                <td></td>
+            </tr>
+<tr>
+<td rowspan="2"><strong>Player Permissions (Required)</strong></td>
+<td>varint8</td>
+                <td>28</td>
+                <td></td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Visitor</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">1</td>
+            <td><code>Member</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">2</td>
+            <td><code>Operator</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">3</td>
+            <td><code>Custom</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
+<tr>
+<td><strong>Server Chunk Tick Range (Required)</strong></td>
+<td>int32</td>
+                <td>29</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Has Locked Behavior Pack (Required)</strong></td>
+<td>boolean</td>
+                <td>30</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Has Locked Resource Pack (Required)</strong></td>
+<td>boolean</td>
+                <td>31</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Is From Locked Template (Required)</strong></td>
+<td>boolean</td>
+                <td>32</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Use Msa Gamertags Only (Required)</strong></td>
+<td>boolean</td>
+                <td>33</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Is From World Template (Required)</strong></td>
+<td>boolean</td>
+                <td>34</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Is World Template Option Locked (Required)</strong></td>
+<td>boolean</td>
+                <td>35</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Only Spawn V1 Villagers (Required)</strong></td>
+<td>boolean</td>
+                <td>36</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Persona Disabled (Required)</strong></td>
+<td>boolean</td>
+                <td>37</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Custom Skins Disabled (Required)</strong></td>
+<td>boolean</td>
+                <td>38</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Emote Chat Muted (Required)</strong></td>
+<td>boolean</td>
+                <td>39</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Base Game Version (Required)</strong></td>
+<td>string</td>
+                <td>40</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Limited World Width (Required)</strong></td>
+<td>int32</td>
+                <td>41</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Limited World Depth (Required)</strong></td>
+<td>int32</td>
+                <td>42</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Nether Type (Required)</strong></td>
+<td>boolean</td>
+                <td>43</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Edu Shared Uri Resource (Required)</strong></td>
+<td>EduSharedUriResource.json</td>
+                <td>44</td>
+                <td></td>
+            </tr>
+<tr>
+<td><strong>Override Force Experimental Gameplay</strong></td>
+<td>boolean</td>
+                <td>45</td>
+                <td></td>
+            </tr>
+<tr>
+<td rowspan="2"><strong>Chat Restriction Level (Required)</strong></td>
+<td>uint8</td>
+                <td>46</td>
+                <td></td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>None</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">1</td>
+            <td><code>Dropped</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">2</td>
+            <td><code>Disabled</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
+<tr>
+<td><strong>Disable Player Interactions (Required)</strong></td>
+<td>boolean</td>
+                <td>47</td>
+                <td></td>
+            </tr>
+<tr>
+<td rowspan="2"><strong>Server Editor Connection Policy (Required)</strong></td>
+<td>varint32</td>
+                <td>48</td>
+                <td></td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>MatchWorldType</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">1</td>
+            <td><code>EditorOnly</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">2</td>
+            <td><code>VanillaOnly</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">3</td>
+            <td><code>Mixed</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
+<tr>
+<td><strong>Allow Anonymous Block Drops In Editor Worlds (Required)</strong></td>
+<td>boolean</td>
+                <td>49</td>
+                <td></td>
+            </tr>
+</tbody>
+    </table>
+</div>
+    </div>
+</body>
+</html>
