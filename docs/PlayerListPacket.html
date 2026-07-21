@@ -121,26 +121,6 @@
         <h1>PlayerListPacket (63)</h1>
 <div class="description">Player List</div>
 <div class="description">Sent from the Server at the start of the game or when a player is added to all clients. Lists the players.</div>
-<div style="margin-left: 0px; margin-top: 10px;">
-<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Entries</strong></td>
-<td>array&lt;unknown&gt;</td>
-<td>0</td>
-<td>List of player-list updates. Each entry is a discriminated variant: an Add entry carries the full PlayerListEntry payload; a Remove entry carries only the UUID. The variant alternative is identified by the per-entry &quot;Action&quot; tag.</td>
-</tr>
-</tbody>
-</table>
-</div>
     </div>
 </body>
 </html>
