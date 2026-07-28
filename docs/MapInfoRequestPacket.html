@@ -121,92 +121,14 @@
         <h1>MapInfoRequestPacket (68)</h1>
 <div class="description">In the case of the client being unable to find map data for a map item it sends a uuid for a map to the server.</div>
 <div class="description">
-	If the server finds the map, it sends the data back. If it can&#x27;t find the map, it creates it and sends the map and data back.
+	If the server finds the map, it sends the data back. If it can&#39;t find the map, it creates it and sends the map and data back.
 	(the map creation data packet and the map data packet are separate packets).
 	The response from the server potentially has to load from disk, just an fyi.
 	This packet is fired via map item tick, if the map data we have is invalid, or if the map is placed in an item frame.
 
-	For Client Side Generation when we re-sample pixels from the Client&#x27;s ChunkSource we need to inform the Server&#x27;s map about
+	For Client Side Generation when we re-sample pixels from the Client&#39;s ChunkSource we need to inform the Server&#39;s map about
 	these new pixels so that it can save them to LevelStorage. Use this packet to send to the Server the extra pixels
 	</div>
-<div style="margin-left: 0px; margin-top: 10px;">
-<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td rowspan="2"><strong>Map Unique ID (Required)</strong></td>
-<td>ActorUniqueID</td>
-<td>0</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
-<h3>ActorUniqueID</h3>
-<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Actor Unique ID (Required)</strong></td>
-<td>varint64</td>
-<td>0</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div></td>
-</tr>
-<tr>
-<td rowspan="2"><strong>Client Pixels List (Required)</strong></td>
-<td>array&lt;(anonymous namespace)::MapInfoRequestPacketAnon::ClientPixelsProxy&gt;</td>
-<td>1</td>
-<td>These are sent from the client to tell the Server map about terrain pixels it doesn&#x27;t know about</td>
-</tr>
-<tr>
-<td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
-<h3>(anonymous namespace)::MapInfoRequestPacketAnon::ClientPixelsProxy ([&#x27;No size compression&#x27;]) (Array Item)</h3>
-<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-<thead>
-<tr style="background-color: #f0f0f0;">
-<th>Field Name</th>
-<th>Type</th>
-<th>Field Index</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>pixel (Required)</strong></td>
-<td>uint32</td>
-<td>0</td>
-<td></td>
-</tr>
-<tr>
-<td><strong>index (Required)</strong></td>
-<td>uint16</td>
-<td>1</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div></td>
-</tr>
-</tbody>
-</table>
-</div>
     </div>
 </body>
 </html>
