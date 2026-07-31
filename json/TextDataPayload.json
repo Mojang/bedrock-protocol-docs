@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/TextDataPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.0",
-    "x-protocol-version": 2168,
+    "x-minecraft-version": "1.26.50-beta.24",
+    "x-protocol-version": 2181,
     "type": "object",
     "properties": {
         "BackgroundColor": {
@@ -15,19 +15,25 @@
             "type": "boolean",
             "default": false,
             "x-underlying-type": "boolean",
+            "x-ordinal-index": 4
+        },
+        "LineGapHeight": {
+            "type": "number",
+            "default": 0.0,
+            "x-underlying-type": "float",
             "x-ordinal-index": 3
         },
         "ShowBackface": {
             "type": "boolean",
             "default": false,
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 4
+            "x-ordinal-index": 5
         },
         "ShowTextBackface": {
             "type": "boolean",
             "default": false,
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 5
+            "x-ordinal-index": 6
         },
         "Text": {
             "type": "string",
