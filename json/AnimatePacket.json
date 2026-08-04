@@ -1,81 +1,12 @@
 {
+    "title": "AnimatePacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3038410824",
+    "$id": "/AnimatePacket.json",
     "x-format-version": "MISSING VERSION",
     "x-minecraft-version": "1.26.40-beta.0",
-    "x-protocol-version": 2147,
-    "definitions": {
-        "1750201151": {
-            "title": "ActorRuntimeID",
-            "type": "object",
-            "properties": {
-                "Actor Runtime ID": {
-                    "type": "integer",
-                    "x-underlying-type": "uint64",
-                    "x-serialization-options": [
-                        "Compression"
-                    ],
-                    "x-ordinal-index": 0,
-                    "minimum": 0.0
-                }
-            },
-            "required": [
-                "Actor Runtime ID"
-            ]
-        }
-    },
-    "title": "AnimatePacket",
+    "x-protocol-version": 2168,
     "description": "Animate Actor",
-    "type": "object",
-    "properties": {
-        "Action": {
-            "title": "AnimatePacketPayload Action",
-            "type": "string",
-            "enum": [
-                "NoAction",
-                "Swing",
-                "WakeUp",
-                "CriticalHit",
-                "MagicCriticalHit"
-            ],
-            "x-underlying-type": "uint8",
-            "x-serialization-options": [
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 0
-        },
-        "Data": {
-            "type": "number",
-            "x-underlying-type": "float",
-            "x-ordinal-index": 2
-        },
-        "Swing Source": {
-            "title": "ActorSwingSource",
-            "type": "string",
-            "enum": [
-                "None",
-                "Build",
-                "Mine",
-                "Interact",
-                "Attack",
-                "UseItem",
-                "ThrowItem",
-                "DropItem",
-                "Event"
-            ],
-            "x-underlying-type": "uint8",
-            "x-ordinal-index": 3
-        },
-        "Target Actor Runtime ID": {
-            "$ref": "#/definitions/1750201151",
-            "x-ordinal-index": 1
-        }
-    },
-    "required": [
-        "Action",
-        "Data",
-        "Target Actor Runtime ID"
-    ],
+    "$ref": "./AnimatePacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 44,
         "[cereal:packet_details]": "Combination of server bound and client bound packets to trigger animations."

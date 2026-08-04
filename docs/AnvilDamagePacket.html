@@ -120,68 +120,10 @@
         <p><a href="index.html">← Back to Index</a></p>
         <h1>AnvilDamagePacket (141)</h1>
 <div class="description">Requests an anvil to be damaged.</div>
-<div class="description">Sends the current damage the anvil has taken per use from client.</div>
-<div style="margin-left: 0px; margin-top: 10px;">
-<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-        <thead>
-            <tr style="background-color: #f0f0f0;">
-                <th>Field Name</th>
-                <th>Type</th>
-                <th>Field Index</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-<tr>
-<td><strong>Damage Amount (Required)</strong></td>
-<td>uint8</td>
-                <td>0</td>
-                <td></td>
-            </tr>
-<tr>
-<td rowspan="2"><strong>Block Position (Required)</strong></td>
-<td>BlockPos</td>
-                <td>1</td>
-                <td></td>
-            </tr>
-<tr>
-                    <td colspan="3"><div style="margin-left: 20px; margin-top: 10px;">
-<h3>BlockPos</h3>
-<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-        <thead>
-            <tr style="background-color: #f0f0f0;">
-                <th>Field Name</th>
-                <th>Type</th>
-                <th>Field Index</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-<tr>
-<td><strong>X (Required)</strong></td>
-<td>varint32</td>
-                <td>0</td>
-                <td></td>
-            </tr>
-<tr>
-<td><strong>Y (Required)</strong></td>
-<td>varint32</td>
-                <td>1</td>
-                <td></td>
-            </tr>
-<tr>
-<td><strong>Z (Required)</strong></td>
-<td>varint32</td>
-                <td>2</td>
-                <td></td>
-            </tr>
-</tbody>
-    </table>
-</div></td>
-                </tr>
-</tbody>
-    </table>
-</div>
+<div class="description">
+	Only used when Item Stack Net Manager is disabled on the server.
+	Sends the position of the anvil that is requesting to be damaged from the client.
+	</div>
     </div>
 </body>
 </html>

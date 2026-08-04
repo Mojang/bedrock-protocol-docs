@@ -1,33 +1,12 @@
 {
+    "title": "ClientboundControlSchemeSetPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "3192478408",
+    "$id": "/ClientboundControlSchemeSetPacket.json",
     "x-format-version": "MISSING VERSION",
     "x-minecraft-version": "1.26.40-beta.0",
-    "x-protocol-version": 2147,
-    "title": "ClientboundControlSchemeSetPacket",
+    "x-protocol-version": 2168,
     "description": "Set the control scheme that the player should use",
-    "type": "object",
-    "properties": {
-        "Control Scheme": {
-            "title": "Control Scheme",
-            "type": "string",
-            "enum": [
-                "locked_player_relative_strafe",
-                "camera_relative",
-                "camera_relative_strafe",
-                "player_relative",
-                "player_relative_strafe"
-            ],
-            "x-underlying-type": "uint8",
-            "x-serialization-options": [
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "Control Scheme"
-    ],
+    "$ref": "./ClientboundControlSchemeSetPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 327,
         "[cereal:packet_details]": ""

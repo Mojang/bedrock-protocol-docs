@@ -1,79 +1,12 @@
 {
+    "title": "TrimDataPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2709478821",
+    "$id": "/TrimDataPacket.json",
     "x-format-version": "MISSING VERSION",
     "x-minecraft-version": "1.26.40-beta.0",
-    "x-protocol-version": 2147,
-    "definitions": {
-        "3381141713": {
-            "title": "hashed_string",
-            "type": "string"
-        },
-        "44520132": {
-            "title": "TrimMaterial",
-            "type": "object",
-            "properties": {
-                "Color": {
-                    "type": "string",
-                    "x-ordinal-index": 1
-                },
-                "Item Name": {
-                    "$ref": "#/definitions/3381141713",
-                    "x-ordinal-index": 2
-                },
-                "Material Id": {
-                    "$ref": "#/definitions/3381141713",
-                    "x-ordinal-index": 0
-                }
-            },
-            "required": [
-                "Color",
-                "Item Name",
-                "Material Id"
-            ]
-        },
-        "1856639381": {
-            "title": "TrimPattern",
-            "type": "object",
-            "properties": {
-                "Item Name": {
-                    "$ref": "#/definitions/3381141713",
-                    "x-ordinal-index": 0
-                },
-                "Pattern Id": {
-                    "$ref": "#/definitions/3381141713",
-                    "x-ordinal-index": 1
-                }
-            },
-            "required": [
-                "Item Name",
-                "Pattern Id"
-            ]
-        }
-    },
-    "title": "TrimDataPacket",
+    "x-protocol-version": 2168,
     "description": "Sent from the server on level startup to send all trim patterns to the client.",
-    "type": "object",
-    "properties": {
-        "TrimMaterial List": {
-            "type": "array",
-            "items": {
-                "$ref": "#/definitions/44520132"
-            },
-            "x-ordinal-index": 1
-        },
-        "TrimPattern List": {
-            "type": "array",
-            "items": {
-                "$ref": "#/definitions/1856639381"
-            },
-            "x-ordinal-index": 0
-        }
-    },
-    "required": [
-        "TrimMaterial List",
-        "TrimPattern List"
-    ],
+    "$ref": "./TrimDataPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 302,
         "[cereal:packet_details]": "- mTrimPatterns: vector of TrimPattern\n- mTrimMaterials: vector of TrimMaterial"

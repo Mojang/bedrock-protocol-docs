@@ -1,85 +1,12 @@
 {
+    "title": "SetTitlePacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2702822239",
+    "$id": "/SetTitlePacket.json",
     "x-format-version": "MISSING VERSION",
     "x-minecraft-version": "1.26.40-beta.0",
-    "x-protocol-version": 2147,
-    "title": "SetTitlePacket",
+    "x-protocol-version": 2168,
     "description": "Used by 3rd party content for the purpose of showing ui banners",
-    "type": "object",
-    "properties": {
-        "Fade In Time": {
-            "type": "integer",
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Compression"
-            ],
-            "x-ordinal-index": 2
-        },
-        "Fade Out Time": {
-            "type": "integer",
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Compression"
-            ],
-            "x-ordinal-index": 4
-        },
-        "Filtered Title Message": {
-            "type": "string",
-            "x-ordinal-index": 7
-        },
-        "Platform Online Id": {
-            "type": "string",
-            "x-ordinal-index": 6
-        },
-        "Stay Time": {
-            "type": "integer",
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Compression"
-            ],
-            "x-ordinal-index": 3
-        },
-        "Title Text": {
-            "type": "string",
-            "x-ordinal-index": 1
-        },
-        "Title Type": {
-            "title": "SetTitlePacket TitleType",
-            "type": "string",
-            "enum": [
-                "Clear",
-                "Reset",
-                "Title",
-                "Subtitle",
-                "Actionbar",
-                "Times",
-                "TitleTextObject",
-                "SubtitleTextObject",
-                "ActionbarTextObject"
-            ],
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Compression",
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 0
-        },
-        "Xuid": {
-            "type": "string",
-            "x-ordinal-index": 5
-        }
-    },
-    "required": [
-        "Fade In Time",
-        "Fade Out Time",
-        "Filtered Title Message",
-        "Platform Online Id",
-        "Stay Time",
-        "Title Text",
-        "Title Type",
-        "Xuid"
-    ],
+    "$ref": "./SetTitlePacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 88,
         "[cereal:packet_details]": "There are 2 commands associated with it: title and titleraw.\n\tBoth of which have functionality to change fade in/out time for titles, sub titles, and action bar text.\n\ttitleraw is using json to format so it will be bigger (i don't have an example)"

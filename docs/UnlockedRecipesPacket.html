@@ -120,68 +120,6 @@
         <p><a href="index.html">← Back to Index</a></p>
         <h1>UnlockedRecipesPacket (199)</h1>
 <div class="description">Sent from server to client, for all previously unlocked recipes on load and for any newly unlocked recipes during gameplay.</div>
-<div style="margin-left: 0px; margin-top: 10px;">
-<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-        <thead>
-            <tr style="background-color: #f0f0f0;">
-                <th>Field Name</th>
-                <th>Type</th>
-                <th>Field Index</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-<tr>
-<td rowspan="2"><strong>Packet Type (Required)</strong></td>
-<td>uint32</td>
-                <td>0</td>
-                <td></td>
-            </tr>
-<tr>
-                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
-    <strong>Enum Values:</strong>
-    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
-        <thead>
-            <tr style="background-color: #e8e8e8;">
-                <th style="width: 40px;">Index</th>
-                <th>Value</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <td style="text-align: center;">0</td>
-            <td><code>Empty</code></td>
-            </tr>
-<tr>
-            <td style="text-align: center;">1</td>
-            <td><code>InitiallyUnlockedRecipes</code></td>
-            </tr>
-<tr>
-            <td style="text-align: center;">2</td>
-            <td><code>NewlyUnlockedRecipes</code></td>
-            </tr>
-<tr>
-            <td style="text-align: center;">3</td>
-            <td><code>RemoveUnlockedRecipes</code></td>
-            </tr>
-<tr>
-            <td style="text-align: center;">4</td>
-            <td><code>RemoveAllUnlockedRecipes</code></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-</td>
-                </tr>
-<tr>
-<td><strong>Unlocked Recipes List (Required)</strong></td>
-<td>array&lt;string&gt;</td>
-                <td>1</td>
-                <td></td>
-            </tr>
-</tbody>
-    </table>
-</div>
     </div>
 </body>
 </html>

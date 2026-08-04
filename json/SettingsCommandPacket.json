@@ -1,28 +1,12 @@
 {
+    "title": "SettingsCommandPacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "2095235773",
+    "$id": "/SettingsCommandPacket.json",
     "x-format-version": "MISSING VERSION",
     "x-minecraft-version": "1.26.40-beta.0",
-    "x-protocol-version": 2147,
-    "title": "SettingsCommandPacket",
+    "x-protocol-version": 2168,
     "description": "Requests a setting to be changed through commands.",
-    "type": "object",
-    "properties": {
-        "Command": {
-            "description": "Command to update setting.",
-            "type": "string",
-            "x-ordinal-index": 0
-        },
-        "Suppress Output?": {
-            "type": "boolean",
-            "x-underlying-type": "boolean",
-            "x-ordinal-index": 1
-        }
-    },
-    "required": [
-        "Command",
-        "Suppress Output?"
-    ],
+    "$ref": "./SettingsCommandPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 140,
         "[cereal:packet_details]": "Used when the player changes the world settings like doDayNightCycle or WeatherCycle via the world settings menu"

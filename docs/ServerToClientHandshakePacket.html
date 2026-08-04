@@ -121,32 +121,6 @@
         <h1>ServerToClientHandshakePacket (3)</h1>
 <div class="description">Server-&gt;Client Handshake</div>
 <div class="description">Sent from the server at the end of the login packet</div>
-<div style="margin-left: 0px; margin-top: 10px;">
-<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
-        <thead>
-            <tr style="background-color: #f0f0f0;">
-                <th>Field Name</th>
-                <th>Type</th>
-                <th>Field Index</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-<tr>
-<td><strong>Handshake WebToken (Required)</strong></td>
-<td>WebToken</td>
-                <td>0</td>
-                <td>Base64 encoded JSON Web Token that contains the other relevant client properties.
-
-Properties Include:
-
-&#39;salt&#39; = (for use in encryption)
-
-The public key used to compute the shared secret for encryption is embedded in the header of the token. It&#39;s the signer public key (json value of &#39;x5u&#39;)</td>
-            </tr>
-</tbody>
-    </table>
-</div>
     </div>
 </body>
 </html>

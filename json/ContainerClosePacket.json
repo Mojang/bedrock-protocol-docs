@@ -1,45 +1,12 @@
 {
+    "title": "ContainerClosePacket",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "376802036",
+    "$id": "/ContainerClosePacket.json",
     "x-format-version": "MISSING VERSION",
     "x-minecraft-version": "1.26.40-beta.0",
-    "x-protocol-version": 2147,
-    "title": "ContainerClosePacket",
+    "x-protocol-version": 2168,
     "description": "After the game deletes the container manager on the client, the client sends this packet.\n\tThen the server deletes its container manager, and sends a packet back to the client that closes the container screen.",
-    "type": "object",
-    "properties": {
-        "Container Id": {
-            "type": "integer",
-            "x-underlying-type": "uint8",
-            "x-serialization-options": [
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 0,
-            "minimum": 0.0,
-            "maximum": 255.0
-        },
-        "Container Type": {
-            "type": "integer",
-            "x-underlying-type": "uint8",
-            "x-serialization-options": [
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 1,
-            "minimum": 0.0,
-            "maximum": 255.0
-        },
-        "Server Initiated Close": {
-            "description": "True if the server initiated the closing",
-            "type": "boolean",
-            "x-underlying-type": "boolean",
-            "x-ordinal-index": 2
-        }
-    },
-    "required": [
-        "Container Id",
-        "Container Type",
-        "Server Initiated Close"
-    ],
+    "$ref": "./ContainerClosePacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 47,
         "[cereal:packet_details]": ""
