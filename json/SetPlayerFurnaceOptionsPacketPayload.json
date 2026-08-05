@@ -1,0 +1,27 @@
+{
+    "title": "SetPlayerFurnaceOptionsPacketPayload",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/SetPlayerFurnaceOptionsPacketPayload.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.50-beta.24",
+    "x-protocol-version": 2181,
+    "type": "object",
+    "properties": {
+        "Furnace Options": {
+            "$ref": "./FurnaceOptions.json",
+            "x-ordinal-index": 1
+        },
+        "FurnaceType": {
+            "$ref": "./SetPlayerFurnaceOptionsPacketPayload_FurnaceType.json",
+            "x-underlying-type": "uint8",
+            "x-serialization-options": [
+                "Enum-as-Value"
+            ],
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Furnace Options",
+        "FurnaceType"
+    ]
+}

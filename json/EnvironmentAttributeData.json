@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/EnvironmentAttributeData.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.50-beta.24",
+    "x-protocol-version": 2181,
     "type": "object",
     "properties": {
         "Attribute": {
@@ -59,6 +59,10 @@
             "x-ordinal-index": 7,
             "minimum": 0.0
         },
+        "NoiseAlignment": {
+            "$ref": "./NoiseAlignment.json",
+            "x-ordinal-index": 9
+        },
         "NoiseTransition": {
             "type": "boolean",
             "x-underlying-type": "boolean",
@@ -92,6 +96,7 @@
         "CurrentTransitionTicks",
         "Easing",
         "LocalTransitionTicks",
+        "NoiseAlignment",
         "NoiseTransition",
         "TotalTransitionTicks"
     ]

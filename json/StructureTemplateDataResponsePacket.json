@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/StructureTemplateDataResponsePacket.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.50-beta.24",
+    "x-protocol-version": 2181,
     "description": "This is used in exporting from load, exporting from save, and querying saved structures from structure blocks.",
     "$ref": "./StructureTemplateDataResponsePacketPayload.json",
     "$metaProperties": {
