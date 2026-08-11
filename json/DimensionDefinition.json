@@ -3,10 +3,16 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/DimensionDefinition.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.50-beta.25",
+    "x-protocol-version": 2187,
     "type": "object",
     "properties": {
+        "Default Biome": {
+            "description": "Identifier of the biome a custom dimension generates with.",
+            "type": "string",
+            "x-ordinal-index": 5,
+            "maxLength": 256
+        },
         "Dimension Type": {
             "description": "Dimension runtime ID.",
             "$ref": "./DimensionType.json",
@@ -30,21 +36,21 @@
             ],
             "x-ordinal-index": 2
         },
-        "Height Maximum": {
-            "type": "integer",
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Compression"
-            ],
-            "x-ordinal-index": 0
-        },
-        "Height Minimum": {
+        "Height Range": {
             "type": "integer",
             "x-underlying-type": "int32",
             "x-serialization-options": [
                 "Compression"
             ],
             "x-ordinal-index": 1
+        },
+        "Minimum Y": {
+            "type": "integer",
+            "x-underlying-type": "int32",
+            "x-serialization-options": [
+                "Compression"
+            ],
+            "x-ordinal-index": 0
         },
         "Pack Id": {
             "description": "UUID of the pack that registered this dimension.",
@@ -53,10 +59,11 @@
         }
     },
     "required": [
+        "Default Biome",
         "Dimension Type",
         "Generator Type",
-        "Height Maximum",
-        "Height Minimum",
+        "Height Range",
+        "Minimum Y",
         "Pack Id"
     ]
 }

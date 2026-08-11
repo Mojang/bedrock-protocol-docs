@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/ClientCacheStatusPacket.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.50-beta.25",
+    "x-protocol-version": 2187,
     "description": "It is sent by the Client once, at login, to communicate if it supports the cache or not.",
     "$ref": "./ClientCacheStatusPacketPayload.json",
     "$metaProperties": {

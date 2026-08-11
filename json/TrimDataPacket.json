@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/TrimDataPacket.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.50-beta.25",
+    "x-protocol-version": 2187,
     "description": "Sent from the server on level startup to send all trim patterns to the client.",
     "$ref": "./TrimDataPacketPayload.json",
     "$metaProperties": {
