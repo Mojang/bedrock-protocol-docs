@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/StartGamePacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.44-beta.3",
+    "x-protocol-version": 2168,
     "type": "object",
     "properties": {
         "Block Properties": {
@@ -38,20 +38,12 @@
             "x-ordinal-index": 0
         },
         "Game Type": {
-            "type": "string",
-            "enum": [
-                "Undefined",
-                "Survival",
-                "Creative",
-                "Adventure",
-                "Default",
-                "Spectator",
-                "WorldDefault"
-            ],
+            "$ref": "./GameType.json",
             "x-underlying-type": "int32",
             "x-serialization-options": [
                 "Compression",
-                "Enum-as-Value"
+                "Enum-as-Value",
+                "Allow unknown enum values"
             ],
             "x-ordinal-index": 2
         },

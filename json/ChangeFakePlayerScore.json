@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/ChangeFakePlayerScore.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.44-beta.3",
+    "x-protocol-version": 2168,
     "type": "object",
     "properties": {
         "Action": {
@@ -16,14 +16,12 @@
         "Fake Player Name": {
             "description": "Display name of the fake (non-entity) score holder.",
             "type": "string",
-            "x-ordinal-index": 4,
-            "minLength": 1
+            "x-ordinal-index": 4
         },
         "Objective Name": {
             "description": "Name of the objective whose score is being changed.",
             "type": "string",
-            "x-ordinal-index": 2,
-            "minLength": 1
+            "x-ordinal-index": 2
         },
         "Score Value": {
             "description": "The new score value.",

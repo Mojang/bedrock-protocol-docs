@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/TextDataPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.44-beta.3",
+    "x-protocol-version": 2168,
     "type": "object",
     "properties": {
         "BackgroundColor": {
@@ -17,13 +17,6 @@
             "type": "boolean",
             "default": false,
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 4
-        },
-        "LineGapHeight": {
-            "description": "Line gap height for multiline text rendering.",
-            "type": "number",
-            "default": 0.0,
-            "x-underlying-type": "float",
             "x-ordinal-index": 3
         },
         "ShowBackface": {
@@ -31,14 +24,14 @@
             "type": "boolean",
             "default": false,
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 5
+            "x-ordinal-index": 4
         },
         "ShowTextBackface": {
             "description": "Whether the backface of the text should be rendered.",
             "type": "boolean",
             "default": false,
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 6
+            "x-ordinal-index": 5
         },
         "Text": {
             "description": "Text (string) of the debug text shape.",

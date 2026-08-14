@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/LevelSettings.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.44-beta.3",
+    "x-protocol-version": 2168,
     "type": "object",
     "properties": {
         "Achievements Disabled": {
@@ -22,15 +22,11 @@
             "x-ordinal-index": 40
         },
         "Chat Restriction Level": {
-            "type": "string",
-            "enum": [
-                "None",
-                "Dropped",
-                "Disabled"
-            ],
+            "$ref": "./ChatRestrictionLevel.json",
             "x-underlying-type": "uint8",
             "x-serialization-options": [
-                "Enum-as-Value"
+                "Enum-as-Value",
+                "Allow unknown enum values"
             ],
             "x-ordinal-index": 46
         },
@@ -62,17 +58,12 @@
             "x-ordinal-index": 47
         },
         "Editor World Type": {
-            "type": "string",
-            "enum": [
-                "NonEditor",
-                "EditorProject",
-                "EditorTestLevel",
-                "EditorRealmsUpload"
-            ],
+            "$ref": "./EditorWorldType.json",
             "x-underlying-type": "int32",
             "x-serialization-options": [
                 "Compression",
-                "Enum-as-Value"
+                "Enum-as-Value",
+                "Allow unknown enum values"
             ],
             "x-ordinal-index": 8
         },
@@ -81,16 +72,12 @@
             "x-ordinal-index": 44
         },
         "Education Edition Offer": {
-            "type": "string",
-            "enum": [
-                "None",
-                "RestOfWorld",
-                "China_Deprecated"
-            ],
+            "$ref": "./EducationEditionOffer.json",
             "x-underlying-type": "uint32",
             "x-serialization-options": [
                 "Compression",
-                "Enum-as-Value"
+                "Enum-as-Value",
+                "Allow unknown enum values"
             ],
             "x-ordinal-index": 12
         },
@@ -113,55 +100,32 @@
             "x-ordinal-index": 25
         },
         "Game Difficulty": {
-            "type": "string",
-            "enum": [
-                "Peaceful",
-                "Easy",
-                "Normal",
-                "Hard",
-                "Count",
-                "Unknown"
-            ],
+            "$ref": "./Difficulty.json",
             "x-underlying-type": "int32",
             "x-serialization-options": [
                 "Compression",
-                "Enum-as-Value"
+                "Enum-as-Value",
+                "Allow unknown enum values"
             ],
             "x-ordinal-index": 5
         },
         "Game Type": {
-            "type": "string",
-            "enum": [
-                "Undefined",
-                "Survival",
-                "Creative",
-                "Adventure",
-                "Default",
-                "Spectator",
-                "WorldDefault"
-            ],
+            "$ref": "./GameType.json",
             "x-underlying-type": "int32",
             "x-serialization-options": [
                 "Compression",
-                "Enum-as-Value"
+                "Enum-as-Value",
+                "Allow unknown enum values"
             ],
             "x-ordinal-index": 3
         },
         "Generator Type": {
-            "type": "string",
-            "enum": [
-                "Legacy",
-                "Overworld",
-                "Flat",
-                "Nether",
-                "TheEnd",
-                "Void",
-                "Undefined"
-            ],
+            "$ref": "./GeneratorType.json",
             "x-underlying-type": "int32",
             "x-serialization-options": [
                 "Compression",
-                "Enum-as-Value"
+                "Enum-as-Value",
+                "Allow unknown enum values"
             ],
             "x-ordinal-index": 2
         },
@@ -261,33 +225,22 @@
             "x-ordinal-index": 37
         },
         "Platform Broadcast Setting": {
-            "type": "string",
-            "enum": [
-                "NoMultiPlay",
-                "InviteOnly",
-                "FriendsOnly",
-                "FriendsOfFriends",
-                "Public"
-            ],
+            "$ref": "./GamePublishSetting.json",
             "x-underlying-type": "int32",
             "x-serialization-options": [
                 "Compression",
-                "Enum-as-Value"
+                "Enum-as-Value",
+                "Allow unknown enum values"
             ],
             "x-ordinal-index": 21
         },
         "Player Permissions": {
-            "type": "string",
-            "enum": [
-                "Visitor",
-                "Member",
-                "Operator",
-                "Custom"
-            ],
+            "$ref": "./PlayerPermissionLevel.json",
             "x-underlying-type": "int8",
             "x-serialization-options": [
                 "Compression",
-                "Enum-as-Value"
+                "Enum-as-Value",
+                "Allow unknown enum values"
             ],
             "x-ordinal-index": 28
         },
@@ -312,17 +265,12 @@
             "x-ordinal-index": 29
         },
         "Server Editor Connection Policy": {
-            "type": "string",
-            "enum": [
-                "MatchWorldType",
-                "EditorOnly",
-                "VanillaOnly",
-                "Mixed"
-            ],
+            "$ref": "./ServerEditorConnectionPolicy.json",
             "x-underlying-type": "int32",
             "x-serialization-options": [
                 "Compression",
-                "Enum-as-Value"
+                "Enum-as-Value",
+                "Allow unknown enum values"
             ],
             "x-ordinal-index": 48
         },
@@ -346,18 +294,12 @@
             "x-ordinal-index": 33
         },
         "Xbox Live Broadcast Setting": {
-            "type": "string",
-            "enum": [
-                "NoMultiPlay",
-                "InviteOnly",
-                "FriendsOnly",
-                "FriendsOfFriends",
-                "Public"
-            ],
+            "$ref": "./GamePublishSetting.json",
             "x-underlying-type": "int32",
             "x-serialization-options": [
                 "Compression",
-                "Enum-as-Value"
+                "Enum-as-Value",
+                "Allow unknown enum values"
             ],
             "x-ordinal-index": 20
         }
