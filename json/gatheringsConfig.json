@@ -3,23 +3,29 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/gatheringsConfig.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.44-beta.3",
-    "x-protocol-version": 2168,
+    "x-minecraft-version": "1.26.50-beta.26",
+    "x-protocol-version": 2192,
     "type": "object",
     "properties": {
         "creatorId": {
             "type": "string",
+            "default": "",
             "x-ordinal-index": 4,
             "minLength": 1,
             "maxLength": 60
         },
         "experienceId": {
+            "default": {
+                "Most Significant Bits": 0,
+                "Least Significant Bits": 0
+            },
             "$ref": "./mce__UUID.json",
             "x-ordinal-index": 0,
             "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
         },
         "experienceName": {
             "type": "string",
+            "default": "",
             "x-ordinal-index": 1,
             "minLength": 1,
             "maxLength": 29
@@ -52,15 +58,5 @@
             "minLength": 1,
             "maxLength": 29
         }
-    },
-    "required": [
-        "creatorId",
-        "experienceId",
-        "experienceName",
-        "scenarioId",
-        "serverId",
-        "targetId",
-        "worldId",
-        "worldName"
-    ]
+    }
 }

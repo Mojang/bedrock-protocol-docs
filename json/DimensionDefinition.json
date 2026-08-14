@@ -3,10 +3,15 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/DimensionDefinition.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.44-beta.3",
-    "x-protocol-version": 2168,
+    "x-minecraft-version": "1.26.50-beta.26",
+    "x-protocol-version": 2192,
     "type": "object",
     "properties": {
+        "Default Biome": {
+            "type": "string",
+            "x-ordinal-index": 5,
+            "maxLength": 256
+        },
         "Dimension Type": {
             "$ref": "./DimensionType.json",
             "x-ordinal-index": 3
@@ -29,15 +34,7 @@
             ],
             "x-ordinal-index": 2
         },
-        "Height Maximum": {
-            "type": "integer",
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Compression"
-            ],
-            "x-ordinal-index": 0
-        },
-        "Height Minimum": {
+        "Height Range": {
             "type": "integer",
             "x-underlying-type": "int32",
             "x-serialization-options": [
@@ -45,16 +42,25 @@
             ],
             "x-ordinal-index": 1
         },
+        "Minimum Y": {
+            "type": "integer",
+            "x-underlying-type": "int32",
+            "x-serialization-options": [
+                "Compression"
+            ],
+            "x-ordinal-index": 0
+        },
         "Pack Id": {
             "$ref": "./mce__UUID.json",
             "x-ordinal-index": 4
         }
     },
     "required": [
+        "Default Biome",
         "Dimension Type",
         "Generator Type",
-        "Height Maximum",
-        "Height Minimum",
+        "Height Range",
+        "Minimum Y",
         "Pack Id"
     ]
 }
