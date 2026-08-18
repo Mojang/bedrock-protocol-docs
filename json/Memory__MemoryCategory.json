@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/Memory__MemoryCategory.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.50-beta.26",
+    "x-protocol-version": 2192,
     "type": "string",
     "enum": [
         "Unknown",
@@ -65,7 +65,6 @@
         "OreUI_Client",
         "Persona_Pieces",
         "Persona_Animations",
-        "Persona_Textures",
         "Persona_Characters",
         "Persona_SkinPacks",
         "Persona_Repo",

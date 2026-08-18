@@ -3,13 +3,18 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/CameraPresets.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.50-beta.26",
+    "x-protocol-version": 2192,
     "type": "object",
     "properties": {
         "Aim Assist": {
             "$ref": "./SharedTypes__Comprehensive__CameraAimAssistCommandDefinition.json",
             "x-ordinal-index": 20
+        },
+        "Apply Inherited Starting Rotation": {
+            "type": "boolean",
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 22
         },
         "Block Listening Radius": {
             "type": "number",
@@ -99,6 +104,10 @@
             "x-underlying-type": "boolean",
             "x-ordinal-index": 8
         },
+        "Starting Rotation": {
+            "$ref": "./Vec2.json",
+            "x-ordinal-index": 23
+        },
         "Vertical Rotation Limit": {
             "$ref": "./Vec2.json",
             "x-ordinal-index": 10
@@ -120,6 +129,7 @@
     },
     "required": [
         "Aim Assist",
+        "Apply Inherited Starting Rotation",
         "Block Listening Radius",
         "Continue Targeting",
         "Control Scheme",
@@ -137,6 +147,7 @@
         "Rot Y",
         "Rotation Speed",
         "Snap to Target",
+        "Starting Rotation",
         "Vertical Rotation Limit",
         "View Offset",
         "Yaw Limit Max",

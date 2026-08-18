@@ -1,0 +1,15 @@
+{
+    "title": "FurnaceLayout",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/FurnaceLayout.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.50-beta.26",
+    "x-protocol-version": 2192,
+    "type": "string",
+    "enum": [
+        "None",
+        "InventoryOnly",
+        "Default"
+    ],
+    "x-underlying-type": "int32"
+}

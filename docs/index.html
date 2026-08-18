@@ -119,927 +119,736 @@
     <div class="container">
         
         <h1>Game Protocol Documentation</h1>
-<p>Documentation for 229 protocol packets.</p>
-<h2>Packet List</h2>
-<ul class="packet-list">
-<li>
-<a href="LoginPacket.html"><strong>LoginPacket (1)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent once from client to server at login. About 100k.</span>
-</li>
-<li>
-<a href="PlayStatusPacket.html"><strong>PlayStatusPacket (2)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Describes the login status of the player</span>
-</li>
-<li>
-<a href="ServerToClientHandshakePacket.html"><strong>ServerToClientHandshakePacket (3)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Server-&gt;Client Handshake</span>
-</li>
-<li>
-<a href="ClientToServerHandshakePacket.html"><strong>ClientToServerHandshakePacket (4)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sets up encryption and authenticates in educational version once at level startup from client.</span>
-</li>
-<li>
-<a href="DisconnectPacket.html"><strong>DisconnectPacket (5)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent from the server to a client to trigger a disconnection.</span>
-</li>
-<li>
-<a href="ResourcePacksInfoPacket.html"><strong>ResourcePacksInfoPacket (6)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Resource Packs Info</span>
-</li>
-<li>
-<a href="ResourcePackStackPacket.html"><strong>ResourcePackStackPacket (7)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Resource Pack Stack</span>
-</li>
-<li>
-<a href="ResourcePackClientResponsePacket.html"><strong>ResourcePackClientResponsePacket (8)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Resource Pack Client Response</span>
-</li>
-<li>
-<a href="TextPacket.html"><strong>TextPacket (9)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Represents a text message that needs to be displayed in-game</span>
-</li>
-<li>
-<a href="SetTimePacket.html"><strong>SetTimePacket (10)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Set Time</span>
-</li>
-<li>
-<a href="StartGamePacket.html"><strong>StartGamePacket (11)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent from the server to client when the game is starting (or client joins), gives ids and current ti...</span>
-</li>
-<li>
-<a href="AddPlayerPacket.html"><strong>AddPlayerPacket (12)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Add Player</span>
-</li>
-<li>
-<a href="AddActorPacket.html"><strong>AddActorPacket (13)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Add Actor</span>
-</li>
-<li>
-<a href="RemoveActorPacket.html"><strong>RemoveActorPacket (14)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Occasionally, during the server player tick some time is taken to remove nearby actors from the worl...</span>
-</li>
-<li>
-<a href="AddItemActorPacket.html"><strong>AddItemActorPacket (15)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">When an item actor is added to the world (punch a tree-&gt;tree block, for example)</span>
-</li>
-<li>
-<a href="ServerPlayerPostMovePositionPacket.html"><strong>ServerPlayerPostMovePositionPacket (16)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Used to send a player&#x27;s server position to the respective client at the end of movement.</span>
-</li>
-<li>
-<a href="TakeItemActorPacket.html"><strong>TakeItemActorPacket (17)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">A packet sent to the server when deal with picking up an item off the ground in the world.</span>
-</li>
-<li>
-<a href="MoveActorAbsolutePacket.html"><strong>MoveActorAbsolutePacket (18)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">This is used primarily for motion updates of all actors from server to client.</span>
-</li>
-<li>
-<a href="MovePlayerPacket.html"><strong>MovePlayerPacket (19)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">For client authoritative and server authoritative movement modes, it is only intended as a client-bo...</span>
-</li>
-<li>
-<a href="UpdateBlockPacket.html"><strong>UpdateBlockPacket (21)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Occasional packets sent from server when blocks update or are ticked. (For example, when digging.)</span>
-</li>
-<li>
-<a href="AddPaintingPacket.html"><strong>AddPaintingPacket (22)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sends the information for a new painting actor from server to client.</span>
-</li>
-<li>
-<a href="LevelEventPacket.html"><strong>LevelEventPacket (25)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Splash Potions, weather events, global pause, simlock commands, oh my!</span>
-</li>
-<li>
-<a href="BlockEventPacket.html"><strong>BlockEventPacket (26)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Whenever a block event happens it is sent from the server to sync client and server, with arbitraril...</span>
-</li>
-<li>
-<a href="ActorEventPacket.html"><strong>ActorEventPacket (27)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">All kinds of actor state changes (see Actor::handleEntityEvent).</span>
-</li>
-<li>
-<a href="MobEffectPacket.html"><strong>MobEffectPacket (28)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Mob Effect</span>
-</li>
-<li>
-<a href="UpdateAttributesPacket.html"><strong>UpdateAttributesPacket (29)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Update Attributes</span>
-</li>
-<li>
-<a href="InventoryTransactionPacket.html"><strong>InventoryTransactionPacket (30)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Inventory Transaction. Sent for item interaction UI depending on if ItemStackNetManager is enabled a...</span>
-</li>
-<li>
-<a href="MobEquipmentPacket.html"><strong>MobEquipmentPacket (31)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Mob Equipment. Changes to any mob&#x27;s held/offhand item are fired from server to client with this pack...</span>
-</li>
-<li>
-<a href="MobArmorEquipmentPacket.html"><strong>MobArmorEquipmentPacket (32)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Mob Armor Equipment</span>
-</li>
-<li>
-<a href="InteractPacket.html"><strong>InteractPacket (33)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Interact</span>
-</li>
-<li>
-<a href="BlockPickRequestPacket.html"><strong>BlockPickRequestPacket (34)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Player picks up a block in the world; client to server.</span>
-</li>
-<li>
-<a href="ActorPickRequestPacket.html"><strong>ActorPickRequestPacket (35)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Player clicks on an actor in the world, eg a chicken.</span>
-</li>
-<li>
-<a href="PlayerActionPacket.html"><strong>PlayerActionPacket (36)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent from the client whenever the player performs an action (dashing, un-dashing, use an item, mine/...</span>
-</li>
-<li>
-<a href="HurtArmorPacket.html"><strong>HurtArmorPacket (38)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Hurt Armor</span>
-</li>
-<li>
-<a href="SetActorDataPacket.html"><strong>SetActorDataPacket (39)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Regular Actor Data delta packets, sent from the level on tick, mob and actor during normal tick</span>
-</li>
-<li>
-<a href="SetActorMotionPacket.html"><strong>SetActorMotionPacket (40)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">This is used for the server to set the velocity of a client actor.</span>
-</li>
-<li>
-<a href="SetActorLinkPacket.html"><strong>SetActorLinkPacket (41)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent by both client and server, only received by LegacyClientHandler.</span>
-</li>
-<li>
-<a href="SetHealthPacket.html"><strong>SetHealthPacket (42)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">This packet is sent to the client when the player is spawned in and when they respawn.</span>
-</li>
-<li>
-<a href="SetSpawnPositionPacket.html"><strong>SetSpawnPositionPacket (43)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">When a player logs in or the SetWorldSpawnCommand is used this is sent from the server to the client...</span>
-</li>
-<li>
-<a href="AnimatePacket.html"><strong>AnimatePacket (44)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Animate Actor</span>
-</li>
-<li>
-<a href="RespawnPacket.html"><strong>RespawnPacket (45)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent as a handshake between the client and server to respawn the player.</span>
-</li>
-<li>
-<a href="ContainerOpenPacket.html"><strong>ContainerOpenPacket (46)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent from the server so that the client knows to open the container screen and do the chest opening ...</span>
-</li>
-<li>
-<a href="ContainerClosePacket.html"><strong>ContainerClosePacket (47)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">After the game deletes the container manager on the client, the client sends this packet.
-	Then the ...</span>
-</li>
-<li>
-<a href="PlayerHotbarPacket.html"><strong>PlayerHotbarPacket (48)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent from the server when the player uses pick block on actors or blocks, in addition to the player ...</span>
-</li>
-<li>
-<a href="InventoryContentPacket.html"><strong>InventoryContentPacket (49)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">This is used for updating an entire container. Example uses include: player respawned, replace items...</span>
-</li>
-<li>
-<a href="InventorySlotPacket.html"><strong>InventorySlotPacket (50)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Updates one slot in an inventory rather than the whole thing. So like animal inventory (horses, donk...</span>
-</li>
-<li>
-<a href="ContainerSetDataPacket.html"><strong>ContainerSetDataPacket (51)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">This is sent from the server basically any time that the &quot;cooking&quot; state of the brewing stand or the...</span>
-</li>
-<li>
-<a href="CraftingDataPacket.html"><strong>CraftingDataPacket (52)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Crafting Data</span>
-</li>
-<li>
-<a href="GuiDataPickItemPacket.html"><strong>GuiDataPickItemPacket (54)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">The server telling the client what item slot to hover over in the hotbar.</span>
-</li>
-<li>
-<a href="BlockActorDataPacket.html"><strong>BlockActorDataPacket (56)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sends the entire user data compound tag and the block position to the client.</span>
-</li>
-<li>
-<a href="LevelChunkPacket.html"><strong>LevelChunkPacket (58)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Level Chunk Packet</span>
-</li>
-<li>
-<a href="SetCommandsEnabledPacket.html"><strong>SetCommandsEnabledPacket (59)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">This is used by the world settings screen, cheats, EDU builds for teachers, and various other places...</span>
-</li>
-<li>
-<a href="SetDifficultyPacket.html"><strong>SetDifficultyPacket (60)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Set Difficulty</span>
-</li>
-<li>
-<a href="ChangeDimensionPacket.html"><strong>ChangeDimensionPacket (61)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">The server sends this packet from the level to kick off dimension changing process.</span>
-</li>
-<li>
-<a href="SetPlayerGameTypePacket.html"><strong>SetPlayerGameTypePacket (62)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Set Player Game Type</span>
-</li>
-<li>
-<a href="PlayerListPacket.html"><strong>PlayerListPacket (63)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Player List</span>
-</li>
-<li>
-<a href="SimpleEventPacket.html"><strong>SimpleEventPacket (64)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">This packet is used for enabling/disabling commands and for unlocking world template settings (both ...</span>
-</li>
-<li>
-<a href="LegacyTelemetryEventPacket.html"><strong>LegacyTelemetryEventPacket (65)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sends telemetry events to the client so the client can then send that on to the eventing system</span>
-</li>
-<li>
-<a href="SpawnExperienceOrbPacket.html"><strong>SpawnExperienceOrbPacket (66)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Spawn Experience Orb</span>
-</li>
-<li>
-<a href="ClientboundMapItemDataPacket.html"><strong>ClientboundMapItemDataPacket (67)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Map item data including pixels, decorations, and creation info</span>
-</li>
-<li>
-<a href="MapInfoRequestPacket.html"><strong>MapInfoRequestPacket (68)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">In the case of the client being unable to find map data for a map item it sends a uuid for a map to ...</span>
-</li>
-<li>
-<a href="RequestChunkRadiusPacket.html"><strong>RequestChunkRadiusPacket (69)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">The client can&#x27;t just change the view radius without the server&#x27;s approval, otherwise there could be...</span>
-</li>
-<li>
-<a href="ChunkRadiusUpdatedPacket.html"><strong>ChunkRadiusUpdatedPacket (70)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent when the world is loading. We don&#x27;t know why it is sent four times. Defines the tick distance.</span>
-</li>
-<li>
-<a href="GameRulesChangedPacket.html"><strong>GameRulesChangedPacket (72)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Updates game rules.</span>
-</li>
-<li>
-<a href="CameraPacket.html"><strong>CameraPacket (73)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Used only in EDU through the tripod camera item or the TakePictureCommand. Sends the camera actor id...</span>
-</li>
-<li>
-<a href="BossEventPacket.html"><strong>BossEventPacket (74)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent when a boss gets updated</span>
-</li>
-<li>
-<a href="ShowCreditsPacket.html"><strong>ShowCreditsPacket (75)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Starts on server when the credits screen should pop up.</span>
-</li>
-<li>
-<a href="AvailableCommandsPacket.html"><strong>AvailableCommandsPacket (76)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Contains all the available commands.</span>
-</li>
-<li>
-<a href="CommandRequestPacket.html"><strong>CommandRequestPacket (77)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">&quot;slash&quot; command execution, client to server.</span>
-</li>
-<li>
-<a href="CommandBlockUpdatePacket.html"><strong>CommandBlockUpdatePacket (78)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Command Block Update</span>
-</li>
-<li>
-<a href="CommandOutputPacket.html"><strong>CommandOutputPacket (79)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">&quot;slash&quot; command execution output, server to client.</span>
-</li>
-<li>
-<a href="UpdateTradePacket.html"><strong>UpdateTradePacket (80)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">This is used when the player trades with an npc. This sends all of the updated trade info in one big...</span>
-</li>
-<li>
-<a href="UpdateEquipPacket.html"><strong>UpdateEquipPacket (81)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Seemingly only used for the Horse Inventory... More specifically when the player opens the horse inv...</span>
-</li>
-<li>
-<a href="ResourcePackDataInfoPacket.html"><strong>ResourcePackDataInfoPacket (82)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Resource Pack Data Info</span>
-</li>
-<li>
-<a href="ResourcePackChunkDataPacket.html"><strong>ResourcePackChunkDataPacket (83)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Resource Pack Chunk Data</span>
-</li>
-<li>
-<a href="ResourcePackChunkRequestPacket.html"><strong>ResourcePackChunkRequestPacket (84)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Resource Pack Chunk Request</span>
-</li>
-<li>
-<a href="TransferPacket.html"><strong>TransferPacket (85)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Used to kick off transferring the client between online games, or it can be used to cause players to...</span>
-</li>
-<li>
-<a href="PlaySoundPacket.html"><strong>PlaySoundPacket (86)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">This packet is only used via command or script event. This is for 3rd party content.</span>
-</li>
-<li>
-<a href="StopSoundPacket.html"><strong>StopSoundPacket (87)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Allows you to stop a sound or all sounds on all clients, only used in a /command</span>
-</li>
-<li>
-<a href="SetTitlePacket.html"><strong>SetTitlePacket (88)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Used by 3rd party content for the purpose of showing ui banners</span>
-</li>
-<li>
-<a href="AddBehaviorTreePacket.html"><strong>AddBehaviorTreePacket (89)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Add Behavior Tree</span>
-</li>
-<li>
-<a href="StructureBlockUpdatePacket.html"><strong>StructureBlockUpdatePacket (90)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">After the client makes changes in the Structure Block Screen we tell the server to update based off ...</span>
-</li>
-<li>
-<a href="ShowStoreOfferPacket.html"><strong>ShowStoreOfferPacket (91)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Used for redirecting a user to the right offer.</span>
-</li>
-<li>
-<a href="PurchaseReceiptPacket.html"><strong>PurchaseReceiptPacket (92)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent from client to server</span>
-</li>
-<li>
-<a href="PlayerSkinPacket.html"><strong>PlayerSkinPacket (93)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Used when the player changes their skin</span>
-</li>
-<li>
-<a href="SubClientLoginPacket.html"><strong>SubClientLoginPacket (94)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">This packet starts the login process of subclients (splitscreen)</span>
-</li>
-<li>
-<a href="AutomationClientConnectPacket.html"><strong>AutomationClientConnectPacket (95)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Initiates websocket connection</span>
-</li>
-<li>
-<a href="SetLastHurtByPacket.html"><strong>SetLastHurtByPacket (96)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Any time a player is hit, the id of the last mob that attacked them is sent to the client</span>
-</li>
-<li>
-<a href="BookEditPacket.html"><strong>BookEditPacket (97)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sends the updated state of the Book and Quill item from client to server during use.</span>
-</li>
-<li>
-<a href="NpcRequestPacket.html"><strong>NpcRequestPacket (98)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Used for a number of interactions with the NPC Component</span>
-</li>
-<li>
-<a href="PhotoTransferPacket.html"><strong>PhotoTransferPacket (99)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">There is a camera item in EDU and they can use it to take screenshots and add them to a scrapbook.</span>
-</li>
-<li>
-<a href="ModalFormRequestPacket.html"><strong>ModalFormRequestPacket (100)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Modal Form Request</span>
-</li>
-<li>
-<a href="ModalFormResponsePacket.html"><strong>ModalFormResponsePacket (101)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Fired in response to third party server request to show the custom UI screen.</span>
-</li>
-<li>
-<a href="ServerSettingsRequestPacket.html"><strong>ServerSettingsRequestPacket (102)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent during the initialization of world settings on the client.</span>
-</li>
-<li>
-<a href="ServerSettingsResponsePacket.html"><strong>ServerSettingsResponsePacket (103)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Server Settings Response</span>
-</li>
-<li>
-<a href="ShowProfilePacket.html"><strong>ShowProfilePacket (104)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Show Profile</span>
-</li>
-<li>
-<a href="SetDefaultGameTypePacket.html"><strong>SetDefaultGameTypePacket (105)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Same as SetPlayerGameTypePacket &amp; UpdatePlayerGameTypePacket, the only difference is that this chang...</span>
-</li>
-<li>
-<a href="RemoveObjectivePacket.html"><strong>RemoveObjectivePacket (106)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Using the scoreboard command, users can remove objectives that are tracked on the scoreboard.</span>
-</li>
-<li>
-<a href="SetDisplayObjectivePacket.html"><strong>SetDisplayObjectivePacket (107)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent from the server for 3rd party content to display current objectives and status</span>
-</li>
-<li>
-<a href="SetScorePacket.html"><strong>SetScorePacket (108)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Set Score</span>
-</li>
-<li>
-<a href="LabTablePacket.html"><strong>LabTablePacket (109)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">For the EDU Chemistry Lab Table block actor.</span>
-</li>
-<li>
-<a href="UpdateBlockSyncedPacket.html"><strong>UpdateBlockSyncedPacket (110)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Used to sync moving blocks with clients so they render correctly</span>
-</li>
-<li>
-<a href="MoveActorDeltaPacket.html"><strong>MoveActorDeltaPacket (111)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">This packet is all the deltas of actors position, rotation, and head rotation. This is used for all ...</span>
-</li>
-<li>
-<a href="SetScoreboardIdentityPacket.html"><strong>SetScoreboardIdentityPacket (112)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Set Scoreboard Identity</span>
-</li>
-<li>
-<a href="SetLocalPlayerAsInitializedPacket.html"><strong>SetLocalPlayerAsInitializedPacket (113)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Set Local Player As Initialized</span>
-</li>
-<li>
-<a href="UpdateSoftEnumPacket.html"><strong>UpdateSoftEnumPacket (114)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">This is used for the scoreboard and tag systems (overwhelmingly used by 3rd party content)</span>
-</li>
-<li>
-<a href="NetworkStackLatencyPacket.html"><strong>NetworkStackLatencyPacket (115)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Ping Packet</span>
-</li>
-<li>
-<a href="SpawnParticleEffectPacket.html"><strong>SpawnParticleEffectPacket (118)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Tell client to spawn a particle effect.</span>
-</li>
-<li>
-<a href="AvailableActorIdentifiersPacket.html"><strong>AvailableActorIdentifiersPacket (119)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sends the whole list of actor identifiers at game start from the server.</span>
-</li>
-<li>
-<a href="NetworkChunkPublisherUpdatePacket.html"><strong>NetworkChunkPublisherUpdatePacket (121)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Tells clients to update the chunk view for the local player.</span>
-</li>
-<li>
-<a href="BiomeDefinitionListPacket.html"><strong>BiomeDefinitionListPacket (122)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">On world start, send clients the info for all available biomes.</span>
-</li>
-<li>
-<a href="LevelSoundEventPacket.html"><strong>LevelSoundEventPacket (123)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Level Sound Event</span>
-</li>
-<li>
-<a href="LevelEventGenericPacket.html"><strong>LevelEventGenericPacket (124)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">LevelEventGenericPacket</span>
-</li>
-<li>
-<a href="LecternUpdatePacket.html"><strong>LecternUpdatePacket (125)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">This is used for the Lectern Block Actor.</span>
-</li>
-<li>
-<a href="ClientCacheStatusPacket.html"><strong>ClientCacheStatusPacket (129)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">It is sent by the Client once, at login, to communicate if it supports the cache or not.</span>
-</li>
-<li>
-<a href="OnScreenTextureAnimationPacket.html"><strong>OnScreenTextureAnimationPacket (130)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">On-Screen Texture Animation</span>
-</li>
-<li>
-<a href="MapCreateLockedCopyPacket.html"><strong>MapCreateLockedCopyPacket (131)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">This is fired when the user locks a map item utilizing the Cartography Table in game.</span>
-</li>
-<li>
-<a href="StructureTemplateDataRequestPacket.html"><strong>StructureTemplateDataRequestPacket (132)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Used to request structure information from a server.</span>
-</li>
-<li>
-<a href="StructureTemplateDataResponsePacket.html"><strong>StructureTemplateDataResponsePacket (133)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">This is used in exporting from load, exporting from save, and querying saved structures from structu...</span>
-</li>
-<li>
-<a href="ClientCacheBlobStatusPacket.html"><strong>ClientCacheBlobStatusPacket (135)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Client Cache Blob Status Packet</span>
-</li>
-<li>
-<a href="ClientCacheMissResponsePacket.html"><strong>ClientCacheMissResponsePacket (136)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Only active in a real client-server scenario. This packet is just a list of &lt;blobId, blob&gt; pairs sen...</span>
-</li>
-<li>
-<a href="EducationSettingsPacket.html"><strong>EducationSettingsPacket (137)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Transmits EducationLevelSettings to all clients.</span>
-</li>
-<li>
-<a href="EmotePacket.html"><strong>EmotePacket (138)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">A client sends this to the server to notify other clients about the emote.</span>
-</li>
-<li>
-<a href="MultiplayerSettingsPacket.html"><strong>MultiplayerSettingsPacket (139)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Syncs multiplayer settings</span>
-</li>
-<li>
-<a href="SettingsCommandPacket.html"><strong>SettingsCommandPacket (140)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Requests a setting to be changed through commands.</span>
-</li>
-<li>
-<a href="AnvilDamagePacket.html"><strong>AnvilDamagePacket (141)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Requests an anvil to be damaged.</span>
-</li>
-<li>
-<a href="CompletedUsingItemPacket.html"><strong>CompletedUsingItemPacket (142)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Send server to client to complete the using item process. An example is when you finish drinking or ...</span>
-</li>
-<li>
-<a href="NetworkSettingsPacket.html"><strong>NetworkSettingsPacket (143)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sends tunable options from host to client (compression threshold and algorithm)</span>
-</li>
-<li>
-<a href="PlayerAuthInputPacket.html"><strong>PlayerAuthInputPacket (144)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Player Auth Input</span>
-</li>
-<li>
-<a href="CreativeContentPacket.html"><strong>CreativeContentPacket (145)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Creative Content</span>
-</li>
-<li>
-<a href="PlayerEnchantOptionsPacket.html"><strong>PlayerEnchantOptionsPacket (146)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sends the of new Enchanting options  from the server when a player right clicks the enchantment tabl...</span>
-</li>
-<li>
-<a href="ItemStackRequestPacket.html"><strong>ItemStackRequestPacket (147)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">The new server auth inventory item transaction request. This is done in batches of items.</span>
-</li>
-<li>
-<a href="ItemStackResponsePacket.html"><strong>ItemStackResponsePacket (148)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Server auth inventory item transaction response, sent from the server.</span>
-</li>
-<li>
-<a href="PlayerArmorDamagePacket.html"><strong>PlayerArmorDamagePacket (149)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent from server whenever the player&#x27;s armor takes damage.</span>
-</li>
-<li>
-<a href="CodeBuilderPacket.html"><strong>CodeBuilderPacket (150)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Code Builder Packet</span>
-</li>
-<li>
-<a href="UpdatePlayerGameTypePacket.html"><strong>UpdatePlayerGameTypePacket (151)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">The server will send this back to all clients on receipt of the SetPlayerGameTypePacket so that cach...</span>
-</li>
-<li>
-<a href="EmoteListPacket.html"><strong>EmoteListPacket (152)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Allows clients to download emotes that other clients have equipped.</span>
-</li>
-<li>
-<a href="PositionTrackingDBServerBroadcastPacket.html"><strong>PositionTrackingDBServerBroadcastPacket (153)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Server to client packet for server authoratative runtime database (with persistent LevelStorage back...</span>
-</li>
-<li>
-<a href="PositionTrackingDBClientRequestPacket.html"><strong>PositionTrackingDBClientRequestPacket (154)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Position Tracking DB Client Request</span>
-</li>
-<li>
-<a href="DebugInfoPacket.html"><strong>DebugInfoPacket (155)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">The system sends debug information via a generic network packet. This enables rendering of any serve...</span>
-</li>
-<li>
-<a href="PacketViolationWarningPacket.html"><strong>PacketViolationWarningPacket (156)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">This is sent when the client detects a malformed packet</span>
-</li>
-<li>
-<a href="MotionPredictionHintsPacket.html"><strong>MotionPredictionHintsPacket (157)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">It is essentially a SetActionMotionPacket with a bool indicating if the actor was on the ground at t...</span>
-</li>
-<li>
-<a href="AnimateEntityPacket.html"><strong>AnimateEntityPacket (158)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">The AnimateEntityPacket is used to trigger a one - off animation on the client it is sent to.</span>
-</li>
-<li>
-<a href="CameraShakePacket.html"><strong>CameraShakePacket (159)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Used to control trigger camera shake movements on the client&#x27;s player camera</span>
-</li>
-<li>
-<a href="PlayerFogPacket.html"><strong>PlayerFogPacket (160)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Player Fog Packet</span>
-</li>
-<li>
-<a href="CorrectPlayerMovePredictionPacket.html"><strong>CorrectPlayerMovePredictionPacket (161)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent to a player when their simulation of movement mismatches enough from the server that it wants t...</span>
-</li>
-<li>
-<a href="ItemRegistryPacket.html"><strong>ItemRegistryPacket (162)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Item data from the server. Contains component information.</span>
-</li>
-<li>
-<a href="ClientboundDebugRendererPacket.html"><strong>ClientboundDebugRendererPacket (164)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Used to add/remove debug rendering objects.</span>
-</li>
-<li>
-<a href="SyncActorPropertyPacket.html"><strong>SyncActorPropertyPacket (165)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Allows us to synchronize Actor properties across the network.</span>
-</li>
-<li>
-<a href="AddVolumeEntityPacket.html"><strong>AddVolumeEntityPacket (166)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sends a volume entity&#x27;s definition and components from server to client.</span>
-</li>
-<li>
-<a href="RemoveVolumeEntityPacket.html"><strong>RemoveVolumeEntityPacket (167)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sends a volume entity to be removed from server to client.</span>
-</li>
-<li>
-<a href="SimulationTypePacket.html"><strong>SimulationTypePacket (168)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent from the server to the client when setting the simulation type for toolbox mode. (Not yet supor...</span>
-</li>
-<li>
-<a href="NpcDialoguePacket.html"><strong>NpcDialoguePacket (169)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent from the server to client when remote firing an NPC dialogue window for a client</span>
-</li>
-<li>
-<a href="EduUriResourcePacket.html"><strong>EduUriResourcePacket (170)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Transmits Edu Shared Uri Resource settings to all clients.</span>
-</li>
-<li>
-<a href="CreatePhotoPacket.html"><strong>CreatePhotoPacket (171)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Players now have the possibility to export photos from their portfolios into photo items in their in...</span>
-</li>
-<li>
-<a href="UpdateSubChunkBlocksPacket.html"><strong>UpdateSubChunkBlocksPacket (172)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Packet sent for every set of blocks changed in a sub chunk every tick.</span>
-</li>
-<li>
-<a href="SubChunkPacket.html"><strong>SubChunkPacket (174)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent from server to client representing a batch of subchunk data.</span>
-</li>
-<li>
-<a href="SubChunkRequestPacket.html"><strong>SubChunkRequestPacket (175)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent from the client to the server representing a batch of subchunks that the client requests from t...</span>
-</li>
-<li>
-<a href="PlayerStartItemCooldownPacket.html"><strong>PlayerStartItemCooldownPacket (176)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Player Start Item Cooldown</span>
-</li>
-<li>
-<a href="ScriptMessagePacket.html"><strong>ScriptMessagePacket (177)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Used to send custom messages between client and server.</span>
-</li>
-<li>
-<a href="CodeBuilderSourcePacket.html"><strong>CodeBuilderSourcePacket (178)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">This is EDU exclusive, used in getInterface() of WebviewSystem</span>
-</li>
-<li>
-<a href="TickingAreasLoadStatusPacket.html"><strong>TickingAreasLoadStatusPacket (179)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Used to inform the client that the server is waiting for ticking areas to finish preloading.</span>
-</li>
-<li>
-<a href="DimensionDataPacket.html"><strong>DimensionDataPacket (180)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Brief packet containing data-driven dimension properties</span>
-</li>
-<li>
-<a href="AgentActionEventPacket.html"><strong>AgentActionEventPacket (181)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">packet containing data of Agent Action Type</span>
-</li>
-<li>
-<a href="ChangeMobPropertyPacket.html"><strong>ChangeMobPropertyPacket (182)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">packet containing data for changing mob property</span>
-</li>
-<li>
-<a href="LessonProgressPacket.html"><strong>LessonProgressPacket (183)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Lesson Progress</span>
-</li>
-<li>
-<a href="RequestAbilityPacket.html"><strong>RequestAbilityPacket (184)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent from client to server. Used to request an ability change.</span>
-</li>
-<li>
-<a href="RequestPermissionsPacket.html"><strong>RequestPermissionsPacket (185)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent from client to server. Used to request a new Permissions Levels.</span>
-</li>
-<li>
-<a href="ToastRequestPacket.html"><strong>ToastRequestPacket (186)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Pushes a UI toast message to be displayed by the client</span>
-</li>
-<li>
-<a href="UpdateAbilitiesPacket.html"><strong>UpdateAbilitiesPacket (187)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent by the server to update the state of a player&#x27;s Abilities.</span>
-</li>
-<li>
-<a href="UpdateAdventureSettingsPacket.html"><strong>UpdateAdventureSettingsPacket (188)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">UpdateAdventureSettingsPacket</span>
-</li>
-<li>
-<a href="DeathInfoPacket.html"><strong>DeathInfoPacket (189)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent from the server to client when player dies (Level::onPlayerDeath).</span>
-</li>
-<li>
-<a href="EditorNetworkPacket.html"><strong>EditorNetworkPacket (190)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">General use Editor specific packet - carries a payload of whatever serialized data that the individu...</span>
-</li>
-<li>
-<a href="FeatureRegistryPacket.html"><strong>FeatureRegistryPacket (191)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">This is the packet that tracks the active feature registry data from the server so that client can p...</span>
-</li>
-<li>
-<a href="ServerStatsPacket.html"><strong>ServerStatsPacket (192)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Used to send performance and other valuable stats back to the client</span>
-</li>
-<li>
-<a href="RequestNetworkSettingsPacket.html"><strong>RequestNetworkSettingsPacket (193)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Requests tunable options from host to client (compression threshold and algorithm).</span>
-</li>
-<li>
-<a href="GameTestRequestPacket.html"><strong>GameTestRequestPacket (194)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Internal Text Packet</span>
-</li>
-<li>
-<a href="GameTestResultsPacket.html"><strong>GameTestResultsPacket (195)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Game Test Results Packet</span>
-</li>
-<li>
-<a href="UpdateClientInputLocksPacket.html"><strong>UpdateClientInputLocksPacket (196)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">UpdateClientInputLocksPacket</span>
-</li>
-<li>
-<a href="CameraPresetsPacket.html"><strong>CameraPresetsPacket (198)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Used to sync CameraPresets data from server to clients.</span>
-</li>
-<li>
-<a href="UnlockedRecipesPacket.html"><strong>UnlockedRecipesPacket (199)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent from server to client, for all previously unlocked recipes on load and for any newly unlocked r...</span>
-</li>
-<li>
-<a href="CameraInstructionPacket.html"><strong>CameraInstructionPacket (300)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Used to send a CameraInstruction from the server to the specified clients.</span>
-</li>
-<li>
-<a href="TrimDataPacket.html"><strong>TrimDataPacket (302)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent from the server on level startup to send all trim patterns to the client.</span>
-</li>
-<li>
-<a href="OpenSignPacket.html"><strong>OpenSignPacket (303)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent from the server so that the client knows to open the sign screen.</span>
-</li>
-<li>
-<a href="AgentAnimationPacket.html"><strong>AgentAnimationPacket (304)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Broadcasted to other players when an Agent performs an animation so it gets properly replicated.</span>
-</li>
-<li>
-<a href="RefreshEntitlementsPacket.html"><strong>RefreshEntitlementsPacket (305)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Refresh Entitlements</span>
-</li>
-<li>
-<a href="PlayerToggleCrafterSlotRequestPacket.html"><strong>PlayerToggleCrafterSlotRequestPacket (306)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">PlayerToggleCrafterSlotRequestPacket</span>
-</li>
-<li>
-<a href="SetPlayerInventoryOptionsPacket.html"><strong>SetPlayerInventoryOptionsPacket (307)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">SetPlayerInventoryOptionsPacket</span>
-</li>
-<li>
-<a href="SetHudPacket.html"><strong>SetHudPacket (308)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">This packet is only used via the set hud command. This is for 3rd party content.</span>
-</li>
-<li>
-<a href="AwardAchievementPacket.html"><strong>AwardAchievementPacket (309)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Contains the ID of the achievement to award</span>
-</li>
-<li>
-<a href="ClientboundCloseFormPacket.html"><strong>ClientboundCloseFormPacket (310)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent from the server to client to force close all server forms on the stack and return to the HUD sc...</span>
-</li>
-<li>
-<a href="ServerboundLoadingScreenPacket.html"><strong>ServerboundLoadingScreenPacket (312)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent from the client to the server to message to the server about the state of the loading screen.</span>
-</li>
-<li>
-<a href="JigsawStructureDataPacket.html"><strong>JigsawStructureDataPacket (313)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Jigsaw Structure data used by client jigsaw structure worldgen. This packet contains a copy of the b...</span>
-</li>
-<li>
-<a href="CurrentStructureFeaturePacket.html"><strong>CurrentStructureFeaturePacket (314)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Informs the client of which Structure Feature they are currently occupying.</span>
-</li>
-<li>
-<a href="ServerboundDiagnosticsPacket.html"><strong>ServerboundDiagnosticsPacket (315)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent from the client to the server IF ProfilerLite is enabled AND the creator toggle for additional ...</span>
-</li>
-<li>
-<a href="CameraAimAssistPacket.html"><strong>CameraAimAssistPacket (316)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">CameraAimAssist</span>
-</li>
-<li>
-<a href="ContainerRegistryCleanupPacket.html"><strong>ContainerRegistryCleanupPacket (317)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">This is used to trigger a clientside cleanup of the dynamic container registry.</span>
-</li>
-<li>
-<a href="MovementEffectPacket.html"><strong>MovementEffectPacket (318)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">These packets are sent to the client to update specific MovementEffects</span>
-</li>
-<li>
-<a href="CameraAimAssistPresetsPacket.html"><strong>CameraAimAssistPresetsPacket (320)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Camera aim-assist registry presets/categories data sent from the server to clients.</span>
-</li>
-<li>
-<a href="ClientCameraAimAssistPacket.html"><strong>ClientCameraAimAssistPacket (321)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Client-side activation of aim-assist</span>
-</li>
-<li>
-<a href="ClientMovementPredictionSyncPacket.html"><strong>ClientMovementPredictionSyncPacket (322)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sends client movement prediction information to the server</span>
-</li>
-<li>
-<a href="UpdateClientOptionsPacket.html"><strong>UpdateClientOptionsPacket (323)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sync the player&#x27;s options (mostly settings) to the server.</span>
-</li>
-<li>
-<a href="PlayerVideoCapturePacket.html"><strong>PlayerVideoCapturePacket (324)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Used by a test command to start/stop video capture</span>
-</li>
-<li>
-<a href="PlayerUpdateEntityOverridesPacket.html"><strong>PlayerUpdateEntityOverridesPacket (325)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Player Update Entity Overrides</span>
-</li>
-<li>
-<a href="PlayerLocationPacket.html"><strong>PlayerLocationPacket (326)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Updates the client with the position of a player outside simulation distance, or hides a player.</span>
-</li>
-<li>
-<a href="ClientboundControlSchemeSetPacket.html"><strong>ClientboundControlSchemeSetPacket (327)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Set the control scheme that the player should use</span>
-</li>
-<li>
-<a href="PrimitiveShapesPacket.html"><strong>PrimitiveShapesPacket (328)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Send primitive drawing shape info (from scripting) to the client for rendering</span>
-</li>
-<li>
-<a href="ServerboundPackSettingChangePacket.html"><strong>ServerboundPackSettingChangePacket (329)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent from the client to the server when players change Pack Settings (pack UI).</span>
-</li>
-<li>
-<a href="ClientboundDataStorePacket.html"><strong>ClientboundDataStorePacket (330)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sends a list of data store properties from the server to the client.</span>
-</li>
-<li>
-<a href="GraphicsOverrideParameterPacket.html"><strong>GraphicsOverrideParameterPacket (331)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent from the server to the client when a server script changes the rendering settings</span>
-</li>
-<li>
-<a href="ServerboundDataStorePacket.html"><strong>ServerboundDataStorePacket (332)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Applies a single update to the server data store from the client.</span>
-</li>
-<li>
-<a href="ClientboundDataDrivenUIShowScreenPacket.html"><strong>ClientboundDataDrivenUIShowScreenPacket (333)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Allows the server to tell the client to show a Data Driven UI screen.</span>
-</li>
-<li>
-<a href="ClientboundDataDrivenUICloseScreenPacket.html"><strong>ClientboundDataDrivenUICloseScreenPacket (334)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Allows the server to tell the client to close Data Driven UI screens.</span>
-</li>
-<li>
-<a href="ClientboundDataDrivenUIReloadPacket.html"><strong>ClientboundDataDrivenUIReloadPacket (335)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Allows the server to tell the client to reload the Data Driven UI.</span>
-</li>
-<li>
-<a href="ClientboundTextureShiftPacket.html"><strong>ClientboundTextureShiftPacket (336)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sends a set of update properties for the texture shift system from the server to the client.</span>
-</li>
-<li>
-<a href="VoxelShapesPacket.html"><strong>VoxelShapesPacket (337)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Syncs client with server voxel shape data on world join. This packet contains a copy of all behavior...</span>
-</li>
-<li>
-<a href="CameraSplinePacket.html"><strong>CameraSplinePacket (338)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Camera custom spline data sent from server to client.</span>
-</li>
-<li>
-<a href="CameraAimAssistActorPriorityPacket.html"><strong>CameraAimAssistActorPriorityPacket (339)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Camera aim-assist actor priority data sent from the server to clients.</span>
-</li>
-<li>
-<a href="ResourcePacksReadyForValidationPacket.html"><strong>ResourcePacksReadyForValidationPacket (340)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Used to inform the server that the client has finished loading all resource packs.</span>
-</li>
-<li>
-<a href="LocatorBarPacket.html"><strong>LocatorBarPacket (341)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Syncs LocatorBar changes on the server with the client.</span>
-</li>
-<li>
-<a href="PartyChangedPacket.html"><strong>PartyChangedPacket (342)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent by the client to provide additional client metadata.</span>
-</li>
-<li>
-<a href="ServerboundDataDrivenScreenClosedPacket.html"><strong>ServerboundDataDrivenScreenClosedPacket (343)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent from the client to the server when a data driven screen is closed.</span>
-</li>
-<li>
-<a href="SyncWorldClocksPacket.html"><strong>SyncWorldClocksPacket (344)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Initializes and syncs world clocks from the server to clients. (Currently disabled)</span>
-</li>
-<li>
-<a href="ClientboundAttributeLayerSyncPacket.html"><strong>ClientboundAttributeLayerSyncPacket (345)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Syncs Attribute Layers to the Client (Currently disabled)</span>
-</li>
-<li>
-<a href="ServerStoreInfoPacket.html"><strong>ServerStoreInfoPacket (346)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent by the server to provide ClientStoreEntryPointConfiguration to the client.</span>
-</li>
-<li>
-<a href="ServerPresenceInfoPacket.html"><strong>ServerPresenceInfoPacket (347)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent by the server to provide PresenceConfiguration to the client.</span>
-</li>
-<li>
-<a href="ClientboundUpdateSoundDataPacket.html"><strong>ClientboundUpdateSoundDataPacket (348)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent to update sound data.</span>
-</li>
-<li>
-<a href="SendPartyDestinationCookiePacket.html"><strong>SendPartyDestinationCookiePacket (349)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent by the server to a client with a party destination cookie.</span>
-</li>
-<li>
-<a href="PartyDestinationCookieResponsePacket.html"><strong>PartyDestinationCookieResponsePacket (350)</strong></a>
-<br><span style="color: #666; font-size: 0.9em;">Sent by the client to the server with a party destination cookie response.</span>
-</li>
-</ul>
+    <p>Documentation for 725 protocol packets.</p>
+    <h2>Packet List</h2>
+    <ul class="packet-list">
+        <li><a href="(anonymous_namespace)__MapInfoRequestPacketAnon__ClientPixelsProxy.html"><strong>(anonymous namespace)::MapInfoRequestPacketAnon::ClientPixelsProxy</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Achievement.html"><strong>Achievement</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ActorBlockSyncMessage__MessageId.html"><strong>ActorBlockSyncMessage::MessageId</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ActorDataBoundingBoxComponent.html"><strong>ActorDataBoundingBoxComponent</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ActorDataFlagComponent.html"><strong>ActorDataFlagComponent</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ActorDefinition.html"><strong>ActorDefinition</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ActorEvent.html"><strong>ActorEvent</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ActorLink.html"><strong>ActorLink</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ActorLinkType.html"><strong>ActorLinkType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ActorRuntimeID.html"><strong>ActorRuntimeID</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ActorSwingSource.html"><strong>ActorSwingSource</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ActorType.html"><strong>ActorType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ActorUniqueID.html"><strong>ActorUniqueID</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="AddTimeMarkerData.html"><strong>AddTimeMarkerData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="AdventureSettings.html"><strong>AdventureSettings</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Agent_Animation.html"><strong>Agent Animation</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="AgentActionType.html"><strong>AgentActionType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="AgentCapabilities.html"><strong>AgentCapabilities</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Aim-Assist_Target_Mode.html"><strong>Aim-Assist Target Mode</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="AimAssistActorPriorityData.html"><strong>AimAssistActorPriorityData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="AnimatedImageData.html"><strong>AnimatedImageData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="AnimatePacketPayload_Action.html"><strong>AnimatePacketPayload Action</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="AnimationMode.html"><strong>AnimationMode</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ArmorSlotAndDamagePair.html"><strong>ArmorSlotAndDamagePair</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="AttributeData.html"><strong>AttributeData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="AttributeLayerData.html"><strong>AttributeLayerData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="AttributeLayerSettings.html"><strong>AttributeLayerSettings</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="AttributeModifier.html"><strong>AttributeModifier</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="AttributeModifierOperation.html"><strong>AttributeModifierOperation</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="AttributeOperands.html"><strong>AttributeOperands</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="AuthorAndMessage.html"><strong>AuthorAndMessage</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="AvailableCommandsPacketChainedSubcommandData.html"><strong>AvailableCommandsPacketChainedSubcommandData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="AvailableCommandsPacketChainedSubcommandRelationship.html"><strong>AvailableCommandsPacketChainedSubcommandRelationship</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="AvailableCommandsPacketCommandData.html"><strong>AvailableCommandsPacketCommandData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="AvailableCommandsPacketConstrainedValueData.html"><strong>AvailableCommandsPacketConstrainedValueData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="AvailableCommandsPacketEnumData.html"><strong>AvailableCommandsPacketEnumData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="AvailableCommandsPacketOverloadData.html"><strong>AvailableCommandsPacketOverloadData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="AvailableCommandsPacketParamData.html"><strong>AvailableCommandsPacketParamData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="AvailableCommandsPacketSoftEnumData.html"><strong>AvailableCommandsPacketSoftEnumData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Bedrock__Safety__RedactableString.html"><strong>Bedrock::Safety::RedactableString</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BellUsed.html"><strong>BellUsed</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeCappedSurfaceData.html"><strong>BiomeCappedSurfaceData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeClimateData.html"><strong>BiomeClimateData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeConditionalTransformationData.html"><strong>BiomeConditionalTransformationData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeConsolidatedFeatureData.html"><strong>BiomeConsolidatedFeatureData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeConsolidatedFeaturesData.html"><strong>BiomeConsolidatedFeaturesData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeCoordinateData.html"><strong>BiomeCoordinateData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeDefinitionChunkGenData.html"><strong>BiomeDefinitionChunkGenData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeDefinitionData.html"><strong>BiomeDefinitionData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeElementData.html"><strong>BiomeElementData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeLegacyWorldGenRulesData.html"><strong>BiomeLegacyWorldGenRulesData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeMesaSurfaceData.html"><strong>BiomeMesaSurfaceData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeMountainParamsData.html"><strong>BiomeMountainParamsData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeMultinoiseGenRulesData.html"><strong>BiomeMultinoiseGenRulesData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeNoiseGradientSurfaceData.html"><strong>BiomeNoiseGradientSurfaceData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeOverworldGenRulesData.html"><strong>BiomeOverworldGenRulesData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeReplacementData.html"><strong>BiomeReplacementData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeReplacementsData.html"><strong>BiomeReplacementsData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeScatterParamData.html"><strong>BiomeScatterParamData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeStringList.html"><strong>BiomeStringList</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeSurfaceBuilderData.html"><strong>BiomeSurfaceBuilderData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeSurfaceMaterialAdjustmentData.html"><strong>BiomeSurfaceMaterialAdjustmentData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeSurfaceMaterialData.html"><strong>BiomeSurfaceMaterialData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeTagsData.html"><strong>BiomeTagsData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeTemperatureCategory.html"><strong>BiomeTemperatureCategory</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeWeightedData.html"><strong>BiomeWeightedData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BiomeWeightedTemperatureData.html"><strong>BiomeWeightedTemperatureData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Block_Reference.html"><strong>Block Reference</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BlockCommandData.html"><strong>BlockCommandData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BlockPos.html"><strong>BlockPos</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BookEditAction__AddPage.html"><strong>BookEditAction::AddPage</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BookEditAction__DeletePage.html"><strong>BookEditAction::DeletePage</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BookEditAction__Finalize.html"><strong>BookEditAction::Finalize</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BookEditAction__ReplacePage.html"><strong>BookEditAction::ReplacePage</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BookEditAction__SwapPages.html"><strong>BookEditAction::SwapPages</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BoolAttributeData.html"><strong>BoolAttributeData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BoolAttributeOperation.html"><strong>BoolAttributeOperation</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BossBarColor.html"><strong>BossBarColor</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BossBarOverlay.html"><strong>BossBarOverlay</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BossEventUpdateType.html"><strong>BossEventUpdateType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BossKilled.html"><strong>BossKilled</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="BuildPlatform.html"><strong>BuildPlatform</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ByteTag.html"><strong>ByteTag</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraAimAssist_Identifier.html"><strong>CameraAimAssist Identifier</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraAimAssistCategory_Identifier.html"><strong>CameraAimAssistCategory Identifier</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraAimAssistCategory_Reference.html"><strong>CameraAimAssistCategory Reference</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraAimAssistCategoryDefinition.html"><strong>CameraAimAssistCategoryDefinition</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraAimAssistCategoryPriorities.html"><strong>CameraAimAssistCategoryPriorities</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraAimAssistPacketPayload_Action.html"><strong>CameraAimAssistPacketPayload Action</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraAimAssistPacketPayload_TargetMode.html"><strong>CameraAimAssistPacketPayload TargetMode</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraAimAssistPresetDefinition.html"><strong>CameraAimAssistPresetDefinition</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraAimAssistPresetExclusionDefinition.html"><strong>CameraAimAssistPresetExclusionDefinition</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraAimAssistPresetsPacketOperation.html"><strong>CameraAimAssistPresetsPacketOperation</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraInstruction__AttachToEntityInstruction.html"><strong>CameraInstruction::AttachToEntityInstruction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraInstruction__FadeInstruction__ColorOption.html"><strong>CameraInstruction::FadeInstruction::ColorOption</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraInstruction__FadeInstruction__TimeOption.html"><strong>CameraInstruction::FadeInstruction::TimeOption</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraInstruction__FadeInstruction.html"><strong>CameraInstruction::FadeInstruction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraInstruction__FovInstruction.html"><strong>CameraInstruction::FovInstruction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraInstruction__SetInstruction__EaseOption.html"><strong>CameraInstruction::SetInstruction::EaseOption</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraInstruction__SetInstruction__EntityOffsetOption.html"><strong>CameraInstruction::SetInstruction::EntityOffsetOption</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraInstruction__SetInstruction__FacingOption.html"><strong>CameraInstruction::SetInstruction::FacingOption</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraInstruction__SetInstruction__PosOption.html"><strong>CameraInstruction::SetInstruction::PosOption</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraInstruction__SetInstruction__RotOption.html"><strong>CameraInstruction::SetInstruction::RotOption</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraInstruction__SetInstruction__ViewOffsetOption.html"><strong>CameraInstruction::SetInstruction::ViewOffsetOption</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraInstruction__SetInstruction.html"><strong>CameraInstruction::SetInstruction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraInstruction__SplineInstruction__SplineProgressOption.html"><strong>CameraInstruction::SplineInstruction::SplineProgressOption</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraInstruction__SplineInstruction__SplineRotationOption.html"><strong>CameraInstruction::SplineInstruction::SplineRotationOption</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraInstruction__SplineInstruction.html"><strong>CameraInstruction::SplineInstruction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraInstruction__TargetInstruction.html"><strong>CameraInstruction::TargetInstruction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraInstruction.html"><strong>CameraInstruction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraPresets.html"><strong>CameraPresets</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraShakeAction.html"><strong>CameraShakeAction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraShakeType.html"><strong>CameraShakeType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraSplineControlPoint.html"><strong>CameraSplineControlPoint</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraSplineDefinition.html"><strong>CameraSplineDefinition</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraSplineProgressKeyFrame.html"><strong>CameraSplineProgressKeyFrame</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CameraSplineRotationKeyFrame.html"><strong>CameraSplineRotationKeyFrame</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CauldronUsed.html"><strong>CauldronUsed</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="cerealizer_NetworkItemStackDescriptor___SerializedData.html"><strong>cerealizer&lt;NetworkItemStackDescriptor&gt;::SerializedData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ChangeEntityScore.html"><strong>ChangeEntityScore</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ChangeFakePlayerScore.html"><strong>ChangeFakePlayerScore</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ChangePlayerScore.html"><strong>ChangePlayerScore</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ChatRestrictionLevel.html"><strong>ChatRestrictionLevel</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ChunkPos.html"><strong>ChunkPos</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ClearOverride.html"><strong>ClearOverride</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ClientboundTextureShiftPacketPayload__Action.html"><strong>ClientboundTextureShiftPacketPayload::Action</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ClientCameraAimAssistPacketAction.html"><strong>ClientCameraAimAssistPacketAction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ClientPlayMode.html"><strong>ClientPlayMode</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="clientStoreEntryPointConfig.html"><strong>clientStoreEntryPointConfig</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CodeBuilderExecutionState_CodeStatus.html"><strong>CodeBuilderExecutionState CodeStatus</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CodeBuilderRuntimeAction.html"><strong>CodeBuilderRuntimeAction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CodeBuilderScoreboard.html"><strong>CodeBuilderScoreboard</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CodeBuilderStorageQueryOptions_Category.html"><strong>CodeBuilderStorageQueryOptions Category</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CodeBuilderStorageQueryOptions_Operation.html"><strong>CodeBuilderStorageQueryOptions Operation</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Color.html"><strong>Color</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Color255RGB.html"><strong>Color255RGB</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Color255RGBA.html"><strong>Color255RGBA</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ColorAttributeData.html"><strong>ColorAttributeData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ColorAttributeOperation.html"><strong>ColorAttributeOperation</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ColorNormRGB.html"><strong>ColorNormRGB</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CommandBlockMode.html"><strong>CommandBlockMode</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CommandOriginData.html"><strong>CommandOriginData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CommandOriginType.html"><strong>CommandOriginType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CommandOutput.html"><strong>CommandOutput</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CommandOutputMessage.html"><strong>CommandOutputMessage</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CommandOutputType.html"><strong>CommandOutputType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CommandPermissionLevel.html"><strong>CommandPermissionLevel</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ComposterUsed.html"><strong>ComposterUsed</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ContainerEnumName.html"><strong>ContainerEnumName</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ContainerID.html"><strong>ContainerID</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ContainerMixDataEntry.html"><strong>ContainerMixDataEntry</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ContainerType.html"><strong>ContainerType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ContentIdentity.html"><strong>ContentIdentity</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Control_Scheme.html"><strong>Control Scheme</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CoordinateEvaluationOrder.html"><strong>CoordinateEvaluationOrder</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CoordinatesLocation.html"><strong>CoordinatesLocation</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CreativeItemCategory.html"><strong>CreativeItemCategory</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CreativeItemNetId.html"><strong>CreativeItemNetId</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="CurrentCmdVersion.html"><strong>CurrentCmdVersion</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Data_Store_Change.html"><strong>Data Store Change</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Data_Store_Removal.html"><strong>Data Store Removal</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Data_Store_Update.html"><strong>Data Store Update</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="DataDrivenScreenClosedReason.html"><strong>DataDrivenScreenClosedReason</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="DataItemEntry.html"><strong>DataItemEntry</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="DataItemType.html"><strong>DataItemType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="DeathCauseMessageType.html"><strong>DeathCauseMessageType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="DebugMarkerData.html"><strong>DebugMarkerData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="DebugRendererData.html"><strong>DebugRendererData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Difficulty.html"><strong>Difficulty</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="DimensionDefinition.html"><strong>DimensionDefinition</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="DimensionType.html"><strong>DimensionType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="DisconnectFailReason.html"><strong>DisconnectFailReason</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="DisconnectPacketMessages.html"><strong>DisconnectPacketMessages</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="DoubleTag.html"><strong>DoubleTag</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="easing_function.html"><strong>easing_function</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="EditorWorldType.html"><strong>EditorWorldType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="EducationEditionOffer.html"><strong>EducationEditionOffer</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="EducationLevelSettings.html"><strong>EducationLevelSettings</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="EducationLocalLevelSettings.html"><strong>EducationLocalLevelSettings</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="EduSharedUriResource.html"><strong>EduSharedUriResource</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Empty.html"><strong>Empty</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="EmptyItemDescriptor.html"><strong>EmptyItemDescriptor</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Enchant__Type.html"><strong>Enchant::Type</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="EnchantmentInstance.html"><strong>EnchantmentInstance</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="EndTag.html"><strong>EndTag</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Entity_Reference.html"><strong>Entity Reference</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="EntityCommandTarget.html"><strong>EntityCommandTarget</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="EntityDiagnosticTimingInfo.html"><strong>EntityDiagnosticTimingInfo</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="EntityNetId.html"><strong>EntityNetId</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="EnvironmentAttributeData.html"><strong>EnvironmentAttributeData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Experiments.html"><strong>Experiments</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ExperimentToggle.html"><strong>ExperimentToggle</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ExpressionOp.html"><strong>ExpressionOp</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ExternalLinkSettings.html"><strong>ExternalLinkSettings</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Fade.html"><strong>Fade</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="FeatureRegistry__FeatureBinaryJsonFormat.html"><strong>FeatureRegistry::FeatureBinaryJsonFormat</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="FloatAttributeData.html"><strong>FloatAttributeData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="FloatAttributeOperation.html"><strong>FloatAttributeOperation</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="FloatOverride.html"><strong>FloatOverride</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="FloatRange.html"><strong>FloatRange</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="FloatTag.html"><strong>FloatTag</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="FullContainerName.html"><strong>FullContainerName</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="FurnaceLayout.html"><strong>FurnaceLayout</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="FurnaceLeftTabIndex.html"><strong>FurnaceLeftTabIndex</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="FurnaceOptions.html"><strong>FurnaceOptions</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="GamePublishSetting.html"><strong>GamePublishSetting</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="GameRule.html"><strong>GameRule</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="GameRulesChangedPacketData.html"><strong>GameRulesChangedPacketData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="GameType.html"><strong>GameType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="gatheringsConfig.html"><strong>gatheringsConfig</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="GeneratorType.html"><strong>GeneratorType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="GraphicsMode.html"><strong>GraphicsMode</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="GraphicsOverrideParameterType.html"><strong>GraphicsOverrideParameterType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="HandSlot.html"><strong>HandSlot</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="hashed_string.html"><strong>hashed_string</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="HiddenLocation.html"><strong>HiddenLocation</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="HudElement.html"><strong>HudElement</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="HudVisibility.html"><strong>HudVisibility</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="InitializeRegistryData.html"><strong>InitializeRegistryData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="InputMode.html"><strong>InputMode</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Int64Tag.html"><strong>Int64Tag</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Interaction.html"><strong>Interaction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="InteractPacketPayload_Action.html"><strong>InteractPacketPayload Action</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="IntOverride.html"><strong>IntOverride</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="IntTag.html"><strong>IntTag</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="InventoryAction.html"><strong>InventoryAction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="InventoryLayout.html"><strong>InventoryLayout</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="InventoryLeftTabIndex.html"><strong>InventoryLeftTabIndex</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="InventoryLeftTabPocketIndex.html"><strong>InventoryLeftTabPocketIndex</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="InventoryMismatchData.html"><strong>InventoryMismatchData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="InventoryOptions.html"><strong>InventoryOptions</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="InventoryRightTabIndex.html"><strong>InventoryRightTabIndex</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="InventorySource.html"><strong>InventorySource</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="InventorySourceFlags.html"><strong>InventorySourceFlags</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="InventorySourceType.html"><strong>InventorySourceType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="InventoryTransaction.html"><strong>InventoryTransaction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Item_Descriptor.html"><strong>item_descriptor</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Item_Reference.html"><strong>Item Reference</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemData.html"><strong>ItemData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemDescriptorType.html"><strong>ItemDescriptorType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemEnchantOption.html"><strong>ItemEnchantOption</strong></a><br><span style="color: #666; font-size: 0.9em;">A helper to group a potential enchantment by its name, cost, and resulting enchanted item -- effecti...</span></li>
+<li><a href="ItemEnchants.html"><strong>ItemEnchants</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemNameDescriptor.html"><strong>ItemNameDescriptor</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemReleaseActionType.html"><strong>ItemReleaseActionType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemReleaseInventoryTransaction.html"><strong>ItemReleaseInventoryTransaction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackLegacyRequestId.html"><strong>ItemStackLegacyRequestId</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackNetId.html"><strong>ItemStackNetId</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackNetIdVariant.html"><strong>ItemStackNetIdVariant</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackNetResult.html"><strong>ItemStackNetResult</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackRequest.html"><strong>ItemStackRequest</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackRequestActionType.html"><strong>ItemStackRequestActionType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackRequestBeaconPaymentAction.html"><strong>ItemStackRequestBeaconPaymentAction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackRequestConsumeAction.html"><strong>ItemStackRequestConsumeAction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackRequestCraftCreativeAction.html"><strong>ItemStackRequestCraftCreativeAction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackRequestCraftLoomAction.html"><strong>ItemStackRequestCraftLoomAction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackRequestCraftNonImplementedDeprecatedAction.html"><strong>ItemStackRequestCraftNonImplementedDeprecatedAction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackRequestCraftRecipeAction.html"><strong>ItemStackRequestCraftRecipeAction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackRequestCraftRecipeAutoAction.html"><strong>ItemStackRequestCraftRecipeAutoAction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackRequestCraftRecipeOptionalAction.html"><strong>ItemStackRequestCraftRecipeOptionalAction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackRequestCraftRepairAndDisenchantAction.html"><strong>ItemStackRequestCraftRepairAndDisenchantAction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackRequestCraftResultsDeprecatedAction.html"><strong>ItemStackRequestCraftResultsDeprecatedAction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackRequestCreateAction.html"><strong>ItemStackRequestCreateAction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackRequestDestroyAction.html"><strong>ItemStackRequestDestroyAction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackRequestDropAction.html"><strong>ItemStackRequestDropAction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackRequestId.html"><strong>ItemStackRequestId</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackRequestLabTableCombineAction.html"><strong>ItemStackRequestLabTableCombineAction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackRequestMineBlockAction.html"><strong>ItemStackRequestMineBlockAction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackRequestNetworkItemInstanceDescriptor.html"><strong>ItemStackRequestNetworkItemInstanceDescriptor</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackRequestPlaceAction.html"><strong>ItemStackRequestPlaceAction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackRequestSlotInfo.html"><strong>ItemStackRequestSlotInfo</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackRequestSwapAction.html"><strong>ItemStackRequestSwapAction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackRequestTakeAction.html"><strong>ItemStackRequestTakeAction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackResponseContainerInfo.html"><strong>ItemStackResponseContainerInfo</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackResponseInfo.html"><strong>ItemStackResponseInfo</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemStackResponseSlotInfo.html"><strong>ItemStackResponseSlotInfo</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemTagDescriptor.html"><strong>ItemTagDescriptor</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemUseActionType.html"><strong>ItemUseActionType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemUseClientCooldownState.html"><strong>ItemUseClientCooldownState</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemUsed.html"><strong>ItemUsed</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemUseInventoryTransaction.html"><strong>ItemUseInventoryTransaction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemUseOnActorActionType.html"><strong>ItemUseOnActorActionType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemUseOnActorInventoryTransaction.html"><strong>ItemUseOnActorInventoryTransaction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemUsePredictedResult.html"><strong>ItemUsePredictedResult</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemUseTriggerType.html"><strong>ItemUseTriggerType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ItemVersion.html"><strong>ItemVersion</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Json__Value.html"><strong>Json::Value</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="LabTablePacketPayload__Type.html"><strong>LabTablePacketPayload::Type</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="LabTableReactionType.html"><strong>LabTableReactionType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="LegacySetSlot.html"><strong>LegacySetSlot</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="LegacyTelemetryEventPacketPayload__Type.html"><strong>LegacyTelemetryEventPacketPayload::Type</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Lesson_Action.html"><strong>Lesson Action</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="LevelChunkPacketPayload_SubChunkMetadata.html"><strong>LevelChunkPacketPayload SubChunkMetadata</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="LevelSettings.html"><strong>LevelSettings</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="LevelSoundEvent.html"><strong>LevelSoundEvent</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MapDecoration__Type.html"><strong>MapDecoration::Type</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MapDecoration.html"><strong>MapDecoration</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MapItemTrackedActor_Type.html"><strong>MapItemTrackedActor Type</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MapItemTrackedActor_UniqueId.html"><strong>MapItemTrackedActor UniqueId</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MaterialReducerDataEntry.html"><strong>MaterialReducerDataEntry</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MaterialReducerEntryOutput.html"><strong>MaterialReducerEntryOutput</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="mce__UUID.html"><strong>mce::UUID</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Memory__MemoryCategory.html"><strong>Memory::MemoryCategory</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MemoryCategoryCounter.html"><strong>MemoryCategoryCounter</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MessageAndParams.html"><strong>MessageAndParams</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MessageOnly.html"><strong>MessageOnly</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MinecraftEventing__AchievementIds.html"><strong>MinecraftEventing::AchievementIds</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MinecraftEventing__InteractionType.html"><strong>MinecraftEventing::InteractionType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MinecraftEventing__POIBlockInteractionType.html"><strong>MinecraftEventing::POIBlockInteractionType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MinecraftPacketIds.html"><strong>MinecraftPacketIds</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MinEngineVersion.html"><strong>MinEngineVersion</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Mirror.html"><strong>Mirror</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MissingBlobData.html"><strong>MissingBlobData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MobBorn.html"><strong>MobBorn</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MobEffectPacketPayload__Event.html"><strong>MobEffectPacketPayload::Event</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MobKilled.html"><strong>MobKilled</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ModalFormCancelReason.html"><strong>ModalFormCancelReason</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MolangItemDescriptor.html"><strong>MolangItemDescriptor</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MolangVariableMap.html"><strong>MolangVariableMap</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MolangVersion.html"><strong>MolangVersion</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MoveActorAbsoluteData.html"><strong>MoveActorAbsoluteData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MoveActorDeltaData.html"><strong>MoveActorDeltaData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MovementAttributesComponent.html"><strong>MovementAttributesComponent</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MovementEffectType.html"><strong>MovementEffectType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MovePlayerTeleportData.html"><strong>MovePlayerTeleportData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="MultiplayerSettingsPacketType.html"><strong>MultiplayerSettingsPacketType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="NetworkItemInstanceDescriptor.html"><strong>NetworkItemInstanceDescriptor</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="NetworkItemInstanceDescriptorData.html"><strong>NetworkItemInstanceDescriptorData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="NetworkItemStackDescriptor.html"><strong>NetworkItemStackDescriptor</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="NetworkPermissions.html"><strong>NetworkPermissions</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="NewInteractionModel.html"><strong>NewInteractionModel</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="NoiseAlignment.html"><strong>NoiseAlignment</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="NoiseAlignmentType.html"><strong>NoiseAlignmentType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="NoiseDescriptor.html"><strong>NoiseDescriptor</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="NormalTransactionData.html"><strong>NormalTransactionData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="NpcDialogueActionType.html"><strong>NpcDialogueActionType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="NpcRequestPacketPayload_RequestType.html"><strong>NpcRequestPacketPayload RequestType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ObjectiveSortOrder.html"><strong>ObjectiveSortOrder</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PackedItemUseLegacyInventoryTransaction.html"><strong>PackedItemUseLegacyInventoryTransaction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PacketCompressionAlgorithm.html"><strong>PacketCompressionAlgorithm</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PacketViolationSeverity.html"><strong>PacketViolationSeverity</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PacketViolationType.html"><strong>PacketViolationType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PackIdVersion.html"><strong>PackIdVersion</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PackInfoData.html"><strong>PackInfoData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PackInstanceId.html"><strong>PackInstanceId</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PackType.html"><strong>PackType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PartyDestinationCookieIntent.html"><strong>PartyDestinationCookieIntent</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Pause.html"><strong>Pause</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PayloadType.html"><strong>PayloadType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="persona__AnimatedTextureType.html"><strong>persona::AnimatedTextureType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="persona__AnimationExpression.html"><strong>persona::AnimationExpression</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="persona__ArmSize__Type.html"><strong>persona::ArmSize::Type</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="persona__PieceType.html"><strong>persona::PieceType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PhotoType.html"><strong>PhotoType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PiglinBarter.html"><strong>PiglinBarter</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PlayerActionType.html"><strong>PlayerActionType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PlayerAuthInputData.html"><strong>PlayerAuthInputData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PlayerBlockActionData.html"><strong>PlayerBlockActionData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PlayerBlockActions.html"><strong>PlayerBlockActions</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PlayerDied.html"><strong>PlayerDied</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PlayerInputTick.html"><strong>PlayerInputTick</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PlayerListAddEntry.html"><strong>PlayerListAddEntry</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PlayerListPacketType.html"><strong>PlayerListPacketType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PlayerListRemoveEntry.html"><strong>PlayerListRemoveEntry</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PlayerLocationPacketType.html"><strong>PlayerLocationPacketType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PlayerPartyInfo.html"><strong>PlayerPartyInfo</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PlayerPermissionLevel.html"><strong>PlayerPermissionLevel</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PlayerRespawnState.html"><strong>PlayerRespawnState</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PlayerScoreboardId.html"><strong>PlayerScoreboardId</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PlayerWaxedOrUnwaxedCopper.html"><strong>PlayerWaxedOrUnwaxedCopper</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PlayStatus.html"><strong>PlayStatus</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="POICauldronUsed.html"><strong>POICauldronUsed</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PortalCreated.html"><strong>PortalCreated</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PortalUsed.html"><strong>PortalUsed</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PositionMode.html"><strong>PositionMode</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PositionTrackingDBClientRequestPacketPayload__Action.html"><strong>PositionTrackingDBClientRequestPacketPayload::Action</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PositionTrackingDBServerBroadcastPacketPayload__Action.html"><strong>PositionTrackingDBServerBroadcastPacketPayload::Action</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PositionTrackingId.html"><strong>PositionTrackingId</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PotionMixDataEntry.html"><strong>PotionMixDataEntry</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="presenceConfig.html"><strong>presenceConfig</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PropertySyncData__PropertySyncFloatEntry.html"><strong>PropertySyncData::PropertySyncFloatEntry</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PropertySyncData__PropertySyncIntEntry.html"><strong>PropertySyncData::PropertySyncIntEntry</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="PropertySyncData.html"><strong>PropertySyncData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="RaidUpdate.html"><strong>RaidUpdate</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="RandomDistributionType.html"><strong>RandomDistributionType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="RecipeIngredient.html"><strong>RecipeIngredient</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="RecipeNetId.html"><strong>RecipeNetId</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="RecipeUnlockingContext.html"><strong>RecipeUnlockingContext</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="RecipeUnlockingRequirement.html"><strong>RecipeUnlockingRequirement</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="RemoveEnvironmentAttributesData.html"><strong>RemoveEnvironmentAttributesData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="RemoveOverride.html"><strong>RemoveOverride</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="RemoveScore.html"><strong>RemoveScore</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="RemoveTimeMarkerData.html"><strong>RemoveTimeMarkerData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="RequestAbilityPacketPayload__Type.html"><strong>RequestAbilityPacketPayload::Type</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Resource_Pack_Client_Response_-_Cancel.html"><strong>Resource Pack Client Response - Cancel</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Resource_Pack_Client_Response_-_Downloading_Finished.html"><strong>Resource Pack Client Response - Downloading Finished</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Resource_Pack_Client_Response_-_Downloading.html"><strong>Resource Pack Client Response - Downloading</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Resource_Pack_Client_Response_-_Resource_Pack_Stack_Finished.html"><strong>Resource Pack Client Response - Resource Pack Stack Finished</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ResourcePackResponse.html"><strong>ResourcePackResponse</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Resume.html"><strong>Resume</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="RewindType.html"><strong>RewindType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Rotation.html"><strong>Rotation</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ScoreboardId.html"><strong>ScoreboardId</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ScoreboardIdentityPacketInfo.html"><strong>ScoreboardIdentityPacketInfo</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ScoreboardIdentityPacketType.html"><strong>ScoreboardIdentityPacketType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ScorePacketEntryAction.html"><strong>ScorePacketEntryAction</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ScriptModuleMinecraft__ScriptPrimitiveShapeType.html"><strong>ScriptModuleMinecraft::ScriptPrimitiveShapeType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SeekTo.html"><strong>SeekTo</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SemVersion.html"><strong>SemVersion</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SerializedAbilitiesData.html"><strong>SerializedAbilitiesData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SerializedAbilitiesDataSerializedLayer.html"><strong>SerializedAbilitiesDataSerializedLayer</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SerializedNoiseBlockSpecifier.html"><strong>SerializedNoiseBlockSpecifier</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SerializedPersonaPieceHandle.html"><strong>SerializedPersonaPieceHandle</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SerializedSkin.html"><strong>SerializedSkin</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="server_config.html"><strong>server_config</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ServerBlockProperty.html"><strong>ServerBlockProperty</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Serverbound_Data_Store_Update.html"><strong>Serverbound Data Store Update</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ServerboundLoadingScreenPacketType.html"><strong>ServerboundLoadingScreenPacketType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ServerEditorConnectionPolicy.html"><strong>ServerEditorConnectionPolicy</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ServerSoundHandle.html"><strong>ServerSoundHandle</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ServerTelemetryData.html"><strong>ServerTelemetryData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ServerWaypointGroup__Action.html"><strong>ServerWaypointGroup::Action</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SetPitch.html"><strong>SetPitch</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SetPlayerFurnaceOptionsPacketPayload_FurnaceType.html"><strong>SetPlayerFurnaceOptionsPacketPayload FurnaceType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SetTitlePacket_TitleType.html"><strong>SetTitlePacket TitleType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SetVolume.html"><strong>SetVolume</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SharedTypes__Comprehensive__CameraAimAssistCommandDefinition.html"><strong>SharedTypes::Comprehensive::CameraAimAssistCommandDefinition</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SharedTypes__Comprehensive__CameraPreset__AudioListener.html"><strong>SharedTypes::Comprehensive::CameraPreset::AudioListener</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SharedTypes__Identifier_SharedTypes__AssetType__CameraPreset_.html"><strong>SharedTypes::Identifier&lt;SharedTypes::AssetType::CameraPreset&gt;</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SharedTypes__Legacy__ActorDamageCause.html"><strong>SharedTypes::Legacy::ActorDamageCause</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SharedTypes__Legacy__ArmorSlot.html"><strong>SharedTypes::Legacy::ArmorSlot</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SharedTypes__Reference_SharedTypes__AssetType__CameraAimAssist_.html"><strong>SharedTypes::Reference&lt;SharedTypes::AssetType::CameraAimAssist&gt;</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SharedTypes__Reference_SharedTypes__AssetType__CameraPreset_.html"><strong>SharedTypes::Reference&lt;SharedTypes::AssetType::CameraPreset&gt;</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ShortTag.html"><strong>ShortTag</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ShowCreditsPacketPayload__CreditsState.html"><strong>ShowCreditsPacketPayload::CreditsState</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="ShowStoreOfferRedirectType.html"><strong>ShowStoreOfferRedirectType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SimulationType.html"><strong>SimulationType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SkinImage.html"><strong>SkinImage</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SlashCommand.html"><strong>SlashCommand</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SoftEnumUpdateType.html"><strong>SoftEnumUpdateType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SoundEventIdentifier.html"><strong>SoundEventIdentifier</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SpawnBiomeType.html"><strong>SpawnBiomeType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SpawnPositionType.html"><strong>SpawnPositionType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SpawnSettings.html"><strong>SpawnSettings</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Start_Video_Capture.html"><strong>Start Video Capture</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Stop_Video_Capture.html"><strong>Stop Video Capture</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Stop.html"><strong>Stop</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="StringTag.html"><strong>StringTag</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="StructureBlockType.html"><strong>StructureBlockType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="StructureEditorData.html"><strong>StructureEditorData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="StructureRedstoneSaveMode.html"><strong>StructureRedstoneSaveMode</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="StructureSettings.html"><strong>StructureSettings</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="StructureTemplateRequestOperation.html"><strong>StructureTemplateRequestOperation</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="StructureTemplateResponseType.html"><strong>StructureTemplateResponseType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SubChunkHeightmapData.html"><strong>SubChunkHeightmapData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SubChunkPacketData.html"><strong>SubChunkPacketData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SubChunkPacketPayload__HeightMapDataType.html"><strong>SubChunkPacketPayload::HeightMapDataType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SubChunkPacketPayload__SubChunkRequestResult.html"><strong>SubChunkPacketPayload::SubChunkRequestResult</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SubChunkPos.html"><strong>SubChunkPos</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SubChunkPosOffset.html"><strong>SubChunkPosOffset</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Subtype.html"><strong>Subtype</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SyncedAttribute.html"><strong>SyncedAttribute</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SyncedPlayerMovementSettings.html"><strong>SyncedPlayerMovementSettings</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SynchedActorDataList.html"><strong>SynchedActorDataList</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SyncStateData.html"><strong>SyncStateData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SyncWorldClockStateData.html"><strong>SyncWorldClockStateData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SystemCategory.html"><strong>SystemCategory</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="SystemDiagnosticTimingInfo.html"><strong>SystemDiagnosticTimingInfo</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="TargetBlockHit.html"><strong>TargetBlockHit</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="TextPacketType.html"><strong>TextPacketType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="TextProcessingEventOrigin.html"><strong>TextProcessingEventOrigin</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="TimeMarkerData.html"><strong>TimeMarkerData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="TintMapColor.html"><strong>TintMapColor</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="TrimMaterial.html"><strong>TrimMaterial</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="TrimPattern.html"><strong>TrimPattern</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="TrustedSkinFlag.html"><strong>TrustedSkinFlag</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="UnlockedRecipesPacketPayload__PacketType.html"><strong>UnlockedRecipesPacketPayload::PacketType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="UpdateAttributeLayersData.html"><strong>UpdateAttributeLayersData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="UpdateAttributeLayerSettingsData.html"><strong>UpdateAttributeLayerSettingsData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="UpdateEnvironmentAttributesData.html"><strong>UpdateEnvironmentAttributesData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="UpdateSubChunkBlocksChangedInfo.html"><strong>UpdateSubChunkBlocksChangedInfo</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="UpdateSubChunkNetworkBlockInfo.html"><strong>UpdateSubChunkNetworkBlockInfo</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="UpdateType.html"><strong>UpdateType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Vec2.html"><strong>Vec2</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="Vec3.html"><strong>Vec3</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="VillageType.html"><strong>VillageType</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="VoxelShapes__RegistryHandle.html"><strong>VoxelShapes::RegistryHandle</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="VoxelShapes__SerializableCells.html"><strong>VoxelShapes::SerializableCells</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="VoxelShapes__SerializableVoxelShape.html"><strong>VoxelShapes::SerializableVoxelShape</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="WaypointGroup__WaypointHandle.html"><strong>WaypointGroup::WaypointHandle</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="WebSocketPacketData.html"><strong>WebSocketPacketData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="WebToken.html"><strong>WebToken</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="WhiskerScopeDataSummary.html"><strong>WhiskerScopeDataSummary</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="WorldClockData.html"><strong>WorldClockData</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="WorldPosition.html"><strong>WorldPosition</strong></a><br><span style="color: #666; font-size: 0.9em;"></span></li>
+<li><a href="LoginPacket.html"><strong>LoginPacket (1)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent once from client to server at login. About 100k.</span></li>
+<li><a href="PlayStatusPacket.html"><strong>PlayStatusPacket (2)</strong></a><br><span style="color: #666; font-size: 0.9em;">Describes the login status of the player</span></li>
+<li><a href="ServerToClientHandshakePacket.html"><strong>ServerToClientHandshakePacket (3)</strong></a><br><span style="color: #666; font-size: 0.9em;">Server-&gt;Client Handshake</span></li>
+<li><a href="ClientToServerHandshakePacket.html"><strong>ClientToServerHandshakePacket (4)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sets up encryption and authenticates in educational version once at level startup from client.</span></li>
+<li><a href="DisconnectPacket.html"><strong>DisconnectPacket (5)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent from the server to a client to trigger a disconnection.</span></li>
+<li><a href="ResourcePacksInfoPacket.html"><strong>ResourcePacksInfoPacket (6)</strong></a><br><span style="color: #666; font-size: 0.9em;">Resource Packs Info</span></li>
+<li><a href="ResourcePackStackPacket.html"><strong>ResourcePackStackPacket (7)</strong></a><br><span style="color: #666; font-size: 0.9em;">Resource Pack Stack</span></li>
+<li><a href="ResourcePackClientResponsePacket.html"><strong>ResourcePackClientResponsePacket (8)</strong></a><br><span style="color: #666; font-size: 0.9em;">Resource Pack Client Response</span></li>
+<li><a href="TextPacket.html"><strong>TextPacket (9)</strong></a><br><span style="color: #666; font-size: 0.9em;">Represents a text message that needs to be displayed in-game</span></li>
+<li><a href="SetTimePacket.html"><strong>SetTimePacket (10)</strong></a><br><span style="color: #666; font-size: 0.9em;">Set Time</span></li>
+<li><a href="StartGamePacket.html"><strong>StartGamePacket (11)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent from the server to client when the game is starting (or client joins), gives ids and current ti...</span></li>
+<li><a href="AddPlayerPacket.html"><strong>AddPlayerPacket (12)</strong></a><br><span style="color: #666; font-size: 0.9em;">Add Player</span></li>
+<li><a href="AddActorPacket.html"><strong>AddActorPacket (13)</strong></a><br><span style="color: #666; font-size: 0.9em;">Add Actor</span></li>
+<li><a href="RemoveActorPacket.html"><strong>RemoveActorPacket (14)</strong></a><br><span style="color: #666; font-size: 0.9em;">Occasionally, during the server player tick some time is taken to remove nearby actors from the worl...</span></li>
+<li><a href="AddItemActorPacket.html"><strong>AddItemActorPacket (15)</strong></a><br><span style="color: #666; font-size: 0.9em;">When an item actor is added to the world (punch a tree-&gt;tree block, for example)</span></li>
+<li><a href="ServerPlayerPostMovePositionPacket.html"><strong>ServerPlayerPostMovePositionPacket (16)</strong></a><br><span style="color: #666; font-size: 0.9em;">Used to send a player&#39;s server position to the respective client at the end of movement.</span></li>
+<li><a href="TakeItemActorPacket.html"><strong>TakeItemActorPacket (17)</strong></a><br><span style="color: #666; font-size: 0.9em;">A packet sent to the server when deal with picking up an item off the ground in the world.</span></li>
+<li><a href="MoveActorAbsolutePacket.html"><strong>MoveActorAbsolutePacket (18)</strong></a><br><span style="color: #666; font-size: 0.9em;">This is used primarily for motion updates of all actors from server to client.</span></li>
+<li><a href="MovePlayerPacket.html"><strong>MovePlayerPacket (19)</strong></a><br><span style="color: #666; font-size: 0.9em;">For client authoritative and server authoritative movement modes, it is only intended as a client-bo...</span></li>
+<li><a href="UpdateBlockPacket.html"><strong>UpdateBlockPacket (21)</strong></a><br><span style="color: #666; font-size: 0.9em;">Occasional packets sent from server when blocks update or are ticked. (For example, when digging.)</span></li>
+<li><a href="AddPaintingPacket.html"><strong>AddPaintingPacket (22)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sends the information for a new painting actor from server to client.</span></li>
+<li><a href="LevelEventPacket.html"><strong>LevelEventPacket (25)</strong></a><br><span style="color: #666; font-size: 0.9em;">Splash Potions, weather events, global pause, simlock commands, oh my!</span></li>
+<li><a href="BlockEventPacket.html"><strong>BlockEventPacket (26)</strong></a><br><span style="color: #666; font-size: 0.9em;">Whenever a block event happens it is sent from the server to sync client and server, with arbitraril...</span></li>
+<li><a href="ActorEventPacket.html"><strong>ActorEventPacket (27)</strong></a><br><span style="color: #666; font-size: 0.9em;">All kinds of actor state changes (see Actor::handleEntityEvent).</span></li>
+<li><a href="MobEffectPacket.html"><strong>MobEffectPacket (28)</strong></a><br><span style="color: #666; font-size: 0.9em;">Mob Effect</span></li>
+<li><a href="UpdateAttributesPacket.html"><strong>UpdateAttributesPacket (29)</strong></a><br><span style="color: #666; font-size: 0.9em;">Update Attributes</span></li>
+<li><a href="InventoryTransactionPacket.html"><strong>InventoryTransactionPacket (30)</strong></a><br><span style="color: #666; font-size: 0.9em;">Inventory Transaction. Sent for item interaction UI depending on if ItemStackNetManager is enabled a...</span></li>
+<li><a href="MobEquipmentPacket.html"><strong>MobEquipmentPacket (31)</strong></a><br><span style="color: #666; font-size: 0.9em;">Mob Equipment. Changes to any mob&#39;s held/offhand item are fired from server to client with this pack...</span></li>
+<li><a href="MobArmorEquipmentPacket.html"><strong>MobArmorEquipmentPacket (32)</strong></a><br><span style="color: #666; font-size: 0.9em;">Mob Armor Equipment</span></li>
+<li><a href="InteractPacket.html"><strong>InteractPacket (33)</strong></a><br><span style="color: #666; font-size: 0.9em;">Interact</span></li>
+<li><a href="BlockPickRequestPacket.html"><strong>BlockPickRequestPacket (34)</strong></a><br><span style="color: #666; font-size: 0.9em;">Player picks up a block in the world; client to server.</span></li>
+<li><a href="ActorPickRequestPacket.html"><strong>ActorPickRequestPacket (35)</strong></a><br><span style="color: #666; font-size: 0.9em;">Player clicks on an actor in the world, eg a chicken.</span></li>
+<li><a href="PlayerActionPacket.html"><strong>PlayerActionPacket (36)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent from the client whenever the player performs an action (dashing, un-dashing, use an item, mine/...</span></li>
+<li><a href="HurtArmorPacket.html"><strong>HurtArmorPacket (38)</strong></a><br><span style="color: #666; font-size: 0.9em;">Hurt Armor</span></li>
+<li><a href="SetActorDataPacket.html"><strong>SetActorDataPacket (39)</strong></a><br><span style="color: #666; font-size: 0.9em;">Regular Actor Data delta packets, sent from the level on tick, mob and actor during normal tick</span></li>
+<li><a href="SetActorMotionPacket.html"><strong>SetActorMotionPacket (40)</strong></a><br><span style="color: #666; font-size: 0.9em;">This is used for the server to set the velocity of a client actor.</span></li>
+<li><a href="SetActorLinkPacket.html"><strong>SetActorLinkPacket (41)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent by both client and server, only received by LegacyClientHandler.</span></li>
+<li><a href="SetHealthPacket.html"><strong>SetHealthPacket (42)</strong></a><br><span style="color: #666; font-size: 0.9em;">This packet is sent to the client when the player is spawned in and when they respawn.</span></li>
+<li><a href="SetSpawnPositionPacket.html"><strong>SetSpawnPositionPacket (43)</strong></a><br><span style="color: #666; font-size: 0.9em;">When a player logs in or the SetWorldSpawnCommand is used this is sent from the server to the client...</span></li>
+<li><a href="AnimatePacket.html"><strong>AnimatePacket (44)</strong></a><br><span style="color: #666; font-size: 0.9em;">Animate Actor</span></li>
+<li><a href="RespawnPacket.html"><strong>RespawnPacket (45)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent as a handshake between the client and server to respawn the player.</span></li>
+<li><a href="ContainerOpenPacket.html"><strong>ContainerOpenPacket (46)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent from the server so that the client knows to open the container screen and do the chest opening ...</span></li>
+<li><a href="ContainerClosePacket.html"><strong>ContainerClosePacket (47)</strong></a><br><span style="color: #666; font-size: 0.9em;">After the game deletes the container manager on the client, the client sends this packet.
+	Then the ...</span></li>
+<li><a href="PlayerHotbarPacket.html"><strong>PlayerHotbarPacket (48)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent from the server when the player uses pick block on actors or blocks, in addition to the player ...</span></li>
+<li><a href="InventoryContentPacket.html"><strong>InventoryContentPacket (49)</strong></a><br><span style="color: #666; font-size: 0.9em;">This is used for updating an entire container. Example uses include: player respawned, replace items...</span></li>
+<li><a href="InventorySlotPacket.html"><strong>InventorySlotPacket (50)</strong></a><br><span style="color: #666; font-size: 0.9em;">Updates one slot in an inventory rather than the whole thing. So like animal inventory (horses, donk...</span></li>
+<li><a href="ContainerSetDataPacket.html"><strong>ContainerSetDataPacket (51)</strong></a><br><span style="color: #666; font-size: 0.9em;">This is sent from the server basically any time that the &quot;cooking&quot; state of the brewing stand or the...</span></li>
+<li><a href="CraftingDataPacket.html"><strong>CraftingDataPacket (52)</strong></a><br><span style="color: #666; font-size: 0.9em;">Crafting Data</span></li>
+<li><a href="GuiDataPickItemPacket.html"><strong>GuiDataPickItemPacket (54)</strong></a><br><span style="color: #666; font-size: 0.9em;">The server telling the client what item slot to hover over in the hotbar.</span></li>
+<li><a href="BlockActorDataPacket.html"><strong>BlockActorDataPacket (56)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sends the entire user data compound tag and the block position to the client.</span></li>
+<li><a href="LevelChunkPacket.html"><strong>LevelChunkPacket (58)</strong></a><br><span style="color: #666; font-size: 0.9em;">Level Chunk Packet</span></li>
+<li><a href="SetCommandsEnabledPacket.html"><strong>SetCommandsEnabledPacket (59)</strong></a><br><span style="color: #666; font-size: 0.9em;">This is used by the world settings screen, cheats, EDU builds for teachers, and various other places...</span></li>
+<li><a href="SetDifficultyPacket.html"><strong>SetDifficultyPacket (60)</strong></a><br><span style="color: #666; font-size: 0.9em;">Set Difficulty</span></li>
+<li><a href="ChangeDimensionPacket.html"><strong>ChangeDimensionPacket (61)</strong></a><br><span style="color: #666; font-size: 0.9em;">The server sends this packet from the level to kick off dimension changing process.</span></li>
+<li><a href="SetPlayerGameTypePacket.html"><strong>SetPlayerGameTypePacket (62)</strong></a><br><span style="color: #666; font-size: 0.9em;">Set Player Game Type</span></li>
+<li><a href="PlayerListPacket.html"><strong>PlayerListPacket (63)</strong></a><br><span style="color: #666; font-size: 0.9em;">Player List</span></li>
+<li><a href="SimpleEventPacket.html"><strong>SimpleEventPacket (64)</strong></a><br><span style="color: #666; font-size: 0.9em;">This packet is used for enabling/disabling commands and for unlocking world template settings (both ...</span></li>
+<li><a href="LegacyTelemetryEventPacket.html"><strong>LegacyTelemetryEventPacket (65)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sends telemetry events to the client so the client can then send that on to the eventing system</span></li>
+<li><a href="SpawnExperienceOrbPacket.html"><strong>SpawnExperienceOrbPacket (66)</strong></a><br><span style="color: #666; font-size: 0.9em;">Spawn Experience Orb</span></li>
+<li><a href="ClientboundMapItemDataPacket.html"><strong>ClientboundMapItemDataPacket (67)</strong></a><br><span style="color: #666; font-size: 0.9em;">Map item data including pixels, decorations, and creation info</span></li>
+<li><a href="MapInfoRequestPacket.html"><strong>MapInfoRequestPacket (68)</strong></a><br><span style="color: #666; font-size: 0.9em;">In the case of the client being unable to find map data for a map item it sends a uuid for a map to ...</span></li>
+<li><a href="RequestChunkRadiusPacket.html"><strong>RequestChunkRadiusPacket (69)</strong></a><br><span style="color: #666; font-size: 0.9em;">The client can&#39;t just change the view radius without the server&#39;s approval, otherwise there could be...</span></li>
+<li><a href="ChunkRadiusUpdatedPacket.html"><strong>ChunkRadiusUpdatedPacket (70)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent when the world is loading. We don&#39;t know why it is sent four times. Defines the tick distance.</span></li>
+<li><a href="GameRulesChangedPacket.html"><strong>GameRulesChangedPacket (72)</strong></a><br><span style="color: #666; font-size: 0.9em;">Updates game rules.</span></li>
+<li><a href="CameraPacket.html"><strong>CameraPacket (73)</strong></a><br><span style="color: #666; font-size: 0.9em;">Used only in EDU through the tripod camera item or the TakePictureCommand. Sends the camera actor id...</span></li>
+<li><a href="BossEventPacket.html"><strong>BossEventPacket (74)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent when a boss gets updated</span></li>
+<li><a href="ShowCreditsPacket.html"><strong>ShowCreditsPacket (75)</strong></a><br><span style="color: #666; font-size: 0.9em;">Starts on server when the credits screen should pop up.</span></li>
+<li><a href="AvailableCommandsPacket.html"><strong>AvailableCommandsPacket (76)</strong></a><br><span style="color: #666; font-size: 0.9em;">Contains all the available commands.</span></li>
+<li><a href="CommandRequestPacket.html"><strong>CommandRequestPacket (77)</strong></a><br><span style="color: #666; font-size: 0.9em;">&quot;slash&quot; command execution, client to server.</span></li>
+<li><a href="CommandBlockUpdatePacket.html"><strong>CommandBlockUpdatePacket (78)</strong></a><br><span style="color: #666; font-size: 0.9em;">Command Block Update</span></li>
+<li><a href="CommandOutputPacket.html"><strong>CommandOutputPacket (79)</strong></a><br><span style="color: #666; font-size: 0.9em;">&quot;slash&quot; command execution output, server to client.</span></li>
+<li><a href="UpdateTradePacket.html"><strong>UpdateTradePacket (80)</strong></a><br><span style="color: #666; font-size: 0.9em;">This is used when the player trades with an npc. This sends all of the updated trade info in one big...</span></li>
+<li><a href="UpdateEquipPacket.html"><strong>UpdateEquipPacket (81)</strong></a><br><span style="color: #666; font-size: 0.9em;">Seemingly only used for the Horse Inventory... More specifically when the player opens the horse inv...</span></li>
+<li><a href="ResourcePackDataInfoPacket.html"><strong>ResourcePackDataInfoPacket (82)</strong></a><br><span style="color: #666; font-size: 0.9em;">Resource Pack Data Info</span></li>
+<li><a href="ResourcePackChunkDataPacket.html"><strong>ResourcePackChunkDataPacket (83)</strong></a><br><span style="color: #666; font-size: 0.9em;">Resource Pack Chunk Data</span></li>
+<li><a href="ResourcePackChunkRequestPacket.html"><strong>ResourcePackChunkRequestPacket (84)</strong></a><br><span style="color: #666; font-size: 0.9em;">Resource Pack Chunk Request</span></li>
+<li><a href="TransferPacket.html"><strong>TransferPacket (85)</strong></a><br><span style="color: #666; font-size: 0.9em;">Used to kick off transferring the client between online games, or it can be used to cause players to...</span></li>
+<li><a href="PlaySoundPacket.html"><strong>PlaySoundPacket (86)</strong></a><br><span style="color: #666; font-size: 0.9em;">This packet is only used via command or script event. This is for 3rd party content.</span></li>
+<li><a href="StopSoundPacket.html"><strong>StopSoundPacket (87)</strong></a><br><span style="color: #666; font-size: 0.9em;">Allows you to stop a sound or all sounds on all clients, only used in a /command</span></li>
+<li><a href="SetTitlePacket.html"><strong>SetTitlePacket (88)</strong></a><br><span style="color: #666; font-size: 0.9em;">Used by 3rd party content for the purpose of showing ui banners</span></li>
+<li><a href="AddBehaviorTreePacket.html"><strong>AddBehaviorTreePacket (89)</strong></a><br><span style="color: #666; font-size: 0.9em;">Add Behavior Tree</span></li>
+<li><a href="StructureBlockUpdatePacket.html"><strong>StructureBlockUpdatePacket (90)</strong></a><br><span style="color: #666; font-size: 0.9em;">After the client makes changes in the Structure Block Screen we tell the server to update based off ...</span></li>
+<li><a href="ShowStoreOfferPacket.html"><strong>ShowStoreOfferPacket (91)</strong></a><br><span style="color: #666; font-size: 0.9em;">Used for redirecting a user to the right offer.</span></li>
+<li><a href="PurchaseReceiptPacket.html"><strong>PurchaseReceiptPacket (92)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent from client to server</span></li>
+<li><a href="PlayerSkinPacket.html"><strong>PlayerSkinPacket (93)</strong></a><br><span style="color: #666; font-size: 0.9em;">Used when the player changes their skin</span></li>
+<li><a href="SubClientLoginPacket.html"><strong>SubClientLoginPacket (94)</strong></a><br><span style="color: #666; font-size: 0.9em;">This packet starts the login process of subclients (splitscreen)</span></li>
+<li><a href="AutomationClientConnectPacket.html"><strong>AutomationClientConnectPacket (95)</strong></a><br><span style="color: #666; font-size: 0.9em;">Initiates websocket connection</span></li>
+<li><a href="SetLastHurtByPacket.html"><strong>SetLastHurtByPacket (96)</strong></a><br><span style="color: #666; font-size: 0.9em;">Any time a player is hit, the id of the last mob that attacked them is sent to the client</span></li>
+<li><a href="BookEditPacket.html"><strong>BookEditPacket (97)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sends the updated state of the Book and Quill item from client to server during use.</span></li>
+<li><a href="NpcRequestPacket.html"><strong>NpcRequestPacket (98)</strong></a><br><span style="color: #666; font-size: 0.9em;">Used for a number of interactions with the NPC Component</span></li>
+<li><a href="PhotoTransferPacket.html"><strong>PhotoTransferPacket (99)</strong></a><br><span style="color: #666; font-size: 0.9em;">There is a camera item in EDU and they can use it to take screenshots and add them to a scrapbook.</span></li>
+<li><a href="ModalFormRequestPacket.html"><strong>ModalFormRequestPacket (100)</strong></a><br><span style="color: #666; font-size: 0.9em;">Modal Form Request</span></li>
+<li><a href="ModalFormResponsePacket.html"><strong>ModalFormResponsePacket (101)</strong></a><br><span style="color: #666; font-size: 0.9em;">Fired in response to third party server request to show the custom UI screen.</span></li>
+<li><a href="ServerSettingsRequestPacket.html"><strong>ServerSettingsRequestPacket (102)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent during the initialization of world settings on the client.</span></li>
+<li><a href="ServerSettingsResponsePacket.html"><strong>ServerSettingsResponsePacket (103)</strong></a><br><span style="color: #666; font-size: 0.9em;">Server Settings Response</span></li>
+<li><a href="ShowProfilePacket.html"><strong>ShowProfilePacket (104)</strong></a><br><span style="color: #666; font-size: 0.9em;">Show Profile</span></li>
+<li><a href="SetDefaultGameTypePacket.html"><strong>SetDefaultGameTypePacket (105)</strong></a><br><span style="color: #666; font-size: 0.9em;">Same as SetPlayerGameTypePacket &amp; UpdatePlayerGameTypePacket, the only difference is that this chang...</span></li>
+<li><a href="RemoveObjectivePacket.html"><strong>RemoveObjectivePacket (106)</strong></a><br><span style="color: #666; font-size: 0.9em;">Using the scoreboard command, users can remove objectives that are tracked on the scoreboard.</span></li>
+<li><a href="SetDisplayObjectivePacket.html"><strong>SetDisplayObjectivePacket (107)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent from the server for 3rd party content to display current objectives and status</span></li>
+<li><a href="SetScorePacket.html"><strong>SetScorePacket (108)</strong></a><br><span style="color: #666; font-size: 0.9em;">Set Score</span></li>
+<li><a href="LabTablePacket.html"><strong>LabTablePacket (109)</strong></a><br><span style="color: #666; font-size: 0.9em;">For the EDU Chemistry Lab Table block actor.</span></li>
+<li><a href="UpdateBlockSyncedPacket.html"><strong>UpdateBlockSyncedPacket (110)</strong></a><br><span style="color: #666; font-size: 0.9em;">Used to sync moving blocks with clients so they render correctly</span></li>
+<li><a href="MoveActorDeltaPacket.html"><strong>MoveActorDeltaPacket (111)</strong></a><br><span style="color: #666; font-size: 0.9em;">This packet is all the deltas of actors position, rotation, and head rotation. This is used for all ...</span></li>
+<li><a href="SetScoreboardIdentityPacket.html"><strong>SetScoreboardIdentityPacket (112)</strong></a><br><span style="color: #666; font-size: 0.9em;">Set Scoreboard Identity</span></li>
+<li><a href="SetLocalPlayerAsInitializedPacket.html"><strong>SetLocalPlayerAsInitializedPacket (113)</strong></a><br><span style="color: #666; font-size: 0.9em;">Set Local Player As Initialized</span></li>
+<li><a href="UpdateSoftEnumPacket.html"><strong>UpdateSoftEnumPacket (114)</strong></a><br><span style="color: #666; font-size: 0.9em;">This is used for the scoreboard and tag systems (overwhelmingly used by 3rd party content)</span></li>
+<li><a href="NetworkStackLatencyPacket.html"><strong>NetworkStackLatencyPacket (115)</strong></a><br><span style="color: #666; font-size: 0.9em;">Ping Packet</span></li>
+<li><a href="SpawnParticleEffectPacket.html"><strong>SpawnParticleEffectPacket (118)</strong></a><br><span style="color: #666; font-size: 0.9em;">Tell client to spawn a particle effect.</span></li>
+<li><a href="AvailableActorIdentifiersPacket.html"><strong>AvailableActorIdentifiersPacket (119)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sends the whole list of actor identifiers at game start from the server.</span></li>
+<li><a href="NetworkChunkPublisherUpdatePacket.html"><strong>NetworkChunkPublisherUpdatePacket (121)</strong></a><br><span style="color: #666; font-size: 0.9em;">Tells clients to update the chunk view for the local player.</span></li>
+<li><a href="BiomeDefinitionListPacket.html"><strong>BiomeDefinitionListPacket (122)</strong></a><br><span style="color: #666; font-size: 0.9em;">On world start, send clients the info for all available biomes.</span></li>
+<li><a href="LevelSoundEventPacket.html"><strong>LevelSoundEventPacket (123)</strong></a><br><span style="color: #666; font-size: 0.9em;">Level Sound Event</span></li>
+<li><a href="LevelEventGenericPacket.html"><strong>LevelEventGenericPacket (124)</strong></a><br><span style="color: #666; font-size: 0.9em;">LevelEventGenericPacket</span></li>
+<li><a href="LecternUpdatePacket.html"><strong>LecternUpdatePacket (125)</strong></a><br><span style="color: #666; font-size: 0.9em;">This is used for the Lectern Block Actor.</span></li>
+<li><a href="ClientCacheStatusPacket.html"><strong>ClientCacheStatusPacket (129)</strong></a><br><span style="color: #666; font-size: 0.9em;">It is sent by the Client once, at login, to communicate if it supports the cache or not.</span></li>
+<li><a href="OnScreenTextureAnimationPacket.html"><strong>OnScreenTextureAnimationPacket (130)</strong></a><br><span style="color: #666; font-size: 0.9em;">On-Screen Texture Animation</span></li>
+<li><a href="MapCreateLockedCopyPacket.html"><strong>MapCreateLockedCopyPacket (131)</strong></a><br><span style="color: #666; font-size: 0.9em;">This is fired when the user locks a map item utilizing the Cartography Table in game.</span></li>
+<li><a href="StructureTemplateDataRequestPacket.html"><strong>StructureTemplateDataRequestPacket (132)</strong></a><br><span style="color: #666; font-size: 0.9em;">Used to request structure information from a server.</span></li>
+<li><a href="StructureTemplateDataResponsePacket.html"><strong>StructureTemplateDataResponsePacket (133)</strong></a><br><span style="color: #666; font-size: 0.9em;">This is used in exporting from load, exporting from save, and querying saved structures from structu...</span></li>
+<li><a href="ClientCacheBlobStatusPacket.html"><strong>ClientCacheBlobStatusPacket (135)</strong></a><br><span style="color: #666; font-size: 0.9em;">Client Cache Blob Status Packet</span></li>
+<li><a href="ClientCacheMissResponsePacket.html"><strong>ClientCacheMissResponsePacket (136)</strong></a><br><span style="color: #666; font-size: 0.9em;">Only active in a real client-server scenario. This packet is just a list of &lt;blobId, blob&gt; pairs sen...</span></li>
+<li><a href="EducationSettingsPacket.html"><strong>EducationSettingsPacket (137)</strong></a><br><span style="color: #666; font-size: 0.9em;">Transmits EducationLevelSettings to all clients.</span></li>
+<li><a href="EmotePacket.html"><strong>EmotePacket (138)</strong></a><br><span style="color: #666; font-size: 0.9em;">A client sends this to the server to notify other clients about the emote.</span></li>
+<li><a href="MultiplayerSettingsPacket.html"><strong>MultiplayerSettingsPacket (139)</strong></a><br><span style="color: #666; font-size: 0.9em;">Syncs multiplayer settings</span></li>
+<li><a href="SettingsCommandPacket.html"><strong>SettingsCommandPacket (140)</strong></a><br><span style="color: #666; font-size: 0.9em;">Requests a setting to be changed through commands.</span></li>
+<li><a href="AnvilDamagePacket.html"><strong>AnvilDamagePacket (141)</strong></a><br><span style="color: #666; font-size: 0.9em;">Requests an anvil to be damaged.</span></li>
+<li><a href="CompletedUsingItemPacket.html"><strong>CompletedUsingItemPacket (142)</strong></a><br><span style="color: #666; font-size: 0.9em;">Send server to client to complete the using item process. An example is when you finish drinking or ...</span></li>
+<li><a href="NetworkSettingsPacket.html"><strong>NetworkSettingsPacket (143)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sends tunable options from host to client (compression threshold and algorithm)</span></li>
+<li><a href="PlayerAuthInputPacket.html"><strong>PlayerAuthInputPacket (144)</strong></a><br><span style="color: #666; font-size: 0.9em;">Player Auth Input</span></li>
+<li><a href="CreativeContentPacket.html"><strong>CreativeContentPacket (145)</strong></a><br><span style="color: #666; font-size: 0.9em;">Creative Content</span></li>
+<li><a href="PlayerEnchantOptionsPacket.html"><strong>PlayerEnchantOptionsPacket (146)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sends the of new Enchanting options  from the server when a player right clicks the enchantment tabl...</span></li>
+<li><a href="ItemStackRequestPacket.html"><strong>ItemStackRequestPacket (147)</strong></a><br><span style="color: #666; font-size: 0.9em;">The new server auth inventory item transaction request. This is done in batches of items.</span></li>
+<li><a href="ItemStackResponsePacket.html"><strong>ItemStackResponsePacket (148)</strong></a><br><span style="color: #666; font-size: 0.9em;">Server auth inventory item transaction response, sent from the server.</span></li>
+<li><a href="PlayerArmorDamagePacket.html"><strong>PlayerArmorDamagePacket (149)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent from server whenever the player&#39;s armor takes damage.</span></li>
+<li><a href="CodeBuilderPacket.html"><strong>CodeBuilderPacket (150)</strong></a><br><span style="color: #666; font-size: 0.9em;">Code Builder Packet</span></li>
+<li><a href="UpdatePlayerGameTypePacket.html"><strong>UpdatePlayerGameTypePacket (151)</strong></a><br><span style="color: #666; font-size: 0.9em;">The server will send this back to all clients on receipt of the SetPlayerGameTypePacket so that cach...</span></li>
+<li><a href="EmoteListPacket.html"><strong>EmoteListPacket (152)</strong></a><br><span style="color: #666; font-size: 0.9em;">Allows clients to download emotes that other clients have equipped.</span></li>
+<li><a href="PositionTrackingDBServerBroadcastPacket.html"><strong>PositionTrackingDBServerBroadcastPacket (153)</strong></a><br><span style="color: #666; font-size: 0.9em;">Server to client packet for server authoratative runtime database (with persistent LevelStorage back...</span></li>
+<li><a href="PositionTrackingDBClientRequestPacket.html"><strong>PositionTrackingDBClientRequestPacket (154)</strong></a><br><span style="color: #666; font-size: 0.9em;">Position Tracking DB Client Request</span></li>
+<li><a href="DebugInfoPacket.html"><strong>DebugInfoPacket (155)</strong></a><br><span style="color: #666; font-size: 0.9em;">The system sends debug information via a generic network packet. This enables rendering of any serve...</span></li>
+<li><a href="PacketViolationWarningPacket.html"><strong>PacketViolationWarningPacket (156)</strong></a><br><span style="color: #666; font-size: 0.9em;">This is sent when the client detects a malformed packet</span></li>
+<li><a href="MotionPredictionHintsPacket.html"><strong>MotionPredictionHintsPacket (157)</strong></a><br><span style="color: #666; font-size: 0.9em;">It is essentially a SetActionMotionPacket with a bool indicating if the actor was on the ground at t...</span></li>
+<li><a href="AnimateEntityPacket.html"><strong>AnimateEntityPacket (158)</strong></a><br><span style="color: #666; font-size: 0.9em;">The AnimateEntityPacket is used to trigger a one - off animation on the client it is sent to.</span></li>
+<li><a href="CameraShakePacket.html"><strong>CameraShakePacket (159)</strong></a><br><span style="color: #666; font-size: 0.9em;">Used to control trigger camera shake movements on the client&#39;s player camera</span></li>
+<li><a href="PlayerFogPacket.html"><strong>PlayerFogPacket (160)</strong></a><br><span style="color: #666; font-size: 0.9em;">Player Fog Packet</span></li>
+<li><a href="CorrectPlayerMovePredictionPacket.html"><strong>CorrectPlayerMovePredictionPacket (161)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent to a player when their simulation of movement mismatches enough from the server that it wants t...</span></li>
+<li><a href="ItemRegistryPacket.html"><strong>ItemRegistryPacket (162)</strong></a><br><span style="color: #666; font-size: 0.9em;">Item data from the server. Contains component information.</span></li>
+<li><a href="ClientboundDebugRendererPacket.html"><strong>ClientboundDebugRendererPacket (164)</strong></a><br><span style="color: #666; font-size: 0.9em;">Used to add/remove debug rendering objects.</span></li>
+<li><a href="SyncActorPropertyPacket.html"><strong>SyncActorPropertyPacket (165)</strong></a><br><span style="color: #666; font-size: 0.9em;">Allows us to synchronize Actor properties across the network.</span></li>
+<li><a href="AddVolumeEntityPacket.html"><strong>AddVolumeEntityPacket (166)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sends a volume entity&#39;s definition and components from server to client.</span></li>
+<li><a href="RemoveVolumeEntityPacket.html"><strong>RemoveVolumeEntityPacket (167)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sends a volume entity to be removed from server to client.</span></li>
+<li><a href="SimulationTypePacket.html"><strong>SimulationTypePacket (168)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent from the server to the client when setting the simulation type for toolbox mode. (Not yet supor...</span></li>
+<li><a href="NpcDialoguePacket.html"><strong>NpcDialoguePacket (169)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent from the server to client when remote firing an NPC dialogue window for a client</span></li>
+<li><a href="EduUriResourcePacket.html"><strong>EduUriResourcePacket (170)</strong></a><br><span style="color: #666; font-size: 0.9em;">Transmits Edu Shared Uri Resource settings to all clients.</span></li>
+<li><a href="CreatePhotoPacket.html"><strong>CreatePhotoPacket (171)</strong></a><br><span style="color: #666; font-size: 0.9em;">Players now have the possibility to export photos from their portfolios into photo items in their in...</span></li>
+<li><a href="UpdateSubChunkBlocksPacket.html"><strong>UpdateSubChunkBlocksPacket (172)</strong></a><br><span style="color: #666; font-size: 0.9em;">Packet sent for every set of blocks changed in a sub chunk every tick.</span></li>
+<li><a href="SubChunkPacket.html"><strong>SubChunkPacket (174)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent from server to client representing a batch of subchunk data.</span></li>
+<li><a href="SubChunkRequestPacket.html"><strong>SubChunkRequestPacket (175)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent from the client to the server representing a batch of subchunks that the client requests from t...</span></li>
+<li><a href="PlayerStartItemCooldownPacket.html"><strong>PlayerStartItemCooldownPacket (176)</strong></a><br><span style="color: #666; font-size: 0.9em;">Player Start Item Cooldown</span></li>
+<li><a href="ScriptMessagePacket.html"><strong>ScriptMessagePacket (177)</strong></a><br><span style="color: #666; font-size: 0.9em;">Used to send custom messages between client and server.</span></li>
+<li><a href="CodeBuilderSourcePacket.html"><strong>CodeBuilderSourcePacket (178)</strong></a><br><span style="color: #666; font-size: 0.9em;">This is EDU exclusive, used in getInterface() of WebviewSystem</span></li>
+<li><a href="TickingAreasLoadStatusPacket.html"><strong>TickingAreasLoadStatusPacket (179)</strong></a><br><span style="color: #666; font-size: 0.9em;">Used to inform the client that the server is waiting for ticking areas to finish preloading.</span></li>
+<li><a href="DimensionDataPacket.html"><strong>DimensionDataPacket (180)</strong></a><br><span style="color: #666; font-size: 0.9em;">Brief packet containing data-driven dimension properties</span></li>
+<li><a href="AgentActionEventPacket.html"><strong>AgentActionEventPacket (181)</strong></a><br><span style="color: #666; font-size: 0.9em;">packet containing data of Agent Action Type</span></li>
+<li><a href="ChangeMobPropertyPacket.html"><strong>ChangeMobPropertyPacket (182)</strong></a><br><span style="color: #666; font-size: 0.9em;">packet containing data for changing mob property</span></li>
+<li><a href="LessonProgressPacket.html"><strong>LessonProgressPacket (183)</strong></a><br><span style="color: #666; font-size: 0.9em;">Lesson Progress</span></li>
+<li><a href="RequestAbilityPacket.html"><strong>RequestAbilityPacket (184)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent from client to server. Used to request an ability change.</span></li>
+<li><a href="RequestPermissionsPacket.html"><strong>RequestPermissionsPacket (185)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent from client to server. Used to request a new Permissions Levels.</span></li>
+<li><a href="ToastRequestPacket.html"><strong>ToastRequestPacket (186)</strong></a><br><span style="color: #666; font-size: 0.9em;">Pushes a UI toast message to be displayed by the client</span></li>
+<li><a href="UpdateAbilitiesPacket.html"><strong>UpdateAbilitiesPacket (187)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent by the server to update the state of a player&#39;s Abilities.</span></li>
+<li><a href="UpdateAdventureSettingsPacket.html"><strong>UpdateAdventureSettingsPacket (188)</strong></a><br><span style="color: #666; font-size: 0.9em;">UpdateAdventureSettingsPacket</span></li>
+<li><a href="DeathInfoPacket.html"><strong>DeathInfoPacket (189)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent from the server to client when player dies (Level::onPlayerDeath).</span></li>
+<li><a href="EditorNetworkPacket.html"><strong>EditorNetworkPacket (190)</strong></a><br><span style="color: #666; font-size: 0.9em;">General use Editor specific packet - carries a payload of whatever serialized data that the individu...</span></li>
+<li><a href="FeatureRegistryPacket.html"><strong>FeatureRegistryPacket (191)</strong></a><br><span style="color: #666; font-size: 0.9em;">This is the packet that tracks the active feature registry data from the server so that client can p...</span></li>
+<li><a href="ServerStatsPacket.html"><strong>ServerStatsPacket (192)</strong></a><br><span style="color: #666; font-size: 0.9em;">Used to send performance and other valuable stats back to the client</span></li>
+<li><a href="RequestNetworkSettingsPacket.html"><strong>RequestNetworkSettingsPacket (193)</strong></a><br><span style="color: #666; font-size: 0.9em;">Requests tunable options from host to client (compression threshold and algorithm).</span></li>
+<li><a href="GameTestRequestPacket.html"><strong>GameTestRequestPacket (194)</strong></a><br><span style="color: #666; font-size: 0.9em;">Internal Text Packet</span></li>
+<li><a href="GameTestResultsPacket.html"><strong>GameTestResultsPacket (195)</strong></a><br><span style="color: #666; font-size: 0.9em;">Game Test Results Packet</span></li>
+<li><a href="UpdateClientInputLocksPacket.html"><strong>UpdateClientInputLocksPacket (196)</strong></a><br><span style="color: #666; font-size: 0.9em;">UpdateClientInputLocksPacket</span></li>
+<li><a href="CameraPresetsPacket.html"><strong>CameraPresetsPacket (198)</strong></a><br><span style="color: #666; font-size: 0.9em;">Used to sync CameraPresets data from server to clients.</span></li>
+<li><a href="UnlockedRecipesPacket.html"><strong>UnlockedRecipesPacket (199)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent from server to client, for all previously unlocked recipes on load and for any newly unlocked r...</span></li>
+<li><a href="CameraInstructionPacket.html"><strong>CameraInstructionPacket (300)</strong></a><br><span style="color: #666; font-size: 0.9em;">Used to send a CameraInstruction from the server to the specified clients.</span></li>
+<li><a href="TrimDataPacket.html"><strong>TrimDataPacket (302)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent from the server on level startup to send all trim patterns to the client.</span></li>
+<li><a href="OpenSignPacket.html"><strong>OpenSignPacket (303)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent from the server so that the client knows to open the sign screen.</span></li>
+<li><a href="AgentAnimationPacket.html"><strong>AgentAnimationPacket (304)</strong></a><br><span style="color: #666; font-size: 0.9em;">Broadcasted to other players when an Agent performs an animation so it gets properly replicated.</span></li>
+<li><a href="RefreshEntitlementsPacket.html"><strong>RefreshEntitlementsPacket (305)</strong></a><br><span style="color: #666; font-size: 0.9em;">Refresh Entitlements</span></li>
+<li><a href="PlayerToggleCrafterSlotRequestPacket.html"><strong>PlayerToggleCrafterSlotRequestPacket (306)</strong></a><br><span style="color: #666; font-size: 0.9em;">PlayerToggleCrafterSlotRequestPacket</span></li>
+<li><a href="SetPlayerInventoryOptionsPacket.html"><strong>SetPlayerInventoryOptionsPacket (307)</strong></a><br><span style="color: #666; font-size: 0.9em;">SetPlayerInventoryOptionsPacket</span></li>
+<li><a href="SetHudPacket.html"><strong>SetHudPacket (308)</strong></a><br><span style="color: #666; font-size: 0.9em;">This packet is only used via the set hud command. This is for 3rd party content.</span></li>
+<li><a href="AwardAchievementPacket.html"><strong>AwardAchievementPacket (309)</strong></a><br><span style="color: #666; font-size: 0.9em;">Contains the ID of the achievement to award</span></li>
+<li><a href="ClientboundCloseFormPacket.html"><strong>ClientboundCloseFormPacket (310)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent from the server to client to force close all server forms on the stack and return to the HUD sc...</span></li>
+<li><a href="ServerboundLoadingScreenPacket.html"><strong>ServerboundLoadingScreenPacket (312)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent from the client to the server to message to the server about the state of the loading screen.</span></li>
+<li><a href="JigsawStructureDataPacket.html"><strong>JigsawStructureDataPacket (313)</strong></a><br><span style="color: #666; font-size: 0.9em;">Jigsaw Structure data used by client jigsaw structure worldgen. This packet contains a copy of the b...</span></li>
+<li><a href="CurrentStructureFeaturePacket.html"><strong>CurrentStructureFeaturePacket (314)</strong></a><br><span style="color: #666; font-size: 0.9em;">Informs the client of which Structure Feature they are currently occupying.</span></li>
+<li><a href="ServerboundDiagnosticsPacket.html"><strong>ServerboundDiagnosticsPacket (315)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent from the client to the server IF ProfilerLite is enabled AND the creator toggle for additional ...</span></li>
+<li><a href="CameraAimAssistPacket.html"><strong>CameraAimAssistPacket (316)</strong></a><br><span style="color: #666; font-size: 0.9em;">CameraAimAssist</span></li>
+<li><a href="ContainerRegistryCleanupPacket.html"><strong>ContainerRegistryCleanupPacket (317)</strong></a><br><span style="color: #666; font-size: 0.9em;">This is used to trigger a clientside cleanup of the dynamic container registry.</span></li>
+<li><a href="MovementEffectPacket.html"><strong>MovementEffectPacket (318)</strong></a><br><span style="color: #666; font-size: 0.9em;">These packets are sent to the client to update specific MovementEffects</span></li>
+<li><a href="CameraAimAssistPresetsPacket.html"><strong>CameraAimAssistPresetsPacket (320)</strong></a><br><span style="color: #666; font-size: 0.9em;">Camera aim-assist registry presets/categories data sent from the server to clients.</span></li>
+<li><a href="ClientCameraAimAssistPacket.html"><strong>ClientCameraAimAssistPacket (321)</strong></a><br><span style="color: #666; font-size: 0.9em;">Client-side activation of aim-assist</span></li>
+<li><a href="ClientMovementPredictionSyncPacket.html"><strong>ClientMovementPredictionSyncPacket (322)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sends client movement prediction information to the server</span></li>
+<li><a href="UpdateClientOptionsPacket.html"><strong>UpdateClientOptionsPacket (323)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sync the player&#39;s options (mostly settings) to the server.</span></li>
+<li><a href="PlayerVideoCapturePacket.html"><strong>PlayerVideoCapturePacket (324)</strong></a><br><span style="color: #666; font-size: 0.9em;">Used by a test command to start/stop video capture</span></li>
+<li><a href="PlayerUpdateEntityOverridesPacket.html"><strong>PlayerUpdateEntityOverridesPacket (325)</strong></a><br><span style="color: #666; font-size: 0.9em;">Player Update Entity Overrides</span></li>
+<li><a href="PlayerLocationPacket.html"><strong>PlayerLocationPacket (326)</strong></a><br><span style="color: #666; font-size: 0.9em;">Updates the client with the position of a player outside simulation distance, or hides a player.</span></li>
+<li><a href="ClientboundControlSchemeSetPacket.html"><strong>ClientboundControlSchemeSetPacket (327)</strong></a><br><span style="color: #666; font-size: 0.9em;">Set the control scheme that the player should use</span></li>
+<li><a href="PrimitiveShapesPacket.html"><strong>PrimitiveShapesPacket (328)</strong></a><br><span style="color: #666; font-size: 0.9em;">Send primitive drawing shape info (from scripting) to the client for rendering</span></li>
+<li><a href="ServerboundPackSettingChangePacket.html"><strong>ServerboundPackSettingChangePacket (329)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent from the client to the server when players change Pack Settings (pack UI).</span></li>
+<li><a href="ClientboundDataStorePacket.html"><strong>ClientboundDataStorePacket (330)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sends a list of data store properties from the server to the client.</span></li>
+<li><a href="GraphicsOverrideParameterPacket.html"><strong>GraphicsOverrideParameterPacket (331)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent from the server to the client when a server script changes the rendering settings</span></li>
+<li><a href="ServerboundDataStorePacket.html"><strong>ServerboundDataStorePacket (332)</strong></a><br><span style="color: #666; font-size: 0.9em;">Applies a single update to the server data store from the client.</span></li>
+<li><a href="ClientboundDataDrivenUIShowScreenPacket.html"><strong>ClientboundDataDrivenUIShowScreenPacket (333)</strong></a><br><span style="color: #666; font-size: 0.9em;">Allows the server to tell the client to show a Data Driven UI screen.</span></li>
+<li><a href="ClientboundDataDrivenUICloseScreenPacket.html"><strong>ClientboundDataDrivenUICloseScreenPacket (334)</strong></a><br><span style="color: #666; font-size: 0.9em;">Allows the server to tell the client to close Data Driven UI screens.</span></li>
+<li><a href="ClientboundDataDrivenUIReloadPacket.html"><strong>ClientboundDataDrivenUIReloadPacket (335)</strong></a><br><span style="color: #666; font-size: 0.9em;">Allows the server to tell the client to reload the Data Driven UI.</span></li>
+<li><a href="ClientboundTextureShiftPacket.html"><strong>ClientboundTextureShiftPacket (336)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sends a set of update properties for the texture shift system from the server to the client.</span></li>
+<li><a href="VoxelShapesPacket.html"><strong>VoxelShapesPacket (337)</strong></a><br><span style="color: #666; font-size: 0.9em;">Syncs client with server voxel shape data on world join. This packet contains a copy of all behavior...</span></li>
+<li><a href="CameraSplinePacket.html"><strong>CameraSplinePacket (338)</strong></a><br><span style="color: #666; font-size: 0.9em;">Camera custom spline data sent from server to client.</span></li>
+<li><a href="CameraAimAssistActorPriorityPacket.html"><strong>CameraAimAssistActorPriorityPacket (339)</strong></a><br><span style="color: #666; font-size: 0.9em;">Camera aim-assist actor priority data sent from the server to clients.</span></li>
+<li><a href="ResourcePacksReadyForValidationPacket.html"><strong>ResourcePacksReadyForValidationPacket (340)</strong></a><br><span style="color: #666; font-size: 0.9em;">Used to inform the server that the client has finished loading all resource packs.</span></li>
+<li><a href="LocatorBarPacket.html"><strong>LocatorBarPacket (341)</strong></a><br><span style="color: #666; font-size: 0.9em;">Syncs LocatorBar changes on the server with the client.</span></li>
+<li><a href="PartyChangedPacket.html"><strong>PartyChangedPacket (342)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent by the client to provide additional client metadata.</span></li>
+<li><a href="ServerboundDataDrivenScreenClosedPacket.html"><strong>ServerboundDataDrivenScreenClosedPacket (343)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent from the client to the server when a data driven screen is closed.</span></li>
+<li><a href="SyncWorldClocksPacket.html"><strong>SyncWorldClocksPacket (344)</strong></a><br><span style="color: #666; font-size: 0.9em;">Initializes and syncs world clocks from the server to clients. (Currently disabled)</span></li>
+<li><a href="ClientboundAttributeLayerSyncPacket.html"><strong>ClientboundAttributeLayerSyncPacket (345)</strong></a><br><span style="color: #666; font-size: 0.9em;">Syncs Attribute Layers to the Client (Currently disabled)</span></li>
+<li><a href="ServerStoreInfoPacket.html"><strong>ServerStoreInfoPacket (346)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent by the server to provide ClientStoreEntryPointConfiguration to the client.</span></li>
+<li><a href="ServerPresenceInfoPacket.html"><strong>ServerPresenceInfoPacket (347)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent by the server to provide PresenceConfiguration to the client.</span></li>
+<li><a href="ClientboundUpdateSoundDataPacket.html"><strong>ClientboundUpdateSoundDataPacket (348)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent to update sound data.</span></li>
+<li><a href="SendPartyDestinationCookiePacket.html"><strong>SendPartyDestinationCookiePacket (349)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent by the server to a client with a party destination cookie.</span></li>
+<li><a href="PartyDestinationCookieResponsePacket.html"><strong>PartyDestinationCookieResponsePacket (350)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent by the client to the server with a party destination cookie response.</span></li>
+<li><a href="SetPlayerFurnaceOptionsPacket.html"><strong>SetPlayerFurnaceOptionsPacket (351)</strong></a><br><span style="color: #666; font-size: 0.9em;">SetPlayerFurnaceOptionsPacket</span></li>
+<li><a href="RecordStartedPacket.html"><strong>RecordStartedPacket (352)</strong></a><br><span style="color: #666; font-size: 0.9em;">Sent to notify the client that a record started playing at a block position.</span></li>
+    </ul>
     </div>
 </body>
 </html>

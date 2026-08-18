@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/ChangePlayerScore.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.50-beta.26",
+    "x-protocol-version": 2192,
     "type": "object",
     "properties": {
         "Action": {
@@ -16,8 +16,7 @@
         "Objective Name": {
             "description": "Name of the objective whose score is being changed.",
             "type": "string",
-            "x-ordinal-index": 2,
-            "minLength": 1
+            "x-ordinal-index": 2
         },
         "Player Unique Id": {
             "description": "Unique ID of the player this score is for.",

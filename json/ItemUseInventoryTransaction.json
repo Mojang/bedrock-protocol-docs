@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/ItemUseInventoryTransaction.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.50-beta.26",
+    "x-protocol-version": 2192,
     "type": "object",
     "properties": {
         "Action Type": {
@@ -25,7 +25,7 @@
         "Click Position": {
             "description": "The position within the target block face that was clicked.",
             "$ref": "./Vec3.json",
-            "x-ordinal-index": 8
+            "x-ordinal-index": 9
         },
         "Client Cooldown State": {
             "description": "Whether the item is currently on cooldown on the client.",
@@ -34,7 +34,7 @@
             "x-serialization-options": [
                 "Enum-as-Value"
             ],
-            "x-ordinal-index": 11
+            "x-ordinal-index": 12
         },
         "Client Interact Prediction": {
             "description": "Whether the client predicted the interaction would succeed.",
@@ -43,7 +43,7 @@
             "x-serialization-options": [
                 "Enum-as-Value"
             ],
-            "x-ordinal-index": 10
+            "x-ordinal-index": 11
         },
         "Face": {
             "description": "The face of the target block that was clicked.",
@@ -59,12 +59,22 @@
         "From Position": {
             "description": "The player's position when this transaction was sent.",
             "$ref": "./Vec3.json",
-            "x-ordinal-index": 7
+            "x-ordinal-index": 8
+        },
+        "Hand": {
+            "description": "The hand of the item being used.",
+            "$ref": "./HandSlot.json",
+            "x-underlying-type": "uint8",
+            "x-serialization-options": [
+                "Compression",
+                "Enum-as-Value"
+            ],
+            "x-ordinal-index": 6
         },
         "Item": {
             "description": "The item stack descriptor of the item being used.",
             "$ref": "./NetworkItemStackDescriptor.json",
-            "x-ordinal-index": 6
+            "x-ordinal-index": 7
         },
         "Position": {
             "description": "The position of the target block.",
@@ -87,7 +97,7 @@
             "x-serialization-options": [
                 "Compression"
             ],
-            "x-ordinal-index": 9,
+            "x-ordinal-index": 10,
             "minimum": 0.0
         },
         "Trigger Type": {
@@ -109,6 +119,7 @@
         "Client Interact Prediction",
         "Face",
         "From Position",
+        "Hand",
         "Item",
         "Position",
         "Slot",

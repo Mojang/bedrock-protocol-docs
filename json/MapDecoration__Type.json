@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/MapDecoration__Type.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.50-beta.26",
+    "x-protocol-version": 2192,
     "type": "string",
     "enum": [
         "MarkerWhite",
@@ -32,6 +32,11 @@
         "JungleTemple",
         "WitchHut",
         "TrialChambers",
+        "AbandonedCamp",
+        "BuriedAncientCity",
+        "BuriedMineshaft",
+        "DesertPyramid",
+        "WarmOceanRuins",
         "Count"
     ],
     "x-underlying-type": "int8"

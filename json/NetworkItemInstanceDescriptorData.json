@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/NetworkItemInstanceDescriptorData.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.50-beta.26",
+    "x-protocol-version": 2192,
     "type": "object",
     "properties": {
         "Aux value": {
@@ -43,8 +43,7 @@
             "type": "integer",
             "x-underlying-type": "uint16",
             "x-ordinal-index": 1,
-            "minimum": 0.0,
-            "maximum": 64.0
+            "minimum": 0.0
         },
         "User Data Buffer": {
             "description": "The item user data binary blob encoded as a String.",

@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/SpawnSettings.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.50-beta.26",
+    "x-protocol-version": 2192,
     "type": "object",
     "properties": {
         "Dimension": {
@@ -16,14 +16,11 @@
             "x-ordinal-index": 2
         },
         "Spawn Biome Type": {
-            "type": "string",
-            "enum": [
-                "Default",
-                "UserDefined"
-            ],
+            "$ref": "./SpawnBiomeType.json",
             "x-underlying-type": "int16",
             "x-serialization-options": [
-                "Enum-as-Value"
+                "Enum-as-Value",
+                "Allow unknown enum values"
             ],
             "x-ordinal-index": 0
         },

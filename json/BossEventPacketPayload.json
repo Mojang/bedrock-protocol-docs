@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/BossEventPacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.50-beta.26",
+    "x-protocol-version": 2192,
     "type": "object",
     "properties": {
         "Color": {
@@ -15,7 +15,7 @@
                 "Compression",
                 "Enum-as-Value"
             ],
-            "x-ordinal-index": 6
+            "x-ordinal-index": 5
         },
         "Event Type": {
             "description": "type of boss event",
@@ -25,24 +25,24 @@
                 "Compression",
                 "Enum-as-Value"
             ],
-            "x-ordinal-index": 2
+            "x-ordinal-index": 1
         },
         "FilteredName": {
             "description": "Filtered name of the boss to add",
             "type": "string",
-            "x-ordinal-index": 4,
+            "x-ordinal-index": 3,
             "maxLength": 256
         },
         "Health Percent": {
             "description": "Health value of the boss",
             "type": "number",
             "x-underlying-type": "float",
-            "x-ordinal-index": 5
+            "x-ordinal-index": 4
         },
         "Name": {
             "description": "Name of the boss to add",
             "type": "string",
-            "x-ordinal-index": 3,
+            "x-ordinal-index": 2,
             "maxLength": 256
         },
         "Overlay": {
@@ -53,11 +53,7 @@
                 "Compression",
                 "Enum-as-Value"
             ],
-            "x-ordinal-index": 7
-        },
-        "Player ID": {
-            "$ref": "./ActorUniqueID.json",
-            "x-ordinal-index": 1
+            "x-ordinal-index": 6
         },
         "Target Actor ID": {
             "description": "actor id for the boss",
@@ -72,7 +68,6 @@
         "Health Percent",
         "Name",
         "Overlay",
-        "Player ID",
         "Target Actor ID"
     ]
 }

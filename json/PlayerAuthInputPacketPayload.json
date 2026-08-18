@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/PlayerAuthInputPacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.50-beta.26",
+    "x-protocol-version": 2192,
     "type": "object",
     "properties": {
         "Analog Move Vector": {
@@ -38,8 +38,7 @@
                 "Compression",
                 "Enum-as-Value"
             ],
-            "x-ordinal-index": 4,
-            "x-runtime-constraint-description": "Verify input data entries are known, unique, and not deprecated"
+            "x-ordinal-index": 4
         },
         "Input Mode": {
             "description": "The input device the player is using (mouse/keyboard, touch, gamepad, motion controller).",

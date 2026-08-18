@@ -1,0 +1,14 @@
+{
+    "title": "RecordStartedPacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/RecordStartedPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.50-beta.26",
+    "x-protocol-version": 2192,
+    "description": "Sent to notify the client that a record started playing at a block position.",
+    "$ref": "./RecordStartedPacketPayload.json",
+    "$metaProperties": {
+        "[cereal:packet]": 352,
+        "[cereal:packet_details]": ""
+    }
+}

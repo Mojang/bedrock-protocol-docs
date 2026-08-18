@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/SetLastHurtByPacket.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.50-beta.26",
+    "x-protocol-version": 2192,
     "description": "Any time a player is hit, the id of the last mob that attacked them is sent to the client",
     "$ref": "./SetLastHurtByPacketPayload.json",
     "$metaProperties": {
