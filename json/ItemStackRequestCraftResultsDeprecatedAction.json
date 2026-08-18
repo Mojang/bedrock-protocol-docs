@@ -3,7 +3,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/ItemStackRequestCraftResultsDeprecatedAction.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50",
+    "x-minecraft-version": "1.26.40",
     "x-protocol-version": 2169,
     "type": "object",
     "properties": {
@@ -19,8 +19,7 @@
         "Craft Results": {
             "type": "array",
             "items": {
-                "$ref": "./ItemStackRequestNetworkItemInstanceDescriptor.json",
-                "x-runtime-constraint-description": "Verify the craft result descriptor resolves to a non-empty item"
+                "$ref": "./ItemStackRequestNetworkItemInstanceDescriptor.json"
             },
             "x-ordinal-index": 1,
             "minItems": 1

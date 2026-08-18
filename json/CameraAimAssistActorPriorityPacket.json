@@ -3,7 +3,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/CameraAimAssistActorPriorityPacket.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50",
+    "x-minecraft-version": "1.26.40",
     "x-protocol-version": 2169,
     "description": "Camera aim-assist actor priority data sent from the server to clients.",
     "$ref": "./CameraAimAssistActorPriorityPacketPayload.json",
