@@ -1,0 +1,13 @@
+---
+interface Props {
+    target?: string;
+    title: string;
+    typeSlugs: string[];
+    versionPrefix: string;
+}
+
+const { target, title, typeSlugs, versionPrefix } = Astro.props as Props;
+const href = target && typeSlugs.includes(target) ? `${versionPrefix}/types/${target}/` : undefined;
+---
+
+{href ? <a href={href}><code>{title}</code></a> : <code>{title}</code>}

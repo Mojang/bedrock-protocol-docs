@@ -1,3 +1,9 @@
+---
+title: Player UI container slots
+sectionOrder: 4
+order: 1
+---
+
 # Player UI Container
 
 ## Versions of this Doc

@@ -1,0 +1,30 @@
+---
+import { getProtocolMetadata, withBase } from '../../../data';
+import legacyChangelogYears from '../../../data/legacy-changelogs.json';
+import Layout from '../../../layouts/Layout.astro';
+
+const metadata = getProtocolMetadata('latest');
+---
+
+<Layout metadata={metadata} title="Legacy changelogs" version="latest">
+    <article class="guide-page">
+        <header class="guide-header">
+            <h1>Legacy changelogs</h1>
+        </header>
+        <div class="guide-content legacy-changelog-index">
+            {legacyChangelogYears.map(year => (
+                <section>
+                    <h2>{year.title}</h2>
+                    <ul>
+                        {year.changelogs.map(changelog => (
+                            <li>
+                                <a href={withBase(changelog.path)}>{changelog.title}</a>
+                                {changelog.date && <time datetime={changelog.date}>{changelog.date}</time>}
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+            ))}
+        </div>
+    </article>
+</Layout>

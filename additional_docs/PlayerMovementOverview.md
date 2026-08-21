@@ -1,3 +1,10 @@
+---
+title: Player movement overview
+section: Player Movement
+sectionOrder: 2
+order: 1
+---
+
 # Introduction
 
 This document describes the approach used for the server authoritative movement mode particularly focused on what a dedicated server host would want to know about configuring the feature and what a third party server developer would need to know to implement it. How to enable the feature is described in [ConfiguringAntiCheat](./ConfiguringAntiCheat.md).

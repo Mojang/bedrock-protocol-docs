@@ -1,3 +1,9 @@
+---
+title: Movement protocol deprecation
+section: Player Movement
+order: 2
+---
+
 # Introduction
 
 In Fall 2024, Bedrock will be starting the preview process of migrating player movement to be server authoritative. Once this process is complete and the changes have been in retail for a release, the client authoritative code paths will be deleted.

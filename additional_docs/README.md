@@ -1,23 +1,16 @@
 # Anti Cheat Documentation
 
-This directory contains documentation about various implementation details of anti-cheat that aren't obvious from looking at the various classes. It is committed in the repository so that it can reflect the current state of the code, as opposed to getting out of sync as it would on a wiki page. GitHub file view is a good way to view these files as it'll render the markdown, unlike using the diff view or a plain text editor.
+This directory contains implementation details that are not obvious from the protocol schemas. Markdown files are discovered recursively and added to the Guides navigation during generation. This README is the only Markdown file that is not rendered as a guide.
 
-## Configuration
+A document's first-level folder becomes its section, and its first heading becomes its title. Root-level documents without an explicit section appear under **Other**. Optional frontmatter can override the inferred values and control ordering:
 
-- [Overview](./ConfiguringAntiCheat.md)
-- [Example props file](./AntiCheatServer.properties)
+```yaml
+---
+title: Configuring anti-cheat
+section: Configuration
+sectionOrder: 1
+order: 1
+---
+```
 
-## Player Movement
-
-- [Overview](./PlayerMovementOverview.md)
-- [Protocol Deprecation](./MovementProtocolDeprecation.md)
-
-## Block Breaking
-
-- [Overview](./BlockBreakingOverview.md)
-- [Build Action Simulation Rate](./BuildActionSimulationRate.md)
-
-## Server Auth Inventory
-
-- [PlayerUIContainer slots for various player-specific UI screens](./ServerAuthInventory/PlayerUIContainer.md)
-- [ItemStackPackets Disabled - Protocol Documentation Supplement](./ServerAuthInventory/ItemStackPackets_Disabled.md)
+Relative links to other Markdown documents and local SVG images are rewritten for the generated Astro routes.

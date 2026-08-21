@@ -1,0 +1,12 @@
+---
+import { withBase } from '../../data';
+import metadataJson from '../../data/protocol.json';
+import type { ProtocolMetadata } from '../../types';
+
+export function getStaticPaths() {
+    const metadata = metadataJson as ProtocolMetadata;
+    return metadata.types.map(type => ({ params: { slug: type.slug } }));
+}
+
+return Astro.redirect(withBase(`/latest/types/${Astro.params.slug}/`));
+---

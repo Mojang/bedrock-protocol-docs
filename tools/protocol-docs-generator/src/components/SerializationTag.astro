@@ -1,0 +1,24 @@
+---
+interface Props {
+    option: string;
+}
+
+const descriptions: Record<string, string> = {
+    'Allow unknown enum values': 'Accepts numeric enum values that are not declared in the schema.',
+    'Big Endian': 'Writes signed 32-bit integers with the most significant byte first.',
+    Compression: 'Uses variable-length encoding for 32- and 64-bit integers and dynamic collection lengths.',
+    'Enum-as-Value': 'Serializes the enum as its numeric value rather than its text name.',
+    'No size compression': 'Writes a collection size without the normal variable-length size encoding.',
+};
+const { option } = Astro.props as Props;
+const description = descriptions[option] ?? 'Applies a protocol-specific serialization behavior.';
+---
+
+<span
+    class="tag tag-help"
+    tabindex="0"
+    aria-label={`${option}: ${description}`}
+>
+    {option}
+    <span class="tag-tooltip" aria-hidden="true">{description}</span>
+</span>

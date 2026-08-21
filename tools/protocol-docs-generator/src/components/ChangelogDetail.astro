@@ -1,0 +1,78 @@
+---
+import ChangelogTypeLink from './ChangelogTypeLink.astro';
+import SerializationTag from './SerializationTag.astro';
+import type { ProtocolChange } from '../types';
+
+interface Props {
+    change: ProtocolChange;
+        previousTypeSlugs: string[];
+        previousVersionPrefix: string;
+        typeSlugs: string[];
+    versionPrefix: string;
+}
+
+const { change, previousTypeSlugs, previousVersionPrefix, typeSlugs, versionPrefix } = Astro.props as Props;
+const typeContext = change.addedType
+        ? { action: 'Added', previous: false, ...change.addedType }
+    : change.changedType
+            ? { action: 'Changed', previous: false, ...change.changedType }
+      : change.removedType
+                ? { action: 'Removed', previous: true, ...change.removedType }
+        : undefined;
+---
+
+<li>
+    {
+        typeContext && <>
+            {typeContext.action} supporting type <ChangelogTypeLink
+                target={typeContext.slug}
+                title={typeContext.title}
+                typeSlugs={typeContext.previous ? previousTypeSlugs : typeSlugs}
+                versionPrefix={typeContext.previous ? previousVersionPrefix : versionPrefix}
+            />: {' '}
+        </>
+    }
+    {
+        change.fieldAdded ? (
+            <>Added field <code>{change.fieldAdded.path}</code> (type <ChangelogTypeLink target={change.fieldAdded.target} title={change.fieldAdded.type} typeSlugs={typeSlugs} versionPrefix={versionPrefix} />).</>
+        ) : change.fieldRemoved ? (
+            <>Removed field <code>{change.fieldRemoved.path}</code> (type <ChangelogTypeLink target={change.fieldRemoved.target} title={change.fieldRemoved.type} typeSlugs={typeSlugs} versionPrefix={versionPrefix} />).</>
+        ) : change.fieldTypeChanged ? (
+            <>Changed <code>{change.fieldTypeChanged.path}</code> from <ChangelogTypeLink target={change.fieldTypeChanged.previousTarget} title={change.fieldTypeChanged.previousType} typeSlugs={previousTypeSlugs} versionPrefix={previousVersionPrefix} /> to <ChangelogTypeLink target={change.fieldTypeChanged.target} title={change.fieldTypeChanged.type} typeSlugs={typeSlugs} versionPrefix={versionPrefix} />.</>
+        ) : change.fieldRequiredChanged ? (
+            <><code>{change.fieldRequiredChanged.path}</code> is now {change.fieldRequiredChanged.required ? 'required' : 'optional'}.</>
+        ) : change.fieldOrdinalChanged ? (
+            <>Moved <code>{change.fieldOrdinalChanged.path}</code> from field {change.fieldOrdinalChanged.previousOrdinalAssigned ? change.fieldOrdinalChanged.previousOrdinal : 'unassigned'} to {change.fieldOrdinalChanged.ordinalAssigned ? change.fieldOrdinalChanged.ordinal : 'unassigned'}.</>
+        ) : change.fieldSerializationOptionAdded ? (
+            <>
+                Added <SerializationTag option={change.fieldSerializationOptionAdded.option} /> to <code>{change.fieldSerializationOptionAdded.path}</code> serialization.
+            </>
+        ) : change.fieldSerializationOptionRemoved ? (
+            <>Removed <SerializationTag option={change.fieldSerializationOptionRemoved.option} /> from <code>{change.fieldSerializationOptionRemoved.path}</code> serialization.</>
+        ) : change.fieldEnumValueAdded ? (
+            <>Added <code>{change.fieldEnumValueAdded.path}</code> enum value <code>{change.fieldEnumValueAdded.value}</code> with value <code>{change.fieldEnumValueAdded.ordinal}</code>.</>
+        ) : change.fieldEnumValueOrdinalChanged ? (
+            <>Changed <code>{change.fieldEnumValueOrdinalChanged.path}</code> enum value <code>{change.fieldEnumValueOrdinalChanged.value}</code> from <code>{change.fieldEnumValueOrdinalChanged.previousOrdinal}</code> to <code>{change.fieldEnumValueOrdinalChanged.ordinal}</code>.</>
+        ) : change.fieldEnumValueRemoved ? (
+            <>Removed <code>{change.fieldEnumValueRemoved.path}</code> enum value <code>{change.fieldEnumValueRemoved.value}</code> with value <code>{change.fieldEnumValueRemoved.ordinal}</code>.</>
+        ) : change.fieldVariantsChanged ? (
+            <>Changed <code>{change.fieldVariantsChanged.path}</code> variants.</>
+        ) : change.typeAdded ? (
+            <>Added {change.typeAdded.category} type.</>
+        ) : change.typeRemoved ? (
+            <>Removed {change.typeRemoved.category} type.</>
+        ) : change.typeCategoryChanged ? (
+            <>Changed category from {change.typeCategoryChanged.previousCategory} to {change.typeCategoryChanged.category}.</>
+        ) : change.typeEnumValueAdded ? (
+            <>Added enum value <code>{change.typeEnumValueAdded.value}</code> with value <code>{change.typeEnumValueAdded.ordinal}</code>.</>
+        ) : change.typeEnumValueOrdinalChanged ? (
+            <>Changed enum value <code>{change.typeEnumValueOrdinalChanged.value}</code> from <code>{change.typeEnumValueOrdinalChanged.previousOrdinal}</code> to <code>{change.typeEnumValueOrdinalChanged.ordinal}</code>.</>
+        ) : change.typeEnumValueRemoved ? (
+            <>Removed enum value <code>{change.typeEnumValueRemoved.value}</code> with value <code>{change.typeEnumValueRemoved.ordinal}</code>.</>
+        ) : change.typeSerializationOptionAdded ? (
+            <>Added <SerializationTag option={change.typeSerializationOptionAdded.option} /> to type serialization.</>
+        ) : change.typeSerializationOptionRemoved ? (
+            <>Removed <SerializationTag option={change.typeSerializationOptionRemoved.option} /> from type serialization.</>
+        ) : null
+    }
+</li>

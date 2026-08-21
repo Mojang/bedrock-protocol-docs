@@ -1,3 +1,9 @@
+---
+title: Build action simulation rate
+section: Block Breaking
+order: 2
+---
+
 # Simulation and Input Update Frequency for Build Actions
 
 ## Motivation

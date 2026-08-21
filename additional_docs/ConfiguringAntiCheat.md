@@ -1,3 +1,10 @@
+---
+title: Configuring anti-cheat
+section: Configuration
+sectionOrder: 1
+order: 1
+---
+
 See this for general context on player movement anti-cheat:
 [Player Rewind for Movement Anti-Cheat](./PlayerMovementOverview.md)
 
@@ -7,7 +14,7 @@ In summary, when anti-cheat with client rewind is on, the client and server are 
 
 # How the server decides to send corrections
 
-The server compares the server player's authoriative position against the client's prediction from `PlayerAuthInputPacket` with the configurable thresholds. Each of them are exposed to the server props (see [AntiCheatServer.properties](./AntiCheatServer.properties)) file.
+The server compares the server player's authoriative position against the client's prediction from `PlayerAuthInputPacket` with the configurable thresholds. Each of them are exposed to the server props (see [AntiCheatServer.md](./AntiCheatServer.md)) file.
 
 # Enabling anti-cheat on a client
 
@@ -15,7 +22,7 @@ Anti-cheat will be enabled if the server instructs the client to do so via the `
 
 # Enabling anti-cheat on a dedicated server
 
-The feature defaults to off, but can be enabled and configured via the `server.properties` file. Full details can be found in [AntiCheatServer.properties](./AntiCheatServer.properties)
+The feature defaults to off, but can be enabled and configured via the `server.properties` file. Full details can be found in [AntiCheatServer.md](./AntiCheatServer.md)
 
 ---
 
