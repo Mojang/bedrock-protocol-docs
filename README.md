@@ -4,11 +4,9 @@ This repository publishes the packet, type, and enum schemas for the Minecraft: 
 
 Browse the generated documentation at [mojang.github.io/bedrock-protocol-docs](https://mojang.github.io/bedrock-protocol-docs/).
 
-The website is assembled from the metadata found in the repository's GitHub Releases.
-
 ## Repository layout
 
-- `json/` contains the protocol schemas for the current checkout. Each schema carries its Minecraft and protocol versions in `x-minecraft-version` and `x-protocol-version`; there is no separately maintained current-version value in this README.
+- `json/` contains the protocol schemas. The website is assembled from the metadata found in the repository's GitHub Releases and not from source in `main`.
 - `additional_docs/` contains the source Markdown and assets for the guides section.
 - `legacy_changelogs/` contains changelogs that predate the generated release history.
 - `scripts/` prepares release metadata and generates the data and pages consumed by the site.
