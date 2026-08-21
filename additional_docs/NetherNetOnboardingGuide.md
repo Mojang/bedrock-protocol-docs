@@ -1,3 +1,9 @@
+---
+section: Signaling
+sectionOrder: 0
+order: 1
+---
+
 # NetherNet HTTP Signaling — Partner Onboarding Guide
 
 ## Table of Contents

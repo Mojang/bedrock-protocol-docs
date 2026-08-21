@@ -2,11 +2,7 @@
 .astro/
 node_modules/
 tools/protocol-docs-generator/dist/
-tools/protocol-docs-generator/src/data/protocol.json
-tools/protocol-docs-generator/src/data/releases/
-tools/protocol-docs-generator/src/data/versions.json
+tools/protocol-docs-generator/src/data/
 tools/protocol-docs-generator/src/pages/guides/
-tools/protocol-docs-generator/src/assets/guides/
-tools/protocol-docs-generator/src/data/legacy-changelogs.json
 tools/protocol-docs-generator/src/pages/changelog/legacy/entries/
-tools/protocol-docs-generator/src/assets/legacy-changelogs/
+tools/protocol-docs-generator/src/assets/
