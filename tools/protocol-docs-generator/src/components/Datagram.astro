@@ -1,0 +1,44 @@
+---
+import type { ProtocolField } from '../types';
+
+interface Props {
+    fields: ProtocolField[];
+    label?: string;
+    packetId?: number;
+}
+
+const { fields, packetId, label = packetId === undefined ? 'Object datagram' : 'Packet datagram' } = Astro.props as Props;
+const packetIdBytes = packetId === undefined || packetId < 0 ? 1 : Math.max(1, Math.ceil(Math.log2(packetId + 1) / 7));
+---
+
+<figure class="datagram">
+    <figcaption>
+        <span>{label}</span>
+        <small>Wire order</small>
+    </figcaption>
+    <div class="datagram-track">
+        {
+            packetId !== undefined && (
+                <div class="datagram-block datagram-header" style={`--wire-bytes: ${packetIdBytes}`}>
+                    <span>Header</span>
+                    <strong>{packetId >= 0 ? `ID ${packetId}` : 'Packet ID'}</strong>
+                    <small>varuint</small>
+                </div>
+            )
+        }
+        {
+            fields.map((field, index) => (
+                <div
+                    class:list={['datagram-block wipe-in', field.wireSize.startsWith('variable') && 'is-variable']}
+                    style={`--order: ${index}; --wire-bytes: ${field.wireSizeBytes}`}
+                    title={`${field.name}: ${field.type} (${field.wireSize})`}
+                >
+                    <span>{field.ordinal ?? index}</span>
+                    <strong>{field.name}</strong>
+                    <small>{field.type} · {field.wireSize}</small>
+                </div>
+            ))
+        }
+        {fields.length === 0 && <div class="datagram-empty">No serialized fields found</div>}
+    </div>
+</figure>

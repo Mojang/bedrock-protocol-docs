@@ -1,0 +1,69 @@
+---
+import { getProtocolMetadata, getVersionPaths, getVersionPrefix } from '../../../data';
+import Layout from '../../../layouts/Layout.astro';
+import type { ProtocolTypeCategory } from '../../../types';
+
+export function getStaticPaths() {
+    return getVersionPaths();
+}
+
+interface Props {
+    version: string;
+}
+
+const { version } = Astro.props;
+const metadata = getProtocolMetadata(version);
+const versionPrefix = getVersionPrefix(version);
+const categories: { id: ProtocolTypeCategory; label: string }[] = [
+    { id: 'object', label: 'Objects' },
+    { id: 'enum', label: 'Enums' },
+    { id: 'union', label: 'Unions' },
+    { id: 'array', label: 'Arrays' },
+    { id: 'scalar', label: 'Scalars' },
+    { id: 'other', label: 'Other' },
+];
+---
+
+<Layout metadata={metadata} title="Supporting types" version={version}>
+    <section class="masthead directory-masthead">
+        <div>
+            <h1>Supporting types</h1>
+            <p class="lede">Enums, objects, unions, arrays, and scalar definitions used by protocol packets.</p>
+        </div>
+    </section>
+
+    <section class="directory-section" id="types">
+        <header class="section-heading"><div><h2>Type directory</h2><span>Grouped by schema shape</span></div></header>
+        <nav class="category-toc" aria-label="Type categories">
+            <p>On this page</p>
+            <div>
+                {
+                    categories.map(category => {
+                        const count = metadata.types.filter(type => type.category === category.id).length;
+                        return count > 0 && <a href={`#${category.id}`}>{category.label}<span>{count}</span></a>;
+                    })
+                }
+            </div>
+        </nav>
+        {
+            categories.map(category => {
+                const types = metadata.types.filter(type => type.category === category.id);
+                if (types.length === 0) return null;
+                return (
+                    <section class="type-group" id={category.id}>
+                        <h3>{category.label}<span>{types.length}</span></h3>
+                        <div class="type-list">
+                            {types.map(type => (
+                                <a class="type-row" href={`${versionPrefix}/types/${type.slug}/`}>
+                                    <strong>{type.title}</strong>
+                                    <span>{type.uses.length} packet {type.uses.length === 1 ? 'reference' : 'references'}</span>
+                                    <i aria-hidden="true">→</i>
+                                </a>
+                            ))}
+                        </div>
+                    </section>
+                );
+            })
+        }
+    </section>
+</Layout>

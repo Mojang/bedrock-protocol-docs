@@ -1,0 +1,159 @@
+---
+interface Props {
+    indexUrl: string;
+}
+
+const { indexUrl } = Astro.props;
+---
+
+<div class="directory-tools protocol-search">
+    <label class="sr-only" for="directory-search">Search reference</label>
+    <div class="search-control">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input
+            id="directory-search"
+            type="search"
+            placeholder="Search packets, types, and members"
+            autocomplete="off"
+            aria-controls="protocol-search-results"
+            aria-expanded="false"
+        />
+        <div id="protocol-search-results" class="search-results" hidden></div>
+    </div>
+    <output id="search-count" aria-live="polite"></output>
+</div>
+<meta id="protocol-search-data" data-index-url={indexUrl} />
+
+<script>
+    interface SearchMember {
+        path: string;
+        type: string;
+    }
+
+    interface SearchEntry {
+        description: string;
+        href: string;
+        id?: number;
+        kind: string;
+        members?: SearchMember[];
+        title: string;
+    }
+
+    const input = document.querySelector<HTMLInputElement>('#directory-search');
+    const output = document.querySelector<HTMLOutputElement>('#search-count');
+    const results = document.querySelector<HTMLElement>('#protocol-search-results');
+    const data = document.querySelector<HTMLElement>('#protocol-search-data');
+    let entriesPromise: Promise<SearchEntry[]> | undefined;
+
+    const loadEntries = () => {
+        if (!entriesPromise) {
+            entriesPromise = fetch(data?.dataset.indexUrl ?? '')
+                .then(response => {
+                    if (!response.ok) throw new Error(`Search index request failed with ${response.status}.`);
+                    return response.json() as Promise<SearchEntry[]>;
+                })
+                .catch(error => {
+                    entriesPromise = undefined;
+                    throw error;
+                });
+        }
+        return entriesPromise;
+    };
+
+    const closeResults = () => {
+        if (results) results.hidden = true;
+        input?.setAttribute('aria-expanded', 'false');
+    };
+
+    const positionResults = () => {
+        if (!input || !results || getComputedStyle(results).position !== 'fixed') return;
+        const inputBounds = input.getBoundingClientRect();
+        results.style.top = `${inputBounds.bottom + 8}px`;
+        results.style.left = `${inputBounds.left}px`;
+    };
+
+    input?.addEventListener('input', async () => {
+        const query = input.value.trim().toLowerCase();
+        if (!results || !query) {
+            if (output) output.textContent = '';
+            closeResults();
+            return;
+        }
+
+        if (output) output.textContent = 'Loading search index…';
+        let entries: SearchEntry[];
+        try {
+            entries = await loadEntries();
+        } catch {
+            if (output) output.textContent = 'Search index unavailable';
+            closeResults();
+            return;
+        }
+        if (query !== input.value.trim().toLowerCase()) return;
+
+        const matches = entries
+            .map(entry => ({
+                entry,
+                matchingMembers: (entry.members ?? []).filter(member =>
+                    `${member.path} ${member.type}`.toLowerCase().includes(query)
+                ),
+            }))
+            .filter(
+                match =>
+                    `${match.entry.title} ${match.entry.description} ${match.entry.kind}`
+                        .toLowerCase()
+                        .includes(query) || match.matchingMembers.length > 0
+            );
+        const fragment = document.createDocumentFragment();
+        for (const { entry, matchingMembers } of matches) {
+            const link = document.createElement('a');
+            const heading = document.createElement('strong');
+            const kind = document.createElement('span');
+            link.href = entry.href;
+            heading.textContent = entry.title;
+            kind.textContent = entry.kind === 'Packet' && entry.id !== undefined ? `Packet ${entry.id}` : entry.kind;
+            link.append(kind, heading);
+            if (matchingMembers.length > 0) {
+                for (const member of matchingMembers.slice(0, 3)) {
+                    const memberDetail = document.createElement('small');
+                    const memberPath = document.createElement('span');
+                    const memberType = document.createElement('code');
+                    memberDetail.className = 'search-member';
+                    memberPath.textContent = member.path;
+                    memberType.textContent = member.type;
+                    memberDetail.append(memberType, memberPath);
+                    link.append(memberDetail);
+                }
+                if (matchingMembers.length > 3) {
+                    const remaining = document.createElement('small');
+                    remaining.className = 'search-member-more';
+                    remaining.textContent = `+${matchingMembers.length - 3} more matching members`;
+                    link.append(remaining);
+                }
+            } else {
+                const description = document.createElement('small');
+                description.textContent = entry.description;
+                link.append(description);
+            }
+            fragment.append(link);
+        }
+        results.replaceChildren(fragment);
+        positionResults();
+        results.hidden = false;
+        input.setAttribute('aria-expanded', 'true');
+        if (output) output.textContent = `${matches.length} ${matches.length === 1 ? 'match' : 'matches'}`;
+    });
+
+    document.addEventListener('click', event => {
+        if (!(event.target instanceof Node) || !event.target.parentElement?.closest('.protocol-search')) closeResults();
+    });
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') closeResults();
+        if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') {
+            event.preventDefault();
+            input?.focus();
+        }
+    });
+    window.addEventListener('resize', positionResults);
+    window.addEventListener('scroll', positionResults, true);
+</script>

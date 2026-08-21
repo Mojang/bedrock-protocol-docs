@@ -1,0 +1,32 @@
+---
+interface WireByte {
+    hex: string;
+    label?: string;
+}
+
+interface Props {
+    bytes: WireByte[];
+    value: string;
+}
+
+const { bytes, value } = Astro.props as Props;
+const bits = (hex: string) => Number.parseInt(hex, 16).toString(2).padStart(8, '0');
+---
+
+<figure class="wire-example" aria-label={`Wire encoding of ${value}`}>
+    <figcaption><span>Example: <code>{value}</code></span><small>First byte on left</small></figcaption>
+    <div class="wire-example-track">
+        {
+            bytes.map((byte, index) => {
+                const binary = bits(byte.hex);
+                return (
+                    <div class="wire-example-byte">
+                        <small>{byte.label ?? `byte ${index}`}</small>
+                        <code class="wire-example-bits">{binary.slice(0, 4)} {binary.slice(4)}</code>
+                        <code class="wire-example-hex">0x{byte.hex.toUpperCase()}</code>
+                    </div>
+                );
+            })
+        }
+    </div>
+</figure>

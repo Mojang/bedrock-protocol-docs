@@ -1,0 +1,28 @@
+{
+  "name": "bedrock-protocol-docs",
+  "private": true,
+  "version": "0.0.0",
+  "packageManager": "npm@11.6.2",
+  "engines": {
+    "node": ">=24.0.0",
+    "npm": ">=11.0.0"
+  },
+  "scripts": {
+    "build": "npm run prepare:metadata && npm run generate && astro build --root tools/protocol-docs-generator",
+    "check": "npm run prepare:metadata && npm run generate && astro check --root tools/protocol-docs-generator",
+    "dev": "npm run prepare:metadata && npm run generate && astro dev --root tools/protocol-docs-generator",
+    "generate": "node scripts/generate-protocol-data.mjs",
+    "prepare:metadata": "node scripts/prepare-metadata.mjs"
+  },
+  "dependencies": {
+    "@minecraft/api-docs-generator": "file:vendor/minecraft-api-docs-generator-2.0.6.tgz",
+    "astro": "^7.2.1",
+    "semver": "^7.7.2",
+    "tar": "^7.4.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0"
+  }
+}

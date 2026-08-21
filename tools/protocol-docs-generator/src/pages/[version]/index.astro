@@ -1,0 +1,40 @@
+---
+import { getProtocolMetadata, getVersionPaths, getVersionPrefix } from '../../data';
+import Layout from '../../layouts/Layout.astro';
+
+export function getStaticPaths() {
+    return getVersionPaths();
+}
+
+interface Props {
+    version: string;
+}
+
+const { version } = Astro.props;
+const metadata = getProtocolMetadata(version);
+const versionPrefix = getVersionPrefix(version);
+---
+
+<Layout metadata={metadata} title="Protocol index" version={version}>
+    <section class="masthead">
+        <div>
+            <h1>Network packets</h1>
+            <p class="lede">The messages that shape Minecraft Bedrock network traffic, ordered by packet identifier.</p>
+        </div>
+    </section>
+
+    <section class="directory-section" id="packets">
+        <header class="section-heading"><div><h2>Packets</h2><span>Ordered by network identifier</span></div></header>
+        <div class="packet-grid">
+            {
+                metadata.packets.map(packet => (
+                    <a class="packet-card searchable" href={`${versionPrefix}/packets/${packet.slug}/`} data-search={packet.title.toLowerCase()}>
+                        <span>{packet.id >= 0 ? packet.id : '—'}</span>
+                        <div><strong>{packet.title}</strong><small>{packet.description}</small></div>
+                        <i aria-hidden="true">→</i>
+                    </a>
+                ))
+            }
+        </div>
+    </section>
+</Layout>

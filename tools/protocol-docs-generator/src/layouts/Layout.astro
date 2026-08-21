@@ -1,0 +1,169 @@
+---
+import ProtocolSearch from '../components/ProtocolSearch.astro';
+import VersionSelector from '../components/VersionSelector.astro';
+import { getVersionPrefix, portalGeneratedAt, versionManifest, withBase } from '../data';
+import '../styles/global.css';
+import type { ProtocolReleaseMetadata } from '../types';
+
+interface Props {
+    description?: string;
+    metadata: ProtocolReleaseMetadata;
+    title: string;
+    version: string;
+}
+
+const { description = 'Minecraft Bedrock network protocol reference', metadata, title, version } = Astro.props;
+const pageTitle = title === 'Protocol index' ? 'Minecraft Bedrock Protocol' : `${title} | Minecraft Bedrock Protocol`;
+const versionPrefix = getVersionPrefix(version);
+const releaseVersion = version === 'latest' ? versionManifest.latest : version;
+const releaseDate = versionManifest.releases.find(release => release.version === releaseVersion)?.releaseDate;
+const searchIndexUrl = withBase(`/search/${releaseVersion}.json`);
+const versionPath = Astro.url.pathname.slice(versionPrefix.length) || '/';
+const activeSection = versionPath.startsWith('/types')
+        ? 'types'
+        : versionPath.startsWith('/primitives')
+            ? 'primitives'
+            : Astro.url.pathname.startsWith(withBase('/changelog'))
+                ? 'changelog'
+            : 'packets';
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="description" content={description} />
+        <meta name="color-scheme" content="dark light" />
+        <title>{pageTitle}</title>
+        <script is:inline>
+            (() => {
+                const preference = localStorage.getItem('protocol-theme') ?? 'system';
+                const systemTheme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                document.documentElement.dataset.theme = preference === 'system' ? systemTheme : preference;
+                document.documentElement.dataset.themePreference = preference;
+            })();
+        </script>
+    </head>
+    <body>
+        <a class="skip-link" href="#content-area">Skip to main content</a>
+        <div class="docs-shell">
+            <aside class="docs-sidebar">
+                <div class="sidebar-header">
+                    <a class="brand" href={`${versionPrefix}/`}>
+                        <span><strong>Minecraft Bedrock</strong><small>Network Protocol Reference</small></span>
+                    </a>
+                    <div class="theme-switcher" role="group" aria-label="Theme preference">
+                        <button type="button" data-theme-value="system" aria-label="Use system theme" title="System theme"><span aria-hidden="true">▣</span></button>
+                        <button type="button" data-theme-value="light" aria-label="Use light theme" title="Light theme"><span aria-hidden="true">☀</span></button>
+                        <button type="button" data-theme-value="dark" aria-label="Use dark theme" title="Dark theme"><span aria-hidden="true">◐</span></button>
+                    </div>
+                </div>
+                <ProtocolSearch indexUrl={searchIndexUrl} />
+                <div class="sidebar-groups">
+                    <section class="sidebar-meta" aria-label="Protocol version">
+                        <VersionSelector pathname={Astro.url.pathname} version={version} />
+                        <p>Release information</p>
+                        <dl>
+                            <div><dt>Game version</dt><dd>{metadata.minecraftVersion}</dd></div>
+                            {releaseDate && <div><dt>Release date</dt><dd><time datetime={releaseDate}>{releaseDate}</time></dd></div>}
+                            <div><dt>Protocol version</dt><dd>{metadata.protocolVersion}</dd></div>
+                        </dl>
+                    </section>
+                    <nav class="sidebar-nav" aria-label="Reference pages">
+                        <p>Reference</p>
+                        <a href={`${versionPrefix}/`} aria-current={activeSection === 'packets' ? 'page' : undefined}>
+                            <strong>Packets</strong><small>{metadata.packets.length}</small>
+                        </a>
+                        <a href={`${versionPrefix}/types/`} aria-current={activeSection === 'types' ? 'page' : undefined}>
+                            <strong>Supporting types</strong><small>{metadata.types.length}</small>
+                        </a>
+                        <a href={`${versionPrefix}/primitives/`} aria-current={activeSection === 'primitives' ? 'page' : undefined}>
+                            <strong>Primitives</strong>
+                        </a>
+                        <a href={withBase('/changelog/')} aria-current={activeSection === 'changelog' ? 'page' : undefined}>
+                            <strong>Changelog</strong>
+                        </a>
+                    </nav>
+                </div>
+                <p class="sidebar-generated">
+                    Portal generated
+                    <time datetime={portalGeneratedAt.toISOString()}>{portalGeneratedAt.toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'UTC' })} UTC</time>
+                </p>
+            </aside>
+            <div class="docs-frame">
+                <header class="site-header">
+                    <nav aria-label="Primary navigation">
+                        <a href={`${versionPrefix}/`} aria-current={activeSection === 'packets' ? 'page' : undefined}>Packets</a>
+                        <a href={`${versionPrefix}/types/`} aria-current={activeSection === 'types' ? 'page' : undefined}>Types</a>
+                        <a href={`${versionPrefix}/primitives/`} aria-current={activeSection === 'primitives' ? 'page' : undefined}>Primitives</a>
+                        <a href={withBase('/changelog/')} aria-current={activeSection === 'changelog' ? 'page' : undefined}>Changelog</a>
+                    </nav>
+                    <p>Protocol version {metadata.protocolVersion}</p>
+                    <div class="header-version-selector">
+                        <VersionSelector compact pathname={Astro.url.pathname} version={version} />
+                    </div>
+                </header>
+                <main id="content-area">
+                    <slot />
+                </main>
+                <footer>Generated from versioned protocol schema metadata.</footer>
+            </div>
+        </div>
+        <button class="back-to-top" type="button" aria-label="Back to top" title="Back to top" data-back-to-top hidden>
+            <span aria-hidden="true">↑</span>
+        </button>
+        <script>
+            type ThemePreference = 'system' | 'light' | 'dark';
+
+            const systemTheme = matchMedia('(prefers-color-scheme: dark)');
+            const themeButtons = [...document.querySelectorAll<HTMLButtonElement>('[data-theme-value]')];
+
+            const applyTheme = (preference: ThemePreference) => {
+                const theme = preference === 'system' ? (systemTheme.matches ? 'dark' : 'light') : preference;
+                document.documentElement.dataset.theme = theme;
+                document.documentElement.dataset.themePreference = preference;
+                localStorage.setItem('protocol-theme', preference);
+                for (const button of themeButtons) {
+                    button.setAttribute('aria-pressed', String(button.dataset.themeValue === preference));
+                }
+            };
+
+            for (const button of themeButtons) {
+                button.addEventListener('click', () => applyTheme(button.dataset.themeValue as ThemePreference));
+            }
+            systemTheme.addEventListener('change', () => {
+                if (document.documentElement.dataset.themePreference === 'system') applyTheme('system');
+            });
+            applyTheme((document.documentElement.dataset.themePreference as ThemePreference | undefined) ?? 'system');
+
+            const backToTop = document.querySelector<HTMLButtonElement>('[data-back-to-top]');
+            const updateBackToTop = () => {
+                if (backToTop) backToTop.hidden = window.scrollY < 480;
+            };
+            backToTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+            window.addEventListener('scroll', updateBackToTop, { passive: true });
+            updateBackToTop();
+
+            const positionSerializationTooltip = (tag: HTMLElement) => {
+                const tooltip = tag.querySelector<HTMLElement>('.tag-tooltip');
+                if (!tooltip) return;
+
+                tag.dataset.tooltipOpen = '';
+                const tagRect = tag.getBoundingClientRect();
+                const tooltipRect = tooltip.getBoundingClientRect();
+                const left = Math.max(12, Math.min(tagRect.left, window.innerWidth - tooltipRect.width - 12));
+                const preferredTop = tagRect.top - tooltipRect.height - 8;
+                const top = preferredTop >= 12 ? preferredTop : tagRect.bottom + 8;
+                tooltip.style.left = `${left}px`;
+                tooltip.style.top = `${top}px`;
+            };
+            for (const tag of document.querySelectorAll<HTMLElement>('.tag-help')) {
+                tag.addEventListener('pointerenter', () => positionSerializationTooltip(tag));
+                tag.addEventListener('pointerleave', () => delete tag.dataset.tooltipOpen);
+                tag.addEventListener('focus', () => positionSerializationTooltip(tag));
+                tag.addEventListener('blur', () => delete tag.dataset.tooltipOpen);
+            }
+        </script>
+    </body>
+</html>

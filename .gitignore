@@ -1,0 +1,7 @@
+.cache/
+.astro/
+node_modules/
+tools/protocol-docs-generator/dist/
+tools/protocol-docs-generator/src/data/protocol.json
+tools/protocol-docs-generator/src/data/releases/
+tools/protocol-docs-generator/src/data/versions.json

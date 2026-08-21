@@ -1,0 +1,101 @@
+---
+import WireExample from '../../../components/WireExample.astro';
+import { getProtocolMetadata, getVersionPaths } from '../../../data';
+import Layout from '../../../layouts/Layout.astro';
+import type { ProtocolPrimitive } from '../../../types';
+
+export function getStaticPaths() {
+    return getVersionPaths();
+}
+
+interface Props {
+    version: string;
+}
+
+const { version } = Astro.props;
+const metadata = getProtocolMetadata(version);
+const categories: ProtocolPrimitive['category'][] = [
+    'Boolean',
+    'Signed integer',
+    'Unsigned integer',
+    'Floating point',
+    'Text',
+];
+
+interface WireExampleData {
+    bytes: Array<{ hex: string; label?: string }>;
+    value: string;
+}
+
+const byteValues = (...hex: string[]) => hex.map(value => ({ hex: value }));
+const primitiveExamples: Record<string, WireExampleData> = {
+    boolean: { bytes: byteValues('01'), value: 'true' },
+    int8: { bytes: byteValues('D6'), value: '-42' },
+    int16: { bytes: byteValues('D6', 'FF'), value: '-42' },
+    int32: { bytes: byteValues('D6', 'FF', 'FF', 'FF'), value: '-42' },
+    int64: { bytes: byteValues('D6', 'FF', 'FF', 'FF', 'FF', 'FF', 'FF', 'FF'), value: '-42' },
+    varint32: { bytes: [{ hex: '80', label: 'group 0, more' }, { hex: '01', label: 'group 1, final' }], value: '64' },
+    varint64: { bytes: [{ hex: '80', label: 'group 0, more' }, { hex: '01', label: 'group 1, final' }], value: '64' },
+    uint8: { bytes: byteValues('2A'), value: '42' },
+    uint16: { bytes: byteValues('2C', '01'), value: '300' },
+    uint32: { bytes: byteValues('2C', '01', '00', '00'), value: '300' },
+    uint64: { bytes: byteValues('2C', '01', '00', '00', '00', '00', '00', '00'), value: '300' },
+    varuint32: { bytes: [{ hex: 'FF', label: 'group 0, more' }, { hex: '01', label: 'group 1, final' }], value: '255' },
+    varuint64: { bytes: [{ hex: 'FF', label: 'group 0, more' }, { hex: '01', label: 'group 1, final' }], value: '255' },
+    float: { bytes: byteValues('00', '00', '60', '40'), value: '3.5f' },
+    double: { bytes: byteValues('00', '00', '00', '00', '00', '00', '0C', '40'), value: '3.5' },
+    string: {
+        bytes: [
+            { hex: '02', label: 'length' },
+            { hex: '48', label: 'data \'H\'' },
+            { hex: '69', label: 'data \'i\'' },
+        ],
+        value: '"Hi"',
+    },
+};
+---
+
+<Layout metadata={metadata} title="Primitives" version={version}>
+    <section class="masthead">
+        <div>
+            <h1>Primitives</h1>
+            <p class="lede">The fundamental wire values used to serialize packet fields.</p>
+        </div>
+    </section>
+
+    <section class="directory-section primitive-directory">
+        <header class="section-heading"><div><h2>Wire formats</h2></div></header>
+        {
+            categories.map(category => {
+                const primitives = metadata.primitives.filter(primitive => primitive.category === category);
+                if (primitives.length === 0) return null;
+                return (
+                    <section class="primitive-group">
+                        <h3>{category}</h3>
+                        <div class="primitive-list">
+                            {primitives.map(primitive => (
+                                <article class="primitive-card" id={primitive.slug}>
+                                    <header><code>{primitive.title}</code><span>{primitive.size}</span></header>
+                                    <p>{primitive.encoding}</p>
+                                    {primitiveExamples[primitive.title] && (
+                                        <WireExample {...primitiveExamples[primitive.title]} />
+                                    )}
+                                </article>
+                            ))}
+                        </div>
+                    </section>
+                );
+            })
+        }
+    </section>
+
+    <section class="schema-section primitive-options">
+        <header><h2>Field annotations</h2><span>Schema and serialization modifiers</span></header>
+        <dl>
+            <div><dt>Optional</dt><dd>Field is not required by its enclosing schema and may be absent.</dd></div>
+            <div><dt>Big Endian</dt><dd>Writes signed 32-bit integers with the most significant byte first.</dd></div>
+            <div><dt>Compression</dt><dd>Uses variable-length encoding for 32- and 64-bit integers and dynamic collection lengths.</dd></div>
+            <div><dt>No size compression</dt><dd>Writes a collection size without the normal variable-length size encoding.</dd></div>
+        </dl>
+    </section>
+</Layout>

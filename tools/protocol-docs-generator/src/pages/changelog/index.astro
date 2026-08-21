@@ -1,0 +1,154 @@
+---
+import ChangelogDetail from '../../components/ChangelogDetail.astro';
+import { getProtocolMetadata, getVersionPrefix, versionManifest } from '../../data';
+import metadataJson from '../../data/protocol.json';
+import Layout from '../../layouts/Layout.astro';
+import type { ProtocolMetadata } from '../../types';
+
+const metadata = metadataJson as ProtocolMetadata;
+const latestMetadata = getProtocolMetadata('latest');
+const releasesByVersion = new Map(versionManifest.releases.map(release => [release.version, release]));
+const releaseId = (version: string) => `release-${version.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase()}`;
+const packetHref = (version: string, slug: string) =>
+    releasesByVersion.get(version)?.packetSlugs.includes(slug) ? `${getVersionPrefix(version)}/packets/${slug}/` : undefined;
+---
+
+<Layout metadata={latestMetadata} title="Protocol changelog" version="latest">
+    <section class="masthead">
+        <div>
+            <h1>Protocol changelog</h1>
+            <p class="lede">Packet changes across the latest tagged metadata releases.</p>
+        </div>
+    </section>
+
+    {
+        metadata.changelog.length > 0 ? (
+            <>
+                <nav class="category-toc changelog-toc" aria-label="Changelog releases">
+                    <p>Releases · sorted by semantic version</p>
+                    <div>
+                        {metadata.changelog.map(release => (
+                            <a href={`#${releaseId(release.version)}`}>
+                                {release.version}<span>{release.totalChanges}</span>
+                            </a>
+                        ))}
+                    </div>
+                </nav>
+
+                <div class="changelog-releases">
+                    {metadata.changelog.map(release => {
+                        const packetCount =
+                            release.packets.added.length +
+                            release.packets.changed.length +
+                            release.packets.removed.length;
+                        return (
+                            <section class="changelog-release" id={releaseId(release.version)}>
+                                <header class="changelog-release-header">
+                                    <div>
+                                        <h2>
+                                            <a class="release-permalink" href={`#${releaseId(release.version)}`}>
+                                                {release.version}<span aria-hidden="true">#</span>
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <dl>
+                                        <div><dt>Released</dt><dd><time datetime={release.releaseDate}>{release.releaseDate}</time></dd></div>
+                                        <div><dt>Protocol</dt><dd>{release.protocolVersion}</dd></div>
+                                    </dl>
+                                </header>
+                                {
+                                    release.totalChanges > 0 && !release.versionDidChange && (
+                                        <aside class="protocol-bump-warning" role="note">
+                                            <strong>Protocol version should have changed.</strong>
+                                            <span>
+                                                This release contains {release.totalChanges} protocol changes, but both{' '}
+                                                {release.previousVersion} and {release.version} use protocol{' '}
+                                                <code>{release.protocolVersion}</code>.
+                                            </span>
+                                        </aside>
+                                    )
+                                }
+
+                                <section class="changelog-scope">
+                                    <header><h3>Packets</h3><span>{packetCount} changes</span></header>
+                                    {release.packets.added.length > 0 && (
+                                        <div class="changelog-group added">
+                                            <h4>Added <span>{release.packets.added.length}</span></h4>
+                                            <ul>
+                                                {release.packets.added.map(item => (
+                                                    <li>
+                                                        {packetHref(release.version, item.slug) ? (
+                                                            <a href={packetHref(release.version, item.slug)}>{item.title}</a>
+                                                        ) : (
+                                                            <strong>{item.title}</strong>
+                                                        )}
+                                                        <small>Packet ID {item.packetId}</small>
+                                                        {item.changes.length > 0 && (
+                                                            <ul class="changelog-subdetails">
+                                                                {item.changes.map(change => <ChangelogDetail change={change} previousTypeSlugs={releasesByVersion.get(release.previousVersion)?.typeSlugs ?? []} previousVersionPrefix={getVersionPrefix(release.previousVersion)} typeSlugs={releasesByVersion.get(release.version)?.typeSlugs ?? []} versionPrefix={getVersionPrefix(release.version)} />)}
+                                                            </ul>
+                                                        )}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
+                                    {release.packets.removed.length > 0 && (
+                                        <div class="changelog-group removed">
+                                            <h4>Removed <span>{release.packets.removed.length}</span></h4>
+                                            <ul>
+                                                {release.packets.removed.map(item => (
+                                                    <li>
+                                                        {packetHref(release.previousVersion, item.slug) ? (
+                                                            <a href={packetHref(release.previousVersion, item.slug)}>{item.title}</a>
+                                                        ) : (
+                                                            <strong>{item.title}</strong>
+                                                        )}
+                                                        <small>Packet ID {item.packetId}</small>
+                                                        {item.changes.length > 0 && (
+                                                            <ul class="changelog-subdetails">
+                                                                {item.changes.map(change => <ChangelogDetail change={change} previousTypeSlugs={releasesByVersion.get(release.previousVersion)?.typeSlugs ?? []} previousVersionPrefix={getVersionPrefix(release.previousVersion)} typeSlugs={releasesByVersion.get(release.version)?.typeSlugs ?? []} versionPrefix={getVersionPrefix(release.version)} />)}
+                                                            </ul>
+                                                        )}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
+                                    {release.packets.changed.length > 0 && (
+                                        <div class="changelog-group changed">
+                                            <h4>Changed <span>{release.packets.changed.length}</span></h4>
+                                            <div class="changelog-details">
+                                                {release.packets.changed.map(item => (
+                                                    <article>
+                                                        <header>
+                                                            {packetHref(release.version, item.slug) ? (
+                                                                <a href={packetHref(release.version, item.slug)}>{item.title}</a>
+                                                            ) : (
+                                                                <strong>{item.title}</strong>
+                                                            )}
+                                                            <span>{item.changes.length} changes · ID {item.packetId}</span>
+                                                        </header>
+                                                        <ul>
+                                                            {item.previousPacketId !== undefined && (
+                                                                <li>Changed packet ID from {item.previousPacketId} to {item.packetId}.</li>
+                                                            )}
+                                                            {item.changes.map(change => <ChangelogDetail change={change} previousTypeSlugs={releasesByVersion.get(release.previousVersion)?.typeSlugs ?? []} previousVersionPrefix={getVersionPrefix(release.previousVersion)} typeSlugs={releasesByVersion.get(release.version)?.typeSlugs ?? []} versionPrefix={getVersionPrefix(release.version)} />)}
+                                                        </ul>
+                                                    </article>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
+                                    {packetCount === 0 && <p class="empty-state">No packet changes.</p>}
+                                </section>
+                            </section>
+                        );
+                    })}
+                </div>
+            </>
+        ) : (
+            <p class="empty-state changelog-empty">No semantic release history was available from the metadata repository.</p>
+        )
+    }
+</Layout>

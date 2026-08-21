@@ -1,0 +1,158 @@
+---
+import type { ProtocolField, ProtocolReleaseMetadata } from '../types';
+import SerializationTag from './SerializationTag.astro';
+import VariantType from './VariantType.astro';
+
+interface Props {
+    depth?: number;
+    fields: ProtocolField[];
+    metadata: ProtocolReleaseMetadata;
+    seen?: string[];
+    versionPrefix: string;
+}
+
+const { depth = 0, fields, metadata, seen = [], versionPrefix } = Astro.props;
+const typesBySlug = new Map(metadata.types.map(type => [type.slug, type]));
+const primitivesByTitle = new Map(metadata.primitives.map(primitive => [primitive.title, primitive]));
+---
+
+<ol class="field-tree" style={`--depth: ${depth}`}>
+    {
+        fields.map(field => {
+            const target = field.target ? typesBySlug.get(field.target) : undefined;
+            const nestedFields = target?.fields ?? field.children ?? [];
+            const enumValues = target?.enumValues.length ? target.enumValues : (field.enumValues ?? []);
+            const isCycle = field.target ? seen.includes(field.target) : false;
+            const hasDetails = !isCycle && (nestedFields.length > 0 || enumValues.length > 0 || field.variants?.length);
+            const primitive = primitivesByTitle.get(field.type);
+            const targetWirePrimitive = field.target ? primitivesByTitle.get(field.type) : undefined;
+            const arrayItemType = field.type.match(/^array<([^<>]+)>$/)?.[1];
+            const arrayItemPrimitive = arrayItemType ? primitivesByTitle.get(arrayItemType) : undefined;
+            const row = (
+                <span class="field-row">
+                    <span class="field-index">{field.ordinal ?? '–'}</span>
+                    <span class="field-name">
+                        <strong>{field.name}</strong>
+                        {field.required && <em>required</em>}
+                        {field.description && <small>{field.description}</small>}
+                    </span>
+                    <span class="field-type">
+                        <span class="field-value">
+                            {field.serialization.map(option => <SerializationTag option={option} />)}
+                            {field.target ? (
+                                <span class="referenced-type">
+                                    <a href={`${versionPrefix}/types/${field.target}/`}>{target?.title ?? field.type}</a>
+                                    {target && target.title !== field.type && (
+                                        <span class="wire-encoding">
+                                            as {targetWirePrimitive ? (
+                                                <a class="primitive-link" href={`${versionPrefix}/primitives/#${targetWirePrimitive.slug}`}><code>{field.type}</code></a>
+                                            ) : (
+                                                <code>{field.type}</code>
+                                            )}
+                                        </span>
+                                    )}
+                                </span>
+                            ) : field.variants?.length ? (
+                                <VariantType
+                                    type={field.type}
+                                    typeSlugs={metadata.types.map(type => type.slug)}
+                                    variants={field.variants}
+                                    versionPrefix={versionPrefix}
+                                />
+                            ) : primitive ? (
+                                <a class="primitive-link" href={`${versionPrefix}/primitives/#${primitive.slug}`}><code>{field.type}</code></a>
+                            ) : arrayItemPrimitive ? (
+                                <code>array&lt;<a class="primitive-link" href={`${versionPrefix}/primitives/#${arrayItemPrimitive.slug}`}>{arrayItemPrimitive.title}</a>&gt;</code>
+                            ) : (
+                                <code>{field.type}</code>
+                            )}
+                        </span>
+                    </span>
+                </span>
+            );
+
+            return (
+                <li>
+                    {hasDetails ? (
+                        <details class="field-details">
+                            <summary>{row}</summary>
+                            <div class="field-contents">
+                                {nestedFields.length > 0 && (
+                                    <Astro.self
+                                        depth={depth + 1}
+                                        fields={nestedFields}
+                                        metadata={metadata}
+                                        seen={field.target ? [...seen, field.target] : seen}
+                                        versionPrefix={versionPrefix}
+                                    />
+                                )}
+                                {enumValues.length > 0 && (
+                                    <ol class="enum-values compact">
+                                        {enumValues.map((value, index) => <li><span>{index}</span><code>{value}</code></li>)}
+                                    </ol>
+                                )}
+                                {field.variants && field.variants.length > 0 && (
+                                    <div class="variant-list">
+                                        {field.variants.map(variant => {
+                                            const variantPrimitive = primitivesByTitle.get(variant.type);
+                                            const variantTarget = variant.target ? typesBySlug.get(variant.target) : undefined;
+                                            const variantIsCycle = variant.target ? seen.includes(variant.target) : false;
+                                            const hasVariantDetails =
+                                                !variantIsCycle &&
+                                                !!variantTarget &&
+                                                (variantTarget.fields.length > 0 || variantTarget.enumValues.length > 0);
+                                            const variantRow = (
+                                                <span class="variant-row">
+                                                    <span>{variant.index}</span>
+                                                    {variant.target ? (
+                                                        <a href={`${versionPrefix}/types/${variant.target}/`}>{variant.title}</a>
+                                                    ) : (
+                                                        <strong>{variant.title}</strong>
+                                                    )}
+                                                    {variantPrimitive ? (
+                                                        <a class="primitive-link" href={`${versionPrefix}/primitives/#${variantPrimitive.slug}`}><code>{variant.type}</code></a>
+                                                    ) : (
+                                                        <code>{variant.type}</code>
+                                                    )}
+                                                </span>
+                                            );
+                                            return hasVariantDetails ? (
+                                                <details class="variant-item variant-details">
+                                                    <summary>{variantRow}</summary>
+                                                    {variantTarget.fields.length > 0 && (
+                                                        <Astro.self
+                                                            depth={depth + 2}
+                                                            fields={variantTarget.fields}
+                                                            metadata={metadata}
+                                                            seen={variant.target ? [...seen, variant.target] : seen}
+                                                            versionPrefix={versionPrefix}
+                                                        />
+                                                    )}
+                                                    {variantTarget.enumValues.length > 0 && (
+                                                        <ol class="enum-values compact">
+                                                            {variantTarget.enumValues.map((value, index) => <li><span>{index}</span><code>{value}</code></li>)}
+                                                        </ol>
+                                                    )}
+                                                </details>
+                                            ) : (
+                                                <div class="variant-item">
+                                                    {variantRow}
+                                                    {variantIsCycle && <span class="cycle-note">recursive</span>}
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                )}
+                            </div>
+                        </details>
+                    ) : (
+                        <div class="field-static">
+                            {row}
+                            {isCycle && <span class="cycle-note">recursive</span>}
+                        </div>
+                    )}
+                </li>
+            );
+        })
+    }
+</ol>

@@ -1,0 +1,111 @@
+---
+import Datagram from '../../../components/Datagram.astro';
+import FieldTree from '../../../components/FieldTree.astro';
+import SerializationTag from '../../../components/SerializationTag.astro';
+import { getProtocolMetadata, getVersionPaths, getVersionPrefix } from '../../../data';
+import Layout from '../../../layouts/Layout.astro';
+import type { ProtocolType } from '../../../types';
+
+export function getStaticPaths() {
+    return getVersionPaths().flatMap(path => {
+        const metadata = getProtocolMetadata(path.props.version);
+        return metadata.types.map(type => ({
+            params: { slug: type.slug, version: path.params.version },
+            props: { type, version: path.props.version },
+        }));
+    });
+}
+
+interface Props {
+    type: ProtocolType;
+    version: string;
+}
+
+const { type, version } = Astro.props;
+const metadata = getProtocolMetadata(version);
+const versionPrefix = getVersionPrefix(version);
+const wireFormats = type.wireFormats.map(format => ({
+    format,
+    primitive: metadata.primitives.find(primitive => primitive.title === format.type),
+}));
+---
+
+<Layout metadata={metadata} title={type.title} description={type.description} version={version}>
+    <article class="detail-page">
+        <a class="back-link" href={`${versionPrefix}/types/`}>← Type index</a>
+        <header class="detail-header type-title">
+            <div>
+                <h1>{type.title}</h1>
+                {type.description && <p class="lede">{type.description}</p>}
+            </div>
+        </header>
+
+        {type.category === 'object' && type.fields.length > 0 && <Datagram fields={type.fields} />}
+
+        {
+            type.category === 'enum' && (
+                <section class="schema-section wire-format-section">
+                    <header><h2>Wire format</h2><span>{wireFormats.length} {wireFormats.length === 1 ? 'format' : 'formats'}</span></header>
+                    {wireFormats.length > 0 ? (
+                        <div class="wire-format-list">
+                            {wireFormats.map(({ format, primitive }) => (
+                                <article class="wire-format-summary">
+                                    <p>
+                                        Values are serialized as {primitive ? (
+                                            <a class="primitive-link" href={`${versionPrefix}/primitives/#${primitive.slug}`}><code>{primitive.title}</code></a>
+                                        ) : (
+                                            <code>{format.type}</code>
+                                        )}.
+                                    </p>
+                                    {primitive && <p>{primitive.encoding} <span class="wire-size">{primitive.size}</span></p>}
+                                    {format.serialization.length > 0 && (
+                                        <div class="wire-options">{format.serialization.map(option => <SerializationTag option={option} />)}</div>
+                                    )}
+                                </article>
+                            ))}
+                        </div>
+                    ) : (
+                        <p class="empty-state">No primitive wire format is declared or observed for this enum.</p>
+                    )}
+                </section>
+            )
+        }
+
+        {
+            type.enumValues.length > 0 && (
+                <section class="schema-section">
+                    <header><h2>Enum values</h2><span>{type.enumValues.length} values</span></header>
+                    <ol class="enum-values">
+                        {type.enumValues.map((value, index) => <li><span>{index}</span><code>{value}</code></li>)}
+                    </ol>
+                </section>
+            )
+        }
+        {
+            type.fields.length > 0 && (
+                <section class="schema-section">
+                    <header><h2>Fields</h2><span>{type.fields.length} top-level fields</span></header>
+                    <FieldTree fields={type.fields} metadata={metadata} seen={[type.slug]} versionPrefix={versionPrefix} />
+                </section>
+            )
+        }
+
+        <section class="schema-section include-section">
+            <header><h2>Packet references</h2><span>{type.uses.length} {type.uses.length === 1 ? 'reference' : 'references'}</span></header>
+            {
+                type.uses.length > 0 ? (
+                    <ol class="include-paths">
+                        {type.uses.map(use => (
+                            <li>
+                                <a href={`${versionPrefix}/packets/${use.packetSlug}/`}>{use.packetTitle}</a>
+                                <span>{use.path.join(' › ')}</span>
+                            </li>
+                        ))}
+                    </ol>
+                ) : (
+                    <p class="empty-state">No packet includes this type.</p>
+                )
+            }
+        </section>
+    </article>
+</Layout>

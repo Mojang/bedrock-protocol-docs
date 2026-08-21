@@ -1,0 +1,61 @@
+---
+import { getVersionPrefix, versionManifest } from '../data';
+
+interface Props {
+    compact?: boolean;
+    pathname: string;
+    version: string;
+}
+
+const { compact = false, pathname, version } = Astro.props;
+const releasesByVersion = new Map(versionManifest.releases.map(release => [release.version, release]));
+const stableReleases = versionManifest.releases.filter(release => !release.preview);
+const previewReleases = versionManifest.releases.filter(release => release.preview);
+const currentVersionPrefix = getVersionPrefix(version);
+const relativeParts = pathname.slice(currentVersionPrefix.length).split('/').filter(Boolean);
+
+const destinationFor = (target: string) => {
+    const release = releasesByVersion.get(target === 'latest' ? versionManifest.latest : target);
+    const targetPrefix = getVersionPrefix(target);
+    if (!release) return `${targetPrefix}/`;
+
+    const [section, slug] = relativeParts;
+    if (section === 'packets' && slug && !release.packetSlugs.includes(slug)) return `${targetPrefix}/`;
+    if (section === 'types' && slug && !release.typeSlugs.includes(slug)) return `${targetPrefix}/types/`;
+    const suffix = relativeParts.length > 0 ? `${relativeParts.join('/')}/` : '';
+    return `${targetPrefix}/${suffix}`;
+};
+---
+
+<label class:list={['version-selector', { compact }]}>
+    <span>Protocol release</span>
+    <select aria-label="Protocol release" data-version-selector>
+        <option value={destinationFor('latest')} selected={version === 'latest'}>
+            Latest · {versionManifest.latest}
+        </option>
+        {stableReleases.length > 0 && (
+            <optgroup label="Stable releases">
+                {stableReleases.map(release => (
+                    <option value={destinationFor(release.version)} selected={version === release.version}>
+                        {release.version} · protocol {release.protocolVersion}
+                    </option>
+                ))}
+            </optgroup>
+        )}
+        {previewReleases.length > 0 && (
+            <optgroup label="Preview releases">
+                {previewReleases.map(release => (
+                    <option value={destinationFor(release.version)} selected={version === release.version}>
+                        {release.version} · protocol {release.protocolVersion}
+                    </option>
+                ))}
+            </optgroup>
+        )}
+    </select>
+</label>
+
+<script>
+    for (const selector of document.querySelectorAll<HTMLSelectElement>('[data-version-selector]')) {
+        selector.addEventListener('change', () => window.location.assign(selector.value));
+    }
+</script>

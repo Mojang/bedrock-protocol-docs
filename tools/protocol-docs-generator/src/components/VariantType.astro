@@ -1,0 +1,28 @@
+---
+import type { ProtocolVariant } from '../types';
+
+interface Props {
+    type: string;
+    typeSlugs: string[];
+    variants: ProtocolVariant[];
+    versionPrefix: string;
+}
+
+const { type, typeSlugs, variants, versionPrefix } = Astro.props as Props;
+const isArray = type.startsWith('array<oneOf<');
+---
+
+<code class="variant-type">
+    {isArray && 'array<'}oneOf&lt;{
+        variants.map((variant, index) => (
+            <span>
+                {index > 0 && ', '}
+                {variant.target && typeSlugs.includes(variant.target) ? (
+                    <a href={`${versionPrefix}/types/${variant.target}/`}>{variant.type}</a>
+                ) : (
+                    variant.type
+                )}
+            </span>
+        ))
+    }&gt;{isArray && '>'}
+</code>
