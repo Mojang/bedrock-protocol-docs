@@ -188,6 +188,11 @@ export interface ProtocolChangelogRelease {
     version: string;
 }
 
+export interface ProtocolChangelog {
+    preview: ProtocolChangelogRelease[];
+    stable: ProtocolChangelogRelease[];
+}
+
 export interface ProtocolReleaseMetadata {
     minecraftVersion: string;
     packets: ProtocolPacket[];
@@ -197,7 +202,7 @@ export interface ProtocolReleaseMetadata {
 }
 
 export interface ProtocolMetadata extends ProtocolReleaseMetadata {
-    changelog: ProtocolChangelogRelease[];
+    changelog: ProtocolChangelog;
 }
 
 export interface ProtocolVersion {

@@ -11,6 +11,22 @@ const releasesByVersion = new Map(versionManifest.releases.map(release => [relea
 const releaseId = (version: string) => `release-${version.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase()}`;
 const packetHref = (version: string, slug: string) =>
     releasesByVersion.get(version)?.packetSlugs.includes(slug) ? `${getVersionPrefix(version)}/packets/${slug}/` : undefined;
+const changelogChannels = [
+    {
+        description: 'Changes between stable protocol releases.',
+        emptyMessage: 'No stable release history is available.',
+        key: 'stable',
+        label: 'Stable releases',
+        releases: metadata.changelog.stable,
+    },
+    {
+        description: 'Changes between Minecraft Preview protocol builds.',
+        emptyMessage: 'No preview build history is available.',
+        key: 'preview',
+        label: 'Preview builds',
+        releases: metadata.changelog.preview,
+    },
+];
 ---
 
 <Layout metadata={latestMetadata} title="Protocol changelog" version="latest">
@@ -22,13 +38,41 @@ const packetHref = (version: string, slug: string) =>
         </div>
     </section>
 
-    {
-        metadata.changelog.length > 0 ? (
-            <>
-                <nav class="category-toc changelog-toc" aria-label="Changelog releases">
+    <div class="changelog-view-toggle" role="tablist" aria-label="Changelog channel">
+        {changelogChannels.map(channel => (
+            <button
+                type="button"
+                role="tab"
+                id={`changelog-tab-${channel.key}`}
+                aria-controls={`changelog-panel-${channel.key}`}
+                aria-selected={channel.key === 'stable' ? 'true' : 'false'}
+                data-changelog-tab={channel.key}
+                tabindex={channel.key === 'stable' ? 0 : -1}
+            >
+                {channel.key === 'stable' ? 'Stable' : 'Preview'}
+            </button>
+        ))}
+    </div>
+
+    {changelogChannels.map(channel => (
+        <section
+            class="changelog-channel"
+            role="tabpanel"
+            id={`changelog-panel-${channel.key}`}
+            aria-labelledby={`changelog-tab-${channel.key}`}
+            data-changelog-panel={channel.key}
+            hidden={channel.key !== 'stable'}
+        >
+            <header>
+                <h2>{channel.label}</h2>
+                <p>{channel.description}</p>
+            </header>
+            {channel.releases.length > 0 ? (
+                <>
+                <nav class="category-toc changelog-toc" aria-label={`${channel.label} changelog releases`}>
                     <p>Releases · sorted by semantic version</p>
                     <div>
-                        {metadata.changelog.map(release => (
+                        {channel.releases.map(release => (
                             <a href={`#${releaseId(release.version)}`}>
                                 {release.version}<span>{release.totalChanges}</span>
                             </a>
@@ -37,7 +81,7 @@ const packetHref = (version: string, slug: string) =>
                 </nav>
 
                 <div class="changelog-releases">
-                    {metadata.changelog.map(release => {
+                    {channel.releases.map(release => {
                         const packetCount =
                             release.packets.added.length +
                             release.packets.changed.length +
@@ -46,11 +90,11 @@ const packetHref = (version: string, slug: string) =>
                             <section class="changelog-release" id={releaseId(release.version)}>
                                 <header class="changelog-release-header">
                                     <div>
-                                        <h2>
+                                        <h3>
                                             <a class="release-permalink" href={`#${releaseId(release.version)}`}>
                                                 {release.version}<span aria-hidden="true">#</span>
                                             </a>
-                                        </h2>
+                                        </h3>
                                     </div>
                                     <dl>
                                         <div><dt>Released</dt><dd><time datetime={release.releaseDate}>{release.releaseDate}</time></dd></div>
@@ -147,9 +191,45 @@ const packetHref = (version: string, slug: string) =>
                         );
                     })}
                 </div>
-            </>
-        ) : (
-            <p class="empty-state changelog-empty">No semantic release history was available from the metadata repository.</p>
-        )
-    }
+                </>
+            ) : (
+                <p class="empty-state changelog-empty">{channel.emptyMessage}</p>
+            )}
+        </section>
+    ))}
 </Layout>
+
+<script>
+    const changelogTabs = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-changelog-tab]'));
+    const changelogPanels = Array.from(document.querySelectorAll<HTMLElement>('[data-changelog-panel]'));
+
+    const selectChangelogChannel = (channel: string, moveFocus = false) => {
+        for (const tab of changelogTabs) {
+            const selected = tab.dataset.changelogTab === channel;
+            tab.setAttribute('aria-selected', String(selected));
+            tab.tabIndex = selected ? 0 : -1;
+            if (selected && moveFocus) tab.focus();
+        }
+        for (const panel of changelogPanels) panel.hidden = panel.dataset.changelogPanel !== channel;
+    };
+
+    for (const [index, tab] of changelogTabs.entries()) {
+        tab.addEventListener('click', () => selectChangelogChannel(tab.dataset.changelogTab ?? 'stable'));
+        tab.addEventListener('keydown', event => {
+            if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+            event.preventDefault();
+            const direction = event.key === 'ArrowRight' ? 1 : -1;
+            const nextTab = changelogTabs[(index + direction + changelogTabs.length) % changelogTabs.length];
+            selectChangelogChannel(nextTab.dataset.changelogTab ?? 'stable', true);
+        });
+    }
+
+    const selectChannelForHash = () => {
+        const target = document.getElementById(location.hash.slice(1));
+        const panel = target?.closest<HTMLElement>('[data-changelog-panel]');
+        if (panel?.dataset.changelogPanel) selectChangelogChannel(panel.dataset.changelogPanel);
+    };
+
+    selectChannelForHash();
+    window.addEventListener('hashchange', selectChannelForHash);
+</script>

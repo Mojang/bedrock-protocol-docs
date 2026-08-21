@@ -510,12 +510,20 @@ footer { margin: 0 64px; border-color: var(--line); padding: 22px 0; color: #686
 .wire-size { margin-left: 7px; color: #777b74; font-family: var(--mono); font-size: 0.7rem; }
 .wire-options { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 5px; }
 
+.changelog-view-toggle { width: fit-content; max-width: 100%; margin: 0 0 32px; border-bottom: 1px solid var(--line); display: flex; }
+.changelog-view-toggle button { min-width: 110px; border: 0; border-bottom: 3px solid transparent; padding: 10px 16px 9px; color: #8f938b; background: transparent; font: inherit; font-size: 0.82rem; font-weight: 650; cursor: pointer; }
+.changelog-view-toggle button:hover { color: #eef0eb; }
+.changelog-view-toggle button[aria-selected='true'] { border-bottom-color: var(--signal); color: #eef0eb; }
+.changelog-view-toggle button:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; }
 .changelog-toc { max-width: 1080px; }
+.changelog-channel > header { max-width: 1080px; margin: 0 0 20px; }
+.changelog-channel > header h2 { margin: 0; font-size: 1.55rem; }
+.changelog-channel > header p { margin: 5px 0 0; color: #8f938b; }
 .changelog-releases { max-width: 1080px; }
 .changelog-release { margin: 0 0 72px; scroll-margin-top: 70px; }
 .changelog-release-header { border-bottom: 1px solid #3b3e36; padding: 0 0 16px; display: flex; justify-content: space-between; gap: 28px; align-items: end; }
 .changelog-release-header p { margin: 0 0 4px; color: #777b74; font-size: 0.76rem; }
-.changelog-release-header h2 { margin: 0; font-size: 1.65rem; }
+.changelog-release-header h3 { margin: 0; font-size: 1.65rem; }
 .release-permalink { color: inherit; text-decoration: none; }
 .release-permalink > span { margin-left: 8px; color: var(--signal); font-size: 0.8em; opacity: 0.35; transition: opacity 120ms ease; }
 .release-permalink:hover > span, .release-permalink:focus-visible > span { opacity: 1; }
@@ -641,6 +649,9 @@ html[data-theme='light'] .category-toc > p { color: #666b62; }
 html[data-theme='light'] .category-toc a { border-color: #d7dbd2; color: #42463f; }
 html[data-theme='light'] .category-toc a:hover { border-color: #7da83d; color: #171a16; background: #f1f7e8; }
 html[data-theme='light'] .category-toc a span { color: #747970; }
+html[data-theme='light'] .changelog-view-toggle button { color: #666b62; }
+html[data-theme='light'] .changelog-view-toggle button:hover,
+html[data-theme='light'] .changelog-view-toggle button[aria-selected='true'] { color: #171a16; }
 html[data-theme='light'] .back-link { color: #646960; }
 html[data-theme='light'] .packet-details { color: #5b6057; }
 html[data-theme='light'] .explode-button { border-color: #d4d8cf; color: #242723; background: #fafbf8; }

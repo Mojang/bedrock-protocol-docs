@@ -286,11 +286,13 @@ for (const entry of manifest.releases) {
     if (Object.keys(schemas).length === 0) continue;
     const release = new MinecraftRelease(entry.minecraftVersion);
     release.protocol_schemas = schemas;
-    snapshots.push({ release, releaseDate: entry.releaseDate, version: entry.version });
+    snapshots.push({ preview: entry.preview ?? false, release, releaseDate: entry.releaseDate, version: entry.version });
 }
 if (snapshots.length === 0) throw new Error(`No protocol releases were found in '${manifestPath}'.`);
 
 const changelogGenerator = new ProtocolChangelogGenerator();
+const stableSnapshots = snapshots.filter(snapshot => !snapshot.preview);
+const previewSnapshots = snapshots.filter(snapshot => snapshot.preview);
 const entriesByVersion = new Map(manifest.releases.map(entry => [entry.version, entry]));
 const releases = snapshots.map(snapshot => ({
     entry: entriesByVersion.get(snapshot.version),
@@ -300,7 +302,10 @@ const releases = snapshots.map(snapshot => ({
 }));
 const protocol = {
     ...releases[0].metadata,
-    changelog: changelogGenerator.generateChangelogs(snapshots),
+    changelog: {
+        preview: changelogGenerator.generateChangelogs(previewSnapshots),
+        stable: changelogGenerator.generateChangelogs(stableSnapshots),
+    },
 };
 const versions = {
     latest: releases[0].version,
