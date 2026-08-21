@@ -12,9 +12,13 @@ const manifestPath = path.join(repositoryRoot, '.cache', 'protocol-releases', 'm
 const dataDirectory = path.join(repositoryRoot, 'tools', 'protocol-docs-generator', 'src', 'data');
 const releasesDirectory = path.join(dataDirectory, 'releases');
 const guidesNavigationPath = path.join(dataDirectory, 'guides.json');
+const legacyChangelogsNavigationPath = path.join(dataDirectory, 'legacy-changelogs.json');
 const additionalDocsDirectory = path.join(repositoryRoot, 'additional_docs');
 const guidesPagesDirectory = path.join(repositoryRoot, 'tools', 'protocol-docs-generator', 'src', 'pages', 'guides');
 const guidesAssetsDirectory = path.join(repositoryRoot, 'tools', 'protocol-docs-generator', 'src', 'assets', 'guides');
+const legacyChangelogsDirectory = path.join(repositoryRoot, 'legacy_changelogs');
+const legacyChangelogsPagesDirectory = path.join(repositoryRoot, 'tools', 'protocol-docs-generator', 'src', 'pages', 'changelog', 'legacy', 'entries');
+const legacyChangelogsAssetsDirectory = path.join(repositoryRoot, 'tools', 'protocol-docs-generator', 'src', 'assets', 'legacy-changelogs');
 
 const slugify = value => value
     .replace(/([A-Z]+)([A-Z][a-z])/g, '$1-$2')
@@ -26,6 +30,16 @@ const slugify = value => value
 const guideSlug = relativePath => {
     const parsed = path.posix.parse(relativePath.replaceAll('\\', '/'));
     return [...parsed.dir.split('/').filter(Boolean), parsed.name].map(slugify).join('-');
+};
+
+const legacyChangelogSlug = relativePath => {
+    const parsed = path.posix.parse(relativePath.replaceAll('\\', '/'));
+    const name = parsed.name.replace(/^change-?log/i, 'changelog');
+    return [...parsed.dir.split('/').filter(Boolean), name].map(slugify).join('-');
+};
+const legacyAssetName = relativePath => {
+    const extension = path.posix.extname(relativePath).toLowerCase();
+    return `${guideSlug(relativePath)}${extension}`;
 };
 
 const humanize = value => value
@@ -149,6 +163,107 @@ const generateGuides = async metadata => {
     await writeFile(guidesNavigationPath, `${JSON.stringify(navigation, undefined, 2)}\n`, 'utf8');
 };
 
+const parseLegacyDate = (value, filename) => {
+    const dateValue = value instanceof Date ? value.toISOString().slice(0, 10) : String(value ?? '');
+    const sourceMatch = dateValue.match(/(\d{1,2})[/-](\d{1,2})[/-](\d{2,4})/);
+    const filenameMatch = filename.match(/(?:changelog)_(?:\d+)_(\d{1,2})_(\d{1,2})_(\d{2,4})/i);
+    const match = sourceMatch ?? filenameMatch;
+    if (!match) return undefined;
+
+    const year = Number(match[3]) < 100 ? 2000 + Number(match[3]) : Number(match[3]);
+    const first = Number(match[1]);
+    const second = Number(match[2]);
+    const month = first > 12 ? second : first;
+    const day = first > 12 ? first : second;
+    const date = new Date(Date.UTC(year, month - 1, day));
+    if (date.getUTCFullYear() !== year || date.getUTCMonth() !== month - 1 || date.getUTCDate() !== day) return undefined;
+    return date.toISOString().slice(0, 10);
+};
+
+const rewriteLegacyLinks = (markdown, relativePath) => {
+    const currentDirectory = path.posix.dirname(relativePath);
+    return markdown.replace(/(!?\[[^\]]*\]\()([^\s)]+)([^)]*\))/g, (match, prefix, href, suffix) => {
+        if (!href.startsWith('.')) return match;
+        const targetPath = path.posix.normalize(path.posix.join(currentDirectory, decodeURI(href)));
+        if (targetPath.toLowerCase().endsWith('.md')) {
+            return `${prefix}../${legacyChangelogSlug(targetPath)}/${suffix}`;
+        }
+        if (/\.(?:avif|gif|jpe?g|png|svg|webp)$/i.test(targetPath)) {
+            return `${prefix}../../../assets/legacy-changelogs/${legacyAssetName(targetPath)}${suffix}`;
+        }
+        return match;
+    });
+};
+
+const generateLegacyChangelogs = async () => {
+    await rm(legacyChangelogsPagesDirectory, { force: true, recursive: true });
+    await rm(legacyChangelogsAssetsDirectory, { force: true, recursive: true });
+    await mkdir(legacyChangelogsPagesDirectory, { recursive: true });
+    await mkdir(legacyChangelogsAssetsDirectory, { recursive: true });
+    const changelogs = [];
+
+    const visit = async directory => {
+        for (const entry of await readdir(directory, { withFileTypes: true })) {
+            const entryPath = path.join(directory, entry.name);
+            if (entry.isDirectory()) {
+                await visit(entryPath);
+                continue;
+            }
+            if (!entry.isFile()) continue;
+
+            const relativePath = path.relative(legacyChangelogsDirectory, entryPath).replaceAll('\\', '/');
+            if (/\.(?:avif|gif|jpe?g|png|svg|webp)$/i.test(entry.name)) {
+                await copyFile(entryPath, path.join(legacyChangelogsAssetsDirectory, legacyAssetName(relativePath)));
+                continue;
+            }
+            if (!entry.name.toLowerCase().endsWith('.md')) continue;
+
+            const source = await readFile(entryPath, 'utf8');
+            const { content, data } = matter(source);
+            const heading = content.match(/^#\s+(.+)$/m)?.[1].trim();
+            const identifier = path.parse(entry.name).name.match(/^changelog_(\d+)/i)?.[1];
+            const protocolVersion = content.match(/Network Protocol Version\s+(\d+)/i)?.[1];
+            const date = parseLegacyDate(data.date ?? heading, path.parse(entry.name).name);
+            const slug = legacyChangelogSlug(relativePath);
+            const title = typeof data.title === 'string'
+                ? data.title
+                : protocolVersion ? `Protocol ${protocolVersion} changelog` : identifier ? `Build ${identifier} changelog` : heading ?? humanize(path.parse(entry.name).name);
+            const sourceBody = heading ? content.replace(/^# .+\r?\n+/, '') : content;
+            const markdown = rewriteLegacyLinks(demoteHeadings(sourceBody), relativePath);
+            const frontmatter = `---\nlayout: ../../../../layouts/GuideLayout.astro\ntitle: ${JSON.stringify(title)}\n---\n\n`;
+            await writeFile(path.join(legacyChangelogsPagesDirectory, `${slug}.md`), `${frontmatter}${markdown}`, 'utf8');
+            changelogs.push({
+                date,
+                identifier: protocolVersion ?? identifier ?? '',
+                path: `/changelog/legacy/entries/${slug}/`,
+                title,
+            });
+        }
+    };
+    await visit(legacyChangelogsDirectory);
+
+    changelogs.sort((left, right) =>
+        String(right.date ?? '').localeCompare(String(left.date ?? '')) ||
+        Number(right.identifier) - Number(left.identifier) ||
+        left.title.localeCompare(right.title)
+    );
+    const navigation = Object.entries(Object.groupBy(changelogs, changelog => changelog.date?.slice(0, 4) ?? 'Undated'))
+        .sort(([leftYear], [rightYear]) => {
+            if (leftYear === 'Undated') return 1;
+            if (rightYear === 'Undated') return -1;
+            return Number(rightYear) - Number(leftYear);
+        })
+        .map(([year, entries]) => ({
+            title: year,
+            changelogs: entries.map(changelog => ({
+                date: changelog.date ?? null,
+                path: changelog.path,
+                title: changelog.title,
+            })),
+        }));
+    await writeFile(legacyChangelogsNavigationPath, `${JSON.stringify(navigation, undefined, 2)}\n`, 'utf8');
+};
+
 const readProtocolSchemas = async schemaDirectory => {
     const schemas = {};
     const visit = async directory => {
@@ -217,4 +332,5 @@ await Promise.all(
     )
 );
 await generateGuides(releases[0].metadata);
+await generateLegacyChangelogs();
 console.log(`Generated Astro data for ${releases.length} protocol release${releases.length === 1 ? '' : 's'}.`);

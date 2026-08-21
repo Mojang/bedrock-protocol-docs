@@ -574,6 +574,9 @@ footer { margin: 0 64px; border-color: var(--line); padding: 22px 0; color: #686
 .guide-content th, .guide-content td { min-width: 110px; border-bottom: 1px solid var(--line); padding: 9px 12px; text-align: left; vertical-align: top; }
 .guide-content th { color: #eef0eb; background: #121612; }
 .guide-content blockquote { margin: 22px 0; border-left: 3px solid var(--signal); padding: 2px 0 2px 16px; color: #c7cac3; }
+.legacy-changelog-index ul { padding: 0; list-style: none; }
+.legacy-changelog-index li { border-bottom: 1px solid var(--line); padding: 10px 4px; display: flex; justify-content: space-between; gap: 20px; }
+.legacy-changelog-index time { color: var(--muted); font-family: var(--mono); font-size: 0.78rem; }
 
 html[data-theme='light'] {
     color-scheme: light;

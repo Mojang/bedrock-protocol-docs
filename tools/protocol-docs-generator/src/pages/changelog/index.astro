@@ -1,6 +1,6 @@
 ---
 import ChangelogDetail from '../../components/ChangelogDetail.astro';
-import { getProtocolMetadata, getVersionPrefix, versionManifest } from '../../data';
+import { getProtocolMetadata, getVersionPrefix, versionManifest, withBase } from '../../data';
 import metadataJson from '../../data/protocol.json';
 import Layout from '../../layouts/Layout.astro';
 import type { ProtocolMetadata } from '../../types';
@@ -18,6 +18,7 @@ const packetHref = (version: string, slug: string) =>
         <div>
             <h1>Protocol changelog</h1>
             <p class="lede">Packet changes across the latest tagged metadata releases.</p>
+            <p><a class="back-link" href={withBase('/changelog/legacy/')}>Browse legacy changelogs →</a></p>
         </div>
     </section>
 
