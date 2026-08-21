@@ -294,9 +294,17 @@ const changelogGenerator = new ProtocolChangelogGenerator();
 const stableSnapshots = snapshots.filter(snapshot => !snapshot.preview);
 const previewSnapshots = snapshots.filter(snapshot => snapshot.preview);
 const entriesByVersion = new Map(manifest.releases.map(entry => [entry.version, entry]));
+const withPacketDescriptions = metadata => ({
+    ...metadata,
+    packets: metadata.packets.map(packet => ({
+        ...packet,
+        description: packet.description || packet.details,
+        details: packet.description ? packet.details : '',
+    })),
+});
 const releases = snapshots.map(snapshot => ({
     entry: entriesByVersion.get(snapshot.version),
-    metadata: changelogGenerator.generateReleaseMetadata(snapshot.release),
+    metadata: withPacketDescriptions(changelogGenerator.generateReleaseMetadata(snapshot.release)),
     releaseDate: snapshot.releaseDate,
     version: snapshot.version,
 }));
