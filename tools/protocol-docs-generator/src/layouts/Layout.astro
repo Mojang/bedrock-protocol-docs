@@ -22,6 +22,10 @@ const releaseDate = versionManifest.releases.find(release => release.version ===
 const searchIndexUrl = withBase(`/search/${releaseVersion}.json`);
 const versionPath = Astro.url.pathname.slice(versionPrefix.length) || '/';
 const currentPath = Astro.url.pathname;
+const changelogPath = withBase('/changelog/');
+const isLegacyChangelogActive = legacyChangelogYears.some(year =>
+    year.changelogs.some(changelog => currentPath === withBase(changelog.path))
+);
 const activeSection = versionPath.startsWith('/types')
         ? 'types'
         : versionPath.startsWith('/primitives')
@@ -86,7 +90,7 @@ const activeSection = versionPath.startsWith('/types')
                         <a href={`${versionPrefix}/primitives/`} aria-current={activeSection === 'primitives' ? 'page' : undefined}>
                             <strong>Primitives</strong>
                         </a>
-                        <a href={withBase('/changelog/')} aria-current={activeSection === 'changelog' ? 'page' : undefined}>
+                        <a href={changelogPath} aria-current={currentPath === changelogPath ? 'page' : undefined}>
                             <strong>Changelog</strong>
                         </a>
                     </nav>
@@ -108,7 +112,7 @@ const activeSection = versionPath.startsWith('/types')
                     </nav>
                     <nav class="sidebar-nav guide-nav" aria-label="Legacy documentation">
                         <p>Other</p>
-                        <details>
+                        <details open={isLegacyChangelogActive}>
                             <summary>Legacy Changelogs</summary>
                             {legacyChangelogYears.map(year => {
                                 const isActive = year.changelogs.some(changelog => currentPath === withBase(changelog.path));

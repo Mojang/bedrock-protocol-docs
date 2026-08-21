@@ -74,7 +74,7 @@ const changelogChannels = [
                     <div>
                         {channel.releases.map(release => (
                             <a href={`#${releaseId(release.version)}`}>
-                                {release.version}<span>{release.totalChanges}</span>
+                                {release.version}
                             </a>
                         ))}
                     </div>
