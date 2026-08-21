@@ -2,6 +2,7 @@
 import ProtocolSearch from '../components/ProtocolSearch.astro';
 import VersionSelector from '../components/VersionSelector.astro';
 import { getVersionPrefix, portalGeneratedAt, versionManifest, withBase } from '../data';
+import guideSections from '../data/guides.json';
 import '../styles/global.css';
 import type { ProtocolReleaseMetadata } from '../types';
 
@@ -19,10 +20,13 @@ const releaseVersion = version === 'latest' ? versionManifest.latest : version;
 const releaseDate = versionManifest.releases.find(release => release.version === releaseVersion)?.releaseDate;
 const searchIndexUrl = withBase(`/search/${releaseVersion}.json`);
 const versionPath = Astro.url.pathname.slice(versionPrefix.length) || '/';
+const currentPath = Astro.url.pathname;
 const activeSection = versionPath.startsWith('/types')
         ? 'types'
         : versionPath.startsWith('/primitives')
             ? 'primitives'
+            : Astro.url.pathname.startsWith(withBase('/guides'))
+                ? 'guides'
             : Astro.url.pathname.startsWith(withBase('/changelog'))
                 ? 'changelog'
             : 'packets';
@@ -85,6 +89,22 @@ const activeSection = versionPath.startsWith('/types')
                             <strong>Changelog</strong>
                         </a>
                     </nav>
+                    <nav class="sidebar-nav guide-nav" aria-label="Guides">
+                        <p>Guides</p>
+                        {guideSections.map(section => {
+                            const isActive = section.guides.some(guide => currentPath === withBase(guide.path));
+                            return (
+                                <details open={isActive}>
+                                    <summary>{section.title}</summary>
+                                    {section.guides.map(guide => (
+                                        <a href={withBase(guide.path)} aria-current={currentPath === withBase(guide.path) ? 'page' : undefined}>
+                                            <strong>{guide.title}</strong>
+                                        </a>
+                                    ))}
+                                </details>
+                            );
+                        })}
+                    </nav>
                 </div>
                 <p class="sidebar-generated">
                     Portal generated
@@ -97,6 +117,7 @@ const activeSection = versionPath.startsWith('/types')
                         <a href={`${versionPrefix}/`} aria-current={activeSection === 'packets' ? 'page' : undefined}>Packets</a>
                         <a href={`${versionPrefix}/types/`} aria-current={activeSection === 'types' ? 'page' : undefined}>Types</a>
                         <a href={`${versionPrefix}/primitives/`} aria-current={activeSection === 'primitives' ? 'page' : undefined}>Primitives</a>
+                        {guideSections[0]?.guides[0] && <a href={withBase(guideSections[0].guides[0].path)} aria-current={activeSection === 'guides' ? 'page' : undefined}>Guides</a>}
                         <a href={withBase('/changelog/')} aria-current={activeSection === 'changelog' ? 'page' : undefined}>Changelog</a>
                     </nav>
                     <p>Protocol version {metadata.protocolVersion}</p>

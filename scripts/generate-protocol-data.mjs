@@ -1,15 +1,153 @@
-import { readFile, readdir, rm, mkdir, writeFile } from 'node:fs/promises';
+import { copyFile, readFile, readdir, rm, mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
 import {
     MinecraftRelease,
     ProtocolChangelogGenerator,
 } from '@minecraft/api-docs-generator';
+import matter from 'gray-matter';
 
 const repositoryRoot = path.resolve(import.meta.dirname, '..');
 const manifestPath = path.join(repositoryRoot, '.cache', 'protocol-releases', 'manifest.json');
 const dataDirectory = path.join(repositoryRoot, 'tools', 'protocol-docs-generator', 'src', 'data');
 const releasesDirectory = path.join(dataDirectory, 'releases');
+const guidesNavigationPath = path.join(dataDirectory, 'guides.json');
+const additionalDocsDirectory = path.join(repositoryRoot, 'additional_docs');
+const guidesPagesDirectory = path.join(repositoryRoot, 'tools', 'protocol-docs-generator', 'src', 'pages', 'guides');
+const guidesAssetsDirectory = path.join(repositoryRoot, 'tools', 'protocol-docs-generator', 'src', 'assets', 'guides');
+
+const slugify = value => value
+    .replace(/([A-Z]+)([A-Z][a-z])/g, '$1-$2')
+    .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
+    .replace(/[^a-zA-Z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+    .toLowerCase();
+
+const guideSlug = relativePath => {
+    const parsed = path.posix.parse(relativePath.replaceAll('\\', '/'));
+    return [...parsed.dir.split('/').filter(Boolean), parsed.name].map(slugify).join('-');
+};
+
+const humanize = value => value
+    .replace(/([A-Z]+)([A-Z][a-z])/g, '$1 $2')
+    .replace(/([a-z0-9])([A-Z])/g, '$1 $2')
+    .replace(/[_-]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+const demoteHeadings = markdown => {
+    let fenceMarker;
+    return markdown.split('\n').map(line => {
+        const fence = line.match(/^\s*(`{3,}|~{3,})/);
+        if (fence) {
+            if (!fenceMarker) fenceMarker = fence[1][0];
+            else if (fence[1][0] === fenceMarker) fenceMarker = undefined;
+            return line;
+        }
+        return fenceMarker ? line : line.replace(/^(#{1,5}) /, '#$1 ');
+    }).join('\n');
+};
+
+const relativeGuideUrl = (currentSlug, targetPath) => {
+    const targetSlug = guideSlug(targetPath);
+    return `${path.posix.relative(`guides/${currentSlug}`, `guides/${targetSlug}`) || '.'}/`;
+};
+
+const rewriteGuideLinks = (markdown, relativePath, metadata) => {
+    const currentSlug = guideSlug(relativePath);
+    const currentDirectory = path.posix.dirname(relativePath.replaceAll('\\', '/'));
+    const packetSlugs = new Map(metadata.packets.map(packet => [packet.title, packet.slug]));
+    const typeSlugs = new Map(metadata.types.map(type => [type.title, type.slug]));
+
+    return markdown.replace(/(!?\[[^\]]*\]\()([^\s)]+)([^)]*\))/g, (match, prefix, href, suffix) => {
+        if (!href.startsWith('.')) return match;
+
+        const targetPath = path.posix.normalize(path.posix.join(currentDirectory, decodeURI(href)));
+        if (targetPath.endsWith('.md') || targetPath.endsWith('.properties')) {
+            return `${prefix}${relativeGuideUrl(currentSlug, targetPath)}${suffix}`;
+        }
+        if (/(^|\/)html\/[^/]+\.html$/.test(targetPath)) {
+            const documentName = path.posix.basename(targetPath, '.html');
+            let target = 'latest/';
+            if (packetSlugs.has(documentName)) target += `packets/${packetSlugs.get(documentName)}/`;
+            else if (typeSlugs.has(documentName)) target += `types/${typeSlugs.get(documentName)}/`;
+            else if (documentName === 'enums') target += 'types/';
+            const relativeUrl = path.posix.relative(`guides/${currentSlug}`, target) || '.';
+            return `${prefix}${relativeUrl}/${suffix}`;
+        }
+        if (targetPath.endsWith('.svg')) {
+            const assetName = `${slugify(path.posix.basename(targetPath, '.svg'))}.svg`;
+            return `${prefix}../../assets/guides/${assetName}${suffix}`;
+        }
+        return match;
+    });
+};
+
+const generateGuides = async metadata => {
+    await rm(guidesPagesDirectory, { force: true, recursive: true });
+    await rm(guidesAssetsDirectory, { force: true, recursive: true });
+    await mkdir(guidesPagesDirectory, { recursive: true });
+    await mkdir(guidesAssetsDirectory, { recursive: true });
+    const guides = [];
+
+    const visit = async directory => {
+        for (const entry of await readdir(directory, { withFileTypes: true })) {
+            const entryPath = path.join(directory, entry.name);
+            if (entry.isDirectory()) {
+                await visit(entryPath);
+                continue;
+            }
+            if (!entry.isFile()) continue;
+
+            const relativePath = path.relative(additionalDocsDirectory, entryPath).replaceAll('\\', '/');
+            if (relativePath === 'README.md') continue;
+            if (entry.name.endsWith('.svg')) {
+                await copyFile(entryPath, path.join(guidesAssetsDirectory, `${slugify(path.parse(entry.name).name)}.svg`));
+                continue;
+            }
+            if (!entry.name.endsWith('.md')) continue;
+
+            const slug = guideSlug(relativePath);
+            const source = await readFile(entryPath, 'utf8');
+            const { content, data } = matter(source);
+            const heading = content.match(/^#\s+(.+)$/m)?.[1].trim();
+            const guideDirectory = path.posix.dirname(relativePath);
+            const title = typeof data.title === 'string' ? data.title : heading ?? humanize(path.parse(entry.name).name);
+            const section = typeof data.section === 'string'
+                ? data.section
+                : guideDirectory === '.' ? 'Other' : humanize(guideDirectory.split('/')[0]);
+            const order = Number.isFinite(data.order) ? data.order : Number.POSITIVE_INFINITY;
+            const sectionOrder = Number.isFinite(data.sectionOrder) ? data.sectionOrder : Number.POSITIVE_INFINITY;
+            const sourceBody = content.replace(/^# .+\r?\n+/, '');
+            const markdown = rewriteGuideLinks(demoteHeadings(sourceBody), relativePath, metadata);
+            const frontmatter = `---\nlayout: ../../layouts/GuideLayout.astro\ntitle: ${JSON.stringify(title)}\n---\n\n`;
+            await writeFile(path.join(guidesPagesDirectory, `${slug}.md`), `${frontmatter}${markdown}`, 'utf8');
+            guides.push({ order, path: `/guides/${slug}/`, section, sectionOrder, title });
+        }
+    };
+    await visit(additionalDocsDirectory);
+
+    const sectionsByTitle = new Map();
+    for (const guide of guides) {
+        const section = sectionsByTitle.get(guide.section) ?? {
+            guides: [],
+            order: guide.sectionOrder,
+            title: guide.section,
+        };
+        section.order = Math.min(section.order, guide.sectionOrder);
+        section.guides.push({ order: guide.order, path: guide.path, title: guide.title });
+        sectionsByTitle.set(guide.section, section);
+    }
+    const navigation = [...sectionsByTitle.values()]
+        .sort((left, right) => left.order - right.order || left.title.localeCompare(right.title))
+        .map(section => ({
+            title: section.title,
+            guides: section.guides
+                .sort((left, right) => left.order - right.order || left.title.localeCompare(right.title))
+                .map(({ order, ...guide }) => guide),
+        }));
+    await writeFile(guidesNavigationPath, `${JSON.stringify(navigation, undefined, 2)}\n`, 'utf8');
+};
 
 const readProtocolSchemas = async schemaDirectory => {
     const schemas = {};
@@ -78,4 +216,5 @@ await Promise.all(
         )
     )
 );
+await generateGuides(releases[0].metadata);
 console.log(`Generated Astro data for ${releases.length} protocol release${releases.length === 1 ? '' : 's'}.`);

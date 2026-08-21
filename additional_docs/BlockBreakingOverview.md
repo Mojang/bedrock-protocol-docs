@@ -1,3 +1,10 @@
+---
+title: Server-authoritative block breaking
+section: Block Breaking
+sectionOrder: 3
+order: 1
+---
+
 # Summary
 This page describes how block breaking works in Minecraft, from the input being processed client side, through client prediction of state changes, to the server handling and response. At a high level, the client initiates the actions on its side based on user input which is used to predictively progress the mining animation and ultimately break the block in the world, as well as causing durability damage to the  item in hand if applicable. The intent to break blocks is then sent to the server, who performs the action on its side, authoritatively updates the relevant player, inventory, and world states, before broadcasting any updates to any nearby players. **There are currently two code paths for block breaking depending on the value of the "Server Authoritative Block Breaking" feature toggle**
 

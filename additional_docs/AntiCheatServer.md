@@ -1,3 +1,10 @@
+---
+title: Anti-cheat server properties
+section: Configuration
+order: 2
+---
+
+```properties
 # This contains the anti-cheat related dedicated server default properties. Add these to your server.properties file and modify as desired.
 
 # Regardless of discrepancies the server will not send corrections within this many ticks of each-other
@@ -20,3 +27,4 @@ player-position-acceptance-threshold=0.5
 # Block break settings
 server-authoritative-block-breaking=true
 server-authoritative-block-breaking-pick-range-scalar=1.5
+```

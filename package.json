@@ -17,6 +17,7 @@
   "dependencies": {
     "@minecraft/api-docs-generator": "file:vendor/minecraft-api-docs-generator-2.0.6.tgz",
     "astro": "^7.2.1",
+    "gray-matter": "^4.0.3",
     "semver": "^7.7.2",
     "tar": "^7.4.3"
   },

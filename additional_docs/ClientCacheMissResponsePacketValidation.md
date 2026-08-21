@@ -1,3 +1,9 @@
+---
+title: Client cache miss response validation
+section: Protocol Systems
+order: 2
+---
+
 # Summary
 
 This page outlines how Clients can validate incoming ClientCacheMissResponsePackets, before inserting them into the Client's cache and writing them to storage. Currently no validation is performed on this packet,

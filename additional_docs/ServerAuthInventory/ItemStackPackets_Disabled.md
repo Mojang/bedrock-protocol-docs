@@ -1,3 +1,8 @@
+---
+title: Item stack packets disabled
+order: 2
+---
+
 # ServerAuthInventory / ItemStack Packets / Disabled
 
 ## Versions of this Doc

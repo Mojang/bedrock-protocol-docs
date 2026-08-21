@@ -1,0 +1,24 @@
+---
+import { getProtocolMetadata } from '../data';
+import Layout from './Layout.astro';
+
+interface Props {
+    frontmatter: {
+        title: string;
+    };
+}
+
+const { frontmatter } = Astro.props;
+const metadata = getProtocolMetadata('latest');
+---
+
+<Layout metadata={metadata} title={frontmatter.title} version="latest">
+    <article class="guide-page">
+        <header class="guide-header">
+            <h1>{frontmatter.title}</h1>
+        </header>
+        <div class="guide-content">
+            <slot />
+        </div>
+    </article>
+</Layout>
