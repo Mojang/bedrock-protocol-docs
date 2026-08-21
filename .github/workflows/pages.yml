@@ -3,6 +3,7 @@ name: Build and deploy protocol documentation
 on:
   push:
     branches: [main]
+    tags: [v*]
   release:
     types: [published, edited, deleted]
   workflow_dispatch:
