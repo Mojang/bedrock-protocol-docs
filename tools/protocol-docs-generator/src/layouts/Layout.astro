@@ -106,22 +106,25 @@ const activeSection = versionPath.startsWith('/types')
                             );
                         })}
                     </nav>
-                    <nav class="sidebar-nav guide-nav" aria-label="Legacy changelogs">
-                        <p>Legacy changelogs</p>
-                        {legacyChangelogYears.map(year => {
-                            const isActive = year.changelogs.some(changelog => currentPath === withBase(changelog.path));
-                            return (
-                                <details open={isActive}>
-                                    <summary>{year.title}</summary>
-                                    {year.changelogs.map(changelog => (
-                                        <a href={withBase(changelog.path)} aria-current={currentPath === withBase(changelog.path) ? 'page' : undefined}>
-                                            <strong>{changelog.title}</strong>
-                                            {changelog.date && <small>{changelog.date.slice(5)}</small>}
-                                        </a>
-                                    ))}
-                                </details>
-                            );
-                        })}
+                    <nav class="sidebar-nav guide-nav" aria-label="Legacy documentation">
+                        <p>Other</p>
+                        <details>
+                            <summary>Legacy Changelogs</summary>
+                            {legacyChangelogYears.map(year => {
+                                const isActive = year.changelogs.some(changelog => currentPath === withBase(changelog.path));
+                                return (
+                                    <details open={isActive}>
+                                        <summary>{year.title}</summary>
+                                        {year.changelogs.map(changelog => (
+                                            <a href={withBase(changelog.path)} aria-current={currentPath === withBase(changelog.path) ? 'page' : undefined}>
+                                                <strong>{changelog.title}</strong>
+                                                {changelog.date && <small>{changelog.date.slice(5)}</small>}
+                                            </a>
+                                        ))}
+                                    </details>
+                                );
+                            })}
+                        </details>
                     </nav>
                 </div>
                 <p class="sidebar-generated">
