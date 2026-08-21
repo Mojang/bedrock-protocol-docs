@@ -3,7 +3,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/RemoveScore.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50",
+    "x-minecraft-version": "1.26.40",
     "x-protocol-version": 2169,
     "type": "object",
     "properties": {
@@ -16,8 +16,7 @@
         "Objective Name": {
             "description": "Optional. When present, only this player's score for the named objective is reset. When absent, the player's scores for every objective are reset.",
             "type": "string",
-            "x-ordinal-index": 2,
-            "minLength": 1
+            "x-ordinal-index": 2
         },
         "Scoreboard Id": {
             "description": "Scoreboard entry identifier whose score(s) are being removed.",

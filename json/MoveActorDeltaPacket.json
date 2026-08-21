@@ -3,7 +3,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/MoveActorDeltaPacket.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50",
+    "x-minecraft-version": "1.26.40",
     "x-protocol-version": 2169,
     "description": "This packet is all the deltas of actors position, rotation, and head rotation. This is used for all actors.",
     "$ref": "./MoveActorDeltaPacketPayload.json",

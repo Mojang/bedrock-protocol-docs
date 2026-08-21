@@ -1844,12 +1844,11 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 64.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint16",
-        "description": "The number of items in the stack. Must be within the item's allowed stack size range."
+        "description": "The number of items in the stack."
       },
       "User Data Buffer": {
         "required": true,
@@ -12814,8 +12813,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minimum": 0.0,
-          "maximum": 64.0
+          "minimum": 0.0
         },
         "id": 0,
         "type": "uint16",
@@ -20632,10 +20630,7 @@
         "required": true,
         "deprecated": false,
         "constraint": {
-          "minItems": 1,
-          "items": {
-            "customDescription": "Verify the craft result descriptor resolves to a non-empty item"
-          }
+          "minItems": 1
         },
         "value_type": {
           "id": 4130469014,
@@ -33358,10 +33353,6 @@
   {
     "enum_values": [
       {
-        "value": 0,
-        "name": "None"
-      },
-      {
         "value": 1,
         "name": "Face"
       },
@@ -33399,10 +33390,6 @@
         "required": true,
         "deprecated": false,
         "enum_values": [
-          {
-            "value": 0,
-            "name": "None"
-          },
           {
             "value": 1,
             "name": "Face"
@@ -33483,6 +33470,10 @@
   },
   {
     "enum_values": [
+      {
+        "value": 0,
+        "name": "Unknown"
+      },
       {
         "value": 1,
         "name": "Skeleton"
@@ -33590,6 +33581,10 @@
       {
         "value": 27,
         "name": "Emote"
+      },
+      {
+        "value": 28,
+        "name": "Unsupported"
       }
     ],
     "id": 2118394883,
@@ -33621,6 +33616,10 @@
         "required": true,
         "deprecated": false,
         "enum_values": [
+          {
+            "value": 0,
+            "name": "Unknown"
+          },
           {
             "value": 1,
             "name": "Skeleton"
@@ -33728,6 +33727,10 @@
           {
             "value": 27,
             "name": "Emote"
+          },
+          {
+            "value": 28,
+            "name": "Unsupported"
           }
         ],
         "id": 2118394883,
@@ -33915,6 +33918,10 @@
         "key_type": {
           "enum_values": [
             {
+              "value": 0,
+              "name": "Unknown"
+            },
+            {
               "value": 1,
               "name": "Skeleton"
             },
@@ -34021,6 +34028,10 @@
             {
               "value": 27,
               "name": "Emote"
+            },
+            {
+              "value": 28,
+              "name": "Unsupported"
             }
           ],
           "id": 2118394883,
@@ -35397,13 +35408,6 @@
         "id": 0,
         "type": "bool",
         "description": "Whether other objects block seeing the text (false=like nametags,true=like signs)."
-      },
-      "LineGapHeight": {
-        "required": false,
-        "deprecated": false,
-        "id": 0,
-        "type": "float",
-        "description": "Line gap height for multiline text rendering."
       },
       "ShowBackface": {
         "required": false,
@@ -40689,9 +40693,6 @@
       "Objective Name": {
         "required": false,
         "deprecated": false,
-        "constraint": {
-          "minLength": 1
-        },
         "id": 0,
         "type": "string",
         "description": "Optional. When present, only this player's score for the named objective is reset. When absent, the player's scores for every objective are reset."
@@ -40753,9 +40754,6 @@
       "Objective Name": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minLength": 1
-        },
         "id": 0,
         "type": "string",
         "description": "Name of the objective whose score is being changed."
@@ -40827,9 +40825,6 @@
       "Objective Name": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minLength": 1
-        },
         "id": 0,
         "type": "string",
         "description": "Name of the objective whose score is being changed."
@@ -40885,9 +40880,6 @@
       "Fake Player Name": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minLength": 1
-        },
         "id": 0,
         "type": "string",
         "description": "Display name of the fake (non-entity) score holder."
@@ -40895,9 +40887,6 @@
       "Objective Name": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "minLength": 1
-        },
         "id": 0,
         "type": "string",
         "description": "Name of the objective whose score is being changed."
@@ -41727,12 +41716,6 @@
       "Spawn Biome Type": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "enumValues": [
-            0,
-            1
-          ]
-        },
         "enum_values": [
           {
             "value": 0,
@@ -41892,13 +41875,6 @@
       "Chat Restriction Level": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "enumValues": [
-            0,
-            1,
-            2
-          ]
-        },
         "enum_values": [
           {
             "value": 0,
@@ -41951,14 +41927,6 @@
       "Editor World Type": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "enumValues": [
-            0,
-            1,
-            2,
-            3
-          ]
-        },
         "enum_values": [
           {
             "value": 0,
@@ -41991,13 +41959,6 @@
       "Education Edition Offer": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "enumValues": [
-            0,
-            1,
-            2
-          ]
-        },
         "enum_values": [
           {
             "value": 0,
@@ -42044,16 +42005,6 @@
       "Game Difficulty": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "enumValues": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5
-          ]
-        },
         "enum_values": [
           {
             "value": 0,
@@ -42087,16 +42038,6 @@
       "Game Type": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "enumValues": [
-            -1,
-            0,
-            1,
-            2,
-            5,
-            6
-          ]
-        },
         "enum_values": [
           {
             "value": -1,
@@ -42134,17 +42075,6 @@
       "Generator Type": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "enumValues": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ]
-        },
         "enum_values": [
           {
             "value": 0,
@@ -42296,15 +42226,6 @@
       "Platform Broadcast Setting": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "enumValues": [
-            0,
-            1,
-            2,
-            3,
-            4
-          ]
-        },
         "enum_values": [
           {
             "value": 0,
@@ -42334,14 +42255,6 @@
       "Player Permissions": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "enumValues": [
-            0,
-            1,
-            2,
-            3
-          ]
-        },
         "enum_values": [
           {
             "value": 0,
@@ -42395,14 +42308,6 @@
       "Server Editor Connection Policy": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "enumValues": [
-            0,
-            1,
-            2,
-            3
-          ]
-        },
         "enum_values": [
           {
             "value": 0,
@@ -42453,15 +42358,6 @@
       "Xbox Live Broadcast Setting": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "enumValues": [
-            0,
-            1,
-            2,
-            3,
-            4
-          ]
-        },
         "enum_values": [
           {
             "value": 0,
@@ -42742,16 +42638,6 @@
       "Game Type": {
         "required": true,
         "deprecated": false,
-        "constraint": {
-          "enumValues": [
-            -1,
-            0,
-            1,
-            2,
-            5,
-            6
-          ]
-        },
         "enum_values": [
           {
             "value": -1,

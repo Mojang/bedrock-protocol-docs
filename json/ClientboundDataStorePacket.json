@@ -3,7 +3,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/ClientboundDataStorePacket.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50",
+    "x-minecraft-version": "1.26.40",
     "x-protocol-version": 2169,
     "description": "Sends a list of data store properties from the server to the client.",
     "$ref": "./Clientbound_Data_Store_Payload.json",
