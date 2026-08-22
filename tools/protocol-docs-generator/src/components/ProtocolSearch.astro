@@ -1,9 +1,10 @@
 ---
 interface Props {
+    advancedSearchUrl: string;
     indexUrl: string;
 }
 
-const { indexUrl } = Astro.props;
+const { advancedSearchUrl, indexUrl } = Astro.props;
 ---
 
 <div class="directory-tools protocol-search">
@@ -20,29 +21,17 @@ const { indexUrl } = Astro.props;
         />
         <div id="protocol-search-results" class="search-results" hidden></div>
     </div>
-    <output id="search-count" aria-live="polite"></output>
+    <a class="advanced-search-link" id="advanced-search-link" href={advancedSearchUrl}>Advanced search</a>
 </div>
 <meta id="protocol-search-data" data-index-url={indexUrl} />
 
 <script>
-    interface SearchMember {
-        path: string;
-        type: string;
-    }
-
-    interface SearchEntry {
-        description: string;
-        href: string;
-        id?: number;
-        kind: string;
-        members?: SearchMember[];
-        title: string;
-    }
+    import { searchEntries, type SearchEntry } from '../search-client';
 
     const input = document.querySelector<HTMLInputElement>('#directory-search');
-    const output = document.querySelector<HTMLOutputElement>('#search-count');
     const results = document.querySelector<HTMLElement>('#protocol-search-results');
     const data = document.querySelector<HTMLElement>('#protocol-search-data');
+    const advancedSearchLink = document.querySelector<HTMLAnchorElement>('#advanced-search-link');
     let entriesPromise: Promise<SearchEntry[]> | undefined;
 
     const loadEntries = () => {
@@ -74,36 +63,27 @@ const { indexUrl } = Astro.props;
 
     input?.addEventListener('input', async () => {
         const query = input.value.trim().toLowerCase();
+        if (advancedSearchLink) {
+            const url = new URL(advancedSearchLink.href);
+            if (query) url.searchParams.set('q', input.value.trim());
+            else url.searchParams.delete('q');
+            advancedSearchLink.href = url.href;
+        }
         if (!results || !query) {
-            if (output) output.textContent = '';
             closeResults();
             return;
         }
 
-        if (output) output.textContent = 'Loading search index…';
         let entries: SearchEntry[];
         try {
             entries = await loadEntries();
         } catch {
-            if (output) output.textContent = 'Search index unavailable';
             closeResults();
             return;
         }
         if (query !== input.value.trim().toLowerCase()) return;
 
-        const matches = entries
-            .map(entry => ({
-                entry,
-                matchingMembers: (entry.members ?? []).filter(member =>
-                    `${member.path} ${member.type}`.toLowerCase().includes(query)
-                ),
-            }))
-            .filter(
-                match =>
-                    `${match.entry.title} ${match.entry.description} ${match.entry.kind}`
-                        .toLowerCase()
-                        .includes(query) || match.matchingMembers.length > 0
-            );
+        const matches = searchEntries(entries, query);
         const fragment = document.createDocumentFragment();
         for (const { entry, matchingMembers } of matches) {
             const link = document.createElement('a');
@@ -141,7 +121,6 @@ const { indexUrl } = Astro.props;
         positionResults();
         results.hidden = false;
         input.setAttribute('aria-expanded', 'true');
-        if (output) output.textContent = `${matches.length} ${matches.length === 1 ? 'match' : 'matches'}`;
     });
 
     document.addEventListener('click', event => {

@@ -1,0 +1,177 @@
+---
+import { getProtocolMetadata, getVersionPaths, versionManifest, withBase } from '../../../data';
+import Layout from '../../../layouts/Layout.astro';
+
+export function getStaticPaths() {
+    return getVersionPaths();
+}
+
+interface Props {
+    version: string;
+}
+
+const { version } = Astro.props;
+const metadata = getProtocolMetadata(version);
+const releaseVersion = version === 'latest' ? versionManifest.latest : version;
+const indexUrl = withBase(`/search/${releaseVersion}.json`);
+const resultKinds = [
+    { value: 'Packet', label: 'Packets' },
+    { value: 'object', label: 'Objects' },
+    { value: 'enum', label: 'Enums' },
+    { value: 'union', label: 'Unions' },
+    { value: 'array', label: 'Arrays' },
+    { value: 'scalar', label: 'Scalars' },
+    { value: 'other', label: 'Other types' },
+];
+---
+
+<Layout metadata={metadata} title="Advanced search" version={version}>
+    <section class="search-page">
+        <header class="guide-header">
+            <h1>Advanced search</h1>
+        </header>
+
+        <form class="advanced-search-controls" id="advanced-search-form" role="search">
+            <div class="advanced-search-query">
+                <label for="advanced-search-query">Search</label>
+                <input id="advanced-search-query" name="q" type="search" autocomplete="off" autofocus />
+                <button type="submit">Search</button>
+            </div>
+            <fieldset>
+                <legend>Result types</legend>
+                <div class="advanced-search-filters">
+                    {resultKinds.map(kind => (
+                        <label>
+                            <input type="checkbox" name="kind" value={kind.value} checked />
+                            <span>{kind.label}</span>
+                        </label>
+                    ))}
+                </div>
+                <div class="advanced-search-filter-actions">
+                    <button type="button" data-filter-action="all">Select all</button>
+                    <button type="button" data-filter-action="none">Clear</button>
+                </div>
+            </fieldset>
+        </form>
+
+        <div class="advanced-search-summary">
+            <h2>Results</h2>
+            <output id="advanced-search-count" aria-live="polite">No query</output>
+        </div>
+        <div class="advanced-search-results" id="advanced-search-results">
+            <p class="advanced-search-empty">No query entered.</p>
+        </div>
+    </section>
+</Layout>
+
+<meta id="advanced-search-data" data-index-url={indexUrl} />
+
+<script>
+    import { searchEntries, type SearchEntry, type SearchMatch } from '../../../search-client';
+
+    const form = document.querySelector<HTMLFormElement>('#advanced-search-form');
+    const queryInput = document.querySelector<HTMLInputElement>('#advanced-search-query');
+    const count = document.querySelector<HTMLOutputElement>('#advanced-search-count');
+    const results = document.querySelector<HTMLElement>('#advanced-search-results');
+    const data = document.querySelector<HTMLElement>('#advanced-search-data');
+    const kindInputs = [...document.querySelectorAll<HTMLInputElement>('input[name="kind"]')];
+    let entriesPromise: Promise<SearchEntry[]> | undefined;
+
+    const loadEntries = () => {
+        if (!entriesPromise) {
+            entriesPromise = fetch(data?.dataset.indexUrl ?? '').then(response => {
+                if (!response.ok) throw new Error(`Search index request failed with ${response.status}.`);
+                return response.json() as Promise<SearchEntry[]>;
+            });
+        }
+        return entriesPromise;
+    };
+
+    const appendMember = (link: HTMLAnchorElement, member: SearchMatch['matchingMembers'][number]) => {
+        const detail = document.createElement('small');
+        const path = document.createElement('span');
+        const type = document.createElement('code');
+        detail.className = 'advanced-search-member';
+        path.textContent = member.path;
+        type.textContent = member.type;
+        detail.append(type, path);
+        link.append(detail);
+    };
+
+    const renderMatch = ({ entry, matchingMembers }: SearchMatch) => {
+        const link = document.createElement('a');
+        const heading = document.createElement('strong');
+        const kind = document.createElement('span');
+        const description = document.createElement('small');
+        link.href = entry.href;
+        heading.textContent = entry.title;
+        kind.textContent = entry.kind === 'Packet' && entry.id !== undefined ? `Packet ${entry.id}` : entry.kind;
+        description.textContent = entry.description;
+        link.append(kind, heading, description);
+        for (const member of matchingMembers.slice(0, 2)) appendMember(link, member);
+        if (matchingMembers.length > 2) {
+            const remaining = document.createElement('small');
+            remaining.className = 'advanced-search-member-more';
+            remaining.textContent = `+${matchingMembers.length - 2} more matching members`;
+            link.append(remaining);
+        }
+        return link;
+    };
+
+    const updateUrl = (query: string, includedKinds: Set<string>) => {
+        const url = new URL(window.location.href);
+        url.search = '';
+        if (query) url.searchParams.set('q', query);
+        if (includedKinds.size !== kindInputs.length) {
+            if (includedKinds.size === 0) url.searchParams.set('kind', 'none');
+            else for (const kind of includedKinds) url.searchParams.append('kind', kind);
+        }
+        history.replaceState(null, '', url);
+    };
+
+    const runSearch = async () => {
+        if (!queryInput || !results) return;
+        const query = queryInput.value.trim();
+        const includedKinds = new Set(kindInputs.filter(input => input.checked).map(input => input.value));
+        updateUrl(query, includedKinds);
+        if (!query) {
+            results.innerHTML = '<p class="advanced-search-empty">No query entered.</p>';
+            if (count) count.textContent = 'No query';
+            return;
+        }
+
+        if (count) count.textContent = 'Loading…';
+        try {
+            const matches = searchEntries(await loadEntries(), query, includedKinds);
+            results.replaceChildren(...matches.map(renderMatch));
+            if (matches.length === 0) {
+                results.innerHTML = '<p class="advanced-search-empty">No matching results.</p>';
+            }
+            if (count) count.textContent = `${matches.length} ${matches.length === 1 ? 'match' : 'matches'}`;
+        } catch {
+            results.innerHTML = '<p class="advanced-search-empty">Search index unavailable.</p>';
+            if (count) count.textContent = 'Search unavailable';
+        }
+    };
+
+    const parameters = new URLSearchParams(window.location.search);
+    if (queryInput) queryInput.value = parameters.get('q') ?? '';
+    if (parameters.has('kind')) {
+        const selectedKinds = new Set(parameters.getAll('kind'));
+        for (const input of kindInputs) input.checked = selectedKinds.has(input.value);
+    }
+
+    form?.addEventListener('submit', event => {
+        event.preventDefault();
+        void runSearch();
+    });
+    for (const input of kindInputs) input.addEventListener('change', () => void runSearch());
+    for (const button of document.querySelectorAll<HTMLButtonElement>('[data-filter-action]')) {
+        button.addEventListener('click', () => {
+            const checked = button.dataset.filterAction === 'all';
+            for (const input of kindInputs) input.checked = checked;
+            void runSearch();
+        });
+    }
+    if (queryInput?.value) void runSearch();
+</script>

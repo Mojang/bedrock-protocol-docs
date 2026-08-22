@@ -20,6 +20,7 @@ const versionPrefix = getVersionPrefix(version);
 const releaseVersion = version === 'latest' ? versionManifest.latest : version;
 const release = versionManifest.releases.find(release => release.version === releaseVersion);
 const searchIndexUrl = withBase(`/search/${releaseVersion}.json`);
+const advancedSearchUrl = `${versionPrefix}/search/`;
 const versionPath = Astro.url.pathname.slice(versionPrefix.length) || '/';
 const currentPath = Astro.url.pathname;
 const changelogPath = withBase('/changelog/');
@@ -30,6 +31,8 @@ const activeSection = versionPath.startsWith('/types')
         ? 'types'
         : versionPath.startsWith('/primitives')
             ? 'primitives'
+            : versionPath.startsWith('/search')
+                ? 'search'
             : Astro.url.pathname.startsWith(withBase('/guides'))
                 ? 'guides'
             : Astro.url.pathname.startsWith(withBase('/changelog'))
@@ -68,7 +71,7 @@ const activeSection = versionPath.startsWith('/types')
                         <button type="button" data-theme-value="dark" aria-label="Use dark theme" title="Dark theme"><span aria-hidden="true">◐</span></button>
                     </div>
                 </div>
-                <ProtocolSearch indexUrl={searchIndexUrl} />
+                <ProtocolSearch advancedSearchUrl={advancedSearchUrl} indexUrl={searchIndexUrl} />
                 <div class="sidebar-groups">
                     <section class="sidebar-meta" aria-label="Protocol version">
                         <VersionSelector pathname={Astro.url.pathname} version={version} />
