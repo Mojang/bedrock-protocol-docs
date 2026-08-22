@@ -1,5 +1,6 @@
 ---
 import Datagram from '../../../components/Datagram.astro';
+import DocumentChangelog from '../../../components/DocumentChangelog.astro';
 import FieldTree from '../../../components/FieldTree.astro';
 import SerializationTag from '../../../components/SerializationTag.astro';
 import { getProtocolMetadata, getVersionPaths, getVersionPrefix } from '../../../data';
@@ -107,5 +108,7 @@ const wireFormats = type.wireFormats.map(format => ({
                 )
             }
         </section>
+
+        <DocumentChangelog kind="type" slug={type.slug} />
     </article>
 </Layout>

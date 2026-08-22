@@ -1,5 +1,6 @@
 ---
 import Datagram from '../../../components/Datagram.astro';
+import DocumentChangelog from '../../../components/DocumentChangelog.astro';
 import FieldTree from '../../../components/FieldTree.astro';
 import { getProtocolMetadata, getVersionPaths, getVersionPrefix } from '../../../data';
 import Layout from '../../../layouts/Layout.astro';
@@ -46,6 +47,8 @@ const versionPrefix = getVersionPrefix(version);
             <header><h2>Serialized fields</h2><span>{packet.fields.length} top-level fields</span></header>
             <FieldTree fields={packet.fields} metadata={metadata} versionPrefix={versionPrefix} />
         </section>
+
+        <DocumentChangelog kind="packet" slug={packet.slug} />
     </article>
 </Layout>
 

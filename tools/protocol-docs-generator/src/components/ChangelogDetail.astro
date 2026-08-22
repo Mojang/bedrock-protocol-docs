@@ -5,13 +5,14 @@ import type { ProtocolChange } from '../types';
 
 interface Props {
     change: ProtocolChange;
-        previousTypeSlugs: string[];
-        previousVersionPrefix: string;
-        typeSlugs: string[];
+    hideTypeContext?: boolean;
+    previousTypeSlugs: string[];
+    previousVersionPrefix: string;
+    typeSlugs: string[];
     versionPrefix: string;
 }
 
-const { change, previousTypeSlugs, previousVersionPrefix, typeSlugs, versionPrefix } = Astro.props as Props;
+const { change, hideTypeContext = false, previousTypeSlugs, previousVersionPrefix, typeSlugs, versionPrefix } = Astro.props as Props;
 const typeContext = change.addedType
         ? { action: 'Added', previous: false, ...change.addedType }
     : change.changedType
@@ -23,7 +24,7 @@ const typeContext = change.addedType
 
 <li>
     {
-        typeContext && <>
+        typeContext && !hideTypeContext && <>
             {typeContext.action} supporting type <ChangelogTypeLink
                 target={typeContext.slug}
                 title={typeContext.title}

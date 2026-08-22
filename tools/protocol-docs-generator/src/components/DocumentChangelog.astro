@@ -1,0 +1,220 @@
+---
+import metadataJson from '../data/protocol.json';
+import { getVersionPrefix, versionManifest, withBase } from '../data';
+import type {
+    ProtocolChange,
+    ProtocolChangeItem,
+    ProtocolChangelogRelease,
+    ProtocolMetadata,
+} from '../types';
+import ChangelogDetail from './ChangelogDetail.astro';
+
+interface Props {
+    kind: 'packet' | 'type';
+    slug: string;
+}
+
+interface ChangelogEntry {
+    changes: ProtocolChange[];
+    item: ProtocolChangeItem;
+    release: ProtocolChangelogRelease;
+    status: 'added' | 'changed' | 'removed';
+}
+
+const { kind, slug } = Astro.props as Props;
+const metadata = metadataJson as ProtocolMetadata;
+const releasesByVersion = new Map(versionManifest.releases.map(release => [release.version, release]));
+const typeSlug = (change: ProtocolChange) =>
+    change.addedType?.slug ?? change.changedType?.slug ?? change.removedType?.slug;
+const uniqueChanges = (changes: ProtocolChange[]) =>
+    [...new Map(changes.map(change => [JSON.stringify(change), change])).values()];
+
+const getEntries = (channel: 'stable' | 'preview') =>
+    metadata.changelog[channel].flatMap(release =>
+        (['added', 'changed', 'removed'] as const).flatMap(status => {
+            const entries = release.packets[status].flatMap(item => {
+                if (kind === 'packet') {
+                    return item.slug === slug ? [{ changes: item.changes, item, release, status }] : [];
+                }
+
+                const changes = item.changes.filter(change => typeSlug(change) === slug);
+                return changes.length > 0 ? [{ changes, item, release, status }] : [];
+            });
+            if (kind === 'packet' || entries.length < 2) return entries;
+
+            return [{
+                changes: uniqueChanges(entries.flatMap(entry => entry.changes)),
+                item: entries[0].item,
+                release,
+                status,
+            }];
+        })
+    ) satisfies ChangelogEntry[];
+
+const changelogChannels = [
+    {
+        description: 'Changes between stable protocol releases.',
+        emptyMessage: `No stable release changes are recorded for this ${kind}.`,
+        key: 'stable',
+        label: 'Stable releases',
+    },
+    {
+        description: 'Changes between Minecraft Preview protocol builds.',
+        emptyMessage: `No preview build changes are recorded for this ${kind}.`,
+        key: 'preview',
+        label: 'Preview builds',
+    },
+].map(channel => ({
+    ...channel,
+    entryGroups: Object.values(Object.groupBy(getEntries(channel.key as 'stable' | 'preview'), entry => entry.release.version)),
+}));
+---
+
+<section class={`schema-section document-changelog document-changelog-${kind}`}>
+    <header>
+        <h2>Changelog</h2>
+    </header>
+
+    <div class="changelog-view-toggle" role="tablist" aria-label={`${kind === 'packet' ? 'Packet' : 'Type'} changelog channel`}>
+        {changelogChannels.map(channel => (
+            <button
+                type="button"
+                role="tab"
+                id={`document-changelog-tab-${channel.key}`}
+                aria-controls={`document-changelog-panel-${channel.key}`}
+                aria-selected={channel.key === 'stable' ? 'true' : 'false'}
+                data-document-changelog-tab={channel.key}
+                tabindex={channel.key === 'stable' ? 0 : -1}
+            >
+                {channel.key === 'stable' ? 'Stable' : 'Preview'}
+            </button>
+        ))}
+    </div>
+
+    {changelogChannels.map(channel => (
+        <section
+            class="changelog-channel"
+            role="tabpanel"
+            id={`document-changelog-panel-${channel.key}`}
+            aria-labelledby={`document-changelog-tab-${channel.key}`}
+            data-document-changelog-panel={channel.key}
+            hidden={channel.key !== 'stable'}
+        >
+            <header>
+                <h2>{channel.label}</h2>
+                <p>{channel.description}</p>
+            </header>
+            {channel.entryGroups.length > 0 ? (
+                <div class="changelog-releases">
+                {channel.entryGroups.map(group => {
+                    const release = group![0].release;
+                    const currentTypeSlugs = releasesByVersion.get(release.version)?.typeSlugs ?? [];
+                    const previousTypeSlugs = releasesByVersion.get(release.previousVersion)?.typeSlugs ?? [];
+                    const entriesByStatus = Object.groupBy(group!, entry => entry.status);
+                    return (
+                        <article class="changelog-release">
+                            <header class="changelog-release-header">
+                                <div>
+                                    <h3>
+                                        <a class="release-permalink" href={withBase(`/changelog/#release-${release.version.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase()}`)}>
+                                            {release.version}<span aria-hidden="true">#</span>
+                                        </a>
+                                    </h3>
+                                </div>
+                                <dl>
+                                    <div><dt>Released</dt><dd><time datetime={release.releaseDate}>{release.releaseDate}</time></dd></div>
+                                    <div><dt>Protocol</dt><dd>{release.protocolVersion}</dd></div>
+                                </dl>
+                            </header>
+                            <section class="changelog-scope">
+                                {kind === 'packet' && (
+                                    <header><h3>Packet</h3><span>{group!.length} {group!.length === 1 ? 'entry' : 'entries'}</span></header>
+                                )}
+                                {(['added', 'changed', 'removed'] as const).map(status => {
+                                    const statusEntries = entriesByStatus[status] ?? [];
+                                    if (statusEntries.length === 0) return null;
+                                    return (
+                                        <div class={`changelog-group ${status}`}>
+                                            <h4>{status[0].toUpperCase() + status.slice(1)} <span>{statusEntries.length}</span></h4>
+                                            <div class="changelog-details">
+                                                {statusEntries.map(entry => {
+                                                    const changeCount = entry.changes.length + (kind === 'packet' && entry.item.previousPacketId !== undefined ? 1 : 0);
+                                                    return (
+                                                        <article>
+                                                            {kind === 'packet' && (
+                                                                <header>
+                                                                    <strong>{entry.item.title}</strong>
+                                                                    <span>{changeCount} {changeCount === 1 ? 'change' : 'changes'} · ID {entry.item.packetId}</span>
+                                                                </header>
+                                                            )}
+                                                            {changeCount > 0 && (
+                                                                <ul>
+                                                                    {kind === 'packet' && entry.item.previousPacketId !== undefined && (
+                                                                        <li>Changed packet ID from {entry.item.previousPacketId} to {entry.item.packetId}.</li>
+                                                                    )}
+                                                                    {entry.changes.map(change => (
+                                                                        <ChangelogDetail
+                                                                            change={change}
+                                                                            hideTypeContext={kind === 'type'}
+                                                                            previousTypeSlugs={previousTypeSlugs}
+                                                                            previousVersionPrefix={getVersionPrefix(release.previousVersion)}
+                                                                            typeSlugs={currentTypeSlugs}
+                                                                            versionPrefix={getVersionPrefix(release.version)}
+                                                                        />
+                                                                    ))}
+                                                                </ul>
+                                                            )}
+                                                        </article>
+                                                    );
+                                                })}
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </section>
+                        </article>
+                    );
+                })}
+                </div>
+            ) : (
+                <p class="empty-state changelog-empty">{channel.emptyMessage}</p>
+            )}
+        </section>
+    ))}
+</section>
+
+<script>
+    const documentChangelogTabs = Array.from(
+        document.querySelectorAll<HTMLButtonElement>('[data-document-changelog-tab]')
+    );
+    const documentChangelogPanels = Array.from(
+        document.querySelectorAll<HTMLElement>('[data-document-changelog-panel]')
+    );
+
+    const selectDocumentChangelogChannel = (channel: string, moveFocus = false) => {
+        for (const tab of documentChangelogTabs) {
+            const selected = tab.dataset.documentChangelogTab === channel;
+            tab.setAttribute('aria-selected', String(selected));
+            tab.tabIndex = selected ? 0 : -1;
+            if (selected && moveFocus) tab.focus();
+        }
+        for (const panel of documentChangelogPanels) {
+            panel.hidden = panel.dataset.documentChangelogPanel !== channel;
+        }
+    };
+
+    for (const [index, tab] of documentChangelogTabs.entries()) {
+        tab.addEventListener('click', () =>
+            selectDocumentChangelogChannel(tab.dataset.documentChangelogTab ?? 'stable')
+        );
+        tab.addEventListener('keydown', event => {
+            if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+            event.preventDefault();
+            const direction = event.key === 'ArrowRight' ? 1 : -1;
+            const nextTab = documentChangelogTabs[
+                (index + direction + documentChangelogTabs.length) % documentChangelogTabs.length
+            ];
+            selectDocumentChangelogChannel(nextTab.dataset.documentChangelogTab ?? 'stable', true);
+        });
+    }
+</script>
