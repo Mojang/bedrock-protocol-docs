@@ -18,7 +18,7 @@ const { description = 'Minecraft Bedrock network protocol reference', metadata, 
 const pageTitle = title === 'Protocol index' ? 'Minecraft Bedrock Protocol' : `${title} | Minecraft Bedrock Protocol`;
 const versionPrefix = getVersionPrefix(version);
 const releaseVersion = version === 'latest' ? versionManifest.latest : version;
-const releaseDate = versionManifest.releases.find(release => release.version === releaseVersion)?.releaseDate;
+const release = versionManifest.releases.find(release => release.version === releaseVersion);
 const searchIndexUrl = withBase(`/search/${releaseVersion}.json`);
 const versionPath = Astro.url.pathname.slice(versionPrefix.length) || '/';
 const currentPath = Astro.url.pathname;
@@ -75,8 +75,9 @@ const activeSection = versionPath.startsWith('/types')
                         <p>Release information</p>
                         <dl>
                             <div><dt>Game version</dt><dd>{metadata.minecraftVersion}</dd></div>
-                            {releaseDate && <div><dt>Release date</dt><dd><time datetime={releaseDate}>{releaseDate}</time></dd></div>}
+                            {release && <div><dt>Release date</dt><dd><time datetime={release.releaseDate}>{release.releaseDate}</time></dd></div>}
                             <div><dt>Protocol version</dt><dd>{metadata.protocolVersion}</dd></div>
+                            {release && <div><dt>Metadata</dt><dd><a href={release.url}>GitHub</a></dd></div>}
                         </dl>
                     </section>
                     <nav class="sidebar-nav" aria-label="Reference pages">
