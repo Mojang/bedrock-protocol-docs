@@ -12,8 +12,10 @@ const repositoryRoot = path.resolve(import.meta.dirname, '..');
 const cacheRoot = path.join(repositoryRoot, '.cache');
 const releasesRoot = path.join(cacheRoot, 'protocol-releases');
 const inputRoot = path.join(cacheRoot, 'protocol-input', 'json_schemas', 'protocol');
+const manifestPath = path.join(releasesRoot, 'manifest.json');
 const repository = process.env.GITHUB_REPOSITORY ?? 'Mojang/bedrock-protocol-docs';
 const token = process.env.GITHUB_TOKEN;
+const useCache = process.argv.includes('--cache');
 
 const requestHeaders = {
     Accept: 'application/vnd.github+json',
@@ -123,6 +125,24 @@ const stageRelease = async release => {
     }
 };
 
+if (useCache) {
+    try {
+        const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
+        if (manifest.repository !== repository || !Array.isArray(manifest.releases) || manifest.releases.length === 0) {
+            throw new Error('Cached metadata does not match the requested repository.');
+        }
+
+        const latestSchemaDirectory = path.resolve(repositoryRoot, manifest.releases[0].schemaDirectory);
+        await readSchemaMetadata(latestSchemaDirectory);
+        await rm(path.join(cacheRoot, 'protocol-input'), { force: true, recursive: true });
+        await copySchemas(latestSchemaDirectory, inputRoot);
+        console.log(`Using cached metadata for ${manifest.releases.length} protocol release${manifest.releases.length === 1 ? '' : 's'} from ${manifest.generatedAt}.`);
+        process.exit(0);
+    } catch (error) {
+        if (error?.code !== 'ENOENT') console.log(`Cached metadata is unavailable: ${error.message}`);
+    }
+}
+
 await rm(cacheRoot, { force: true, recursive: true });
 await mkdir(releasesRoot, { recursive: true });
 
@@ -159,7 +179,7 @@ if (duplicateVersion) throw new Error(`Multiple GitHub releases resolve to versi
 const latestSchemaDirectory = path.resolve(repositoryRoot, releases[0].schemaDirectory);
 await copySchemas(latestSchemaDirectory, inputRoot);
 await writeFile(
-    path.join(releasesRoot, 'manifest.json'),
+    manifestPath,
     `${JSON.stringify({ generatedAt: new Date().toISOString(), repository, releases }, undefined, 2)}\n`,
     'utf8'
 );

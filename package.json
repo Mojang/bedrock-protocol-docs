@@ -10,7 +10,7 @@
   "scripts": {
     "build": "npm run prepare:metadata && npm run generate && astro build --root tools/protocol-docs-generator",
     "check": "npm run prepare:metadata && npm run generate && astro check --root tools/protocol-docs-generator",
-    "dev": "npm run prepare:metadata && npm run generate && astro dev --root tools/protocol-docs-generator",
+    "dev": "npm run prepare:metadata -- --cache && npm run generate && astro dev --root tools/protocol-docs-generator",
     "generate": "node scripts/generate-protocol-data.mjs",
     "prepare:metadata": "node scripts/prepare-metadata.mjs"
   },
