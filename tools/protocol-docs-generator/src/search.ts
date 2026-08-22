@@ -1,5 +1,5 @@
 import type { ProtocolField, ProtocolReleaseMetadata } from './types';
-import { getVersionPrefix, withBase } from './data';
+import { getVersionPrefix } from './data';
 
 export interface SearchMember {
     path: string;
@@ -50,17 +50,5 @@ export const createSearchIndex = (metadata: ProtocolReleaseMetadata, version: st
             ],
             title: type.title,
         })),
-        ...metadata.primitives.map(primitive => ({
-            description: primitive.encoding,
-            href: `${versionPrefix}/primitives/#${primitive.slug}`,
-            kind: 'Primitive',
-            title: primitive.title,
-        })),
-        {
-            description: 'Packet and supporting-type changes across tagged metadata releases.',
-            href: withBase('/changelog/'),
-            kind: 'Reference',
-            title: 'Protocol changelog',
-        },
     ];
 };
