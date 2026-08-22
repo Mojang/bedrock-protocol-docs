@@ -92,7 +92,20 @@ const primitiveExamples: Record<string, WireExampleData> = {
     <section class="schema-section primitive-options">
         <header><h2>Field annotations</h2><span>Schema and serialization modifiers</span></header>
         <dl>
-            <div><dt>Optional</dt><dd>Field is not required by its enclosing schema and may be absent.</dd></div>
+            <div id="optional">
+                <dt>Optional</dt>
+                <dd>
+                    <p>An optional field starts with a boolean presence byte. <code>0x00</code> ends the field without a value; <code>0x01</code> is followed immediately by the value's normal wire encoding.</p>
+                    <WireExample
+                        bytes={[{ hex: '00', label: 'not present' }]}
+                        value="empty optional"
+                    />
+                    <WireExample
+                        bytes={[{ hex: '01', label: 'present' }, { hex: '2A', label: 'uint8 value' }]}
+                        value="optional uint8 42"
+                    />
+                </dd>
+            </div>
             <div><dt>Big Endian</dt><dd>Writes signed 32-bit integers with the most significant byte first.</dd></div>
             <div><dt>Compression</dt><dd>Uses variable-length encoding for 32- and 64-bit integers and dynamic collection lengths.</dd></div>
             <div><dt>No size compression</dt><dd>Writes a collection size without the normal variable-length size encoding.</dd></div>
