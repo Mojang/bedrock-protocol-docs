@@ -138,6 +138,7 @@ footer { border-top: 1px solid var(--line); padding: 26px 5vw; color: var(--mute
 .field-name { min-width: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
 .field-name strong { overflow-wrap: anywhere; }
 .field-name em { color: var(--signal); font-family: var(--mono); font-size: 0.62rem; font-style: normal; text-transform: uppercase; }
+.field-name em a { color: inherit; text-decoration-style: dotted; text-underline-offset: 2px; }
 .field-name small { flex-basis: 100%; color: var(--muted); }
 .field-type { min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr); align-items: center; }
 .field-value { min-width: 0; justify-self: end; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 5px; align-items: center; text-align: right; overflow-wrap: anywhere; }
@@ -536,7 +537,7 @@ footer { margin: 0 64px; border-color: var(--line); padding: 22px 0; color: #686
 .wire-example-hex { padding: 0 5px 8px; color: var(--signal); font-size: 0.62rem; }
 .primitive-options { max-width: 920px; }
 .primitive-options dl { margin: 0; }
-.primitive-options dl div { border-bottom: 1px solid var(--line); padding: 14px 10px; display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 20px; }
+.primitive-options dl > div { border-bottom: 1px solid var(--line); padding: 14px 10px; display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 20px; }
 .primitive-options dt { color: #eef0eb; font-weight: 600; }
 .primitive-options dd { margin: 0; color: #8f938b; }
 .wire-format-section { max-width: 820px; }
@@ -781,7 +782,7 @@ html[data-theme='light'] .guide-content blockquote { color: #50564d; }
     .masthead-stats p { min-width: 0; flex: 1; }
     .type-group { grid-template-columns: 1fr; gap: 6px; }
     .primitive-list { grid-template-columns: 1fr; }
-    .primitive-options dl div { grid-template-columns: 1fr; gap: 5px; }
+    .primitive-options dl > div { grid-template-columns: 1fr; gap: 5px; }
     .detail-header { align-items: flex-start; }
     .changelog-release-header { align-items: flex-start; flex-direction: column; }
     .changelog-release-header dl { width: 100%; justify-content: space-between; }
