@@ -31,6 +31,11 @@ const matchRank = (value: string, query: string, baseRank: number) => {
     if (normalizedValue.startsWith(query)) return baseRank + 1;
     if (normalizedValue.split(' ').includes(query)) return baseRank + 2;
     if (normalizedValue.includes(query)) return baseRank + 3;
+    const compactValue = normalizedValue.replaceAll(' ', '');
+    const compactQuery = query.replaceAll(' ', '');
+    if (compactValue === compactQuery) return baseRank;
+    if (compactValue.startsWith(compactQuery)) return baseRank + 1;
+    if (compactValue.includes(compactQuery)) return baseRank + 3;
     return Number.POSITIVE_INFINITY;
 };
 
