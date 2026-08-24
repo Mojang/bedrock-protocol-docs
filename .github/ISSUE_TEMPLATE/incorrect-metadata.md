@@ -2,7 +2,7 @@
 name: Incorrect metadata
 description: Report incorrect metadata in a generated protocol JSON file
 title: "[Metadata]: "
-labels: []
+labels: ['Metadata Issue']
 assignees: []
 ---
 
