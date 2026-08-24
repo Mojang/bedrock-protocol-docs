@@ -95,6 +95,7 @@ const primitiveExamples: Record<string, WireExampleData> = {
             <div id="optional">
                 <dt>Optional</dt>
                 <dd>
+                    <p>A field is optional when it is not listed as required and does not define a default value.</p>
                     <p>An optional field starts with a boolean presence byte. <code>0x00</code> ends the field without a value; <code>0x01</code> is followed immediately by the value's normal wire encoding.</p>
                     <WireExample
                         bytes={[{ hex: '00', label: 'not present' }]}

@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "erasableSyntaxOnly": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "NodeNext",
+    "moduleDetection": "force",
+    "noEmit": true,
+    "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ES2024",
+    "verbatimModuleSyntax": true
+  },
+  "include": ["scripts/**/*.mts"]
+}
