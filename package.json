@@ -11,8 +11,8 @@
     "build": "npm run prepare:metadata && npm run generate && astro build --root tools/protocol-docs-generator",
     "check": "npm run prepare:metadata && npm run generate && astro check --root tools/protocol-docs-generator",
     "dev": "npm run prepare:metadata -- --cache && npm run generate && astro dev --root tools/protocol-docs-generator",
-    "generate": "node scripts/generate-protocol-data.mjs",
-    "prepare:metadata": "node scripts/prepare-metadata.mjs"
+    "generate": "node scripts/generate-protocol-data.mts",
+    "prepare:metadata": "node scripts/prepare-metadata.mts"
   },
   "dependencies": {
     "@minecraft/api-docs-generator": "file:vendor/minecraft-api-docs-generator-2.0.6.tgz",
