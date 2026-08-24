@@ -12,8 +12,8 @@ export interface ProtocolField {
     description: string;
     enumValues?: string[];
     name: string;
+    optional: boolean;
     ordinal?: number;
-    required: boolean;
     serialization: string[];
     target?: string;
     type: string;
@@ -78,9 +78,9 @@ export interface ProtocolChange {
     fieldEnumValueAdded?: ProtocolFieldEnumValueChange;
     fieldEnumValueOrdinalChanged?: ProtocolFieldEnumValueOrdinalChange;
     fieldEnumValueRemoved?: ProtocolFieldEnumValueChange;
+    fieldOptionalChanged?: ProtocolFieldOptionalChange;
     fieldOrdinalChanged?: ProtocolFieldOrdinalChange;
     fieldRemoved?: ProtocolFieldRemoved;
-    fieldRequiredChanged?: ProtocolFieldRequiredChange;
     fieldSerializationOptionAdded?: ProtocolFieldSerializationOptionChange;
     fieldSerializationOptionRemoved?: ProtocolFieldSerializationOptionChange;
     fieldTypeChanged?: ProtocolFieldTypeChange;
@@ -125,8 +125,8 @@ export interface ProtocolFieldRemoved extends ProtocolFieldChangeContext {
     type: string;
 }
 
-export interface ProtocolFieldRequiredChange extends ProtocolFieldChangeContext {
-    required: boolean;
+export interface ProtocolFieldOptionalChange extends ProtocolFieldChangeContext {
+    optional: boolean;
 }
 
 export interface ProtocolFieldSerializationOptionChange extends ProtocolFieldChangeContext {

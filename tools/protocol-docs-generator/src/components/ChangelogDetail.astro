@@ -40,8 +40,8 @@ const typeContext = change.addedType
             <>Removed field <code>{change.fieldRemoved.path}</code> (type <ChangelogTypeLink target={change.fieldRemoved.target} title={change.fieldRemoved.type} typeSlugs={typeSlugs} versionPrefix={versionPrefix} />).</>
         ) : change.fieldTypeChanged ? (
             <>Changed <code>{change.fieldTypeChanged.path}</code> from <ChangelogTypeLink target={change.fieldTypeChanged.previousTarget} title={change.fieldTypeChanged.previousType} typeSlugs={previousTypeSlugs} versionPrefix={previousVersionPrefix} /> to <ChangelogTypeLink target={change.fieldTypeChanged.target} title={change.fieldTypeChanged.type} typeSlugs={typeSlugs} versionPrefix={versionPrefix} />.</>
-        ) : change.fieldRequiredChanged ? (
-            <><code>{change.fieldRequiredChanged.path}</code> is now {change.fieldRequiredChanged.required ? 'required' : 'optional'}.</>
+        ) : change.fieldOptionalChanged ? (
+            <><code>{change.fieldOptionalChanged.path}</code> is now {change.fieldOptionalChanged.optional ? 'optional' : 'not optional'}.</>
         ) : change.fieldOrdinalChanged ? (
             <>Moved <code>{change.fieldOrdinalChanged.path}</code> from field {change.fieldOrdinalChanged.previousOrdinalAssigned ? change.fieldOrdinalChanged.previousOrdinal : 'unassigned'} to {change.fieldOrdinalChanged.ordinalAssigned ? change.fieldOrdinalChanged.ordinal : 'unassigned'}.</>
         ) : change.fieldSerializationOptionAdded ? (

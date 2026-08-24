@@ -33,7 +33,7 @@ const primitivesByTitle = new Map(metadata.primitives.map(primitive => [primitiv
                     <span class="field-index">{field.ordinal ?? '–'}</span>
                     <span class="field-name">
                         <strong>{field.name}</strong>
-                        {!field.required && <em><a href={`${versionPrefix}/primitives/#optional`}>optional</a></em>}
+                        {field.optional && <em><a href={`${versionPrefix}/primitives/#optional`}>optional</a></em>}
                         {field.description && <small>{field.description}</small>}
                     </span>
                     <span class="field-type">
