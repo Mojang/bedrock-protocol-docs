@@ -29,7 +29,6 @@
     },
     "required": [
         "Dimension ID",
-        "Loading Screen Id",
         "Position",
         "Respawn"
     ]
