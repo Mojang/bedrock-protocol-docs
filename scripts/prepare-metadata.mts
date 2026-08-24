@@ -8,6 +8,40 @@ import process from 'node:process';
 import semver from 'semver';
 import * as tar from 'tar';
 
+import {
+    isRecord,
+    parseProtocolManifest,
+    type ProtocolReleaseEntry,
+} from './protocol-manifest.mts';
+
+interface GitHubRelease {
+    created_at: string;
+    draft: boolean;
+    html_url: string;
+    id: number;
+    name: string | null;
+    prerelease: boolean;
+    published_at: string | null;
+    tag_name: string;
+    tarball_url: string;
+}
+
+interface SchemaMetadata {
+    minecraftVersion: string;
+    protocolVersion: string;
+}
+
+const isGitHubRelease = (value: unknown): value is GitHubRelease => isRecord(value)
+    && typeof value.created_at === 'string'
+    && typeof value.draft === 'boolean'
+    && typeof value.html_url === 'string'
+    && typeof value.id === 'number'
+    && (typeof value.name === 'string' || value.name === null)
+    && typeof value.prerelease === 'boolean'
+    && (typeof value.published_at === 'string' || value.published_at === null)
+    && typeof value.tag_name === 'string'
+    && typeof value.tarball_url === 'string';
+
 const repositoryRoot = path.resolve(import.meta.dirname, '..');
 const cacheRoot = path.join(repositoryRoot, '.cache');
 const releasesRoot = path.join(cacheRoot, 'protocol-releases');
@@ -24,8 +58,8 @@ const requestHeaders = {
     ...(token ? { Authorization: `Bearer ${token}` } : {}),
 };
 
-const walkJsonFiles = async directory => {
-    const files = [];
+const walkJsonFiles = async (directory: string): Promise<string[]> => {
+    const files: string[] = [];
     for (const entry of await readdir(directory, { withFileTypes: true })) {
         const entryPath = path.join(directory, entry.name);
         if (entry.isDirectory()) files.push(...(await walkJsonFiles(entryPath)));
@@ -34,10 +68,12 @@ const walkJsonFiles = async directory => {
     return files;
 };
 
-const readSchemaMetadata = async schemaDirectory => {
+const readSchemaMetadata = async (schemaDirectory: string): Promise<SchemaMetadata> => {
     for (const schemaPath of await walkJsonFiles(schemaDirectory)) {
-        const schema = JSON.parse(await readFile(schemaPath, 'utf8'));
-        if (schema && !Array.isArray(schema) && schema['x-minecraft-version'] && schema['x-protocol-version']) {
+        const schema: unknown = JSON.parse(await readFile(schemaPath, 'utf8'));
+        if (isRecord(schema)
+            && typeof schema['x-minecraft-version'] === 'string'
+            && ['number', 'string'].includes(typeof schema['x-protocol-version'])) {
             return {
                 minecraftVersion: schema['x-minecraft-version'],
                 protocolVersion: String(schema['x-protocol-version']),
@@ -47,7 +83,7 @@ const readSchemaMetadata = async schemaDirectory => {
     throw new Error(`No versioned protocol schemas were found in ${schemaDirectory}.`);
 };
 
-const copySchemas = async (sourceDirectory, destinationDirectory) => {
+const copySchemas = async (sourceDirectory: string, destinationDirectory: string): Promise<void> => {
     const schemaPaths = await walkJsonFiles(sourceDirectory);
     await mkdir(destinationDirectory, { recursive: true });
     for (const schemaPath of schemaPaths) {
@@ -58,28 +94,31 @@ const copySchemas = async (sourceDirectory, destinationDirectory) => {
     }
 };
 
-const fetchReleases = async () => {
-    const releases = [];
+const fetchReleases = async (): Promise<GitHubRelease[]> => {
+    const releases: GitHubRelease[] = [];
     for (let page = 1; ; page += 1) {
         const response = await fetch(`https://api.github.com/repos/${repository}/releases?per_page=100&page=${page}`, {
             headers: requestHeaders,
         });
         if (!response.ok) throw new Error(`GitHub releases request failed with ${response.status}: ${await response.text()}`);
-        const pageReleases = await response.json();
+        const pageReleases: unknown = await response.json();
+        if (!Array.isArray(pageReleases) || !pageReleases.every(isGitHubRelease)) {
+            throw new TypeError('GitHub releases response did not match the expected shape.');
+        }
         releases.push(...pageReleases.filter(release => !release.draft));
         if (pageReleases.length < 100) return releases;
     }
 };
 
-const download = async (url, destination) => {
+const download = async (url: string, destination: string): Promise<void> => {
     const response = await fetch(url, { headers: requestHeaders, redirect: 'follow' });
     if (!response.ok || !response.body) throw new Error(`Download failed with ${response.status}: ${url}`);
     await pipeline(response.body, createWriteStream(destination));
 };
 
-const findJsonDirectory = async directory => {
-    const candidates = [];
-    const visit = async current => {
+const findJsonDirectory = async (directory: string): Promise<string> => {
+    const candidates: string[] = [];
+    const visit = async (current: string): Promise<void> => {
         for (const entry of await readdir(current, { withFileTypes: true })) {
             if (!entry.isDirectory()) continue;
             const entryPath = path.join(current, entry.name);
@@ -94,7 +133,7 @@ const findJsonDirectory = async directory => {
     throw new Error(`The release archive did not contain a protocol json directory.`);
 };
 
-const stageRelease = async release => {
+const stageRelease = async (release: GitHubRelease): Promise<ProtocolReleaseEntry> => {
     const temporaryDirectory = await mkdtemp(path.join(tmpdir(), 'bedrock-protocol-docs-'));
     try {
         const archivePath = path.join(temporaryDirectory, 'release.tgz');
@@ -119,7 +158,7 @@ const stageRelease = async release => {
             tag: release.tag_name,
             url: release.html_url,
             version,
-        };
+        } satisfies ProtocolReleaseEntry;
     } finally {
         await rm(temporaryDirectory, { force: true, recursive: true });
     }
@@ -127,19 +166,23 @@ const stageRelease = async release => {
 
 if (useCache) {
     try {
-        const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
-        if (manifest.repository !== repository || !Array.isArray(manifest.releases) || manifest.releases.length === 0) {
+        const manifest = parseProtocolManifest(JSON.parse(await readFile(manifestPath, 'utf8')));
+        const latestRelease = manifest.releases[0];
+        if (manifest.repository !== repository || !latestRelease) {
             throw new Error('Cached metadata does not match the requested repository.');
         }
 
-        const latestSchemaDirectory = path.resolve(repositoryRoot, manifest.releases[0].schemaDirectory);
+        const latestSchemaDirectory = path.resolve(repositoryRoot, latestRelease.schemaDirectory);
         await readSchemaMetadata(latestSchemaDirectory);
         await rm(path.join(cacheRoot, 'protocol-input'), { force: true, recursive: true });
         await copySchemas(latestSchemaDirectory, inputRoot);
         console.log(`Using cached metadata for ${manifest.releases.length} protocol release${manifest.releases.length === 1 ? '' : 's'} from ${manifest.generatedAt}.`);
         process.exit(0);
     } catch (error) {
-        if (error?.code !== 'ENOENT') console.log(`Cached metadata is unavailable: ${error.message}`);
+        if (!isRecord(error) || error.code !== 'ENOENT') {
+            const message = error instanceof Error ? error.message : String(error);
+            console.log(`Cached metadata is unavailable: ${message}`);
+        }
     }
 }
 
@@ -147,7 +190,7 @@ await rm(cacheRoot, { force: true, recursive: true });
 await mkdir(releasesRoot, { recursive: true });
 
 const githubReleases = await fetchReleases();
-const releases = [];
+const releases: ProtocolReleaseEntry[] = [];
 if (githubReleases.length > 0) {
     for (const [index, release] of githubReleases.entries()) {
         console.log(`Downloading release ${index + 1}/${githubReleases.length}: ${release.tag_name}`);
@@ -168,7 +211,7 @@ if (githubReleases.length > 0) {
         tag: '',
         url: `https://github.com/${repository}`,
         version: schemaMetadata.minecraftVersion,
-    });
+    } satisfies ProtocolReleaseEntry);
     console.log('No GitHub releases found; staged the current checkout.');
 }
 
@@ -176,11 +219,13 @@ releases.sort((left, right) => semver.rcompare(left.version, right.version));
 const duplicateVersion = releases.find((release, index) => releases.findIndex(candidate => candidate.version === release.version) !== index);
 if (duplicateVersion) throw new Error(`Multiple GitHub releases resolve to version '${duplicateVersion.version}'.`);
 
-const latestSchemaDirectory = path.resolve(repositoryRoot, releases[0].schemaDirectory);
+const latestRelease = releases[0];
+if (!latestRelease) throw new Error('No protocol releases were found.');
+const latestSchemaDirectory = path.resolve(repositoryRoot, latestRelease.schemaDirectory);
 await copySchemas(latestSchemaDirectory, inputRoot);
 await writeFile(
     manifestPath,
     `${JSON.stringify({ generatedAt: new Date().toISOString(), repository, releases }, undefined, 2)}\n`,
     'utf8'
 );
-console.log(`Prepared ${releases.length} protocol release${releases.length === 1 ? '' : 's'}; latest is ${releases[0].version}.`);
+console.log(`Prepared ${releases.length} protocol release${releases.length === 1 ? '' : 's'}; latest is ${latestRelease.version}.`);

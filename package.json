@@ -8,8 +8,9 @@
     "npm": ">=11.0.0"
   },
   "scripts": {
-    "build": "npm run prepare:metadata && npm run generate && astro build --root tools/protocol-docs-generator",
-    "check": "npm run prepare:metadata && npm run generate && astro check --root tools/protocol-docs-generator",
+    "build": "npm run check:scripts && npm run prepare:metadata && npm run generate && astro build --root tools/protocol-docs-generator",
+    "check": "npm run check:scripts && npm run prepare:metadata && npm run generate && astro check --root tools/protocol-docs-generator",
+    "check:scripts": "tsc --project tsconfig.scripts.json",
     "dev": "npm run prepare:metadata -- --cache && npm run generate && astro dev --root tools/protocol-docs-generator",
     "generate": "node scripts/generate-protocol-data.mts",
     "prepare:metadata": "node scripts/prepare-metadata.mts"
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
     "@types/node": "^22.0.0",
+    "@types/semver": "^7.8.0",
     "typescript": "^5.9.0"
   }
 }
