@@ -3,11 +3,12 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/SubChunkPosOffset.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
+    "x-minecraft-version": "1.26.50-beta.27",
     "x-protocol-version": 2192,
     "type": "object",
     "properties": {
         "Subchunk Offset X": {
+            "description": "Relative X offset from center position.",
             "type": "integer",
             "x-underlying-type": "int8",
             "x-ordinal-index": 0,
@@ -15,6 +16,7 @@
             "maximum": 127.0
         },
         "Subchunk Offset Y": {
+            "description": "Relative Y offset from center position.",
             "type": "integer",
             "x-underlying-type": "int8",
             "x-ordinal-index": 1,
@@ -22,6 +24,7 @@
             "maximum": 127.0
         },
         "Subchunk Offset Z": {
+            "description": "Relative Z offset from center position.",
             "type": "integer",
             "x-underlying-type": "int8",
             "x-ordinal-index": 2,

@@ -3,7 +3,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/UpdatePlayerGameTypePacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
+    "x-minecraft-version": "1.26.50-beta.27",
     "x-protocol-version": 2192,
     "type": "object",
     "properties": {
@@ -21,6 +21,7 @@
             "x-ordinal-index": 1
         },
         "Tick": {
+            "description": "Most relevant to supply for transitioning into and out of spectator while in motion",
             "$ref": "./PlayerInputTick.json",
             "x-ordinal-index": 2
         }

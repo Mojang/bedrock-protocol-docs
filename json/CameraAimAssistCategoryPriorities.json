@@ -3,11 +3,12 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/CameraAimAssistCategoryPriorities.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
+    "x-minecraft-version": "1.26.50-beta.27",
     "x-protocol-version": 2192,
     "type": "object",
     "properties": {
         "block_default": {
+            "description": "Optional. Default Aim-Assist targeting priority used for Blocks not found in 'blocks'.",
             "type": "integer",
             "x-underlying-type": "int32",
             "x-ordinal-index": 5,
@@ -15,6 +16,7 @@
             "maximum": 100.0
         },
         "block_tags": {
+            "description": "Optional. Map of Block tags to Aim-Assist targeting priority. Larger numbers have greater priority.",
             "type": "object",
             "additionalProperties": {
                 "type": "integer",
@@ -26,6 +28,7 @@
             "x-ordinal-index": 2
         },
         "blocks": {
+            "description": "Optional. Map of Block identifiers to Aim-Assist targeting priority. Larger numbers have greater priority.",
             "type": "object",
             "additionalProperties": {
                 "type": "object",
@@ -45,6 +48,7 @@
             "x-ordinal-index": 1
         },
         "entities": {
+            "description": "Optional. Map of Entity identifiers to Aim-Assist targeting priority. Larger numbers have greater priority.",
             "type": "object",
             "additionalProperties": {
                 "type": "object",
@@ -64,6 +68,7 @@
             "x-ordinal-index": 0
         },
         "entity_default": {
+            "description": "Optional. Default Aim-Assist targeting priority used for Entities not found in 'entities'.",
             "type": "integer",
             "x-underlying-type": "int32",
             "x-ordinal-index": 4,
@@ -71,6 +76,7 @@
             "maximum": 100.0
         },
         "entity_type_families": {
+            "description": "Optional. Map of Entity type families to Aim-Assist targeting priority. Larger numbers have greater priority.",
             "type": "object",
             "additionalProperties": {
                 "type": "integer",

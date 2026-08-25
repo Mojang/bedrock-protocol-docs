@@ -3,15 +3,17 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/clientStoreEntryPointConfig.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
+    "x-minecraft-version": "1.26.50-beta.27",
     "x-protocol-version": 2192,
     "type": "object",
     "properties": {
         "storeId": {
+            "description": "The unique identifier for the store.",
             "type": "string",
             "x-ordinal-index": 0
         },
         "storeName": {
+            "description": "The name of the store.",
             "type": "string",
             "x-ordinal-index": 1
         }

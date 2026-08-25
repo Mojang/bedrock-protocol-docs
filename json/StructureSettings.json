@@ -3,7 +3,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/StructureSettings.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
+    "x-minecraft-version": "1.26.50-beta.27",
     "x-protocol-version": 2192,
     "type": "object",
     "properties": {
@@ -32,6 +32,7 @@
             "x-ordinal-index": 11
         },
         "Last Edit Player": {
+            "description": "Player who last edited the structure block.",
             "$ref": "./ActorUniqueID.json",
             "x-ordinal-index": 6
         },
@@ -52,6 +53,7 @@
             "x-ordinal-index": 7
         },
         "Rotation Pivot": {
+            "description": "Pivot used to rotate a structure around.",
             "$ref": "./Vec3.json",
             "x-ordinal-index": 13
         },

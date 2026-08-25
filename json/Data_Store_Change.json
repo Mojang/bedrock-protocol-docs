@@ -3,7 +3,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/Data_Store_Change.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
+    "x-minecraft-version": "1.26.50-beta.27",
     "x-protocol-version": 2192,
     "type": "object",
     "properties": {
@@ -14,6 +14,7 @@
             "maxLength": 1000
         },
         "Property": {
+            "description": "The name of the property in the data store that has changed",
             "type": "string",
             "x-ordinal-index": 1,
             "minLength": 1,
@@ -24,6 +25,7 @@
             "x-ordinal-index": 3
         },
         "Update Count": {
+            "description": "The number of times this property has updated",
             "type": "integer",
             "x-underlying-type": "uint32",
             "x-ordinal-index": 2,

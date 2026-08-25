@@ -3,11 +3,12 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/MobEffectPacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
+    "x-minecraft-version": "1.26.50-beta.27",
     "x-protocol-version": 2192,
     "type": "object",
     "properties": {
         "Ambient": {
+            "description": "If the effect is considered ambient (like the ones applied by Beacons or Conduits)",
             "type": "boolean",
             "x-underlying-type": "boolean",
             "x-ordinal-index": 7
@@ -54,6 +55,7 @@
             "x-ordinal-index": 0
         },
         "Tick": {
+            "description": "If this packet is referring to the player or a client predicted vehicle they are in control of, this should be the most recently processed PlayerInputTick from their PlayerAuthInputPacket. Otherwise zero.",
             "$ref": "./PlayerInputTick.json",
             "x-ordinal-index": 6
         }

@@ -3,16 +3,18 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/CraftingDataPacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
+    "x-minecraft-version": "1.26.50-beta.27",
     "x-protocol-version": 2192,
     "type": "object",
     "properties": {
         "Clear Recipes": {
+            "description": "When true, the client clears its existing recipes before applying this packet.",
             "type": "boolean",
             "x-underlying-type": "boolean",
             "x-ordinal-index": 11
         },
         "Container Mixes": {
+            "description": "Brewing-stand container mix definitions.",
             "type": "array",
             "items": {
                 "$ref": "./ContainerMixDataEntry.json"
@@ -20,6 +22,7 @@
             "x-ordinal-index": 9
         },
         "Material Reducers": {
+            "description": "Education-Edition material reducer definitions.",
             "type": "array",
             "items": {
                 "$ref": "./MaterialReducerDataEntry.json"
@@ -27,6 +30,7 @@
             "x-ordinal-index": 10
         },
         "Multi Recipes": {
+            "description": "Built-in special recipes identified by UUID (map cloning, banner duplicate, etc.).",
             "type": "array",
             "items": {
                 "$ref": "./MultiRecipePayload.json"
@@ -34,6 +38,7 @@
             "x-ordinal-index": 2
         },
         "Potion Mixes": {
+            "description": "Brewing-stand potion mix definitions.",
             "type": "array",
             "items": {
                 "$ref": "./PotionMixDataEntry.json"
@@ -41,6 +46,7 @@
             "x-ordinal-index": 8
         },
         "Shaped Chemistry Recipes": {
+            "description": "Education-Edition shaped chemistry recipes.",
             "type": "array",
             "items": {
                 "$ref": "./ShapedRecipePayload.json"
@@ -48,6 +54,7 @@
             "x-ordinal-index": 5
         },
         "Shaped Recipes": {
+            "description": "Recipes with a fixed grid layout.",
             "type": "array",
             "items": {
                 "$ref": "./ShapedRecipePayload.json"
@@ -55,6 +62,7 @@
             "x-ordinal-index": 0
         },
         "Shapeless Chemistry Recipes": {
+            "description": "Education-Edition shapeless chemistry recipes.",
             "type": "array",
             "items": {
                 "$ref": "./ShapelessRecipePayload.json"
@@ -62,6 +70,7 @@
             "x-ordinal-index": 4
         },
         "Shapeless Recipes": {
+            "description": "Recipes whose ingredients can be placed in any arrangement.",
             "type": "array",
             "items": {
                 "$ref": "./ShapelessRecipePayload.json"
@@ -69,6 +78,7 @@
             "x-ordinal-index": 1
         },
         "Smithing Transform Recipes": {
+            "description": "Smithing-table upgrade recipes.",
             "type": "array",
             "items": {
                 "$ref": "./SmithingTransformRecipePayload.json"
@@ -76,6 +86,7 @@
             "x-ordinal-index": 6
         },
         "Smithing Trim Recipes": {
+            "description": "Smithing-table armor-trim recipes.",
             "type": "array",
             "items": {
                 "$ref": "./SmithingTrimRecipePayload.json"
@@ -83,6 +94,7 @@
             "x-ordinal-index": 7
         },
         "User Data Shapeless Recipes": {
+            "description": "Shapeless recipes that carry user data (e.g. user-applied item data).",
             "type": "array",
             "items": {
                 "$ref": "./ShapelessRecipePayload.json"

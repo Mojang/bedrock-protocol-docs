@@ -3,11 +3,12 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/PlayerBlockActionData.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
+    "x-minecraft-version": "1.26.50-beta.27",
     "x-protocol-version": 2192,
     "type": "object",
     "properties": {
         "Facing": {
+            "description": "Facing, or action-specific integer data for AbortDestroyBlock.",
             "type": "integer",
             "x-underlying-type": "int32",
             "x-serialization-options": [
@@ -16,6 +17,7 @@
             "x-ordinal-index": 2
         },
         "Player Action Type": {
+            "description": "The server-authoritative block action type.",
             "$ref": "./PlayerActionType.json",
             "x-underlying-type": "int32",
             "x-serialization-options": [
@@ -25,6 +27,7 @@
             "x-ordinal-index": 0
         },
         "Position": {
+            "description": "The block position for the action. StopDestroyBlock serializes the default value.",
             "$ref": "./BlockPos.json",
             "x-ordinal-index": 1
         }

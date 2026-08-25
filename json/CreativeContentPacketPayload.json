@@ -3,11 +3,12 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/CreativeContentPacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
+    "x-minecraft-version": "1.26.50-beta.27",
     "x-protocol-version": 2192,
     "type": "object",
     "properties": {
         "Entries": {
+            "description": "Collection of all creative item entries.",
             "type": "array",
             "items": {
                 "$ref": "./CreativeItemEntryPayload.json"
@@ -15,6 +16,7 @@
             "x-ordinal-index": 1
         },
         "Groups": {
+            "description": "Collection of all groups with and without names. Groups with names show up in the Creative Inventory/Recipe Book with a collapsible icon.",
             "type": "array",
             "items": {
                 "$ref": "./CreativeGroupInfoPayload.json"

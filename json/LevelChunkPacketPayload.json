@@ -3,16 +3,18 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/LevelChunkPacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
+    "x-minecraft-version": "1.26.50-beta.27",
     "x-protocol-version": 2192,
     "type": "object",
     "properties": {
         "Cache Enabled": {
+            "description": "Whether the client cache (blob) protocol is used for this chunk.",
             "type": "boolean",
             "x-underlying-type": "boolean",
             "x-ordinal-index": 4
         },
         "Cache Metadata": {
+            "description": "Per-sub-chunk cache blob hashes; populated only when Cache Enabled is set.",
             "type": "array",
             "items": {
                 "$ref": "./LevelChunkPacketPayload_SubChunkMetadata.json"
@@ -21,10 +23,12 @@
             "maxItems": 65
         },
         "Chunk Position": {
+            "description": "Chunk column position (chunk x, chunk z).",
             "$ref": "./ChunkPos.json",
             "x-ordinal-index": 0
         },
         "Client Request SubChunk Limit": {
+            "description": "Optional client sub-chunk request limit; -1 means no limit. Present only in request mode.",
             "type": "integer",
             "x-underlying-type": "int32",
             "x-serialization-options": [
@@ -35,14 +39,17 @@
             "maximum": 64.0
         },
         "Dimension Id": {
+            "description": "Dimension the chunk belongs to.",
             "$ref": "./DimensionType.json",
             "x-ordinal-index": 1
         },
         "Serialized Chunk Data": {
+            "description": "The serialized chunk payload (block, biome, heightmap and block-entity data).",
             "type": "string",
             "x-ordinal-index": 6
         },
         "Sub-chunks Count": {
+            "description": "Number of sub-chunks serialized in this packet.",
             "type": "integer",
             "x-underlying-type": "uint32",
             "x-serialization-options": [

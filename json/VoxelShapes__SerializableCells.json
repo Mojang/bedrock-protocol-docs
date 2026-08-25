@@ -3,11 +3,12 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/VoxelShapes__SerializableCells.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
+    "x-minecraft-version": "1.26.50-beta.27",
     "x-protocol-version": 2192,
     "type": "object",
     "properties": {
         "Storage": {
+            "description": "Solid/empty state per cell",
             "type": "array",
             "items": {
                 "type": "integer",
@@ -19,6 +20,7 @@
             "maxItems": 256048
         },
         "X Size": {
+            "description": "Number of cells along the X axis",
             "type": "integer",
             "x-underlying-type": "uint8",
             "x-ordinal-index": 0,
@@ -26,6 +28,7 @@
             "maximum": 127.0
         },
         "Y Size": {
+            "description": "Number of cells along the Y axis",
             "type": "integer",
             "x-underlying-type": "uint8",
             "x-ordinal-index": 1,
@@ -33,6 +36,7 @@
             "maximum": 127.0
         },
         "Z Size": {
+            "description": "Number of cells along the Z axis",
             "type": "integer",
             "x-underlying-type": "uint8",
             "x-ordinal-index": 2,

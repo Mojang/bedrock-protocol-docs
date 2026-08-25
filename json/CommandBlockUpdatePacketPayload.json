@@ -3,7 +3,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/CommandBlockUpdatePacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
+    "x-minecraft-version": "1.26.50-beta.27",
     "x-protocol-version": 2192,
     "type": "object",
     "properties": {
@@ -12,6 +12,7 @@
             "x-ordinal-index": 1
         },
         "Execute On First Tick": {
+            "description": "If a delay is set on a repeating command block, should the command execute on first tick, or on first delay?",
             "type": "boolean",
             "x-underlying-type": "boolean",
             "x-ordinal-index": 7
@@ -29,6 +30,7 @@
             "x-ordinal-index": 3
         },
         "Target": {
+            "description": "The command block target. The variant index encodes the legacy 'Is Block?' bool: 0 = entity (e.g. minecart command block), 1 = block.",
             "oneOf": [
                 {
                     "$ref": "./EntityCommandTarget.json"

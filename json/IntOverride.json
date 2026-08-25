@@ -3,7 +3,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/IntOverride.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
+    "x-minecraft-version": "1.26.50-beta.27",
     "x-protocol-version": 2192,
     "type": "object",
     "properties": {
@@ -14,6 +14,7 @@
             "x-ordinal-index": 0
         },
         "Value": {
+            "description": "The integer value to set as the property override.",
             "type": "integer",
             "x-underlying-type": "int32",
             "x-ordinal-index": 1

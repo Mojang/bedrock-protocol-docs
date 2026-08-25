@@ -3,23 +3,27 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/PlayerSkinPacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
+    "x-minecraft-version": "1.26.50-beta.27",
     "x-protocol-version": 2192,
     "type": "object",
     "properties": {
         "Localized New Skin Name": {
+            "description": "The player's localized new skin name",
             "type": "string",
             "x-ordinal-index": 2
         },
         "Localized Old Skin Name": {
+            "description": "The player's localized old skin name",
             "type": "string",
             "x-ordinal-index": 3
         },
         "Serialized Skin": {
+            "description": "The player's serialized skin",
             "$ref": "./SerializedSkin.json",
             "x-ordinal-index": 1
         },
         "UUID": {
+            "description": "The player's UUID",
             "$ref": "./mce__UUID.json",
             "x-ordinal-index": 0
         }

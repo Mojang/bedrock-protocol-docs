@@ -3,11 +3,12 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/PotionMixDataEntry.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
+    "x-minecraft-version": "1.26.50-beta.27",
     "x-protocol-version": 2192,
     "type": "object",
     "properties": {
         "From Item Aux": {
+            "description": "Aux/data value of the input potion.",
             "type": "integer",
             "x-underlying-type": "int32",
             "x-serialization-options": [
@@ -16,6 +17,7 @@
             "x-ordinal-index": 1
         },
         "From Potion Id": {
+            "description": "Item id of the input potion.",
             "type": "integer",
             "x-underlying-type": "int32",
             "x-serialization-options": [
@@ -24,6 +26,7 @@
             "x-ordinal-index": 0
         },
         "Reagent Item Aux": {
+            "description": "Aux/data value of the reagent.",
             "type": "integer",
             "x-underlying-type": "int32",
             "x-serialization-options": [
@@ -32,6 +35,7 @@
             "x-ordinal-index": 3
         },
         "Reagent Item Id": {
+            "description": "Item id of the reagent applied to the potion.",
             "type": "integer",
             "x-underlying-type": "int32",
             "x-serialization-options": [
@@ -40,6 +44,7 @@
             "x-ordinal-index": 2
         },
         "To Item Aux": {
+            "description": "Aux/data value of the resulting potion.",
             "type": "integer",
             "x-underlying-type": "int32",
             "x-serialization-options": [
@@ -48,6 +53,7 @@
             "x-ordinal-index": 5
         },
         "To Potion Id": {
+            "description": "Item id of the resulting potion.",
             "type": "integer",
             "x-underlying-type": "int32",
             "x-serialization-options": [

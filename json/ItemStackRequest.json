@@ -3,11 +3,12 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/ItemStackRequest.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
+    "x-minecraft-version": "1.26.50-beta.27",
     "x-protocol-version": 2192,
     "type": "object",
     "properties": {
         "Actions": {
+            "description": "Action list. Each entry starts with an ItemStackRequestActionType byte followed by that action's payload.",
             "type": "array",
             "items": {
                 "oneOf": [
@@ -78,6 +79,7 @@
             "x-runtime-constraint-description": "Verify the request id is a valid negative odd client request id"
         },
         "Strings To Filter": {
+            "description": "Array of strings to submit to profanity filtering service",
             "type": "array",
             "items": {
                 "type": "string",

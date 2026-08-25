@@ -3,7 +3,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/CameraPresets.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
+    "x-minecraft-version": "1.26.50-beta.27",
     "x-protocol-version": 2192,
     "type": "object",
     "properties": {
@@ -35,6 +35,7 @@
             "x-ordinal-index": 21
         },
         "Entity Offset": {
+            "description": "Changing the camera's pivot point from the center of the entity",
             "$ref": "./Vec3.json",
             "x-ordinal-index": 14
         },
