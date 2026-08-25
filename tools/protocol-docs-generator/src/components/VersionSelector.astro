@@ -12,7 +12,10 @@ const releasesByVersion = new Map(versionManifest.releases.map(release => [relea
 const stableReleases = versionManifest.releases.filter(release => !release.preview);
 const previewReleases = versionManifest.releases.filter(release => release.preview);
 const currentVersionPrefix = getVersionPrefix(version);
-const relativeParts = pathname.slice(currentVersionPrefix.length).split('/').filter(Boolean);
+const isVersionedPath = pathname === currentVersionPrefix || pathname.startsWith(`${currentVersionPrefix}/`);
+const relativeParts = isVersionedPath
+    ? pathname.slice(currentVersionPrefix.length).split('/').filter(Boolean)
+    : [];
 
 const destinationFor = (target: string) => {
     const release = releasesByVersion.get(target === 'latest' ? versionManifest.latest : target);
