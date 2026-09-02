@@ -10,6 +10,7 @@ export interface ProtocolVariant {
 export interface ProtocolField {
     children?: ProtocolField[];
     description: string;
+    enumBinaryValues?: number[];
     enumValues?: string[];
     name: string;
     optional: boolean;
@@ -27,6 +28,7 @@ export interface ProtocolUse {
     packetSlug: string;
     packetTitle: string;
     path: string[];
+    serialization?: string[];
 }
 
 export interface ProtocolWireFormat {
@@ -37,6 +39,7 @@ export interface ProtocolWireFormat {
 export interface ProtocolType {
     category: ProtocolTypeCategory;
     description: string;
+    enumBinaryValues?: number[];
     enumValues: string[];
     fields: ProtocolField[];
     slug: string;

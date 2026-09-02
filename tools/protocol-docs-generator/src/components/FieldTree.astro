@@ -22,6 +22,8 @@ const primitivesByTitle = new Map(metadata.primitives.map(primitive => [primitiv
             const target = field.target ? typesBySlug.get(field.target) : undefined;
             const nestedFields = target?.fields ?? field.children ?? [];
             const enumValues = target?.enumValues.length ? target.enumValues : (field.enumValues ?? []);
+            const enumBinaryValues = target?.enumValues.length ? target.enumBinaryValues : field.enumBinaryValues;
+            const enumAsValue = [...field.serialization, ...(target?.serialization ?? [])].includes('Enum-as-Value');
             const isCycle = field.target ? seen.includes(field.target) : false;
             const hasDetails = !isCycle && (nestedFields.length > 0 || enumValues.length > 0 || field.variants?.length);
             const primitive = primitivesByTitle.get(field.type);
@@ -88,7 +90,7 @@ const primitivesByTitle = new Map(metadata.primitives.map(primitive => [primitiv
                                 )}
                                 {enumValues.length > 0 && (
                                     <ol class="enum-values compact">
-                                        {enumValues.map((value, index) => <li><span>{index}</span><code>{value}</code></li>)}
+                                        {enumValues.map((value, index) => <li><span>{enumAsValue ? (enumBinaryValues?.[index] ?? index) : JSON.stringify(value)}</span><code>{value}</code></li>)}
                                     </ol>
                                 )}
                                 {field.variants && field.variants.length > 0 && (
@@ -130,7 +132,7 @@ const primitivesByTitle = new Map(metadata.primitives.map(primitive => [primitiv
                                                     )}
                                                     {variantTarget.enumValues.length > 0 && (
                                                         <ol class="enum-values compact">
-                                                            {variantTarget.enumValues.map((value, index) => <li><span>{index}</span><code>{value}</code></li>)}
+                                                            {variantTarget.enumValues.map((value, index) => <li><span>{variantTarget.serialization.includes('Enum-as-Value') ? (variantTarget.enumBinaryValues?.[index] ?? index) : JSON.stringify(value)}</span><code>{value}</code></li>)}
                                                         </ol>
                                                     )}
                                                 </details>

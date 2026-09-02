@@ -16,7 +16,7 @@
     "prepare:metadata": "node scripts/prepare-metadata.mts"
   },
   "dependencies": {
-    "@minecraft/api-docs-generator": "file:vendor/minecraft-api-docs-generator-2.0.6.tgz",
+    "@minecraft/api-docs-generator": "file:vendor/minecraft-api-docs-generator-2.1.0.tgz",
     "astro": "^7.2.1",
     "gray-matter": "^4.0.3",
     "semver": "^7.7.2",

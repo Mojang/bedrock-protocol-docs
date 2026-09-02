@@ -171,6 +171,9 @@ footer { border-top: 1px solid var(--line); padding: 26px 5vw; color: var(--mute
 .include-paths li { border-bottom: 1px solid var(--line); padding: 14px 10px; display: grid; grid-template-columns: minmax(180px, 0.4fr) 1fr; gap: 24px; }
 .include-paths a { color: var(--signal); font-weight: 700; }
 .include-paths span { color: var(--muted); font-family: var(--mono); font-size: 0.75rem; overflow-wrap: anywhere; }
+.include-detail { min-width: 0; }
+.include-options { margin-top: 7px; display: flex; flex-wrap: wrap; gap: 5px; }
+.include-paths .include-options .tag { font-size: 0.58rem; }
 .empty-state { border-bottom: 1px solid var(--line); margin: 0; padding: 18px 10px; color: var(--muted); }
 
 [hidden] { display: none !important; }

@@ -25,6 +25,9 @@ interface Props {
 const { type, version } = Astro.props;
 const metadata = getProtocolMetadata(version);
 const versionPrefix = getVersionPrefix(version);
+const enumAsValue = type.wireFormats.some(format => format.serialization.includes('Enum-as-Value'));
+const enumAsString = type.wireFormats.some(format => !format.serialization.includes('Enum-as-Value'));
+const mixedEnumFormats = enumAsValue && enumAsString;
 const wireFormats = type.wireFormats.map(format => ({
     format,
     primitive: metadata.primitives.find(primitive => primitive.title === format.type),
@@ -42,6 +45,55 @@ const wireFormats = type.wireFormats.map(format => ({
         </header>
 
         {type.category === 'object' && type.fields.length > 0 && <Datagram fields={type.fields} />}
+
+        {
+            type.enumValues.length > 0 && (
+                <section class="schema-section">
+                    <header><h2>Enum values</h2><span>{type.enumValues.length} values</span></header>
+                    <ol class="enum-values">
+                        {type.enumValues.map((value, index) => (
+                            <li>
+                                <span>{enumAsValue ? (type.enumBinaryValues?.[index] ?? index) : JSON.stringify(value)}</span>
+                                <code>{mixedEnumFormats ? JSON.stringify(value) : value}</code>
+                            </li>
+                        ))}
+                    </ol>
+                </section>
+            )
+        }
+        {
+            type.fields.length > 0 && (
+                <section class="schema-section">
+                    <header><h2>Fields</h2><span>{type.fields.length} top-level fields</span></header>
+                    <FieldTree fields={type.fields} metadata={metadata} seen={[type.slug]} versionPrefix={versionPrefix} />
+                </section>
+            )
+        }
+
+        <section class="schema-section include-section">
+            <header><h2>Packet references</h2><span>{type.uses.length} {type.uses.length === 1 ? 'reference' : 'references'}</span></header>
+            {
+                type.uses.length > 0 ? (
+                    <ol class="include-paths">
+                        {type.uses.map(use => (
+                            <li>
+                                <a href={`${versionPrefix}/packets/${use.packetSlug}/`}>{use.packetTitle}</a>
+                                <div class="include-detail">
+                                    <span>{use.path.join(' › ')}</span>
+                                    {use.serialization && use.serialization.length > 0 && (
+                                        <div class="include-options">
+                                            {use.serialization.map(option => <SerializationTag option={option} />)}
+                                        </div>
+                                    )}
+                                </div>
+                            </li>
+                        ))}
+                    </ol>
+                ) : (
+                    <p class="empty-state">No packet includes this type.</p>
+                )
+            }
+        </section>
 
         {
             type.category === 'enum' && (
@@ -71,43 +123,6 @@ const wireFormats = type.wireFormats.map(format => ({
                 </section>
             )
         }
-
-        {
-            type.enumValues.length > 0 && (
-                <section class="schema-section">
-                    <header><h2>Enum values</h2><span>{type.enumValues.length} values</span></header>
-                    <ol class="enum-values">
-                        {type.enumValues.map((value, index) => <li><span>{index}</span><code>{value}</code></li>)}
-                    </ol>
-                </section>
-            )
-        }
-        {
-            type.fields.length > 0 && (
-                <section class="schema-section">
-                    <header><h2>Fields</h2><span>{type.fields.length} top-level fields</span></header>
-                    <FieldTree fields={type.fields} metadata={metadata} seen={[type.slug]} versionPrefix={versionPrefix} />
-                </section>
-            )
-        }
-
-        <section class="schema-section include-section">
-            <header><h2>Packet references</h2><span>{type.uses.length} {type.uses.length === 1 ? 'reference' : 'references'}</span></header>
-            {
-                type.uses.length > 0 ? (
-                    <ol class="include-paths">
-                        {type.uses.map(use => (
-                            <li>
-                                <a href={`${versionPrefix}/packets/${use.packetSlug}/`}>{use.packetTitle}</a>
-                                <span>{use.path.join(' › ')}</span>
-                            </li>
-                        ))}
-                    </ol>
-                ) : (
-                    <p class="empty-state">No packet includes this type.</p>
-                )
-            }
-        </section>
 
         <DocumentChangelog kind="type" slug={type.slug} />
     </article>
