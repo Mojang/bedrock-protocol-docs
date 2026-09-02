@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/LevelEventPacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "Data": {
@@ -24,6 +24,7 @@
             "x-ordinal-index": 0
         },
         "Position": {
+            "description": "Note about Event ID: Legacy particles use the @enums.html#Particle Type@ enum |ed with ParticleLegacyEvent(0x4000)",
             "$ref": "./Vec3.json",
             "x-ordinal-index": 1
         }

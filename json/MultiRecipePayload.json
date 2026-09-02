@@ -3,15 +3,17 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/MultiRecipePayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "Multi-Recipe UUID": {
+            "description": "UUID identifying which built-in multi-recipe (e.g. map cloning, banner duplicate) this represents.",
             "$ref": "./mce__UUID.json",
             "x-ordinal-index": 0
         },
         "Net Id": {
+            "description": "Network id assigned to this recipe.",
             "$ref": "./RecipeNetId.json",
             "x-ordinal-index": 1
         }

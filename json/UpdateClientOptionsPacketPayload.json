@@ -3,11 +3,12 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/UpdateClientOptionsPacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "Filter Profanity Change": {
+            "description": "New filter profanity value",
             "type": "boolean",
             "x-underlying-type": "boolean",
             "x-serialization-options": [
@@ -16,6 +17,7 @@
             "x-ordinal-index": 1
         },
         "Graphics Mode Change": {
+            "description": "New graphics mode value",
             "$ref": "./GraphicsMode.json",
             "x-underlying-type": "uint8",
             "x-serialization-options": [
@@ -23,9 +25,5 @@
             ],
             "x-ordinal-index": 0
         }
-    },
-    "required": [
-        "Filter Profanity Change",
-        "Graphics Mode Change"
-    ]
+    }
 }

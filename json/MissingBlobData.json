@@ -3,11 +3,12 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/MissingBlobData.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "Blob Data": {
+            "description": "Subchunk data (see https://gist.github.com/Tomcc/a96af509e275b1af483b25c543cfbf37) plus biome data",
             "type": "string",
             "x-ordinal-index": 1
         },

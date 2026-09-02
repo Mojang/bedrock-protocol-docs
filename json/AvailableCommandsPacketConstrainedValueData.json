@@ -3,11 +3,12 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/AvailableCommandsPacketConstrainedValueData.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "Constraint Indices": {
+            "description": "The constraint indices.",
             "type": "array",
             "items": {
                 "type": "integer",
@@ -19,12 +20,14 @@
             "maxItems": 250
         },
         "Enum Symbol": {
+            "description": "The enum symbol.",
             "type": "integer",
             "x-underlying-type": "uint32",
             "x-ordinal-index": 1,
             "minimum": 0.0
         },
         "Enum Value Symbol": {
+            "description": "The enum value symbol.",
             "type": "integer",
             "x-underlying-type": "uint32",
             "x-ordinal-index": 0,

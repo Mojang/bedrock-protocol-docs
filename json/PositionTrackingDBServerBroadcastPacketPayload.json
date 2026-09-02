@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/PositionTrackingDBServerBroadcastPacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "Action": {
@@ -20,6 +20,7 @@
             "x-ordinal-index": 1
         },
         "Position tracking data": {
+            "description": "\n\t\t\t\tCompoundTag for record key:\n\t\t\t\tversion (byte)\n\t\t\t\tid (string)\n\t\t\t\tpositions (list of (int, int, int))\n\t\t\t\tdimension (int)\n\t\t\t\tstatus (byte, record status enum)\n\t\t\t",
             "x-ordinal-index": 2
         }
     },

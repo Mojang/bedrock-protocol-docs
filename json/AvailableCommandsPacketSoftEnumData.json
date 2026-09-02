@@ -3,16 +3,18 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/AvailableCommandsPacketSoftEnumData.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "Enum Name": {
+            "description": "The enum name.",
             "type": "string",
             "x-ordinal-index": 0,
-            "maxLength": 512
+            "maxLength": 1000
         },
         "Enum Options": {
+            "description": "The enum options.",
             "type": "array",
             "items": {
                 "type": "string"

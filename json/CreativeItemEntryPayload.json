@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/CreativeItemEntryPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "Creative Net Id": {
@@ -12,6 +12,7 @@
             "x-ordinal-index": 0
         },
         "Group Index": {
+            "description": "Zero-based index into the Groups list above, identifying which group this item belongs to. The reserved sentinel value 0xFFFFFFFF (uint32 max, CreativeItemRegistry::INVALID_INDEX) indicates the item has no group and should appear ungrouped in the creative inventory.",
             "type": "integer",
             "x-underlying-type": "uint32",
             "x-serialization-options": [

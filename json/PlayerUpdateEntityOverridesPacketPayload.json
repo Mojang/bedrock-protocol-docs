@@ -3,11 +3,12 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/PlayerUpdateEntityOverridesPacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "Property Index": {
+            "description": "Index of the entity property the override applies to.",
             "type": "integer",
             "x-underlying-type": "uint32",
             "x-serialization-options": [
@@ -17,10 +18,12 @@
             "minimum": 0.0
         },
         "Target ID": {
+            "description": "Unique ID of the entity whose property overrides are being updated.",
             "$ref": "./ActorUniqueID.json",
             "x-ordinal-index": 0
         },
         "Update": {
+            "description": "The override operation: clear all, remove one, or set an int/float override.",
             "oneOf": [
                 {
                     "$ref": "./ClearOverride.json"

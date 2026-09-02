@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/AddVolumeEntityPacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "Components": {
@@ -15,6 +15,7 @@
             "x-ordinal-index": 6
         },
         "Engine Version": {
+            "description": "Semantic version string",
             "type": "string",
             "x-ordinal-index": 7,
             "x-runtime-constraint-description": "Ensure it is a valid MinEngineVersion"

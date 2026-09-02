@@ -3,11 +3,12 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/InventorySource.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "Bit Flags": {
+            "description": "Source flags. Present only for WorldInteraction source type.",
             "$ref": "./InventorySourceFlags.json",
             "x-underlying-type": "uint32",
             "x-serialization-options": [
@@ -17,6 +18,7 @@
             "x-ordinal-index": 2
         },
         "Container ID": {
+            "description": "Container window ID. Present only for ContainerInventory and NonImplementedFeatureTODO source types.",
             "type": "integer",
             "x-underlying-type": "int8",
             "x-serialization-options": [
@@ -27,6 +29,7 @@
             "maximum": 127.0
         },
         "Source Type": {
+            "description": "The inventory source type.",
             "$ref": "./InventorySourceType.json",
             "x-underlying-type": "uint32",
             "x-serialization-options": [

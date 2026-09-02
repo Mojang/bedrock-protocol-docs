@@ -3,11 +3,11 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/NoiseAlignment.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
-        "type": {
+        "Type": {
             "$ref": "./NoiseAlignmentType.json",
             "x-underlying-type": "uint8",
             "x-serialization-options": [
@@ -15,7 +15,7 @@
             ],
             "x-ordinal-index": 0
         },
-        "value": {
+        "Value": {
             "type": "integer",
             "x-underlying-type": "uint32",
             "x-serialization-options": [
@@ -26,7 +26,7 @@
         }
     },
     "required": [
-        "type",
-        "value"
+        "Type",
+        "Value"
     ]
 }

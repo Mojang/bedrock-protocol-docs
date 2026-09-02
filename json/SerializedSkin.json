@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/SerializedSkin.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "AnimatedImageData": {
@@ -12,11 +12,11 @@
             "items": {
                 "$ref": "./AnimatedImageData.json"
             },
-            "x-ordinal-index": 4
+            "x-ordinal-index": 3
         },
         "AnimationData": {
             "type": "string",
-            "x-ordinal-index": 8
+            "x-ordinal-index": 7
         },
         "ArmSize": {
             "$ref": "./persona__ArmSize__Type.json",
@@ -24,27 +24,28 @@
             "x-serialization-options": [
                 "Enum-as-Value"
             ],
-            "x-ordinal-index": 11
+            "x-ordinal-index": 10
         },
         "CapeID": {
             "type": "string",
-            "x-ordinal-index": 9
+            "x-ordinal-index": 8
         },
         "CapeImageData": {
             "$ref": "./SkinImage.json",
-            "x-ordinal-index": 5
+            "x-ordinal-index": 4
         },
         "FullID": {
             "type": "string",
-            "x-ordinal-index": 10
+            "x-ordinal-index": 9
         },
         "GeometryData": {
-            "$ref": "./Json__Value.json",
-            "x-ordinal-index": 6
+            "type": "string",
+            "x-ordinal-index": 5,
+            "x-runtime-constraint-description": "Verify that the string contains valid depth-limited JSON"
         },
         "GeometryDataMinEngineVersion": {
             "$ref": "./MinEngineVersion.json",
-            "x-ordinal-index": 7
+            "x-ordinal-index": 6
         },
         "ID": {
             "type": "string",
@@ -52,39 +53,39 @@
         },
         "ImageData": {
             "$ref": "./SkinImage.json",
-            "x-ordinal-index": 3
+            "x-ordinal-index": 2
         },
         "IsPersona": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 16
+            "x-ordinal-index": 15
         },
         "IsPersonaCapeOnClassicSkin": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 17
+            "x-ordinal-index": 16
         },
         "IsPremium": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 15
+            "x-ordinal-index": 14
         },
         "IsPrimaryUser": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 18
+            "x-ordinal-index": 17
         },
         "OverridesPlayerAppearance": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 19
+            "x-ordinal-index": 18
         },
         "PersonaPieces": {
             "type": "array",
             "items": {
                 "$ref": "./SerializedPersonaPieceHandle.json"
             },
-            "x-ordinal-index": 13
+            "x-ordinal-index": 12
         },
         "PieceTintColors": {
             "type": "object",
@@ -100,28 +101,25 @@
                     }
                 }
             },
-            "x-ordinal-index": 14
-        },
-        "PlayFabID": {
-            "type": "string",
-            "x-ordinal-index": 1
+            "x-ordinal-index": 13
         },
         "ProfileHash": {
             "type": "string",
-            "x-ordinal-index": 21
+            "x-ordinal-index": 20
         },
         "ResourcePatch": {
             "type": "string",
-            "x-ordinal-index": 2
+            "x-ordinal-index": 1,
+            "x-runtime-constraint-description": "Verify that the string contains JSON within the maximum nesting depth"
         },
         "SkinColor": {
             "$ref": "./Color.json",
-            "x-ordinal-index": 12
+            "x-ordinal-index": 11
         },
         "TrustedSkinFlag": {
             "$ref": "./TrustedSkinFlag.json",
             "x-underlying-type": "object",
-            "x-ordinal-index": 20
+            "x-ordinal-index": 19
         }
     },
     "required": [
@@ -142,7 +140,6 @@
         "OverridesPlayerAppearance",
         "PersonaPieces",
         "PieceTintColors",
-        "PlayFabID",
         "ProfileHash",
         "ResourcePatch",
         "SkinColor",

@@ -3,24 +3,28 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/ResourcePackStackPacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "Base Game Version": {
+            "description": "For clients to be able to set their stack to the right version",
             "type": "string",
             "x-ordinal-index": 2
         },
         "Experiments": {
+            "description": "Active and always-on experiment toggles",
             "$ref": "./Experiments.json",
             "x-ordinal-index": 3
         },
         "Include Editor Packs": {
+            "description": "When connecting to an Editor world, include the vanilla editor packs in the stack",
             "type": "boolean",
             "x-underlying-type": "boolean",
             "x-ordinal-index": 4
         },
         "Texture Pack List": {
+            "description": "List of texture pack IDs and versions for the resource pack stack",
             "type": "array",
             "items": {
                 "$ref": "./PackInstanceId.json"

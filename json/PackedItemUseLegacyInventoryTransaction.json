@@ -3,19 +3,22 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/PackedItemUseLegacyInventoryTransaction.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "Item Use Transaction": {
+            "description": "The reflected item use transaction performed on this auth-input tick.",
             "$ref": "./ItemUseInventoryTransaction.json",
             "x-ordinal-index": 2
         },
         "Legacy Request ID": {
+            "description": "The legacy item stack request id associated with this item interaction. Zero means no legacy request.",
             "$ref": "./ItemStackLegacyRequestId.json",
             "x-ordinal-index": 0
         },
         "Legacy Set Item Slots": {
+            "description": "Only present when Legacy Request ID is valid. Lists container slots involved in the interaction.",
             "type": "array",
             "items": {
                 "$ref": "./LegacySetSlot.json"

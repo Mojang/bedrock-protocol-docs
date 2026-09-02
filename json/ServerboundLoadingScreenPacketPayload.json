@@ -3,11 +3,12 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/ServerboundLoadingScreenPacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "Loading Screen Id": {
+            "description": "This will be set if the server gives us a value. If the server doesn't expect this value, then the client will get disconnected.",
             "type": "integer",
             "x-underlying-type": "uint32",
             "x-ordinal-index": 1,
@@ -24,11 +25,14 @@
                 "Compression",
                 "Enum-as-Value"
             ],
-            "x-ordinal-index": 0
+            "x-ordinal-index": 0,
+            "x-enum-binary-value": [
+                1,
+                2
+            ]
         }
     },
     "required": [
-        "Loading Screen Id",
         "Loading Screen Packet Type"
     ]
 }

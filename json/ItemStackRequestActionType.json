@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/ItemStackRequestActionType.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "string",
     "enum": [
         "Take",
@@ -26,5 +26,25 @@
         "CraftNonImplemented",
         "CraftResults"
     ],
-    "x-underlying-type": "uint8"
+    "x-underlying-type": "uint8",
+    "x-enum-binary-value": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+    ]
 }

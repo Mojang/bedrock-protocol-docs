@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/ModalFormResponsePacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "Form Cancel Reason": {
@@ -25,13 +25,12 @@
             "minimum": 0.0
         },
         "JSON Response": {
-            "$ref": "./Json__Value.json",
-            "x-ordinal-index": 1
+            "type": "string",
+            "x-ordinal-index": 1,
+            "x-runtime-constraint-description": "Verify that the string contains valid depth-limited JSON"
         }
     },
     "required": [
-        "Form Cancel Reason",
-        "Form ID",
-        "JSON Response"
+        "Form ID"
     ]
 }

@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/CameraPresets.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "Aim Assist": {
@@ -35,6 +35,7 @@
             "x-ordinal-index": 21
         },
         "Entity Offset": {
+            "description": "Changing the camera's pivot point from the center of the entity",
             "$ref": "./Vec3.json",
             "x-ordinal-index": 14
         },
@@ -127,29 +128,8 @@
         }
     },
     "required": [
-        "Aim Assist",
         "Apply Inherited Starting Rotation",
-        "Block Listening Radius",
-        "Continue Targeting",
-        "Control Scheme",
-        "Entity Offset",
-        "Horizontal Rotation Limit",
         "Inherit From",
-        "Listener",
-        "Name",
-        "Player Effects",
-        "Pos X",
-        "Pos Y",
-        "Pos Z",
-        "Radius",
-        "Rot X",
-        "Rot Y",
-        "Rotation Speed",
-        "Snap to Target",
-        "Starting Rotation",
-        "Vertical Rotation Limit",
-        "View Offset",
-        "Yaw Limit Max",
-        "Yaw Limit Min"
+        "Name"
     ]
 }

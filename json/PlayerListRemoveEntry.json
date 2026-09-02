@@ -3,11 +3,12 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/PlayerListRemoveEntry.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "Action": {
+            "description": "Discriminator selecting the Remove form of the entry.",
             "type": "string",
             "enum": [
                 "Remove"
@@ -16,9 +17,13 @@
             "x-serialization-options": [
                 "Enum-as-Value"
             ],
-            "x-ordinal-index": 0
+            "x-ordinal-index": 0,
+            "x-enum-binary-value": [
+                1
+            ]
         },
         "UUID": {
+            "description": "UUID of the player to remove from the list.",
             "$ref": "./mce__UUID.json",
             "x-ordinal-index": 1
         }

@@ -3,11 +3,12 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/PlayerListAddEntry.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "Action": {
+            "description": "Discriminator selecting the Add form of the entry.",
             "type": "string",
             "enum": [
                 "Add"
@@ -16,56 +17,75 @@
             "x-serialization-options": [
                 "Enum-as-Value"
             ],
-            "x-ordinal-index": 0
+            "x-ordinal-index": 0,
+            "x-enum-binary-value": [
+                0
+            ]
         },
         "Actor Unique ID": {
+            "description": "Unique actor ID of the player.",
             "$ref": "./ActorUniqueID.json",
             "x-ordinal-index": 2
         },
         "Build Platform": {
+            "description": "The device/build platform the player is on.",
             "$ref": "./BuildPlatform.json",
             "x-underlying-type": "int32",
             "x-serialization-options": [
                 "Enum-as-Value"
             ],
-            "x-ordinal-index": 6
+            "x-ordinal-index": 7
         },
         "Is Host": {
-            "type": "boolean",
-            "x-underlying-type": "boolean",
-            "x-ordinal-index": 9
-        },
-        "Is SubClient": {
+            "description": "Whether the player is the host of the session.",
             "type": "boolean",
             "x-underlying-type": "boolean",
             "x-ordinal-index": 10
         },
-        "Is Teacher": {
+        "Is SubClient": {
+            "description": "Whether the player is a split-screen sub-client.",
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 8
+            "x-ordinal-index": 11
+        },
+        "Is Teacher": {
+            "description": "Whether the player is an Education Edition teacher.",
+            "type": "boolean",
+            "x-underlying-type": "boolean",
+            "x-ordinal-index": 9
         },
         "Platform Online ID": {
+            "description": "Platform-specific online ID of the player.",
+            "type": "string",
+            "x-ordinal-index": 6
+        },
+        "PlayFab ID": {
+            "description": "Server-verified PlayFab ID of the player, when available.",
             "type": "string",
             "x-ordinal-index": 5
         },
         "Player Color": {
+            "description": "The player's name-tag/UI color.",
             "$ref": "./Color.json",
-            "x-ordinal-index": 11
+            "x-ordinal-index": 12
         },
         "Player Name": {
+            "description": "Display name of the player.",
             "type": "string",
             "x-ordinal-index": 3
         },
         "Serialized Skin": {
+            "description": "The player's serialized skin, cape and geometry data.",
             "$ref": "./SerializedSkin.json",
-            "x-ordinal-index": 7
+            "x-ordinal-index": 8
         },
         "UUID": {
+            "description": "UUID of the player being added.",
             "$ref": "./mce__UUID.json",
             "x-ordinal-index": 1
         },
         "XBL XUID": {
+            "description": "Xbox Live user ID of the player, when available.",
             "type": "string",
             "x-ordinal-index": 4
         }
@@ -78,6 +98,7 @@
         "Is SubClient",
         "Is Teacher",
         "Platform Online ID",
+        "PlayFab ID",
         "Player Color",
         "Player Name",
         "Serialized Skin",

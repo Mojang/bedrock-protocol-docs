@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/NetworkSettingsPacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "Client Throttle Enabled": {
@@ -25,6 +25,7 @@
             "maximum": 255.0
         },
         "Compression Threshold": {
+            "description": "Determines the smallest size of raw network payload to compress.\nNOTE: 0 is disable compression, 1 is compress everything 1 byte or larger (so everything)",
             "type": "integer",
             "x-underlying-type": "uint16",
             "x-ordinal-index": 0,

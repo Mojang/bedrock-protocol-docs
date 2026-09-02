@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/SharedTypes__Comprehensive__CameraAimAssistCommandDefinition.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "Distance": {
@@ -28,11 +28,5 @@
             "$ref": "./Vec2.json",
             "x-ordinal-index": 2
         }
-    },
-    "required": [
-        "Distance",
-        "Preset Id",
-        "Target Mode",
-        "View Angle"
-    ]
+    }
 }

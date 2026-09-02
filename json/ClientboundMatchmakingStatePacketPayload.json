@@ -1,0 +1,25 @@
+{
+    "title": "ClientboundMatchmakingStatePacketPayload",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ClientboundMatchmakingStatePacketPayload.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
+    "type": "object",
+    "properties": {
+        "Destination Name": {
+            "type": "string",
+            "x-ordinal-index": 1,
+            "maxLength": 100
+        },
+        "State": {
+            "$ref": "./MatchmakingState.json",
+            "x-underlying-type": "uint8",
+            "x-ordinal-index": 0
+        }
+    },
+    "required": [
+        "Destination Name",
+        "State"
+    ]
+}

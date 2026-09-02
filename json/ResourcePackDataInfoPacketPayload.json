@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/ResourcePackDataInfoPacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "Chunk Size": {
@@ -24,6 +24,7 @@
             "minimum": 0.0
         },
         "Is Premium Pack": {
+            "description": "Do you need an entitlement to use this pack?",
             "type": "boolean",
             "x-underlying-type": "boolean",
             "x-ordinal-index": 5

@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/RecipeUnlockingRequirement.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "Unlocking Context": {
@@ -17,6 +17,7 @@
             "x-ordinal-index": 0
         },
         "Unlocking Ingredients": {
+            "description": "Optional list of ingredients required to unlock the recipe. Only populated when Unlocking Context is None; otherwise the recipe is unlocked by the context condition and no ingredients are transmitted.",
             "type": "array",
             "items": {
                 "$ref": "./RecipeIngredient.json"

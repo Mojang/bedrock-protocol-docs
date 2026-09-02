@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/StartGamePacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "Block Properties": {
@@ -20,6 +20,7 @@
             "x-ordinal-index": 21
         },
         "Enable Item Stack Net Manager": {
+            "description": "Whether the new item stack net manager is enabled for server authoritative inventory.",
             "type": "boolean",
             "x-underlying-type": "boolean",
             "x-ordinal-index": 15
@@ -70,6 +71,7 @@
             "x-ordinal-index": 10
         },
         "Multiplayer Correlation Id": {
+            "description": "A UUID to identify this multiplayer session.",
             "type": "string",
             "x-ordinal-index": 14
         },
@@ -78,6 +80,7 @@
             "x-ordinal-index": 22
         },
         "Player Property Data": {
+            "description": "like SyncActorPropertyPacket, specifically for minecraft:player properties",
             "x-ordinal-index": 17
         },
         "Position": {
@@ -93,6 +96,7 @@
             "x-ordinal-index": 1
         },
         "Server Block Type Registry Checksum": {
+            "description": "Checksum for detecting mismatches in block types between server and client.",
             "type": "integer",
             "x-underlying-type": "uint64",
             "x-ordinal-index": 18,
@@ -103,6 +107,7 @@
             "x-ordinal-index": 23
         },
         "Server Enabled ClientSide Generation": {
+            "description": "BiomeComponentFactory needs to know about this toggle before we start parsing BiomeComponents",
             "type": "boolean",
             "x-underlying-type": "boolean",
             "x-ordinal-index": 20
@@ -112,6 +117,7 @@
             "x-ordinal-index": 24
         },
         "Server Version": {
+            "description": "For telemetry purposes - sending your own string with your own server name and version here would be useful for Mojang's telemetry.",
             "type": "string",
             "x-ordinal-index": 16
         },

@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/MobKilled.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.26",
-    "x-protocol-version": 2192,
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
     "type": "object",
     "properties": {
         "Damage Source": {
@@ -41,6 +41,7 @@
             "x-ordinal-index": 1
         },
         "Trade Tier": {
+            "description": "-1 if not a trading actor.",
             "type": "integer",
             "x-underlying-type": "int32",
             "x-serialization-options": [
@@ -49,6 +50,7 @@
             "x-ordinal-index": 4
         },
         "Trader Name": {
+            "description": "Empty if not a trading actor.",
             "type": "string",
             "x-ordinal-index": 5,
             "maxLength": 128
