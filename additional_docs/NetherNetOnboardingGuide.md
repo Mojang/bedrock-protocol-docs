@@ -1,9 +1,3 @@
----
-section: Signaling
-sectionOrder: 0
-order: 1
----
-
 # NetherNet HTTP Signaling — Partner Onboarding Guide
 
 ## Table of Contents
@@ -109,9 +103,9 @@ The signaling server is only involved during the initial SDP exchange. After tha
 
 ## 4. HTTP Signaling Protocol
 
-### Capability Check
+### Capability Check and Server Info
 
-Before initiating a WebRTC connection, the client checks whether the server supports NetherNet connections:
+Before initiating a WebRTC connection, the client calls the `GET /v1/join` endpoint. This serves two purposes: it verifies that the server supports NetherNet connections, and it retrieves basic server metadata used by the client (for example, to display server details prior to connecting).
 
 ```
 GET {serverUrl}/v1/join
@@ -122,7 +116,41 @@ GET {serverUrl}/v1/join
 | Method | `GET` |
 | URL | `{serverUrl}/v1/join` |
 
-The server should return HTTP `2xx` if it accepts NetherNet connections, or a non-`2xx` status (e.g., `404`) if it does not. The response body is ignored by the client. If the server does not support this endpoint, the client will not attempt a WebRTC connection.
+#### Response
+
+| Field | Value |
+|-------|-------|
+| Status | `2xx` if NetherNet is supported; any non-`2xx` status (e.g., `404`) indicates NetherNet is not supported. |
+| Content-Type | `application/json` |
+| Body | A JSON object describing the server, as documented below. |
+
+The response body is a JSON object with the following fields:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `name` | string | Human-readable server name. |
+| `protocol` | number | Bedrock protocol version supported by the server. |
+| `version` | string | Bedrock game version string (e.g., `"1.26.50"`). |
+| `level` | string | Name of the level (world) currently loaded on the server. |
+| `players` | number | Current player count. |
+| `maxPlayers` | number | Maximum number of players the server will accept. |
+| `gameType` | number | Default game mode (0 = Survival, 1 = Creative, 2 = Adventure). |
+
+Example:
+
+```json
+{
+  "name": "Dedicated Server",
+  "protocol": 2177,
+  "version": "1.26.50",
+  "level": "Bedrock level",
+  "players": 0,
+  "maxPlayers": 10,
+  "gameType": 0
+}
+```
+
+If the server does not support this endpoint (non-`2xx` status), the client will not attempt a WebRTC connection.
 
 ### SDP Exchange
 
@@ -335,7 +363,7 @@ The `assertion` field is a JSON string containing:
 
 Unlike the client's `GameServerToken`, the server token is a **standard JWT** (RFC 7519) that the partner produces themselves. It is **not** issued by the Minecraft auth service and is **not** validated against any centralized issuer — trust is anchored either by TLS (HTTPS signaling) or by the client's pin store (plaintext HTTP signaling). The only NetherNet-imposed constraints are:
 
-- **`cpk` (required).** The operator's long-lived public key, serialized the same way as the `cpk` claim in `GameServerToken`. This is the value that gets pinned by the client. The claim name `cpk` is reused so the same client-side verification code handles both kinds of token; semantically it is simply "the public key the JWT is bound to."
+- **`cpk` (required).** The operator's long-lived public key, encoded as a [JSON Web Key (RFC 7517)](https://www.rfc-editor.org/rfc/rfc7517) embedded as a JSON object claim. This is the value that gets pinned by the client.
 - **`alg` header / signature.** The JWT must be **self-signed** with the private key corresponding to `cpk`. The client verifies the JWT signature using the embedded `cpk`.
 - **`iat`, `exp` (recommended).** Standard timestamps. The token may be issued at server startup with a long-lived `exp`, or rotated periodically. The pin survives token rotation as long as `cpk` does not change. The client rejects clearly expired tokens.
 - **Other claims (optional).** Any other JWT claims (`iss`, `sub`, `aud`, custom claims) are permitted. When TOFU is in effect (plaintext HTTP signaling, unknown key), human-readable claims such as `iss` may be surfaced in the first-use prompt as untrusted display text to help the player identify the partner. Under HTTPS signaling these claims are not shown to the player.
