@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/BlockActorDataPacket.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.60-beta.21",
-    "x-protocol-version": 2207,
+    "x-minecraft-version": "1.26.60-beta.23",
+    "x-protocol-version": 2208,
     "description": "Sends the entire user data compound tag and the block position to the client.",
     "$ref": "./BlockActorDataPacketPayload.json",
     "$metaProperties": {
