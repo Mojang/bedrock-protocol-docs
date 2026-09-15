@@ -354,6 +354,7 @@ if (!latestRelease) throw new Error(`No generated protocol releases were found i
 const protocol = {
     ...latestRelease.metadata,
     changelog: {
+        all: changelogGenerator.generateChangelogs(snapshots),
         preview: changelogGenerator.generateChangelogs(previewSnapshots),
         stable: changelogGenerator.generateChangelogs(stableSnapshots),
     },
