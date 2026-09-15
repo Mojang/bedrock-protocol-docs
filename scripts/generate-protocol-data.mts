@@ -333,7 +333,6 @@ if (snapshots.length === 0) throw new Error(`No protocol releases were found in 
 
 const changelogGenerator = new ProtocolChangelogGenerator();
 const stableSnapshots = snapshots.filter(snapshot => !snapshot.preview);
-const previewSnapshots = snapshots.filter(snapshot => snapshot.preview);
 const entriesByVersion = new Map(manifest.releases.map(entry => [entry.version, entry]));
 const withPacketDescriptions = (metadata: ProtocolReleaseMetadata): ProtocolReleaseMetadata => ({
     ...metadata,
@@ -355,7 +354,6 @@ const protocol = {
     ...latestRelease.metadata,
     changelog: {
         all: changelogGenerator.generateChangelogs(snapshots),
-        preview: changelogGenerator.generateChangelogs(previewSnapshots),
         stable: changelogGenerator.generateChangelogs(stableSnapshots),
     },
 };
@@ -379,6 +377,10 @@ await rm(releasesDirectory, { force: true, recursive: true });
 await mkdir(releasesDirectory, { recursive: true });
 await writeFile(path.join(dataDirectory, 'protocol.json'), `${JSON.stringify(protocol, undefined, 2)}\n`, 'utf8');
 await writeFile(path.join(dataDirectory, 'versions.json'), `${JSON.stringify(versions, undefined, 2)}\n`, 'utf8');
+const comparisons = snapshots.flatMap(target =>
+    snapshots.map(base => changelogGenerator.generateChangelogs([target, base])[0])
+);
+await writeFile(path.join(dataDirectory, 'comparisons.json'), `${JSON.stringify(comparisons)}\n`, 'utf8');
 await Promise.all(
     releases.map(release =>
         writeFile(

@@ -1,0 +1,30 @@
+---
+import Changelog from '../index.astro';
+import comparisonsJson from '../../../data/comparisons.json';
+import versionsJson from '../../../data/versions.json';
+import type { ProtocolChangelogRelease } from '../../../types';
+
+export function getStaticPaths() {
+    const comparisons = comparisonsJson as ProtocolChangelogRelease[];
+    const defaultFrom = versionsJson.releases[1]?.version ?? versionsJson.latest;
+    const defaultComparison = comparisons.find(comparison =>
+        comparison.previousVersion === defaultFrom && comparison.version === versionsJson.latest
+    );
+    if (!defaultComparison) throw new Error('The default version comparison is unavailable. Run npm run generate.');
+    return [
+        { params: { versions: undefined }, props: { comparison: defaultComparison } },
+        ...comparisons.map(comparison => ({
+            params: { versions: `${comparison.previousVersion}/${comparison.version}` },
+            props: { comparison },
+        })),
+    ];
+}
+
+interface Props {
+    comparison: ProtocolChangelogRelease;
+}
+
+const { comparison } = Astro.props;
+---
+
+<Changelog comparison={comparison} />

@@ -1,0 +1,64 @@
+---
+import { versionManifest, withBase } from '../data';
+
+interface Props {
+    from?: string;
+    to?: string;
+}
+
+const {
+    from = versionManifest.releases[1]?.version ?? versionManifest.latest,
+    to = versionManifest.latest,
+} = Astro.props;
+const channels = [
+    { label: 'Stable releases', releases: versionManifest.releases.filter(release => !release.preview) },
+    { label: 'Preview builds', releases: versionManifest.releases.filter(release => release.preview) },
+];
+---
+
+<form class="version-comparison" aria-label="Compare versions" data-version-comparison data-compare-prefix={withBase('/changelog/compare/')}>
+    <label class="version-selector">
+        <span>From</span>
+        <select name="from" aria-label="From" required>
+            {channels.filter(channel => channel.releases.length > 0).map(channel => (
+                <optgroup label={channel.label}>
+                    {channel.releases.map(release => (
+                        <option value={release.version} selected={release.version === from}>
+                            {release.version} - protocol {release.protocolVersion}
+                        </option>
+                    ))}
+                </optgroup>
+            ))}
+        </select>
+    </label>
+    <button class="comparison-swap" type="button" data-swap-versions aria-label="Swap versions" title="Swap versions">&harr;</button>
+    <label class="version-selector">
+        <span>To</span>
+        <select name="to" aria-label="To" required>
+            {channels.filter(channel => channel.releases.length > 0).map(channel => (
+                <optgroup label={channel.label}>
+                    {channel.releases.map(release => (
+                        <option value={release.version} selected={release.version === to}>
+                            {release.version} - protocol {release.protocolVersion}
+                        </option>
+                    ))}
+                </optgroup>
+            ))}
+        </select>
+    </label>
+    <button class="comparison-submit" type="submit">Compare</button>
+</form>
+
+<script>
+    for (const form of document.querySelectorAll<HTMLFormElement>('[data-version-comparison]')) {
+        const from = form.elements.namedItem('from') as HTMLSelectElement;
+        const to = form.elements.namedItem('to') as HTMLSelectElement;
+        form.querySelector('[data-swap-versions]')?.addEventListener('click', () => {
+            [from.value, to.value] = [to.value, from.value];
+        });
+        form.addEventListener('submit', event => {
+            event.preventDefault();
+            window.location.assign(`${form.dataset.comparePrefix}${encodeURIComponent(from.value)}/${encodeURIComponent(to.value)}/`);
+        });
+    }
+</script>

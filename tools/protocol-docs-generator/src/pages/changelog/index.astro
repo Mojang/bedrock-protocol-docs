@@ -1,15 +1,21 @@
 ---
 import ChangelogDetail from '../../components/ChangelogDetail.astro';
+import VersionComparison from '../../components/VersionComparison.astro';
 import { getProtocolMetadata, getVersionPrefix, versionManifest, withBase } from '../../data';
 import metadataJson from '../../data/protocol.json';
 import Layout from '../../layouts/Layout.astro';
-import type { ProtocolMetadata } from '../../types';
+import type { ProtocolChangelogRelease, ProtocolMetadata } from '../../types';
 
+interface Props {
+    comparison?: ProtocolChangelogRelease;
+}
+
+const { comparison } = Astro.props;
 const metadata = metadataJson as ProtocolMetadata;
 const latestMetadata = getProtocolMetadata('latest');
 const releasesByVersion = new Map(versionManifest.releases.map(release => [release.version, release]));
 const releaseId = (version: string, channel: string) =>
-    `release-${channel === 'all' ? 'all-' : ''}${version.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase()}`;
+    `release-${channel === 'stable' ? '' : `${channel}-`}${version.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase()}`;
 const packetHref = (version: string, slug: string) =>
     releasesByVersion.get(version)?.packetSlugs.includes(slug) ? `${getVersionPrefix(version)}/packets/${slug}/` : undefined;
 const changelogChannels = [
@@ -22,14 +28,6 @@ const changelogChannels = [
         tabLabel: 'Stable',
     },
     {
-        description: 'Changes between Minecraft Preview protocol builds.',
-        emptyMessage: 'No preview build history is available.',
-        key: 'preview',
-        label: 'Preview builds',
-        releases: metadata.changelog.preview,
-        tabLabel: 'Preview',
-    },
-    {
         description: 'Changes between consecutive stable releases and preview builds.',
         emptyMessage: 'No release history is available.',
         key: 'all',
@@ -37,10 +35,19 @@ const changelogChannels = [
         releases: metadata.changelog.all,
         tabLabel: 'All',
     },
+    {
+        description: '',
+        emptyMessage: '',
+        key: 'comparison',
+        label: 'Compare versions',
+        releases: comparison ? [comparison] : [],
+        tabLabel: 'Compare',
+    },
 ];
+const defaultChannel = comparison ? 'comparison' : 'stable';
 ---
 
-<Layout metadata={latestMetadata} title="Protocol changelog" version="latest">
+<Layout metadata={latestMetadata} title={comparison ? `Compare ${comparison.previousVersion} to ${comparison.version}` : 'Protocol changelog'} version="latest">
     <section class="masthead">
         <div>
             <h1>Protocol changelog</h1>
@@ -49,16 +56,16 @@ const changelogChannels = [
         </div>
     </section>
 
-    <div class="changelog-view-toggle" role="tablist" aria-label="Changelog channel">
+    <div class="changelog-view-toggle" role="tablist" aria-label="Changelog view">
         {changelogChannels.map(channel => (
             <button
                 type="button"
                 role="tab"
                 id={`changelog-tab-${channel.key}`}
                 aria-controls={`changelog-panel-${channel.key}`}
-                aria-selected={channel.key === 'stable' ? 'true' : 'false'}
+                aria-selected={channel.key === defaultChannel ? 'true' : 'false'}
                 data-changelog-tab={channel.key}
-                tabindex={channel.key === 'stable' ? 0 : -1}
+                tabindex={channel.key === defaultChannel ? 0 : -1}
             >
                 {channel.tabLabel}
             </button>
@@ -72,15 +79,16 @@ const changelogChannels = [
             id={`changelog-panel-${channel.key}`}
             aria-labelledby={`changelog-tab-${channel.key}`}
             data-changelog-panel={channel.key}
-            hidden={channel.key !== 'stable'}
+            hidden={channel.key !== defaultChannel}
         >
             <header>
                 <h2>{channel.label}</h2>
-                <p>{channel.description}</p>
+                {channel.description && <p>{channel.description}</p>}
             </header>
+            {channel.key === 'comparison' && <VersionComparison from={comparison?.previousVersion} to={comparison?.version} />}
             {channel.releases.length > 0 ? (
                 <>
-                <nav class="category-toc changelog-toc" aria-label={`${channel.label} changelog releases`}>
+                {channel.key !== 'comparison' && <nav class="category-toc changelog-toc" aria-label={`${channel.label} changelog releases`}>
                     <p>Releases · sorted by semantic version</p>
                     <div>
                         {channel.releases.map(release => (
@@ -89,7 +97,7 @@ const changelogChannels = [
                             </a>
                         ))}
                     </div>
-                </nav>
+                </nav>}
 
                 <div class="changelog-releases">
                     {channel.releases.map(release => {
@@ -110,7 +118,7 @@ const changelogChannels = [
                                     <dl>
                                         <div><dt>Released</dt><dd><time datetime={release.releaseDate}>{release.releaseDate}</time></dd></div>
                                         <div><dt>Protocol</dt><dd>{release.protocolVersion}</dd></div>
-                                        {channel.key === 'all' && <div><dt>Previous build</dt><dd>{release.previousVersion}</dd></div>}
+                                        {channel.key !== 'stable' && <div><dt>{channel.key === 'comparison' ? 'From build' : 'Previous build'}</dt><dd>{release.previousVersion}</dd></div>}
                                     </dl>
                                 </header>
                                 {
@@ -204,7 +212,7 @@ const changelogChannels = [
                     })}
                 </div>
                 </>
-            ) : (
+            ) : channel.emptyMessage && (
                 <p class="empty-state changelog-empty">{channel.emptyMessage}</p>
             )}
         </section>
