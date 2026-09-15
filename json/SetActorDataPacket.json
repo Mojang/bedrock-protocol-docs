@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/SetActorDataPacket.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.60-beta.23",
-    "x-protocol-version": 2208,
+    "x-minecraft-version": "1.26.50-beta.0",
+    "x-protocol-version": 2193,
     "description": "Regular Actor Data delta packets, sent from the level on tick, mob and actor during normal tick",
     "$ref": "./SetActorDataPacketPayload.json",
     "$metaProperties": {
