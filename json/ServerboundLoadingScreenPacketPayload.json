@@ -29,7 +29,6 @@
         }
     },
     "required": [
-        "Loading Screen Id",
         "Loading Screen Packet Type"
     ]
 }
