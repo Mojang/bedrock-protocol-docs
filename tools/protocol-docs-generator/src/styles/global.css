@@ -551,7 +551,7 @@ footer { margin: 0 64px; border-color: var(--line); padding: 22px 0; color: #686
 .wire-options { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 5px; }
 
 .changelog-view-toggle { width: fit-content; max-width: 100%; margin: 0 0 32px; border-bottom: 1px solid var(--line); display: flex; }
-.changelog-view-toggle button { min-width: 110px; border: 0; border-bottom: 3px solid transparent; padding: 10px 16px 9px; color: #8f938b; background: transparent; font: inherit; font-size: 0.82rem; font-weight: 650; cursor: pointer; }
+.changelog-view-toggle button { width: 110px; min-width: 0; border: 0; border-bottom: 3px solid transparent; padding: 10px 16px 9px; color: #8f938b; background: transparent; font: inherit; font-size: 0.82rem; font-weight: 650; cursor: pointer; }
 .changelog-view-toggle button:hover { color: #eef0eb; }
 .changelog-view-toggle button[aria-selected='true'] { border-bottom-color: var(--signal); color: #eef0eb; }
 .changelog-view-toggle button:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; }

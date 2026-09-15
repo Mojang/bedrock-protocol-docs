@@ -192,6 +192,7 @@ export interface ProtocolChangelogRelease {
 }
 
 export interface ProtocolChangelog {
+    all: ProtocolChangelogRelease[];
     preview: ProtocolChangelogRelease[];
     stable: ProtocolChangelogRelease[];
 }
