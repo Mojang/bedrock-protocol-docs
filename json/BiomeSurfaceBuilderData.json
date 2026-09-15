@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/BiomeSurfaceBuilderData.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.60-beta.23",
-    "x-protocol-version": 2208,
+    "x-minecraft-version": "1.26.50-beta.0",
+    "x-protocol-version": 2193,
     "type": "object",
     "properties": {
         "capped surface": {
@@ -45,9 +45,13 @@
         }
     },
     "required": [
+        "capped surface",
         "has default overworld surface",
         "has frozen ocean surface",
         "has swamp surface",
-        "has the end surface"
+        "has the end surface",
+        "mesa surface",
+        "noise gradient surface",
+        "surface materials"
     ]
 }

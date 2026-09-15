@@ -3,19 +3,10 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/DimensionDefinition.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.60-beta.23",
-    "x-protocol-version": 2208,
+    "x-minecraft-version": "1.26.50-beta.0",
+    "x-protocol-version": 2193,
     "type": "object",
     "properties": {
-        "Cloud Height": {
-            "description": "Height at which clouds render in this dimension.",
-            "type": "integer",
-            "x-underlying-type": "int32",
-            "x-serialization-options": [
-                "Compression"
-            ],
-            "x-ordinal-index": 6
-        },
         "Default Biome": {
             "description": "Identifier of the biome a custom dimension generates with.",
             "type": "string",
@@ -43,16 +34,7 @@
                 "Compression",
                 "Enum-as-Value"
             ],
-            "x-ordinal-index": 2,
-            "x-enum-binary-value": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6
-            ]
+            "x-ordinal-index": 2
         },
         "Height Range": {
             "type": "integer",
@@ -74,22 +56,14 @@
             "description": "UUID of the pack that registered this dimension.",
             "$ref": "./mce__UUID.json",
             "x-ordinal-index": 4
-        },
-        "Render Clouds": {
-            "description": "Whether clouds render in this dimension.",
-            "type": "boolean",
-            "x-underlying-type": "boolean",
-            "x-ordinal-index": 7
         }
     },
     "required": [
-        "Cloud Height",
         "Default Biome",
         "Dimension Type",
         "Generator Type",
         "Height Range",
         "Minimum Y",
-        "Pack Id",
-        "Render Clouds"
+        "Pack Id"
     ]
 }
