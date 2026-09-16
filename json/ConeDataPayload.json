@@ -3,18 +3,16 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/ConeDataPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.0",
-    "x-protocol-version": 2193,
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
     "type": "object",
     "properties": {
         "Height": {
-            "description": "Height of the debug cone.",
             "type": "number",
             "x-underlying-type": "float",
             "x-ordinal-index": 1
         },
         "Num Segments": {
-            "description": "Number of segments used for the debug cone.",
             "type": "integer",
             "x-underlying-type": "uint8",
             "x-ordinal-index": 2,
@@ -22,7 +20,6 @@
             "maximum": 255.0
         },
         "Radii": {
-            "description": "Radii along the X/Z axis of the debug cone base.",
             "$ref": "./Vec2.json",
             "x-ordinal-index": 0
         }

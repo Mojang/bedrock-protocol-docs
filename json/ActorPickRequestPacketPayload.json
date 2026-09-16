@@ -3,18 +3,16 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/ActorPickRequestPacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.0",
-    "x-protocol-version": 2193,
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
     "type": "object",
     "properties": {
         "Actor ID": {
-            "description": "Target Actor ID",
             "type": "integer",
             "x-underlying-type": "int64",
             "x-ordinal-index": 0
         },
         "Max Slots": {
-            "description": "number of empty hotbar slots (to decide whether to overwrite a slot or add it to an empty one)",
             "type": "integer",
             "x-underlying-type": "uint8",
             "x-ordinal-index": 1,
@@ -22,7 +20,6 @@
             "maximum": 255.0
         },
         "With Data": {
-            "description": "whether we want to store the NBT data along with the item",
             "type": "boolean",
             "x-underlying-type": "boolean",
             "x-ordinal-index": 2

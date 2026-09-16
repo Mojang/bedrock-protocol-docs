@@ -3,9 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/ClientToServerHandshakePacket.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.0",
-    "x-protocol-version": 2193,
-    "description": "Sets up encryption and authenticates in educational version once at level startup from client.",
+    "x-minecraft-version": "1.26.40-beta.30",
+    "x-protocol-version": 2168,
     "$ref": "./ClientToServerHandshakePacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 4,
