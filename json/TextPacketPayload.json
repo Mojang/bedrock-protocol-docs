@@ -3,12 +3,11 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/TextPacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.50-beta.22",
+    "x-protocol-version": 2177,
     "type": "object",
     "properties": {
         "Body": {
-            "description": "Message content (variant based on message type)",
             "oneOf": [
                 {
                     "$ref": "./MessageOnly.json"
@@ -24,7 +23,6 @@
             "x-ordinal-index": 1
         },
         "Filtered Message": {
-            "description": "Profanity-filtered version of the message (if applicable)",
             "type": "string",
             "x-ordinal-index": 4,
             "maxLength": 65536
@@ -35,14 +33,12 @@
             "x-ordinal-index": 0
         },
         "Platform Id": {
-            "description": "Platform-specific user identifier",
             "type": "string",
             "default": "",
             "x-ordinal-index": 3,
             "maxLength": 256
         },
         "Sender's XUID": {
-            "description": "Xbox User ID of the message sender",
             "type": "string",
             "default": "",
             "x-ordinal-index": 2,

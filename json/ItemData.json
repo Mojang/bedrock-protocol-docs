@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/ItemData.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.50-beta.22",
+    "x-protocol-version": 2177,
     "type": "object",
     "properties": {
         "Is Component Based": {
@@ -16,7 +16,6 @@
             "x-ordinal-index": 4
         },
         "Item Id": {
-            "description": "Block id's < 256 (can be negative); Item id's >= 257",
             "type": "integer",
             "x-underlying-type": "int16",
             "x-ordinal-index": 1

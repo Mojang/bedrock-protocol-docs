@@ -3,12 +3,11 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/Resource_Pack_Client_Response_-_Resource_Pack_Stack_Finished.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.50-beta.22",
+    "x-protocol-version": 2177,
     "type": "object",
     "properties": {
         "Response Type": {
-            "description": "The client finished applying the resource pack stack.",
             "const": "resourcepackstackfinished",
             "$ref": "./ResourcePackResponse.json",
             "x-underlying-type": "int8",

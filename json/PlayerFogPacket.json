@@ -3,9 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/PlayerFogPacket.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
-    "description": "Player Fog Packet",
+    "x-minecraft-version": "1.26.50-beta.22",
+    "x-protocol-version": 2177,
     "$ref": "./PlayerFogPacketPayload.json",
     "$metaProperties": {
         "[cereal:packet]": 160,

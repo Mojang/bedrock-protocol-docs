@@ -3,12 +3,11 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/SubChunkHeightmapData.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.50-beta.22",
+    "x-protocol-version": 2177,
     "type": "object",
     "properties": {
         "Height Map Type": {
-            "description": "Type of height map data for this subchunk.",
             "type": "string",
             "enum": [
                 "NoData",
@@ -23,7 +22,6 @@
             "x-ordinal-index": 0
         },
         "Render Height Map Type": {
-            "description": "Type of render height map data for this subchunk.",
             "type": "string",
             "enum": [
                 "NoData",
@@ -39,7 +37,6 @@
             "x-ordinal-index": 2
         },
         "Subchunk Height Map": {
-            "description": "2D height map array [z][x], present when type is HasData.",
             "type": "array",
             "items": {
                 "type": "array",
@@ -57,7 +54,6 @@
             "maxItems": 16
         },
         "Subchunk Render Height Map": {
-            "description": "2D render height map array [z][x], present when type is HasData.",
             "type": "array",
             "items": {
                 "type": "array",

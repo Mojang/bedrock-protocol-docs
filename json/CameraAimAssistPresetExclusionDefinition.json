@@ -3,12 +3,11 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/CameraAimAssistPresetExclusionDefinition.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.50-beta.22",
+    "x-protocol-version": 2177,
     "type": "object",
     "properties": {
         "block_tags": {
-            "description": "Optional. List of block tags to exclude from aim assist targeting.",
             "type": "array",
             "default": [],
             "items": {
@@ -17,7 +16,6 @@
             "x-ordinal-index": 2
         },
         "blocks": {
-            "description": "Optional. List of block identifiers to exclude from aim assist targeting.",
             "type": "array",
             "default": [],
             "items": {
@@ -26,7 +24,6 @@
             "x-ordinal-index": 0
         },
         "entities": {
-            "description": "Optional. List of entity identifiers to exclude from aim assist targeting.",
             "type": "array",
             "default": [],
             "items": {
@@ -35,7 +32,6 @@
             "x-ordinal-index": 1
         },
         "entity_type_families": {
-            "description": "Optional. List of entity type families to exclude from aim assist targeting.",
             "type": "array",
             "default": [],
             "items": {

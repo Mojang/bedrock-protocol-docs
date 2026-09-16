@@ -3,24 +3,21 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/CameraShakePacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.50-beta.22",
+    "x-protocol-version": 2177,
     "type": "object",
     "properties": {
         "Intensity": {
-            "description": "Camera shake intensity",
             "type": "number",
             "x-underlying-type": "float",
             "x-ordinal-index": 0
         },
         "Seconds": {
-            "description": "Camera shake duration in seconds",
             "type": "number",
             "x-underlying-type": "float",
             "x-ordinal-index": 1
         },
         "Shake Action": {
-            "description": "The action to perform to camera shake",
             "$ref": "./CameraShakeAction.json",
             "x-underlying-type": "uint8",
             "x-serialization-options": [
@@ -29,7 +26,6 @@
             "x-ordinal-index": 3
         },
         "Shake Type": {
-            "description": "The type of calculation used for determining camera shake",
             "$ref": "./CameraShakeType.json",
             "x-underlying-type": "uint8",
             "x-serialization-options": [

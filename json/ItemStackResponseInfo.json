@@ -3,17 +3,15 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/ItemStackResponseInfo.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40",
-    "x-protocol-version": 2169,
+    "x-minecraft-version": "1.26.50-beta.22",
+    "x-protocol-version": 2177,
     "type": "object",
     "properties": {
         "Client Request Id": {
-            "description": "The client request ID this response is for.",
             "$ref": "./ItemStackRequestId.json",
             "x-ordinal-index": 1
         },
         "Containers": {
-            "description": "Container slot info for successful responses. Encoded as an optional: a presence byte is always written, followed by the value only when Result == Success.",
             "type": "array",
             "items": {
                 "$ref": "./ItemStackResponseContainerInfo.json"
@@ -21,7 +19,6 @@
             "x-ordinal-index": 2
         },
         "Result": {
-            "description": "The result of the item stack request. When not Success, the Containers optional carries no value.",
             "type": "string",
             "enum": [
                 "Success",
