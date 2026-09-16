@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ItemStackResponseInfo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        h4 {
+            color: #666;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        table {
+            background-color: white;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        th {
+            font-weight: bold;
+            text-align: left;
+            padding: 8px !important;
+        }
+        td {
+            padding: 8px !important;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #e8f4f8;
+        }
+        .description {
+            color: #555;
+            font-style: italic;
+            margin: 10px 0 20px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .packet-list {
+            columns: 3;
+            column-gap: 20px;
+        }
+        .packet-list li {
+            margin-bottom: 8px;
+            break-inside: avoid;
+        }
+        details {
+            margin: 10px 0;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            padding: 8px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            user-select: none;
+        }
+        summary:hover {
+            background-color: #e8e8e8;
+        }
+        details[open] summary {
+            background-color: #d4edff;
+            border-color: #3498db;
+            border-left: 4px solid #3498db;
+        }
+        @media (max-width: 900px) {
+            .packet-list {
+                columns: 2;
+            }
+        }
+        @media (max-width: 600px) {
+            .packet-list {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p><a href="index.html">← Back to Index</a></p>
+        <h1>ItemStackResponseInfo</h1>
+<div style="margin-left: 0px; margin-top: 10px;">
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 800px;">
+        <thead>
+            <tr style="background-color: #f0f0f0;">
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Field Index</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr>
+<td rowspan="2"><strong>Result (Required)</strong></td>
+<td>uint8</td>
+                <td>0</td>
+                <td>The result of the item stack request. When not Success, the Containers optional carries no value.</td>
+            </tr>
+<tr>
+                    <td colspan="3"><div style="margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+    <strong>Enum Values:</strong>
+    <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 760px; font-size: 12px;">
+        <thead>
+            <tr style="background-color: #e8e8e8;">
+                <th style="width: 40px;">Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="text-align: center;">0</td>
+            <td><code>Success</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">1</td>
+            <td><code>Error</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">2</td>
+            <td><code>InvalidRequestActionType</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">3</td>
+            <td><code>ActionRequestNotAllowed</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">4</td>
+            <td><code>ScreenHandlerEndRequestFailed</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">5</td>
+            <td><code>ItemRequestActionHandlerCommitFailed</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">6</td>
+            <td><code>InvalidRequestCraftActionType</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">7</td>
+            <td><code>InvalidCraftRequest</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">8</td>
+            <td><code>InvalidCraftRequestScreen</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">9</td>
+            <td><code>InvalidCraftResult</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">10</td>
+            <td><code>InvalidCraftResultIndex</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">11</td>
+            <td><code>InvalidCraftResultItem</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">12</td>
+            <td><code>InvalidItemNetId</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">13</td>
+            <td><code>MissingCreatedOutputContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">14</td>
+            <td><code>FailedToSetCreatedItemOutputSlot</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">15</td>
+            <td><code>RequestAlreadyInProgress</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">16</td>
+            <td><code>FailedToInitSparseContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">17</td>
+            <td><code>ResultTransferFailed</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">18</td>
+            <td><code>ExpectedItemSlotNotFullyConsumed</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">19</td>
+            <td><code>ExpectedAnywhereItemNotFullyConsumed</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">20</td>
+            <td><code>ItemAlreadyConsumedFromSlot</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">21</td>
+            <td><code>ConsumedTooMuchFromSlot</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">22</td>
+            <td><code>MismatchSlotExpectedConsumedItem</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">23</td>
+            <td><code>MismatchSlotExpectedConsumedItemNetIdVariant</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">24</td>
+            <td><code>FailedToMatchExpectedSlotConsumedItem</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">25</td>
+            <td><code>FailedToMatchExpectedAllowedAnywhereConsumedItem</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">26</td>
+            <td><code>ConsumedItemOutOfAllowedSlotRange</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">27</td>
+            <td><code>ConsumedItemNotAllowed</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">28</td>
+            <td><code>PlayerNotInCreativeMode</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">29</td>
+            <td><code>InvalidExperimentalRecipeRequest</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">30</td>
+            <td><code>FailedToCraftCreative</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">31</td>
+            <td><code>FailedToGetLevelRecipe</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">32</td>
+            <td><code>FailedToFindRecipeByNetId</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">33</td>
+            <td><code>MismatchedCraftingSize</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">34</td>
+            <td><code>MissingInputSparseContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">35</td>
+            <td><code>MismatchedRecipeForInputGridItems</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">36</td>
+            <td><code>EmptyCraftResults</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">37</td>
+            <td><code>FailedToEnchant</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">38</td>
+            <td><code>MissingInputItem</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">39</td>
+            <td><code>InsufficientPlayerLevelToEnchant</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">40</td>
+            <td><code>MissingMaterialItem</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">41</td>
+            <td><code>MissingActor</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">42</td>
+            <td><code>UnknownPrimaryEffect</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">43</td>
+            <td><code>PrimaryEffectOutOfRange</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">44</td>
+            <td><code>PrimaryEffectUnavailable</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">45</td>
+            <td><code>SecondaryEffectOutOfRange</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">46</td>
+            <td><code>SecondaryEffectUnavailable</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">47</td>
+            <td><code>DstContainerEqualToCreatedOutputContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">48</td>
+            <td><code>DstContainerAndSlotEqualToSrcContainerAndSlot</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">49</td>
+            <td><code>FailedToValidateSrcSlot</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">50</td>
+            <td><code>FailedToValidateDstSlot</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">51</td>
+            <td><code>InvalidAdjustedAmount</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">52</td>
+            <td><code>InvalidItemSetType</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">53</td>
+            <td><code>InvalidTransferAmount</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">54</td>
+            <td><code>CannotSwapItem</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">55</td>
+            <td><code>CannotPlaceItem</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">56</td>
+            <td><code>UnhandledItemSetType</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">57</td>
+            <td><code>InvalidRemovedAmount</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">58</td>
+            <td><code>InvalidRegion</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">59</td>
+            <td><code>CannotDropItem</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">60</td>
+            <td><code>CannotDestroyItem</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">61</td>
+            <td><code>InvalidSourceContainer</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">62</td>
+            <td><code>ItemNotConsumed</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">63</td>
+            <td><code>InvalidNumCrafts</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">64</td>
+            <td><code>InvalidCraftResultStackSize</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">65</td>
+            <td><code>CannotRemoveItem</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">66</td>
+            <td><code>CannotConsumeItem</code></td>
+            </tr>
+<tr>
+            <td style="text-align: center;">67</td>
+            <td><code>ScreenStackError</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</td>
+                </tr>
+<tr>
+<td><strong>Client Request Id (Required)</strong></td>
+<td>ItemStackRequestId.json</td>
+                <td>1</td>
+                <td>The client request ID this response is for.</td>
+            </tr>
+<tr>
+<td><strong>Containers</strong></td>
+<td>array&lt;ItemStackResponseContainerInfo.json&gt;</td>
+                <td>2</td>
+                <td>Container slot info for successful responses. Encoded as an optional: a presence byte is always written, followed by the value only when Result == Success.</td>
+            </tr>
+</tbody>
+    </table>
+</div>
+    </div>
+</body>
+</html>

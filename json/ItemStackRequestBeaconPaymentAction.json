@@ -3,7 +3,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/ItemStackRequestBeaconPaymentAction.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.0",
+    "x-minecraft-version": "1.26.51-beta.1",
     "x-protocol-version": 2193,
     "type": "object",
     "properties": {
