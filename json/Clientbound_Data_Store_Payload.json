@@ -3,11 +3,12 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/Clientbound_Data_Store_Payload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.44-beta.3",
-    "x-protocol-version": 2168,
+    "x-minecraft-version": "1.26.40",
+    "x-protocol-version": 2169,
     "type": "object",
     "properties": {
         "Updates": {
+            "description": "List of changes, updates, or removals that have occurred to the data store",
             "type": "array",
             "items": {
                 "oneOf": [

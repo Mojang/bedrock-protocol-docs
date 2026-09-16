@@ -3,11 +3,12 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/ItemStackRequestLabTableCombineAction.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.44-beta.3",
-    "x-protocol-version": 2168,
+    "x-minecraft-version": "1.26.40",
+    "x-protocol-version": 2169,
     "type": "object",
     "properties": {
         "Action type": {
+            "description": "Dataless action; only the action type byte is serialized.",
             "const": "screenlabtablecombine",
             "$ref": "./ItemStackRequestActionType.json",
             "x-underlying-type": "uint8",
