@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/MinecraftPacketIds.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.24",
-    "x-protocol-version": 2181,
+    "x-minecraft-version": "1.26.50-beta.25",
+    "x-protocol-version": 2187,
     "type": "string",
     "enum": [
         "KeepAlive",
@@ -220,7 +220,8 @@
         "SyncWorldClocks",
         "SendPartyDestinationCookie",
         "PartyDestinationCookieResponse",
-        "SetPlayerFurnaceOptions"
+        "SetPlayerFurnaceOptions",
+        "RecordStarted"
     ],
     "x-underlying-type": "int32"
 }

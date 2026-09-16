@@ -1,0 +1,23 @@
+{
+    "title": "RecordStartedPacketPayload",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/RecordStartedPacketPayload.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.50-beta.25",
+    "x-protocol-version": 2187,
+    "type": "object",
+    "properties": {
+        "Block Position": {
+            "$ref": "./BlockPos.json",
+            "x-ordinal-index": 0
+        },
+        "Server Sound Handle": {
+            "$ref": "./ServerSoundHandle.json",
+            "x-ordinal-index": 1
+        }
+    },
+    "required": [
+        "Block Position",
+        "Server Sound Handle"
+    ]
+}
