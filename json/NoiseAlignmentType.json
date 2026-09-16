@@ -1,0 +1,13 @@
+{
+    "title": "NoiseAlignmentType",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/NoiseAlignmentType.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.50-beta.24",
+    "x-protocol-version": 2181,
+    "type": "string",
+    "enum": [
+        "minLocalTransitionEnd"
+    ],
+    "x-underlying-type": "uint8"
+}
