@@ -1,0 +1,14 @@
+{
+    "title": "ServerboundStonecutterSetRecipePacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ServerboundStonecutterSetRecipePacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
+    "description": "When a player selects a recipe in the stonecutter UI on the client, the client sends this packet.\n\tThen the server synchronizes the selected recipe in the server-side stonecutter model.",
+    "$ref": "./ServerboundStonecutterSetRecipePacketPayload.json",
+    "$metaProperties": {
+        "[cereal:packet]": 354,
+        "[cereal:packet_details]": ""
+    }
+}

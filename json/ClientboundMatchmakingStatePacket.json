@@ -1,0 +1,14 @@
+{
+    "title": "ClientboundMatchmakingStatePacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ClientboundMatchmakingStatePacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.60-beta.21",
+    "x-protocol-version": 2207,
+    "description": "Informs the client when its matchmaking state changes.",
+    "$ref": "./ClientboundMatchmakingStatePacketPayload.json",
+    "$metaProperties": {
+        "[cereal:packet]": 353,
+        "[cereal:packet_details]": ""
+    }
+}
