@@ -3,7 +3,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/cerealizer_NetworkItemStackDescriptor___SerializedData.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.40-beta.0",
+    "x-minecraft-version": "1.26.44-beta.3",
     "x-protocol-version": 2168,
     "type": "object",
     "properties": {
@@ -42,8 +42,7 @@
             "type": "integer",
             "x-underlying-type": "uint16",
             "x-ordinal-index": 1,
-            "minimum": 0.0,
-            "maximum": 64.0
+            "minimum": 0.0
         },
         "User Data Buffer": {
             "type": "string",
