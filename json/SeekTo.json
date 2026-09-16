@@ -3,17 +3,28 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/SeekTo.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.51-beta.1",
-    "x-protocol-version": 2193,
+    "x-minecraft-version": "1.26.60-beta.25",
+    "x-protocol-version": 2211,
     "type": "object",
     "properties": {
         "Seconds": {
+            "description": "Playback position to seek to, in seconds from the start of the sound.",
             "type": "number",
             "x-underlying-type": "float",
+            "x-ordinal-index": 1
+        },
+        "Type": {
+            "const": "seekto",
+            "$ref": "./SoundDataEventType.json",
+            "x-underlying-type": "uint8",
+            "x-serialization-options": [
+                "Enum-as-Value"
+            ],
             "x-ordinal-index": 0
         }
     },
     "required": [
-        "Seconds"
+        "Seconds",
+        "Type"
     ]
 }

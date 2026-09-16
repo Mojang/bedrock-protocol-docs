@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/SubChunkPacketData.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.51-beta.1",
-    "x-protocol-version": 2193,
+    "x-minecraft-version": "1.26.60-beta.25",
+    "x-protocol-version": 2211,
     "type": "object",
     "properties": {
         "Blob Id": {
@@ -44,7 +44,15 @@
             "x-serialization-options": [
                 "Enum-as-Value"
             ],
-            "x-ordinal-index": 1
+            "x-ordinal-index": 1,
+            "x-enum-binary-value": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
         }
     },
     "required": [
