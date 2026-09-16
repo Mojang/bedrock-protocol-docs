@@ -1,4 +1,5 @@
 ---
+import { lt } from 'semver';
 import { versionManifest, withBase } from '../data';
 
 interface Props {
@@ -14,16 +15,23 @@ const channels = [
     { label: 'Stable releases', releases: versionManifest.releases.filter(release => !release.preview) },
     { label: 'Preview builds', releases: versionManifest.releases.filter(release => release.preview) },
 ];
+const baseChannels = channels.map(channel => ({
+    ...channel,
+    releases: channel.releases.filter(release => lt(release.version, to)),
+})).filter(channel => channel.releases.length > 0);
+const selectedFrom = baseChannels.some(channel => channel.releases.some(release => release.version === from))
+    ? from
+    : baseChannels[0]?.releases[0]?.version;
 ---
 
 <form class="version-comparison" aria-label="Compare versions" data-version-comparison data-compare-prefix={withBase('/changelog/compare/')}>
     <label class="version-selector">
         <span>From</span>
-        <select name="from" aria-label="From" required>
-            {channels.filter(channel => channel.releases.length > 0).map(channel => (
+        <select name="from" aria-label="From" required disabled={!selectedFrom}>
+            {baseChannels.map(channel => (
                 <optgroup label={channel.label}>
                     {channel.releases.map(release => (
-                        <option value={release.version} selected={release.version === from}>
+                        <option value={release.version} selected={release.version === selectedFrom}>
                             {release.version} - protocol {release.protocolVersion}
                         </option>
                     ))}
@@ -31,7 +39,6 @@ const channels = [
             ))}
         </select>
     </label>
-    <button class="comparison-swap" type="button" data-swap-versions aria-label="Swap versions" title="Swap versions">&harr;</button>
     <label class="version-selector">
         <span>To</span>
         <select name="to" aria-label="To" required>
@@ -46,18 +53,39 @@ const channels = [
             ))}
         </select>
     </label>
-    <button class="comparison-submit" type="submit">Compare</button>
+    <button class="comparison-submit" type="submit" disabled={!selectedFrom}>Compare</button>
 </form>
 
 <script>
+    import { lt } from 'semver';
+
     for (const form of document.querySelectorAll<HTMLFormElement>('[data-version-comparison]')) {
         const from = form.elements.namedItem('from') as HTMLSelectElement;
         const to = form.elements.namedItem('to') as HTMLSelectElement;
-        form.querySelector('[data-swap-versions]')?.addEventListener('click', () => {
-            [from.value, to.value] = [to.value, from.value];
-        });
+        const submit = form.querySelector<HTMLButtonElement>('[type="submit"]')!;
+        const updateBaseOptions = () => {
+            const previousFrom = from.value;
+            const groups = Array.from(to.querySelectorAll('optgroup'), group => {
+                const baseGroup = group.cloneNode(true) as HTMLOptGroupElement;
+                for (const option of Array.from(baseGroup.children) as HTMLOptionElement[]) {
+                    option.selected = false;
+                    option.defaultSelected = false;
+                    if (!lt(option.value, to.value)) option.remove();
+                }
+                return baseGroup;
+            }).filter(group => group.children.length > 0);
+            from.replaceChildren(...groups);
+            if (Array.from(from.options).some(option => option.value === previousFrom)) {
+                from.value = previousFrom;
+            }
+            from.disabled = from.options.length === 0;
+            submit.disabled = from.disabled;
+        };
+        to.addEventListener('change', updateBaseOptions);
+        updateBaseOptions();
         form.addEventListener('submit', event => {
             event.preventDefault();
+            if (!from.value || !lt(from.value, to.value)) return;
             window.location.assign(`${form.dataset.comparePrefix}${encodeURIComponent(from.value)}/${encodeURIComponent(to.value)}/`);
         });
     }

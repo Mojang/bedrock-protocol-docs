@@ -613,17 +613,16 @@ footer { margin: 0 64px; border-color: var(--line); padding: 22px 0; color: #686
 .developer-notes-general > [data-note-path] + [data-note-path] { margin-top: 6px; }
 .developer-note pre { min-width: 0; }
 
-.version-comparison { max-width: 1080px; margin: 0 0 32px; display: grid; grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr) auto; gap: 12px; align-items: end; }
+.version-comparison { max-width: 1080px; margin: 0 0 32px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto; gap: 12px; align-items: end; }
 .version-comparison .version-selector { min-width: 0; margin: 0; }
 .version-comparison select { width: 100%; min-width: 0; }
 .version-comparison button { height: 40px; border: 1px solid var(--line); border-radius: 4px; color: var(--signal); background: transparent; font: inherit; cursor: pointer; }
 .version-comparison button:hover { border-color: var(--signal); }
 .version-comparison button:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; }
-.version-comparison .comparison-swap { width: 40px; font-size: 1.4rem; }
+.version-comparison button:disabled { opacity: 0.5; cursor: not-allowed; }
 .version-comparison .comparison-submit { padding: 0 18px; font-size: 0.82rem; font-weight: 650; }
 @media (max-width: 700px) {
-    .version-comparison { grid-template-columns: minmax(0, 1fr) 40px; }
-    .version-comparison .comparison-swap { grid-column: 2; grid-row: 1; }
+    .version-comparison { grid-template-columns: minmax(0, 1fr); }
     .version-comparison .comparison-submit { grid-column: 1 / -1; }
     .version-comparison .version-selector { grid-column: 1; }
 }
