@@ -101,6 +101,8 @@ const defaultChannel = comparison ? 'comparison' : 'stable';
 
                 <div class="changelog-releases">
                     {channel.releases.map(release => {
+                        const generalNotes = release.developerNotes.filter(note => !note.hasHeading);
+                        const headedNotes = release.developerNotes.filter(note => note.hasHeading);
                         const packetCount =
                             release.packets.added.length +
                             release.packets.changed.length +
@@ -192,7 +194,6 @@ const defaultChannel = comparison ? 'comparison' : 'stable';
                                                             ) : (
                                                                 <strong>{item.title}</strong>
                                                             )}
-                                                            <span>{item.changes.length} changes · ID {item.packetId}</span>
                                                         </header>
                                                         <ul>
                                                             {item.previousPacketId !== undefined && (
@@ -206,6 +207,21 @@ const defaultChannel = comparison ? 'comparison' : 'stable';
                                         </div>
                                     )}
                                     {packetCount === 0 && <p class="empty-state">No packet changes.</p>}
+                                </section>
+                                <section class="changelog-scope developer-notes">
+                                    <header><h3>Developer notes</h3></header>
+                                    {generalNotes.length > 0 && (
+                                        <section class="developer-note guide-content developer-notes-general">
+                                            <h4>General</h4>
+                                            {generalNotes.map(note => (
+                                                <div data-note-path={note.path} set:html={note.html} />
+                                            ))}
+                                        </section>
+                                    )}
+                                    {headedNotes.map(note => (
+                                        <article class="developer-note guide-content" data-note-path={note.path} set:html={note.html} />
+                                    ))}
+                                    {release.developerNotes.length === 0 && <p class="empty-state">No new developer notes.</p>}
                                 </section>
                             </section>
                         );

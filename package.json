@@ -19,11 +19,13 @@
     "@minecraft/api-docs-generator": "file:vendor/minecraft-api-docs-generator-2.1.0.tgz",
     "astro": "^7.2.1",
     "gray-matter": "^4.0.3",
+    "markdown-it": "^15.0.1",
     "semver": "^7.7.2",
     "tar": "^7.4.3"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
+    "@types/markdown-it": "^14.2.0",
     "@types/node": "^22.0.0",
     "@types/semver": "^7.8.0",
     "typescript": "^5.9.0"

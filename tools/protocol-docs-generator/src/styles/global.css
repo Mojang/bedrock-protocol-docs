@@ -603,6 +603,16 @@ footer { margin: 0 64px; border-color: var(--line); padding: 22px 0; color: #686
 .changelog-details article > ul li { padding: 3px 0; overflow-wrap: anywhere; }
 .changelog-empty { max-width: 760px; }
 
+.developer-note.guide-content { min-width: 0; max-width: 100%; padding: 12px 8px; font-size: 0.84rem; overflow-wrap: anywhere; }
+.developer-note h4 { font-size: 1rem; }
+.developer-note h5, .developer-note h6 { margin: 20px 0 10px; font-size: 0.9rem; }
+.developer-note > :first-child { margin-top: 0; }
+.developer-note > :last-child { margin-bottom: 0; }
+.developer-notes-general > [data-note-path] > :first-child { margin-top: 0; }
+.developer-notes-general > [data-note-path] > :last-child { margin-bottom: 0; }
+.developer-notes-general > [data-note-path] + [data-note-path] { margin-top: 6px; }
+.developer-note pre { min-width: 0; }
+
 .version-comparison { max-width: 1080px; margin: 0 0 32px; display: grid; grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr) auto; gap: 12px; align-items: end; }
 .version-comparison .version-selector { min-width: 0; margin: 0; }
 .version-comparison select { width: 100%; min-width: 0; }

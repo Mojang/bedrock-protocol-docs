@@ -11,6 +11,7 @@ import type {
 } from '@minecraft/api-docs-generator';
 import matter from 'gray-matter';
 
+import { getAddedDeveloperNotes, hasDeveloperNoteHeading, readDeveloperNotes, renderDeveloperNote } from './developer-notes.mts';
 import { isRecord, parseProtocolManifest } from './protocol-manifest.mts';
 
 interface Guide {
@@ -334,6 +335,18 @@ if (snapshots.length === 0) throw new Error(`No protocol releases were found in 
 const changelogGenerator = new ProtocolChangelogGenerator();
 const stableSnapshots = snapshots.filter(snapshot => !snapshot.preview);
 const entriesByVersion = new Map(manifest.releases.map(entry => [entry.version, entry]));
+const notesByVersion = new Map(await Promise.all(manifest.releases.map(async entry => [
+    entry.version,
+    await readDeveloperNotes(path.resolve(repositoryRoot, entry.developerNotesDirectory)),
+] as const)));
+const withDeveloperNotes = (changelog: ReturnType<ProtocolChangelogGenerator['generateChangelogs']>[number]) => ({
+    ...changelog,
+    developerNotes: getAddedDeveloperNotes(
+        notesByVersion.get(changelog.version) ?? [],
+        notesByVersion.get(changelog.previousVersion) ?? [],
+        changelog.version,
+    ).map(note => ({ path: note.path, html: renderDeveloperNote(note.markdown), hasHeading: hasDeveloperNoteHeading(note.markdown) })),
+});
 const withPacketDescriptions = (metadata: ProtocolReleaseMetadata): ProtocolReleaseMetadata => ({
     ...metadata,
     packets: metadata.packets.map(packet => ({
@@ -353,8 +366,8 @@ if (!latestRelease) throw new Error(`No generated protocol releases were found i
 const protocol = {
     ...latestRelease.metadata,
     changelog: {
-        all: changelogGenerator.generateChangelogs(snapshots),
-        stable: changelogGenerator.generateChangelogs(stableSnapshots),
+        all: changelogGenerator.generateChangelogs(snapshots).map(withDeveloperNotes),
+        stable: changelogGenerator.generateChangelogs(stableSnapshots).map(withDeveloperNotes),
     },
 };
 const versions = {
@@ -378,7 +391,7 @@ await mkdir(releasesDirectory, { recursive: true });
 await writeFile(path.join(dataDirectory, 'protocol.json'), `${JSON.stringify(protocol, undefined, 2)}\n`, 'utf8');
 await writeFile(path.join(dataDirectory, 'versions.json'), `${JSON.stringify(versions, undefined, 2)}\n`, 'utf8');
 const comparisons = snapshots.flatMap(target =>
-    snapshots.map(base => changelogGenerator.generateChangelogs([target, base])[0])
+    snapshots.flatMap(base => changelogGenerator.generateChangelogs([target, base]).slice(0, 1).map(withDeveloperNotes))
 );
 await writeFile(path.join(dataDirectory, 'comparisons.json'), `${JSON.stringify(comparisons)}\n`, 'utf8');
 await Promise.all(

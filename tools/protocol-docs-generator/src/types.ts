@@ -180,6 +180,7 @@ export interface ProtocolChangeSet {
 }
 
 export interface ProtocolChangelogRelease {
+    developerNotes: Array<{ path: string; html: string; hasHeading: boolean }>;
     minecraftVersion: string;
     packets: ProtocolChangeSet;
     previousProtocolVersion: string;

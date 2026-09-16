@@ -8,6 +8,7 @@ import process from 'node:process';
 import semver from 'semver';
 import * as tar from 'tar';
 
+import { readDeveloperNotes } from './developer-notes.mts';
 import {
     isRecord,
     parseProtocolManifest,
@@ -94,6 +95,17 @@ const copySchemas = async (sourceDirectory: string, destinationDirectory: string
     }
 };
 
+const stageDeveloperNotes = async (sourceDirectory: string, releaseId: string): Promise<string> => {
+    const destination = path.join(releasesRoot, releaseId, 'developer_notes');
+    await mkdir(destination, { recursive: true });
+    for (const note of await readDeveloperNotes(sourceDirectory)) {
+        const destinationPath = path.join(destination, note.path);
+        await mkdir(path.dirname(destinationPath), { recursive: true });
+        await writeFile(destinationPath, note.markdown, 'utf8');
+    }
+    return path.relative(repositoryRoot, destination).split(path.sep).join('/');
+};
+
 const fetchReleases = async (): Promise<GitHubRelease[]> => {
     const releases: GitHubRelease[] = [];
     for (let page = 1; ; page += 1) {
@@ -149,6 +161,7 @@ const stageRelease = async (release: GitHubRelease): Promise<ProtocolReleaseEntr
         const schemaDirectory = path.join(releasesRoot, String(release.id), 'json_schemas', 'protocol');
         await copySchemas(sourceDirectory, schemaDirectory);
         return {
+            developerNotesDirectory: await stageDeveloperNotes(path.join(path.dirname(sourceDirectory), 'developer_notes'), String(release.id)),
             minecraftVersion: schemaMetadata.minecraftVersion,
             name: release.name || release.tag_name,
             preview: release.prerelease,
@@ -174,6 +187,9 @@ if (useCache) {
 
         const latestSchemaDirectory = path.resolve(repositoryRoot, latestRelease.schemaDirectory);
         await readSchemaMetadata(latestSchemaDirectory);
+        for (const release of manifest.releases) {
+            await readdir(path.resolve(repositoryRoot, release.developerNotesDirectory));
+        }
         await rm(path.join(cacheRoot, 'protocol-input'), { force: true, recursive: true });
         await copySchemas(latestSchemaDirectory, inputRoot);
         console.log(`Using cached metadata for ${manifest.releases.length} protocol release${manifest.releases.length === 1 ? '' : 's'} from ${manifest.generatedAt}.`);
@@ -202,6 +218,7 @@ if (githubReleases.length > 0) {
     const schemaDirectory = path.join(releasesRoot, 'current', 'json_schemas', 'protocol');
     await copySchemas(sourceDirectory, schemaDirectory);
     releases.push({
+        developerNotesDirectory: await stageDeveloperNotes(path.join(repositoryRoot, 'developer_notes'), 'current'),
         minecraftVersion: schemaMetadata.minecraftVersion,
         name: 'Current checkout',
         preview: false,

@@ -1,4 +1,5 @@
 export interface ProtocolReleaseEntry {
+    developerNotesDirectory: string;
     minecraftVersion: string;
     name: string;
     preview: boolean;
@@ -32,6 +33,7 @@ const parseRelease = (value: unknown, index: number): ProtocolReleaseEntry => {
     }
 
     return {
+        developerNotesDirectory: readString(value, 'developerNotesDirectory'),
         minecraftVersion: readString(value, 'minecraftVersion'),
         name: readString(value, 'name'),
         preview: value.preview,
