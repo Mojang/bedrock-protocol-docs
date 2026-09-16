@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/RequestNetworkSettingsPacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.0",
-    "x-protocol-version": 2193,
+    "x-minecraft-version": "1.26.60-beta.25",
+    "x-protocol-version": 2211,
     "type": "object",
     "properties": {
         "ClientNetworkVersion": {
@@ -14,8 +14,8 @@
                 "Big Endian"
             ],
             "x-ordinal-index": 0,
-            "minimum": 2193.0,
-            "maximum": 2193.0
+            "minimum": 2211.0,
+            "maximum": 2211.0
         }
     },
     "required": [

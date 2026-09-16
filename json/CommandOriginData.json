@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/CommandOriginData.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.50-beta.0",
-    "x-protocol-version": 2193,
+    "x-minecraft-version": "1.26.60-beta.25",
+    "x-protocol-version": 2211,
     "type": "object",
     "properties": {
         "PlayerId": {
@@ -31,7 +31,13 @@
                 "AutomationPlayer"
             ],
             "x-underlying-type": "uint8",
-            "x-ordinal-index": 0
+            "x-ordinal-index": 0,
+            "x-enum-binary-value": [
+                0,
+                3,
+                4,
+                5
+            ]
         },
         "UUID": {
             "description": "The unique UUID that represents an instantiation of a command. Each time a command is run it should be given a UUID to represent that instance.",
