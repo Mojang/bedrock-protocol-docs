@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/ServerEditorConnectionPolicy.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.60-beta.25",
-    "x-protocol-version": 2211,
+    "x-minecraft-version": "1.26.51-beta.1",
+    "x-protocol-version": 2193,
     "type": "string",
     "enum": [
         "MatchWorldType",
@@ -12,11 +12,5 @@
         "VanillaOnly",
         "Mixed"
     ],
-    "x-underlying-type": "int32",
-    "x-enum-binary-value": [
-        0,
-        1,
-        2,
-        3
-    ]
+    "x-underlying-type": "int32"
 }
