@@ -21,6 +21,16 @@ export const preprocessDeveloperNote = (markdown: string, _context: DeveloperNot
 
 const markdownRenderer = new MarkdownIt({ html: false });
 
+// Published release notes can contain duplicated MD heading markers.
+markdownRenderer.core.ruler.before('inline', 'normalize_heading_markers', state => {
+    for (const [index, token] of state.tokens.entries()) {
+        const content = state.tokens[index + 1];
+        if (token.type === 'heading_open' && token.markup.startsWith('#') && content?.type === 'inline') {
+            content.content = content.content.replace(/^(?:#{1,6}[\t ]+)+(?=\S)/, '');
+        }
+    }
+});
+
 export const hasDeveloperNoteHeading = (markdown: string): boolean =>
     markdownRenderer.parse(markdown, {}).some(token => token.type === 'heading_open');
 
