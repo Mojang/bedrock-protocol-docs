@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/DisconnectFailReason.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.60-beta.25",
-    "x-protocol-version": 2211,
+    "x-minecraft-version": "1.26.60-beta.28",
+    "x-protocol-version": 2216,
     "type": "string",
     "enum": [
         "Unknown",
@@ -156,7 +156,8 @@
         "NotAuthenticatedFastFail",
         "EditorNotAllowed",
         "MissingStructureData",
-        "UnsupportedTransport"
+        "UnsupportedTransport",
+        "SubClientLoginNotBound"
     ],
     "x-underlying-type": "int32",
     "x-enum-binary-value": [
@@ -309,6 +310,7 @@
         146,
         147,
         148,
-        149
+        149,
+        150
     ]
 }

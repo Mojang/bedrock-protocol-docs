@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/SetSpawnPositionPacket.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.60-beta.25",
-    "x-protocol-version": 2211,
+    "x-minecraft-version": "1.26.60-beta.28",
+    "x-protocol-version": 2216,
     "description": "When a player logs in or the SetWorldSpawnCommand is used this is sent from the server to the client. Does not change when using a bed, that is a separate packet (RespawnPacket)",
     "$ref": "./SetSpawnPositionPacketPayload.json",
     "$metaProperties": {
