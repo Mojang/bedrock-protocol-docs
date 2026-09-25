@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/ItemUseOnActorInventoryTransaction.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.60-beta.28",
-    "x-protocol-version": 2216,
+    "x-minecraft-version": "1.26.52-beta.3",
+    "x-protocol-version": 2193,
     "type": "object",
     "properties": {
         "Action Type": {
@@ -25,27 +25,17 @@
         "From Position": {
             "description": "The player's position when this transaction was sent.",
             "$ref": "./Vec3.json",
-            "x-ordinal-index": 6
-        },
-        "Hand": {
-            "description": "The hand of the item being used.",
-            "$ref": "./HandSlot.json",
-            "x-underlying-type": "uint8",
-            "x-serialization-options": [
-                "Compression",
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 4
+            "x-ordinal-index": 5
         },
         "Hit Position": {
             "description": "The position on the actor that was clicked.",
             "$ref": "./Vec3.json",
-            "x-ordinal-index": 7
+            "x-ordinal-index": 6
         },
         "Item": {
             "description": "The item stack descriptor of the item being used on the actor.",
             "$ref": "./NetworkItemStackDescriptor.json",
-            "x-ordinal-index": 5
+            "x-ordinal-index": 4
         },
         "Runtime Id": {
             "description": "The runtime ID of the actor being interacted with or attacked.",
@@ -66,7 +56,6 @@
         "Action Type",
         "Actions",
         "From Position",
-        "Hand",
         "Hit Position",
         "Item",
         "Runtime Id",
