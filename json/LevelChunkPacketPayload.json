@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/LevelChunkPacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.60-beta.28",
-    "x-protocol-version": 2216,
+    "x-minecraft-version": "1.26.52-beta.3",
+    "x-protocol-version": 2193,
     "type": "object",
     "properties": {
         "Cache Enabled": {
@@ -43,12 +43,6 @@
             "$ref": "./DimensionType.json",
             "x-ordinal-index": 1
         },
-        "Is Client Biome Update": {
-            "description": "Whether the server biome data overrides the client biome data.",
-            "type": "boolean",
-            "x-underlying-type": "boolean",
-            "x-ordinal-index": 7
-        },
         "Serialized Chunk Data": {
             "description": "The serialized chunk payload (block, biome, heightmap and block-entity data).",
             "type": "string",
@@ -71,7 +65,6 @@
         "Cache Metadata",
         "Chunk Position",
         "Dimension Id",
-        "Is Client Biome Update",
         "Serialized Chunk Data",
         "Sub-chunks Count"
     ]

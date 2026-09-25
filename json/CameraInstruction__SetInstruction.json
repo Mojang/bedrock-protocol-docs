@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/CameraInstruction__SetInstruction.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.60-beta.28",
-    "x-protocol-version": 2216,
+    "x-minecraft-version": "1.26.52-beta.3",
+    "x-protocol-version": 2193,
     "type": "object",
     "properties": {
         "default": {
@@ -49,7 +49,14 @@
         }
     },
     "required": [
+        "default",
+        "ease",
+        "entity_offset",
+        "facing",
+        "pos",
         "preset",
-        "removeIgnoreStartingValuesComponent"
+        "removeIgnoreStartingValuesComponent",
+        "rot",
+        "view_offset"
     ]
 }

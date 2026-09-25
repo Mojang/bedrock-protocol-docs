@@ -3,28 +3,17 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/SetVolume.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.60-beta.28",
-    "x-protocol-version": 2216,
+    "x-minecraft-version": "1.26.52-beta.3",
+    "x-protocol-version": 2193,
     "type": "object",
     "properties": {
-        "Type": {
-            "const": "setvolume",
-            "$ref": "./SoundDataEventType.json",
-            "x-underlying-type": "uint8",
-            "x-serialization-options": [
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 0
-        },
         "Volume": {
-            "description": "The new volume for the sound instance.",
             "type": "number",
             "x-underlying-type": "float",
-            "x-ordinal-index": 1
+            "x-ordinal-index": 0
         }
     },
     "required": [
-        "Type",
         "Volume"
     ]
 }

@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/LevelSettings.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.60-beta.28",
-    "x-protocol-version": 2216,
+    "x-minecraft-version": "1.26.52-beta.3",
+    "x-protocol-version": 2193,
     "type": "object",
     "properties": {
         "Achievements Disabled": {
@@ -15,11 +15,11 @@
         "Allow Anonymous Block Drops In Editor Worlds": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 50
+            "x-ordinal-index": 49
         },
         "Base Game Version": {
             "type": "string",
-            "x-ordinal-index": 41
+            "x-ordinal-index": 40
         },
         "Chat Restriction Level": {
             "$ref": "./ChatRestrictionLevel.json",
@@ -28,17 +28,17 @@
                 "Enum-as-Value",
                 "Allow unknown enum values"
             ],
-            "x-ordinal-index": 47
+            "x-ordinal-index": 46
         },
         "Commands Enabled": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 23
+            "x-ordinal-index": 22
         },
         "Custom Skins Disabled": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 39
+            "x-ordinal-index": 38
         },
         "Day Cycle Stop Time": {
             "type": "integer",
@@ -46,7 +46,7 @@
             "x-serialization-options": [
                 "Compression"
             ],
-            "x-ordinal-index": 12
+            "x-ordinal-index": 11
         },
         "Default Spawn Block Position": {
             "$ref": "./BlockPos.json",
@@ -55,16 +55,7 @@
         "Disable Player Interactions": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 48
-        },
-        "Editor Level Migration Version": {
-            "$ref": "./EditorLevelMigrationVersion.json",
-            "x-underlying-type": "int8",
-            "x-serialization-options": [
-                "Compression",
-                "Enum-as-Value"
-            ],
-            "x-ordinal-index": 11
+            "x-ordinal-index": 47
         },
         "Editor World Type": {
             "$ref": "./EditorWorldType.json",
@@ -78,7 +69,7 @@
         },
         "Edu Shared Uri Resource": {
             "$ref": "./EduSharedUriResource.json",
-            "x-ordinal-index": 45
+            "x-ordinal-index": 44
         },
         "Education Edition Offer": {
             "$ref": "./EducationEditionOffer.json",
@@ -88,25 +79,25 @@
                 "Enum-as-Value",
                 "Allow unknown enum values"
             ],
-            "x-ordinal-index": 13
+            "x-ordinal-index": 12
         },
         "Education Features Enabled": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 14
+            "x-ordinal-index": 13
         },
         "Education Product ID": {
             "type": "string",
-            "x-ordinal-index": 15
+            "x-ordinal-index": 14
         },
         "Emote Chat Muted": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 40
+            "x-ordinal-index": 39
         },
         "Experiments": {
             "$ref": "./Experiments.json",
-            "x-ordinal-index": 26
+            "x-ordinal-index": 25
         },
         "Game Difficulty": {
             "$ref": "./Difficulty.json",
@@ -141,22 +132,22 @@
         "Has Bonus Chest Enabled": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 27
+            "x-ordinal-index": 26
         },
         "Has Confirmed Platform Locked Content": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 18
+            "x-ordinal-index": 17
         },
         "Has Locked Behavior Pack": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 31
+            "x-ordinal-index": 30
         },
         "Has Locked Resource Pack": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 32
+            "x-ordinal-index": 31
         },
         "Is Created In Editor": {
             "type": "boolean",
@@ -171,12 +162,12 @@
         "Is From Locked Template": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 33
+            "x-ordinal-index": 32
         },
         "Is From World Template": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 35
+            "x-ordinal-index": 34
         },
         "Is Hardcore": {
             "type": "boolean",
@@ -186,52 +177,52 @@
         "Is World Template Option Locked": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 36
+            "x-ordinal-index": 35
         },
         "LAN Broadcast Intent": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 20
+            "x-ordinal-index": 19
         },
         "Lightning Level": {
             "type": "number",
             "x-underlying-type": "float",
-            "x-ordinal-index": 17
+            "x-ordinal-index": 16
         },
         "Limited World Depth": {
             "type": "integer",
             "x-underlying-type": "int32",
-            "x-ordinal-index": 43
+            "x-ordinal-index": 42
         },
         "Limited World Width": {
             "type": "integer",
             "x-underlying-type": "int32",
-            "x-ordinal-index": 42
+            "x-ordinal-index": 41
         },
         "Multiplayer Game Intent": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 19
+            "x-ordinal-index": 18
         },
         "Nether Type": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 44
+            "x-ordinal-index": 43
         },
         "Only Spawn V1 Villagers": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 37
+            "x-ordinal-index": 36
         },
         "Override Force Experimental Gameplay": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 46
+            "x-ordinal-index": 45
         },
         "Persona Disabled": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 38
+            "x-ordinal-index": 37
         },
         "Platform Broadcast Setting": {
             "$ref": "./GamePublishSetting.json",
@@ -241,7 +232,7 @@
                 "Enum-as-Value",
                 "Allow unknown enum values"
             ],
-            "x-ordinal-index": 22
+            "x-ordinal-index": 21
         },
         "Player Permissions": {
             "$ref": "./PlayerPermissionLevel.json",
@@ -251,16 +242,16 @@
                 "Enum-as-Value",
                 "Allow unknown enum values"
             ],
-            "x-ordinal-index": 29
+            "x-ordinal-index": 28
         },
         "Rain Level": {
             "type": "number",
             "x-underlying-type": "float",
-            "x-ordinal-index": 16
+            "x-ordinal-index": 15
         },
         "Rule Data": {
             "$ref": "./GameRulesChangedPacketData.json",
-            "x-ordinal-index": 25
+            "x-ordinal-index": 24
         },
         "Seed": {
             "type": "integer",
@@ -271,7 +262,7 @@
         "Server Chunk Tick Range": {
             "type": "integer",
             "x-underlying-type": "int32",
-            "x-ordinal-index": 30
+            "x-ordinal-index": 29
         },
         "Server Editor Connection Policy": {
             "$ref": "./ServerEditorConnectionPolicy.json",
@@ -281,7 +272,7 @@
                 "Enum-as-Value",
                 "Allow unknown enum values"
             ],
-            "x-ordinal-index": 49
+            "x-ordinal-index": 48
         },
         "Spawn Settings": {
             "$ref": "./SpawnSettings.json",
@@ -290,17 +281,17 @@
         "Start With Map Enabled": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 28
+            "x-ordinal-index": 27
         },
         "Texture Packs Required": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 24
+            "x-ordinal-index": 23
         },
         "Use Msa Gamertags Only": {
             "type": "boolean",
             "x-underlying-type": "boolean",
-            "x-ordinal-index": 34
+            "x-ordinal-index": 33
         },
         "Xbox Live Broadcast Setting": {
             "$ref": "./GamePublishSetting.json",
@@ -310,7 +301,7 @@
                 "Enum-as-Value",
                 "Allow unknown enum values"
             ],
-            "x-ordinal-index": 21
+            "x-ordinal-index": 20
         }
     },
     "required": [
@@ -323,7 +314,6 @@
         "Day Cycle Stop Time",
         "Default Spawn Block Position",
         "Disable Player Interactions",
-        "Editor Level Migration Version",
         "Editor World Type",
         "Edu Shared Uri Resource",
         "Education Edition Offer",
