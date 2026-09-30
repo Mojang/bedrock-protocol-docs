@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/AddPlayerPacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.60-beta.28",
-    "x-protocol-version": 2216,
+    "x-minecraft-version": "1.26.60-beta.29",
+    "x-protocol-version": 2223,
     "type": "object",
     "properties": {
         "Abilities Data": {
@@ -27,7 +27,7 @@
             "x-serialization-options": [
                 "Enum-as-Value"
             ],
-            "x-ordinal-index": 15
+            "x-ordinal-index": 16
         },
         "Carried Item": {
             "description": "The item currently held by the player.",
@@ -37,12 +37,17 @@
         "Device Id": {
             "description": "A unique device id obtained from the connection request.",
             "type": "string",
-            "x-ordinal-index": 14
+            "x-ordinal-index": 15
         },
         "Entity Data": {
             "description": "Synched actor data (data items) for the player entity.",
             "$ref": "./SynchedActorDataList.json",
             "x-ordinal-index": 10
+        },
+        "Passenger Block Data": {
+            "description": "Initial passenger of block state for the player, when present.",
+            "$ref": "./PassengerOfBlockArguments.json",
+            "x-ordinal-index": 14
         },
         "Platform Chat Id": {
             "description": "Platform-specific online ID used for platform chat.",

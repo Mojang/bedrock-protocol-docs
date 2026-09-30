@@ -1,0 +1,22 @@
+{
+    "title": "CursorItemDragState",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/CursorItemDragState.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.60-beta.29",
+    "x-protocol-version": 2223,
+    "type": "string",
+    "enum": [
+        "Start",
+        "Stop"
+    ],
+    "$enumDescription": {
+        "Start": "Sent when a cursor item split drag starts.",
+        "Stop": "Sent when a cursor item split drag stops."
+    },
+    "x-underlying-type": "uint8",
+    "x-enum-binary-value": [
+        0,
+        1
+    ]
+}

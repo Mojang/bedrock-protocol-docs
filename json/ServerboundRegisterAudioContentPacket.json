@@ -1,0 +1,14 @@
+{
+    "title": "ServerboundRegisterAudioContentPacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ServerboundRegisterAudioContentPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.60-beta.29",
+    "x-protocol-version": 2223,
+    "description": "Registers signed audio content for the sending player.",
+    "$ref": "./ServerboundRegisterAudioContentPacketPayload.json",
+    "$metaProperties": {
+        "[cereal:packet]": 360,
+        "[cereal:packet_details]": ""
+    }
+}

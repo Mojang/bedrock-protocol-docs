@@ -1,0 +1,35 @@
+{
+    "title": "AudioContentRegistrationEntry",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/AudioContentRegistrationEntry.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.60-beta.29",
+    "x-protocol-version": 2223,
+    "type": "object",
+    "properties": {
+        "Audio Content ID": {
+            "type": "string",
+            "x-ordinal-index": 0,
+            "minLength": 1,
+            "maxLength": 36
+        },
+        "Playback Content": {
+            "$ref": "./SignedAudioContent.json",
+            "x-ordinal-index": 3
+        },
+        "Server Content": {
+            "$ref": "./SignedAudioContent.json",
+            "x-ordinal-index": 2
+        },
+        "Shared Metadata": {
+            "$ref": "./SignedAudioContent.json",
+            "x-ordinal-index": 1
+        }
+    },
+    "required": [
+        "Audio Content ID",
+        "Playback Content",
+        "Server Content",
+        "Shared Metadata"
+    ]
+}

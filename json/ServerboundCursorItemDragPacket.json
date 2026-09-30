@@ -1,0 +1,14 @@
+{
+    "title": "ServerboundCursorItemDragPacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ServerboundCursorItemDragPacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.60-beta.29",
+    "x-protocol-version": 2223,
+    "description": "Serverbound Cursor Item Drag",
+    "$ref": "./ServerboundCursorItemDragPacketPayload.json",
+    "$metaProperties": {
+        "[cereal:packet]": 358,
+        "[cereal:packet_details]": "Sent from the client when a cursor item split drag starts or stops."
+    }
+}

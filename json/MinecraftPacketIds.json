@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/MinecraftPacketIds.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.60-beta.28",
-    "x-protocol-version": 2216,
+    "x-minecraft-version": "1.26.60-beta.29",
+    "x-protocol-version": 2223,
     "type": "string",
     "enum": [
         "KeepAlive",
@@ -136,6 +136,7 @@
         "SettingsCommandPacket",
         "AnvilDamage",
         "CompletedUsingItem",
+        "ServerboundCursorItemDrag",
         "NetworkSettings",
         "PlayerAuthInputPacket",
         "CreativeContent",
@@ -223,7 +224,9 @@
         "SetPlayerFurnaceOptions",
         "RecordStarted",
         "ClientboundMatchmakingState",
-        "ServerboundMatchmakingCancel"
+        "ServerboundMatchmakingCancel",
+        "ClientboundPlayAudioContent",
+        "ServerboundRegisterAudioContent"
     ],
     "x-underlying-type": "int32",
     "x-enum-binary-value": [
@@ -356,6 +359,7 @@
         140,
         141,
         142,
+        358,
         143,
         144,
         145,
@@ -443,6 +447,8 @@
         351,
         352,
         353,
-        356
+        356,
+        359,
+        360
     ]
 }
