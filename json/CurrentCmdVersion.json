@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/CurrentCmdVersion.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.60-beta.29",
-    "x-protocol-version": 2223,
+    "x-minecraft-version": "1.26.60-beta.30",
+    "x-protocol-version": 2225,
     "type": "string",
     "enum": [
         "Invalid",
@@ -54,7 +54,6 @@
         "LocateStructureOutput",
         "PostBlockFlattening",
         "TestForBlockCommandDoesNotIgnoreBlockState",
-        "SameActorBlockReplacementRetainsItemsFix",
         "Count",
         "Latest"
     ],
@@ -107,8 +106,7 @@
         42,
         43,
         44,
-        55,
-        57,
-        56
+        56,
+        55
     ]
 }
