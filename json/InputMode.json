@@ -3,15 +3,14 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/InputMode.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.70-beta.21",
-    "x-protocol-version": 2238,
+    "x-minecraft-version": "1.26.60-beta.0",
+    "x-protocol-version": 2225,
     "type": "string",
     "enum": [
         "Undefined",
         "Mouse",
         "Touch",
         "GamePad",
-        "GamePadAndMouse",
         "Count"
     ],
     "x-underlying-type": "uint32",
@@ -20,7 +19,6 @@
         1,
         2,
         3,
-        5,
-        6
+        5
     ]
 }

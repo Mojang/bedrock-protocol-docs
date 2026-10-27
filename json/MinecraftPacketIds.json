@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/MinecraftPacketIds.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.70-beta.21",
-    "x-protocol-version": 2238,
+    "x-minecraft-version": "1.26.60-beta.0",
+    "x-protocol-version": 2225,
     "type": "string",
     "enum": [
         "KeepAlive",
@@ -159,6 +159,8 @@
         "ItemRegistryPacket",
         "ClientBoundDebugRendererPacket",
         "SyncActorProperty",
+        "AddVolumeEntityPacket",
+        "RemoveVolumeEntityPacket",
         "SimulationTypePacket",
         "NpcDialoguePacket",
         "EduUriResourcePacket",
@@ -224,10 +226,7 @@
         "ClientboundMatchmakingState",
         "ServerboundMatchmakingCancel",
         "ClientboundPlayAudioContent",
-        "ServerboundRegisterAudioContent",
-        "Chat",
-        "ClientboundOnlineMusicPlaybackResponse",
-        "ServerboundRequestOnlineMusicPlayback"
+        "ServerboundRegisterAudioContent"
     ],
     "x-underlying-type": "int32",
     "x-enum-binary-value": [
@@ -383,6 +382,8 @@
         162,
         164,
         165,
+        166,
+        167,
         168,
         169,
         170,
@@ -448,9 +449,6 @@
         353,
         356,
         359,
-        360,
-        361,
-        363,
-        362
+        360
     ]
 }
