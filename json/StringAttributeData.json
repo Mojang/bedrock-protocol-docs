@@ -1,0 +1,25 @@
+{
+    "title": "StringAttributeData",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/StringAttributeData.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.70-beta.22",
+    "x-protocol-version": 2239,
+    "type": "object",
+    "properties": {
+        "operation": {
+            "default": "override",
+            "$ref": "./StringAttributeOperation.json",
+            "x-underlying-type": "int32",
+            "x-ordinal-index": 1
+        },
+        "value": {
+            "type": "string",
+            "x-ordinal-index": 0,
+            "maxLength": 128
+        }
+    },
+    "required": [
+        "value"
+    ]
+}

@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/LevelSoundEvent.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.60-beta.0",
-    "x-protocol-version": 2225,
+    "x-minecraft-version": "1.26.70-beta.22",
+    "x-protocol-version": 2239,
     "type": "string",
     "enum": [
         "item.use.on",
@@ -576,7 +576,9 @@
         "mount",
         "dismount",
         "straw_bed.break_leave",
-        "ice_ball.break",
+        "convert_to_frostbite",
+        "convert_to_zombie",
+        "crack",
         "undefined"
     ],
     "x-underlying-type": "uint32",
@@ -1151,6 +1153,8 @@
         612,
         613,
         614,
-        615
+        615,
+        616,
+        617
     ]
 }

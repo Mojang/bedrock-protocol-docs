@@ -1,0 +1,14 @@
+{
+    "title": "ClientboundOnlineMusicPlaybackResponsePacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ClientboundOnlineMusicPlaybackResponsePacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.70-beta.22",
+    "x-protocol-version": 2239,
+    "description": "Provides online music playback information for a correlated request.",
+    "$ref": "./ClientboundOnlineMusicPlaybackResponsePacketPayload.json",
+    "$metaProperties": {
+        "[cereal:packet]": 363,
+        "[cereal:packet_details]": ""
+    }
+}
