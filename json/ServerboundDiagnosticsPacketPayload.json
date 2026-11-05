@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/ServerboundDiagnosticsPacketPayload.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.70-beta.23",
-    "x-protocol-version": 2250,
+    "x-minecraft-version": "1.26.60-beta.0",
+    "x-protocol-version": 2225,
     "type": "object",
     "properties": {
         "AvgBeginFrameTimeMS": {
@@ -64,8 +64,7 @@
             "items": {
                 "$ref": "./MemoryCategoryCounter.json"
             },
-            "x-ordinal-index": 9,
-            "maxItems": 111
+            "x-ordinal-index": 9
         },
         "System Categories": {
             "type": "array",
@@ -86,8 +85,7 @@
             "items": {
                 "$ref": "./WhiskerScopeDataSummary.json"
             },
-            "x-ordinal-index": 13,
-            "maxItems": 33
+            "x-ordinal-index": 13
         }
     },
     "required": [
