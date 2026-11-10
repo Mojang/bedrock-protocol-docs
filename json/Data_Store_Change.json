@@ -3,40 +3,48 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/Data_Store_Change.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.60-beta.0",
-    "x-protocol-version": 2225,
+    "x-minecraft-version": "1.26.70-beta.24",
+    "x-protocol-version": 2259,
     "type": "object",
     "properties": {
-        "Data Store Name": {
-            "type": "string",
-            "x-ordinal-index": 0,
-            "minLength": 1,
-            "maxLength": 1000
-        },
-        "Property": {
-            "description": "The name of the property in the data store that has changed",
-            "type": "string",
-            "x-ordinal-index": 1,
-            "minLength": 1,
-            "maxLength": 1000
-        },
-        "The New Property Value": {
-            "description": "Dynamic value",
-            "x-ordinal-index": 3
+        "The New Variable Value": {
+            "oneOf": [
+                {
+                    "type": "number",
+                    "x-underlying-type": "double",
+                    "x-ordinal-index": 0
+                },
+                {
+                    "type": "boolean",
+                    "x-underlying-type": "boolean",
+                    "x-ordinal-index": 1
+                },
+                {
+                    "type": "string",
+                    "x-ordinal-index": 2
+                }
+            ],
+            "x-control-value-type": "uint32",
+            "x-ordinal-index": 2
         },
         "Update Count": {
             "description": "The number of times this property has updated",
             "type": "integer",
             "x-underlying-type": "uint32",
-            "x-ordinal-index": 2,
+            "x-ordinal-index": 1,
             "minimum": 0.0,
             "maximum": 4294967294.0
+        },
+        "Variable Name": {
+            "type": "string",
+            "x-ordinal-index": 0,
+            "minLength": 1,
+            "maxLength": 2000
         }
     },
     "required": [
-        "Data Store Name",
-        "Property",
-        "The New Property Value",
-        "Update Count"
+        "The New Variable Value",
+        "Update Count",
+        "Variable Name"
     ]
 }

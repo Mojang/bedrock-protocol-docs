@@ -3,8 +3,8 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/PlayerActionType.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.60-beta.0",
-    "x-protocol-version": 2225,
+    "x-minecraft-version": "1.26.70-beta.24",
+    "x-protocol-version": 2259,
     "type": "string",
     "enum": [
         "Unknown",
@@ -40,7 +40,7 @@
         "StartFlying",
         "StopFlying",
         "StartUsingItem",
-        "InternalUpdate",
+        "SwapOffhand",
         "Count"
     ],
     "$enumDescription": {
@@ -52,7 +52,6 @@
         "CreativeDestroyBlock": "Sent when trying to destroy a block in creative like left clicking on it. Expects server to destroy the block and optionally send new block or chunk information.\n\t\t\t\t\tUsed to be a ChangeDimension action.\n\t\t\t\t\tSent in Player Action.",
         "DenyDestroyBlock": "Sent when the client thinks they aren't allowed to break a block at the location and want the deny particle effect.\n\t\t\t\t\tSent in Player Action in EDU",
         "HandledTeleport": "Used to inform the server that we have received a MovePlayerPacket causing a teleport, and re-enable client auth movement.\n\t\t\t\t\tThe server should ignore any client predicted positions from the moment a MovePlayerPacket was sent until receipt of this action.\n\t\t\t\t\tCorresponds to Player Auth Input InputData::HandledTeleport bit 37",
-        "InternalUpdate": "Internal update.",
         "MissedSwing": "Sent when client wants to play the arm swing animation like for left click.\n\t\t\t\t\tServer is expected to broadcast a LevelSoundEventPacket with LevelSoundEvent::AttackNoDamage.\n\t\t\t\t\tCorresponds to Player Auth Input InputData::MissedSwing bit 39",
         "PredictDestroyBlock": "Sent in Player Auth Input Block Actions with position and facing.\n\t\t\t\t\tUsed for the client to inform the server that it predicted the player destroying a block.\n\t\t\t\t\tThe server may respond with block, chunk, or item information if it disagrees, or send no response to imply agreement.\n\t\t\t\t\tOnly used when server-auth block breaking toggle is on as specified in StartGamePacket",
         "Respawn": "Sent in Player Action",
@@ -77,7 +76,8 @@
         "StopSneaking": "Sent when the player wants to stop sneaking like releasing shift.\n\t\t\t\t\tServer is expected to respond with SetActorDataPacket with ActorFlags::SNEAKING false if accepted, true if rejected, and a bounding box update.\n\t\t\t\t\tCorresponds to Player Auth Input InputData::StopSneaking bit 28",
         "StopSpinAttack": "Sent when the client thinks a riptide spin attack has ended.\n\t\t\t\t\tServer is expected to send a SetActorDataPacket with ActorFlags::DAMAGENEARBYMOBS set to false if accepted or true if rejected along with a bounding box update.\n\t\t\t\t\tSent in Player Action but will soon turn into a Player Auth Input InputData bit",
         "StopSprinting": "Sent when the player wants to stop sprinting, like releasing the forward input while sprinting.\n\t\t\t\t\tServer is expected to respond with SetActorDataPacket with ActorFlags::SPRINTING and an UpdateAttributesPacket clearing the sprint speed boost.\n\t\t\t\t\tCorresponds to Player Auth Input InputData::StopSprinting bit 26",
-        "StopSwimming": "Sent when the player wants to exit swimming mode like when releasing the forward input while swimming.\n\t\t\t\t\tServer is expected to respond with SetActorDataPacket with ActorFlags::SWIMMMING set to false if accepted or true if rejected, and a bounding box update.\n\t\t\t\t\tCorresponds to Player Auth Input InputData::StopSwimming bit 30"
+        "StopSwimming": "Sent when the player wants to exit swimming mode like when releasing the forward input while swimming.\n\t\t\t\t\tServer is expected to respond with SetActorDataPacket with ActorFlags::SWIMMMING set to false if accepted or true if rejected, and a bounding box update.\n\t\t\t\t\tCorresponds to Player Auth Input InputData::StopSwimming bit 30",
+        "SwapOffhand": "Trigger an inventory swap of main hand item and off-hand item."
     },
     "x-underlying-type": "int32",
     "x-enum-binary-value": [

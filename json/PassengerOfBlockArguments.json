@@ -3,13 +3,19 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "/PassengerOfBlockArguments.json",
     "x-format-version": "MISSING VERSION",
-    "x-minecraft-version": "1.26.60-beta.0",
-    "x-protocol-version": 2225,
+    "x-minecraft-version": "1.26.70-beta.24",
+    "x-protocol-version": 2259,
     "type": "object",
     "properties": {
         "BlockPos": {
             "$ref": "./BlockPos.json",
             "x-ordinal-index": 0
+        },
+        "BlockType": {
+            "type": "integer",
+            "x-underlying-type": "uint64",
+            "x-ordinal-index": 5,
+            "minimum": 0.0
         },
         "EmoteType": {
             "$ref": "./PassengerOfBlockArguments__EmoteType.json",
@@ -24,6 +30,10 @@
             "x-ordinal-index": 1,
             "minimum": -5.0,
             "maximum": 5.0
+        },
+        "PackUUID": {
+            "$ref": "./mce__UUID.json",
+            "x-ordinal-index": 6
         },
         "Rotation": {
             "type": "number",
@@ -42,8 +52,10 @@
     },
     "required": [
         "BlockPos",
+        "BlockType",
         "EmoteType",
         "Offset",
+        "PackUUID",
         "Rotation",
         "RotationLimit"
     ]

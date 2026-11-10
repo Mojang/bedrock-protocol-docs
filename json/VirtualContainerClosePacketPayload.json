@@ -1,0 +1,74 @@
+{
+    "title": "VirtualContainerClosePacketPayload",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/VirtualContainerClosePacketPayload.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.70-beta.24",
+    "x-protocol-version": 2259,
+    "type": "object",
+    "properties": {
+        "Cause": {
+            "description": "Why the session is closing or could not be opened. The server reports UserBusy and ClientNotReady to scripts as the player being busy. Request carries ServerRequested and Confirmed carries Unknown.",
+            "type": "string",
+            "enum": [
+                "Unknown",
+                "UserClosed",
+                "ServerRequested",
+                "UserBusy",
+                "ClientNotReady",
+                "InvalidContents",
+                "UiCreationFailed",
+                "UiCancelled"
+            ],
+            "x-underlying-type": "uint8",
+            "x-serialization-options": [
+                "Enum-as-Value"
+            ],
+            "x-ordinal-index": 2,
+            "x-enum-binary-value": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ]
+        },
+        "Kind": {
+            "description": "Server close request, client closure outcome, or server confirmation after inventory work drains.",
+            "type": "string",
+            "enum": [
+                "Request",
+                "Closed",
+                "Confirmed"
+            ],
+            "x-underlying-type": "uint8",
+            "x-serialization-options": [
+                "Enum-as-Value"
+            ],
+            "x-ordinal-index": 1,
+            "x-enum-binary-value": [
+                0,
+                1,
+                2
+            ]
+        },
+        "Session Id": {
+            "description": "The nonzero session ID from VirtualContainerOpenPacket.",
+            "type": "integer",
+            "x-underlying-type": "uint64",
+            "x-serialization-options": [
+                "Compression"
+            ],
+            "x-ordinal-index": 0,
+            "minimum": 1.0
+        }
+    },
+    "required": [
+        "Cause",
+        "Kind",
+        "Session Id"
+    ]
+}

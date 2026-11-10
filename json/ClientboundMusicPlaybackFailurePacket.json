@@ -1,0 +1,14 @@
+{
+    "title": "ClientboundMusicPlaybackFailurePacket",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/ClientboundMusicPlaybackFailurePacket.json",
+    "x-format-version": "MISSING VERSION",
+    "x-minecraft-version": "1.26.70-beta.24",
+    "x-protocol-version": 2259,
+    "description": "Reports music discs that could not play so the client can classify their failures.",
+    "$ref": "./ClientboundMusicPlaybackFailurePacketPayload.json",
+    "$metaProperties": {
+        "[cereal:packet]": 365,
+        "[cereal:packet_details]": ""
+    }
+}
