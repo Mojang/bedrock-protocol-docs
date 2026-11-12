@@ -96,4 +96,4 @@ After movement simulation the server compares the results of what they simulated
 
 Note that when riding a client-predicted vehicle the position data is compared with the vehicle and the correction data is also specifying the corrected vehicle data.
 
-After deciding to correct the cient (or not) the player position can be broadcast to other clients the same way as other movement modes.
+After deciding to correct the client (or not) the player position can be broadcast to other clients the same way as other movement modes.

@@ -39,7 +39,7 @@ The previous value (100) is no longer used as a source type.
 The Crafting screen previously used a Source Type value (3) for Creative Inventory (with Slot 0 for delete and Slot 1 for pick).
 The crafting screen no longer uses that Source Type (3), rather:
 
-Taking an item stack from the recipe book now causes an Inventory Transaction action using Source Type (124) for the Player UI Container ID, with a source slot (50) for it's Created Item Output slot.
+Taking an item stack from the recipe book now causes an Inventory Transaction action using Source Type (124) for the Player UI Container ID, with a source slot (50) for its Created Item Output slot.
 The Created Item Output slot is where such newly created item stacks first come into existence.
 
 All newly created items (e.g. from crafting, anvil, loom, etc.) are created into the Created Item Output slot and then transferred out (e.g. to the Cursors slot, or AutoPlaced to inventory).
@@ -65,7 +65,7 @@ The Bedrock Server for R14 no longer saves the above fields for players; rather 
 The Bedrock Server for R14 conditionally reads "UntrackedInteractionUIContainer" and "CursorSelectedItem" fields for backward compatibility.
 - If the new "format_version" field is not found or if it's value is older than "1.12.0", then:
 - These fields are loaded and processed the same as they were before R13.
-  - Such item stacks are transfered into the player's inventory, if possible.
+  - Such item stacks are transferred into the player's inventory, if possible.
   - Any item stacks that could not transfer (e.g. player's inventory was full), are dropped.
   - R13 had a bug that if dropping such an item failed (e.g. chunk wasn't loaded yet), the item stack would be lost.
   - This bug still exists, but now only in this edge case when also loading old saved games with "UntrackedInteractionUIContainer" item stacks.
@@ -78,7 +78,7 @@ The Bedrock Server and Client, for R14, behave differently in the above edge cas
 - These item stack drop attempts may also fail in Bedrock Server (e.g. chunk is not yet loaded).
 - Remaining item stacks are kept in their respective Player UI Container slots.
   - A player may find such items by opening an associated container screen.
-  - For example, such items stack(s) remaining in Anvil input slot(s) would show upon the player opening any Anvil screen.
+  - For example, such item stack(s) remaining in Anvil input slot(s) would show upon the player opening any Anvil screen.
   - Likewise, a cursor selected item stack would still show in the cursor in any screen that supports item stacks in the cursor.
 - These new features are to fix the above mentioned bug, by now preventing the loss of a player's item stacks.
 
